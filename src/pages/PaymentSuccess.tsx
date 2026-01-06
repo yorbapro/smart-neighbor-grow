@@ -1,14 +1,48 @@
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Calendar, Mail, Phone } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const PaymentSuccess = () => {
+  const [searchParams] = useSearchParams();
+  const emailSentRef = useRef(false);
+
   useEffect(() => {
     document.title = "Payment Successful | BrightLaunchIQ";
     window.scrollTo(0, 0);
+
+    // Send welcome email after successful payment
+    const sendWelcomeEmail = async () => {
+      if (emailSentRef.current) return;
+      emailSentRef.current = true;
+
+      // Get stored lead data from sessionStorage
+      const storedData = sessionStorage.getItem("checkoutLeadData");
+      if (!storedData) {
+        console.log("No lead data found for welcome email");
+        return;
+      }
+
+      try {
+        const leadData = JSON.parse(storedData);
+        await supabase.functions.invoke("send-welcome-email", {
+          body: {
+            email: leadData.email,
+            businessName: leadData.businessName,
+            industry: leadData.industry,
+          },
+        });
+        console.log("Welcome email sent successfully");
+        sessionStorage.removeItem("checkoutLeadData");
+      } catch (error) {
+        console.error("Failed to send welcome email:", error);
+      }
+    };
+
+    sendWelcomeEmail();
   }, []);
 
   return (
