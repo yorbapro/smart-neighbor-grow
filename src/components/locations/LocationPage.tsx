@@ -1,0 +1,300 @@
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { 
+  MapPin, 
+  Phone, 
+  Clock, 
+  Users, 
+  TrendingUp, 
+  ArrowRight, 
+  Check,
+  Zap,
+  MessageSquare,
+  Mail,
+  Smartphone
+} from "lucide-react";
+
+interface LocationPageProps {
+  city: string;
+  areaCode: string;
+  specialty: string;
+  industries: string[];
+  description: string;
+  heroHeadline: string;
+  heroSubheadline: string;
+  localStats: {
+    population: string;
+    businesses: string;
+    growthRate: string;
+  };
+  testimonialIndustry: string;
+  nearbyAreas: string[];
+}
+
+const LocationPage = ({
+  city,
+  areaCode,
+  specialty,
+  industries,
+  description,
+  heroHeadline,
+  heroSubheadline,
+  localStats,
+  testimonialIndustry,
+  nearbyAreas,
+}: LocationPageProps) => {
+  useEffect(() => {
+    // Add location-specific structured data
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": `BrightLaunchIQ - ${city}`,
+      "description": `AI lead generation and sales implementation for ${city} businesses. ${specialty}.`,
+      "url": `https://brightlaunchiq.com/locations/${city.toLowerCase()}`,
+      "telephone": "1-800-LAUNCH-IQ",
+      "areaServed": {
+        "@type": "City",
+        "name": city,
+        "containedInPlace": {
+          "@type": "State",
+          "name": "California"
+        }
+      },
+      "serviceType": ["AI Lead Generation", "AI Sales Implementation", specialty],
+    });
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, [city, specialty]);
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        {/* Hero Section */}
+        <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-subtle">
+          <div className="container">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="flex items-center justify-center gap-2 mb-6">
+                <MapPin className="w-5 h-5 text-primary" />
+                <span className="text-primary font-semibold">{areaCode} Area</span>
+              </div>
+              
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+                {heroHeadline}
+              </h1>
+              
+              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+                {heroSubheadline}
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <Button variant="hero" size="lg" asChild>
+                  <Link to="/get-started">
+                    Start Your 14-Day Launch
+                    <ArrowRight className="ml-2" size={20} />
+                  </Link>
+                </Button>
+                <Button variant="outline" size="lg" asChild>
+                  <a href="tel:1-800-LAUNCH-IQ">
+                    <Phone className="mr-2" size={18} />
+                    1-800-LAUNCH-IQ
+                  </a>
+                </Button>
+              </div>
+
+              {/* Local Stats */}
+              <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
+                <div className="bg-card/50 backdrop-blur rounded-xl p-4 border border-border">
+                  <Users className="w-6 h-6 text-primary mx-auto mb-2" />
+                  <p className="text-sm font-semibold text-foreground">{localStats.population}</p>
+                </div>
+                <div className="bg-card/50 backdrop-blur rounded-xl p-4 border border-border">
+                  <TrendingUp className="w-6 h-6 text-primary mx-auto mb-2" />
+                  <p className="text-sm font-semibold text-foreground">{localStats.businesses}</p>
+                </div>
+                <div className="bg-card/50 backdrop-blur rounded-xl p-4 border border-border">
+                  <Zap className="w-6 h-6 text-primary mx-auto mb-2" />
+                  <p className="text-sm font-semibold text-foreground">{localStats.growthRate}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* About This Location */}
+        <section className="py-16 md:py-24">
+          <div className="container">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
+                  {specialty}
+                </span>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+                  AI Sales Implementation for {city} Businesses
+                </h2>
+                <p className="text-lg text-muted-foreground mb-6">
+                  {description}
+                </p>
+                <div className="space-y-3">
+                  <p className="font-semibold text-foreground">Industries We Serve in {city}:</p>
+                  {industries.map((industry) => (
+                    <div key={industry} className="flex items-center gap-2">
+                      <Check className="w-5 h-5 text-accent" />
+                      <span className="text-muted-foreground">{industry}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-card border border-border rounded-2xl p-8">
+                <h3 className="font-display text-2xl font-bold text-foreground mb-6">
+                  Multi-Channel AI Outreach
+                </h3>
+                <p className="text-muted-foreground mb-6">
+                  LaunchPad 360™ automatically contacts leads through every channel they prefer:
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { icon: Phone, label: "AI Phone Calls" },
+                    { icon: MessageSquare, label: "Voicemail Drops" },
+                    { icon: Smartphone, label: "SMS Messages" },
+                    { icon: Mail, label: "Email Sequences" },
+                    { icon: Users, label: "LinkedIn Outreach" },
+                    { icon: MessageSquare, label: "FB Messenger" },
+                  ].map((channel) => (
+                    <div key={channel.label} className="flex items-center gap-3 p-3 bg-secondary/30 rounded-lg">
+                      <channel.icon className="w-5 h-5 text-primary" />
+                      <span className="text-sm font-medium text-foreground">{channel.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* The Problem & Solution */}
+        <section className="py-16 md:py-24 bg-card">
+          <div className="container">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Why {city} Businesses Choose AI Lead Generation
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                The average {city} business takes 47 hours to respond to a new lead. 
+                78% of buyers choose whoever responds first. We fix that.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-background border border-border rounded-xl p-6 text-center">
+                <div className="w-14 h-14 rounded-xl bg-destructive/10 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="w-7 h-7 text-destructive" />
+                </div>
+                <h3 className="font-display text-xl font-bold text-foreground mb-2">The Problem</h3>
+                <p className="text-3xl font-bold text-destructive mb-2">47 Hours</p>
+                <p className="text-muted-foreground text-sm">Average lead response time in {city}</p>
+              </div>
+
+              <div className="bg-background border border-border rounded-xl p-6 text-center">
+                <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                  <Zap className="w-7 h-7 text-accent" />
+                </div>
+                <h3 className="font-display text-xl font-bold text-foreground mb-2">Our Solution</h3>
+                <p className="text-3xl font-bold text-accent mb-2">60 Seconds</p>
+                <p className="text-muted-foreground text-sm">Your AI teammate responds instantly, 24/7</p>
+              </div>
+
+              <div className="bg-background border border-border rounded-xl p-6 text-center">
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="font-display text-xl font-bold text-foreground mb-2">Your Result</h3>
+                <p className="text-3xl font-bold text-primary mb-2">78% More</p>
+                <p className="text-muted-foreground text-sm">Leads captured that you were missing</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing CTA */}
+        <section className="py-16 md:py-24 bg-gradient-hero text-primary-foreground">
+          <div className="container text-center">
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+              Start Your {city} Launch in 14 Days
+            </h2>
+            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+              Join local {testimonialIndustry.toLowerCase()} businesses already using AI lead generation 
+              to close more deals with less effort.
+            </p>
+
+            <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-background/10 backdrop-blur rounded-2xl p-6 mb-8">
+              <div className="text-center px-6">
+                <p className="text-4xl font-display font-bold">$1,500</p>
+                <p className="text-sm opacity-80">One-time setup</p>
+              </div>
+              <div className="hidden sm:block w-px h-12 bg-primary-foreground/30" />
+              <div className="text-center px-6">
+                <p className="text-4xl font-display font-bold">$500/mo</p>
+                <p className="text-sm opacity-80">Your 24/7 digital teammate</p>
+              </div>
+              <div className="hidden sm:block w-px h-12 bg-primary-foreground/30" />
+              <div className="text-center px-6">
+                <p className="text-4xl font-display font-bold">$16.60</p>
+                <p className="text-sm opacity-80">Per day cost</p>
+              </div>
+            </div>
+
+            <Button size="lg" className="bg-background text-foreground hover:bg-background/90" asChild>
+              <Link to="/get-started">
+                Get Your Free AI Growth Report
+                <ArrowRight className="ml-2" size={20} />
+              </Link>
+            </Button>
+          </div>
+        </section>
+
+        {/* Nearby Areas */}
+        <section className="py-16 md:py-24">
+          <div className="container">
+            <div className="text-center mb-12">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-4">
+                Also Serving Nearby Areas
+              </h2>
+              <div className="flex flex-wrap justify-center gap-3">
+                {nearbyAreas.map((area) => (
+                  <span 
+                    key={area}
+                    className="px-4 py-2 bg-card border border-border rounded-full text-sm text-muted-foreground"
+                  >
+                    {area}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="text-center">
+              <p className="text-muted-foreground mb-4">
+                Looking for AI lead generation in another California city?
+              </p>
+              <Link to="/#locations" className="text-primary hover:underline font-medium">
+                View All Locations →
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default LocationPage;
