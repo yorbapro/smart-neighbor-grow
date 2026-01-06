@@ -1,50 +1,55 @@
 import { Button } from "@/components/ui/button";
-import { Rocket, Brain, Search, ArrowRight, Check } from "lucide-react";
+import { Rocket, Brain, Search, ArrowRight, Check, DollarSign } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
       icon: Rocket,
       name: "LaunchPad 360™",
-      tagline: "Your 30-Day Customer Growth Strategy",
-      description: "We set up your entire New Business Launch Plan in just 30 days. Our human experts build the system that finds your ideal customers and starts the conversation for you.",
+      tagline: "Your Agentic Go-To-Market Engine",
+      description: "The complete AI sales implementation system. We build and install your custom automated sales engine directly into your existing ecosystem (Salesforce, HubSpot) in just 14 days.",
       features: [
+        "Custom infrastructure build & data calibration",
         "AI Researcher identifies your ideal customers",
-        "500 targeted local business leads",
-        "Email deliverability protection",
+        "500+ targeted local business leads",
+        "Email deliverability warming & protection",
         "60-minute strategy session with experts",
-        "100 new leads added monthly",
-        "Hyper-personalized outreach",
+        "Hyper-individualized AI outreach",
+        "Automated inbox triage (only hot leads forwarded)",
+        "100 new intent-driven leads monthly",
       ],
       pricing: {
         setup: "$1,500",
         monthly: "$500/mo",
+        daily: "$16.60/day",
       },
       featured: true,
     },
     {
       icon: Brain,
       name: "IQ Flow™",
-      tagline: "Smart Follow-Ups & Daily Management",
-      description: "Your business's new 'brain.' It tracks every potential customer, scores them based on buying readiness, and alerts your team the second a hot lead needs attention.",
+      tagline: "Smart Pipeline Intelligence",
+      description: "Your business's AI brain for lead scoring and pipeline management. Tracks every prospect, scores buying readiness, and alerts your team the second a hot lead needs attention.",
       features: [
-        "Automated lead scoring",
+        "Automated lead scoring & ranking",
         "Smart follow-up sequences",
-        "Hot lead instant alerts",
+        "Hot lead instant mobile alerts",
         "Pipeline visibility dashboard",
+        "CRM integration (Salesforce/HubSpot)",
       ],
       featured: false,
     },
     {
       icon: Search,
       name: "LocalLift™",
-      tagline: "Dominating Search & AI Answers",
-      description: "We make sure you are the top answer when people use voice search or Google Maps. Optimized for the new era of Answer Engines.",
+      tagline: "Answer Engine Optimization",
+      description: "Dominate AI search results. We optimize your business for Gemini, ChatGPT, Perplexity, and voice search so you're the top answer when prospects ask about your services.",
       features: [
         "Voice search optimization",
         "Google Maps ranking boost",
         "AI answer engine citations",
         "Local expert positioning",
+        "AEO-optimized content strategy",
       ],
       featured: false,
     },
@@ -55,13 +60,14 @@ const Services = () => {
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
-            Our Core Services
+            AI Lead Generation Services
           </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Service Packages Built for Growth
+            Automated Sales Systems That Scale
           </h2>
           <p className="text-lg text-muted-foreground">
-            From launch to scale, we have the tools to help your business thrive.
+            Remove the procurement hurdles of high-ticket agency retainers ($3,000–$25,000/mo). 
+            Get enterprise-grade AI sales automation at a fraction of the cost.
           </p>
         </div>
 
@@ -146,11 +152,17 @@ const Services = () => {
                     <span className="font-display text-3xl font-bold">
                       {service.pricing.setup}
                     </span>
-                    <span className="text-sm opacity-70">setup</span>
+                    <span className="text-sm opacity-70">one-time setup</span>
                   </div>
-                  <p className="text-sm opacity-70">
+                  <p className="text-sm opacity-70 mb-2">
                     then {service.pricing.monthly} ongoing
                   </p>
+                  <div className="flex items-center gap-2 text-primary">
+                    <DollarSign className="w-4 h-4" />
+                    <span className="text-sm font-semibold">
+                      Just {service.pricing.daily} for a 24/7 digital teammate
+                    </span>
+                  </div>
                 </div>
               )}
 
@@ -159,11 +171,32 @@ const Services = () => {
                 variant={service.featured ? "hero" : "outline"}
                 className="w-full"
               >
-                Learn More
+                {service.featured ? "Start Your 14-Day Launch" : "Learn More"}
                 <ArrowRight size={16} />
               </Button>
             </div>
           ))}
+        </div>
+
+        {/* Target Markets */}
+        <div className="mt-20 text-center">
+          <h3 className="font-display text-xl font-bold text-foreground mb-6">
+            2026 Focus: Central Valley Industries
+          </h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {[
+              "Professional Services (Legal, Accounting, Consulting)",
+              "Trade Services (HVAC, Solar, Commercial Contractors)",
+              "Industrial/Logistics (Transportation, Warehousing)",
+            ].map((industry) => (
+              <span
+                key={industry}
+                className="px-4 py-2 rounded-full bg-card border border-border text-sm text-muted-foreground"
+              >
+                {industry}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

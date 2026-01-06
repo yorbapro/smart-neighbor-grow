@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Zap, Users, Clock } from "lucide-react";
+import { ArrowRight, Zap, Users, Clock, Bot, TrendingUp } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -13,20 +13,24 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-8 animate-fade-in">
-            <Zap size={16} className="fill-primary" />
-            <span className="text-sm font-semibold">Human-Guided AI for Local Business</span>
+            <Bot size={16} className="fill-primary" />
+            <span className="text-sm font-semibold">Your 24/7 AI Sales Implementation Partner</span>
           </div>
 
           {/* Main Headline */}
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 animate-slide-up">
-            Get More Customers with{" "}
-            <span className="text-gradient">Human-Guided AI</span>
+            Stop Renting Your Growth.{" "}
+            <span className="text-gradient">Command Your Results.</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            Most small business owners are trapped chasing leads instead of closing deals. 
-            We give you a digital teammate that works 24/7 to fill your calendar.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-4 animate-slide-up" style={{ animationDelay: "0.1s" }}>
+            Meet your new <strong className="text-foreground">24/7 Digital Teammate</strong>. We install a proprietary AI lead generation engine that finds, qualifies, and books meetings while you sleep.
+          </p>
+
+          {/* Pricing highlight */}
+          <p className="text-base text-primary font-semibold mb-10 animate-slide-up" style={{ animationDelay: "0.15s" }}>
+            $1,500 setup. $500/mo. Results in 14 days—Guaranteed.
           </p>
 
           {/* CTA Buttons */}
@@ -36,40 +40,54 @@ const Hero = () => {
               <ArrowRight size={20} />
             </Button>
             <Button variant="heroOutline" size="xl">
-              See How It Works
+              See the 14-Day Guarantee
             </Button>
           </div>
 
           {/* Trust Indicators */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: "0.3s" }}>
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 max-w-4xl mx-auto animate-slide-up" style={{ animationDelay: "0.3s" }}>
             <div className="flex items-center justify-center gap-3 p-4 rounded-xl bg-card shadow-card">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Clock className="w-6 h-6 text-primary" />
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Clock className="w-5 h-5 text-primary" />
               </div>
               <div className="text-left">
-                <p className="font-display font-bold text-foreground">Under 60s</p>
-                <p className="text-sm text-muted-foreground">Response Time</p>
+                <p className="font-display font-bold text-foreground text-sm">Under 60s</p>
+                <p className="text-xs text-muted-foreground">Response Time</p>
               </div>
             </div>
             <div className="flex items-center justify-center gap-3 p-4 rounded-xl bg-card shadow-card">
-              <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
-                <Zap className="w-6 h-6 text-accent" />
+              <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                <Zap className="w-5 h-5 text-accent" />
               </div>
               <div className="text-left">
-                <p className="font-display font-bold text-foreground">70%</p>
-                <p className="text-sm text-muted-foreground">Tasks Automated</p>
+                <p className="font-display font-bold text-foreground text-sm">$16.60/day</p>
+                <p className="text-xs text-muted-foreground">Digital Worker</p>
               </div>
             </div>
             <div className="flex items-center justify-center gap-3 p-4 rounded-xl bg-card shadow-card">
-              <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center">
-                <Users className="w-6 h-6 text-secondary" />
+              <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center">
+                <Users className="w-5 h-5 text-secondary" />
               </div>
               <div className="text-left">
-                <p className="font-display font-bold text-foreground">24/7</p>
-                <p className="text-sm text-muted-foreground">Lead Capture</p>
+                <p className="font-display font-bold text-foreground text-sm">168 hrs/wk</p>
+                <p className="text-xs text-muted-foreground">Always Working</p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center gap-3 p-4 rounded-xl bg-card shadow-card">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <TrendingUp className="w-5 h-5 text-primary" />
+              </div>
+              <div className="text-left">
+                <p className="font-display font-bold text-foreground text-sm">78%</p>
+                <p className="text-xs text-muted-foreground">Leads Captured</p>
               </div>
             </div>
           </div>
+
+          {/* ROI Statement */}
+          <p className="text-sm text-muted-foreground mt-8 max-w-xl mx-auto animate-fade-in" style={{ animationDelay: "0.4s" }}>
+            Compare $500/mo to an $80,000+/year human hire. LaunchPad 360™ delivers immediate, undeniable ROI from day one.
+          </p>
         </div>
       </div>
     </section>
