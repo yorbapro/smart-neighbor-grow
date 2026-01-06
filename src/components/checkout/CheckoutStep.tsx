@@ -28,6 +28,8 @@ const CheckoutStep = ({ leadData, onBack }: CheckoutStepProps) => {
       if (error) throw error;
 
       if (data?.url) {
+        // Store lead data for welcome email after payment
+        sessionStorage.setItem("checkoutLeadData", JSON.stringify(leadData));
         window.open(data.url, "_blank");
       } else {
         throw new Error("No checkout URL returned");
