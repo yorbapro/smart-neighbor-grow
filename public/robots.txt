@@ -12,3 +12,30 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# AI Crawlers - LLMs.txt for Generative Engine Optimization
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# LLMs can find structured content at /llms.txt
+# See https://llmstxt.org/
+
+Sitemap: https://brightlaunchiq.com/sitemap.xml

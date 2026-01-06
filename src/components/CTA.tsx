@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Mail, Shield, Clock } from "lucide-react";
 
@@ -42,9 +43,11 @@ const CTA = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <Button variant="hero" size="xl">
-              Schedule Your Free Audit
-              <ArrowRight size={20} />
+            <Button variant="hero" size="xl" asChild>
+              <Link to="/get-started">
+                Start Your 14-Day Launch
+                <ArrowRight size={20} />
+              </Link>
             </Button>
           </div>
 

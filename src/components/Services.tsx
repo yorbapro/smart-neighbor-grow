@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Rocket, Brain, Search, ArrowRight, Check, DollarSign } from "lucide-react";
+import { Rocket, Brain, Search, ArrowRight, Check, DollarSign, Phone, MessageSquare, Mail, Smartphone, Users } from "lucide-react";
 
 const Services = () => {
   const services = [
@@ -12,6 +13,8 @@ const Services = () => {
         "Custom infrastructure build & data calibration",
         "AI Researcher identifies your ideal customers",
         "500+ targeted local business leads",
+        "Multi-channel outreach: calls, voicemail, SMS, email",
+        "LinkedIn & Facebook Messenger automation",
         "Email deliverability warming & protection",
         "60-minute strategy session with experts",
         "Hyper-individualized AI outreach",
@@ -170,9 +173,19 @@ const Services = () => {
               <Button
                 variant={service.featured ? "hero" : "outline"}
                 className="w-full"
+                asChild={service.featured}
               >
-                {service.featured ? "Start Your 14-Day Launch" : "Learn More"}
-                <ArrowRight size={16} />
+                {service.featured ? (
+                  <Link to="/get-started">
+                    Start Your 14-Day Launch
+                    <ArrowRight size={16} />
+                  </Link>
+                ) : (
+                  <>
+                    Learn More
+                    <ArrowRight size={16} />
+                  </>
+                )}
               </Button>
             </div>
           ))}

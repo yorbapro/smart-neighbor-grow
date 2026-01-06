@@ -1,4 +1,7 @@
-import { MapPin, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
+import { MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const Locations = () => {
   const locations = [
@@ -8,6 +11,7 @@ const Locations = () => {
       specialty: "AI Sales Strategy & Lead Generation",
       industry: "Tech startups and professional consulting firms",
       description: "The capital is a fast-growing center for professional services.",
+      slug: "sacramento",
     },
     {
       city: "Stockton",
@@ -15,6 +19,7 @@ const Locations = () => {
       specialty: "AI Logistics & New Business Growth",
       industry: "Logistics, shipping, and service sectors",
       description: "A critical center for moving goods.",
+      slug: "stockton",
     },
     {
       city: "Fresno",
@@ -22,6 +27,7 @@ const Locations = () => {
       specialty: "AI Ag-Tech & Production Sales",
       industry: "Agriculture, food processing, and manufacturing",
       description: "In the heart of the region's economy.",
+      slug: "fresno",
     },
     {
       city: "Bakersfield",
@@ -29,6 +35,7 @@ const Locations = () => {
       specialty: "AI Energy & Industrial Sales",
       industry: "Energy, natural resources, and heavy industry",
       description: "Built on energy and hard work.",
+      slug: "bakersfield",
     },
   ];
 
@@ -40,19 +47,19 @@ const Locations = () => {
             Regional Hubs
           </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            We Are in Your Neighborhood
+            AI Lead Generation Near You
           </h2>
           <p className="text-lg text-muted-foreground">
-            While our technology is world-class, we know that successful business is local. 
-            We maintain strategic hubs in key cities because understanding a local market 
-            requires a human touch and regional knowledge.
+            Local expertise with world-class AI sales implementation. We understand your market 
+            because we're in your neighborhood. Click your city to learn more.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {locations.map((location) => (
-            <div
+            <Link
               key={location.city}
+              to={`/locations/${location.slug}`}
               className="group p-6 rounded-2xl bg-background border border-border hover:border-primary/30 hover:shadow-card-hover transition-all duration-300"
             >
               {/* Header */}
@@ -87,7 +94,13 @@ const Locations = () => {
                 </span>
                 <p className="text-sm text-foreground mt-1">{location.industry}</p>
               </div>
-            </div>
+
+              {/* View More Link */}
+              <div className="mt-4 flex items-center text-primary text-sm font-medium group-hover:underline">
+                View {location.city} Page
+                <ArrowRight className="ml-1 w-4 h-4" />
+              </div>
+            </Link>
           ))}
         </div>
       </div>
