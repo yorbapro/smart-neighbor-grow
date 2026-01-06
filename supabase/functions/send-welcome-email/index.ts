@@ -1,0 +1,148 @@
+import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { Resend } from "https://esm.sh/resend@2.0.0";
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+};
+
+interface WelcomeEmailRequest {
+  email: string;
+  businessName: string;
+  industry: string;
+}
+
+const handler = async (req: Request): Promise<Response> => {
+  if (req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders });
+  }
+
+  try {
+    const resendKey = Deno.env.get("RESEND_API_KEY");
+    if (!resendKey) {
+      throw new Error("RESEND_API_KEY is not configured");
+    }
+
+    const resend = new Resend(resendKey);
+    const { email, businessName, industry }: WelcomeEmailRequest = await req.json();
+
+    if (!email) {
+      throw new Error("Email is required");
+    }
+
+    const emailResponse = await resend.emails.send({
+      from: "BrightLaunchIQ <onboarding@resend.dev>",
+      to: [email],
+      subject: "Welcome to BrightLaunchIQ - Your 14-Day Launch Begins Now! 🚀",
+      html: `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a2e; margin: 0; padding: 0; background-color: #f5f5f5;">
+  <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    
+    <!-- Header -->
+    <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 40px 30px; text-align: center;">
+      <h1 style="color: #ffffff; margin: 0; font-size: 28px; font-weight: bold;">Welcome to BrightLaunchIQ!</h1>
+      <p style="color: rgba(255,255,255,0.9); margin: 10px 0 0 0; font-size: 16px;">Your 14-Day Launch Countdown Has Begun</p>
+    </div>
+    
+    <!-- Content -->
+    <div style="padding: 40px 30px;">
+      <p style="font-size: 18px; margin-bottom: 20px;">Hi ${businessName || "there"},</p>
+      
+      <p style="margin-bottom: 20px;">Thank you for choosing BrightLaunchIQ as your AI sales automation partner. We're excited to help you capture the leads you've been missing and grow your ${industry || "business"}.</p>
+      
+      <div style="background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 20px; margin: 30px 0; border-radius: 0 8px 8px 0;">
+        <h2 style="color: #92400e; margin: 0 0 10px 0; font-size: 18px;">🎯 Your 14-Day Guarantee Is Active</h2>
+        <p style="color: #78350f; margin: 0;">If we don't have you receiving automated meeting requests within 14 days, we work for free until we do.</p>
+      </div>
+      
+      <h2 style="color: #1a1a2e; font-size: 20px; margin: 30px 0 20px 0;">What Happens Next:</h2>
+      
+      <div style="margin-bottom: 20px;">
+        <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+          <div style="background-color: #f59e0b; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 15px; flex-shrink: 0;">1</div>
+          <div>
+            <strong style="color: #1a1a2e;">Complete Your Onboarding Questionnaire</strong>
+            <p style="color: #6b7280; margin: 5px 0 0 0;">Click the button below to tell us about your ideal customers, competitors, and sales goals.</p>
+          </div>
+        </div>
+        
+        <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+          <div style="background-color: #f59e0b; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 15px; flex-shrink: 0;">2</div>
+          <div>
+            <strong style="color: #1a1a2e;">Schedule Your Strategy Session</strong>
+            <p style="color: #6b7280; margin: 5px 0 0 0;">Book your 60-minute call with our team to review your AI-generated lead list and outreach voice.</p>
+          </div>
+        </div>
+        
+        <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+          <div style="background-color: #f59e0b; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 15px; flex-shrink: 0;">3</div>
+          <div>
+            <strong style="color: #1a1a2e;">We Build Your Engine</strong>
+            <p style="color: #6b7280; margin: 5px 0 0 0;">Our team creates your custom sales infrastructure and warms your outreach domains.</p>
+          </div>
+        </div>
+        
+        <div style="display: flex; align-items: flex-start;">
+          <div style="background-color: #10b981; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 15px; flex-shrink: 0;">✓</div>
+          <div>
+            <strong style="color: #1a1a2e;">Start Receiving Meetings</strong>
+            <p style="color: #6b7280; margin: 5px 0 0 0;">Within 14 days, your digital teammate will be booking qualified meetings for you.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin: 40px 0;">
+        <a href="https://brightlaunchiq.com/onboarding" style="display: inline-block; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; padding: 16px 40px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px;">Complete Your Questionnaire →</a>
+      </div>
+      
+      <div style="background-color: #f3f4f6; padding: 20px; border-radius: 8px; margin-top: 30px;">
+        <h3 style="color: #1a1a2e; margin: 0 0 10px 0; font-size: 16px;">Need Help?</h3>
+        <p style="color: #6b7280; margin: 0;">
+          📞 Call us: <a href="tel:1-800-LAUNCH-IQ" style="color: #f59e0b;">1-800-LAUNCH-IQ</a><br>
+          📧 Email: <a href="mailto:success@BrightLaunchIQ.com" style="color: #f59e0b;">success@BrightLaunchIQ.com</a>
+        </p>
+      </div>
+    </div>
+    
+    <!-- Footer -->
+    <div style="background-color: #1a1a2e; padding: 30px; text-align: center;">
+      <p style="color: #9ca3af; margin: 0 0 10px 0; font-size: 14px;">
+        BrightLaunchIQ | Human-Guided AI Sales Automation
+      </p>
+      <p style="color: #6b7280; margin: 0; font-size: 12px;">
+        Sacramento • Stockton • Fresno • Bakersfield
+      </p>
+    </div>
+    
+  </div>
+</body>
+</html>
+      `,
+    });
+
+    console.log("Welcome email sent successfully:", emailResponse);
+
+    return new Response(JSON.stringify(emailResponse), {
+      status: 200,
+      headers: { "Content-Type": "application/json", ...corsHeaders },
+    });
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    console.error("Error in send-welcome-email function:", errorMessage);
+    return new Response(
+      JSON.stringify({ error: errorMessage }),
+      {
+        status: 500,
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      }
+    );
+  }
+};
+
+serve(handler);
