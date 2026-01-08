@@ -29,10 +29,7 @@ const Hero = () => {
             Meet your new <strong className="text-foreground">24/7 Digital Teammate</strong>. We install a proprietary AI lead generation engine that finds, qualifies, and books meetings while you sleep.
           </p>
 
-          {/* Pricing highlight */}
-          <p className="text-base text-primary font-semibold mb-10 animate-slide-up" style={{ animationDelay: "0.15s" }}>
-            $1,500 setup. $500/mo. Results in 14 days—Guaranteed.
-          </p>
+
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-slide-up" style={{ animationDelay: "0.2s" }}>
