@@ -34,8 +34,8 @@ const Pricing = () => {
     {
       icon: Rocket,
       name: "LaunchPad 360™",
-      tagline: "Automated GTM Engine",
-      description: "Complete 30-day go-to-market implementation with AI-powered multi-channel outreach.",
+      tagline: "Complete AI Sales Engine",
+      description: "Complete 30-day go-to-market implementation with AI-powered multi-channel outreach and built-in revenue intelligence.",
       setup: "$1,500",
       monthly: "$500",
       dailyCost: "$16.60",
@@ -48,32 +48,16 @@ const Pricing = () => {
         "60-minute strategy session",
         "100 new leads monthly",
         "Automated inbox triage",
+        "Real-time lead scoring & alerts",
+        "Pipeline visibility dashboard",
+        "Conversation intelligence",
+        "Automated follow-up sequences",
         "Human expert oversight",
         "CRM integration"
       ],
       highlighted: true,
       cta: "Start Your 30-Day Launch",
       slug: "launchpad-360"
-    },
-    {
-      icon: Brain,
-      name: "IQ Flow™",
-      tagline: "Revenue Intelligence",
-      description: "Managed pipeline intelligence that tracks, scores, and alerts on every opportunity.",
-      pricing: "Included with LaunchPad 360™",
-      pricingNote: "Or available as standalone add-on",
-      features: [
-        "Real-time lead scoring",
-        "Hot lead mobile alerts",
-        "Pipeline visibility dashboard",
-        "Conversation intelligence",
-        "Automated follow-up sequences",
-        "Deal risk flagging",
-        "Weekly forecast reports"
-      ],
-      highlighted: false,
-      cta: "Learn More",
-      slug: "iq-flow"
     },
     {
       icon: Search,
@@ -163,7 +147,7 @@ const Pricing = () => {
       {/* Pricing Cards */}
       <section className="py-20 md:py-28">
         <div className="container">
-          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {products.map((product) => (
               <div
                 key={product.name}

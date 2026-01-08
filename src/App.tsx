@@ -18,7 +18,6 @@ import CulverCity from "./pages/locations/CulverCity";
 import Henderson from "./pages/locations/Henderson";
 import Monterey from "./pages/locations/Monterey";
 import LaunchPad360 from "./pages/products/LaunchPad360";
-import IQFlow from "./pages/products/IQFlow";
 import LocalLift from "./pages/products/LocalLift";
 
 const queryClient = new QueryClient();
@@ -37,7 +36,6 @@ const App = () => (
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/locations" element={<LocationsPage />} />
           <Route path="/products/launchpad-360" element={<LaunchPad360 />} />
-          <Route path="/products/iq-flow" element={<IQFlow />} />
           <Route path="/products/locallift" element={<LocalLift />} />
           <Route path="/locations/sacramento" element={<Sacramento />} />
           <Route path="/locations/stockton" element={<Stockton />} />

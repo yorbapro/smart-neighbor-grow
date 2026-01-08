@@ -17,16 +17,19 @@ import {
   Linkedin,
   Clock,
   BarChart3,
-  Shield
+  Shield,
+  Brain,
+  Bell,
+  LineChart
 } from "lucide-react";
 
 const LaunchPad360 = () => {
   useEffect(() => {
-    document.title = "LaunchPad 360™ - Automated Go-To-Market Engine | BrightLaunchIQ";
+    document.title = "LaunchPad 360™ - Complete AI Sales Engine | BrightLaunchIQ";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "LaunchPad 360™ delivers automated Go-To-Market setup in 30 days. We build systems to find and contact your ideal leads with AI-powered multi-channel outreach.");
+      metaDescription.setAttribute("content", "LaunchPad 360™ delivers a complete AI sales engine in 30 days. Multi-channel outreach, lead scoring, pipeline intelligence, and conversation analytics—all in one system.");
     }
 
     window.scrollTo(0, 0);
@@ -38,7 +41,7 @@ const LaunchPad360 = () => {
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "LaunchPad 360™",
-      "description": "Automated Go-To-Market Engine - 30-day done-for-you setup that transforms AI potential into live lead generation",
+      "description": "Complete AI Sales Engine - 30-day done-for-you setup that transforms AI potential into live lead generation with built-in revenue intelligence",
       "brand": {
         "@type": "Brand",
         "name": "BrightLaunchIQ"
@@ -90,6 +93,29 @@ const LaunchPad360 = () => {
     }
   ];
 
+  const intelligenceFeatures = [
+    {
+      icon: Brain,
+      title: "Autonomous Lead Triage",
+      description: "Instant scoring and intelligent routing ensures hot leads receive immediate attention at the perfect moment."
+    },
+    {
+      icon: Bell,
+      title: "Hot Lead Mobile Alerts",
+      description: "Instant notifications when a prospect shows buying signals—never miss a sales moment."
+    },
+    {
+      icon: LineChart,
+      title: "Pipeline Visibility Dashboard",
+      description: "Real-time view of your entire sales pipeline with AI-powered forecasting and trend analysis."
+    },
+    {
+      icon: MessageSquare,
+      title: "Conversation Intelligence",
+      description: "Every call analyzed for deal risks, objections, and Next Best Action summaries delivered to reps in real-time."
+    }
+  ];
+
   const channels = [
     { icon: Phone, name: "Calls" },
     { icon: MessageSquare, name: "Voicemail" },
@@ -110,7 +136,7 @@ const LaunchPad360 = () => {
     { value: "30", label: "Days to Launch", suffix: "" },
     { value: "500", label: "Leads Delivered", suffix: "+" },
     { value: "6", label: "Outreach Channels", suffix: "" },
-    { value: "100", label: "Monthly Leads", suffix: "+" }
+    { value: "<60s", label: "Response Time", suffix: "" }
   ];
 
   return (
@@ -131,11 +157,11 @@ const LaunchPad360 = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-4">
-              Your 30-Day Customer Growth Strategy
+              Complete AI Sales Engine
             </p>
             
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-              Our team builds your New Business Launch Plan in just 30 days. We automate the heavy work and fill your inbox with the right leads faster than ever.
+              Our team builds your complete New Business Launch Plan in just 30 days—with built-in revenue intelligence that scores leads, tracks your pipeline, and alerts you instantly on hot opportunities.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -205,7 +231,38 @@ const LaunchPad360 = () => {
         </div>
       </section>
 
-      {/* Multi-Channel Outreach */}
+      {/* Revenue Intelligence */}
+      <section className="py-20 md:py-28 bg-card">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
+              Built-In Revenue Intelligence
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Your Always-On Revenue Brain
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Track every prospect, score buying readiness, and get alerted the second a hot lead needs attention—all included with LaunchPad 360™.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {intelligenceFeatures.map((item) => (
+              <div key={item.title} className="p-6 rounded-2xl bg-background border border-border hover:shadow-card-hover transition-shadow">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <item.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-display text-lg font-bold text-foreground mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="py-20 md:py-28 bg-gradient-subtle">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">

@@ -5,9 +5,8 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
-      { label: "LaunchPad 360™", href: "/#services" },
-      { label: "IQ Flow™", href: "/#services" },
-      { label: "LocalLift™", href: "/#services" },
+      { label: "LaunchPad 360™", href: "/products/launchpad-360" },
+      { label: "LocalLift™", href: "/products/locallift" },
     ],
     company: [
       { label: "About Us", href: "/#about" },
