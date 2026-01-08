@@ -23,6 +23,7 @@ import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
 
 const auditFormSchema = z.object({
+  email: z.string().trim().email("Valid email is required").max(255),
   businessName: z.string().trim().min(1, "Business name is required").max(100),
   industry: z.string().trim().min(1, "Industry is required").max(100),
   city: z.string().trim().min(1, "City is required").max(100),
@@ -57,6 +58,7 @@ const AEOAudit = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<AuditResult | null>(null);
   const [formData, setFormData] = useState({
+    email: "",
     businessName: "",
     industry: "",
     city: "",
@@ -171,6 +173,20 @@ const AEOAudit = () => {
               </h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email Address *</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    placeholder="your@email.com"
+                    required
+                    disabled={isLoading}
+                  />
+                  <p className="text-xs text-muted-foreground">We'll send your detailed audit results to this email.</p>
+                </div>
+
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="businessName">Business Name *</Label>
