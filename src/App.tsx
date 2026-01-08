@@ -10,6 +10,7 @@ import PaymentSuccess from "./pages/PaymentSuccess";
 import Terms from "./pages/Terms";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
+import AboutPage from "./pages/About";
 import LocationsPage from "./pages/Locations";
 import Sacramento from "./pages/locations/Sacramento";
 import Stockton from "./pages/locations/Stockton";
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/locations" element={<LocationsPage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route path="/products/launchpad-360" element={<LaunchPad360 />} />
           <Route path="/products/locallift" element={<LocalLift />} />
           <Route path="/locations/sacramento" element={<Sacramento />} />
