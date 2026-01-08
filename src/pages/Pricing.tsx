@@ -1,0 +1,435 @@
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { 
+  Check, 
+  ArrowRight, 
+  Rocket, 
+  Brain, 
+  Search,
+  Phone,
+  Users,
+  Clock,
+  DollarSign,
+  Calculator,
+  Zap,
+  Shield
+} from "lucide-react";
+
+const Pricing = () => {
+  useEffect(() => {
+    document.title = "Pricing - AI Sales Automation for Local Business | BrightLaunchIQ";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Transparent pricing for AI-powered sales automation. LaunchPad 360™ starts at $1,500 setup + $500/month. Get a 24/7 digital teammate for just $16.60/day.");
+    }
+
+    window.scrollTo(0, 0);
+  }, []);
+
+  const products = [
+    {
+      icon: Rocket,
+      name: "LaunchPad 360™",
+      tagline: "Automated GTM Engine",
+      description: "Complete 30-day go-to-market implementation with AI-powered multi-channel outreach.",
+      setup: "$1,500",
+      monthly: "$500",
+      dailyCost: "$16.60",
+      features: [
+        "Custom infrastructure build",
+        "500+ targeted local leads",
+        "Multi-channel outreach (6 channels)",
+        "AI Researcher & lead scoring",
+        "Email deliverability protection",
+        "60-minute strategy session",
+        "100 new leads monthly",
+        "Automated inbox triage",
+        "Human expert oversight",
+        "CRM integration"
+      ],
+      highlighted: true,
+      cta: "Start Your 30-Day Launch",
+      slug: "launchpad-360"
+    },
+    {
+      icon: Brain,
+      name: "IQ Flow™",
+      tagline: "Revenue Intelligence",
+      description: "Managed pipeline intelligence that tracks, scores, and alerts on every opportunity.",
+      pricing: "Included with LaunchPad 360™",
+      pricingNote: "Or available as standalone add-on",
+      features: [
+        "Real-time lead scoring",
+        "Hot lead mobile alerts",
+        "Pipeline visibility dashboard",
+        "Conversation intelligence",
+        "Automated follow-up sequences",
+        "Deal risk flagging",
+        "Weekly forecast reports"
+      ],
+      highlighted: false,
+      cta: "Learn More",
+      slug: "iq-flow"
+    },
+    {
+      icon: Search,
+      name: "LocalLift™",
+      tagline: "Local Dominance",
+      description: "Own your local market with Answer Engine Optimization and map pack domination.",
+      pricing: "Performance-Based",
+      pricingNote: "Pay per booked meeting",
+      features: [
+        "Answer Engine Optimization",
+        "Google Maps ranking",
+        "Voice search optimization",
+        "Reputation management",
+        "100+ directory monitoring",
+        "24/7 AI inquiry handling",
+        "Quarterly NAP verification"
+      ],
+      highlighted: false,
+      cta: "Learn More",
+      slug: "locallift"
+    }
+  ];
+
+  const comparisonItems = [
+    { feature: "Annual cost", human: "$80,000+", ai: "$7,500" },
+    { feature: "Daily cost", human: "$308/day", ai: "$16.60/day" },
+    { feature: "Hours available", human: "40 hrs/week", ai: "168 hrs/week" },
+    { feature: "Response time", human: "Hours to days", ai: "Under 60 seconds" },
+    { feature: "Sick days", human: "Yes", ai: "Never" },
+    { feature: "Training required", human: "3-6 months", ai: "30 days" },
+    { feature: "Scalability", human: "Limited", ai: "Unlimited" },
+    { feature: "Consistency", human: "Variable", ai: "100%" }
+  ];
+
+  const valueProps = [
+    {
+      icon: Clock,
+      title: "24/7 Availability",
+      description: "Your AI teammate never sleeps, ensuring you never miss a lead—even at 3 AM."
+    },
+    {
+      icon: Zap,
+      title: "60-Second Response",
+      description: "50% of sales go to the first responder. Our AI answers in under 60 seconds."
+    },
+    {
+      icon: Users,
+      title: "Human Oversight",
+      description: "Every AI action is guided by human experts who ensure quality and brand consistency."
+    },
+    {
+      icon: Shield,
+      title: "ROI Guaranteed",
+      description: "We focus on tools that grow revenue or save time. Your results matter most."
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="pt-24 pb-16 md:pt-32 md:pb-20 bg-gradient-subtle">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
+              Simple, Transparent Pricing
+            </span>
+            
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+              A Digital Teammate for<br />
+              <span className="text-gradient">$16.60/Day</span>
+            </h1>
+            
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+              Skip the $80k/year hire. Get enterprise-grade AI sales automation at a fraction of the cost—with human expert oversight included.
+            </p>
+
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-secondary text-secondary-foreground">
+              <Calculator className="w-5 h-5 text-primary" />
+              <span className="font-semibold">The Math: $500/mo ÷ 30 days = $16.60/day</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Cards */}
+      <section className="py-20 md:py-28">
+        <div className="container">
+          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {products.map((product) => (
+              <div
+                key={product.name}
+                className={`relative rounded-2xl p-8 transition-all duration-300 ${
+                  product.highlighted
+                    ? "bg-secondary text-secondary-foreground shadow-card-hover scale-[1.02] lg:scale-105"
+                    : "bg-card border border-border hover:shadow-card-hover"
+                }`}
+              >
+                {product.highlighted && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                    <span className="px-4 py-1.5 rounded-full bg-gradient-hero text-primary-foreground text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+                {/* Icon & Name */}
+                <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${
+                  product.highlighted ? "bg-primary/20" : "bg-primary/10"
+                }`}>
+                  <product.icon className="w-7 h-7 text-primary" />
+                </div>
+
+                <h3 className="font-display text-2xl font-bold mb-1">
+                  {product.name}
+                </h3>
+                <p className="text-sm font-medium text-primary mb-4">
+                  {product.tagline}
+                </p>
+                <p className={`text-sm mb-6 ${
+                  product.highlighted ? "text-secondary-foreground/80" : "text-muted-foreground"
+                }`}>
+                  {product.description}
+                </p>
+
+                {/* Pricing */}
+                {product.setup ? (
+                  <div className="mb-6 pb-6 border-b border-primary/20">
+                    <div className="flex items-baseline gap-2 mb-1">
+                      <span className="font-display text-4xl font-bold">{product.setup}</span>
+                      <span className="text-sm opacity-70">one-time setup</span>
+                    </div>
+                    <p className="text-sm opacity-70 mb-3">
+                      then <span className="font-semibold">{product.monthly}/month</span> ongoing
+                    </p>
+                    <div className="flex items-center gap-2 text-primary">
+                      <DollarSign className="w-4 h-4" />
+                      <span className="text-sm font-semibold">
+                        Just {product.dailyCost}/day for a 24/7 teammate
+                      </span>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="mb-6 pb-6 border-b border-primary/20">
+                    <div className="font-display text-2xl font-bold mb-1">
+                      {product.pricing}
+                    </div>
+                    <p className="text-sm opacity-70">{product.pricingNote}</p>
+                  </div>
+                )}
+
+                {/* Features */}
+                <ul className="space-y-3 mb-8">
+                  {product.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-3">
+                      <Check className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
+                        product.highlighted ? "text-primary" : "text-accent"
+                      }`} />
+                      <span className={`text-sm ${
+                        product.highlighted ? "text-secondary-foreground/90" : "text-muted-foreground"
+                      }`}>
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* CTA */}
+                <Button
+                  variant={product.highlighted ? "hero" : "outline"}
+                  className="w-full"
+                  asChild
+                >
+                  <Link to={product.highlighted ? "/get-started" : `/products/${product.slug}`}>
+                    {product.cta}
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </Button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison Table */}
+      <section className="py-20 md:py-28 bg-gradient-subtle">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
+              The Math of Success
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Human Hire vs. AI Teammate
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              See why smart local businesses choose BrightLaunchIQ over traditional hires.
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-card rounded-2xl border border-border overflow-hidden shadow-card">
+              {/* Table Header */}
+              <div className="grid grid-cols-3 bg-secondary text-secondary-foreground">
+                <div className="p-4 font-semibold">Feature</div>
+                <div className="p-4 font-semibold text-center border-l border-primary/20">Human SDR</div>
+                <div className="p-4 font-semibold text-center border-l border-primary/20 bg-primary/10">
+                  <span className="flex items-center justify-center gap-2">
+                    <Rocket className="w-4 h-4 text-primary" />
+                    LaunchPad 360™
+                  </span>
+                </div>
+              </div>
+
+              {/* Table Body */}
+              {comparisonItems.map((item, index) => (
+                <div 
+                  key={item.feature} 
+                  className={`grid grid-cols-3 ${index % 2 === 0 ? "bg-muted/30" : "bg-card"}`}
+                >
+                  <div className="p-4 font-medium text-foreground">{item.feature}</div>
+                  <div className="p-4 text-center text-muted-foreground border-l border-border">
+                    {item.human}
+                  </div>
+                  <div className="p-4 text-center font-semibold text-primary border-l border-border bg-primary/5">
+                    {item.ai}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-center text-sm text-muted-foreground mt-6">
+              * Based on average SDR salary of $60,000 + benefits, training, and overhead costs
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Value Props */}
+      <section className="py-20 md:py-28">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
+              Why BrightLaunchIQ
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Human-Guided AI That Delivers
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              We believe small business owners deserve world-class sales automation without sacrificing what makes their company special.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {valueProps.map((prop) => (
+              <div key={prop.title} className="text-center p-6">
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <prop.icon className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="font-display text-xl font-bold text-foreground mb-2">
+                  {prop.title}
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  {prop.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Teaser */}
+      <section className="py-16 bg-secondary text-secondary-foreground">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-display text-2xl font-bold mb-4">
+                  Common Questions
+                </h3>
+                <div className="space-y-4">
+                  <div>
+                    <p className="font-semibold mb-1">How long does it take to see results?</p>
+                    <p className="text-secondary-foreground/80 text-sm">
+                      Most clients see measurable improvements within the first 30 days. LaunchPad 360™ gets your entire GTM system operational in just one month.
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-semibold mb-1">Do I need to be tech-savvy?</p>
+                    <p className="text-secondary-foreground/80 text-sm">
+                      Not at all. We handle all technical setup and management. You focus on running your business and serving customers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className="space-y-4">
+                  <div>
+                    <p className="font-semibold mb-1">Is my customer data safe?</p>
+                    <p className="text-secondary-foreground/80 text-sm">
+                      Yes. We prioritize Responsible AI with Privacy by Design, ensuring your data is secure, compliant, and never shared.
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-semibold mb-1">What if I want to cancel?</p>
+                    <p className="text-secondary-foreground/80 text-sm">
+                      No long-term contracts. Cancel anytime with 30 days notice. Your data and leads remain yours.
+                    </p>
+                  </div>
+                </div>
+                <Button variant="outline" className="mt-6 border-primary/30 text-secondary-foreground hover:bg-primary/10" asChild>
+                  <Link to="/#faq">
+                    View All FAQs
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 md:py-28">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Ready to Get Your Digital Teammate?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Schedule a free 15-minute revenue audit. Our human experts will review your sales process and show exactly where AI can help you win.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="hero" size="lg" asChild>
+                <Link to="/get-started">
+                  Schedule Your Revenue Audit
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </Button>
+              <Button variant="heroOutline" size="lg" asChild>
+                <a href="tel:1-800-LAUNCH-IQ">
+                  <Phone className="mr-2 w-5 h-5" />
+                  1-800-LAUNCH-IQ
+                </a>
+              </Button>
+            </div>
+            <p className="text-sm text-muted-foreground mt-4">
+              No spam, ever. We respond within 24 hours.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Pricing;
