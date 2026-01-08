@@ -27,6 +27,7 @@ import LocalLift from "./pages/products/LocalLift";
 import AEOAudit from "./pages/AEOAudit";
 import AdminAuth from "./pages/AdminAuth";
 import AdminLeads from "./pages/AdminLeads";
+import AdminEmailTemplates from "./pages/AdminEmailTemplates";
 
 const queryClient = new QueryClient();
 
@@ -53,6 +54,7 @@ const App = () => (
           <Route path="/aeo-audit" element={<AEOAudit />} />
           <Route path="/admin" element={<AdminAuth />} />
           <Route path="/admin/leads" element={<AdminLeads />} />
+          <Route path="/admin/templates" element={<AdminEmailTemplates />} />
           <Route path="/locations/sacramento" element={<Sacramento />} />
           <Route path="/locations/stockton" element={<Stockton />} />
           <Route path="/locations/fresno" element={<Fresno />} />
