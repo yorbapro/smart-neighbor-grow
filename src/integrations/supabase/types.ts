@@ -14,7 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      aeo_audit_leads: {
+        Row: {
+          audit_result: Json | null
+          business_name: string
+          city: string
+          created_at: string
+          email: string
+          id: string
+          industry: string
+          overall_score: number | null
+          potential_score: number | null
+          services: string
+          state: string
+          website: string | null
+        }
+        Insert: {
+          audit_result?: Json | null
+          business_name: string
+          city: string
+          created_at?: string
+          email: string
+          id?: string
+          industry: string
+          overall_score?: number | null
+          potential_score?: number | null
+          services: string
+          state: string
+          website?: string | null
+        }
+        Update: {
+          audit_result?: Json | null
+          business_name?: string
+          city?: string
+          created_at?: string
+          email?: string
+          id?: string
+          industry?: string
+          overall_score?: number | null
+          potential_score?: number | null
+          services?: string
+          state?: string
+          website?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
