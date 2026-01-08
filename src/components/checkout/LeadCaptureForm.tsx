@@ -114,7 +114,7 @@ const LeadCaptureForm = ({ onSubmit }: LeadCaptureFormProps) => {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-6" noValidate aria-label="Lead capture form">
         <div className="grid md:grid-cols-2 gap-6">
           <div className="space-y-2">
             <Label htmlFor="businessName">Business Name *</Label>
@@ -126,7 +126,7 @@ const LeadCaptureForm = ({ onSubmit }: LeadCaptureFormProps) => {
               className={errors.businessName ? "border-destructive" : ""}
             />
             {errors.businessName && (
-              <p className="text-sm text-destructive">{errors.businessName}</p>
+              <p className="text-sm text-destructive" role="alert" id="businessName-error">{errors.businessName}</p>
             )}
           </div>
 
@@ -148,7 +148,7 @@ const LeadCaptureForm = ({ onSubmit }: LeadCaptureFormProps) => {
               </SelectContent>
             </Select>
             {errors.industry && (
-              <p className="text-sm text-destructive">{errors.industry}</p>
+              <p className="text-sm text-destructive" role="alert" id="industry-error">{errors.industry}</p>
             )}
           </div>
         </div>
@@ -165,7 +165,7 @@ const LeadCaptureForm = ({ onSubmit }: LeadCaptureFormProps) => {
               className={errors.email ? "border-destructive" : ""}
             />
             {errors.email && (
-              <p className="text-sm text-destructive">{errors.email}</p>
+              <p className="text-sm text-destructive" role="alert" id="email-error">{errors.email}</p>
             )}
           </div>
 
@@ -180,7 +180,7 @@ const LeadCaptureForm = ({ onSubmit }: LeadCaptureFormProps) => {
               className={errors.phone ? "border-destructive" : ""}
             />
             {errors.phone && (
-              <p className="text-sm text-destructive">{errors.phone}</p>
+              <p className="text-sm text-destructive" role="alert" id="phone-error">{errors.phone}</p>
             )}
           </div>
         </div>
@@ -203,7 +203,7 @@ const LeadCaptureForm = ({ onSubmit }: LeadCaptureFormProps) => {
             </SelectContent>
           </Select>
           {errors.monthlyRevenue && (
-            <p className="text-sm text-destructive">{errors.monthlyRevenue}</p>
+            <p className="text-sm text-destructive" role="alert" id="revenue-error">{errors.monthlyRevenue}</p>
           )}
         </div>
 
@@ -225,7 +225,7 @@ const LeadCaptureForm = ({ onSubmit }: LeadCaptureFormProps) => {
             </SelectContent>
           </Select>
           {errors.currentLeadSource && (
-            <p className="text-sm text-destructive">{errors.currentLeadSource}</p>
+            <p className="text-sm text-destructive" role="alert" id="leadsource-error">{errors.currentLeadSource}</p>
           )}
         </div>
 
@@ -247,7 +247,7 @@ const LeadCaptureForm = ({ onSubmit }: LeadCaptureFormProps) => {
             </SelectContent>
           </Select>
           {errors.biggestChallenge && (
-            <p className="text-sm text-destructive">{errors.biggestChallenge}</p>
+            <p className="text-sm text-destructive" role="alert" id="challenge-error">{errors.biggestChallenge}</p>
           )}
         </div>
 

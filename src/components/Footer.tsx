@@ -17,7 +17,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-secondary text-secondary-foreground py-16">
+    <footer className="bg-secondary text-secondary-foreground py-16" role="contentinfo">
       <div className="container">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
@@ -87,6 +87,9 @@ const Footer = () => {
             </Link>
             <Link to="/terms" className="hover:text-primary transition-colors">
               Terms & Cancellation
+            </Link>
+            <Link to="/accessibility" className="hover:text-primary transition-colors">
+              Accessibility
             </Link>
             <a href="mailto:success@BrightLaunchIQ.com" className="hover:text-primary transition-colors">
               Contact
