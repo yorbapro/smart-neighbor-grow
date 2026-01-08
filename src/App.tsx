@@ -12,6 +12,9 @@ import Sacramento from "./pages/locations/Sacramento";
 import Stockton from "./pages/locations/Stockton";
 import Fresno from "./pages/locations/Fresno";
 import Bakersfield from "./pages/locations/Bakersfield";
+import LaunchPad360 from "./pages/products/LaunchPad360";
+import IQFlow from "./pages/products/IQFlow";
+import LocalLift from "./pages/products/LocalLift";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +29,9 @@ const App = () => (
           <Route path="/get-started" element={<GetStarted />} />
           <Route path="/payment-success" element={<PaymentSuccess />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/products/launchpad-360" element={<LaunchPad360 />} />
+          <Route path="/products/iq-flow" element={<IQFlow />} />
+          <Route path="/products/locallift" element={<LocalLift />} />
           <Route path="/locations/sacramento" element={<Sacramento />} />
           <Route path="/locations/stockton" element={<Stockton />} />
           <Route path="/locations/fresno" element={<Fresno />} />
