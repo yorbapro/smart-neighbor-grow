@@ -13,6 +13,9 @@ import Sacramento from "./pages/locations/Sacramento";
 import Stockton from "./pages/locations/Stockton";
 import Fresno from "./pages/locations/Fresno";
 import Bakersfield from "./pages/locations/Bakersfield";
+import CulverCity from "./pages/locations/CulverCity";
+import Henderson from "./pages/locations/Henderson";
+import Monterey from "./pages/locations/Monterey";
 import LaunchPad360 from "./pages/products/LaunchPad360";
 import IQFlow from "./pages/products/IQFlow";
 import LocalLift from "./pages/products/LocalLift";
@@ -38,6 +41,9 @@ const App = () => (
           <Route path="/locations/stockton" element={<Stockton />} />
           <Route path="/locations/fresno" element={<Fresno />} />
           <Route path="/locations/bakersfield" element={<Bakersfield />} />
+          <Route path="/locations/culver-city" element={<CulverCity />} />
+          <Route path="/locations/henderson" element={<Henderson />} />
+          <Route path="/locations/monterey" element={<Monterey />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

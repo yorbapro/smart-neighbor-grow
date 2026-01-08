@@ -14,11 +14,29 @@ import {
   Zap,
   MessageSquare,
   Mail,
-  Smartphone
+  Smartphone,
+  Building,
+  Globe
 } from "lucide-react";
 
-interface LocationPageProps {
+export interface LocationContact {
+  phone: string;
+  phoneDisplay: string;
+  address: string;
   city: string;
+  state: string;
+  zip: string;
+  email: string;
+}
+
+export interface LocationFAQ {
+  question: string;
+  answer: string;
+}
+
+export interface LocationPageProps {
+  city: string;
+  state: string;
   areaCode: string;
   specialty: string;
   industries: string[];
@@ -32,10 +50,14 @@ interface LocationPageProps {
   };
   testimonialIndustry: string;
   nearbyAreas: string[];
+  contact: LocationContact;
+  faqs: LocationFAQ[];
+  slug: string;
 }
 
 const LocationPage = ({
   city,
+  state,
   areaCode,
   specialty,
   industries,
@@ -45,34 +67,118 @@ const LocationPage = ({
   localStats,
   testimonialIndustry,
   nearbyAreas,
+  contact,
+  faqs,
+  slug,
 }: LocationPageProps) => {
   useEffect(() => {
-    // Add location-specific structured data
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.textContent = JSON.stringify({
+    // LocalBusiness structured data for SEO
+    const localBusinessScript = document.createElement("script");
+    localBusinessScript.type = "application/ld+json";
+    localBusinessScript.id = "local-business-schema";
+    localBusinessScript.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": `BrightLaunchIQ - ${city}`,
-      "description": `AI lead generation and sales implementation for ${city} businesses. ${specialty}.`,
-      "url": `https://brightlaunchiq.com/locations/${city.toLowerCase()}`,
-      "telephone": "1-800-LAUNCH-IQ",
+      "@id": `https://brightlaunchiq.com/locations/${slug}#business`,
+      "name": `BrightLaunchIQ ${city}`,
+      "description": `AI lead generation and sales automation for ${city}, ${state} businesses. ${specialty}. Human-guided AI that responds to leads in under 60 seconds.`,
+      "url": `https://brightlaunchiq.com/locations/${slug}`,
+      "telephone": contact.phone,
+      "email": contact.email,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": contact.address,
+        "addressLocality": contact.city,
+        "addressRegion": contact.state,
+        "postalCode": contact.zip,
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "",
+        "longitude": ""
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": city,
+          "containedInPlace": {
+            "@type": "State",
+            "name": state
+          }
+        },
+        ...nearbyAreas.map(area => ({
+          "@type": "City",
+          "name": area
+        }))
+      ],
+      "serviceType": [
+        "AI Lead Generation",
+        "AI Sales Automation",
+        "Sales Implementation",
+        specialty
+      ],
+      "priceRange": "$500-$1500",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/brightlaunchiq"
+      ]
+    });
+    document.head.appendChild(localBusinessScript);
+
+    // FAQPage structured data for AEO
+    const faqScript = document.createElement("script");
+    faqScript.type = "application/ld+json";
+    faqScript.id = "faq-schema";
+    faqScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    });
+    document.head.appendChild(faqScript);
+
+    // Service structured data for GEO
+    const serviceScript = document.createElement("script");
+    serviceScript.type = "application/ld+json";
+    serviceScript.id = "service-schema";
+    serviceScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": `AI Lead Generation in ${city}`,
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": `BrightLaunchIQ ${city}`
+      },
       "areaServed": {
         "@type": "City",
-        "name": city,
-        "containedInPlace": {
-          "@type": "State",
-          "name": "California"
-        }
+        "name": city
       },
-      "serviceType": ["AI Lead Generation", "AI Sales Implementation", specialty],
+      "description": `Human-guided AI lead generation and sales automation for ${city} businesses. We respond to leads in under 60 seconds and automate 70% of sales tasks.`,
+      "serviceType": "AI Sales Automation"
     });
-    document.head.appendChild(script);
+    document.head.appendChild(serviceScript);
 
     return () => {
-      document.head.removeChild(script);
+      const localBiz = document.getElementById("local-business-schema");
+      const faq = document.getElementById("faq-schema");
+      const service = document.getElementById("service-schema");
+      if (localBiz) document.head.removeChild(localBiz);
+      if (faq) document.head.removeChild(faq);
+      if (service) document.head.removeChild(service);
     };
-  }, [city, specialty]);
+  }, [city, state, specialty, contact, faqs, nearbyAreas, slug]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -84,7 +190,7 @@ const LocationPage = ({
             <div className="max-w-4xl mx-auto text-center">
               <div className="flex items-center justify-center gap-2 mb-6">
                 <MapPin className="w-5 h-5 text-primary" />
-                <span className="text-primary font-semibold">{areaCode} Area</span>
+                <span className="text-primary font-semibold">{city}, {state} • {areaCode} Area</span>
               </div>
               
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
@@ -98,14 +204,14 @@ const LocationPage = ({
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Button variant="hero" size="lg" asChild>
                   <Link to="/get-started">
-                    Start Your 14-Day Launch
+                    Start Your 30-Day Launch
                     <ArrowRight className="ml-2" size={20} />
                   </Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <a href="tel:1-800-LAUNCH-IQ">
+                  <a href={`tel:${contact.phone}`}>
                     <Phone className="mr-2" size={18} />
-                    1-800-LAUNCH-IQ
+                    {contact.phoneDisplay}
                   </a>
                 </Button>
               </div>
@@ -129,6 +235,30 @@ const LocationPage = ({
           </div>
         </section>
 
+        {/* Local Contact Card */}
+        <section className="py-8 bg-secondary">
+          <div className="container">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-secondary-foreground">
+              <div className="flex items-center gap-3">
+                <Building className="w-5 h-5 text-primary" />
+                <span className="text-sm">{contact.address}, {contact.city}, {contact.state} {contact.zip}</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-primary" />
+                <a href={`tel:${contact.phone}`} className="text-sm hover:text-primary transition-colors">
+                  {contact.phoneDisplay}
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-primary" />
+                <a href={`mailto:${contact.email}`} className="text-sm hover:text-primary transition-colors">
+                  {contact.email}
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* About This Location */}
         <section className="py-16 md:py-24">
           <div className="container">
@@ -138,7 +268,7 @@ const LocationPage = ({
                   {specialty}
                 </span>
                 <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-                  AI Sales Implementation for {city} Businesses
+                  AI Sales Automation for {city} Businesses
                 </h2>
                 <p className="text-lg text-muted-foreground mb-6">
                   {description}
@@ -225,11 +355,40 @@ const LocationPage = ({
           </div>
         </section>
 
+        {/* Local FAQ Section for AEO */}
+        <section className="py-16 md:py-24">
+          <div className="container">
+            <div className="max-w-3xl mx-auto">
+              <div className="text-center mb-12">
+                <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
+                  {city} AI Lead Generation FAQ
+                </span>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+                  Questions About AI Sales in {city}
+                </h2>
+              </div>
+
+              <div className="space-y-6">
+                {faqs.map((faq, index) => (
+                  <div key={index} className="bg-card border border-border rounded-xl p-6">
+                    <h3 className="font-display text-lg font-bold text-foreground mb-3">
+                      {faq.question}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {faq.answer}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Pricing CTA */}
         <section className="py-16 md:py-24 bg-gradient-hero text-primary-foreground">
           <div className="container text-center">
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-              Start Your {city} Launch in 14 Days
+              Start Your {city} Launch in 30 Days
             </h2>
             <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
               Join local {testimonialIndustry.toLowerCase()} businesses already using AI lead generation 
@@ -283,7 +442,7 @@ const LocationPage = ({
 
             <div className="text-center">
               <p className="text-muted-foreground mb-4">
-                Looking for AI lead generation in another California city?
+                Looking for AI lead generation in another city?
               </p>
               <Link to="/#locations" className="text-primary hover:underline font-medium">
                 View All Locations →
