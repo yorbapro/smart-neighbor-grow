@@ -32,7 +32,7 @@ const Hero = () => {
 
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6 animate-slide-up" style={{ animationDelay: "0.2s" }}>
             <Button variant="hero" size="xl" asChild>
               <Link to="/get-started">
                 Get Your Free Revenue Audit
@@ -42,6 +42,17 @@ const Hero = () => {
             <Button variant="heroOutline" size="xl" asChild>
               <a href="#services">See the 14-Day Guarantee</a>
             </Button>
+          </div>
+
+          {/* Secondary Link */}
+          <div className="mb-16 animate-slide-up" style={{ animationDelay: "0.25s" }}>
+            <Link 
+              to="/pricing" 
+              className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              See Pricing
+              <ArrowRight size={14} />
+            </Link>
           </div>
 
           {/* Trust Indicators */}
