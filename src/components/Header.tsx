@@ -10,7 +10,7 @@ const Header = () => {
     { label: "LaunchPad 360™", href: "/products/launchpad-360" },
     { label: "LocalLift™", href: "/products/locallift" },
     { label: "Pricing", href: "/pricing" },
-    { label: "Locations", href: "/locations" },
+    { label: "About Us", href: "/about" },
     { label: "Contact", href: "/contact" },
   ];
 
