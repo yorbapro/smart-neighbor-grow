@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Rocket, Brain, Search, ArrowRight, Check, DollarSign, Phone, MessageSquare, Mail, Smartphone, Users } from "lucide-react";
+import { Rocket, Brain, Search, ArrowRight, Check, Phone, MessageSquare, Mail, Smartphone, Users } from "lucide-react";
 
 const Services = () => {
   const services = [
@@ -21,11 +21,7 @@ const Services = () => {
         "Automated inbox triage (only hot leads forwarded)",
         "100 new intent-driven leads monthly",
       ],
-      pricing: {
-        setup: "$1,500",
-        monthly: "$500/mo",
-        daily: "$16.60/day",
-      },
+      slug: "launchpad-360",
       featured: true,
     },
     {
@@ -40,6 +36,7 @@ const Services = () => {
         "Pipeline visibility dashboard",
         "CRM integration (Salesforce/HubSpot)",
       ],
+      slug: "iq-flow",
       featured: false,
     },
     {
@@ -54,6 +51,7 @@ const Services = () => {
         "Local expert positioning",
         "AEO-optimized content strategy",
       ],
+      slug: "locallift",
       featured: false,
     },
   ];
@@ -148,44 +146,16 @@ const Services = () => {
                 ))}
               </ul>
 
-              {/* Pricing */}
-              {service.pricing && (
-                <div className="mb-6 pb-6 border-b border-primary/20">
-                  <div className="flex items-baseline gap-2">
-                    <span className="font-display text-3xl font-bold">
-                      {service.pricing.setup}
-                    </span>
-                    <span className="text-sm opacity-70">one-time setup</span>
-                  </div>
-                  <p className="text-sm opacity-70 mb-2">
-                    then {service.pricing.monthly} ongoing
-                  </p>
-                  <div className="flex items-center gap-2 text-primary">
-                    <DollarSign className="w-4 h-4" />
-                    <span className="text-sm font-semibold">
-                      Just {service.pricing.daily} for a 24/7 digital teammate
-                    </span>
-                  </div>
-                </div>
-              )}
-
               {/* CTA */}
               <Button
                 variant={service.featured ? "hero" : "outline"}
                 className="w-full"
-                asChild={service.featured}
+                asChild
               >
-                {service.featured ? (
-                  <Link to="/get-started">
-                    Start Your 14-Day Launch
-                    <ArrowRight size={16} />
-                  </Link>
-                ) : (
-                  <>
-                    Learn More
-                    <ArrowRight size={16} />
-                  </>
-                )}
+                <Link to={`/products/${service.slug}`}>
+                  {service.featured ? "Start Your 30-Day Launch" : "Learn More"}
+                  <ArrowRight size={16} />
+                </Link>
               </Button>
             </div>
           ))}

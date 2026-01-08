@@ -7,10 +7,11 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: "Services", href: "/#services" },
-    { label: "About", href: "/#about" },
-    { label: "FAQ", href: "/#faq" },
+    { label: "LaunchPad 360™", href: "/products/launchpad-360" },
+    { label: "IQ Flow™", href: "/products/iq-flow" },
+    { label: "LocalLift™", href: "/products/locallift" },
     { label: "Locations", href: "/#locations" },
+    { label: "About", href: "/#about" },
   ];
 
   return (
