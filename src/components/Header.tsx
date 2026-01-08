@@ -9,9 +9,9 @@ const Header = () => {
   const navLinks = [
     { label: "LaunchPad 360™", href: "/products/launchpad-360" },
     { label: "LocalLift™", href: "/products/locallift" },
+    { label: "Free AEO Audit", href: "/aeo-audit" },
     { label: "Pricing", href: "/pricing" },
     { label: "About Us", href: "/about" },
-    { label: "Contact", href: "/contact" },
   ];
 
   return (
