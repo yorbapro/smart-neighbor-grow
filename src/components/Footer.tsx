@@ -9,7 +9,7 @@ const Footer = () => {
       { label: "LocalLift™", href: "/products/locallift" },
     ],
     company: [
-      { label: "About Us", href: "/#about" },
+      { label: "About Us", href: "/about" },
       { label: "FAQ", href: "/#faq" },
       { label: "Contact", href: "/contact" },
       { label: "Get Started", href: "/get-started" },
