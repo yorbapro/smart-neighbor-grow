@@ -10,24 +10,16 @@ const Footer = () => {
     ],
     company: [
       { label: "About Us", href: "/about" },
+      { label: "Locations", href: "/locations" },
       { label: "FAQ", href: "/#faq" },
       { label: "Contact", href: "/contact" },
-      { label: "Get Started", href: "/get-started" },
-    ],
-    locations: [
-      { label: "All Locations", href: "/locations" },
-      { label: "Sacramento", href: "/locations/sacramento" },
-      { label: "Bakersfield", href: "/locations/bakersfield" },
-      { label: "Culver City", href: "/locations/culver-city" },
-      { label: "Henderson NV", href: "/locations/henderson" },
-      { label: "Monterey", href: "/locations/monterey" },
     ],
   };
 
   return (
     <footer className="bg-secondary text-secondary-foreground py-16">
       <div className="container">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-4">
@@ -82,22 +74,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Locations */}
-          <div>
-            <h4 className="font-display font-semibold mb-4">Locations</h4>
-            <ul className="space-y-3">
-              {footerLinks.locations.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    to={link.href}
-                    className="text-secondary-foreground/70 hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
         {/* Bottom */}
