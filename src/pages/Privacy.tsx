@@ -86,6 +86,15 @@ const Privacy = () => {
               <p className="mt-4">
                 We do not sell your personal information to third parties.
               </p>
+
+              <h3 className="font-semibold text-foreground text-xl mb-2 mt-6">SMS/Text Messaging Privacy</h3>
+              <p>
+                No mobile information will be shared with third parties or affiliates for marketing or 
+                promotional purposes. All the categories described above exclude text messaging originator 
+                opt-in data and consent; this information will not be shared with any third parties. 
+                Information obtained through SMS opt-in will only be used to deliver the text messages 
+                you have requested.
+              </p>
             </section>
 
             <section>
