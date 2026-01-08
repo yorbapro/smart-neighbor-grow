@@ -20,10 +20,22 @@ interface Lead {
   converted: boolean;
 }
 
+interface EmailTemplate {
+  template_key: string;
+  subject: string;
+  body_html: string;
+}
+
 const FOLLOWUP_DAYS = {
   first: 1,
   second: 3,
   third: 7,
+};
+
+const TEMPLATE_KEYS = {
+  first: "followup_day_1",
+  second: "followup_day_3",
+  third: "followup_day_7",
 };
 
 serve(async (req) => {
@@ -49,6 +61,21 @@ serve(async (req) => {
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
     const resend = new Resend(resendApiKey);
     const now = new Date();
+
+    // Fetch email templates
+    const { data: templates, error: templateError } = await supabase
+      .from("email_templates")
+      .select("template_key, subject, body_html");
+
+    if (templateError) {
+      console.error("Error fetching templates:", templateError);
+      throw new Error("Failed to fetch email templates");
+    }
+
+    const templateMap: Record<string, EmailTemplate> = {};
+    for (const template of templates || []) {
+      templateMap[template.template_key] = template;
+    }
 
     // Fetch leads that haven't converted and need follow-ups
     const { data: leads, error: fetchError } = await supabase
@@ -85,15 +112,39 @@ serve(async (req) => {
 
       if (!followupType || !updateColumn) continue;
 
-      // Generate email content based on follow-up type
-      const emailContent = generateEmailContent(lead, followupType);
+      // Get template for this follow-up type
+      const templateKey = TEMPLATE_KEYS[followupType];
+      const template = templateMap[templateKey];
+
+      if (!template) {
+        console.error(`Template not found: ${templateKey}`);
+        continue;
+      }
+
+      // Replace variables in template
+      const variables: Record<string, string> = {
+        business_name: lead.business_name,
+        overall_score: String(lead.overall_score || 0),
+        potential_score: String(lead.potential_score || 0),
+        score_improvement: String((lead.potential_score || 0) - (lead.overall_score || 0)),
+        email: lead.email,
+      };
+
+      let subject = template.subject;
+      let bodyHtml = template.body_html;
+
+      for (const [key, value] of Object.entries(variables)) {
+        const regex = new RegExp(`\\{\\{${key}\\}\\}`, 'g');
+        subject = subject.replace(regex, value);
+        bodyHtml = bodyHtml.replace(regex, value);
+      }
 
       try {
         await resend.emails.send({
           from: "BrightLaunchIQ <onboarding@resend.dev>",
           to: [lead.email],
-          subject: emailContent.subject,
-          html: emailContent.html,
+          subject,
+          html: bodyHtml,
         });
 
         // Update the lead with the sent timestamp
@@ -127,105 +178,3 @@ serve(async (req) => {
     );
   }
 });
-
-function generateEmailContent(lead: Lead, type: "first" | "second" | "third") {
-  const baseStyles = `
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-  `;
-
-  const buttonStyle = `
-    display: inline-block;
-    background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
-    color: white;
-    padding: 14px 28px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 20px 0;
-  `;
-
-  if (type === "first") {
-    return {
-      subject: `Quick question about your AEO score (${lead.overall_score}/100)`,
-      html: `
-        <div style="${baseStyles}">
-          <h2 style="color: #1a1a2e;">Hi there,</h2>
-          <p>Yesterday you checked your AI search visibility for <strong>${lead.business_name}</strong> and scored <strong>${lead.overall_score}/100</strong>.</p>
-          <p>I noticed there's significant room for improvement—your potential score is <strong>${lead.potential_score}/100</strong>.</p>
-          <p>Quick question: <em>Is improving your visibility on ChatGPT, Gemini, and voice search a priority for you right now?</em></p>
-          <p>If so, I'd love to show you exactly how we can boost your score in the next 30 days.</p>
-          <a href="https://brightlaunchiq.com/get-started" style="${buttonStyle}">Let's Talk</a>
-          <p style="color: #666; font-size: 14px; margin-top: 30px;">
-            Best,<br>
-            The BrightLaunchIQ Team
-          </p>
-          <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
-          <p style="color: #999; font-size: 12px;">
-            You received this because you requested an AEO audit for ${lead.business_name}.
-          </p>
-        </div>
-      `,
-    };
-  }
-
-  if (type === "second") {
-    return {
-      subject: `Your competitors might be ahead—here's why`,
-      html: `
-        <div style="${baseStyles}">
-          <h2 style="color: #1a1a2e;">Quick update for ${lead.business_name}</h2>
-          <p>A few days ago, you discovered your AI search score was <strong>${lead.overall_score}/100</strong>.</p>
-          <p>Here's what's happening while you're reading this:</p>
-          <ul style="color: #444; line-height: 1.8;">
-            <li>AI assistants like ChatGPT and Gemini are answering customer questions about your industry</li>
-            <li>Voice searches for local services are happening every second</li>
-            <li>Businesses optimizing for AI search are getting those referrals</li>
-          </ul>
-          <p>The good news? With a potential score of <strong>${lead.potential_score}/100</strong>, you can catch up fast.</p>
-          <p>Our LocalLift™ service is designed specifically for businesses like yours.</p>
-          <a href="https://brightlaunchiq.com/products/locallift" style="${buttonStyle}">See How LocalLift™ Works</a>
-          <p style="color: #666; font-size: 14px; margin-top: 30px;">
-            Best,<br>
-            The BrightLaunchIQ Team
-          </p>
-          <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
-          <p style="color: #999; font-size: 12px;">
-            You received this because you requested an AEO audit for ${lead.business_name}.
-          </p>
-        </div>
-      `,
-    };
-  }
-
-  // Third follow-up
-  return {
-    subject: `Last chance: Boost your AI visibility from ${lead.overall_score} to ${lead.potential_score}`,
-    html: `
-      <div style="${baseStyles}">
-        <h2 style="color: #1a1a2e;">Final check-in for ${lead.business_name}</h2>
-        <p>It's been a week since you discovered your AEO score was <strong>${lead.overall_score}/100</strong>.</p>
-        <p>I wanted to reach out one more time because I genuinely believe there's an opportunity here.</p>
-        <div style="background: #f8f9fa; border-radius: 12px; padding: 20px; margin: 20px 0;">
-          <p style="margin: 0 0 10px; font-weight: bold; color: #1a1a2e;">Your AEO snapshot:</p>
-          <p style="margin: 5px 0; color: #666;">Current Score: <strong style="color: #ef4444;">${lead.overall_score}/100</strong></p>
-          <p style="margin: 5px 0; color: #666;">Potential Score: <strong style="color: #10b981;">${lead.potential_score}/100</strong></p>
-          <p style="margin: 5px 0; color: #666;">Improvement: <strong style="color: #8b5cf6;">+${lead.potential_score - lead.overall_score} points</strong></p>
-        </div>
-        <p>If you're ready to start dominating AI search results, we're here to help.</p>
-        <p>If not, no worries—this will be my last email. I wish you all the best with ${lead.business_name}!</p>
-        <a href="https://brightlaunchiq.com/get-started" style="${buttonStyle}">Start My AEO Optimization</a>
-        <p style="color: #666; font-size: 14px; margin-top: 30px;">
-          Cheers,<br>
-          The BrightLaunchIQ Team
-        </p>
-        <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
-        <p style="color: #999; font-size: 12px;">
-          You received this because you requested an AEO audit for ${lead.business_name}. This is our final follow-up.
-        </p>
-      </div>
-    `,
-  };
-}

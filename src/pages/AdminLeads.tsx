@@ -34,7 +34,9 @@ import {
   Send,
   TrendingUp,
   Target,
-  Clock
+  Clock,
+  FileText,
+  Eye
 } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
@@ -54,6 +56,8 @@ import {
   Line,
   Legend
 } from "recharts";
+import LeadDetailModal from "@/components/admin/LeadDetailModal";
+
 
 interface Lead {
   id: string;
@@ -66,7 +70,9 @@ interface Lead {
   services: string;
   overall_score: number | null;
   potential_score: number | null;
+  audit_result: any;
   converted: boolean;
+  converted_at: string | null;
   created_at: string;
   followup_1_sent_at: string | null;
   followup_2_sent_at: string | null;
@@ -83,6 +89,8 @@ const AdminLeads = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filterIndustry, setFilterIndustry] = useState<string>("all");
   const [filterStatus, setFilterStatus] = useState<string>("all");
+  const [selectedLead, setSelectedLead] = useState<Lead | null>(null);
+  const [detailOpen, setDetailOpen] = useState(false);
 
   useEffect(() => {
     document.title = "Leads Dashboard | BrightLaunchIQ Admin";
@@ -345,6 +353,10 @@ const AdminLeads = () => {
                 )}
                 Send Follow-ups
               </Button>
+              <Button variant="outline" size="sm" onClick={() => navigate("/admin/templates")}>
+                <FileText className="w-4 h-4 mr-2" />
+                Templates
+              </Button>
               <Button variant="outline" size="sm" onClick={fetchLeads} disabled={isLoading}>
                 <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
                 Refresh
@@ -601,6 +613,7 @@ const AdminLeads = () => {
                           <TableHead>Follow-ups</TableHead>
                           <TableHead>Date</TableHead>
                           <TableHead className="text-center">Converted</TableHead>
+                          <TableHead className="text-center">View</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -664,6 +677,18 @@ const AdminLeads = () => {
                                 )}
                               </button>
                             </TableCell>
+                            <TableCell className="text-center">
+                              <button
+                                onClick={() => {
+                                  setSelectedLead(lead);
+                                  setDetailOpen(true);
+                                }}
+                                className="p-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+                                title="View details"
+                              >
+                                <Eye className="w-5 h-5" />
+                              </button>
+                            </TableCell>
                           </TableRow>
                         ))}
                       </TableBody>
@@ -675,6 +700,13 @@ const AdminLeads = () => {
           </Tabs>
         </div>
       </main>
+
+      <LeadDetailModal
+        lead={selectedLead}
+        open={detailOpen}
+        onOpenChange={setDetailOpen}
+        onUpdate={fetchLeads}
+      />
 
       <Footer />
     </div>
