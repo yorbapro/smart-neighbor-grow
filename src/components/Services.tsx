@@ -7,37 +7,22 @@ const Services = () => {
     {
       icon: Rocket,
       name: "LaunchPad 360™",
-      tagline: "Your Agentic Go-To-Market Engine",
-      description: "The complete AI sales implementation system. We build and install your custom automated sales engine directly into your existing ecosystem (Salesforce, HubSpot) in just 14 days.",
+      tagline: "Your Complete AI Sales Engine",
+      description: "The complete AI sales implementation system. We build and install your custom automated sales engine with built-in revenue intelligence in just 30 days.",
       features: [
         "Custom infrastructure build & data calibration",
         "AI Researcher identifies your ideal customers",
         "500+ targeted local business leads",
         "Multi-channel outreach: calls, voicemail, SMS, email",
         "LinkedIn & Facebook Messenger automation",
-        "Email deliverability warming & protection",
-        "60-minute strategy session with experts",
-        "Hyper-individualized AI outreach",
-        "Automated inbox triage (only hot leads forwarded)",
-        "100 new intent-driven leads monthly",
+        "Real-time lead scoring & hot lead alerts",
+        "Pipeline visibility dashboard",
+        "Conversation intelligence & deal tracking",
+        "Automated follow-up sequences",
+        "CRM integration (Salesforce/HubSpot)",
       ],
       slug: "launchpad-360",
       featured: true,
-    },
-    {
-      icon: Brain,
-      name: "IQ Flow™",
-      tagline: "Smart Pipeline Intelligence",
-      description: "Your business's AI brain for lead scoring and pipeline management. Tracks every prospect, scores buying readiness, and alerts your team the second a hot lead needs attention.",
-      features: [
-        "Automated lead scoring & ranking",
-        "Smart follow-up sequences",
-        "Hot lead instant mobile alerts",
-        "Pipeline visibility dashboard",
-        "CRM integration (Salesforce/HubSpot)",
-      ],
-      slug: "iq-flow",
-      featured: false,
     },
     {
       icon: Search,
@@ -72,7 +57,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {services.map((service) => (
             <div
               key={service.name}

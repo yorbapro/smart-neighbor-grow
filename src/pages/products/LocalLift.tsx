@@ -395,7 +395,7 @@ const LocalLift = () => {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/products/iq-flow">See IQ Flow™</Link>
+                <Link to="/products/launchpad-360">See LaunchPad 360™</Link>
               </Button>
             </div>
           </div>
