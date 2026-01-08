@@ -11,6 +11,7 @@ const Header = () => {
     { label: "LocalLift™", href: "/products/locallift" },
     { label: "Pricing", href: "/pricing" },
     { label: "Locations", href: "/locations" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
