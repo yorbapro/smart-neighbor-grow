@@ -268,8 +268,11 @@ const LocationPage = ({
                   {specialty}
                 </span>
                 <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-                  AI Sales Automation for {city} Businesses
+                  Boost Your Business in {city}
                 </h2>
+                <p className="text-lg text-muted-foreground mb-4">
+                  Elevate your online presence in {city} with expert website content tailored for small business success by BrightLaunchIQ.
+                </p>
                 <p className="text-lg text-muted-foreground mb-6">
                   {description}
                 </p>
@@ -286,19 +289,19 @@ const LocationPage = ({
 
               <div className="bg-card border border-border rounded-2xl p-8">
                 <h3 className="font-display text-2xl font-bold text-foreground mb-6">
-                  Multi-Channel AI Outreach
+                  Content Solutions for {city} Businesses
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  LaunchPad 360™ automatically contacts leads through every channel they prefer:
+                  Transform your online presence with tailored content solutions designed to enhance visibility and drive growth:
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   {[
-                    { icon: Phone, label: "AI Phone Calls" },
-                    { icon: MessageSquare, label: "Voicemail Drops" },
-                    { icon: Smartphone, label: "SMS Messages" },
+                    { icon: Globe, label: "Custom Web Content" },
+                    { icon: TrendingUp, label: "SEO Copywriting" },
+                    { icon: MessageSquare, label: "Blog Posts" },
                     { icon: Mail, label: "Email Sequences" },
-                    { icon: Users, label: "LinkedIn Outreach" },
-                    { icon: MessageSquare, label: "FB Messenger" },
+                    { icon: Users, label: "Social Content" },
+                    { icon: Phone, label: "24/7 AI Support" },
                   ].map((channel) => (
                     <div key={channel.label} className="flex items-center gap-3 p-3 bg-secondary/30 rounded-lg">
                       <channel.icon className="w-5 h-5 text-primary" />
@@ -316,40 +319,37 @@ const LocationPage = ({
           <div className="container">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Why {city} Businesses Choose AI Lead Generation
+                Empowering {city} Small Businesses
               </h2>
               <p className="text-lg text-muted-foreground">
-                The average {city} business takes 47 hours to respond to a new lead. 
-                78% of buyers choose whoever responds first. We fix that.
+                We understand the unique challenges of small businesses in {city}. 
+                Our expert team delivers personalized content solutions that drive results.
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-background border border-border rounded-xl p-6 text-center">
-                <div className="w-14 h-14 rounded-xl bg-destructive/10 flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-7 h-7 text-destructive" />
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <Globe className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="font-display text-xl font-bold text-foreground mb-2">The Problem</h3>
-                <p className="text-3xl font-bold text-destructive mb-2">47 Hours</p>
-                <p className="text-muted-foreground text-sm">Average lead response time in {city}</p>
+                <h3 className="font-display text-xl font-bold text-foreground mb-2">Custom Content</h3>
+                <p className="text-muted-foreground text-sm">Tailored website content that captures your brand essence</p>
               </div>
 
               <div className="bg-background border border-border rounded-xl p-6 text-center">
                 <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-7 h-7 text-accent" />
+                  <TrendingUp className="w-7 h-7 text-accent" />
                 </div>
-                <h3 className="font-display text-xl font-bold text-foreground mb-2">Our Solution</h3>
-                <p className="text-3xl font-bold text-accent mb-2">60 Seconds</p>
-                <p className="text-muted-foreground text-sm">Your AI teammate responds instantly, 24/7</p>
+                <h3 className="font-display text-xl font-bold text-foreground mb-2">SEO Optimized</h3>
+                <p className="text-muted-foreground text-sm">Boost your search rankings with expertly written copy</p>
               </div>
 
               <div className="bg-background border border-border rounded-xl p-6 text-center">
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-7 h-7 text-primary" />
+                  <Zap className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="font-display text-xl font-bold text-foreground mb-2">Your Result</h3>
-                <p className="text-3xl font-bold text-primary mb-2">78% More</p>
-                <p className="text-muted-foreground text-sm">Leads captured that you were missing</p>
+                <h3 className="font-display text-xl font-bold text-foreground mb-2">Drive Growth</h3>
+                <p className="text-muted-foreground text-sm">Transform visibility into leads and lasting success</p>
               </div>
             </div>
           </div>

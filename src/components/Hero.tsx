@@ -20,13 +20,13 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 animate-slide-up">
-            Stop Renting Your Growth.{" "}
-            <span className="text-gradient">Command Your Results.</span>
+            Empowering Small Businesses{" "}
+            <span className="text-gradient">with Stellar Content</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-4 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            Meet your new <strong className="text-foreground">24/7 Digital Teammate</strong>. We install a proprietary AI lead generation engine that finds, qualifies, and books meetings while you sleep.
+            BrightLaunchIQ is dedicated to helping small business owners shine online. We specialize in crafting compelling website content that captures your brand and engages your audience.
           </p>
 
 
@@ -35,7 +35,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6 animate-slide-up" style={{ animationDelay: "0.2s" }}>
             <Button variant="hero" size="xl" asChild>
               <Link to="/get-started">
-                Get Your Free Revenue Audit
+                Boost Your Growth
                 <ArrowRight size={20} />
               </Link>
             </Button>

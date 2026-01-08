@@ -11,11 +11,11 @@ const Locations = () => {
             Regional Hubs
           </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            AI Lead Generation Near You
+            Boost Your Business in Your Local Area
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Local expertise with world-class AI sales implementation. We serve businesses 
-            across Sacramento, Bakersfield, Culver City, Henderson NV, and Monterey.
+            Elevate your online presence with expert website content tailored for small business success.
+            We serve businesses across Sacramento, Bakersfield, Culver City, Henderson NV, and Monterey.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
