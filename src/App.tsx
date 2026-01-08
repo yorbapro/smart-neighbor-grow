@@ -25,6 +25,8 @@ import Monterey from "./pages/locations/Monterey";
 import LaunchPad360 from "./pages/products/LaunchPad360";
 import LocalLift from "./pages/products/LocalLift";
 import AEOAudit from "./pages/AEOAudit";
+import AdminAuth from "./pages/AdminAuth";
+import AdminLeads from "./pages/AdminLeads";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +51,8 @@ const App = () => (
           <Route path="/products/launchpad-360" element={<LaunchPad360 />} />
           <Route path="/products/locallift" element={<LocalLift />} />
           <Route path="/aeo-audit" element={<AEOAudit />} />
+          <Route path="/admin" element={<AdminAuth />} />
+          <Route path="/admin/leads" element={<AdminLeads />} />
           <Route path="/locations/sacramento" element={<Sacramento />} />
           <Route path="/locations/stockton" element={<Stockton />} />
           <Route path="/locations/fresno" element={<Fresno />} />
