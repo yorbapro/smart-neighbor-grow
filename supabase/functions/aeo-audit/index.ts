@@ -172,36 +172,57 @@ Generate an AEO audit with the following structure - return ONLY valid JSON, no 
         </li>`
       ).join('');
 
+      const strengthsList = auditResult.strengths.map((s: string) =>
+        `<li style="margin-bottom: 8px; color: #059669;">✓ ${s}</li>`
+      ).join('');
+
+      const weaknessesList = auditResult.weaknesses.map((w: string) =>
+        `<li style="margin-bottom: 8px; color: #dc2626;">✗ ${w}</li>`
+      ).join('');
+
       const emailHtml = `
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Your AEO Audit Results</title>
+  <title>Your Complete AEO Audit Results</title>
 </head>
-<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: #f9fafb;">
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 650px; margin: 0 auto; padding: 20px; background: #f9fafb;">
   <div style="background: white; border-radius: 12px; padding: 32px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <!-- Header -->
     <div style="text-align: center; margin-bottom: 24px;">
-      <div style="display: inline-block; background: linear-gradient(135deg, #0ea5e9, #8b5cf6); width: 48px; height: 48px; border-radius: 12px; line-height: 48px; color: white; font-weight: bold; font-size: 20px;">B</div>
-      <h1 style="margin: 16px 0 8px; color: #1a1a2e;">Your AEO Audit Results</h1>
-      <p style="color: #666; margin: 0;">AI Search Visibility Report for ${businessName}</p>
+      <div style="display: inline-block; background: linear-gradient(135deg, #f97316, #ea580c); width: 56px; height: 56px; border-radius: 14px; line-height: 56px; color: white; font-weight: bold; font-size: 24px;">B</div>
+      <h1 style="margin: 16px 0 8px; color: #1e3a5f; font-size: 28px;">Your Complete AEO Audit</h1>
+      <p style="color: #666; margin: 0; font-size: 16px;">AI Search Visibility Report for <strong>${businessName}</strong></p>
+      <p style="color: #999; margin: 4px 0 0; font-size: 14px;">${city}, ${state} • ${industry}</p>
     </div>
 
-    <div style="text-align: center; background: linear-gradient(135deg, #f0f9ff, #faf5ff); border-radius: 12px; padding: 24px; margin-bottom: 24px;">
-      <div style="font-size: 64px; font-weight: bold; color: ${auditResult.overallScore >= 50 ? '#10b981' : auditResult.overallScore >= 25 ? '#f59e0b' : '#ef4444'};">${auditResult.overallScore}</div>
-      <div style="color: #666;">out of 100</div>
-      <div style="margin-top: 12px; font-size: 14px; color: #666;">
-        Potential with optimization: <strong style="color: #8b5cf6;">${auditResult.potentialScore}/100</strong>
+    <!-- Main Score -->
+    <div style="text-align: center; background: linear-gradient(135deg, #1e3a5f, #2d4a6f); border-radius: 16px; padding: 32px; margin-bottom: 24px; color: white;">
+      <div style="font-size: 72px; font-weight: bold; line-height: 1;">${auditResult.overallScore}</div>
+      <div style="font-size: 18px; opacity: 0.8;">out of 100</div>
+      <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.2);">
+        <span style="font-size: 14px; opacity: 0.7;">Your potential with optimization:</span>
+        <span style="display: block; font-size: 32px; font-weight: bold; color: #f97316; margin-top: 4px;">${auditResult.potentialScore}/100</span>
       </div>
     </div>
 
-    <h2 style="color: #1a1a2e; font-size: 18px; margin: 24px 0 16px;">Platform Breakdown</h2>
-    <table style="width: 100%; border-collapse: collapse;">
+    <!-- The Problem Statement -->
+    <div style="background: #fef3c7; border-left: 4px solid #f97316; padding: 20px; margin-bottom: 24px; border-radius: 0 8px 8px 0;">
+      <h3 style="color: #92400e; margin: 0 0 8px; font-size: 16px;">⚠️ Why This Matters</h3>
+      <p style="color: #78350f; margin: 0; font-size: 14px; line-height: 1.6;">
+        <strong>40% of local searches</strong> now go through AI assistants like ChatGPT, Gemini, and voice search. If your business isn't optimized for these platforms, you're invisible to a growing segment of potential customers searching for "${services}" in ${city}.
+      </p>
+    </div>
+
+    <!-- Platform Breakdown -->
+    <h2 style="color: #1e3a5f; font-size: 20px; margin: 28px 0 16px; border-bottom: 2px solid #f97316; padding-bottom: 8px;">📊 Platform-by-Platform Breakdown</h2>
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px;">
       <thead>
-        <tr style="background: #f9fafb;">
-          <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e5e7eb;">Platform</th>
-          <th style="padding: 12px; text-align: center; border-bottom: 2px solid #e5e7eb;">Score</th>
-          <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e5e7eb;">Status</th>
+        <tr style="background: #f1f5f9;">
+          <th style="padding: 14px; text-align: left; border-bottom: 2px solid #e2e8f0; color: #1e3a5f;">Platform</th>
+          <th style="padding: 14px; text-align: center; border-bottom: 2px solid #e2e8f0; color: #1e3a5f;">Score</th>
+          <th style="padding: 14px; text-align: left; border-bottom: 2px solid #e2e8f0; color: #1e3a5f;">Status</th>
         </tr>
       </thead>
       <tbody>
@@ -209,20 +230,90 @@ Generate an AEO audit with the following structure - return ONLY valid JSON, no 
       </tbody>
     </table>
 
-    <h2 style="color: #1a1a2e; font-size: 18px; margin: 24px 0 16px;">Priority Recommendations</h2>
-    <ul style="padding-left: 0; list-style: none;">
-      ${recommendationRows}
-    </ul>
-
-    <div style="background: #faf5ff; border-radius: 12px; padding: 24px; margin: 24px 0; text-align: center;">
-      <h3 style="color: #1a1a2e; margin: 0 0 12px;">Ready to Dominate AI Search?</h3>
-      <p style="color: #666; margin: 0 0 16px;">Let BrightLaunchIQ implement these optimizations for you with our LocalLift™ service.</p>
-      <a href="https://brightlaunchiq.com/get-started" style="display: inline-block; background: linear-gradient(135deg, #0ea5e9, #8b5cf6); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">Get Started with LocalLift™</a>
+    <!-- Strengths & Weaknesses -->
+    <div style="display: flex; gap: 16px; margin-bottom: 24px;">
+      <div style="flex: 1; background: #ecfdf5; border-radius: 12px; padding: 20px;">
+        <h3 style="color: #065f46; margin: 0 0 12px; font-size: 16px;">💪 Your Strengths</h3>
+        <ul style="margin: 0; padding-left: 0; list-style: none; font-size: 14px;">
+          ${strengthsList}
+        </ul>
+      </div>
+    </div>
+    <div style="background: #fef2f2; border-radius: 12px; padding: 20px; margin-bottom: 24px;">
+      <h3 style="color: #991b1b; margin: 0 0 12px; font-size: 16px;">🚨 Critical Gaps Costing You Leads</h3>
+      <ul style="margin: 0; padding-left: 0; list-style: none; font-size: 14px;">
+        ${weaknessesList}
+      </ul>
     </div>
 
+    <!-- Competitor Insight -->
+    <div style="background: #f0f9ff; border-radius: 12px; padding: 20px; margin-bottom: 24px;">
+      <h3 style="color: #0c4a6e; margin: 0 0 8px; font-size: 16px;">🔍 Competitor Intelligence</h3>
+      <p style="color: #0369a1; margin: 0; font-size: 14px; line-height: 1.6;">${auditResult.competitorInsight}</p>
+    </div>
+
+    <!-- Priority Recommendations -->
+    <h2 style="color: #1e3a5f; font-size: 20px; margin: 28px 0 16px; border-bottom: 2px solid #f97316; padding-bottom: 8px;">🎯 Your Action Plan</h2>
+    <p style="color: #666; margin: 0 0 16px; font-size: 14px;">Implement these recommendations to reach your potential score of <strong>${auditResult.potentialScore}/100</strong>:</p>
+    <ol style="padding-left: 20px; margin-bottom: 24px;">
+      ${auditResult.recommendations.map((r: any, i: number) =>
+        `<li style="margin-bottom: 16px; font-size: 14px;">
+          <span style="display: inline-block; padding: 3px 10px; border-radius: 4px; font-size: 11px; font-weight: bold; background: ${r.priority === 'high' ? '#fee2e2' : '#fef3c7'}; color: ${r.priority === 'high' ? '#dc2626' : '#d97706'}; text-transform: uppercase; margin-right: 8px;">${r.priority}</span>
+          <strong style="color: #1e3a5f;">${r.action}</strong>
+          <br><span style="color: #666;">→ ${r.impact}</span>
+        </li>`
+      ).join('')}
+    </ol>
+
+    <!-- The Math / ROI Section -->
+    <div style="background: linear-gradient(135deg, #fdf4ff, #faf5ff); border: 2px solid #d8b4fe; border-radius: 12px; padding: 24px; margin-bottom: 24px;">
+      <h3 style="color: #7e22ce; margin: 0 0 12px; font-size: 18px; text-align: center;">💰 The Math of Success</h3>
+      <p style="color: #6b21a8; margin: 0 0 16px; font-size: 14px; text-align: center; line-height: 1.6;">
+        What if you could get a <strong>Digital Teammate</strong> working 24/7 to capture leads from AI search engines, respond instantly to inquiries, and book appointments—all for less than <strong>$16.60/day</strong>?
+      </p>
+      <div style="display: flex; justify-content: center; gap: 8px; flex-wrap: wrap;">
+        <span style="background: white; padding: 8px 16px; border-radius: 20px; font-size: 13px; color: #7e22ce;">✓ No sick days</span>
+        <span style="background: white; padding: 8px 16px; border-radius: 20px; font-size: 13px; color: #7e22ce;">✓ No training costs</span>
+        <span style="background: white; padding: 8px 16px; border-radius: 20px; font-size: 13px; color: #7e22ce;">✓ 24/7 availability</span>
+      </div>
+    </div>
+
+    <!-- Two CTAs -->
+    <h2 style="color: #1e3a5f; font-size: 20px; margin: 28px 0 16px; text-align: center;">Ready to Dominate AI Search?</h2>
+    
+    <!-- LaunchPad 360 CTA -->
+    <div style="background: linear-gradient(135deg, #1e3a5f, #2d4a6f); border-radius: 12px; padding: 24px; margin-bottom: 16px; text-align: center;">
+      <h3 style="color: white; margin: 0 0 8px; font-size: 18px;">🚀 LaunchPad 360™</h3>
+      <p style="color: rgba(255,255,255,0.8); margin: 0 0 16px; font-size: 14px;">
+        Full Agentic Go-To-Market: Automated outreach across calls, SMS, email & LinkedIn with AI-powered lead scoring and follow-up.
+      </p>
+      <a href="https://brightlaunchiq.com/products/launchpad-360" style="display: inline-block; background: #f97316; color: white; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px;">Explore LaunchPad 360™ →</a>
+    </div>
+
+    <!-- LocalLift CTA -->
+    <div style="background: linear-gradient(135deg, #f97316, #ea580c); border-radius: 12px; padding: 24px; margin-bottom: 24px; text-align: center;">
+      <h3 style="color: white; margin: 0 0 8px; font-size: 18px;">📍 LocalLift™</h3>
+      <p style="color: rgba(255,255,255,0.9); margin: 0 0 16px; font-size: 14px;">
+        Local dominance through AEO optimization, stellar content creation, and reputation management across 100+ directories.
+      </p>
+      <a href="https://brightlaunchiq.com/products/local-lift" style="display: inline-block; background: white; color: #ea580c; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px;">Discover LocalLift™ →</a>
+    </div>
+
+    <!-- Get Started CTA -->
+    <div style="text-align: center; background: #f8fafc; border-radius: 12px; padding: 24px; margin-bottom: 24px;">
+      <p style="color: #1e3a5f; margin: 0 0 16px; font-size: 16px; font-weight: 600;">
+        Not sure which is right for you? Let's talk.
+      </p>
+      <a href="https://brightlaunchiq.com/get-started" style="display: inline-block; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 16px 40px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 18px; box-shadow: 0 4px 14px rgba(16,185,129,0.4);">Get Started Today →</a>
+      <p style="color: #666; margin: 16px 0 0; font-size: 13px;">
+        🔒 14-Day Speed to Lead Guarantee
+      </p>
+    </div>
+
+    <!-- Footer -->
     <div style="text-align: center; color: #999; font-size: 12px; margin-top: 24px; padding-top: 24px; border-top: 1px solid #eee;">
-      <p>BrightLaunchIQ • Empowering Small Businesses with Stellar Content</p>
-      <p>You received this email because you requested an AEO audit.</p>
+      <p style="margin: 0 0 8px;"><strong style="color: #1e3a5f;">BrightLaunchIQ</strong> • Human-Guided AI for Local Business Growth</p>
+      <p style="margin: 0;">You received this email because you requested an AEO audit at brightlaunchiq.com</p>
     </div>
   </div>
 </body>
