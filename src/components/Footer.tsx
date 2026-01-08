@@ -15,10 +15,12 @@ const Footer = () => {
       { label: "Get Started", href: "/get-started" },
     ],
     locations: [
-      { label: "Sacramento Hub", href: "/locations/sacramento" },
-      { label: "Stockton Hub", href: "/locations/stockton" },
-      { label: "Fresno Hub", href: "/locations/fresno" },
-      { label: "Bakersfield Hub", href: "/locations/bakersfield" },
+      { label: "All Locations", href: "/locations" },
+      { label: "Sacramento", href: "/locations/sacramento" },
+      { label: "Bakersfield", href: "/locations/bakersfield" },
+      { label: "Culver City", href: "/locations/culver-city" },
+      { label: "Henderson NV", href: "/locations/henderson" },
+      { label: "Monterey", href: "/locations/monterey" },
     ],
   };
 
