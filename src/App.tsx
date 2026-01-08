@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import GetStarted from "./pages/GetStarted";
 import PaymentSuccess from "./pages/PaymentSuccess";
 import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
 import AboutPage from "./pages/About";
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/get-started" element={<GetStarted />} />
           <Route path="/payment-success" element={<PaymentSuccess />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/locations" element={<LocationsPage />} />
           <Route path="/contact" element={<Contact />} />

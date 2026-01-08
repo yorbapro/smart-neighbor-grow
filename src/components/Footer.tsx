@@ -82,6 +82,9 @@ const Footer = () => {
             © {currentYear} BrightLaunchIQ. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm text-secondary-foreground/60">
+            <Link to="/privacy" className="hover:text-primary transition-colors">
+              Privacy Policy
+            </Link>
             <Link to="/terms" className="hover:text-primary transition-colors">
               Terms & Cancellation
             </Link>
