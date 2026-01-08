@@ -289,19 +289,21 @@ const LocationPage = ({
 
               <div className="bg-card border border-border rounded-2xl p-8">
                 <h3 className="font-display text-2xl font-bold text-foreground mb-6">
-                  Content Solutions for {city} Businesses
+                  Content & AEO Solutions for {city}
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  Transform your online presence with tailored content solutions designed to enhance visibility and drive growth:
+                  Transform your online presence with tailored content and dominate AI search results in your local market:
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   {[
                     { icon: Globe, label: "Custom Web Content" },
                     { icon: TrendingUp, label: "SEO Copywriting" },
                     { icon: MessageSquare, label: "Blog Posts" },
-                    { icon: Mail, label: "Email Sequences" },
-                    { icon: Users, label: "Social Content" },
-                    { icon: Phone, label: "24/7 AI Support" },
+                    { icon: Zap, label: "Answer Engine Optimization" },
+                    { icon: Smartphone, label: "Voice Search Ready" },
+                    { icon: MapPin, label: "Google Maps Boost" },
+                    { icon: Users, label: "AI Citations" },
+                    { icon: Phone, label: "Local Expert Positioning" },
                   ].map((channel) => (
                     <div key={channel.label} className="flex items-center gap-3 p-3 bg-secondary/30 rounded-lg">
                       <channel.icon className="w-5 h-5 text-primary" />

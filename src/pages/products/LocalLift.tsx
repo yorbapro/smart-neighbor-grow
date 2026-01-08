@@ -50,7 +50,7 @@ const LocalLift = () => {
     };
   }, []);
 
-  const features = [
+  const contentFeatures = [
     {
       icon: Bot,
       title: "Custom Website Content Creation",
@@ -65,21 +65,39 @@ const LocalLift = () => {
       icon: MessageSquare,
       title: "Engaging Blog Posts",
       description: "Capture attention and drive traffic with compelling, informative blog entries that position you as an industry authority."
-    },
+    }
+  ];
+
+  const aeoFeatures = [
     {
-      icon: MapPin,
-      title: "Google Maps Domination",
-      description: "Optimized business profiles, consistent NAP data, and strategic review management to own your local map pack."
+      icon: Search,
+      title: "Answer Engine Optimization",
+      description: "Dominate AI search results. We optimize your business for Gemini, ChatGPT, Perplexity, and voice search so you're the top answer."
     },
     {
       icon: Mic,
-      title: "Voice Search Ready",
+      title: "Voice Search Optimization",
       description: "Structured content and FAQ optimization ensures your business is the spoken answer when customers use Siri, Alexa, or Google Assistant."
     },
     {
+      icon: MapPin,
+      title: "Google Maps Ranking Boost",
+      description: "Optimized business profiles, consistent NAP data, and strategic review management to own your local map pack."
+    },
+    {
       icon: Globe,
-      title: "AI Search Citations",
+      title: "AI Answer Engine Citations",
       description: "Be the source that ChatGPT, Gemini, and Perplexity cite when answering questions about your industry in your area."
+    },
+    {
+      icon: TrendingUp,
+      title: "Local Expert Positioning",
+      description: "Build your Entity Graph so AI systems recognize you as THE local authority in your industry and service area."
+    },
+    {
+      icon: Shield,
+      title: "AEO-Optimized Content Strategy",
+      description: "Continuous content creation designed for AI discoverability—structured data, semantic markup, and citation-worthy expertise."
     }
   ];
 
@@ -197,26 +215,59 @@ const LocalLift = () => {
         </div>
       </section>
 
-      {/* Features Grid */}
+      {/* Content Features Grid */}
       <section className="py-20 md:py-28 bg-gradient-subtle">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
-              Capabilities
+              Stellar Content
             </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Complete Local Dominance
+              Empowering Small Businesses with Stellar Content
             </h2>
             <p className="text-lg text-muted-foreground">
-              Everything you need to become the go-to business in your local market.
+              We specialize in crafting compelling website content that captures the essence of your brand and engages your target audience.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {contentFeatures.map((item) => (
+              <div key={item.title} className="p-6 rounded-2xl bg-card border border-border hover:shadow-card-hover transition-shadow">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <item.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-display text-xl font-bold text-foreground mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-muted-foreground">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AEO Features Grid */}
+      <section className="py-20 md:py-28">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
+              Answer Engine Optimization
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Dominate AI Search Results
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              We optimize your business for Gemini, ChatGPT, Perplexity, and voice search so you're the top answer when prospects ask about your services.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((item) => (
+            {aeoFeatures.map((item) => (
               <div key={item.title} className="p-6 rounded-2xl bg-card border border-border hover:shadow-card-hover transition-shadow">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                  <item.icon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+                  <item.icon className="w-6 h-6 text-accent" />
                 </div>
                 <h3 className="font-display text-xl font-bold text-foreground mb-2">
                   {item.title}
