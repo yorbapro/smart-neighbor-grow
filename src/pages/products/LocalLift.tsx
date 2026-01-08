@@ -21,11 +21,11 @@ import {
 
 const LocalLift = () => {
   useEffect(() => {
-    document.title = "LocalLift™ - Local Dominance & Answer Engine Optimization | BrightLaunchIQ";
+    document.title = "LocalLift™ - Boost Your Local Business with Expert Content | BrightLaunchIQ";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "LocalLift™ puts your business at the top when people use voice search or Google Maps. Dominate map packs and AI answer engines with local SEO designed for small business.");
+      metaDescription.setAttribute("content", "Elevate your online presence with expert website content tailored for small business success. BrightLaunchIQ empowers local businesses to shine online with compelling content that drives growth.");
     }
 
     window.scrollTo(0, 0);
@@ -37,7 +37,7 @@ const LocalLift = () => {
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "LocalLift™",
-      "description": "Local Dominance System - Specialized package ensuring you own your local market and answer-engine results",
+      "description": "Expert website content and local SEO for small businesses - boost visibility, engage audiences, and drive growth",
       "brand": {
         "@type": "Brand",
         "name": "BrightLaunchIQ"
@@ -53,18 +53,18 @@ const LocalLift = () => {
   const features = [
     {
       icon: Bot,
-      title: "Answer Engine Optimization",
-      description: "AI agents structure your website into Entity Graphs, making you the authoritative answer for 'best [service] near me' voice searches across all platforms."
+      title: "Custom Website Content Creation",
+      description: "Craft tailored content that resonates with your audience and strengthens your online presence. We capture the essence of your brand."
     },
     {
       icon: Star,
-      title: "Reputation Autopilot",
-      description: "Autonomous monitoring and response across 100+ directories including Yelp, Google, and Bing ensures pristine online reputation."
+      title: "SEO-Optimized Copywriting",
+      description: "Enhance visibility with expertly written content that boosts your search engine rankings and drives organic traffic."
     },
     {
       icon: MessageSquare,
-      title: "Local Inbound Hub",
-      description: "AI Voice agents handle 80% of routine inquiries and appointment scheduling 24/7, eliminating receptionist costs while improving response times."
+      title: "Engaging Blog Posts",
+      description: "Capture attention and drive traffic with compelling, informative blog entries that position you as an industry authority."
     },
     {
       icon: MapPin,
@@ -93,8 +93,8 @@ const LocalLift = () => {
   ];
 
   const benefits = [
-    "Show up first in map packs so local customers find and trust your business",
-    "Be the top answer when prospects ask AI about your services",
+    "Transform your online presence with tailored content solutions",
+    "Enhance visibility and drive sustainable growth",
     "Dominate voice search with optimized content structure",
     "Automated reputation management across 100+ directories",
     "24/7 AI-powered customer inquiry handling",
@@ -118,25 +118,25 @@ const LocalLift = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-6">
               <Search className="w-5 h-5" />
-              <span className="font-semibold">Local Dominance System</span>
+              <span className="font-semibold">Empowering Small Businesses</span>
             </div>
             
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              LocalLift™
+              Boost Your Business in Your Local Area
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-4">
-              Dominate Maps & AI Search
+              Elevate Your Online Presence
             </p>
             
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-              Be the first answer when customers search. LocalLift™ puts your business at the top of Google Maps, voice search, and AI answer engines.
+              Elevate your online presence with expert website content tailored for small business success. BrightLaunchIQ crafts compelling content that captures your brand essence and engages your target audience.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
                 <Link to="/get-started">
-                  Own Your Local Market
+                  Boost Your Growth
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
@@ -327,39 +327,59 @@ const LocalLift = () => {
         </div>
       </section>
 
-      {/* Local Trust */}
+      {/* Testimonial Section */}
       <section className="py-20 md:py-28">
         <div className="container">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent mb-6">
-              <Shield className="w-5 h-5" />
-              <span className="font-semibold">Local Trust Built-In</span>
+          <div className="max-w-4xl mx-auto">
+            {/* Featured Testimonial */}
+            <div className="bg-card border border-border rounded-2xl p-8 md:p-12 text-center mb-12">
+              <div className="flex justify-center mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-6 h-6 text-primary fill-primary" />
+                ))}
+              </div>
+              <blockquote className="text-xl md:text-2xl text-foreground font-medium mb-6 leading-relaxed">
+                "BrightLaunchIQ transformed our online presence with exceptional content. Their creativity and understanding of small business needs are unparalleled. A game-changer for anyone looking to enhance their website!"
+              </blockquote>
+              <cite className="text-muted-foreground not-italic">
+                <span className="font-semibold text-foreground">Alex Reed</span>
+                <span className="mx-2">•</span>
+                Small Business Owner
+              </cite>
             </div>
-            
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Your Neighbors Trust You. Now AI Does Too.
-            </h2>
-            
-            <p className="text-lg text-muted-foreground mb-8">
-              LocalLift™ doesn't just optimize for algorithms—it builds genuine local authority. When AI systems recommend you, it's because you've earned it.
-            </p>
+
+            {/* Local Trust */}
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent mb-6">
+                <Shield className="w-5 h-5" />
+                <span className="font-semibold">Empower Success</span>
+              </div>
+              
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Elevate Your Small Business Today
+              </h2>
+              
+              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+                Transform your online presence with tailored content solutions from BrightLaunchIQ, designed to enhance visibility and drive growth.
+              </p>
+            </div>
 
             <div className="grid md:grid-cols-3 gap-6 text-left">
               {[
                 {
                   icon: Star,
-                  title: "Reputation Management",
-                  description: "Automated monitoring and response keeps your star ratings high across all platforms."
+                  title: "Custom Website Content",
+                  description: "Craft tailored content that resonates with your audience and strengthens your online presence."
                 },
                 {
-                  icon: Clock,
-                  title: "Always Available",
-                  description: "AI voice agents handle inquiries 24/7, so you never miss a customer."
+                  icon: TrendingUp,
+                  title: "SEO-Optimized Copywriting",
+                  description: "Enhance visibility with expertly written content that boosts your search engine rankings."
                 },
                 {
-                  icon: MapPin,
-                  title: "NAP Consistency",
-                  description: "Your business info is accurate everywhere, building trust with search engines."
+                  icon: MessageSquare,
+                  title: "Engaging Blog Posts",
+                  description: "Capture attention and drive traffic with compelling, informative blog entries."
                 }
               ].map((item) => (
                 <div key={item.title} className="p-6 rounded-2xl bg-card border border-border">
@@ -382,15 +402,15 @@ const LocalLift = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Ready to Dominate Your Local Market?
+              Elevate Your Online Presence
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Stop losing customers to competitors who show up first. LocalLift™ puts you at the top of every search that matters.
+              Transform your small business's website with AI-driven content tailored for your local market. Discover how BrightLaunchIQ can enhance your digital footprint.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
                 <Link to="/get-started">
-                  Start LocalLift™ Today
+                  Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
