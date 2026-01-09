@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import { 
   Check, 
@@ -118,6 +119,11 @@ const Pricing = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      
+      <main id="main-content">
+        <div className="container pt-24">
+          <Breadcrumb />
+        </div>
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 md:pt-32 md:pb-20 bg-gradient-subtle">
@@ -410,6 +416,7 @@ const Pricing = () => {
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>
