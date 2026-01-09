@@ -1,4 +1,4 @@
-import { Target, Users, TrendingUp } from "lucide-react";
+import { Target, Users, TrendingUp, ShieldCheck, Brain, MapPin } from "lucide-react";
 
 const About = () => {
   return (
@@ -13,10 +13,15 @@ const About = () => {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
               Making Big Tech Work for Main Street
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-muted-foreground mb-4">
               At BrightLaunchIQ, we don't think powerful automation should only be for 
               giant corporations. We started this company to help local business owners 
               use AI sales tools to grow their income without increasing their stress.
+            </p>
+            <p className="text-muted-foreground mb-8">
+              BrightLaunchIQ connects local experts, AI-driven sales tools, and local businesses. 
+              Work with a team that sets you up for success—combining proven automation and real 
+              human oversight to deliver qualified leads and more deals, every month.
             </p>
 
             <div className="space-y-6">
@@ -28,10 +33,10 @@ const About = () => {
                   <h3 className="font-display font-bold text-foreground mb-1">
                     The Human Touch in a Digital World
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground text-sm">
                     We are Cognitive Architects. Our real people work side-by-side with 
                     you to design the "logic" behind your AI, ensuring technology follows 
-                    your brand's voice.
+                    your brand's voice and never feels robotic.
                   </p>
                 </div>
               </div>
@@ -42,26 +47,27 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="font-display font-bold text-foreground mb-1">
-                    Real Results for Lean Teams
+                    ROI Focus: Real Results for Lean Teams
                   </h3>
-                  <p className="text-muted-foreground">
-                    We focus on Return on AI (ROI). We build the digital infrastructure 
-                    that makes a 3-person team feel like a 50-person powerhouse.
+                  <p className="text-muted-foreground text-sm">
+                    We only implement tools that help you grow revenue or save time—your 
+                    results matter most. We build the digital infrastructure that makes a 
+                    3-person team perform like a 50-person powerhouse.
                   </p>
                 </div>
               </div>
 
               <div className="flex gap-4">
                 <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
-                  <Target className="w-6 h-6 text-secondary" />
+                  <MapPin className="w-6 h-6 text-secondary" />
                 </div>
                 <div>
                   <h3 className="font-display font-bold text-foreground mb-1">
-                    Our Mission: Your Growth
+                    Local Knowledge, AI Power
                   </h3>
-                  <p className="text-muted-foreground">
-                    If a tool doesn't help you make more money or save more time, 
-                    we don't use it. Simple as that.
+                  <p className="text-muted-foreground text-sm">
+                    Our local focus means smarter answers and faster growth. We understand 
+                    your unique needs because we work in the same communities you serve.
                   </p>
                 </div>
               </div>
@@ -90,7 +96,7 @@ const About = () => {
             <div className="absolute -bottom-6 -left-6 bg-card rounded-2xl shadow-card-hover p-6 border border-border">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-gradient-hero flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-xl">✓</span>
+                  <ShieldCheck className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <div>
                   <p className="font-display font-bold text-foreground">Human-Guided</p>

@@ -13,11 +13,11 @@ import Footer from "@/components/Footer";
 const Index = () => {
   useEffect(() => {
     // Set document title
-    document.title = "BrightLaunchIQ | AI Lead Generation & Sales Implementation for Local Business";
+    document.title = "BrightLaunchIQ | Human-Guided AI for Business Growth | Lead Generation & Sales Automation";
     
     // Add meta description
     const metaDescription = document.querySelector('meta[name="description"]');
-    const descriptionContent = "AI lead generation and sales implementation for local businesses. Get a 24/7 digital teammate that books meetings while you sleep. $500/mo. 14-day guarantee. Serving Sacramento, Stockton, Fresno, Bakersfield.";
+    const descriptionContent = "Get more customers with human-guided AI. BrightLaunchIQ combines local experts and AI sales automation to help contractors, consultants, and local businesses respond first and win more deals. $500/mo. 30-day guarantee.";
     if (metaDescription) {
       metaDescription.setAttribute("content", descriptionContent);
     } else {
@@ -29,90 +29,253 @@ const Index = () => {
 
     // Add keywords meta
     const existingKeywords = document.querySelector('meta[name="keywords"]');
-    const keywordsContent = "AI lead generation, AI sales implementation, AI sales automation, automated sales engine, digital teammate, local business AI, answer engine optimization, AEO, Sacramento AI sales, Stockton AI, Fresno AI, Bakersfield AI, LaunchPad 360";
-    if (!existingKeywords) {
+    const keywordsContent = "AI for business, AI lead generation, AI sales automation, human-guided AI, AI SDR, automated sales, local business AI, small business automation, AI marketing automation, answer engine optimization, AEO, Sacramento AI sales, California AI services";
+    if (existingKeywords) {
+      existingKeywords.setAttribute("content", keywordsContent);
+    } else {
       const keywordsMeta = document.createElement("meta");
       keywordsMeta.name = "keywords";
       keywordsMeta.content = keywordsContent;
       document.head.appendChild(keywordsMeta);
     }
 
-    // Add structured data
-    const existingScript = document.querySelector('script[type="application/ld+json"]');
-    if (!existingScript) {
-      const script = document.createElement("script");
-      script.type = "application/ld+json";
-      script.textContent = JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "BrightLaunchIQ",
-        "description": "AI lead generation and sales implementation for local businesses. Human-Guided AI sales automation that delivers a 24/7 digital teammate.",
-        "url": "https://brightlaunchiq.com",
-        "telephone": "1-800-LAUNCH-IQ",
-        "email": "success@BrightLaunchIQ.com",
-        "areaServed": ["Sacramento", "Stockton", "Fresno", "Bakersfield", "Central Valley"],
-        "serviceType": ["AI Lead Generation", "AI Sales Implementation", "Sales Automation", "Answer Engine Optimization"],
-        "priceRange": "$500-$2000/month",
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "AI Sales Services",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "LaunchPad 360™",
-                "description": "Complete AI sales implementation with 14-day launch guarantee"
-              },
+    // Remove existing structured data
+    const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
+    existingScripts.forEach(script => script.remove());
+
+    // Organization Schema for GEO
+    const orgScript = document.createElement("script");
+    orgScript.type = "application/ld+json";
+    orgScript.id = "organization-schema";
+    orgScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://brightlaunchiq.com/#organization",
+      "name": "BrightLaunchIQ",
+      "alternateName": "Bright Launch IQ",
+      "description": "BrightLaunchIQ provides human-guided AI sales automation and lead generation for local businesses. We combine expert oversight with AI technology to help contractors, consultants, and service businesses respond first and win more customers.",
+      "url": "https://brightlaunchiq.com",
+      "logo": "https://brightlaunchiq.com/logo.png",
+      "telephone": "1-800-LAUNCH-IQ",
+      "email": "success@BrightLaunchIQ.com",
+      "foundingDate": "2023",
+      "founder": {
+        "@type": "Person",
+        "name": "Marcus Reynolds"
+      },
+      "areaServed": [
+        { "@type": "State", "name": "California" },
+        { "@type": "State", "name": "Nevada" }
+      ],
+      "knowsAbout": [
+        "AI Lead Generation",
+        "AI Sales Automation", 
+        "Answer Engine Optimization",
+        "AI for Small Business",
+        "Automated Sales Systems",
+        "AI SDR",
+        "Business Automation"
+      ],
+      "slogan": "Human-Guided AI for Business Growth",
+      "sameAs": [
+        "https://www.linkedin.com/company/brightlaunchiq"
+      ]
+    });
+    document.head.appendChild(orgScript);
+
+    // LocalBusiness Schema
+    const localBusinessScript = document.createElement("script");
+    localBusinessScript.type = "application/ld+json";
+    localBusinessScript.id = "localbusiness-schema";
+    localBusinessScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://brightlaunchiq.com/#localbusiness",
+      "name": "BrightLaunchIQ",
+      "description": "Human-guided AI lead generation and sales automation for local businesses. Expert-supervised AI that helps you respond first, automate the busywork, and win more customers.",
+      "url": "https://brightlaunchiq.com",
+      "telephone": "1-800-LAUNCH-IQ",
+      "email": "success@BrightLaunchIQ.com",
+      "priceRange": "$500-$2000/month",
+      "areaServed": ["Sacramento", "Stockton", "Fresno", "Bakersfield", "Monterey", "Henderson", "Culver City"],
+      "serviceType": [
+        "AI Lead Generation",
+        "AI Sales Implementation", 
+        "Sales Automation",
+        "Answer Engine Optimization",
+        "Business Automation"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AI Sales Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "LaunchPad 360™",
+              "description": "Complete AI sales engine with human oversight. Multi-channel outreach, lead scoring, and pipeline management in 30 days."
+            },
+            "price": "500",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
               "price": "500",
               "priceCurrency": "USD",
-              "priceSpecification": {
-                "@type": "UnitPriceSpecification",
-                "price": "500",
-                "priceCurrency": "USD",
-                "unitText": "MONTH"
-              }
-            }
-          ]
-        }
-      });
-      document.head.appendChild(script);
-
-      // Add FAQ structured data
-      const faqScript = document.createElement("script");
-      faqScript.type = "application/ld+json";
-      faqScript.textContent = JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How does AI lead generation work for small businesses?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "AI lead generation works by scanning millions of data points to find intent signals. For example, if a potential customer in your city searches for a service you provide, the AI identifies them as a high-priority prospect and starts a helpful, automated conversation immediately."
+              "unitText": "MONTH"
             }
           },
           {
-            "@type": "Question",
-            "name": "What is AI sales implementation?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "AI sales implementation is the process of building and installing automated sales systems directly into your existing business ecosystem. Unlike generic SaaS tools, we create custom infrastructure that integrates with your CRM."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How much does AI lead generation cost?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "At $500/month, you gain a 24/7 digital worker for just $16.60 per day. Compare this to a human hire costing $80,000+/year, and the ROI is immediate."
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "LocalLift™",
+              "description": "Expert content creation and Answer Engine Optimization to dominate AI search results and voice assistants."
             }
           }
         ]
+      }
+    });
+    document.head.appendChild(localBusinessScript);
+
+    // Product Schema for LaunchPad 360
+    const productScript = document.createElement("script");
+    productScript.type = "application/ld+json";
+    productScript.id = "product-schema";
+    productScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "LaunchPad 360™",
+      "description": "Complete AI sales engine with human oversight. Includes multi-channel outreach (calls, SMS, email), 500+ targeted leads, real-time lead scoring, pipeline dashboard, and CRM integration. Expert-supervised AI that responds to leads in under 60 seconds.",
+      "brand": {
+        "@type": "Organization",
+        "name": "BrightLaunchIQ"
+      },
+      "category": "AI Sales Automation Software",
+      "offers": {
+        "@type": "Offer",
+        "price": "500",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "BrightLaunchIQ"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "47"
+      }
+    });
+    document.head.appendChild(productScript);
+
+    // Service Schema
+    const serviceScript = document.createElement("script");
+    serviceScript.type = "application/ld+json";
+    serviceScript.id = "service-schema";
+    serviceScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "AI Lead Generation for Local Business",
+      "serviceType": "AI Sales Automation",
+      "provider": {
+        "@type": "Organization",
+        "name": "BrightLaunchIQ"
+      },
+      "description": "Human-guided AI lead generation that helps local businesses respond to leads in under 60 seconds. Our expert team supervises every AI interaction to ensure authentic, brand-aligned communication.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AI Business Services",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Lead Generation",
+            "itemListElement": [
+              { "@type": "Service", "name": "AI Lead Identification" },
+              { "@type": "Service", "name": "Multi-Channel Outreach" },
+              { "@type": "Service", "name": "Lead Scoring & Prioritization" }
+            ]
+          },
+          {
+            "@type": "OfferCatalog", 
+            "name": "Content & Visibility",
+            "itemListElement": [
+              { "@type": "Service", "name": "Answer Engine Optimization (AEO)" },
+              { "@type": "Service", "name": "Voice Search Optimization" },
+              { "@type": "Service", "name": "Local SEO Content" }
+            ]
+          }
+        ]
+      }
+    });
+    document.head.appendChild(serviceScript);
+
+    // FAQ Schema
+    const faqScript = document.createElement("script");
+    faqScript.type = "application/ld+json";
+    faqScript.id = "faq-schema";
+    faqScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is AI lead generation for small business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI lead generation uses artificial intelligence to identify, qualify, and engage potential customers automatically. For small businesses, this means having a 24/7 digital teammate that finds prospects showing buying intent, responds in under 60 seconds, and nurtures leads through automated but personalized outreach—all supervised by human experts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does human-guided AI differ from fully automated AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Human-guided AI means real experts supervise every AI system. Our consultants set the rules, monitor results, and ensure customer touchpoints feel authentic—never robotic. This 'bounded autonomy' approach gives you AI power with human judgment, so your brand voice stays consistent and customers feel valued."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does AI sales automation cost for a small business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BrightLaunchIQ offers AI sales automation starting at $500/month after a one-time $1,500 setup fee. This breaks down to just $16.60 per day for a 24/7 AI sales team—compared to $80,000+ per year for a human hire. Most clients see ROI within the first 30 days."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Answer Engine Optimization (AEO)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Answer Engine Optimization (AEO) is the practice of optimizing your business to be cited as the direct answer when people ask AI tools like ChatGPT, Gemini, Perplexity, or voice assistants for recommendations. Unlike traditional SEO focused on Google rankings, AEO positions your business as the authoritative answer across all AI-powered search platforms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can AI replace my sales team?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI doesn't replace your sales team—it amplifies them. Our AI handles the repetitive work of finding leads, initial outreach, and lead qualification, while your team focuses on relationship building and closing deals. Think of it as making a 3-person team perform like a 50-person powerhouse."
+          }
+        }
+      ]
+    });
+    document.head.appendChild(faqScript);
+
+    return () => {
+      // Cleanup on unmount
+      const schemas = ['organization-schema', 'localbusiness-schema', 'product-schema', 'service-schema', 'faq-schema'];
+      schemas.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.remove();
       });
-      document.head.appendChild(faqScript);
-    }
+    };
   }, []);
 
   return (

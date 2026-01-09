@@ -12,20 +12,57 @@ import {
   Heart,
   Zap,
   MapPin,
-  Linkedin
+  Linkedin,
+  Brain,
+  TrendingUp
 } from "lucide-react";
 
 const About = () => {
   useEffect(() => {
-    document.title = "About Us | BrightLaunchIQ - Human-Guided AI for Local Business";
+    document.title = "About Us | BrightLaunchIQ - Human-Guided AI for Local Business Growth";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Meet the team behind BrightLaunchIQ. We're Cognitive Architects building invisible infrastructure that helps local businesses compete with enterprise-grade AI sales automation."
+        "Meet the BrightLaunchIQ team. We're Cognitive Architects combining local experts and AI-driven sales tools to help local businesses grow their reach and outperform competitors. Human-guided AI that delivers real results."
       );
     }
+
+    // Add Organization and AboutPage schema
+    const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
+    existingScripts.forEach(script => script.remove());
+
+    const aboutSchema = document.createElement("script");
+    aboutSchema.type = "application/ld+json";
+    aboutSchema.id = "about-schema";
+    aboutSchema.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About BrightLaunchIQ",
+      "description": "BrightLaunchIQ combines local experts, AI-driven sales tools, and local businesses. Our mission is to help small business owners use AI sales tools to grow their income without increasing their stress.",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "BrightLaunchIQ",
+        "description": "Human-guided AI for business growth. We help contractors, consultants, and local businesses respond first, automate the busywork, and win more customers.",
+        "foundingDate": "2023",
+        "slogan": "Making Big Tech Work for Main Street",
+        "knowsAbout": [
+          "AI Lead Generation",
+          "AI Sales Automation",
+          "Answer Engine Optimization",
+          "Human-Guided AI",
+          "Small Business Automation"
+        ]
+      }
+    });
+    document.head.appendChild(aboutSchema);
+
     window.scrollTo(0, 0);
+
+    return () => {
+      const el = document.getElementById("about-schema");
+      if (el) el.remove();
+    };
   }, []);
 
   const teamMembers = [
@@ -62,8 +99,8 @@ const About = () => {
   const values = [
     {
       icon: Users,
-      title: "Human-Guided AI",
-      description: "We believe the best AI systems have humans in the loop. Our experts set the rules, supervise results, and ensure every interaction feels authentic.",
+      title: "Human-in-the-Loop",
+      description: "Our expert consultants guide and supervise every AI system, so your customer touchpoints always feel real and never robotic.",
     },
     {
       icon: Shield,
@@ -101,11 +138,11 @@ const About = () => {
               Our Story
             </span>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Cognitive Architects for <span className="text-primary">Local Business</span>
+              Making Big Tech Work for <span className="text-primary">Main Street</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              We're building the invisible infrastructure that helps local businesses 
-              compete with enterprise-grade AI—without the enterprise complexity or cost.
+              BrightLaunchIQ connects local experts, AI-driven sales tools, and local businesses. 
+              We understand your unique needs and help you grow without increasing stress.
             </p>
           </div>
         </div>
@@ -117,24 +154,25 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div>
               <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
-                Our Mission
+                Our Mission: Your Growth
               </span>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Democratizing AI for the Businesses That Built America
+                The Human Touch in an AI World
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                While Fortune 500 companies invest millions in AI sales teams, local businesses—the 
-                backbone of our economy—were being left behind. We started BrightLaunchIQ to change that.
+                We believe small business owners deserve world-class sales automation, without 
+                sacrificing what makes their company special. Our hybrid AI and expert team brings 
+                sales you can count on—made for local business owners.
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Our founders saw a gap: enterprise AI tools were too expensive, too complex, and 
-                designed for companies with dedicated IT departments. Local business owners needed 
-                something different—powerful automation that just works, guided by humans who understand 
-                their communities.
+                Our expert team guides the AI to keep every interaction friendly and real for your 
+                customers. We build your sales engine around your story and values, making sure 
+                your technology listens and responds like a trusted member of your team—never a robot.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Today, we're proud to serve businesses across California and Nevada, helping them 
-                capture leads, close deals, and grow—all for less than the cost of a daily coffee.
+                If a tool doesn't help you make more money or save more time, we don't use it. 
+                Simple as that. You'll see clear results in less time, and every step is checked 
+                by an expert.
               </p>
             </div>
 
@@ -161,10 +199,61 @@ const About = () => {
                 </div>
                 <div className="pt-4 border-t border-secondary-foreground/10">
                   <p className="text-sm text-secondary-foreground/80">
-                    We believe every local business deserves access to the same growth tools 
-                    as the biggest corporations—at a price that makes sense.
+                    Our tools are made for small local businesses—so you get the strength of a big 
+                    company without hiring a huge staff. More sales, less stress, simple systems.
                   </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI + Experts Section */}
+      <section className="py-16 md:py-24 bg-gradient-subtle">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
+                Human-Guided AI
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+                AI Plus Experts: How We Work
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-card rounded-xl p-6 border border-border text-center">
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <Brain className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="font-display font-bold text-foreground mb-2">AI Does the Work</h3>
+                <p className="text-sm text-muted-foreground">
+                  Our AI tools track leads around the clock so you never miss an opportunity. 
+                  Automated outreach, instant responses, continuous prospecting.
+                </p>
+              </div>
+
+              <div className="bg-card rounded-xl p-6 border border-border text-center">
+                <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-7 h-7 text-accent" />
+                </div>
+                <h3 className="font-display font-bold text-foreground mb-2">Experts Guide Everything</h3>
+                <p className="text-sm text-muted-foreground">
+                  Real people work side-by-side with you to design the logic behind your AI. 
+                  Human-verified, local strategies for smarter sales.
+                </p>
+              </div>
+
+              <div className="bg-card rounded-xl p-6 border border-border text-center">
+                <div className="w-14 h-14 rounded-xl bg-secondary/30 flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="w-7 h-7 text-secondary" />
+                </div>
+                <h3 className="font-display font-bold text-foreground mb-2">You Get Results</h3>
+                <p className="text-sm text-muted-foreground">
+                  Grow your reach and outperform competitors. Fill your pipeline and manage 
+                  growth with less effort using AI that understands your unique needs.
+                </p>
               </div>
             </div>
           </div>
@@ -298,9 +387,9 @@ const About = () => {
                 Serving Communities Across the West
               </h2>
               <p className="text-secondary-foreground/80 mb-6">
-                We're not a faceless tech company in Silicon Valley. We have boots on the ground 
-                in the communities we serve—understanding local markets, local challenges, and 
-                local opportunities.
+                We're not a faceless tech company. Get connected to a real expert who 
+                understands your area. Our local focus means smarter answers and faster 
+                growth for your business.
               </p>
               <div className="flex flex-wrap gap-3">
                 {["Sacramento", "Bakersfield", "Culver City", "Henderson", "Monterey"].map((city) => (
@@ -337,21 +426,21 @@ const About = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Ready to Join Our Mission?
+              Ready to Grow Your Business the Right Way?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Whether you're a local business ready to grow, or a talented professional 
-              who wants to help democratize AI—we'd love to hear from you.
+              Get a free AI Visibility Audit to see how your business appears to AI search 
+              engines, or schedule a call with our team to discuss your growth goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/get-started">
-                  Schedule Your Revenue Audit
+                <Link to="/aeo-audit">
+                  Free AI Visibility Audit
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/contact">Contact Us</Link>
+                <Link to="/get-started">Schedule a Call</Link>
               </Button>
             </div>
           </div>
