@@ -82,6 +82,51 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://brightlaunchiq.com/resources/blog/what-is-aeo</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://brightlaunchiq.com/resources/blog/ai-lead-generation-guide</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://brightlaunchiq.com/resources/blog/human-guided-ai-vs-automated</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://brightlaunchiq.com/resources/blog/speed-to-lead-problem</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://brightlaunchiq.com/resources/blog/gbp-optimization-ai</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://brightlaunchiq.com/resources/blog/crm-integration-ai</loc>
+    <lastmod>2026-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Product Pages -->
   <url>
     <loc>https://brightlaunchiq.com/products/launchpad-360</loc>
     <lastmod>2026-01-09</lastmod>
