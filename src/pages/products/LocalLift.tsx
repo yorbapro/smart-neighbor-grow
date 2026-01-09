@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import { 
   Search, 
@@ -215,7 +216,7 @@ const LocalLift = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+      <Breadcrumb />
       {/* Hero Section */}
       <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-subtle">
         <div className="container">
