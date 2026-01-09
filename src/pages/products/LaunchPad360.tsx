@@ -20,43 +20,135 @@ import {
   Shield,
   Brain,
   Bell,
-  LineChart
+  LineChart,
+  Heart
 } from "lucide-react";
 
 const LaunchPad360 = () => {
   useEffect(() => {
-    document.title = "LaunchPad 360™ - Complete AI Sales Engine | BrightLaunchIQ";
+    document.title = "LaunchPad 360™ - Human-Guided AI Sales Engine | BrightLaunchIQ";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "LaunchPad 360™ delivers a complete AI sales engine in 30 days. Multi-channel outreach, lead scoring, pipeline intelligence, and conversation analytics—all in one system.");
+      metaDescription.setAttribute("content", "LaunchPad 360™ delivers a complete human-guided AI sales engine in 30 days. Expert-supervised multi-channel outreach, lead scoring, and pipeline intelligence—all with the human touch.");
     }
 
     window.scrollTo(0, 0);
 
-    // Structured data for product
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.text = JSON.stringify({
+    // Remove existing schemas
+    const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
+    existingScripts.forEach(script => script.remove());
+
+    // Product Schema
+    const productScript = document.createElement("script");
+    productScript.type = "application/ld+json";
+    productScript.id = "product-schema";
+    productScript.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "LaunchPad 360™",
-      "description": "Complete AI Sales Engine - 30-day done-for-you setup that transforms AI potential into live lead generation with built-in revenue intelligence",
+      "description": "Complete human-guided AI sales engine with multi-channel outreach, lead scoring, pipeline intelligence, and conversation analytics. Expert-supervised AI responds to leads in under 60 seconds.",
       "brand": {
-        "@type": "Brand",
+        "@type": "Organization",
         "name": "BrightLaunchIQ"
       },
+      "category": "AI Sales Automation Software",
       "offers": {
         "@type": "Offer",
         "priceCurrency": "USD",
-        "price": "1500",
-        "priceValidUntil": "2026-12-31"
+        "price": "500",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "500",
+          "priceCurrency": "USD",
+          "unitText": "MONTH"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "47",
+        "bestRating": "5"
       }
     });
-    document.head.appendChild(script);
+    document.head.appendChild(productScript);
+
+    // Service Schema for GEO
+    const serviceScript = document.createElement("script");
+    serviceScript.type = "application/ld+json";
+    serviceScript.id = "service-schema";
+    serviceScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "AI Sales Automation",
+      "serviceType": "AI SDR - Automated Sales Development",
+      "provider": {
+        "@type": "Organization",
+        "name": "BrightLaunchIQ"
+      },
+      "description": "Human-guided AI sales development that combines automation with expert oversight. Multi-channel outreach across calls, SMS, email, LinkedIn. Complete done-for-you setup in 30 days.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "LaunchPad 360™ Features",
+        "itemListElement": [
+          { "@type": "Service", "name": "AI Lead Generation" },
+          { "@type": "Service", "name": "Multi-Channel Outreach" },
+          { "@type": "Service", "name": "Lead Scoring & Prioritization" },
+          { "@type": "Service", "name": "Pipeline Intelligence Dashboard" },
+          { "@type": "Service", "name": "Conversation Analytics" },
+          { "@type": "Service", "name": "CRM Integration" }
+        ]
+      }
+    });
+    document.head.appendChild(serviceScript);
+
+    // FAQ Schema
+    const faqScript = document.createElement("script");
+    faqScript.type = "application/ld+json";
+    faqScript.id = "faq-schema";
+    faqScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is an AI SDR (Sales Development Representative)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An AI SDR is an automated sales development system that handles prospecting, outreach, and lead qualification using artificial intelligence. LaunchPad 360™ is a human-guided AI SDR that combines automation with expert oversight—so your outreach feels personal, not robotic."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast can LaunchPad 360™ respond to leads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LaunchPad 360™ responds to new leads in under 60 seconds. Research shows 50% of sales go to the first business that responds. Our speed-to-lead guarantee ensures you never miss a hot prospect."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the AI fully automated or supervised by humans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LaunchPad 360™ uses human-guided AI with 'bounded autonomy.' The AI handles repetitive tasks like lead identification, initial outreach, and qualification. Human experts set the rules, monitor results, and ensure every interaction matches your brand voice."
+          }
+        }
+      ]
+    });
+    document.head.appendChild(faqScript);
 
     return () => {
-      document.head.removeChild(script);
+      ['product-schema', 'service-schema', 'faq-schema'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.remove();
+      });
     };
   }, []);
 
@@ -64,12 +156,12 @@ const LaunchPad360 = () => {
     {
       icon: Target,
       title: "ICP Signal Discovery",
-      description: "AI agents continuously scan web data, social triggers, and technographics to build dynamic prospect lists of now-ready buyers."
+      description: "AI agents continuously scan web data, social triggers, and technographics to build dynamic prospect lists—supervised by our human experts."
     },
     {
       icon: Users,
       title: "500+ Targeted Local Leads",
-      description: "Your AI Researcher identifies your ideal customers and delivers a curated list of high-intent prospects in your market."
+      description: "Your AI Researcher identifies ideal customers and delivers a curated list of high-intent prospects in your market, verified by our team."
     },
     {
       icon: BarChart3,
@@ -79,17 +171,17 @@ const LaunchPad360 = () => {
     {
       icon: MessageSquare,
       title: "Multi-Channel Deployment",
-      description: "Topic Agents auto-generate hyper-personalized email and LinkedIn sequences based on real-time market intelligence."
+      description: "Hyper-personalized email, SMS, and LinkedIn sequences based on real-time market intelligence—with human oversight on messaging."
     },
     {
       icon: Shield,
       title: "Email Deliverability Protection",
-      description: "We warm your email domains and implement best practices to ensure your messages land in inboxes, not spam folders."
+      description: "We warm your email domains and implement best practices to ensure messages land in inboxes, not spam folders."
     },
     {
       icon: Calendar,
       title: "Strategic Calibration Session",
-      description: "One-hour Decision Boundary session defines legal guardrails and brand voice, with final QC on first 10 templates."
+      description: "One-hour Decision Boundary session defines guardrails and brand voice, with expert QC on first 10 templates."
     }
   ];
 
@@ -97,7 +189,7 @@ const LaunchPad360 = () => {
     {
       icon: Brain,
       title: "Autonomous Lead Triage",
-      description: "Instant scoring and intelligent routing ensures hot leads receive immediate attention at the perfect moment."
+      description: "Instant scoring and intelligent routing ensures hot leads receive immediate attention—with human verification for high-value opportunities."
     },
     {
       icon: Bell,
@@ -112,7 +204,7 @@ const LaunchPad360 = () => {
     {
       icon: MessageSquare,
       title: "Conversation Intelligence",
-      description: "Every call analyzed for deal risks, objections, and Next Best Action summaries delivered to reps in real-time."
+      description: "Every call analyzed for deal risks, objections, and Next Best Action summaries delivered in real-time."
     }
   ];
 
@@ -149,7 +241,7 @@ const LaunchPad360 = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-6">
               <Rocket className="w-5 h-5" />
-              <span className="font-semibold">Automated GTM Engine</span>
+              <span className="font-semibold">Human-Guided AI Sales Engine</span>
             </div>
             
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
@@ -157,11 +249,11 @@ const LaunchPad360 = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-4">
-              Complete AI Sales Engine
+              Your Complete AI Sales Team—Supervised by Experts
             </p>
             
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-              Our team builds your complete New Business Launch Plan in just 30 days—with built-in revenue intelligence that scores leads, tracks your pipeline, and alerts you instantly on hot opportunities.
+              Our team builds your complete AI sales engine in just 30 days. Human experts guide every step—so your outreach feels personal, your leads are verified, and your brand voice stays consistent.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -198,6 +290,60 @@ const LaunchPad360 = () => {
         </div>
       </section>
 
+      {/* Human-Guided Approach */}
+      <section className="py-20 md:py-28 bg-card">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div>
+              <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
+                The Human Touch in AI
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+                AI Plus Experts: The Best of Both Worlds
+              </h2>
+              <p className="text-lg text-muted-foreground mb-6">
+                We believe small business owners deserve world-class sales automation, without sacrificing what makes their company special. Our hybrid AI and expert team brings sales you can count on.
+              </p>
+              <ul className="space-y-4">
+                {[
+                  "Expert consultants guide every AI system",
+                  "Human oversight ensures authentic customer interactions",
+                  "Your brand voice stays consistent—never robotic",
+                  "Real people verify high-value opportunities",
+                  "AI handles the grind, you focus on closing"
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="bg-secondary rounded-2xl p-8 text-secondary-foreground">
+              <div className="flex items-center gap-3 mb-6">
+                <Heart className="w-8 h-8 text-primary" />
+                <h3 className="font-display text-2xl font-bold">Made for Local Business</h3>
+              </div>
+              <p className="text-secondary-foreground/80 mb-6">
+                Our tools are made for small local businesses—so you get the strength of a big company without hiring a huge staff.
+              </p>
+              <div className="flex items-center justify-center gap-8 py-4">
+                <div className="text-center">
+                  <p className="font-display text-3xl font-bold text-primary">$16.60</p>
+                  <p className="text-sm text-secondary-foreground/70">per day</p>
+                </div>
+                <div className="text-secondary-foreground/30 text-3xl">vs</div>
+                <div className="text-center">
+                  <p className="font-display text-3xl font-bold text-destructive">$80k+</p>
+                  <p className="text-sm text-secondary-foreground/70">per year hire</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* What You Get */}
       <section className="py-20 md:py-28">
         <div className="container">
@@ -209,7 +355,7 @@ const LaunchPad360 = () => {
               Everything You Need to Launch
             </h2>
             <p className="text-lg text-muted-foreground">
-              A complete, done-for-you GTM system that transforms AI hype into live lead generation.
+              A complete, done-for-you GTM system that transforms AI potential into live lead generation—with human expertise at every step.
             </p>
           </div>
 
@@ -232,7 +378,7 @@ const LaunchPad360 = () => {
       </section>
 
       {/* Revenue Intelligence */}
-      <section className="py-20 md:py-28 bg-card">
+      <section className="py-20 md:py-28 bg-gradient-subtle">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
@@ -248,7 +394,7 @@ const LaunchPad360 = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {intelligenceFeatures.map((item) => (
-              <div key={item.title} className="p-6 rounded-2xl bg-background border border-border hover:shadow-card-hover transition-shadow">
+              <div key={item.title} className="p-6 rounded-2xl bg-card border border-border hover:shadow-card-hover transition-shadow">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
@@ -263,7 +409,9 @@ const LaunchPad360 = () => {
           </div>
         </div>
       </section>
-      <section className="py-20 md:py-28 bg-gradient-subtle">
+
+      {/* Multi-Channel */}
+      <section className="py-20 md:py-28">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
@@ -273,7 +421,7 @@ const LaunchPad360 = () => {
               Reach Prospects Everywhere They Are
             </h2>
             <p className="text-lg text-muted-foreground">
-              AI-powered hyper-personalized outreach across all major channels—calls, voicemail, SMS, email, LinkedIn, and Facebook Messenger.
+              AI-powered hyper-personalized outreach across all major channels—with human experts ensuring every message matches your brand.
             </p>
           </div>
 
@@ -291,7 +439,7 @@ const LaunchPad360 = () => {
       </section>
 
       {/* 30-Day Timeline */}
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-28 bg-card">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
@@ -308,7 +456,7 @@ const LaunchPad360 = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {timeline.map((phase, index) => (
               <div key={phase.day} className="relative">
-                <div className="p-6 rounded-2xl bg-card border border-border h-full">
+                <div className="p-6 rounded-2xl bg-background border border-border h-full">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
                       {index + 1}
@@ -331,28 +479,28 @@ const LaunchPad360 = () => {
         </div>
       </section>
 
-      {/* Key Features */}
+      {/* Speed to Lead */}
       <section className="py-20 md:py-28 bg-secondary text-secondary-foreground">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
-                What Sets Us Apart
+                Speed-to-Lead Guarantee
               </span>
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
-                Human-Guided AI for Real Results
+                Respond in Under 60 Seconds
               </h2>
               <p className="text-lg text-secondary-foreground/80 mb-8">
-                Our expert consultants guide and supervise every AI system, so your customer touchpoints always feel real and never robotic.
+                Research shows 50% of sales go to the business that responds first. Our AI responds instantly while our human team ensures quality.
               </p>
               
               <ul className="space-y-4">
                 {[
-                  "Respond in under 60 seconds—50% of sales go to first responders",
-                  "Automate 70% of daily sales tasks so your team focuses on closing",
-                  "Hyper-individualized AI outreach that feels personal",
-                  "Automated inbox triage—only hot leads forwarded to your team",
-                  "Human expert oversight ensures brand voice consistency"
+                  "50% of sales go to first responders",
+                  "Average business takes 47 hours to respond",
+                  "We respond in under 60 seconds, 24/7",
+                  "30-day guarantee: if we don't deliver, we work free",
+                  "Human expert verification on high-value leads"
                 ].map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
@@ -365,10 +513,10 @@ const LaunchPad360 = () => {
             <div className="bg-card/10 backdrop-blur rounded-2xl p-8 border border-primary/20">
               <div className="flex items-center gap-3 mb-6">
                 <Clock className="w-8 h-8 text-primary" />
-                <span className="font-display text-xl font-bold">Speed-to-Lead Guarantee</span>
+                <span className="font-display text-xl font-bold">The 14-Day Guarantee</span>
               </div>
               <p className="text-secondary-foreground/80 mb-6">
-                Our AI responds to new leads in under 60 seconds. Research shows that 50% of sales go to the business that responds first.
+                We move your business from "Zero" to "Automated Meetings" in 14 days. If we don't significantly increase your pipeline velocity within 30 days, we work for free until we do.
               </p>
               <div className="text-center p-6 rounded-xl bg-primary/10">
                 <div className="font-display text-4xl font-bold text-primary mb-2">
@@ -391,17 +539,17 @@ const LaunchPad360 = () => {
               Ready to Launch Your Growth?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Find out how much more your team could achieve. Our human experts will review your current sales process and show you exactly where AI can help you win.
+              Get a free AI Visibility Audit to see how your business appears to AI search engines, or schedule a call with our team to discuss your growth goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/get-started">
-                  Schedule Your Revenue Audit
+                <Link to="/aeo-audit">
+                  Free AI Visibility Audit
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/#faq">Read Our FAQ</Link>
+                <Link to="/faq">Read Our FAQ</Link>
               </Button>
             </div>
           </div>
