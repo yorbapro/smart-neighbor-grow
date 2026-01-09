@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Rocket, Brain, Search, ArrowRight, Check, Phone, MessageSquare, Mail, Smartphone, Users } from "lucide-react";
+import { Rocket, Search, ArrowRight, Check } from "lucide-react";
 
 const Services = () => {
   const services = [
@@ -8,17 +8,15 @@ const Services = () => {
       icon: Rocket,
       name: "LaunchPad 360™",
       tagline: "Your Complete AI Sales Engine",
-      description: "The complete AI sales implementation system. We build and install your custom automated sales engine with built-in revenue intelligence in just 30 days.",
+      description: "The complete AI sales implementation system. We build and install your custom automated sales engine with built-in revenue intelligence in just 30 days. Human experts guide every step.",
       features: [
         "Custom infrastructure build & data calibration",
         "AI Researcher identifies your ideal customers",
         "500+ targeted local business leads",
         "Multi-channel outreach: calls, voicemail, SMS, email",
-        "LinkedIn & Facebook Messenger automation",
         "Real-time lead scoring & hot lead alerts",
         "Pipeline visibility dashboard",
-        "Conversation intelligence & deal tracking",
-        "Automated follow-up sequences",
+        "Human oversight on every campaign",
         "CRM integration (Salesforce/HubSpot)",
       ],
       slug: "launchpad-360",
@@ -28,17 +26,16 @@ const Services = () => {
       icon: Search,
       name: "LocalLift™",
       tagline: "Stellar Content + Answer Engine Optimization",
-      description: "Elevate your online presence with expert website content and dominate AI search results. We optimize your business for Gemini, ChatGPT, Perplexity, and voice search.",
+      description: "Elevate your online presence with expert website content and dominate AI search results. Get found when customers ask Gemini, ChatGPT, Perplexity, and voice assistants for local recommendations.",
       features: [
         "Custom website content creation",
         "SEO-optimized copywriting",
-        "Engaging blog posts",
+        "Engaging blog posts & articles",
         "Answer Engine Optimization (AEO)",
         "Voice search optimization",
         "Google Maps ranking boost",
         "AI answer engine citations",
         "Local expert positioning",
-        "AEO-optimized content strategy",
       ],
       slug: "locallift",
       featured: false,
@@ -48,16 +45,23 @@ const Services = () => {
   return (
     <section id="services" className="py-20 md:py-28 bg-gradient-subtle">
       <div className="container">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        {/* Intro Section - General to Specific Transition */}
+        <div className="text-center max-w-3xl mx-auto mb-8">
           <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
-            AI Lead Generation Services
+            How We Help Your Business Grow
           </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Automated Sales Systems That Scale
+            AI for Business, Built for You
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Remove the procurement hurdles of high-ticket agency retainers ($3,000–$25,000/mo). 
-            Get enterprise-grade AI sales automation at a fraction of the cost.
+          <p className="text-lg text-muted-foreground mb-6">
+            BrightLaunchIQ combines local knowledge with advanced automation so your business stands out, answers first, and closes more deals. We help companies fill their pipeline and manage growth with less effort.
+          </p>
+        </div>
+
+        {/* Bridge Text */}
+        <div className="max-w-2xl mx-auto text-center mb-16">
+          <p className="text-muted-foreground">
+            Our two flagship solutions work together to capture leads around the clock and position your business as the local authority. Choose one or combine them for maximum impact.
           </p>
         </div>
 
@@ -153,13 +157,13 @@ const Services = () => {
         {/* Target Markets */}
         <div className="mt-20 text-center">
           <h3 className="font-display text-xl font-bold text-foreground mb-6">
-            2026 Focus: Central Valley Industries
+            Industries We Serve: Central Valley & Beyond
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             {[
               "Professional Services (Legal, Accounting, Consulting)",
               "Trade Services (HVAC, Solar, Commercial Contractors)",
-              "Industrial/Logistics (Transportation, Warehousing)",
+              "Industrial & Logistics (Transportation, Warehousing)",
             ].map((industry) => (
               <span
                 key={industry}
