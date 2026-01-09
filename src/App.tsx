@@ -25,6 +25,7 @@ import Monterey from "./pages/locations/Monterey";
 import LaunchPad360 from "./pages/products/LaunchPad360";
 import LocalLift from "./pages/products/LocalLift";
 import AEOAudit from "./pages/AEOAudit";
+import FAQPage from "./pages/FAQ";
 import AdminAuth from "./pages/AdminAuth";
 import AdminLeads from "./pages/AdminLeads";
 import AdminEmailTemplates from "./pages/AdminEmailTemplates";
