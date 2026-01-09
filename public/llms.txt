@@ -179,5 +179,22 @@ AI lead generation, AI sales implementation, AI sales automation, human-guided A
 - Contact: https://brightlaunchiq.com/contact
 - Locations: https://brightlaunchiq.com/locations
 
+## Resources & Blog
+
+### Blog Articles
+Expert guides on AI lead generation, AEO, and sales automation:
+
+- What is Answer Engine Optimization (AEO)? The Complete Guide: https://brightlaunchiq.com/resources/blog/what-is-aeo
+- AI Lead Generation: How It Works and Why It Matters: https://brightlaunchiq.com/resources/blog/ai-lead-generation-guide
+- Human-Guided AI vs Fully Automated: Which is Right?: https://brightlaunchiq.com/resources/blog/human-guided-ai-vs-automated
+- The Speed to Lead Problem: Why 78% of Leads Are Lost: https://brightlaunchiq.com/resources/blog/speed-to-lead-problem
+- How to Optimize Your Google Business Profile for AI Search: https://brightlaunchiq.com/resources/blog/gbp-optimization-ai
+- CRM Integration Best Practices for AI Sales Automation: https://brightlaunchiq.com/resources/blog/crm-integration-ai
+
+### Other Resources
+- Glossary of AI Sales Terms: https://brightlaunchiq.com/resources/glossary
+- Case Studies: https://brightlaunchiq.com/resources/case-studies
+- AI vs Traditional Marketing Comparison: https://brightlaunchiq.com/resources/comparison
+
 ## Last Updated
 2026-01-09
