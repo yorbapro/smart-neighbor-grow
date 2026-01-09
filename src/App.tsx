@@ -33,6 +33,7 @@ import Blog from "./pages/resources/Blog";
 import Glossary from "./pages/resources/Glossary";
 import CaseStudies from "./pages/resources/CaseStudies";
 import Comparison from "./pages/resources/Comparison";
+import BlogArticle from "./pages/resources/BlogArticle";
 
 const queryClient = new QueryClient();
 
@@ -59,6 +60,7 @@ const App = () => (
           <Route path="/aeo-audit" element={<AEOAudit />} />
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/resources/blog" element={<Blog />} />
+          <Route path="/resources/blog/:slug" element={<BlogArticle />} />
           <Route path="/resources/glossary" element={<Glossary />} />
           <Route path="/resources/case-studies" element={<CaseStudies />} />
           <Route path="/resources/comparison" element={<Comparison />} />

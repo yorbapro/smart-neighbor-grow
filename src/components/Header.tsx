@@ -1,17 +1,24 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
 
   const navLinks = [
     { label: "LaunchPad 360™", href: "/products/launchpad-360" },
     { label: "LocalLift™", href: "/products/locallift" },
     { label: "Free AEO Audit", href: "/aeo-audit" },
     { label: "Pricing", href: "/pricing" },
-    { label: "About Us", href: "/about" },
+  ];
+
+  const resourceLinks = [
+    { label: "Blog", href: "/resources/blog" },
+    { label: "Case Studies", href: "/resources/case-studies" },
+    { label: "Glossary", href: "/resources/glossary" },
+    { label: "AI vs Traditional", href: "/resources/comparison" },
   ];
 
   return (
@@ -45,6 +52,42 @@ const Header = () => {
               {link.label}
             </Link>
           ))}
+          
+          {/* Resources Dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => setIsResourcesOpen(!isResourcesOpen)}
+              onBlur={() => setTimeout(() => setIsResourcesOpen(false), 150)}
+              className="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-md"
+              aria-expanded={isResourcesOpen}
+              aria-haspopup="true"
+            >
+              Resources
+              <ChevronDown className={`w-4 h-4 transition-transform ${isResourcesOpen ? 'rotate-180' : ''}`} />
+            </button>
+            
+            {isResourcesOpen && (
+              <div className="absolute top-full left-0 mt-2 w-48 bg-card rounded-lg border border-border shadow-lg py-2 z-50">
+                {resourceLinks.map((link) => (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                    onClick={() => setIsResourcesOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <Link
+            to="/about"
+            className="text-muted-foreground hover:text-foreground transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-md"
+          >
+            About Us
+          </Link>
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
@@ -86,6 +129,30 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
+            
+            {/* Mobile Resources Section */}
+            <div className="py-2 border-t border-border">
+              <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">Resources</p>
+              {resourceLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  className="block text-muted-foreground hover:text-foreground transition-colors font-medium py-2 pl-4 focus:outline-none focus:ring-2 focus:ring-ring rounded-md"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            <Link
+              to="/about"
+              className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2 focus:outline-none focus:ring-2 focus:ring-ring rounded-md"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About Us
+            </Link>
+
             <div className="flex flex-col gap-3 pt-4 border-t border-border">
               <Button variant="heroOutline" size="default" className="w-full" asChild>
                 <a href="tel:1-800-LAUNCH-IQ">1-800-LAUNCH-IQ</a>
