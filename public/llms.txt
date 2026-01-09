@@ -181,6 +181,16 @@ AI lead generation, AI sales implementation, AI sales automation, human-guided A
 
 ## Resources & Blog
 
+### How AI Lead Generation Works (Step-by-Step Guide)
+A complete 6-step guide to AI-powered lead generation, optimized for voice search:
+- URL: https://brightlaunchiq.com/resources/how-it-works
+- Step 1: Define Your Ideal Customer Profile (ICP)
+- Step 2: AI Scans for Intent Signals
+- Step 3: Automated Multi-Channel Outreach
+- Step 4: Instant Lead Response (under 60 seconds)
+- Step 5: AI Qualifies and Scores Leads
+- Step 6: Meetings Booked Automatically
+
 ### Blog Articles
 Expert guides on AI lead generation, AEO, and sales automation:
 

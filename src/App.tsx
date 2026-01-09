@@ -34,7 +34,7 @@ import Glossary from "./pages/resources/Glossary";
 import CaseStudies from "./pages/resources/CaseStudies";
 import Comparison from "./pages/resources/Comparison";
 import BlogArticle from "./pages/resources/BlogArticle";
-
+import HowItWorks from "./pages/resources/HowItWorks";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -64,6 +64,7 @@ const App = () => (
           <Route path="/resources/glossary" element={<Glossary />} />
           <Route path="/resources/case-studies" element={<CaseStudies />} />
           <Route path="/resources/comparison" element={<Comparison />} />
+          <Route path="/resources/how-it-works" element={<HowItWorks />} />
           <Route path="/admin" element={<AdminAuth />} />
           <Route path="/admin/leads" element={<AdminLeads />} />
           <Route path="/admin/templates" element={<AdminEmailTemplates />} />

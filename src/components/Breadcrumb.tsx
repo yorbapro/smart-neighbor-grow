@@ -29,6 +29,7 @@ const routeLabels: Record<string, string> = {
   "glossary": "Glossary",
   "case-studies": "Case Studies",
   "comparison": "Comparison",
+  "how-it-works": "How It Works",
   "sacramento": "Sacramento",
   "bakersfield": "Bakersfield",
   "fresno": "Fresno",
