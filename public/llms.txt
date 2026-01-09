@@ -1,90 +1,183 @@
-# BrightLaunchIQ - AI Lead Generation & Sales Implementation
+# BrightLaunchIQ
 
-> BrightLaunchIQ provides Human-Guided AI sales automation for local businesses in California's Central Valley.
+> Human-Guided AI for Business Growth. We help contractors, consultants, and industry firms respond first, automate the busywork, and win more customers locally.
 
-## About BrightLaunchIQ
+BrightLaunchIQ is an AI consulting agency that combines local experts, AI-driven sales tools, and proven automation to help small businesses grow. We specialize in AI lead generation, AI sales implementation, and Answer Engine Optimization (AEO) for local businesses across California and Nevada.
 
-BrightLaunchIQ is an AI consulting agency specializing in AI lead generation and AI sales implementation for local businesses. We transform small businesses with automated sales systems that work 24/7, delivering enterprise-grade AI sales automation at a fraction of traditional agency costs.
+## Company Overview
 
-## Core Services
+- **Founded**: 2024
+- **Headquarters**: Sacramento, California
+- **Service Areas**: Sacramento, Bakersfield, Fresno, Stockton, Culver City, Monterey (CA); Henderson (NV)
+- **Website**: https://brightlaunchiq.com
+- **Contact**: success@BrightLaunchIQ.com
+
+## Our Mission
+
+Making big tech work for Main Street. We believe small business owners deserve world-class sales automation without sacrificing what makes their company special. Our hybrid AI and expert team bring sales you can count on—made for local business owners.
+
+## What Makes Us Different
+
+### Human-in-the-Loop
+Our expert consultants guide and supervise every AI system, so your customer touchpoints always feel real and never robotic. We build your sales engine around your story and values.
+
+### ROI Focus
+We only implement tools that help you grow revenue or save time. The Math of Success: $16.60/day for a 24/7 digital teammate vs $80,000+/year for a human hire.
+
+### AI Plus Experts
+Every automation and follow-up is overseen by people who make sure BrightLaunchIQ matches your brand's voice and delivers trust. Our expert team guides the AI to keep every interaction friendly and real.
+
+## Products and Services
 
 ### LaunchPad 360™ - Agentic Go-To-Market Engine
-- **Cost**: $1,500 setup + $500/month ($16.60/day)
-- **Guarantee**: 14-Day Speed to Lead Guarantee
-- Complete AI sales implementation system
-- Multi-channel automated outreach: calls, voicemail, SMS, email, Facebook Messenger, LinkedIn
+Your complete AI sales implementation system that works 24/7.
+
+**Pricing**: $1,500 one-time setup + $500/month
+**Guarantee**: 14-Day Speed to Lead Guarantee
+
+**Features**:
+- Multi-channel automated outreach (calls, voicemail, SMS, email, Facebook Messenger, LinkedIn)
 - Custom infrastructure built into your CRM (Salesforce, HubSpot)
 - 500+ targeted local business leads
 - Hyper-individualized AI-written messages
 - Automated inbox triage (only hot leads forwarded)
-
-### IQ Flow™ - Smart Pipeline Intelligence
-- Automated lead scoring and ranking
+- IQ Flow™ smart pipeline intelligence
 - Hot lead instant mobile alerts
-- Pipeline visibility dashboard
-- CRM integration
+
+**Results**:
+- Reduces response time from 47 hours to under 60 seconds
+- Captures the 78% of leads typically missed by human-only teams
+- Works 168 hours/week catching after-hours inquiries
+- Output of 5-person sales team at fraction of cost
 
 ### LocalLift™ - Answer Engine Optimization (AEO)
-- Voice search optimization
+Boost your visibility in AI search and voice assistants.
+
+**Features**:
+- Voice search optimization for Siri, Alexa, Google Assistant
 - Google Maps ranking boost
 - AI answer engine citations (Gemini, ChatGPT, Perplexity)
 - Local expert positioning
+- GBP optimization and local schema markup
 
-## Key Benefits
+### Free AEO Audit
+Get a comprehensive analysis of your AI visibility in under 5 minutes.
 
-1. **Response Speed**: Reduces response time from 47 hours to under 60 seconds
-2. **Lead Capture**: Captures the 78% of leads typically missed by human-only teams
-3. **Cost Efficiency**: $16.60/day vs $80,000+/year for human hire
-4. **24/7 Operation**: Works 168 hours/week catching after-hours inquiries
-5. **Scalability**: Achieve output of 5-person sales team at fraction of cost
+**URL**: https://brightlaunchiq.com/aeo-audit
 
-## Service Areas
+## Industries We Serve
 
-### Sacramento (916)
-- Professional services, tech startups, consulting firms
-- AI Sales Strategy & Lead Generation
+### Professional Services
+Legal firms, accounting practices, consulting agencies, financial advisors
 
-### Stockton (209)
-- Logistics, shipping, distribution
-- AI Logistics & New Business Growth
+### Trade Services
+HVAC contractors, solar installers, commercial contractors, plumbers, electricians
 
-### Fresno (559)
-- Agriculture, food processing, manufacturing
-- AI Ag-Tech & Production Sales
+### Industrial & Logistics
+Transportation companies, warehousing, distribution, manufacturing
 
-### Bakersfield (661)
-- Energy, natural resources, heavy industry
-- AI Energy & Industrial Sales
+### Healthcare & Wellness
+Medical practices, dental offices, chiropractors, wellness centers
 
-## Target Industries (2026 Focus)
+### Real Estate
+Brokerages, property management, commercial real estate
 
-- Professional Services (Legal, Accounting, Consulting)
-- Trade Services (HVAC, Solar, Commercial Contractors)
-- Industrial/Logistics (Transportation, Warehousing)
+## Service Locations
 
-## Contact Information
+### Sacramento, California
+- **Phone**: (916) 664-1942
+- **Address**: 1108 K Street, 2nd Floor, Sacramento, CA 95814
+- **Focus**: Professional services, tech startups, consulting firms
 
-- **Website**: https://brightlaunchiq.com
-- **Phone**: 1-800-LAUNCH-IQ
-- **Email**: success@BrightLaunchIQ.com
+### Bakersfield, California
+- **Phone**: (661) 510-0802
+- **Address**: 1517 19th Street, Suite 200, Bakersfield, CA 93301
+- **Focus**: Energy sector, natural resources, heavy industry
+
+### Culver City, California
+- **Phone**: (310) 388-5418
+- **Address**: 3500 Overland Ave, Suite 200, Los Angeles, CA 90034
+- **Focus**: Creative agencies, entertainment industry, media companies
+
+### Henderson, Nevada
+- **Phone**: (702) 605-3384
+- **Address**: 170 S. Green Valley Pkwy, Suite 300, Henderson, NV 89012
+- **Focus**: Gaming, hospitality, professional services
+
+### Monterey, California
+- **Phone**: (831) 480-2205
+- **Address**: 200 Clocktower Place, Suite D-203, Carmel, CA 93923
+- **Focus**: Tourism, hospitality, marine industries
+
+### Fresno, California
+- **Focus**: Agriculture, food processing, manufacturing
+
+### Stockton, California
+- **Focus**: Logistics, shipping, distribution
 
 ## Frequently Asked Questions
 
-### How does AI lead generation work for small businesses?
-AI lead generation scans millions of data points to find "intent signals" - when potential customers show buying behavior, the AI identifies them as high-priority prospects and initiates personalized outreach immediately.
+### What is AI lead generation?
+AI lead generation uses artificial intelligence to identify, qualify, and engage potential customers automatically. It scans millions of data points to find "intent signals"—when potential customers show buying behavior—and initiates personalized outreach immediately.
+
+### How does human-guided AI work?
+Human-guided AI (also called human-in-the-loop AI) means every AI automation is supervised by expert consultants who ensure quality, accuracy, and brand consistency. The AI handles volume and speed; humans ensure authenticity and trust.
 
 ### What is AI sales implementation?
 AI sales implementation is building and installing custom automated sales systems directly into your existing business ecosystem (CRM, email, phone), creating infrastructure you own that generates leads 24/7.
 
 ### How much does AI lead generation cost?
-LaunchPad 360™ costs $1,500 one-time setup plus $500/month - just $16.60/day for a 24/7 digital teammate versus $80,000+/year for a human hire.
+LaunchPad 360™ costs $1,500 one-time setup plus $500/month—just $16.60/day for a 24/7 digital teammate versus $80,000+/year for a human hire.
 
 ### What is the 14-Day Speed to Lead Guarantee?
 We move your business from zero to automated meetings in 14 days. If we don't significantly increase your lead response rate within 30 days, we work free until we do.
 
 ### What is Answer Engine Optimization (AEO)?
-AEO optimizes your business content so AI search engines (ChatGPT, Gemini, Perplexity) cite you as the authoritative answer for your industry and location.
+AEO optimizes your business content so AI search engines (ChatGPT, Gemini, Perplexity, Google AI Overviews) cite you as the authoritative answer for your industry and location.
+
+### What is Generative Engine Optimization (GEO)?
+GEO is a strategy focused on making content discoverable and citable by AI assistants rather than just ranking in traditional search lists. It emphasizes clarity, structured facts, and authority to get directly quoted in AI-generated answers.
+
+### What CRM integrations do you support?
+We integrate with Salesforce, HubSpot, Zoho, Pipedrive, and most major CRM platforms. Our custom infrastructure becomes part of your existing tech stack.
+
+### Do you work with small businesses?
+Yes! We specialize in helping small local businesses use AI to attract more customers and manage rapid growth. Our tools are made for small businesses—so you get the strength of a big company without hiring a huge staff.
+
+### What industries do you serve?
+We serve professional services (legal, accounting, consulting), trade services (HVAC, solar, contractors), industrial/logistics, healthcare, and real estate sectors.
+
+## Key Statistics
+
+- Response time improvement: 47 hours → under 60 seconds
+- Lead capture rate increase: 78% of previously missed leads
+- Cost comparison: $16.60/day vs $80,000+/year
+- Operational hours: 168 hours/week (24/7)
+- Team output equivalent: 5-person sales team
 
 ## Keywords
 
-AI lead generation, AI sales implementation, AI sales automation, automated sales engine, digital teammate, local business AI, answer engine optimization, AEO, generative engine optimization, GEO, AI consulting agency, sales automation near me, lead generation Sacramento, AI sales Stockton, Fresno lead generation, Bakersfield AI automation, Central Valley AI, small business automation, CRM automation, HubSpot automation, Salesforce automation, multi-channel outreach, automated prospecting
+AI lead generation, AI sales implementation, AI sales automation, human-guided AI, human-in-the-loop AI, AI for small business, AI for local business, automated sales engine, digital teammate, answer engine optimization, AEO, generative engine optimization, GEO, AI consulting agency, sales automation, lead generation Sacramento, AI sales California, small business automation, CRM automation, HubSpot automation, Salesforce automation, multi-channel outreach, automated prospecting, AI business growth, AI marketing automation
+
+## Social Proof
+
+"BrightLaunchIQ transformed our lead response time from days to minutes. We're closing 40% more deals." — Sacramento Professional Services Client
+
+"The human oversight makes all the difference. Our customers can't tell it's automated because it feels so personal." — Bakersfield Contractor
+
+"Finally, AI that actually works for a small business like ours." — Henderson Business Owner
+
+## Links
+
+- Homepage: https://brightlaunchiq.com
+- About Us: https://brightlaunchiq.com/about
+- Products: https://brightlaunchiq.com/products/launchpad-360
+- LocalLift: https://brightlaunchiq.com/products/locallift
+- Free AEO Audit: https://brightlaunchiq.com/aeo-audit
+- Pricing: https://brightlaunchiq.com/pricing
+- FAQ: https://brightlaunchiq.com/faq
+- Contact: https://brightlaunchiq.com/contact
+- Locations: https://brightlaunchiq.com/locations
+
+## Last Updated
+2026-01-09
