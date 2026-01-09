@@ -145,8 +145,56 @@ const LaunchPad360 = () => {
     });
     document.head.appendChild(faqScript);
 
+    // HowTo Schema for 30-Day Implementation Timeline (AEO/Voice Search)
+    const howToScript = document.createElement("script");
+    howToScript.type = "application/ld+json";
+    howToScript.id = "howto-schema";
+    howToScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Launch an AI Sales Engine in 30 Days",
+      "description": "A complete guide to implementing LaunchPad 360™, our human-guided AI sales system, from discovery to full go-live in just 30 days.",
+      "totalTime": "P30D",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "1500"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Discovery & Setup",
+          "text": "Define your Ideal Customer Profile (ICP), integrate your CRM, and build the data infrastructure foundation.",
+          "position": 1,
+          "url": "https://brightlaunchiq.com/products/launchpad-360#timeline"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "AI Training & Content",
+          "text": "Train custom AI agents on your brand voice, create personalized email templates, and design multi-channel outreach sequences.",
+          "position": 2,
+          "url": "https://brightlaunchiq.com/products/launchpad-360#timeline"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Testing & Calibration",
+          "text": "Conduct multi-channel testing, warm email domains for deliverability, and perform quality assurance on all automation.",
+          "position": 3,
+          "url": "https://brightlaunchiq.com/products/launchpad-360#timeline"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Launch & Optimize",
+          "text": "Go live with full system deployment, launch initial campaigns, and tune performance based on real-time analytics.",
+          "position": 4,
+          "url": "https://brightlaunchiq.com/products/launchpad-360#timeline"
+        }
+      ]
+    });
+    document.head.appendChild(howToScript);
+
     return () => {
-      ['product-schema', 'service-schema', 'faq-schema'].forEach(id => {
+      ['product-schema', 'service-schema', 'faq-schema', 'howto-schema'].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.remove();
       });

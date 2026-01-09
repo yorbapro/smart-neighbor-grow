@@ -111,7 +111,7 @@ const Glossary = () => {
     setFilteredTerms(filtered);
   }, [searchQuery]);
 
-  // Add DefinedTermSet schema
+  // Add DefinedTermSet schema with enhanced GEO signals
   useEffect(() => {
     const existingSchema = document.getElementById("glossary-schema");
     if (existingSchema) existingSchema.remove();
@@ -123,11 +123,21 @@ const Glossary = () => {
       "@context": "https://schema.org",
       "@type": "DefinedTermSet",
       "name": "AI Sales & Marketing Glossary",
-      "description": "Comprehensive glossary of AI lead generation, AEO, GEO, and sales automation terminology.",
-      "hasDefinedTerm": glossaryTerms.map((item) => ({
+      "description": "Comprehensive glossary of AI lead generation, AEO (Answer Engine Optimization), GEO (Generative Engine Optimization), and sales automation terminology. Authoritative definitions for AI-powered business growth.",
+      "url": "https://brightlaunchiq.com/resources/glossary",
+      "inLanguage": "en-US",
+      "publisher": {
+        "@type": "Organization",
+        "name": "BrightLaunchIQ",
+        "url": "https://brightlaunchiq.com"
+      },
+      "hasDefinedTerm": glossaryTerms.map((item, index) => ({
         "@type": "DefinedTerm",
         "name": item.term,
         "description": item.definition,
+        "url": `https://brightlaunchiq.com/resources/glossary#${item.term.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
+        "inDefinedTermSet": "https://brightlaunchiq.com/resources/glossary",
+        "termCode": `BLIQ-${String(index + 1).padStart(3, '0')}`
       })),
     });
     document.head.appendChild(schemaScript);

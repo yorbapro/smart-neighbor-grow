@@ -327,12 +327,23 @@ const BlogArticle = () => {
     speakable: ["h1", ".article-intro", ".article-content h2"],
   });
 
-  // Add Article schema
+  // Add Article schema with enhanced author credentials (E-E-A-T signals for GEO)
   useEffect(() => {
     if (!article) return;
 
     const existingSchema = document.getElementById("article-schema");
     if (existingSchema) existingSchema.remove();
+
+    // Parse article date for proper ISO format
+    const dateMap: Record<string, string> = {
+      "January 5, 2026": "2026-01-05",
+      "January 3, 2026": "2026-01-03",
+      "December 28, 2025": "2025-12-28",
+      "December 20, 2025": "2025-12-20",
+      "December 15, 2025": "2025-12-15",
+      "December 10, 2025": "2025-12-10",
+    };
+    const isoDate = dateMap[article.date] || "2025-12-10";
 
     const schemaScript = document.createElement("script");
     schemaScript.type = "application/ld+json";
@@ -342,24 +353,59 @@ const BlogArticle = () => {
       "@type": "Article",
       "headline": article.title,
       "description": article.excerpt,
-      "datePublished": "2025-12-10",
+      "datePublished": isoDate,
       "dateModified": "2026-01-09",
       "author": {
         "@type": "Person",
         "name": article.author,
         "jobTitle": article.authorRole,
         "description": article.authorBio,
+        "url": `https://brightlaunchiq.com/about#team`,
+        "sameAs": [
+          "https://linkedin.com/company/brightlaunchiq"
+        ],
         "worksFor": {
           "@type": "Organization",
-          "name": "BrightLaunchIQ"
-        }
+          "name": "BrightLaunchIQ",
+          "url": "https://brightlaunchiq.com",
+          "sameAs": [
+            "https://linkedin.com/company/brightlaunchiq",
+            "https://twitter.com/brightlaunchiq"
+          ]
+        },
+        "knowsAbout": [
+          "AI Lead Generation",
+          "Answer Engine Optimization",
+          "Sales Automation",
+          "Human-Guided AI"
+        ]
       },
       "publisher": {
         "@type": "Organization",
         "name": "BrightLaunchIQ",
-        "url": "https://brightlaunchiq.com"
+        "url": "https://brightlaunchiq.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://brightlaunchiq.com/logo.png"
+        },
+        "sameAs": [
+          "https://linkedin.com/company/brightlaunchiq",
+          "https://twitter.com/brightlaunchiq"
+        ]
       },
-      "mainEntityOfPage": `https://brightlaunchiq.com/resources/blog/${slug}`,
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://brightlaunchiq.com/resources/blog/${slug}`
+      },
+      "articleSection": article.category,
+      "keywords": article.keywords,
+      "wordCount": article.content.join(" ").split(" ").length,
+      "inLanguage": "en-US",
+      "isAccessibleForFree": true,
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".article-intro", ".article-content h2"]
+      }
     });
     document.head.appendChild(schemaScript);
 
