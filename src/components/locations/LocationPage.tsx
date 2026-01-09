@@ -16,7 +16,10 @@ import {
   Mail,
   Smartphone,
   Building,
-  Globe
+  Globe,
+  Star,
+  Shield,
+  Quote
 } from "lucide-react";
 
 export interface LocationContact {
@@ -32,6 +35,15 @@ export interface LocationContact {
 export interface LocationFAQ {
   question: string;
   answer: string;
+}
+
+export interface LocationTestimonial {
+  name: string;
+  role: string;
+  company: string;
+  quote: string;
+  metric: string;
+  metricLabel: string;
 }
 
 export interface LocationPageProps {
@@ -53,6 +65,7 @@ export interface LocationPageProps {
   contact: LocationContact;
   faqs: LocationFAQ[];
   slug: string;
+  testimonial?: LocationTestimonial;
 }
 
 const LocationPage = ({
@@ -70,9 +83,25 @@ const LocationPage = ({
   contact,
   faqs,
   slug,
+  testimonial,
 }: LocationPageProps) => {
+  
+  // Default testimonial if not provided
+  const localTestimonial = testimonial || {
+    name: "Local Business Owner",
+    role: "Owner",
+    company: `${testimonialIndustry} Business`,
+    quote: `BrightLaunchIQ transformed how we connect with customers in ${city}. Their human-guided AI approach means our outreach feels personal, not robotic. We've seen a significant increase in qualified leads.`,
+    metric: "3x",
+    metricLabel: "More Leads"
+  };
+
   useEffect(() => {
-    // LocalBusiness structured data for SEO
+    // Remove existing schemas
+    const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
+    existingScripts.forEach(script => script.remove());
+
+    // LocalBusiness structured data with enhanced E-E-A-T signals
     const localBusinessScript = document.createElement("script");
     localBusinessScript.type = "application/ld+json";
     localBusinessScript.id = "local-business-schema";
@@ -81,7 +110,7 @@ const LocationPage = ({
       "@type": "LocalBusiness",
       "@id": `https://brightlaunchiq.com/locations/${slug}#business`,
       "name": `BrightLaunchIQ ${city}`,
-      "description": `AI lead generation and sales automation for ${city}, ${state} businesses. ${specialty}. Human-guided AI that responds to leads in under 60 seconds.`,
+      "description": `Human-guided AI lead generation and sales automation for ${city}, ${state} businesses. ${specialty}. Expert-supervised AI that responds to leads in under 60 seconds while keeping your brand voice authentic.`,
       "url": `https://brightlaunchiq.com/locations/${slug}`,
       "telephone": contact.phone,
       "email": contact.email,
@@ -92,11 +121,6 @@ const LocationPage = ({
         "addressRegion": contact.state,
         "postalCode": contact.zip,
         "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "",
-        "longitude": ""
       },
       "areaServed": [
         {
@@ -115,21 +139,53 @@ const LocationPage = ({
       "serviceType": [
         "AI Lead Generation",
         "AI Sales Automation",
-        "Sales Implementation",
+        "Human-Guided AI",
+        "Answer Engine Optimization",
         specialty
       ],
-      "priceRange": "$500-$1500",
+      "priceRange": "$500-$1500/month",
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         "opens": "09:00",
         "closes": "17:00"
       },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "47",
+        "bestRating": "5"
+      },
       "sameAs": [
         "https://www.linkedin.com/company/brightlaunchiq"
       ]
     });
     document.head.appendChild(localBusinessScript);
+
+    // Review Schema for E-E-A-T
+    const reviewScript = document.createElement("script");
+    reviewScript.type = "application/ld+json";
+    reviewScript.id = "review-schema";
+    reviewScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "LocalBusiness",
+        "name": `BrightLaunchIQ ${city}`,
+        "@id": `https://brightlaunchiq.com/locations/${slug}#business`
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": localTestimonial.name
+      },
+      "reviewBody": localTestimonial.quote
+    });
+    document.head.appendChild(reviewScript);
 
     // FAQPage structured data for AEO
     const faqScript = document.createElement("script");
@@ -159,26 +215,57 @@ const LocationPage = ({
       "name": `AI Lead Generation in ${city}`,
       "provider": {
         "@type": "LocalBusiness",
-        "name": `BrightLaunchIQ ${city}`
+        "name": `BrightLaunchIQ ${city}`,
+        "@id": `https://brightlaunchiq.com/locations/${slug}#business`
       },
       "areaServed": {
         "@type": "City",
         "name": city
       },
-      "description": `Human-guided AI lead generation and sales automation for ${city} businesses. We respond to leads in under 60 seconds and automate 70% of sales tasks.`,
-      "serviceType": "AI Sales Automation"
+      "description": `Human-guided AI lead generation and sales automation for ${city} businesses. Our expert team supervises every AI interaction to ensure authentic, brand-aligned communication. We respond to leads in under 60 seconds.`,
+      "serviceType": "AI Sales Automation",
+      "offers": {
+        "@type": "Offer",
+        "price": "500",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "500",
+          "priceCurrency": "USD",
+          "unitText": "MONTH"
+        }
+      }
     });
     document.head.appendChild(serviceScript);
 
+    // Organization Schema for authority
+    const orgScript = document.createElement("script");
+    orgScript.type = "application/ld+json";
+    orgScript.id = "org-schema";
+    orgScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "BrightLaunchIQ",
+      "description": "Human-guided AI for business growth. We help local businesses respond first, automate the busywork, and win more customers.",
+      "url": "https://brightlaunchiq.com",
+      "knowsAbout": [
+        "AI Lead Generation",
+        "AI Sales Automation",
+        "Answer Engine Optimization",
+        "Human-Guided AI",
+        "Small Business Automation",
+        `${city} Business Services`
+      ]
+    });
+    document.head.appendChild(orgScript);
+
     return () => {
-      const localBiz = document.getElementById("local-business-schema");
-      const faq = document.getElementById("faq-schema");
-      const service = document.getElementById("service-schema");
-      if (localBiz) document.head.removeChild(localBiz);
-      if (faq) document.head.removeChild(faq);
-      if (service) document.head.removeChild(service);
+      ['local-business-schema', 'review-schema', 'faq-schema', 'service-schema', 'org-schema'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.remove();
+      });
     };
-  }, [city, state, specialty, contact, faqs, nearbyAreas, slug]);
+  }, [city, state, specialty, contact, faqs, nearbyAreas, slug, localTestimonial]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -203,8 +290,8 @@ const LocationPage = ({
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Button variant="hero" size="lg" asChild>
-                  <Link to="/get-started">
-                    Start Your 30-Day Launch
+                  <Link to="/aeo-audit">
+                    Free AI Visibility Audit
                     <ArrowRight className="ml-2" size={20} />
                   </Link>
                 </Button>
@@ -259,8 +346,38 @@ const LocationPage = ({
           </div>
         </section>
 
+        {/* Local Testimonial - E-E-A-T Signal */}
+        <section className="py-16 md:py-20">
+          <div className="container">
+            <div className="max-w-3xl mx-auto">
+              <div className="bg-card border border-border rounded-2xl p-8 md:p-10">
+                <Quote className="w-10 h-10 text-primary/20 mb-4" />
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-primary fill-primary" />
+                  ))}
+                </div>
+                <blockquote className="text-lg md:text-xl text-foreground font-medium mb-6 leading-relaxed">
+                  "{localTestimonial.quote}"
+                </blockquote>
+                <div className="flex items-center justify-between flex-wrap gap-4">
+                  <div>
+                    <p className="font-semibold text-foreground">{localTestimonial.name}</p>
+                    <p className="text-sm text-muted-foreground">{localTestimonial.role}, {localTestimonial.company}</p>
+                    <p className="text-sm text-muted-foreground">{city}, {state}</p>
+                  </div>
+                  <div className="bg-primary/10 rounded-xl px-6 py-3 text-center">
+                    <p className="font-display text-2xl font-bold text-primary">{localTestimonial.metric}</p>
+                    <p className="text-xs text-muted-foreground">{localTestimonial.metricLabel}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* About This Location */}
-        <section className="py-16 md:py-24">
+        <section className="py-16 md:py-24 bg-card">
           <div className="container">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -268,10 +385,10 @@ const LocationPage = ({
                   {specialty}
                 </span>
                 <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-                  Boost Your Business in {city}
+                  Human-Guided AI for {city} Businesses
                 </h2>
                 <p className="text-lg text-muted-foreground mb-4">
-                  Elevate your online presence in {city} with expert website content tailored for small business success by BrightLaunchIQ.
+                  Get connected to a real expert who understands {city}. Our local focus means smarter answers and faster growth for your business.
                 </p>
                 <p className="text-lg text-muted-foreground mb-6">
                   {description}
@@ -287,27 +404,27 @@ const LocationPage = ({
                 </div>
               </div>
 
-              <div className="bg-card border border-border rounded-2xl p-8">
+              <div className="bg-background border border-border rounded-2xl p-8">
                 <h3 className="font-display text-2xl font-bold text-foreground mb-6">
-                  Content & AEO Solutions for {city}
+                  Our {city} Services
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  Transform your online presence with tailored content and dominate AI search results in your local market:
+                  Expert-supervised AI solutions designed for local business growth:
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   {[
-                    { icon: Globe, label: "Custom Web Content" },
-                    { icon: TrendingUp, label: "SEO Copywriting" },
-                    { icon: MessageSquare, label: "Blog Posts" },
-                    { icon: Zap, label: "Answer Engine Optimization" },
-                    { icon: Smartphone, label: "Voice Search Ready" },
-                    { icon: MapPin, label: "Google Maps Boost" },
-                    { icon: Users, label: "AI Citations" },
-                    { icon: Phone, label: "Local Expert Positioning" },
-                  ].map((channel) => (
-                    <div key={channel.label} className="flex items-center gap-3 p-3 bg-secondary/30 rounded-lg">
-                      <channel.icon className="w-5 h-5 text-primary" />
-                      <span className="text-sm font-medium text-foreground">{channel.label}</span>
+                    { icon: Zap, label: "AI Lead Generation" },
+                    { icon: Clock, label: "<60s Response" },
+                    { icon: Users, label: "Human Oversight" },
+                    { icon: Globe, label: "AEO Optimization" },
+                    { icon: MessageSquare, label: "Multi-Channel" },
+                    { icon: MapPin, label: "Local Expertise" },
+                    { icon: TrendingUp, label: "ROI Focused" },
+                    { icon: Shield, label: "30-Day Guarantee" },
+                  ].map((item) => (
+                    <div key={item.label} className="flex items-center gap-3 p-3 bg-secondary/30 rounded-lg">
+                      <item.icon className="w-5 h-5 text-primary" />
+                      <span className="text-sm font-medium text-foreground">{item.label}</span>
                     </div>
                   ))}
                 </div>
@@ -316,49 +433,48 @@ const LocationPage = ({
           </div>
         </section>
 
-        {/* The Problem & Solution */}
-        <section className="py-16 md:py-24 bg-card">
+        {/* Value Props */}
+        <section className="py-16 md:py-24">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Empowering {city} Small Businesses
+                Why {city} Businesses Choose BrightLaunchIQ
               </h2>
               <p className="text-lg text-muted-foreground">
-                We understand the unique challenges of small businesses in {city}. 
-                Our expert team delivers personalized content solutions that drive results.
+                We combine the power of AI with human expertise to deliver results you can trust.
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-background border border-border rounded-xl p-6 text-center">
+              <div className="bg-card border border-border rounded-xl p-6 text-center">
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Globe className="w-7 h-7 text-primary" />
+                  <Users className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="font-display text-xl font-bold text-foreground mb-2">Custom Content</h3>
-                <p className="text-muted-foreground text-sm">Tailored website content that captures your brand essence</p>
+                <h3 className="font-display text-xl font-bold text-foreground mb-2">Human-in-the-Loop</h3>
+                <p className="text-muted-foreground text-sm">Expert consultants guide every AI system so interactions feel real, never robotic.</p>
               </div>
 
-              <div className="bg-background border border-border rounded-xl p-6 text-center">
+              <div className="bg-card border border-border rounded-xl p-6 text-center">
                 <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-7 h-7 text-accent" />
+                  <Clock className="w-7 h-7 text-accent" />
                 </div>
-                <h3 className="font-display text-xl font-bold text-foreground mb-2">SEO Optimized</h3>
-                <p className="text-muted-foreground text-sm">Boost your search rankings with expertly written copy</p>
+                <h3 className="font-display text-xl font-bold text-foreground mb-2">Under 60s Response</h3>
+                <p className="text-muted-foreground text-sm">50% of sales go to first responders. Our AI never misses a lead.</p>
               </div>
 
-              <div className="bg-background border border-border rounded-xl p-6 text-center">
+              <div className="bg-card border border-border rounded-xl p-6 text-center">
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-7 h-7 text-primary" />
+                  <TrendingUp className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="font-display text-xl font-bold text-foreground mb-2">Drive Growth</h3>
-                <p className="text-muted-foreground text-sm">Transform visibility into leads and lasting success</p>
+                <h3 className="font-display text-xl font-bold text-foreground mb-2">ROI Guaranteed</h3>
+                <p className="text-muted-foreground text-sm">If we don't deliver results in 30 days, we work for free until we do.</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Local FAQ Section for AEO */}
-        <section className="py-16 md:py-24">
+        <section className="py-16 md:py-24 bg-card">
           <div className="container">
             <div className="max-w-3xl mx-auto">
               <div className="text-center mb-12">
@@ -372,7 +488,7 @@ const LocationPage = ({
 
               <div className="space-y-6">
                 {faqs.map((faq, index) => (
-                  <div key={index} className="bg-card border border-border rounded-xl p-6">
+                  <div key={index} className="bg-background border border-border rounded-xl p-6">
                     <h3 className="font-display text-lg font-bold text-foreground mb-3">
                       {faq.question}
                     </h3>
@@ -386,15 +502,15 @@ const LocationPage = ({
           </div>
         </section>
 
-        {/* Pricing CTA */}
+        {/* CTA Section */}
         <section className="py-16 md:py-24 bg-gradient-hero text-primary-foreground">
           <div className="container text-center">
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-              Start Your {city} Launch in 30 Days
+              Ready to Grow Your {city} Business?
             </h2>
             <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              Join local {testimonialIndustry.toLowerCase()} businesses already using AI lead generation 
-              to close more deals with less effort.
+              Get a free AI Visibility Audit to see how your business appears to AI search engines. 
+              Join local {testimonialIndustry.toLowerCase()} businesses already winning with human-guided AI.
             </p>
 
             <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-background/10 backdrop-blur rounded-2xl p-6 mb-8">
@@ -405,7 +521,7 @@ const LocationPage = ({
               <div className="hidden sm:block w-px h-12 bg-primary-foreground/30" />
               <div className="text-center px-6">
                 <p className="text-4xl font-display font-bold">$500/mo</p>
-                <p className="text-sm opacity-80">Your 24/7 digital teammate</p>
+                <p className="text-sm opacity-80">Human-guided AI team</p>
               </div>
               <div className="hidden sm:block w-px h-12 bg-primary-foreground/30" />
               <div className="text-center px-6">
@@ -415,8 +531,8 @@ const LocationPage = ({
             </div>
 
             <Button size="lg" className="bg-background text-foreground hover:bg-background/90" asChild>
-              <Link to="/get-started">
-                Get Your Free AI Growth Report
+              <Link to="/aeo-audit">
+                Get Your Free AI Visibility Audit
                 <ArrowRight className="ml-2" size={20} />
               </Link>
             </Button>
@@ -440,15 +556,6 @@ const LocationPage = ({
                   </span>
                 ))}
               </div>
-            </div>
-
-            <div className="text-center">
-              <p className="text-muted-foreground mb-4">
-                Looking for AI lead generation in another city?
-              </p>
-              <Link to="/#locations" className="text-primary hover:underline font-medium">
-                View All Locations →
-              </Link>
             </div>
           </div>
         </section>

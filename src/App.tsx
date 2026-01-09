@@ -52,6 +52,7 @@ const App = () => (
           <Route path="/products/launchpad-360" element={<LaunchPad360 />} />
           <Route path="/products/locallift" element={<LocalLift />} />
           <Route path="/aeo-audit" element={<AEOAudit />} />
+          <Route path="/faq" element={<FAQPage />} />
           <Route path="/admin" element={<AdminAuth />} />
           <Route path="/admin/leads" element={<AdminLeads />} />
           <Route path="/admin/templates" element={<AdminEmailTemplates />} />
