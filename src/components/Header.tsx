@@ -5,13 +5,12 @@ import { Menu, X, ChevronDown } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
 
-  const navLinks = [
+  const solutionLinks = [
     { label: "LaunchPad 360™", href: "/products/launchpad-360" },
     { label: "LocalLift™", href: "/products/locallift" },
-    { label: "Free AEO Audit", href: "/aeo-audit" },
-    { label: "Pricing", href: "/pricing" },
   ];
 
   const resourceLinks = [
@@ -44,15 +43,41 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              to={link.href}
-              className="text-muted-foreground hover:text-foreground transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-md"
+          {/* Solutions Dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
+              onBlur={() => setTimeout(() => setIsSolutionsOpen(false), 150)}
+              className="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-md"
+              aria-expanded={isSolutionsOpen}
+              aria-haspopup="true"
             >
-              {link.label}
-            </Link>
-          ))}
+              Solutions
+              <ChevronDown className={`w-4 h-4 transition-transform ${isSolutionsOpen ? 'rotate-180' : ''}`} />
+            </button>
+            
+            {isSolutionsOpen && (
+              <div className="absolute top-full left-0 mt-2 w-48 bg-card rounded-lg border border-border shadow-lg py-2 z-50">
+                {solutionLinks.map((link) => (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                    onClick={() => setIsSolutionsOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <Link
+            to="/pricing"
+            className="text-muted-foreground hover:text-foreground transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-md"
+          >
+            Pricing
+          </Link>
           
           {/* Resources Dropdown */}
           <div className="relative">
@@ -89,6 +114,13 @@ const Header = () => {
           >
             About Us
           </Link>
+
+          <Link
+            to="/contact"
+            className="text-muted-foreground hover:text-foreground transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-md"
+          >
+            Contact
+          </Link>
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
@@ -120,16 +152,28 @@ const Header = () => {
           aria-label="Mobile navigation"
         >
           <div className="container py-4 flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                to={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2 focus:outline-none focus:ring-2 focus:ring-ring rounded-md"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {/* Mobile Solutions Section */}
+            <div className="py-2">
+              <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">Solutions</p>
+              {solutionLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  className="block text-muted-foreground hover:text-foreground transition-colors font-medium py-2 pl-4 focus:outline-none focus:ring-2 focus:ring-ring rounded-md"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            <Link
+              to="/pricing"
+              className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2 focus:outline-none focus:ring-2 focus:ring-ring rounded-md"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Pricing
+            </Link>
             
             {/* Mobile Resources Section */}
             <div className="py-2 border-t border-border">
@@ -152,6 +196,14 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               About Us
+            </Link>
+
+            <Link
+              to="/contact"
+              className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2 focus:outline-none focus:ring-2 focus:ring-ring rounded-md"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
             </Link>
 
             <div className="flex flex-col gap-3 pt-4 border-t border-border">
