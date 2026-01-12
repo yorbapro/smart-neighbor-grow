@@ -1,70 +1,82 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone, Mail, Shield, Clock } from "lucide-react";
+import { ArrowRight, Phone, Mail, Shield, Clock, CheckCircle } from "lucide-react";
 
 const CTA = () => {
   return (
-    <section className="py-20 md:py-28 bg-gradient-dark relative overflow-hidden">
+    <section className="py-24 md:py-32 bg-gradient-hero-dark relative overflow-hidden">
       {/* Background decorations */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/15 rounded-full blur-[150px]" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[120px]" />
+      </div>
 
-      <div className="container relative">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary mb-6">
-            <Shield size={16} />
-            <span className="text-sm font-semibold">14-Day Speed to Lead Guarantee</span>
+      <div className="container relative z-10">
+        <div className="max-w-4xl mx-auto">
+          {/* Eyebrow */}
+          <div className="flex items-center gap-3 mb-6">
+            <Shield className="w-5 h-5 text-primary" />
+            <span className="uppercase text-xs font-bold tracking-[0.2em] text-primary">
+              14-Day Speed to Lead Guarantee
+            </span>
           </div>
 
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-foreground mb-6">
-            Get Your Free 15-Minute Revenue Audit
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            Get Your Free 15-Minute
+            <br />
+            <span className="text-gradient">Revenue Audit</span>
           </h2>
-          <p className="text-lg text-secondary-foreground/80 mb-6 max-w-2xl mx-auto">
+          
+          <p className="text-lg md:text-xl text-white/70 mb-8 max-w-2xl leading-relaxed">
             Ready to stop renting your growth? Our human experts will review your current 
             sales process and show you exactly where a 24/7 digital teammate can help you 
             capture the leads your competitors miss.
           </p>
 
-          {/* Value Props */}
-          <div className="flex flex-wrap justify-center gap-6 mb-10 text-secondary-foreground/70 text-sm">
-            <div className="flex items-center gap-2">
-              <Clock size={16} className="text-primary" />
-              <span>Results in 14 days</span>
+          {/* Value Props - Horizontal */}
+          <div className="flex flex-wrap gap-6 mb-10">
+            <div className="flex items-center gap-2 text-white/80">
+              <CheckCircle className="w-5 h-5 text-primary" />
+              <span className="text-sm">Results in 14 days</span>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-primary font-bold">$16.60/day</span>
-              <span>for 24/7 coverage</span>
+            <div className="flex items-center gap-2 text-white/80">
+              <CheckCircle className="w-5 h-5 text-primary" />
+              <span className="text-sm">$16.60/day for 24/7 coverage</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Shield size={16} className="text-primary" />
-              <span>Performance guaranteed</span>
+            <div className="flex items-center gap-2 text-white/80">
+              <CheckCircle className="w-5 h-5 text-primary" />
+              <span className="text-sm">Performance guaranteed</span>
             </div>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <Button variant="hero" size="xl" asChild>
+          {/* CTA Button */}
+          <div className="flex flex-col sm:flex-row items-start gap-4 mb-12">
+            <Button variant="hero" size="xl" asChild className="group">
               <Link to="/get-started">
                 Start Your 14-Day Launch
-                <ArrowRight size={20} />
+                <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
           </div>
 
           {/* Contact Info */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-secondary-foreground/90">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-8 border-t border-white/10">
             <a
               href="tel:1-800-LAUNCH-IQ"
-              className="flex items-center gap-3 hover:text-primary transition-colors"
+              className="flex items-center gap-3 text-white/80 hover:text-primary transition-colors group"
             >
-              <Phone size={20} />
+              <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                <Phone size={18} />
+              </div>
               <span className="font-semibold">1-800-LAUNCH-IQ</span>
             </a>
             <a
               href="mailto:success@BrightLaunchIQ.com"
-              className="flex items-center gap-3 hover:text-primary transition-colors"
+              className="flex items-center gap-3 text-white/80 hover:text-primary transition-colors group"
             >
-              <Mail size={20} />
+              <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                <Mail size={18} />
+              </div>
               <span className="font-semibold">success@BrightLaunchIQ.com</span>
             </a>
           </div>
