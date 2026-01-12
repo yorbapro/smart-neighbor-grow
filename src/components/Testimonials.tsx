@@ -1,4 +1,5 @@
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Testimonials = () => {
   const testimonials = [
@@ -50,15 +51,18 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-card">
+    <section className="py-24 md:py-32 bg-muted/30">
       <div className="container">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
-            Client Success Stories
+        <div className="max-w-3xl mb-16">
+          <span className="inline-flex items-center gap-2 uppercase text-xs font-bold tracking-[0.2em] text-primary mb-4">
+            Success Stories
+            <span className="w-8 h-[2px] bg-primary" />
           </span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Real Results from Real Businesses
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            Real Results from
+            <br />
+            <span className="text-gradient">Real Businesses</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             See how local businesses across California are transforming their sales with AI-powered lead generation.
@@ -66,50 +70,47 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonial Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
-          {testimonials.map((testimonial) => (
+        <div className="grid md:grid-cols-3 gap-6 mb-20">
+          {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.name}
-              className="p-6 rounded-2xl bg-background border border-border hover:shadow-card-hover transition-shadow"
+              className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-card-hover transition-all duration-300"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Quote Icon */}
-              <Quote className="w-8 h-8 text-primary/20 mb-4" />
-
-              {/* Quote */}
-              <p className="text-muted-foreground mb-6 italic leading-relaxed">
-                "{testimonial.quote}"
-              </p>
-
-              {/* Metric */}
-              <div className="p-4 rounded-xl bg-primary/5 mb-6">
-                <div className="font-display text-2xl font-bold text-primary">
+              {/* Metric - Featured at top */}
+              <div className="mb-6">
+                <div className="font-display text-4xl font-bold text-primary mb-1">
                   {testimonial.metric}
                 </div>
-                <div className="text-xs text-muted-foreground">
+                <div className="text-sm text-muted-foreground">
                   {testimonial.metricLabel}
                 </div>
               </div>
 
+              {/* Quote */}
+              <p className="text-foreground/80 mb-8 leading-relaxed">
+                "{testimonial.quote}"
+              </p>
+
               {/* Author */}
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-hero flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-sm">
+              <div className="flex items-center gap-4 pt-6 border-t border-border">
+                <div className="w-12 h-12 rounded-full bg-gradient-hero flex items-center justify-center shadow-button">
+                  <span className="text-white font-bold text-sm">
                     {testimonial.avatar}
                   </span>
                 </div>
-                <div>
+                <div className="flex-1">
                   <p className="font-semibold text-foreground">{testimonial.name}</p>
                   <p className="text-sm text-muted-foreground">
                     {testimonial.role}, {testimonial.company}
                   </p>
-                  <p className="text-xs text-muted-foreground">{testimonial.location}</p>
                 </div>
               </div>
 
               {/* Stars */}
               <div className="flex gap-1 mt-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                  <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                 ))}
               </div>
             </div>
@@ -117,44 +118,54 @@ const Testimonials = () => {
         </div>
 
         {/* Case Studies */}
-        <div className="max-w-4xl mx-auto">
-          <h3 className="font-display text-2xl font-bold text-foreground text-center mb-8">
-            Case Studies
-          </h3>
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-center justify-between mb-8">
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground">
+              Case Studies
+            </h3>
+            <Link 
+              to="/resources/case-studies" 
+              className="hidden sm:flex items-center gap-2 text-primary hover:gap-3 transition-all font-medium"
+            >
+              View All
+              <ArrowRight size={16} />
+            </Link>
+          </div>
+          
           <div className="grid md:grid-cols-2 gap-6">
             {caseStudies.map((study, index) => (
               <div
                 key={index}
-                className="p-6 rounded-2xl bg-secondary text-secondary-foreground"
+                className="group p-8 rounded-2xl bg-secondary text-secondary-foreground hover:shadow-card-hover transition-all duration-300"
               >
-                <span className="text-xs font-semibold uppercase tracking-wider text-primary mb-2 block">
+                <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-6">
                   {study.industry}
                 </span>
                 
-                <div className="space-y-4">
+                <div className="space-y-6">
                   <div>
-                    <p className="text-xs uppercase tracking-wider text-secondary-foreground/60 mb-1">
+                    <p className="text-xs uppercase tracking-wider text-secondary-foreground/50 mb-2">
                       Challenge
                     </p>
-                    <p className="text-sm text-secondary-foreground/80">
+                    <p className="text-secondary-foreground/80 leading-relaxed">
                       {study.challenge}
                     </p>
                   </div>
                   
                   <div>
-                    <p className="text-xs uppercase tracking-wider text-secondary-foreground/60 mb-1">
+                    <p className="text-xs uppercase tracking-wider text-secondary-foreground/50 mb-2">
                       Solution
                     </p>
-                    <p className="text-sm text-secondary-foreground/80">
+                    <p className="text-secondary-foreground/80 leading-relaxed">
                       {study.solution}
                     </p>
                   </div>
                   
-                  <div className="pt-4 border-t border-secondary-foreground/10">
-                    <p className="text-xs uppercase tracking-wider text-primary mb-1">
+                  <div className="pt-6 border-t border-secondary-foreground/10">
+                    <p className="text-xs uppercase tracking-wider text-primary mb-2">
                       Result
                     </p>
-                    <p className="text-sm font-medium text-secondary-foreground">
+                    <p className="font-medium text-secondary-foreground leading-relaxed">
                       {study.result}
                     </p>
                   </div>
@@ -162,6 +173,14 @@ const Testimonials = () => {
               </div>
             ))}
           </div>
+          
+          <Link 
+            to="/resources/case-studies" 
+            className="sm:hidden flex items-center justify-center gap-2 text-primary mt-6 font-medium"
+          >
+            View All Case Studies
+            <ArrowRight size={16} />
+          </Link>
         </div>
       </div>
     </section>
