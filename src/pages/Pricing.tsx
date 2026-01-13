@@ -58,7 +58,8 @@ const Pricing = () => {
       ],
       highlighted: true,
       cta: "Start Your 30-Day Launch",
-      slug: "launchpad-360"
+      slug: "launchpad-360",
+      isCustom: false
     },
     {
       icon: Search,
@@ -79,7 +80,28 @@ const Pricing = () => {
       ],
       highlighted: true,
       cta: "Learn More",
-      slug: "locallift"
+      slug: "locallift",
+      isCustom: false
+    },
+    {
+      icon: Brain,
+      name: "Custom AI Workflows",
+      tagline: "Enterprise Solutions",
+      description: "Fully customized AI automation solutions tailored to your unique business processes and industry requirements.",
+      features: [
+        "Custom workflow design",
+        "Multi-department integration",
+        "Advanced analytics & reporting",
+        "Dedicated success manager",
+        "Priority support SLA",
+        "Custom API integrations",
+        "On-premise deployment options",
+        "White-label solutions"
+      ],
+      highlighted: true,
+      cta: "Contact Us",
+      slug: "custom-ai-workflows",
+      isCustom: true
     }
   ];
 
@@ -154,7 +176,7 @@ const Pricing = () => {
       {/* Pricing Cards */}
       <section className="py-20 md:py-28">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {products.map((product) => (
               <div
                 key={product.name}
@@ -185,21 +207,32 @@ const Pricing = () => {
                 </p>
 
                 {/* Pricing */}
-                <div className="mb-6 pb-6 border-b border-primary/20">
-                  <div className="flex items-baseline gap-2 mb-1">
-                    <span className="font-display text-4xl font-bold">{product.setup}</span>
-                    <span className="text-sm opacity-70">one-time setup</span>
+                {product.isCustom ? (
+                  <div className="mb-6 pb-6 border-b border-primary/20">
+                    <div className="font-display text-3xl font-bold mb-2">
+                      Custom Pricing
+                    </div>
+                    <p className="text-sm opacity-70">
+                      Tailored solutions for your unique business needs
+                    </p>
                   </div>
-                  <p className="text-sm opacity-70 mb-3">
-                    then <span className="font-semibold">{product.monthly}/month</span> ongoing
-                  </p>
-                  <div className="flex items-center gap-2 text-primary">
-                    <DollarSign className="w-4 h-4" />
-                    <span className="text-sm font-semibold">
-                      Just {product.dailyCost}/day for a 24/7 teammate
-                    </span>
+                ) : (
+                  <div className="mb-6 pb-6 border-b border-primary/20">
+                    <div className="flex items-baseline gap-2 mb-1">
+                      <span className="font-display text-4xl font-bold">{product.setup}</span>
+                      <span className="text-sm opacity-70">one-time setup</span>
+                    </div>
+                    <p className="text-sm opacity-70 mb-3">
+                      then <span className="font-semibold">{product.monthly}/month</span> ongoing
+                    </p>
+                    <div className="flex items-center gap-2 text-primary">
+                      <DollarSign className="w-4 h-4" />
+                      <span className="text-sm font-semibold">
+                        Just {product.dailyCost}/day for a 24/7 teammate
+                      </span>
+                    </div>
                   </div>
-                </div>
+                )}
 
                 {/* Features */}
                 <ul className="space-y-3 mb-8">
@@ -223,7 +256,7 @@ const Pricing = () => {
                   className="w-full"
                   asChild
                 >
-                  <Link to={product.highlighted ? "/get-started" : `/products/${product.slug}`}>
+                  <Link to={product.isCustom ? "/contact" : (product.slug === "launchpad-360" ? "/get-started" : `/products/${product.slug}`)}>
                     {product.cta}
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
