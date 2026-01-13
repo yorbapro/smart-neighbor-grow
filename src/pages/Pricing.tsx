@@ -65,8 +65,9 @@ const Pricing = () => {
       name: "LocalLift™",
       tagline: "Local Dominance",
       description: "Own your local market with Answer Engine Optimization and map pack domination.",
-      pricing: "Performance-Based",
-      pricingNote: "Pay per booked meeting",
+      setup: "$1,500",
+      monthly: "$500",
+      dailyCost: "$16.60",
       features: [
         "Answer Engine Optimization",
         "Google Maps ranking",
@@ -76,7 +77,7 @@ const Pricing = () => {
         "24/7 AI inquiry handling",
         "Quarterly NAP verification"
       ],
-      highlighted: false,
+      highlighted: true,
       cta: "Learn More",
       slug: "locallift"
     }
@@ -163,13 +164,6 @@ const Pricing = () => {
                     : "bg-card border border-border hover:shadow-card-hover"
                 }`}
               >
-                {product.highlighted && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="px-4 py-1.5 rounded-full bg-gradient-hero text-primary-foreground text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
 
                 {/* Icon & Name */}
                 <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${
@@ -191,30 +185,21 @@ const Pricing = () => {
                 </p>
 
                 {/* Pricing */}
-                {product.setup ? (
-                  <div className="mb-6 pb-6 border-b border-primary/20">
-                    <div className="flex items-baseline gap-2 mb-1">
-                      <span className="font-display text-4xl font-bold">{product.setup}</span>
-                      <span className="text-sm opacity-70">one-time setup</span>
-                    </div>
-                    <p className="text-sm opacity-70 mb-3">
-                      then <span className="font-semibold">{product.monthly}/month</span> ongoing
-                    </p>
-                    <div className="flex items-center gap-2 text-primary">
-                      <DollarSign className="w-4 h-4" />
-                      <span className="text-sm font-semibold">
-                        Just {product.dailyCost}/day for a 24/7 teammate
-                      </span>
-                    </div>
+                <div className="mb-6 pb-6 border-b border-primary/20">
+                  <div className="flex items-baseline gap-2 mb-1">
+                    <span className="font-display text-4xl font-bold">{product.setup}</span>
+                    <span className="text-sm opacity-70">one-time setup</span>
                   </div>
-                ) : (
-                  <div className="mb-6 pb-6 border-b border-primary/20">
-                    <div className="font-display text-2xl font-bold mb-1">
-                      {product.pricing}
-                    </div>
-                    <p className="text-sm opacity-70">{product.pricingNote}</p>
+                  <p className="text-sm opacity-70 mb-3">
+                    then <span className="font-semibold">{product.monthly}/month</span> ongoing
+                  </p>
+                  <div className="flex items-center gap-2 text-primary">
+                    <DollarSign className="w-4 h-4" />
+                    <span className="text-sm font-semibold">
+                      Just {product.dailyCost}/day for a 24/7 teammate
+                    </span>
                   </div>
-                )}
+                </div>
 
                 {/* Features */}
                 <ul className="space-y-3 mb-8">
