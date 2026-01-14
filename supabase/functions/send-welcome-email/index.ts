@@ -12,6 +12,19 @@ interface WelcomeEmailRequest {
   industry: string;
 }
 
+// HTML escape function to prevent XSS
+const escapeHtml = (text: string): string => {
+  const map: Record<string, string> = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#x27;',
+    '/': '&#x2F;'
+  };
+  return text.replace(/[&<>"'/]/g, char => map[char]);
+};
+
 const handler = async (req: Request): Promise<Response> => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -29,6 +42,10 @@ const handler = async (req: Request): Promise<Response> => {
     if (!email) {
       throw new Error("Email is required");
     }
+
+    // Escape user-provided data
+    const safeBusinessName = escapeHtml(businessName || 'there');
+    const safeIndustry = escapeHtml(industry || 'business');
 
     const emailResponse = await resend.emails.send({
       from: "BrightLaunchIQ <onboarding@resend.dev>",
@@ -52,9 +69,9 @@ const handler = async (req: Request): Promise<Response> => {
     
     <!-- Content -->
     <div style="padding: 40px 30px;">
-      <p style="font-size: 18px; margin-bottom: 20px;">Hi ${businessName || "there"},</p>
+      <p style="font-size: 18px; margin-bottom: 20px;">Hi ${safeBusinessName},</p>
       
-      <p style="margin-bottom: 20px;">Thank you for choosing BrightLaunchIQ as your AI sales automation partner. We're excited to help you capture the leads you've been missing and grow your ${industry || "business"}.</p>
+      <p style="margin-bottom: 20px;">Thank you for choosing BrightLaunchIQ as your AI sales automation partner. We're excited to help you capture the leads you've been missing and grow your ${safeIndustry}.</p>
       
       <div style="background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 20px; margin: 30px 0; border-radius: 0 8px 8px 0;">
         <h2 style="color: #92400e; margin: 0 0 10px 0; font-size: 18px;">🎯 Your 14-Day Guarantee Is Active</h2>

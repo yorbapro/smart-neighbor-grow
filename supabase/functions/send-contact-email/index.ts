@@ -18,6 +18,19 @@ interface ContactEmailRequest {
   message: string;
 }
 
+// HTML escape function to prevent XSS
+const escapeHtml = (text: string): string => {
+  const map: Record<string, string> = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#x27;',
+    '/': '&#x2F;'
+  };
+  return text.replace(/[&<>"'/]/g, char => map[char]);
+};
+
 const handler = async (req: Request): Promise<Response> => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
@@ -27,12 +40,20 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const { name, email, phone, company, subject, message }: ContactEmailRequest = await req.json();
 
+    // Escape all user-provided data
+    const safeName = escapeHtml(name || '');
+    const safeEmail = escapeHtml(email || '');
+    const safePhone = phone ? escapeHtml(phone) : '';
+    const safeCompany = company ? escapeHtml(company) : '';
+    const safeSubject = escapeHtml(subject || '');
+    const safeMessage = escapeHtml(message || '');
+
     // Send notification email to the team
     const teamEmailResponse = await resend.emails.send({
       from: "BrightLaunchIQ <onboarding@resend.dev>",
       to: ["success@BrightLaunchIQ.com"],
       reply_to: email,
-      subject: `New Contact Form: ${subject}`,
+      subject: `New Contact Form: ${safeSubject}`,
       html: `
         <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background: linear-gradient(135deg, #4F46E5, #7C3AED); padding: 32px; border-radius: 12px 12px 0 0;">
@@ -45,33 +66,33 @@ const handler = async (req: Request): Promise<Response> => {
             <table style="width: 100%; border-collapse: collapse;">
               <tr>
                 <td style="padding: 8px 0; color: #6b7280; width: 120px;"><strong>Name:</strong></td>
-                <td style="padding: 8px 0; color: #111827;">${name}</td>
+                <td style="padding: 8px 0; color: #111827;">${safeName}</td>
               </tr>
               <tr>
                 <td style="padding: 8px 0; color: #6b7280;"><strong>Email:</strong></td>
-                <td style="padding: 8px 0; color: #111827;"><a href="mailto:${email}" style="color: #4F46E5;">${email}</a></td>
+                <td style="padding: 8px 0; color: #111827;"><a href="mailto:${safeEmail}" style="color: #4F46E5;">${safeEmail}</a></td>
               </tr>
-              ${phone ? `
+              ${safePhone ? `
               <tr>
                 <td style="padding: 8px 0; color: #6b7280;"><strong>Phone:</strong></td>
-                <td style="padding: 8px 0; color: #111827;"><a href="tel:${phone}" style="color: #4F46E5;">${phone}</a></td>
+                <td style="padding: 8px 0; color: #111827;"><a href="tel:${safePhone}" style="color: #4F46E5;">${safePhone}</a></td>
               </tr>
               ` : ''}
-              ${company ? `
+              ${safeCompany ? `
               <tr>
                 <td style="padding: 8px 0; color: #6b7280;"><strong>Company:</strong></td>
-                <td style="padding: 8px 0; color: #111827;">${company}</td>
+                <td style="padding: 8px 0; color: #111827;">${safeCompany}</td>
               </tr>
               ` : ''}
               <tr>
                 <td style="padding: 8px 0; color: #6b7280;"><strong>Subject:</strong></td>
-                <td style="padding: 8px 0; color: #111827;">${subject}</td>
+                <td style="padding: 8px 0; color: #111827;">${safeSubject}</td>
               </tr>
             </table>
             
             <h3 style="color: #111827; margin-top: 24px;">Message</h3>
             <div style="background: white; padding: 16px; border-radius: 8px; border: 1px solid #e5e7eb;">
-              <p style="color: #374151; margin: 0; white-space: pre-wrap;">${message}</p>
+              <p style="color: #374151; margin: 0; white-space: pre-wrap;">${safeMessage}</p>
             </div>
             
             <p style="color: #6b7280; font-size: 12px; margin-top: 24px;">
@@ -90,7 +111,7 @@ const handler = async (req: Request): Promise<Response> => {
       html: `
         <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background: linear-gradient(135deg, #4F46E5, #7C3AED); padding: 32px; border-radius: 12px 12px 0 0;">
-            <h1 style="color: white; margin: 0; font-size: 24px;">Thanks for reaching out, ${name}!</h1>
+            <h1 style="color: white; margin: 0; font-size: 24px;">Thanks for reaching out, ${safeName}!</h1>
           </div>
           
           <div style="background: #f9fafb; padding: 32px; border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 12px 12px;">

@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
+import DOMPurify from "dompurify";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -141,13 +142,14 @@ const AdminEmailTemplates = () => {
     email: "john@smithplumbing.com",
   };
 
-  const getPreviewHtml = () => {
+  const getPreviewHtml = useMemo(() => {
     let html = editedBody;
     Object.entries(sampleData).forEach(([key, value]) => {
       html = html.replace(new RegExp(`\\{\\{${key}\\}\\}`, 'g'), value);
     });
-    return html;
-  };
+    // Sanitize HTML to prevent XSS
+    return DOMPurify.sanitize(html);
+  }, [editedBody]);
 
   const getPreviewSubject = () => {
     let subject = editedSubject;
@@ -297,7 +299,7 @@ const AdminEmailTemplates = () => {
                         <div className="border border-border rounded-lg bg-white min-h-[400px] overflow-auto">
                           <div 
                             className="p-4"
-                            dangerouslySetInnerHTML={{ __html: getPreviewHtml() }}
+                            dangerouslySetInnerHTML={{ __html: getPreviewHtml }}
                           />
                         </div>
                       )}
