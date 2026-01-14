@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Rocket, Search, ArrowRight, Check } from "lucide-react";
+import { Rocket, Search, Cog, ArrowRight, Check } from "lucide-react";
 
 const Services = () => {
   const services = [
@@ -20,7 +20,7 @@ const Services = () => {
         "CRM integration (Salesforce/HubSpot)",
       ],
       slug: "launchpad-360",
-      featured: true,
+      featured: false,
     },
     {
       icon: Search,
@@ -39,6 +39,25 @@ const Services = () => {
       ],
       slug: "locallift",
       featured: false,
+    },
+    {
+      icon: Cog,
+      name: "Custom AI Workflows",
+      tagline: "Enterprise-Grade Automation Solutions",
+      description: "Completely bespoke AI workflow automation designed for your unique business processes. From document processing to complex decision engines, we architect solutions that transform operations.",
+      features: [
+        "Custom AI model integration",
+        "End-to-end workflow automation",
+        "Legacy system modernization",
+        "Document processing & extraction",
+        "Predictive analytics dashboards",
+        "API integrations & data pipelines",
+        "Dedicated solution architect",
+        "Ongoing optimization & support",
+      ],
+      slug: "custom-ai-workflows",
+      featured: false,
+      isEnterprise: true,
     },
   ];
 
@@ -65,55 +84,25 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {services.map((service) => (
             <div
               key={service.name}
-              className={`relative rounded-2xl p-8 transition-all duration-300 ${
-                service.featured
-                  ? "bg-secondary text-secondary-foreground shadow-card-hover scale-[1.02] lg:scale-105"
-                  : "bg-card border border-border hover:shadow-card-hover hover:border-primary/20"
-              }`}
+              className={`relative rounded-2xl p-8 transition-all duration-300 bg-card border border-border hover:shadow-card-hover hover:border-primary/20`}
             >
-              {service.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="px-4 py-1.5 rounded-full bg-gradient-hero text-primary-foreground text-sm font-semibold">
-                    Most Popular
-                  </span>
-                </div>
-              )}
-
               {/* Icon */}
-              <div
-                className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${
-                  service.featured ? "bg-primary/20" : "bg-primary/10"
-                }`}
-              >
-                <service.icon
-                  className={`w-7 h-7 ${
-                    service.featured ? "text-primary" : "text-primary"
-                  }`}
-                />
+              <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-primary/10">
+                <service.icon className="w-7 h-7 text-primary" />
               </div>
 
               {/* Content */}
               <h3 className="font-display text-2xl font-bold mb-2">
                 {service.name}
               </h3>
-              <p
-                className={`text-sm font-medium mb-4 ${
-                  service.featured ? "text-primary" : "text-primary"
-                }`}
-              >
+              <p className="text-sm font-medium mb-4 text-primary">
                 {service.tagline}
               </p>
-              <p
-                className={`mb-6 ${
-                  service.featured
-                    ? "text-secondary-foreground/80"
-                    : "text-muted-foreground"
-                }`}
-              >
+              <p className="mb-6 text-muted-foreground">
                 {service.description}
               </p>
 
@@ -121,18 +110,8 @@ const Services = () => {
               <ul className="space-y-3 mb-8">
                 {service.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
-                    <Check
-                      className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
-                        service.featured ? "text-primary" : "text-accent"
-                      }`}
-                    />
-                    <span
-                      className={`text-sm ${
-                        service.featured
-                          ? "text-secondary-foreground/90"
-                          : "text-muted-foreground"
-                      }`}
-                    >
+                    <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-accent" />
+                    <span className="text-sm text-muted-foreground">
                       {feature}
                     </span>
                   </li>
@@ -141,12 +120,12 @@ const Services = () => {
 
               {/* CTA */}
               <Button
-                variant={service.featured ? "hero" : "outline"}
+                variant="outline"
                 className="w-full"
                 asChild
               >
                 <Link to={`/products/${service.slug}`}>
-                  {service.featured ? "Start Your 30-Day Launch" : "Learn More"}
+                  {service.isEnterprise ? "Contact Us" : "Learn More"}
                   <ArrowRight size={16} />
                 </Link>
               </Button>
