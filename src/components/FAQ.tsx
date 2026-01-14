@@ -1,3 +1,6 @@
+import { HelpCircle, MessageCircle, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import {
   Accordion,
   AccordionContent,
@@ -50,16 +53,26 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 md:py-28 bg-gradient-subtle">
-      <div className="container">
+    <section id="faq" className="py-20 md:py-28 relative overflow-hidden">
+      {/* Dark gradient background */}
+      <div className="absolute inset-0 bg-secondary" />
+      
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
+      
+      <div className="container relative z-10">
+        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
-            Frequently Asked Questions
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
+            <HelpCircle className="w-4 h-4" />
+            Got Questions?
           </span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            AI Sales Automation: Your Top Questions Answered
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-foreground mb-6">
+            AI Sales Automation
+            <span className="text-gradient block mt-2">Your Top Questions Answered</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-secondary-foreground/70 leading-relaxed">
             Simple answers for local business owners exploring AI lead generation and sales implementation.
           </p>
         </div>
@@ -70,17 +83,58 @@ const FAQ = () => {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-card rounded-xl border border-border px-6 data-[state=open]:shadow-card"
+                className="group bg-secondary-foreground/5 backdrop-blur-sm rounded-2xl border border-primary/10 px-6 overflow-hidden transition-all duration-300 data-[state=open]:bg-secondary-foreground/10 data-[state=open]:border-primary/20 data-[state=open]:shadow-lg"
               >
-                <AccordionTrigger className="text-left font-display font-semibold text-foreground hover:text-primary py-5">
-                  {faq.question}
+                <AccordionTrigger className="text-left font-display font-semibold text-secondary-foreground hover:text-primary py-6 text-lg [&[data-state=open]>svg]:text-primary">
+                  <span className="flex items-start gap-4">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-sm font-bold group-data-[state=open]:bg-primary group-data-[state=open]:text-primary-foreground transition-colors">
+                      {index + 1}
+                    </span>
+                    <span className="pt-1">{faq.question}</span>
+                  </span>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
+                <AccordionContent className="text-secondary-foreground/80 pb-6 pl-12 leading-relaxed text-base">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
+        </div>
+
+        {/* CTA Banner */}
+        <div className="mt-16 max-w-3xl mx-auto">
+          <div className="relative p-8 md:p-10 rounded-3xl bg-gradient-hero text-primary-foreground text-center overflow-hidden">
+            {/* Decorative glow */}
+            <div className="absolute inset-0 opacity-20">
+              <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-white rounded-full blur-3xl" />
+              <div className="absolute bottom-1/3 right-1/3 w-24 h-24 bg-white rounded-full blur-2xl" />
+            </div>
+            
+            <div className="relative z-10">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <MessageCircle className="w-8 h-8" />
+                <h3 className="font-display text-xl md:text-2xl font-bold">
+                  Still Have Questions?
+                </h3>
+              </div>
+              <p className="text-primary-foreground/90 mb-6 max-w-lg mx-auto">
+                Our team is happy to answer any questions about how AI can transform your sales process.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button variant="secondary" size="lg" asChild className="bg-white text-primary hover:bg-white/90">
+                  <Link to="/contact">
+                    Contact Us
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </Button>
+                <Button variant="ghost" size="lg" asChild className="text-primary-foreground border border-primary-foreground/20 hover:bg-white/10">
+                  <a href="tel:1-800-LAUNCH-IQ">
+                    Call 1-800-LAUNCH-IQ
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
