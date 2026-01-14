@@ -20,13 +20,13 @@ import {
 
 const CustomAIWorkflows = () => {
   useEffect(() => {
-    document.title = "Custom AI Workflow Automation | BrightLaunchIQ";
+    document.title = "OmniLogic™ - Custom AI Workflow Automation | BrightLaunchIQ";
 
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Fully customized AI automation solutions tailored to your unique business processes. Enterprise-grade workflows with dedicated support and custom integrations."
+        "OmniLogic™ delivers fully customized AI automation solutions tailored to your unique business processes. Enterprise-grade workflows with dedicated support and custom integrations."
       );
     }
 
@@ -119,8 +119,8 @@ const CustomAIWorkflows = () => {
               </div>
 
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-                Custom AI Workflow<br />
-                <span className="text-gradient">Automation</span>
+                <span className="text-gradient">OmniLogic™</span><br />
+                Custom AI Workflow Automation
               </h1>
 
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">

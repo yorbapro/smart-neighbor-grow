@@ -85,8 +85,8 @@ const Pricing = () => {
     },
     {
       icon: Brain,
-      name: "Custom AI Workflows",
-      tagline: "Enterprise Solutions",
+      name: "OmniLogic™",
+      tagline: "Custom AI Workflow Automation",
       description: "Fully customized AI automation solutions tailored to your unique business processes and industry requirements.",
       features: [
         "Custom workflow design",
