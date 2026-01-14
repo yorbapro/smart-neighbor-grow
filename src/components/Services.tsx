@@ -42,8 +42,8 @@ const Services = () => {
     },
     {
       icon: Cog,
-      name: "Custom AI Workflows",
-      tagline: "Enterprise-Grade Automation Solutions",
+      name: "OmniLogic™",
+      tagline: "Custom AI Workflow Automation",
       description: "Completely bespoke AI workflow automation designed for your unique business processes. From document processing to complex decision engines, we architect solutions that transform operations.",
       features: [
         "Custom AI model integration",

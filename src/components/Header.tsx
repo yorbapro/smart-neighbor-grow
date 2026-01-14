@@ -24,7 +24,7 @@ const Header = () => {
   const solutionLinks = [
     { label: "LaunchPad 360™", href: "/products/launchpad-360" },
     { label: "LocalLift™", href: "/products/locallift" },
-    { label: "Custom AI Workflows", href: "/products/custom-ai-workflows" },
+    { label: "OmniLogic™", href: "/products/custom-ai-workflows" },
   ];
 
   const resourceLinks = [
