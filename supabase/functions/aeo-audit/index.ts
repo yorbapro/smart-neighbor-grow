@@ -17,6 +17,19 @@ interface AuditRequest {
   services: string;
 }
 
+// HTML escape function to prevent XSS
+const escapeHtml = (text: string): string => {
+  const map: Record<string, string> = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#x27;',
+    '/': '&#x2F;'
+  };
+  return text.replace(/[&<>"'/]/g, char => map[char]);
+};
+
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -151,6 +164,13 @@ Generate an AEO audit with the following structure - return ONLY valid JSON, no 
       }
     }
 
+    // Escape user-provided data for email
+    const safeBusinessName = escapeHtml(businessName);
+    const safeCity = escapeHtml(city);
+    const safeState = escapeHtml(state);
+    const safeIndustry = escapeHtml(industry);
+    const safeServices = escapeHtml(services);
+
     // Send email with results
     const resendApiKey = Deno.env.get("RESEND_API_KEY");
     if (resendApiKey) {
@@ -158,26 +178,18 @@ Generate an AEO audit with the following structure - return ONLY valid JSON, no 
       
       const platformRows = auditResult.platforms.map((p: any) => 
         `<tr>
-          <td style="padding: 12px; border-bottom: 1px solid #eee;">${p.name}</td>
-          <td style="padding: 12px; border-bottom: 1px solid #eee; text-align: center; font-weight: bold; color: ${p.score >= 50 ? '#10b981' : '#ef4444'};">${p.score}/100</td>
-          <td style="padding: 12px; border-bottom: 1px solid #eee; text-transform: capitalize;">${p.status}</td>
+          <td style="padding: 12px; border-bottom: 1px solid #eee;">${escapeHtml(p.name)}</td>
+          <td style="padding: 12px; border-bottom: 1px solid #eee; text-align: center; font-weight: bold; color: ${p.score >= 50 ? '#10b981' : '#ef4444'};">${escapeHtml(String(p.score))}/100</td>
+          <td style="padding: 12px; border-bottom: 1px solid #eee; text-transform: capitalize;">${escapeHtml(p.status)}</td>
         </tr>`
       ).join('');
 
-      const recommendationRows = auditResult.recommendations.map((r: any) =>
-        `<li style="margin-bottom: 12px;">
-          <span style="display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; background: ${r.priority === 'high' ? '#fee2e2' : '#fef3c7'}; color: ${r.priority === 'high' ? '#dc2626' : '#d97706'}; text-transform: uppercase; margin-right: 8px;">${r.priority}</span>
-          <strong>${r.action}</strong>
-          <br><span style="color: #666; font-size: 14px;">Expected impact: ${r.impact}</span>
-        </li>`
-      ).join('');
-
       const strengthsList = auditResult.strengths.map((s: string) =>
-        `<li style="margin-bottom: 8px; color: #059669;">✓ ${s}</li>`
+        `<li style="margin-bottom: 8px; color: #059669;">✓ ${escapeHtml(s)}</li>`
       ).join('');
 
       const weaknessesList = auditResult.weaknesses.map((w: string) =>
-        `<li style="margin-bottom: 8px; color: #dc2626;">✗ ${w}</li>`
+        `<li style="margin-bottom: 8px; color: #dc2626;">✗ ${escapeHtml(w)}</li>`
       ).join('');
 
       const emailHtml = `
@@ -193,17 +205,17 @@ Generate an AEO audit with the following structure - return ONLY valid JSON, no 
     <div style="text-align: center; margin-bottom: 24px;">
       <div style="display: inline-block; background: linear-gradient(135deg, #f97316, #ea580c); width: 56px; height: 56px; border-radius: 14px; line-height: 56px; color: white; font-weight: bold; font-size: 24px;">B</div>
       <h1 style="margin: 16px 0 8px; color: #1e3a5f; font-size: 28px;">Your Complete AEO Audit</h1>
-      <p style="color: #666; margin: 0; font-size: 16px;">AI Search Visibility Report for <strong>${businessName}</strong></p>
-      <p style="color: #999; margin: 4px 0 0; font-size: 14px;">${city}, ${state} • ${industry}</p>
+      <p style="color: #666; margin: 0; font-size: 16px;">AI Search Visibility Report for <strong>${safeBusinessName}</strong></p>
+      <p style="color: #999; margin: 4px 0 0; font-size: 14px;">${safeCity}, ${safeState} • ${safeIndustry}</p>
     </div>
 
     <!-- Main Score -->
     <div style="text-align: center; background: linear-gradient(135deg, #1e3a5f, #2d4a6f); border-radius: 16px; padding: 32px; margin-bottom: 24px; color: white;">
-      <div style="font-size: 72px; font-weight: bold; line-height: 1;">${auditResult.overallScore}</div>
+      <div style="font-size: 72px; font-weight: bold; line-height: 1;">${escapeHtml(String(auditResult.overallScore))}</div>
       <div style="font-size: 18px; opacity: 0.8;">out of 100</div>
       <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.2);">
         <span style="font-size: 14px; opacity: 0.7;">Your potential with optimization:</span>
-        <span style="display: block; font-size: 32px; font-weight: bold; color: #f97316; margin-top: 4px;">${auditResult.potentialScore}/100</span>
+        <span style="display: block; font-size: 32px; font-weight: bold; color: #f97316; margin-top: 4px;">${escapeHtml(String(auditResult.potentialScore))}/100</span>
       </div>
     </div>
 
@@ -211,7 +223,7 @@ Generate an AEO audit with the following structure - return ONLY valid JSON, no 
     <div style="background: #fef3c7; border-left: 4px solid #f97316; padding: 20px; margin-bottom: 24px; border-radius: 0 8px 8px 0;">
       <h3 style="color: #92400e; margin: 0 0 8px; font-size: 16px;">⚠️ Why This Matters</h3>
       <p style="color: #78350f; margin: 0; font-size: 14px; line-height: 1.6;">
-        <strong>40% of local searches</strong> now go through AI assistants like ChatGPT, Gemini, and voice search. If your business isn't optimized for these platforms, you're invisible to a growing segment of potential customers searching for "${services}" in ${city}.
+        <strong>40% of local searches</strong> now go through AI assistants like ChatGPT, Gemini, and voice search. If your business isn't optimized for these platforms, you're invisible to a growing segment of potential customers searching for "${safeServices}" in ${safeCity}.
       </p>
     </div>
 
@@ -249,18 +261,18 @@ Generate an AEO audit with the following structure - return ONLY valid JSON, no 
     <!-- Competitor Insight -->
     <div style="background: #f0f9ff; border-radius: 12px; padding: 20px; margin-bottom: 24px;">
       <h3 style="color: #0c4a6e; margin: 0 0 8px; font-size: 16px;">🔍 Competitor Intelligence</h3>
-      <p style="color: #0369a1; margin: 0; font-size: 14px; line-height: 1.6;">${auditResult.competitorInsight}</p>
+      <p style="color: #0369a1; margin: 0; font-size: 14px; line-height: 1.6;">${escapeHtml(auditResult.competitorInsight)}</p>
     </div>
 
     <!-- Priority Recommendations -->
     <h2 style="color: #1e3a5f; font-size: 20px; margin: 28px 0 16px; border-bottom: 2px solid #f97316; padding-bottom: 8px;">🎯 Your Action Plan</h2>
-    <p style="color: #666; margin: 0 0 16px; font-size: 14px;">Implement these recommendations to reach your potential score of <strong>${auditResult.potentialScore}/100</strong>:</p>
+    <p style="color: #666; margin: 0 0 16px; font-size: 14px;">Implement these recommendations to reach your potential score of <strong>${escapeHtml(String(auditResult.potentialScore))}/100</strong>:</p>
     <ol style="padding-left: 20px; margin-bottom: 24px;">
-      ${auditResult.recommendations.map((r: any, i: number) =>
+      ${auditResult.recommendations.map((r: any) =>
         `<li style="margin-bottom: 16px; font-size: 14px;">
-          <span style="display: inline-block; padding: 3px 10px; border-radius: 4px; font-size: 11px; font-weight: bold; background: ${r.priority === 'high' ? '#fee2e2' : '#fef3c7'}; color: ${r.priority === 'high' ? '#dc2626' : '#d97706'}; text-transform: uppercase; margin-right: 8px;">${r.priority}</span>
-          <strong style="color: #1e3a5f;">${r.action}</strong>
-          <br><span style="color: #666;">→ ${r.impact}</span>
+          <span style="display: inline-block; padding: 3px 10px; border-radius: 4px; font-size: 11px; font-weight: bold; background: ${r.priority === 'high' ? '#fee2e2' : '#fef3c7'}; color: ${r.priority === 'high' ? '#dc2626' : '#d97706'}; text-transform: uppercase; margin-right: 8px;">${escapeHtml(r.priority)}</span>
+          <strong style="color: #1e3a5f;">${escapeHtml(r.action)}</strong>
+          <br><span style="color: #666;">→ ${escapeHtml(r.impact)}</span>
         </li>`
       ).join('')}
     </ol>
@@ -323,7 +335,7 @@ Generate an AEO audit with the following structure - return ONLY valid JSON, no 
         const emailResponse = await resend.emails.send({
           from: "BrightLaunchIQ <onboarding@resend.dev>",
           to: [email],
-          subject: `Your AEO Score: ${auditResult.overallScore}/100 - ${businessName}`,
+          subject: `Your AEO Score: ${auditResult.overallScore}/100 - ${safeBusinessName}`,
           html: emailHtml,
         });
         console.log("Email sent:", emailResponse);

@@ -38,6 +38,19 @@ const TEMPLATE_KEYS = {
   third: "followup_day_7",
 };
 
+// HTML escape function to prevent XSS
+const escapeHtml = (text: string): string => {
+  const map: Record<string, string> = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#x27;',
+    '/': '&#x2F;'
+  };
+  return text.replace(/[&<>"'/]/g, char => map[char]);
+};
+
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -121,13 +134,13 @@ serve(async (req) => {
         continue;
       }
 
-      // Replace variables in template
+      // Replace variables in template with escaped values
       const variables: Record<string, string> = {
-        business_name: lead.business_name,
-        overall_score: String(lead.overall_score || 0),
-        potential_score: String(lead.potential_score || 0),
-        score_improvement: String((lead.potential_score || 0) - (lead.overall_score || 0)),
-        email: lead.email,
+        business_name: escapeHtml(lead.business_name || ''),
+        overall_score: escapeHtml(String(lead.overall_score || 0)),
+        potential_score: escapeHtml(String(lead.potential_score || 0)),
+        score_improvement: escapeHtml(String((lead.potential_score || 0) - (lead.overall_score || 0))),
+        email: escapeHtml(lead.email || ''),
       };
 
       let subject = template.subject;
