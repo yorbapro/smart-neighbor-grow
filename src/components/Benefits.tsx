@@ -1,60 +1,95 @@
-import { Users, Target, Zap, Shield, Heart, Brain } from "lucide-react";
+import { Users, Target, Zap, Shield, Heart, Brain, Clock, TrendingUp, Headphones } from "lucide-react";
 
 const Benefits = () => {
   const benefits = [
     {
       icon: Users,
       title: "Human-in-the-Loop",
-      description: "Our expert consultants guide and supervise every AI system, so your customer touchpoints always feel real and never robotic. We build your sales engine around your story and values.",
+      description: "Every AI decision is supervised by our expert consultants. Your customers get instant responses that still feel personal, authentic, and on-brand.",
       highlight: "Expert Supervised AI",
-      stat: "100% Verified",
+      stat: "100% Human Verified",
     },
     {
       icon: Target,
-      title: "ROI Focus",
-      description: "We only implement tools that help you grow revenue or save time—your results matter most. See clear results in less time with systems that just work.",
-      highlight: "Results-Driven Approach",
+      title: "ROI-First Approach",
+      description: "We only deploy tools that directly grow revenue or save time. No bloated tech stacks—just systems that pay for themselves within 30 days.",
+      highlight: "Results-Driven Strategy",
       stat: "30-Day Guarantee",
     },
     {
       icon: Brain,
-      title: "AI Plus Experts",
-      description: "Every automation and follow-up is overseen by people who make sure BrightLaunchIQ matches your brand's voice and delivers trust. Technology that listens and responds like a trusted member of your team.",
+      title: "AI + Local Expertise",
+      description: "Cutting-edge automation guided by people who understand the Central Valley market. Technology that adapts to your community, not the other way around.",
       highlight: "Human-Guided Automation",
-      stat: "$16.60/day",
+      stat: "Just $16.60/day",
     },
   ];
 
+  const stats = [
+    { value: "60", unit: "sec", label: "Average Response Time" },
+    { value: "24/7", unit: "", label: "Lead Coverage" },
+    { value: "500+", unit: "", label: "Leads Per Launch" },
+    { value: "14", unit: "days", label: "To First Meeting" },
+  ];
+
   return (
-    <section className="py-20 md:py-28 bg-card">
-      <div className="container">
+    <section className="py-20 md:py-28 bg-background relative overflow-hidden">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 opacity-[0.02]">
+        <div className="absolute inset-0" style={{ 
+          backgroundImage: `radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)`,
+          backgroundSize: '40px 40px'
+        }} />
+      </div>
+
+      <div className="container relative z-10">
+        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
+            <Heart className="w-4 h-4" />
             The Human Touch in an AI World
           </span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Supercharge Your Sales with Local Knowledge and AI
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            AI That Actually Understands
+            <span className="text-gradient block mt-2">Local Business</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
-            We believe small business owners deserve world-class sales automation, without sacrificing what makes their company special. Get connected to a real expert who understands your area.
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            We believe small business owners deserve enterprise-grade sales automation without sacrificing 
+            what makes their company special. Get AI that works for you, guided by experts who know your market.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* Stats Row */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+          {stats.map((stat) => (
+            <div 
+              key={stat.label}
+              className="text-center p-6 rounded-2xl bg-card border border-border"
+            >
+              <div className="flex items-baseline justify-center gap-1 mb-2">
+                <span className="font-display text-4xl md:text-5xl font-bold text-gradient">{stat.value}</span>
+                {stat.unit && <span className="text-lg text-primary font-semibold">{stat.unit}</span>}
+              </div>
+              <p className="text-sm text-muted-foreground">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Benefits Cards */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {benefits.map((benefit, index) => (
             <div
               key={benefit.title}
-              className="group relative p-8 rounded-2xl bg-background border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-card-hover"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="group relative p-8 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-card-hover"
             >
               {/* Stat badge */}
-              <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-bold">
+              <div className="absolute top-4 right-4 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold">
                 {benefit.stat}
               </div>
 
               {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-gradient-hero flex items-center justify-center mb-6 group-hover:shadow-glow transition-shadow duration-300">
-                <benefit.icon className="w-7 h-7 text-primary-foreground" />
+              <div className="w-16 h-16 rounded-2xl bg-gradient-hero flex items-center justify-center mb-6 group-hover:shadow-glow transition-all duration-300 group-hover:scale-105">
+                <benefit.icon className="w-8 h-8 text-primary-foreground" />
               </div>
 
               {/* Content */}
@@ -74,42 +109,82 @@ const Benefits = () => {
           ))}
         </div>
 
-        {/* Value Prop Banner */}
-        <div className="mt-16 p-8 rounded-2xl bg-gradient-dark text-secondary-foreground">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+        {/* Cost Comparison Banner */}
+        <div className="relative p-8 md:p-12 rounded-3xl overflow-hidden bg-secondary text-secondary-foreground mb-8">
+          {/* Decorative elements */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent/10 rounded-full blur-3xl" />
+          
+          <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <Heart className="w-8 h-8 text-primary" />
-                <h3 className="font-display text-2xl font-bold">Made for Local Business</h3>
+                <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
+                  <TrendingUp className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-display text-2xl md:text-3xl font-bold">The Math of Success</h3>
               </div>
-              <p className="text-secondary-foreground/80">
-                Our tools are made for small local businesses—so you get the strength of a big company without hiring a huge staff. We focus on what matters most: more sales, less stress, and simple systems that just work.
+              <p className="text-secondary-foreground/80 text-lg leading-relaxed mb-6">
+                Why pay $80,000+ for a full-time SDR when you can get a 24/7 digital teammate 
+                that never takes sick days, never needs training, and responds in under 60 seconds?
               </p>
-            </div>
-            <div className="flex items-center justify-center gap-8">
-              <div className="text-center">
-                <p className="font-display text-3xl font-bold text-primary">$16.60</p>
-                <p className="text-sm text-secondary-foreground/70">per day</p>
+              <div className="flex flex-wrap gap-4">
+                <div className="flex items-center gap-2 text-sm">
+                  <Clock className="w-4 h-4 text-primary" />
+                  <span>168 hrs/week coverage</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Zap className="w-4 h-4 text-primary" />
+                  <span>Instant lead response</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Headphones className="w-4 h-4 text-primary" />
+                  <span>Human oversight included</span>
+                </div>
               </div>
-              <div className="text-secondary-foreground/30 text-4xl">vs</div>
-              <div className="text-center">
-                <p className="font-display text-3xl font-bold text-destructive">$80k+</p>
-                <p className="text-sm text-secondary-foreground/70">per year hire</p>
+            </div>
+            
+            <div className="flex items-center justify-center">
+              <div className="flex items-center gap-6 md:gap-8">
+                <div className="text-center p-6 rounded-2xl bg-primary/10 border border-primary/20">
+                  <p className="font-display text-4xl md:text-5xl font-bold text-primary">$16.60</p>
+                  <p className="text-sm text-secondary-foreground/70 mt-1">per day</p>
+                  <p className="text-xs text-primary font-semibold mt-2">AI Teammate</p>
+                </div>
+                <div className="text-secondary-foreground/40 text-3xl font-light">vs</div>
+                <div className="text-center p-6 rounded-2xl bg-destructive/10 border border-destructive/20">
+                  <p className="font-display text-4xl md:text-5xl font-bold text-destructive">$308</p>
+                  <p className="text-sm text-secondary-foreground/70 mt-1">per day</p>
+                  <p className="text-xs text-destructive font-semibold mt-2">Human SDR</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Guarantee Banner */}
-        <div className="mt-8 p-8 rounded-2xl bg-secondary text-secondary-foreground text-center">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Shield className="w-8 h-8 text-primary" />
-            <h3 className="font-display text-2xl font-bold">The 14-Day Speed to Lead Guarantee</h3>
+        <div className="relative p-8 md:p-10 rounded-3xl bg-gradient-hero text-primary-foreground text-center overflow-hidden">
+          {/* Animated background elements */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-white rounded-full blur-3xl animate-pulse" />
+            <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-white rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }} />
           </div>
-          <p className="max-w-2xl mx-auto text-secondary-foreground/80">
-            We move your business from "Zero" to "Automated Meetings" in 14 days. If we don't 
-            significantly increase your lead response rate within 30 days, <strong className="text-primary">we work for free until we do.</strong>
-          </p>
+          
+          <div className="relative z-10">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <Shield className="w-10 h-10" />
+              <h3 className="font-display text-2xl md:text-3xl font-bold">
+                The 14-Day Speed to Lead Guarantee
+              </h3>
+            </div>
+            <p className="max-w-2xl mx-auto text-primary-foreground/90 text-lg leading-relaxed">
+              We take you from "Zero" to "Automated Meetings" in just 14 days. If we don't 
+              significantly boost your lead response rate within 30 days,{" "}
+              <strong className="text-white">we work for free until we do.</strong>
+            </p>
+            <p className="mt-4 text-sm text-primary-foreground/70">
+              No long-term contracts. No hidden fees. Just results.
+            </p>
+          </div>
         </div>
       </div>
     </section>
