@@ -1,5 +1,8 @@
 import { Star, Quote, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import contractorPhoto from "@/assets/photos/contractor-professional.jpg";
+import lawyerPhoto from "@/assets/photos/lawyer-professional.jpg";
+import logisticsPhoto from "@/assets/photos/logistics-manager.jpg";
 
 const Testimonials = () => {
   const testimonials = [
@@ -11,7 +14,7 @@ const Testimonials = () => {
       quote: "We went from missing 60% of after-hours leads to capturing every single one. LaunchPad 360™ paid for itself in the first month.",
       metric: "340%",
       metricLabel: "Lead Capture Increase",
-      avatar: "MC",
+      photo: contractorPhoto,
     },
     {
       name: "Sarah Rodriguez",
@@ -21,7 +24,7 @@ const Testimonials = () => {
       quote: "The AI responds to inquiries in under 60 seconds. Our competitors can't match that speed. We're now the first call back, every time.",
       metric: "< 60s",
       metricLabel: "Average Response Time",
-      avatar: "SR",
+      photo: lawyerPhoto,
     },
     {
       name: "David Thompson",
@@ -31,7 +34,7 @@ const Testimonials = () => {
       quote: "I was skeptical about AI, but the human oversight made all the difference. Every message sounds like us, not a robot.",
       metric: "78%",
       metricLabel: "More Qualified Leads",
-      avatar: "DT",
+      photo: logisticsPhoto,
     },
   ];
 
@@ -69,7 +72,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        {/* Testimonial Cards */}
+        {/* Testimonial Cards with Photos */}
         <div className="grid md:grid-cols-3 gap-6 mb-20">
           {testimonials.map((testimonial, index) => (
             <div
@@ -92,12 +95,14 @@ const Testimonials = () => {
                 "{testimonial.quote}"
               </p>
 
-              {/* Author */}
+              {/* Author with Photo */}
               <div className="flex items-center gap-4 pt-6 border-t border-border">
-                <div className="w-12 h-12 rounded-full bg-gradient-hero flex items-center justify-center shadow-button">
-                  <span className="text-white font-bold text-sm">
-                    {testimonial.avatar}
-                  </span>
+                <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-primary/20">
+                  <img 
+                    src={testimonial.photo} 
+                    alt={`${testimonial.name}, ${testimonial.role} at ${testimonial.company}`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="flex-1">
                   <p className="font-semibold text-foreground">{testimonial.name}</p>
@@ -115,6 +120,45 @@ const Testimonials = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Results Infographic */}
+        <div className="mb-20 p-8 md:p-12 rounded-3xl bg-secondary/50 border border-border">
+          <h3 className="font-display text-xl font-bold text-foreground text-center mb-8">
+            Average Client Results
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { value: "340%", label: "Lead Capture Increase", color: "primary" },
+              { value: "18x", label: "Faster Response Time", color: "accent" },
+              { value: "$47K", label: "Monthly Revenue Gained", color: "primary" },
+              { value: "156%", label: "More Consultations", color: "accent" },
+            ].map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="relative mb-4">
+                  {/* Circular progress indicator */}
+                  <div className={`w-24 h-24 mx-auto rounded-full border-4 ${stat.color === 'primary' ? 'border-primary/30' : 'border-accent/30'} flex items-center justify-center relative`}>
+                    <svg className="absolute inset-0 w-full h-full -rotate-90">
+                      <circle
+                        cx="48"
+                        cy="48"
+                        r="44"
+                        fill="none"
+                        className={stat.color === 'primary' ? 'stroke-primary' : 'stroke-accent'}
+                        strokeWidth="4"
+                        strokeDasharray={`${(index + 1) * 70} 300`}
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                    <span className={`font-display text-xl font-bold ${stat.color === 'primary' ? 'text-primary' : 'text-accent'}`}>
+                      {stat.value}
+                    </span>
+                  </div>
+                </div>
+                <p className="text-sm text-muted-foreground">{stat.label}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Case Studies */}
