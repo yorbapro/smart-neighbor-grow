@@ -1,4 +1,5 @@
-import { Users, Target, Zap, Shield, Heart, Brain, Clock, TrendingUp, Headphones } from "lucide-react";
+import { Users, Target, Zap, Shield, Heart, Brain, Clock, TrendingUp, Headphones, ArrowRight, CheckCircle2 } from "lucide-react";
+import businessOwnerPhoto from "@/assets/photos/business-owner-woman.jpg";
 
 const Benefits = () => {
   const benefits = [
@@ -30,6 +31,14 @@ const Benefits = () => {
     { value: "24/7", unit: "", label: "Lead Coverage" },
     { value: "500+", unit: "", label: "Leads Per Launch" },
     { value: "14", unit: "days", label: "To First Meeting" },
+  ];
+
+  // Process flow for infographic
+  const processSteps = [
+    { label: "Lead Arrives", icon: Zap },
+    { label: "AI Responds", icon: Brain },
+    { label: "Human Reviews", icon: Users },
+    { label: "Deal Closes", icon: CheckCircle2 },
   ];
 
   return (
@@ -75,6 +84,53 @@ const Benefits = () => {
           ))}
         </div>
 
+        {/* Process Flow Infographic */}
+        <div className="mb-16 p-6 md:p-8 rounded-3xl bg-secondary/30 border border-border">
+          <h3 className="font-display text-lg font-bold text-foreground text-center mb-8">
+            How Your Leads Get Handled
+          </h3>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-2">
+            {processSteps.map((step, index) => (
+              <div key={index} className="flex items-center gap-4 md:gap-2">
+                {/* Step */}
+                <div className="flex flex-col items-center text-center">
+                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-3 ${
+                    index === 0 ? 'bg-primary/20' : 
+                    index === 1 ? 'bg-accent/20' : 
+                    index === 2 ? 'bg-primary/20' : 
+                    'bg-accent/20'
+                  }`}>
+                    <step.icon className={`w-8 h-8 ${
+                      index === 0 ? 'text-primary' : 
+                      index === 1 ? 'text-accent' : 
+                      index === 2 ? 'text-primary' : 
+                      'text-accent'
+                    }`} />
+                  </div>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                    Step {index + 1}
+                  </span>
+                  <span className="text-sm font-medium text-foreground mt-1">
+                    {step.label}
+                  </span>
+                </div>
+                
+                {/* Arrow (not after last step) */}
+                {index < processSteps.length - 1 && (
+                  <div className="hidden md:flex items-center px-4">
+                    <div className="w-12 h-[2px] bg-gradient-to-r from-primary to-accent relative">
+                      <ArrowRight className="absolute -right-3 -top-[7px] w-4 h-4 text-accent" />
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-sm text-muted-foreground mt-6">
+            From inquiry to closed deal—AI speed with human quality control
+          </p>
+        </div>
+
         {/* Benefits Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {benefits.map((benefit, index) => (
@@ -109,7 +165,7 @@ const Benefits = () => {
           ))}
         </div>
 
-        {/* Cost Comparison Banner */}
+        {/* Cost Comparison Banner with Photo */}
         <div className="relative p-8 md:p-12 rounded-3xl overflow-hidden bg-secondary text-secondary-foreground mb-8">
           {/* Decorative elements */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />

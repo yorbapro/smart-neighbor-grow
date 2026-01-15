@@ -1,4 +1,5 @@
-import { Target, Users, TrendingUp, ShieldCheck, Brain, MapPin } from "lucide-react";
+import { Target, Users, TrendingUp, ShieldCheck, Brain, MapPin, CheckCircle } from "lucide-react";
+import teamPhoto from "@/assets/photos/team-collaboration.jpg";
 
 const About = () => {
   return (
@@ -74,33 +75,59 @@ const About = () => {
             </div>
           </div>
 
-          {/* Visual */}
+          {/* Visual - Photo with overlays */}
           <div className="relative">
-            <div className="aspect-square rounded-3xl bg-gradient-dark p-8 flex items-center justify-center relative overflow-hidden">
-              {/* Decorative elements */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl" />
-              <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent/20 rounded-full blur-3xl" />
-              
-              {/* Content */}
-              <div className="relative text-center text-secondary-foreground">
-                <div className="font-display text-6xl md:text-7xl font-bold mb-4 text-gradient">
-                  3→50
+            {/* Main Photo */}
+            <div className="rounded-3xl overflow-hidden shadow-2xl">
+              <img 
+                src={teamPhoto} 
+                alt="Professional team collaborating on AI-powered business solutions" 
+                className="w-full h-auto object-cover"
+              />
+              {/* Subtle overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-transparent to-transparent" />
+            </div>
+
+            {/* Infographic overlay - Team Multiplier */}
+            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[90%] bg-card/95 backdrop-blur-sm rounded-2xl shadow-card-hover p-6 border border-border">
+              <div className="flex items-center justify-between gap-6">
+                {/* Before */}
+                <div className="text-center flex-1">
+                  <div className="w-12 h-12 rounded-full bg-muted mx-auto flex items-center justify-center mb-2">
+                    <Users className="w-6 h-6 text-muted-foreground" />
+                  </div>
+                  <p className="font-display text-2xl font-bold text-foreground">3</p>
+                  <p className="text-xs text-muted-foreground">Person Team</p>
                 </div>
-                <p className="text-lg opacity-80 max-w-xs mx-auto">
-                  Make your 3-person team perform like a 50-person powerhouse
-                </p>
+                
+                {/* Arrow/Transformation */}
+                <div className="flex flex-col items-center">
+                  <div className="w-16 h-[2px] bg-gradient-hero relative">
+                    <div className="absolute -right-1 -top-1 w-0 h-0 border-l-8 border-l-primary border-y-4 border-y-transparent" />
+                  </div>
+                  <span className="text-xs text-primary font-semibold mt-1">AI + Experts</span>
+                </div>
+                
+                {/* After */}
+                <div className="text-center flex-1">
+                  <div className="w-12 h-12 rounded-full bg-primary/20 mx-auto flex items-center justify-center mb-2">
+                    <Users className="w-6 h-6 text-primary" />
+                  </div>
+                  <p className="font-display text-2xl font-bold text-gradient">50</p>
+                  <p className="text-xs text-muted-foreground">Team Performance</p>
+                </div>
               </div>
             </div>
 
             {/* Floating badge */}
-            <div className="absolute -bottom-6 -left-6 bg-card rounded-2xl shadow-card-hover p-6 border border-border">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-hero flex items-center justify-center">
-                  <ShieldCheck className="w-6 h-6 text-primary-foreground" />
+            <div className="absolute -top-4 -right-4 bg-card rounded-2xl shadow-card-hover p-4 border border-border animate-float">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-gradient-hero flex items-center justify-center">
+                  <ShieldCheck className="w-5 h-5 text-primary-foreground" />
                 </div>
                 <div>
-                  <p className="font-display font-bold text-foreground">Human-Guided</p>
-                  <p className="text-sm text-muted-foreground">Expert supervised AI</p>
+                  <p className="font-display font-bold text-foreground text-sm">Human-Guided</p>
+                  <p className="text-xs text-muted-foreground">Expert supervised AI</p>
                 </div>
               </div>
             </div>
