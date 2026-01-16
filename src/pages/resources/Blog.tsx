@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import useSEO from "@/hooks/useSEO";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar, User, Clock } from "lucide-react";
+import { ArrowRight, Calendar, User, Clock, BookOpen } from "lucide-react";
 
 const Blog = () => {
   useSEO({
@@ -25,6 +25,70 @@ const Blog = () => {
     readTime: "8 min read",
     category: "AEO",
   };
+
+  // The Future of Being Found Series
+  const seriesArticles = [
+    {
+      title: "The Shift: From Typing Keywords to Asking Questions",
+      excerpt: "How AI is changing the way customers find local businesses. Discover why the old search rules no longer apply.",
+      slug: "the-shift-from-typing-to-asking",
+      author: "Elena Rodriguez",
+      date: "January 14, 2026",
+      readTime: "3 min read",
+      category: "AEO Series",
+      part: 1,
+    },
+    {
+      title: "SEO vs. AEO: Why Being #1 Isn't Enough Anymore",
+      excerpt: "You've heard of SEO, but there's a new player in town: AEO. Learn the difference and why you need both.",
+      slug: "seo-vs-aeo-why-being-number-one-isnt-enough",
+      author: "Elena Rodriguez",
+      date: "January 13, 2026",
+      readTime: "3 min read",
+      category: "AEO Series",
+      part: 2,
+    },
+    {
+      title: "GEO: How to Speak \"Robot\" to AI Assistants",
+      excerpt: "What about ChatGPT, Gemini, and Claude? Learn how to optimize for generative AI with GEO.",
+      slug: "geo-how-to-speak-robot-to-ai-assistants",
+      author: "Dr. Sarah Chen",
+      date: "January 12, 2026",
+      readTime: "3 min read",
+      category: "AEO Series",
+      part: 3,
+    },
+    {
+      title: "Local Search: Why Google Maps is Your New Storefront",
+      excerpt: "For local businesses, your Google Business Profile is critical. Learn why consistency is the key to AI visibility.",
+      slug: "local-search-google-maps-is-your-new-storefront",
+      author: "Marcus Reynolds",
+      date: "January 11, 2026",
+      readTime: "3 min read",
+      category: "AEO Series",
+      part: 4,
+    },
+    {
+      title: "Reviews: The Fuel That Powers AI Recommendations",
+      excerpt: "To AI, customer reviews aren't just feelings—they are data. Learn why recency matters and how to build social proof.",
+      slug: "reviews-the-fuel-that-powers-ai-recommendations",
+      author: "David Thompson",
+      date: "January 10, 2026",
+      readTime: "3 min read",
+      category: "AEO Series",
+      part: 5,
+    },
+    {
+      title: "The Solution: How to Handle It All Without Losing Your Mind",
+      excerpt: "SEO, AEO, GEO, local maps, reviews—it's a lot. Here's how LocalLift makes it simple so you can focus on your business.",
+      slug: "the-solution-how-to-handle-it-all",
+      author: "Marcus Reynolds",
+      date: "January 9, 2026",
+      readTime: "4 min read",
+      category: "AEO Series",
+      part: 6,
+    },
+  ];
 
   const articles = [
     {
@@ -135,6 +199,55 @@ const Blog = () => {
                   </Link>
                 </Button>
               </article>
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Series: The Future of Being Found */}
+        <section className="py-12 md:py-16 bg-gradient-to-b from-primary/5 to-transparent">
+          <div className="container">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex items-center gap-3 mb-2">
+                <BookOpen className="w-5 h-5 text-primary" />
+                <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+                  6-Part Series
+                </span>
+              </div>
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">
+                The Future of Being Found
+              </h2>
+              <p className="text-muted-foreground mb-8 max-w-2xl">
+                How AI is changing the way customers find local businesses. A complete guide to navigating SEO, AEO, and GEO.
+              </p>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {seriesArticles.map((article) => (
+                  <Link
+                    key={article.slug}
+                    to={`/resources/blog/${article.slug}`}
+                    className="group bg-card rounded-xl border border-border p-5 hover:shadow-card-hover hover:border-primary/30 transition-all"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg">
+                        {article.part}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-display text-base font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2 mb-1">
+                          {article.title}
+                        </h3>
+                        <p className="text-xs text-muted-foreground line-clamp-2">
+                          {article.excerpt}
+                        </p>
+                        <div className="flex items-center gap-2 mt-2 text-xs text-muted-foreground">
+                          <span>{article.author}</span>
+                          <span>•</span>
+                          <span>{article.readTime}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </section>
