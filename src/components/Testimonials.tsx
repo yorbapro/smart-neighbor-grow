@@ -54,10 +54,10 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-muted/30">
+    <section className="py-16 md:py-24 bg-muted/30">
       <div className="container">
         {/* Header */}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-12">
           <span className="inline-flex items-center gap-2 uppercase text-xs font-bold tracking-[0.2em] text-primary mb-4">
             Success Stories
             <span className="w-8 h-[2px] bg-primary" />
@@ -73,7 +73,7 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonial Cards with Photos */}
-        <div className="grid md:grid-cols-3 gap-6 mb-20">
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.name}
@@ -122,57 +122,39 @@ const Testimonials = () => {
           ))}
         </div>
 
-        {/* Results Infographic */}
-        <div className="mb-20 p-8 md:p-12 rounded-3xl bg-secondary/50 border border-border">
-          <h3 className="font-display text-xl font-bold text-foreground text-center mb-8">
-            Average Client Results
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { value: "340%", label: "Lead Capture Increase", color: "primary" },
-              { value: "18x", label: "Faster Response Time", color: "accent" },
-              { value: "$47K", label: "Monthly Revenue Gained", color: "primary" },
-              { value: "156%", label: "More Consultations", color: "accent" },
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="relative mb-4">
-                  {/* Circular progress indicator */}
-                  <div className={`w-24 h-24 mx-auto rounded-full border-4 ${stat.color === 'primary' ? 'border-primary/30' : 'border-accent/30'} flex items-center justify-center relative`}>
-                    <svg className="absolute inset-0 w-full h-full -rotate-90">
-                      <circle
-                        cx="48"
-                        cy="48"
-                        r="44"
-                        fill="none"
-                        className={stat.color === 'primary' ? 'stroke-primary' : 'stroke-accent'}
-                        strokeWidth="4"
-                        strokeDasharray={`${(index + 1) * 70} 300`}
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                    <span className={`font-display text-xl font-bold ${stat.color === 'primary' ? 'text-primary' : 'text-accent'}`}>
-                      {stat.value}
-                    </span>
-                  </div>
-                </div>
-                <p className="text-sm text-muted-foreground">{stat.label}</p>
-              </div>
-            ))}
-          </div>
+        {/* Results Infographic - Redesigned */}
+        <div className="mb-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+          {[
+            { value: "340%", label: "Lead Capture Increase", icon: "📈" },
+            { value: "18x", label: "Faster Response Time", icon: "⚡" },
+            { value: "$47K", label: "Monthly Revenue Gained", icon: "💰" },
+            { value: "156%", label: "More Consultations", icon: "📅" },
+          ].map((stat, index) => (
+            <div 
+              key={index} 
+              className="relative p-6 rounded-2xl bg-card border border-border text-center group hover:border-primary/30 transition-colors"
+            >
+              <span className="text-2xl mb-2 block">{stat.icon}</span>
+              <p className="font-display text-2xl md:text-3xl font-bold text-gradient mb-1">
+                {stat.value}
+              </p>
+              <p className="text-xs text-muted-foreground">{stat.label}</p>
+            </div>
+          ))}
         </div>
 
         {/* Case Studies */}
         <div className="max-w-5xl mx-auto">
-          <div className="flex items-center justify-between mb-8">
-            <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground">
+          <div className="flex items-center justify-between mb-6">
+            <h3 className="font-display text-xl md:text-2xl font-bold text-foreground">
               Case Studies
             </h3>
             <Link 
               to="/resources/case-studies" 
-              className="hidden sm:flex items-center gap-2 text-primary hover:gap-3 transition-all font-medium"
+              className="hidden sm:flex items-center gap-2 text-primary hover:gap-3 transition-all font-medium text-sm"
             >
               View All
-              <ArrowRight size={16} />
+              <ArrowRight size={14} />
             </Link>
           </div>
           

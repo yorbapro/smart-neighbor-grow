@@ -68,25 +68,18 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 md:py-28 bg-gradient-subtle">
+    <section id="services" className="py-16 md:py-24 bg-gradient-subtle">
       <div className="container">
         {/* Intro Section */}
-        <div className="text-center max-w-3xl mx-auto mb-8">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
             How We Help Your Business Grow
           </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
             AI for Business, Built for You
           </h2>
-          <p className="text-lg text-muted-foreground mb-6">
+          <p className="text-lg text-muted-foreground">
             BrightLaunchIQ combines local knowledge with advanced automation so your business stands out, answers first, and closes more deals.
-          </p>
-        </div>
-
-        {/* Bridge Text */}
-        <div className="max-w-2xl mx-auto text-center mb-16">
-          <p className="text-muted-foreground">
-            Our flagship solutions work together to capture leads around the clock and position your business as the local authority.
           </p>
         </div>
 
@@ -174,55 +167,46 @@ const Services = () => {
           ))}
         </div>
 
-        {/* Impact Stats Row */}
-        <div className="mt-20 p-8 md:p-10 rounded-3xl bg-secondary/50 border border-border">
-          <h3 className="font-display text-lg font-bold text-foreground text-center mb-8">
-            The BrightLaunchIQ Advantage
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { icon: Zap, value: "60s", label: "Response Time", color: "primary" },
-              { icon: TrendingUp, value: "340%", label: "Lead Increase", color: "accent" },
-              { icon: Users, value: "100%", label: "Human Verified", color: "primary" },
-              { icon: Rocket, value: "14 Days", label: "To First Meeting", color: "accent" },
-            ].map((stat, idx) => (
-              <div key={idx} className="text-center">
-                <div className={`w-12 h-12 mx-auto rounded-xl flex items-center justify-center mb-3 ${
-                  stat.color === 'primary' ? 'bg-primary/20' : 'bg-accent/20'
-                }`}>
-                  <stat.icon className={`w-6 h-6 ${
-                    stat.color === 'primary' ? 'text-primary' : 'text-accent'
-                  }`} />
+        {/* Impact Stats Row - Redesigned */}
+        <div className="mt-12 relative overflow-hidden rounded-2xl bg-secondary p-8 md:p-10">
+          {/* Subtle gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5" />
+          
+          <div className="relative z-10">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-8">
+              {[
+                { icon: Zap, value: "60s", label: "Response Time" },
+                { icon: TrendingUp, value: "340%", label: "Lead Increase" },
+                { icon: Users, value: "100%", label: "Human Verified" },
+                { icon: Rocket, value: "14 Days", label: "To First Meeting" },
+              ].map((stat, idx) => (
+                <div key={idx} className="flex items-center gap-4 md:flex-col md:text-center">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <stat.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-display text-2xl font-bold text-secondary-foreground">
+                      {stat.value}
+                    </p>
+                    <p className="text-sm text-secondary-foreground/60">{stat.label}</p>
+                  </div>
                 </div>
-                <p className={`font-display text-2xl font-bold ${
-                  stat.color === 'primary' ? 'text-primary' : 'text-accent'
-                }`}>
-                  {stat.value}
-                </p>
-                <p className="text-xs text-muted-foreground mt-1">{stat.label}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Target Markets */}
-        <div className="mt-16 text-center">
-          <h3 className="font-display text-xl font-bold text-foreground mb-6">
-            Industries We Serve: Central Valley & Beyond
-          </h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {[
-              { name: "Professional Services", examples: "Legal, Accounting, Consulting" },
-              { name: "Trade Services", examples: "HVAC, Solar, Commercial Contractors" },
-              { name: "Industrial & Logistics", examples: "Transportation, Warehousing" },
-            ].map((industry) => (
-              <div
-                key={industry.name}
-                className="px-5 py-3 rounded-2xl bg-card border border-border hover:border-primary/30 transition-colors"
+        <div className="mt-10 text-center">
+          <p className="text-sm text-muted-foreground mb-4">Serving</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {["Legal & Accounting", "HVAC & Solar", "Contractors", "Logistics", "Professional Services"].map((industry) => (
+              <span
+                key={industry}
+                className="px-4 py-2 rounded-full bg-card border border-border text-sm text-foreground"
               >
-                <p className="text-sm font-semibold text-foreground">{industry.name}</p>
-                <p className="text-xs text-muted-foreground">{industry.examples}</p>
-              </div>
+                {industry}
+              </span>
             ))}
           </div>
         </div>
