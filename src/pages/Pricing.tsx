@@ -33,72 +33,61 @@ const Pricing = () => {
 
   const products = [
     {
-      icon: Rocket,
-      name: "LaunchPad 360™",
-      tagline: "Complete AI Sales Engine",
-      description: "Complete 30-day go-to-market implementation with AI-powered multi-channel outreach and built-in revenue intelligence.",
+      icon: Search,
+      name: "LocalLift™",
+      tagline: "The Foundation",
+      description: "Visibility & Being Found. Custom website, AEO, and local dominance to ensure you're discovered first.",
       setup: "$1,500",
-      monthly: "$500",
-      dailyCost: "$16.60",
+      monthly: "$299",
+      dailyCost: "$9.97",
+      deployment: "14-Day Deployment",
       features: [
-        "Custom infrastructure build",
-        "500+ targeted local leads",
-        "Multi-channel outreach (6 channels)",
-        "AI Researcher & lead scoring",
-        "Email deliverability protection",
-        "60-minute strategy session",
-        "100 new leads monthly",
-        "Automated inbox triage",
-        "Real-time lead scoring & alerts",
-        "Pipeline visibility dashboard",
-        "Conversation intelligence",
-        "Automated follow-up sequences",
-        "Human expert oversight",
-        "CRM integration"
+        "Custom website",
+        "Answer Engine Optimization (AEO)",
+        "Google Maps & Voice Search dominance",
+        "Reputation Management",
       ],
-      highlighted: true,
-      cta: "Start Your 30-Day Launch",
-      slug: "launchpad-360",
+      highlighted: false,
+      cta: "Get Found",
+      slug: "locallift",
       isCustom: false
     },
     {
-      icon: Search,
-      name: "LocalLift™",
-      tagline: "Local Dominance",
-      description: "Own your local market with Answer Engine Optimization and map pack domination.",
-      setup: "$1,500",
-      monthly: "$500",
-      dailyCost: "$16.60",
+      icon: Rocket,
+      name: "LaunchPad 360™",
+      tagline: "The Growth Engine",
+      description: "Increase Revenue, Lead Generation & Booking Meetings. Everything in LocalLift™ plus automated sales.",
+      setup: "$2,500",
+      monthly: "$599",
+      dailyCost: "$19.97",
+      deployment: "30-Day Deployment",
+      includesText: "Includes everything in LocalLift™ plus...",
       features: [
-        "Answer Engine Optimization",
-        "Google Maps ranking",
-        "Voice search optimization",
-        "Reputation management",
-        "100+ directory monitoring",
-        "24/7 AI inquiry handling",
-        "Quarterly NAP verification"
+        "60s Speed-to-Lead Guarantee",
+        "AI Lead Generation",
+        "Automated Meeting Booking",
+        "Human-in-the-Loop Triage",
       ],
       highlighted: true,
-      cta: "Learn More",
-      slug: "locallift",
+      cta: "Start Growing",
+      slug: "launchpad-360",
       isCustom: false
     },
     {
       icon: Brain,
       name: "OmniLogic™",
-      tagline: "Custom AI Workflow Automation",
-      description: "Fully customized AI automation solutions tailored to your unique business processes and industry requirements.",
+      tagline: "The Custom Solution",
+      description: "Total Business Automation. Fully customized AI solutions tailored to your unique business processes.",
+      setup: "Starts at $5,000",
+      deployment: "Custom Timeline",
       features: [
-        "Custom workflow design",
-        "Multi-department integration",
-        "Advanced analytics & reporting",
+        "Custom Business Intelligence",
+        "Operations/HR/Inventory Automation",
+        "Custom Cognitive Architecture",
         "Dedicated success manager",
         "Priority support SLA",
-        "Custom API integrations",
-        "On-premise deployment options",
-        "White-label solutions"
       ],
-      highlighted: true,
+      highlighted: false,
       cta: "Contact Us",
       slug: "custom-ai-workflows",
       isCustom: true
@@ -106,8 +95,8 @@ const Pricing = () => {
   ];
 
   const comparisonItems = [
-    { feature: "Annual cost", human: "$80,000+", ai: "$7,500" },
-    { feature: "Daily cost", human: "$308/day", ai: "$16.60/day" },
+    { feature: "Annual cost", human: "$80,000+", ai: "$9,688" },
+    { feature: "Daily cost", human: "$308/day", ai: "$19.97/day" },
     { feature: "Hours available", human: "40 hrs/week", ai: "168 hrs/week" },
     { feature: "Response time", human: "Hours to days", ai: "Under 60 seconds" },
     { feature: "Sick days", human: "Yes", ai: "Never" },
@@ -158,7 +147,7 @@ const Pricing = () => {
             
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
               A Digital Teammate for<br />
-              <span className="text-gradient">$16.60/Day</span>
+              <span className="text-gradient">Under $20/Day</span>
             </h1>
             
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
@@ -167,7 +156,7 @@ const Pricing = () => {
 
             <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-secondary text-secondary-foreground">
               <Calculator className="w-5 h-5 text-primary" />
-              <span className="font-semibold">The Math: $500/mo ÷ 30 days = $16.60/day</span>
+              <span className="font-semibold">The Math: $599/mo ÷ 30 days = $19.97/day</span>
             </div>
           </div>
         </div>
