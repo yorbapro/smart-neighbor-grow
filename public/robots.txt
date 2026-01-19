@@ -48,7 +48,7 @@ User-agent: Pinterest
 Allow: /
 
 # AI Crawlers - Generative Engine Optimization (GEO)
-# We welcome AI crawlers for brand visibility in AI-generated answers
+# We welcome AI crawlers for brand visibility in AI-generated answers and AI Overviews
 
 User-agent: GPTBot
 Allow: /
@@ -57,6 +57,12 @@ User-agent: ChatGPT-User
 Allow: /
 
 User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot-Extended
+Allow: /
+
+User-agent: GoogleOther
 Allow: /
 
 User-agent: PerplexityBot
@@ -84,6 +90,12 @@ User-agent: YouBot
 Allow: /
 
 User-agent: meta-externalagent
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Gemini
 Allow: /
 
 # LLMs.txt - Structured content for AI models
