@@ -69,9 +69,9 @@ const Hero = () => {
             <h1 
               className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-8 animate-slide-up"
             >
-              Get More Customers.
+              Get More Customers with
               <br />
-              <span className="text-gradient">Less Stress.</span>
+              <span className="text-gradient">Human-Guided AI.</span>
             </h1>
 
             {/* Subheadline - Clean, informative */}

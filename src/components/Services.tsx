@@ -107,11 +107,11 @@ const Services = () => {
                 <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">
                   {tier.subtitle}
                 </p>
-                <h3 className={`font-display text-2xl font-bold mb-2 ${
+                <h2 className={`font-display text-2xl font-bold mb-2 ${
                   tier.featured ? "text-secondary-foreground" : "text-foreground"
                 }`}>
                   {tier.name}
-                </h3>
+                </h2>
                 <p className={`text-sm mb-6 ${
                   tier.featured ? "text-secondary-foreground/70" : "text-muted-foreground"
                 }`}>
@@ -191,8 +191,8 @@ const Services = () => {
                   className="w-full group/btn"
                   asChild
                 >
-                  <Link to={tier.isCustom ? "/contact" : `/products/${tier.slug}`}>
-                    {tier.cta}
+                  <Link to={tier.isCustom ? "/contact" : "/get-started"}>
+                    {tier.isCustom ? "Request Custom Enterprise Quote" : "Schedule My 15-Minute Revenue Audit"}
                     <ArrowRight size={16} className="transition-transform group-hover/btn:translate-x-1" />
                   </Link>
                 </Button>

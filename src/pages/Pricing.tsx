@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
+import DailyTeammateMath from "@/components/DailyTeammateMath";
+import ImplementationRoadmap from "@/components/ImplementationRoadmap";
+import RevenueReadinessCTA from "@/components/RevenueReadinessCTA";
 import { Button } from "@/components/ui/button";
 import { 
   Check, 
@@ -183,9 +186,9 @@ const Pricing = () => {
                   <product.icon className="w-7 h-7 text-primary" />
                 </div>
 
-                <h3 className="font-display text-2xl font-bold mb-1">
+                <h2 className="font-display text-2xl font-bold mb-1">
                   {product.name}
-                </h3>
+                </h2>
                 <p className="text-sm font-medium text-primary mb-4">
                   {product.tagline}
                 </p>
@@ -245,8 +248,8 @@ const Pricing = () => {
                   className="w-full"
                   asChild
                 >
-                  <Link to={product.isCustom ? "/contact" : (product.slug === "launchpad-360" ? "/get-started" : `/products/${product.slug}`)}>
-                    {product.cta}
+                  <Link to={product.isCustom ? "/contact" : "/get-started"}>
+                    {product.isCustom ? "Request Custom Enterprise Quote" : "Schedule My 15-Minute Revenue Audit"}
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
                 </Button>
@@ -255,6 +258,15 @@ const Pricing = () => {
           </div>
         </div>
       </section>
+
+      {/* Daily Teammate Math */}
+      <DailyTeammateMath />
+
+      {/* Implementation Roadmap */}
+      <ImplementationRoadmap />
+
+      {/* Revenue Readiness CTA */}
+      <RevenueReadinessCTA />
 
       {/* Comparison Table */}
       <section className="py-20 md:py-28 bg-gradient-subtle">

@@ -2,7 +2,10 @@ import { useEffect } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Benefits from "@/components/Benefits";
+import DailyTeammateMath from "@/components/DailyTeammateMath";
+import ImplementationRoadmap from "@/components/ImplementationRoadmap";
 import Services from "@/components/Services";
+import RevenueReadinessCTA from "@/components/RevenueReadinessCTA";
 import Testimonials from "@/components/Testimonials";
 import About from "@/components/About";
 import FAQ from "@/components/FAQ";
@@ -284,7 +287,10 @@ const Index = () => {
       <main id="main-content" role="main">
         <Hero />
         <Benefits />
+        <DailyTeammateMath />
+        <ImplementationRoadmap />
         <Services />
+        <RevenueReadinessCTA />
         <Testimonials />
         <About />
         <FAQ />
