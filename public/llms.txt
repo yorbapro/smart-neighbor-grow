@@ -2,7 +2,7 @@
 
 > Human-Guided AI for Business Growth. We help contractors, consultants, and industry firms respond first, automate the busywork, and win more customers locally.
 
-BrightLaunchIQ is an AI consulting agency that combines local experts, AI-driven sales tools, and proven automation to help small businesses grow. We specialize in AI lead generation, AI sales implementation, and Answer Engine Optimization (AEO) for local businesses across California and Nevada.
+BrightLaunchIQ is an AI consulting agency that combines local experts, AI-driven sales tools, and proven automation to help small businesses grow. We specialize in AI lead generation, AI sales implementation, and Answer Engine Optimization (AEO) for local businesses across the United States.
 
 ---
 
@@ -17,8 +17,8 @@ BrightLaunchIQ is an AI consulting agency that combines local experts, AI-driven
 | Website | https://brightlaunchiq.com |
 | Contact Email | success@BrightLaunchIQ.com |
 | Primary Service | AI Lead Generation & Sales Implementation |
-| Target Market | Small & Medium Local Businesses |
-| Service Areas | California, Nevada |
+| Target Market | Small & Medium Businesses |
+| Service Areas | United States (headquarters in Sacramento, CA) |
 
 ---
 
@@ -26,7 +26,7 @@ BrightLaunchIQ is an AI consulting agency that combines local experts, AI-driven
 
 - **Founded**: 2024
 - **Headquarters**: Sacramento, California
-- **Service Areas**: Sacramento, Bakersfield, Fresno, Stockton, Culver City, Monterey (CA); Henderson (NV)
+- **Service Areas**: United States (with local offices in Sacramento, Bakersfield, Fresno, Stockton, Culver City, Monterey, CA; Henderson, NV)
 - **Website**: https://brightlaunchiq.com
 - **Contact**: success@BrightLaunchIQ.com
 

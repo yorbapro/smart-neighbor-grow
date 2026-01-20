@@ -204,8 +204,8 @@ const Blog = () => {
         "@type": "Audience",
         "audienceType": "Small and Medium Business Owners",
         "geographicArea": {
-          "@type": "AdministrativeArea",
-          "name": "California and Nevada, USA"
+          "@type": "Country",
+          "name": "United States"
         }
       },
       "inLanguage": "en-US",

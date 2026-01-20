@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -20,6 +20,29 @@ const GetStarted = () => {
   const [step, setStep] = useState<"capture" | "report" | "checkout">("capture");
   const [leadData, setLeadData] = useState<LeadData | null>(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = "Get Started - Schedule Your Revenue Audit | BrightLaunchIQ";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Start your AI sales automation journey. Schedule a free 15-minute revenue audit and get a personalized growth roadmap for your business.");
+    }
+
+    // Add keywords meta
+    const existingKeywords = document.querySelector('meta[name="keywords"]');
+    const keywordsContent = "get started, revenue audit, AI sales demo, schedule consultation, business growth, lead generation setup";
+    if (existingKeywords) {
+      existingKeywords.setAttribute("content", keywordsContent);
+    } else {
+      const keywordsMeta = document.createElement("meta");
+      keywordsMeta.name = "keywords";
+      keywordsMeta.content = keywordsContent;
+      document.head.appendChild(keywordsMeta);
+    }
+
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleLeadCapture = (data: LeadData) => {
     setLeadData(data);

@@ -75,7 +75,63 @@ const AEOAudit = () => {
       metaDescription.setAttribute("content", "Get a free AI search engine audit. See how your business ranks on ChatGPT, Gemini, Perplexity, and voice search. Discover your AEO score and actionable improvements.");
     }
 
+    // Add keywords meta
+    const existingKeywords = document.querySelector('meta[name="keywords"]');
+    const keywordsContent = "free AEO audit, AI visibility check, ChatGPT ranking, Gemini visibility, voice search audit, answer engine optimization audit, AI search score";
+    if (existingKeywords) {
+      existingKeywords.setAttribute("content", keywordsContent);
+    } else {
+      const keywordsMeta = document.createElement("meta");
+      keywordsMeta.name = "keywords";
+      keywordsMeta.content = keywordsContent;
+      document.head.appendChild(keywordsMeta);
+    }
+
+    // SoftwareApplication Schema for the audit tool
+    const existingSchemas = document.querySelectorAll('script[type="application/ld+json"]');
+    existingSchemas.forEach(script => script.remove());
+
+    const auditToolSchema = document.createElement("script");
+    auditToolSchema.type = "application/ld+json";
+    auditToolSchema.id = "audit-schema";
+    auditToolSchema.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "BrightLaunchIQ AEO Audit Tool",
+      "description": "Free Answer Engine Optimization audit tool that analyzes your business visibility across AI search engines including ChatGPT, Gemini, Perplexity, and voice assistants.",
+      "url": "https://brightlaunchiq.com/aeo-audit",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "BrightLaunchIQ",
+        "url": "https://brightlaunchiq.com"
+      },
+      "featureList": [
+        "AI search engine visibility analysis",
+        "Voice search optimization score",
+        "Competitor comparison insights",
+        "Actionable improvement recommendations",
+        "Google Business Profile audit"
+      ],
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".audit-intro"]
+      }
+    });
+    document.head.appendChild(auditToolSchema);
+
     window.scrollTo(0, 0);
+
+    return () => {
+      const el = document.getElementById("audit-schema");
+      if (el) el.remove();
+    };
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {

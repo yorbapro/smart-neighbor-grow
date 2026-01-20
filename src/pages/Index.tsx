@@ -66,10 +66,10 @@ const Index = () => {
         "@type": "Person",
         "name": "Marcus Reynolds"
       },
-      "areaServed": [
-        { "@type": "State", "name": "California" },
-        { "@type": "State", "name": "Nevada" }
-      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
       "knowsAbout": [
         "AI Lead Generation",
         "AI Sales Automation", 
