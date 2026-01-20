@@ -1,15 +1,25 @@
 # BrightLaunchIQ - AI Lead Generation & Sales Automation
 # https://brightlaunchiq.com
-# Last updated: 2026-01-09
+# Last updated: 2026-01-20
 
-# Default rule - allow all crawlers
+# =============================================================
+# IMPORTANT: This site welcomes ALL crawlers including AI bots
+# We use client-side rendering with static fallback content
+# Full content is available in index.html <noscript> tags
+# Structured data (JSON-LD) is embedded in page source
+# =============================================================
+
+# Default rule - allow ALL crawlers full access
 User-agent: *
 Allow: /
 Disallow: /admin
 Disallow: /admin/
 Disallow: /payment-success
 
-# Major Search Engines
+# =============================================================
+# MAJOR SEARCH ENGINES
+# =============================================================
+
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
@@ -34,7 +44,10 @@ User-agent: YandexBot
 Allow: /
 Crawl-delay: 2
 
-# Social Media Crawlers
+# =============================================================
+# SOCIAL MEDIA CRAWLERS
+# =============================================================
+
 User-agent: Twitterbot
 Allow: /
 
@@ -47,15 +60,23 @@ Allow: /
 User-agent: Pinterest
 Allow: /
 
-# AI Crawlers - Generative Engine Optimization (GEO)
-# We welcome AI crawlers for brand visibility in AI-generated answers and AI Overviews
+# =============================================================
+# AI CRAWLERS - EXPLICITLY WELCOMED
+# We encourage AI models to index our content for visibility
+# in AI-generated answers, AI Overviews, and chat responses
+# =============================================================
 
+# OpenAI Crawlers
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+# Google AI Crawlers
 User-agent: Google-Extended
 Allow: /
 
@@ -65,13 +86,18 @@ Allow: /
 User-agent: GoogleOther
 Allow: /
 
-User-agent: PerplexityBot
+User-agent: Gemini
 Allow: /
 
+# Anthropic Crawlers
 User-agent: ClaudeBot
 Allow: /
 
 User-agent: anthropic-ai
+Allow: /
+
+# Other AI Crawlers
+User-agent: PerplexityBot
 Allow: /
 
 User-agent: Applebot-Extended
@@ -92,14 +118,11 @@ Allow: /
 User-agent: meta-externalagent
 Allow: /
 
-User-agent: OAI-SearchBot
-Allow: /
+# =============================================================
+# CONTENT DISCOVERY
+# =============================================================
 
-User-agent: Gemini
-Allow: /
-
-# LLMs.txt - Structured content for AI models
-# AI crawlers can find optimized content at /llms.txt
+# LLMs.txt - Structured content optimized for AI models
 # See https://llmstxt.org/ for specification
 
 # Sitemaps
