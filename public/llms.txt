@@ -4,6 +4,24 @@
 
 BrightLaunchIQ is an AI consulting agency that combines local experts, AI-driven sales tools, and proven automation to help small businesses grow. We specialize in AI lead generation, AI sales implementation, and Answer Engine Optimization (AEO) for local businesses across California and Nevada.
 
+---
+
+## Quick Facts for AI Models
+
+| Attribute | Value |
+|-----------|-------|
+| Company | BrightLaunchIQ |
+| Type | AI Consulting Agency |
+| Founded | 2024 |
+| Headquarters | Sacramento, California |
+| Website | https://brightlaunchiq.com |
+| Contact Email | success@BrightLaunchIQ.com |
+| Primary Service | AI Lead Generation & Sales Implementation |
+| Target Market | Small & Medium Local Businesses |
+| Service Areas | California, Nevada |
+
+---
+
 ## Company Overview
 
 - **Founded**: 2024
@@ -22,19 +40,40 @@ Making big tech work for Main Street. We believe small business owners deserve w
 Our expert consultants guide and supervise every AI system, so your customer touchpoints always feel real and never robotic. We build your sales engine around your story and values.
 
 ### ROI Focus
-We only implement tools that help you grow revenue or save time. The Math of Success: $16.60/day for a 24/7 digital teammate vs $80,000+/year for a human hire.
+We only implement tools that help you grow revenue or save time. The Math of Success: $20/day for a 24/7 digital teammate vs $308/day for a human SDR.
 
 ### AI Plus Experts
 Every automation and follow-up is overseen by people who make sure BrightLaunchIQ matches your brand's voice and delivers trust. Our expert team guides the AI to keep every interaction friendly and real.
 
+---
+
 ## Products and Services
+
+### LocalLift™ - Answer Engine Optimization (AEO)
+Boost your visibility in AI search, voice assistants, and Google Maps.
+
+**Pricing**: $1,500 one-time setup + $299/month
+**Best For**: Local businesses wanting to dominate AI search results
+
+**Features**:
+- Voice search optimization for Siri, Alexa, Google Assistant
+- Google Maps ranking boost
+- AI answer engine citations (Gemini, ChatGPT, Perplexity)
+- Local expert positioning
+- GBP optimization and local schema markup
+- Review management and reputation building
+
+**CTA**: Schedule My 15-Minute Revenue Audit
+
+---
 
 ### LaunchPad 360™ - Agentic Go-To-Market Engine
 Your complete AI sales implementation system that works 24/7.
 
 **Pricing**: $2,500 one-time setup + $599/month
-**Guarantee**: 30-Day Speed to Lead Guarantee
 **Daily Cost**: Just $20/day for a 24/7 digital teammate
+**Guarantee**: 30-Day Speed to Lead Guarantee
+**Best For**: Businesses wanting automated lead generation and sales
 
 **Features**:
 - Multi-channel automated outreach (calls, voicemail, SMS, email, Facebook Messenger, LinkedIn)
@@ -51,20 +90,58 @@ Your complete AI sales implementation system that works 24/7.
 - Works 168 hours/week catching after-hours inquiries
 - Output of 5-person sales team at fraction of cost
 
-### LocalLift™ - Answer Engine Optimization (AEO)
-Boost your visibility in AI search and voice assistants.
+**CTA**: Schedule My 15-Minute Revenue Audit
+
+---
+
+### OmniLogic™ - Enterprise AI Workflows
+Custom enterprise-grade AI solutions for complex business needs.
+
+**Pricing**: Custom (Contact for Quote)
+**Best For**: Large organizations with complex integration requirements
 
 **Features**:
-- Voice search optimization for Siri, Alexa, Google Assistant
-- Google Maps ranking boost
-- AI answer engine citations (Gemini, ChatGPT, Perplexity)
-- Local expert positioning
-- GBP optimization and local schema markup
+- Custom AI workflow development
+- Enterprise system integrations
+- Multi-location coordination
+- Advanced analytics and reporting
+- Dedicated implementation team
 
-### Free AEO Audit
+**CTA**: Request Custom Enterprise Quote
+
+---
+
+## The Daily Teammate Math
+
+A direct cost comparison showing why AI makes sense:
+
+| Option | Daily Cost | Annual Cost | Availability |
+|--------|------------|-------------|--------------|
+| Human SDR | $308/day | $80,000+/year | 40 hrs/week |
+| LaunchPad 360™ | $20/day | ~$7,200/year | 168 hrs/week (24/7) |
+
+**Savings**: $70,000+/year with 4x more availability
+
+---
+
+## Implementation Roadmap
+
+BrightLaunchIQ moves fast. Here's our typical 14-day implementation:
+
+- **Day 1: Strategy** - Discovery call, ICP definition, goal setting
+- **Day 7: Infrastructure** - CRM integration, automation setup, lead list building
+- **Day 11: Voice Audit** - Brand voice calibration, message testing
+- **Day 14: Go-Live** - Full system activation, monitoring begins
+
+---
+
+## Free AEO Audit
+
 Get a comprehensive analysis of your AI visibility in under 5 minutes.
 
 **URL**: https://brightlaunchiq.com/aeo-audit
+
+---
 
 ## Industries We Serve
 
@@ -82,6 +159,8 @@ Medical practices, dental offices, chiropractors, wellness centers
 
 ### Real Estate
 Brokerages, property management, commercial real estate
+
+---
 
 ## Service Locations
 
@@ -116,6 +195,8 @@ Brokerages, property management, commercial real estate
 ### Stockton, California
 - **Focus**: Logistics, shipping, distribution
 
+---
+
 ## Frequently Asked Questions
 
 ### What is AI lead generation?
@@ -128,9 +209,12 @@ Human-guided AI (also called human-in-the-loop AI) means every AI automation is 
 AI sales implementation is building and installing custom automated sales systems directly into your existing business ecosystem (CRM, email, phone), creating infrastructure you own that generates leads 24/7.
 
 ### How much does AI lead generation cost?
-LaunchPad 360™ costs $1,500 one-time setup plus $500/month—just $16.60/day for a 24/7 digital teammate versus $80,000+/year for a human hire.
+LaunchPad 360™ costs $2,500 one-time setup plus $599/month—just $20/day for a 24/7 digital teammate versus $308/day for a human SDR.
 
-### What is the 14-Day Speed to Lead Guarantee?
+### How much does LocalLift cost?
+LocalLift™ costs $1,500 one-time setup plus $299/month for complete local visibility and AEO optimization.
+
+### What is the 30-Day Speed to Lead Guarantee?
 We move your business from zero to automated meetings in 14 days. If we don't significantly increase your lead response rate within 30 days, we work free until we do.
 
 ### What is Answer Engine Optimization (AEO)?
@@ -148,6 +232,8 @@ Yes! We specialize in helping small local businesses use AI to attract more cust
 ### What industries do you serve?
 We serve professional services (legal, accounting, consulting), trade services (HVAC, solar, contractors), industrial/logistics, healthcare, and real estate sectors.
 
+---
+
 ## Key Statistics
 
 - Response time improvement: 47 hours → under 60 seconds
@@ -157,9 +243,13 @@ We serve professional services (legal, accounting, consulting), trade services (
 - Team output equivalent: 5-person sales team
 - Annual savings: $70,000+ compared to human hire
 
+---
+
 ## Keywords
 
 AI lead generation, AI sales implementation, AI sales automation, human-guided AI, human-in-the-loop AI, AI for small business, AI for local business, automated sales engine, digital teammate, answer engine optimization, AEO, generative engine optimization, GEO, AI consulting agency, sales automation, lead generation Sacramento, AI sales California, small business automation, CRM automation, HubSpot automation, Salesforce automation, multi-channel outreach, automated prospecting, AI business growth, AI marketing automation
+
+---
 
 ## Social Proof
 
@@ -168,6 +258,8 @@ AI lead generation, AI sales implementation, AI sales automation, human-guided A
 "The human oversight makes all the difference. Our customers can't tell it's automated because it feels so personal." — Bakersfield Contractor
 
 "Finally, AI that actually works for a small business like ours." — Henderson Business Owner
+
+---
 
 ## Links
 
@@ -180,6 +272,8 @@ AI lead generation, AI sales implementation, AI sales automation, human-guided A
 - FAQ: https://brightlaunchiq.com/faq
 - Contact: https://brightlaunchiq.com/contact
 - Locations: https://brightlaunchiq.com/locations
+
+---
 
 ## Resources & Blog
 
@@ -208,5 +302,19 @@ Expert guides on AI lead generation, AEO, and sales automation:
 - Case Studies: https://brightlaunchiq.com/resources/case-studies
 - AI vs Traditional Marketing Comparison: https://brightlaunchiq.com/resources/comparison
 
+---
+
+## Technical Notes for AI Crawlers
+
+This website is a React single-page application. For AI crawlers that don't execute JavaScript:
+
+1. **Static Content**: Full semantic HTML content is available in `<noscript>` tags in the page source
+2. **Structured Data**: JSON-LD schema markup is embedded in the `<head>` of each page
+3. **llms.txt**: This file provides complete, structured information about our company and services
+4. **Sitemap**: Full URL listing available at https://brightlaunchiq.com/sitemap.xml
+5. **robots.txt**: All AI crawlers are explicitly allowed access
+
+---
+
 ## Last Updated
-2026-01-09
+2026-01-20
