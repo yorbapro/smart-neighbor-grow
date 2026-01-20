@@ -97,7 +97,7 @@ const Hero = () => {
               className="flex flex-col sm:flex-row items-start gap-4 mb-12 animate-slide-up"
               style={{ animationDelay: "0.2s" }}
             >
-              <Button variant="hero" size="xl" asChild className="group">
+              <Button variant="hero" size="xl" asChild className="group bg-audit hover:bg-audit/90 shadow-glow-audit">
                 <Link to="/aeo-audit">
                   Free AI Visibility Audit
                   <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
