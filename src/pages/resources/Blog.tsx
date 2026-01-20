@@ -8,10 +8,10 @@ import { ArrowRight, Calendar, User, Clock, BookOpen } from "lucide-react";
 
 const Blog = () => {
   useSEO({
-    title: "AI Lead Generation Blog | BrightLaunchIQ Resources",
+    title: "Learning Center | AI & Sales Insights | BrightLaunchIQ",
     description: "Expert insights on AI lead generation, Answer Engine Optimization (AEO), and sales automation for local businesses. Learn how human-guided AI can grow your business.",
     canonical: "https://brightlaunchiq.com/resources/blog",
-    keywords: "AI lead generation blog, AEO tips, AI sales automation articles, small business AI guides",
+    keywords: "AI lead generation, AEO tips, AI sales automation articles, small business AI guides, learning center",
     speakable: ["h1", ".blog-intro"],
   });
 
