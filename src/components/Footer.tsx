@@ -134,6 +134,12 @@ const Footer = () => {
             <Link to="/accessibility" className="hover:text-primary transition-colors">
               Accessibility
             </Link>
+            <a href="/sitemap.xml" className="hover:text-primary transition-colors">
+              Sitemap
+            </a>
+            <a href="/llms.txt" className="hover:text-primary transition-colors">
+              llms.txt
+            </a>
           </div>
         </div>
       </div>
