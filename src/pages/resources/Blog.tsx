@@ -168,6 +168,59 @@ const Blog = () => {
       ]
     };
 
+    // WebPage schema with mainContentOfPage for enhanced AI discoverability
+    const webPageSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://brightlaunchiq.com/resources/blog#webpage",
+      "url": "https://brightlaunchiq.com/resources/blog",
+      "name": "Learning Center | AI & Sales Insights | BrightLaunchIQ",
+      "description": "Expert guides on AI lead generation, Answer Engine Optimization (AEO), and human-guided sales automation for local businesses.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://brightlaunchiq.com/#website",
+        "name": "BrightLaunchIQ",
+        "url": "https://brightlaunchiq.com"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://brightlaunchiq.com/favicon.ico"
+      },
+      "breadcrumb": {
+        "@id": "https://brightlaunchiq.com/resources/blog#breadcrumb"
+      },
+      "mainContentOfPage": {
+        "@type": "WebPageElement",
+        "cssSelector": "#main-content",
+        "description": "Educational articles and guides covering AI lead generation, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and sales automation strategies for local businesses."
+      },
+      "specialty": "AI Lead Generation and Sales Automation Education",
+      "about": {
+        "@type": "Thing",
+        "name": "AI-Powered Business Growth",
+        "description": "Educational content about leveraging artificial intelligence for lead generation, sales automation, and digital visibility optimization."
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Small and Medium Business Owners",
+        "geographicArea": {
+          "@type": "AdministrativeArea",
+          "name": "California and Nevada, USA"
+        }
+      },
+      "inLanguage": "en-US",
+      "dateModified": "2026-01-20",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://brightlaunchiq.com/#organization",
+        "name": "BrightLaunchIQ"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".blog-intro"]
+      }
+    };
+
     const collectionScript = document.createElement('script');
     collectionScript.type = 'application/ld+json';
     collectionScript.id = 'collection-page-schema';
@@ -180,6 +233,12 @@ const Blog = () => {
     breadcrumbScript.textContent = JSON.stringify(breadcrumbSchema);
     document.head.appendChild(breadcrumbScript);
 
+    const webPageScript = document.createElement('script');
+    webPageScript.type = 'application/ld+json';
+    webPageScript.id = 'webpage-schema';
+    webPageScript.textContent = JSON.stringify(webPageSchema);
+    document.head.appendChild(webPageScript);
+
     return () => {
       const existingCollectionScript = document.getElementById('collection-page-schema');
       if (existingCollectionScript) {
@@ -188,6 +247,10 @@ const Blog = () => {
       const existingBreadcrumbScript = document.getElementById('breadcrumb-schema');
       if (existingBreadcrumbScript) {
         existingBreadcrumbScript.remove();
+      }
+      const existingWebPageScript = document.getElementById('webpage-schema');
+      if (existingWebPageScript) {
+        existingWebPageScript.remove();
       }
     };
   }, []);
