@@ -275,7 +275,30 @@ AI lead generation, AI sales implementation, AI sales automation, human-guided A
 
 ---
 
-## Resources & Blog
+## Learning Center
+
+The BrightLaunchIQ Learning Center is our educational hub featuring expert guides, articles, and tutorials on AI lead generation, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and human-guided sales automation for local businesses.
+
+**URL**: https://brightlaunchiq.com/resources/blog
+
+### Featured Series: The Future of Being Found
+A 6-part educational series on how AI is changing the way customers find local businesses:
+1. The Shift: From Typing Keywords to Asking Questions
+2. SEO vs. AEO: Why Being #1 Isn't Enough Anymore
+3. GEO: How to Speak "Robot" to AI Assistants
+4. Local Search: Why Google Maps is Your New Storefront
+5. Reviews: The Fuel That Powers AI Recommendations
+6. The Solution: How to Handle It All Without Losing Your Mind
+
+### Learning Center Articles
+Expert guides on AI lead generation, AEO, and sales automation:
+
+- What is Answer Engine Optimization (AEO)? The Complete Guide: https://brightlaunchiq.com/resources/blog/what-is-aeo
+- AI Lead Generation: How It Works and Why It Matters: https://brightlaunchiq.com/resources/blog/ai-lead-generation-guide
+- Human-Guided AI vs Fully Automated: Which is Right?: https://brightlaunchiq.com/resources/blog/human-guided-ai-vs-automated
+- The Speed to Lead Problem: Why 78% of Leads Are Lost: https://brightlaunchiq.com/resources/blog/speed-to-lead-problem
+- How to Optimize Your Google Business Profile for AI Search: https://brightlaunchiq.com/resources/blog/gbp-optimization-ai
+- CRM Integration Best Practices for AI Sales Automation: https://brightlaunchiq.com/resources/blog/crm-integration-ai
 
 ### How AI Lead Generation Works (Step-by-Step Guide)
 A complete 6-step guide to AI-powered lead generation, optimized for voice search:
@@ -286,16 +309,6 @@ A complete 6-step guide to AI-powered lead generation, optimized for voice searc
 - Step 4: Instant Lead Response (under 60 seconds)
 - Step 5: AI Qualifies and Scores Leads
 - Step 6: Meetings Booked Automatically
-
-### Blog Articles
-Expert guides on AI lead generation, AEO, and sales automation:
-
-- What is Answer Engine Optimization (AEO)? The Complete Guide: https://brightlaunchiq.com/resources/blog/what-is-aeo
-- AI Lead Generation: How It Works and Why It Matters: https://brightlaunchiq.com/resources/blog/ai-lead-generation-guide
-- Human-Guided AI vs Fully Automated: Which is Right?: https://brightlaunchiq.com/resources/blog/human-guided-ai-vs-automated
-- The Speed to Lead Problem: Why 78% of Leads Are Lost: https://brightlaunchiq.com/resources/blog/speed-to-lead-problem
-- How to Optimize Your Google Business Profile for AI Search: https://brightlaunchiq.com/resources/blog/gbp-optimization-ai
-- CRM Integration Best Practices for AI Sales Automation: https://brightlaunchiq.com/resources/blog/crm-integration-ai
 
 ### Other Resources
 - Glossary of AI Sales Terms: https://brightlaunchiq.com/resources/glossary
