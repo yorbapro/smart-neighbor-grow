@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -14,6 +15,146 @@ const Blog = () => {
     keywords: "AI lead generation, AEO tips, AI sales automation articles, small business AI guides, learning center",
     speakable: ["h1", ".blog-intro"],
   });
+
+  // CollectionPage JSON-LD Schema for AI discoverability
+  useEffect(() => {
+    const collectionPageSchema = {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": "https://brightlaunchiq.com/resources/blog#collection",
+      "name": "BrightLaunchIQ Learning Center",
+      "description": "Expert guides on AI lead generation, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and human-guided sales automation for local businesses.",
+      "url": "https://brightlaunchiq.com/resources/blog",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://brightlaunchiq.com/#website",
+        "name": "BrightLaunchIQ",
+        "url": "https://brightlaunchiq.com"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "AI Lead Generation",
+          "description": "Using artificial intelligence to identify, qualify, and engage potential customers automatically"
+        },
+        {
+          "@type": "Thing",
+          "name": "Answer Engine Optimization",
+          "description": "Optimizing content for AI assistants and voice search"
+        },
+        {
+          "@type": "Thing",
+          "name": "Sales Automation",
+          "description": "Automating sales processes with human-guided AI systems"
+        }
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://brightlaunchiq.com/#organization",
+        "name": "BrightLaunchIQ",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://brightlaunchiq.com/favicon.ico"
+        }
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Learning Center Articles",
+        "numberOfItems": 12,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "What is Answer Engine Optimization (AEO)? The Complete Guide for 2026",
+            "url": "https://brightlaunchiq.com/resources/blog/what-is-aeo"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "The Shift: From Typing Keywords to Asking Questions",
+            "url": "https://brightlaunchiq.com/resources/blog/the-shift-from-typing-to-asking"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "SEO vs. AEO: Why Being #1 Isn't Enough Anymore",
+            "url": "https://brightlaunchiq.com/resources/blog/seo-vs-aeo-why-being-number-one-isnt-enough"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "GEO: How to Speak Robot to AI Assistants",
+            "url": "https://brightlaunchiq.com/resources/blog/geo-how-to-speak-robot-to-ai-assistants"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Local Search: Why Google Maps is Your New Storefront",
+            "url": "https://brightlaunchiq.com/resources/blog/local-search-google-maps-is-your-new-storefront"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Reviews: The Fuel That Powers AI Recommendations",
+            "url": "https://brightlaunchiq.com/resources/blog/reviews-the-fuel-that-powers-ai-recommendations"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "name": "The Solution: How to Handle It All Without Losing Your Mind",
+            "url": "https://brightlaunchiq.com/resources/blog/the-solution-how-to-handle-it-all"
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "name": "AI Lead Generation: How It Works and Why It Matters for Small Business",
+            "url": "https://brightlaunchiq.com/resources/blog/ai-lead-generation-guide"
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "name": "Human-Guided AI vs Fully Automated: Which is Right for Your Business?",
+            "url": "https://brightlaunchiq.com/resources/blog/human-guided-ai-vs-automated"
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "name": "The Speed to Lead Problem: Why 78% of Leads Are Lost",
+            "url": "https://brightlaunchiq.com/resources/blog/speed-to-lead-problem"
+          },
+          {
+            "@type": "ListItem",
+            "position": 11,
+            "name": "How to Optimize Your Google Business Profile for AI Search",
+            "url": "https://brightlaunchiq.com/resources/blog/gbp-optimization-ai"
+          },
+          {
+            "@type": "ListItem",
+            "position": 12,
+            "name": "CRM Integration Best Practices for AI Sales Automation",
+            "url": "https://brightlaunchiq.com/resources/blog/crm-integration-ai"
+          }
+        ]
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".blog-intro"]
+      }
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'collection-page-schema';
+    script.textContent = JSON.stringify(collectionPageSchema);
+    document.head.appendChild(script);
+
+    return () => {
+      const existingScript = document.getElementById('collection-page-schema');
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
 
   const featuredArticle = {
     title: "What is Answer Engine Optimization (AEO)? The Complete Guide for 2026",
