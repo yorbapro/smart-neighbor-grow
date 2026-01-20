@@ -251,6 +251,19 @@ const Pricing = () => {
       {/* Pricing Cards */}
       <section className="py-20 md:py-28">
         <div className="container">
+          {/* Intro Section */}
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
+              Choose Your Path to Growth
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Packages Built for Your Goals
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              From local visibility to complete business automation—find the right solution for where you are today.
+            </p>
+          </div>
+
           <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {products.map((product) => (
               <div
