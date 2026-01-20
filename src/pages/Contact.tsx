@@ -53,7 +53,62 @@ const Contact = () => {
         "Contact BrightLaunchIQ for AI lead generation and sales automation. Get answers to your questions or schedule a free revenue audit."
       );
     }
+
+    // Add keywords meta
+    const existingKeywords = document.querySelector('meta[name="keywords"]');
+    const keywordsContent = "contact BrightLaunchIQ, AI sales consultation, schedule demo, AI lead generation contact, sales automation inquiry";
+    if (existingKeywords) {
+      existingKeywords.setAttribute("content", keywordsContent);
+    } else {
+      const keywordsMeta = document.createElement("meta");
+      keywordsMeta.name = "keywords";
+      keywordsMeta.content = keywordsContent;
+      document.head.appendChild(keywordsMeta);
+    }
+
+    // ContactPage Schema for GEO
+    const existingSchemas = document.querySelectorAll('script[type="application/ld+json"]');
+    existingSchemas.forEach(script => script.remove());
+
+    const contactSchema = document.createElement("script");
+    contactSchema.type = "application/ld+json";
+    contactSchema.id = "contact-schema";
+    contactSchema.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact BrightLaunchIQ",
+      "description": "Get in touch with BrightLaunchIQ for AI lead generation and sales automation solutions.",
+      "url": "https://brightlaunchiq.com/contact",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "BrightLaunchIQ",
+        "telephone": "1-800-LAUNCH-IQ",
+        "email": "success@BrightLaunchIQ.com",
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "telephone": "1-800-LAUNCH-IQ",
+          "email": "success@BrightLaunchIQ.com",
+          "availableLanguage": "English"
+        }
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1"]
+      }
+    });
+    document.head.appendChild(contactSchema);
+
     window.scrollTo(0, 0);
+
+    return () => {
+      const el = document.getElementById("contact-schema");
+      if (el) el.remove();
+    };
   }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

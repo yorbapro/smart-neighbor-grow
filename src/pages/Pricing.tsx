@@ -24,14 +24,97 @@ import {
 
 const Pricing = () => {
   useEffect(() => {
-    document.title = "Pricing - AI Sales Automation for Local Business | BrightLaunchIQ";
+    document.title = "Pricing - AI Sales Automation for Small Business | BrightLaunchIQ";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Transparent pricing for AI-powered sales automation. LaunchPad 360™ starts at $1,500 setup + $500/month. Get a 24/7 digital teammate for just $16.60/day.");
+      metaDescription.setAttribute("content", "Transparent pricing for AI-powered sales automation. LaunchPad 360™ starts at $2,500 setup + $599/month. Get a 24/7 digital teammate for just $19.97/day.");
     }
 
+    // Add keywords meta
+    const existingKeywords = document.querySelector('meta[name="keywords"]');
+    const keywordsContent = "AI sales pricing, AI lead generation cost, sales automation pricing, LaunchPad 360 pricing, LocalLift pricing, AI SDR cost, small business AI pricing";
+    if (existingKeywords) {
+      existingKeywords.setAttribute("content", keywordsContent);
+    } else {
+      const keywordsMeta = document.createElement("meta");
+      keywordsMeta.name = "keywords";
+      keywordsMeta.content = keywordsContent;
+      document.head.appendChild(keywordsMeta);
+    }
+
+    // PriceSpecification Schema for GEO
+    const existingSchemas = document.querySelectorAll('script[type="application/ld+json"]');
+    existingSchemas.forEach(script => script.remove());
+
+    const pricingSchema = document.createElement("script");
+    pricingSchema.type = "application/ld+json";
+    pricingSchema.id = "pricing-schema";
+    pricingSchema.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "BrightLaunchIQ Pricing",
+      "description": "Transparent pricing for AI-powered sales automation. Compare costs of human SDR vs AI teammate.",
+      "url": "https://brightlaunchiq.com/pricing",
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "AI Sales Automation Products",
+        "itemListElement": [
+          {
+            "@type": "Product",
+            "position": 1,
+            "name": "LocalLift™",
+            "description": "Answer Engine Optimization and local visibility for small businesses.",
+            "offers": {
+              "@type": "Offer",
+              "price": "299",
+              "priceCurrency": "USD",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "299",
+                "priceCurrency": "USD",
+                "unitText": "MONTH"
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "position": 2,
+            "name": "LaunchPad 360™",
+            "description": "Complete AI sales engine with human oversight, multi-channel outreach, and 60-second lead response.",
+            "offers": {
+              "@type": "Offer",
+              "price": "599",
+              "priceCurrency": "USD",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "599",
+                "priceCurrency": "USD",
+                "unitText": "MONTH"
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "position": 3,
+            "name": "OmniLogic™",
+            "description": "Custom enterprise AI workflows and business automation solutions."
+          }
+        ]
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".text-gradient"]
+      }
+    });
+    document.head.appendChild(pricingSchema);
+
     window.scrollTo(0, 0);
+
+    return () => {
+      const el = document.getElementById("pricing-schema");
+      if (el) el.remove();
+    };
   }, []);
 
   const products = [

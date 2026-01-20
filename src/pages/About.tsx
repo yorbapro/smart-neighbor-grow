@@ -47,6 +47,10 @@ const About = () => {
         "description": "Human-guided AI for business growth. We help contractors, consultants, and local businesses respond first, automate the busywork, and win more customers.",
         "foundingDate": "2023",
         "slogan": "Making Big Tech Work for Main Street",
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
         "knowsAbout": [
           "AI Lead Generation",
           "AI Sales Automation",
