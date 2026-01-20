@@ -31,6 +31,10 @@
     --accent: 38 92% 50%;
     --accent-foreground: 222 47% 11%;
 
+    /* Electric green for audit/free tool CTAs */
+    --audit: 145 80% 45%;
+    --audit-foreground: 0 0% 100%;
+
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
@@ -50,10 +54,12 @@
     
     --shadow-glow: 0 0 60px hsl(187 92% 42% / 0.25);
     --shadow-glow-accent: 0 0 40px hsl(38 92% 50% / 0.3);
+    --shadow-glow-audit: 0 0 40px hsl(145 80% 45% / 0.4);
     --shadow-card: 0 4px 20px -4px hsl(222 47% 11% / 0.06);
     --shadow-card-hover: 0 20px 50px -12px hsl(187 92% 42% / 0.15);
     --shadow-button: 0 4px 20px -4px hsl(187 92% 42% / 0.5);
     --shadow-button-accent: 0 4px 20px -4px hsl(38 92% 50% / 0.5);
+    --shadow-button-audit: 0 4px 20px -4px hsl(145 80% 45% / 0.5);
 
     /* Typography */
     --font-display: 'Space Grotesk', sans-serif;
@@ -81,6 +87,9 @@
 
     --accent: 38 92% 55%;
     --accent-foreground: 222 47% 8%;
+
+    --audit: 145 80% 50%;
+    --audit-foreground: 0 0% 100%;
 
     --border: 222 47% 16%;
     --input: 222 47% 16%;
@@ -177,6 +186,10 @@
     box-shadow: var(--shadow-glow-accent);
   }
 
+  .shadow-glow-audit {
+    box-shadow: var(--shadow-glow-audit);
+  }
+
   .shadow-card {
     box-shadow: var(--shadow-card);
   }
@@ -191,6 +204,10 @@
 
   .shadow-button-accent {
     box-shadow: var(--shadow-button-accent);
+  }
+
+  .shadow-button-audit {
+    box-shadow: var(--shadow-button-audit);
   }
 
   .animate-float {
