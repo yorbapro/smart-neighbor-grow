@@ -100,45 +100,86 @@
   </head>
 
   <body>
-    <!-- Static content for AI crawlers and SEO (hidden when JS loads) -->
-    <noscript>
-      <header>
+    <!--
+      Progressive enhancement for headless/non-JS clients:
+      - Static marketing HTML is visible by default (so curl/headless gets real copy)
+      - As soon as any JS runs, we add a class to hide the fallback to avoid duplicate content for normal users
+    -->
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+
+    <header id="prerender-fallback" role="banner">
+      <div>
         <h1>BrightLaunchIQ - Get More Customers with Human-Guided AI</h1>
         <p>AI lead generation and sales implementation for local businesses. Your 24/7 digital teammate that books meetings while you sleep.</p>
-      </header>
-      <main>
-        <section>
-          <h2>Our Services</h2>
-          <article>
-            <h3>LocalLift™ - Local Visibility & Reputation</h3>
-            <p>Dominate local search with AI-powered visibility and reputation management. Setup: $1,500, Monthly: $299.</p>
-          </article>
-          <article>
-            <h3>LaunchPad 360™ - Complete AI Sales System</h3>
-            <p>Your 24/7 digital sales teammate. Voice, email, and SMS automation that books meetings while you sleep. Just $20/day vs $308/day for a human SDR.</p>
-          </article>
-          <article>
-            <h3>OmniLogic™ - Enterprise AI Workflows</h3>
-            <p>Custom enterprise-grade AI solutions. Complex integrations and workflows tailored to your business needs.</p>
-          </article>
-        </section>
-        <section>
-          <h2>Why Choose BrightLaunchIQ?</h2>
-          <ul>
-            <li>Human-Guided AI - Not fully autonomous, humans stay in control</li>
-            <li>24/7 Lead Generation - Your AI teammate never sleeps</li>
-            <li>Cost Effective - $20/day vs $308/day for human SDR</li>
-            <li>14-Day Implementation - Go live in just two weeks</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Contact Us</h2>
-          <p>Schedule your free 15-minute Revenue Audit today.</p>
+        <nav aria-label="Primary">
           <a href="/get-started">Get Started</a>
-        </section>
-      </main>
-    </noscript>
-    
+          <a href="/pricing">Pricing</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="prerender-fallback-content">
+      <section>
+        <h2>Our Services</h2>
+        <article>
+          <h3>LocalLift™ - Local Visibility &amp; Reputation</h3>
+          <p>Dominate local search with AI-powered visibility and reputation management. Setup: $1,500, Monthly: $299.</p>
+        </article>
+        <article>
+          <h3>LaunchPad 360™ - Complete AI Sales System</h3>
+          <p>Your 24/7 digital sales teammate. Voice, email, and SMS automation that books meetings while you sleep. Just $20/day vs $308/day for a human SDR.</p>
+        </article>
+        <article>
+          <h3>OmniLogic™ - Enterprise AI Workflows</h3>
+          <p>Custom enterprise-grade AI solutions. Complex integrations and workflows tailored to your business needs.</p>
+        </article>
+      </section>
+
+      <section>
+        <h2>Why Choose BrightLaunchIQ?</h2>
+        <ul>
+          <li>Human-Guided AI - Not fully autonomous, humans stay in control</li>
+          <li>24/7 Lead Generation - Your AI teammate never sleeps</li>
+          <li>Cost Effective - $20/day vs $308/day for human SDR</li>
+          <li>14-Day Implementation - Go live in just two weeks</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Schedule a Revenue Audit</h2>
+        <p>Schedule your free 15-minute Revenue Audit today.</p>
+        <a href="/get-started">Start Here</a>
+      </section>
+    </main>
+
+    <style>
+      /* Visible by default for non-JS/headless clients */
+      #prerender-fallback,
+      #prerender-fallback-content {
+        display: block;
+        max-width: 72rem;
+        margin: 0 auto;
+        padding: 2rem 1.25rem;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        line-height: 1.5;
+      }
+      #prerender-fallback nav {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+      }
+
+      /* Hide fallback once any JS runs to prevent duplicate content for normal users */
+      .js #prerender-fallback,
+      .js #prerender-fallback-content {
+        display: none;
+      }
+    </style>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
