@@ -142,16 +142,52 @@ const Blog = () => {
       }
     };
 
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.id = 'collection-page-schema';
-    script.textContent = JSON.stringify(collectionPageSchema);
-    document.head.appendChild(script);
+    // BreadcrumbList schema for navigation signals
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://brightlaunchiq.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://brightlaunchiq.com/resources"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Learning Center",
+          "item": "https://brightlaunchiq.com/resources/blog"
+        }
+      ]
+    };
+
+    const collectionScript = document.createElement('script');
+    collectionScript.type = 'application/ld+json';
+    collectionScript.id = 'collection-page-schema';
+    collectionScript.textContent = JSON.stringify(collectionPageSchema);
+    document.head.appendChild(collectionScript);
+
+    const breadcrumbScript = document.createElement('script');
+    breadcrumbScript.type = 'application/ld+json';
+    breadcrumbScript.id = 'breadcrumb-schema';
+    breadcrumbScript.textContent = JSON.stringify(breadcrumbSchema);
+    document.head.appendChild(breadcrumbScript);
 
     return () => {
-      const existingScript = document.getElementById('collection-page-schema');
-      if (existingScript) {
-        existingScript.remove();
+      const existingCollectionScript = document.getElementById('collection-page-schema');
+      if (existingCollectionScript) {
+        existingCollectionScript.remove();
+      }
+      const existingBreadcrumbScript = document.getElementById('breadcrumb-schema');
+      if (existingBreadcrumbScript) {
+        existingBreadcrumbScript.remove();
       }
     };
   }, []);
