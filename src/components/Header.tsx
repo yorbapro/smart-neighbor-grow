@@ -29,7 +29,7 @@ const Header = () => {
 
   const resourceLinks = [
     { label: "How AI Lead Gen Works", href: "/resources/how-it-works" },
-    { label: "Blog", href: "/resources/blog" },
+    { label: "Learning Center", href: "/resources/blog" },
     { label: "Case Studies", href: "/resources/case-studies" },
     { label: "Glossary", href: "/resources/glossary" },
     { label: "AI vs Traditional", href: "/resources/comparison" },
