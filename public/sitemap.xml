@@ -54,12 +54,13 @@
     <priority>0.8</priority>
   </url>
   
-  <!-- Resources Section -->
+  <!-- Learning Center & Resources -->
   <url>
     <loc>https://brightlaunchiq.com/resources/blog</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <!-- Learning Center: AI & Sales Insights hub -->
   </url>
   
   <url>
@@ -90,7 +91,7 @@
     <priority>0.8</priority>
   </url>
   
-  <!-- Blog Articles -->
+  <!-- Learning Center Articles -->
   <url>
     <loc>https://brightlaunchiq.com/resources/blog/what-is-aeo</loc>
     <lastmod>2026-01-09</lastmod>
