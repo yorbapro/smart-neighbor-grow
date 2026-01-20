@@ -322,7 +322,7 @@ const AEOAudit = () => {
                   type="submit" 
                   variant="hero" 
                   size="lg" 
-                  className="w-full"
+                  className="w-full bg-audit hover:bg-audit/90 shadow-glow-audit"
                   disabled={isLoading}
                 >
                   {isLoading ? (
