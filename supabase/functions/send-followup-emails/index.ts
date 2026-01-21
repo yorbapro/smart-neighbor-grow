@@ -1,10 +1,24 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { Resend } from "https://esm.sh/resend@2.0.0";
+import DOMPurify from "https://esm.sh/isomorphic-dompurify@2.0.0";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+};
+
+// Sanitization config for email-safe HTML
+const SANITIZE_CONFIG = {
+  ALLOWED_TAGS: [
+    'p', 'br', 'strong', 'em', 'a', 'ul', 'ol', 'li',
+    'h1', 'h2', 'h3', 'h4', 'div', 'span', 'table', 'tr',
+    'td', 'th', 'tbody', 'thead', 'hr', 'img'
+  ],
+  ALLOWED_ATTR: ['href', 'style', 'class', 'src', 'alt', 'width', 'height'],
+  ALLOW_DATA_ATTR: false,
+  FORBID_TAGS: ['script', 'iframe', 'object', 'embed', 'base'],
+  FORBID_ATTR: ['onerror', 'onload', 'onclick', 'onmouseover'],
 };
 
 interface Lead {
@@ -188,7 +202,8 @@ serve(async (req) => {
       };
 
       let subject = template.subject;
-      let bodyHtml = template.body_html;
+      // Sanitize the template HTML server-side before variable replacement
+      let bodyHtml = DOMPurify.sanitize(template.body_html, SANITIZE_CONFIG);
 
       for (const [key, value] of Object.entries(variables)) {
         const regex = new RegExp(`\\{\\{${key}\\}\\}`, 'g');
