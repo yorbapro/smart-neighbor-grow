@@ -101,11 +101,21 @@ const AdminEmailTemplates = () => {
 
     const { data: { user } } = await supabase.auth.getUser();
 
+    // Sanitize HTML before saving (defense-in-depth, server also sanitizes)
+    const sanitizedHtml = DOMPurify.sanitize(editedBody, {
+      ALLOWED_TAGS: [
+        'p', 'br', 'strong', 'em', 'a', 'ul', 'ol', 'li',
+        'h1', 'h2', 'h3', 'h4', 'div', 'span', 'table', 'tr',
+        'td', 'th', 'tbody', 'thead', 'hr', 'img'
+      ],
+      ALLOWED_ATTR: ['href', 'style', 'class', 'src', 'alt', 'width', 'height'],
+    });
+
     const { error } = await supabase
       .from("email_templates")
       .update({
         subject: editedSubject,
-        body_html: editedBody,
+        body_html: sanitizedHtml,
         updated_at: new Date().toISOString(),
         updated_by: user?.id,
       })
@@ -116,6 +126,8 @@ const AdminEmailTemplates = () => {
       console.error(error);
     } else {
       toast.success("Template saved");
+      // Update local state with sanitized version
+      setEditedBody(sanitizedHtml);
       fetchTemplates();
     }
     setIsSaving(false);
