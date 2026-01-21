@@ -61,14 +61,58 @@ serve(async (req) => {
     
     const supabaseUrl = Deno.env.get("SUPABASE_URL");
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+    const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY");
     const resendApiKey = Deno.env.get("RESEND_API_KEY");
+    const cronSecret = Deno.env.get("CRON_SECRET");
 
-    if (!supabaseUrl || !supabaseServiceKey) {
+    if (!supabaseUrl || !supabaseServiceKey || !supabaseAnonKey) {
       throw new Error("Missing Supabase credentials");
     }
 
     if (!resendApiKey) {
       throw new Error("Missing RESEND_API_KEY");
+    }
+
+    // Authentication check: Allow either admin JWT or CRON_SECRET
+    const authHeader = req.headers.get("Authorization");
+    let isAuthorized = false;
+
+    // Option 1: Check for CRON_SECRET (for scheduled jobs)
+    if (cronSecret && authHeader === `Bearer ${cronSecret}`) {
+      console.log("Authorized via CRON_SECRET");
+      isAuthorized = true;
+    }
+
+    // Option 2: Check for admin JWT (for manual triggers from admin panel)
+    if (!isAuthorized && authHeader?.startsWith("Bearer ")) {
+      const supabaseClient = createClient(supabaseUrl, supabaseAnonKey, {
+        global: { headers: { Authorization: authHeader } },
+      });
+
+      const token = authHeader.replace("Bearer ", "");
+      const { data: claimsData, error: claimsError } = await supabaseClient.auth.getClaims(token);
+      
+      if (!claimsError && claimsData?.claims?.sub) {
+        const userId = claimsData.claims.sub;
+        // Check if user has admin role
+        const { data: isAdmin } = await supabaseClient.rpc("has_role", {
+          _user_id: userId,
+          _role: "admin",
+        });
+
+        if (isAdmin) {
+          console.log("Authorized via admin JWT");
+          isAuthorized = true;
+        }
+      }
+    }
+
+    if (!isAuthorized) {
+      console.error("Unauthorized access attempt");
+      return new Response(
+        JSON.stringify({ error: "Unauthorized" }),
+        { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
     }
 
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
