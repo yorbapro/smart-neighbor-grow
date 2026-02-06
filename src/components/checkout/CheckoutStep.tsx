@@ -5,14 +5,17 @@ import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import type { LeadData } from "@/pages/GetStarted";
+import { ProductTier, getProductByTier } from "@/lib/products";
 
 interface CheckoutStepProps {
   leadData: LeadData;
+  selectedProduct: ProductTier;
   onBack: () => void;
 }
 
-const CheckoutStep = ({ leadData, onBack }: CheckoutStepProps) => {
+const CheckoutStep = ({ leadData, selectedProduct, onBack }: CheckoutStepProps) => {
   const [isLoading, setIsLoading] = useState(false);
+  const product = getProductByTier(selectedProduct);
 
   const handleCheckout = async () => {
     setIsLoading(true);
@@ -22,6 +25,7 @@ const CheckoutStep = ({ leadData, onBack }: CheckoutStepProps) => {
           email: leadData.email,
           businessName: leadData.businessName,
           industry: leadData.industry,
+          product: selectedProduct,
         },
       });
 
@@ -53,42 +57,34 @@ const CheckoutStep = ({ leadData, onBack }: CheckoutStepProps) => {
         <div className="space-y-4 mb-6">
           <div className="flex justify-between items-center py-3 border-b border-border">
             <div>
-              <p className="font-semibold text-foreground">LaunchPad 360™ Setup</p>
+              <p className="font-semibold text-foreground">{product.name} Setup</p>
               <p className="text-sm text-muted-foreground">One-time infrastructure build</p>
             </div>
-            <span className="font-bold text-foreground">$1,500</span>
+            <span className="font-bold text-foreground">${product.setupPrice.toLocaleString()}</span>
           </div>
 
           <div className="flex justify-between items-center py-3 border-b border-border">
             <div>
-              <p className="font-semibold text-foreground">LaunchPad 360™ Monthly</p>
-              <p className="text-sm text-muted-foreground">Starts 14 days after onboarding</p>
+              <p className="font-semibold text-foreground">{product.name} Monthly</p>
+              <p className="text-sm text-muted-foreground">Starts {product.trialDays} days after onboarding</p>
             </div>
-            <span className="font-bold text-foreground">$500/mo</span>
+            <span className="font-bold text-foreground">${product.monthlyPrice}/mo</span>
           </div>
         </div>
 
         <div className="bg-secondary/50 rounded-xl p-4 mb-6">
           <div className="flex justify-between items-center">
             <span className="font-semibold text-foreground">Due Today</span>
-            <span className="font-display text-2xl font-bold text-primary">$1,500</span>
+            <span className="font-display text-2xl font-bold text-primary">${product.setupPrice.toLocaleString()}</span>
           </div>
           <p className="text-sm text-muted-foreground mt-1">
-            Then $500/month starting 14 days after your strategy session
+            Then ${product.monthlyPrice}/month starting {product.trialDays} days after your strategy session
           </p>
         </div>
 
         <div className="space-y-3">
           <h3 className="font-semibold text-foreground">What's Included:</h3>
-          {[
-            "Custom AI infrastructure build",
-            "500+ targeted local leads",
-            "Multi-channel outreach (calls, SMS, email, LinkedIn)",
-            "60-minute strategy session",
-            "Automated inbox triage",
-            "Monthly success audits",
-            "14-Day Speed to Lead Guarantee",
-          ].map((feature) => (
+          {product.features.map((feature) => (
             <div key={feature} className="flex items-center gap-2">
               <Check className="w-4 h-4 text-accent flex-shrink-0" />
               <span className="text-sm text-muted-foreground">{feature}</span>
@@ -131,7 +127,7 @@ const CheckoutStep = ({ leadData, onBack }: CheckoutStepProps) => {
             ) : (
               <>
                 <CreditCard className="mr-2" size={20} />
-                Pay $1,500 Now
+                Pay ${product.setupPrice.toLocaleString()} Now
               </>
             )}
           </Button>
