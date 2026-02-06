@@ -27,6 +27,8 @@ const FAQ = () => {
         { "@type": "Question", "name": "What is AI lead generation?", "acceptedAnswer": { "@type": "Answer", "text": "AI lead generation uses artificial intelligence to identify, qualify, and engage potential customers automatically. For small businesses, this means having a 24/7 digital teammate that finds prospects showing buying intent, responds in under 60 seconds, and nurtures leads through personalized outreach—all supervised by human experts." }},
         { "@type": "Question", "name": "What is human-guided AI?", "acceptedAnswer": { "@type": "Answer", "text": "Human-guided AI means real experts supervise every AI system. Our consultants set the rules, monitor results, and ensure customer touchpoints feel authentic—never robotic. This gives you AI power with human judgment." }},
         { "@type": "Question", "name": "How much does AI sales automation cost?", "acceptedAnswer": { "@type": "Answer", "text": "BrightLaunchIQ offers AI sales automation starting at $500/month after a one-time $1,500 setup fee. This breaks down to $16.60 per day for a 24/7 AI sales team—compared to $80,000+ per year for a human hire." }},
+        { "@type": "Question", "name": "What is LeadLine™?", "acceptedAnswer": { "@type": "Answer", "text": "LeadLine™ is an AI-powered voice assistant that answers calls and qualifies leads within seconds. It works 24/7/365, books appointments automatically, and costs just $13.30/day—compared to $3,000+/month for a human receptionist." }},
+        { "@type": "Question", "name": "How fast does LeadLine™ answer calls?", "acceptedAnswer": { "@type": "Answer", "text": "LeadLine™ answers calls instantly—within 1-2 rings. For form submissions, it can call leads back within seconds, ensuring you're always first to respond." }},
         { "@type": "Question", "name": "What is Answer Engine Optimization (AEO)?", "acceptedAnswer": { "@type": "Answer", "text": "AEO optimizes your business to be cited as the direct answer when people ask AI tools like ChatGPT, Gemini, Perplexity, or voice assistants. Unlike traditional SEO, AEO positions you as the authoritative answer across AI platforms." }},
         { "@type": "Question", "name": "What is an AI SDR?", "acceptedAnswer": { "@type": "Answer", "text": "An AI SDR (Sales Development Representative) is an automated system that handles prospecting, outreach, and lead qualification using AI. LaunchPad 360™ is a human-guided AI SDR that combines automation with expert oversight." }}
       ]
@@ -49,6 +51,16 @@ const FAQ = () => {
       ]
     },
     {
+      title: "LeadLine™ AI Voice Assistant",
+      faqs: [
+        { q: "What is LeadLine™?", a: "LeadLine™ is an AI-powered voice assistant that answers calls and qualifies leads within seconds. It works 24/7/365, books appointments automatically, and costs just $13.30/day—compared to $3,000+/month for a human receptionist." },
+        { q: "How fast does LeadLine™ answer calls?", a: "LeadLine™ answers calls instantly—within 1-2 rings. For form submissions, it can call leads back within seconds of submission, ensuring you're always first to respond. Research shows 50% of sales go to the first business that responds." },
+        { q: "Can LeadLine™ book appointments on my calendar?", a: "Yes! LeadLine™ integrates with your calendar to check availability and book appointments in real-time during the call. It sends confirmations and reminders automatically—no more back-and-forth scheduling." },
+        { q: "Does LeadLine™ sound like a robot?", a: "LeadLine™ uses advanced conversational AI with natural-sounding voices. Most callers can't tell they're talking to AI. The system handles complex conversations, follows up on questions, and maintains context throughout the call." },
+        { q: "How much does LeadLine™ cost?", a: "LeadLine™ costs $1,500 one-time setup plus $399/month ongoing—just $13.30/day for 24/7 AI-powered call answering. Compare that to $3,000+/month for a human receptionist who only works business hours." },
+      ]
+    },
+    {
       title: "Human-Guided AI",
       faqs: [
         { q: "What is human-guided AI?", a: "Human-guided AI means real experts supervise every AI system. Our consultants set the rules, monitor results, and ensure customer touchpoints feel authentic—never robotic. This 'bounded autonomy' gives you AI power with human judgment." },
@@ -59,8 +71,8 @@ const FAQ = () => {
     {
       title: "Pricing & ROI",
       faqs: [
-        { q: "How much does AI sales automation cost?", a: "BrightLaunchIQ offers AI sales automation starting at $500/month after a one-time $1,500 setup. This breaks down to $16.60/day for a 24/7 AI sales team—compared to $80,000+/year for a human hire. Most clients see ROI within 30 days." },
-        { q: "What's included in the $500/month?", a: "LaunchPad 360™ includes: 500+ targeted leads, multi-channel outreach (calls, SMS, email, LinkedIn), real-time lead scoring, pipeline dashboard, conversation intelligence, CRM integration, and ongoing human expert oversight." },
+        { q: "How much does AI sales automation cost?", a: "BrightLaunchIQ offers tiered pricing: LocalLift™ at $299/month, LeadLine™ at $399/month, and LaunchPad 360™ at $599/month. Each includes a one-time setup fee. The daily cost ranges from $9.97 to $19.97—compared to $308/day for a human SDR." },
+        { q: "What's included in LaunchPad 360™?", a: "LaunchPad 360™ includes: 500+ targeted leads, multi-channel outreach (calls, SMS, email, LinkedIn), real-time lead scoring, pipeline dashboard, conversation intelligence, CRM integration, and ongoing human expert oversight." },
         { q: "Do you offer a guarantee?", a: "Yes! Our 14-Day Speed to Lead Guarantee: we move your business from 'Zero' to 'Automated Meetings' in 14 days. If we don't significantly increase your pipeline velocity within 30 days, we work for free until we do." },
       ]
     },
