@@ -2,7 +2,7 @@
 
 > Human-Guided AI for Business Growth. We help contractors, consultants, and industry firms respond first, automate the busywork, and win more customers locally.
 
-BrightLaunchIQ is an AI consulting agency that combines local experts, AI-driven sales tools, and proven automation to help small businesses grow. We specialize in AI lead generation, AI sales implementation, and Answer Engine Optimization (AEO) for local businesses across the United States.
+BrightLaunchIQ is an AI consulting agency that combines local experts, AI-driven sales tools, and proven automation to help small businesses grow. We specialize in AI lead generation, AI sales implementation, AI voice assistants, and Answer Engine Optimization (AEO) for local businesses across the United States.
 
 ---
 
@@ -53,6 +53,7 @@ Every automation and follow-up is overseen by people who make sure BrightLaunchI
 Boost your visibility in AI search, voice assistants, and Google Maps.
 
 **Pricing**: $1,500 one-time setup + $299/month
+**Daily Cost**: Just $9.97/day
 **Best For**: Local businesses wanting to dominate AI search results
 
 **Features**:
@@ -64,6 +65,36 @@ Boost your visibility in AI search, voice assistants, and Google Maps.
 - Review management and reputation building
 
 **CTA**: Schedule My 15-Minute Revenue Audit
+**URL**: https://brightlaunchiq.com/products/locallift
+
+---
+
+### LeadLine™ - AI Voice Assistant
+24/7 AI-powered voice assistant that answers calls and qualifies leads within seconds.
+
+**Pricing**: $1,500 one-time setup + $399/month
+**Daily Cost**: Just $13.30/day
+**Best For**: Businesses that can't afford to miss calls
+**Live Demo**: https://agent.retellai.com/preview/agent_19d43cf736300711221e30a6b0
+
+**Features**:
+- Instant call answering (1-2 rings)
+- Lead qualification and scoring
+- Real-time appointment booking
+- Call transcription and analytics
+- CRM integration
+- Custom voice and scripts
+- 24/7/365 availability
+
+**Key Benefits**:
+- Never miss a call again—day, night, weekends, or holidays
+- Calls back form leads within seconds of submission
+- Natural conversational AI that handles complex questions
+- 95% caller satisfaction rate
+- 3x more appointments booked vs traditional methods
+
+**CTA**: Experience LeadLine™ (Live Demo)
+**URL**: https://brightlaunchiq.com/products/leadline
 
 ---
 
@@ -71,7 +102,7 @@ Boost your visibility in AI search, voice assistants, and Google Maps.
 Your complete AI sales implementation system that works 24/7.
 
 **Pricing**: $2,500 one-time setup + $599/month
-**Daily Cost**: Just $20/day for a 24/7 digital teammate
+**Daily Cost**: Just $19.97/day for a 24/7 digital teammate
 **Guarantee**: 30-Day Speed to Lead Guarantee
 **Best For**: Businesses wanting automated lead generation and sales
 
@@ -91,6 +122,7 @@ Your complete AI sales implementation system that works 24/7.
 - Output of 5-person sales team at fraction of cost
 
 **CTA**: Schedule My 15-Minute Revenue Audit
+**URL**: https://brightlaunchiq.com/products/launchpad-360
 
 ---
 
@@ -108,6 +140,7 @@ Custom enterprise-grade AI solutions for complex business needs.
 - Dedicated implementation team
 
 **CTA**: Request Custom Enterprise Quote
+**URL**: https://brightlaunchiq.com/products/custom-ai-workflows
 
 ---
 
@@ -118,7 +151,9 @@ A direct cost comparison showing why AI makes sense:
 | Option | Daily Cost | Annual Cost | Availability |
 |--------|------------|-------------|--------------|
 | Human SDR | $308/day | $80,000+/year | 40 hrs/week |
-| LaunchPad 360™ | $20/day | ~$7,200/year | 168 hrs/week (24/7) |
+| Human Receptionist | $100/day | $36,000+/year | 40 hrs/week |
+| LeadLine™ | $13.30/day | ~$4,800/year | 168 hrs/week (24/7) |
+| LaunchPad 360™ | $19.97/day | ~$7,200/year | 168 hrs/week (24/7) |
 
 **Savings**: $70,000+/year with 4x more availability
 
@@ -208,8 +243,17 @@ Human-guided AI (also called human-in-the-loop AI) means every AI automation is 
 ### What is AI sales implementation?
 AI sales implementation is building and installing custom automated sales systems directly into your existing business ecosystem (CRM, email, phone), creating infrastructure you own that generates leads 24/7.
 
+### What is LeadLine™?
+LeadLine™ is an AI-powered voice assistant that answers calls and qualifies leads within seconds of a form submission. It books appointments automatically, works 24/7/365, and costs just $13.30/day—compared to $3,000+/month for a human receptionist.
+
+### How fast does LeadLine™ answer calls?
+LeadLine™ answers calls instantly—within 1-2 rings. For form submissions, it can call leads back within seconds, ensuring you're always first to respond.
+
 ### How much does AI lead generation cost?
-LaunchPad 360™ costs $2,500 one-time setup plus $599/month—just $20/day for a 24/7 digital teammate versus $308/day for a human SDR.
+LaunchPad 360™ costs $2,500 one-time setup plus $599/month—just $19.97/day for a 24/7 digital teammate versus $308/day for a human SDR.
+
+### How much does LeadLine cost?
+LeadLine™ costs $1,500 one-time setup plus $399/month—just $13.30/day for 24/7 AI-powered call answering versus $3,000+/month for a receptionist.
 
 ### How much does LocalLift cost?
 LocalLift™ costs $1,500 one-time setup plus $299/month for complete local visibility and AEO optimization.
@@ -238,16 +282,18 @@ We serve professional services (legal, accounting, consulting), trade services (
 
 - Response time improvement: 47 hours → under 60 seconds
 - Lead capture rate increase: 78% of previously missed leads
-- Cost comparison: $20/day vs $308/day (Human SDR)
+- Cost comparison: $13.30/day (LeadLine) vs $100/day (Receptionist)
+- Cost comparison: $19.97/day (LaunchPad 360) vs $308/day (Human SDR)
 - Operational hours: 168 hours/week (24/7)
 - Team output equivalent: 5-person sales team
 - Annual savings: $70,000+ compared to human hire
+- LeadLine caller satisfaction: 95%
 
 ---
 
 ## Keywords
 
-AI lead generation, AI sales implementation, AI sales automation, human-guided AI, human-in-the-loop AI, AI for small business, AI for local business, automated sales engine, digital teammate, answer engine optimization, AEO, generative engine optimization, GEO, AI consulting agency, sales automation, lead generation Sacramento, AI sales California, small business automation, CRM automation, HubSpot automation, Salesforce automation, multi-channel outreach, automated prospecting, AI business growth, AI marketing automation
+AI lead generation, AI sales implementation, AI sales automation, AI voice assistant, AI receptionist, AI call answering, human-guided AI, human-in-the-loop AI, AI for small business, AI for local business, automated sales engine, digital teammate, answer engine optimization, AEO, generative engine optimization, GEO, AI consulting agency, sales automation, lead generation Sacramento, AI sales California, small business automation, CRM automation, HubSpot automation, Salesforce automation, multi-channel outreach, automated prospecting, AI business growth, AI marketing automation, LeadLine, LeadLine AI, 24/7 call answering
 
 ---
 
@@ -259,6 +305,8 @@ AI lead generation, AI sales implementation, AI sales automation, human-guided A
 
 "Finally, AI that actually works for a small business like ours." — Henderson Business Owner
 
+"LeadLine answers calls even when we're with customers. We haven't missed a lead in months." — HVAC Contractor
+
 ---
 
 ## Links
@@ -266,7 +314,9 @@ AI lead generation, AI sales implementation, AI sales automation, human-guided A
 - Homepage: https://brightlaunchiq.com
 - About Us: https://brightlaunchiq.com/about
 - Products: https://brightlaunchiq.com/products/launchpad-360
+- LeadLine: https://brightlaunchiq.com/products/leadline
 - LocalLift: https://brightlaunchiq.com/products/locallift
+- OmniLogic: https://brightlaunchiq.com/products/custom-ai-workflows
 - Free AEO Audit: https://brightlaunchiq.com/aeo-audit
 - Pricing: https://brightlaunchiq.com/pricing
 - FAQ: https://brightlaunchiq.com/faq
@@ -277,7 +327,7 @@ AI lead generation, AI sales implementation, AI sales automation, human-guided A
 
 ## Learning Center
 
-The BrightLaunchIQ Learning Center is our educational hub featuring expert guides, articles, and tutorials on AI lead generation, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and human-guided sales automation for local businesses.
+The BrightLaunchIQ Learning Center is our educational hub featuring expert guides, articles, and tutorials on AI lead generation, AI voice assistants, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and human-guided sales automation for local businesses.
 
 **URL**: https://brightlaunchiq.com/resources/blog
 
@@ -330,4 +380,4 @@ This website is a React single-page application. For AI crawlers that don't exec
 ---
 
 ## Last Updated
-2026-01-20
+2026-02-06
