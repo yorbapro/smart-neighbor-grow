@@ -7,6 +7,7 @@ const Footer = () => {
   const footerLinks = {
     solutions: [
       { label: "LaunchPad 360™", href: "/products/launchpad-360" },
+      { label: "LeadLine™", href: "/products/leadline" },
       { label: "LocalLift™", href: "/products/locallift" },
       { label: "Free AI Audit", href: "/aeo-audit" },
     ],
