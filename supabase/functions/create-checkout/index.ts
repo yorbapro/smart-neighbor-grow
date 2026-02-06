@@ -6,9 +6,28 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-// Price IDs from Stripe
-const SETUP_PRICE_ID = "price_1SmQCECUVmu4OLZn8JQo9bnb"; // $1,500 one-time
-const MONTHLY_PRICE_ID = "price_1SmQCVCUVmu4OLZnzHzOpbjz"; // $500/month
+// Product Price IDs from Stripe
+const PRICE_IDS = {
+  localLift: {
+    setup: "price_1SrM2NCUVmu4OLZneWNhhb7K", // $1,500 one-time
+    monthly: "price_1Sxt2ACUVmu4OLZn801dJhrz", // $299/month
+  },
+  leadLine: {
+    setup: "price_1SxsJSCUVmu4OLZnt5E5JP3o", // $1,500 one-time
+    monthly: "price_1SxsKaCUVmu4OLZnAWqwpSn9", // $399/month
+  },
+  launchPad360: {
+    setup: "price_1SmQCECUVmu4OLZn8JQo9bnb", // $1,500 one-time
+    monthly: "price_1SmQCVCUVmu4OLZnzHzOpbjz", // $500/month
+  },
+};
+
+type ProductTier = "localLift" | "leadLine" | "launchPad360";
+
+const logStep = (step: string, details?: any) => {
+  const detailsStr = details ? ` - ${JSON.stringify(details)}` : '';
+  console.log(`[CREATE-CHECKOUT] ${step}${detailsStr}`);
+};
 
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -17,7 +36,8 @@ serve(async (req) => {
   }
 
   try {
-    const { email, businessName, industry } = await req.json();
+    const { email, businessName, industry, product = "launchPad360" } = await req.json();
+    logStep("Request received", { email, businessName, industry, product });
 
     if (!email) {
       throw new Error("Email is required");
@@ -45,16 +65,25 @@ serve(async (req) => {
       customerId = customer.id;
     }
 
+    // Get the correct price IDs for the selected product
+    const productTier = product as ProductTier;
+    if (!PRICE_IDS[productTier]) {
+      throw new Error(`Invalid product tier: ${product}`);
+    }
+    
+    const { setup: setupPriceId, monthly: monthlyPriceId } = PRICE_IDS[productTier];
+    logStep("Using price IDs", { setupPriceId, monthlyPriceId, productTier });
+
     // Create checkout session with both setup fee and subscription
     const session = await stripe.checkout.sessions.create({
       customer: customerId,
       line_items: [
         {
-          price: SETUP_PRICE_ID,
+          price: setupPriceId,
           quantity: 1,
         },
         {
-          price: MONTHLY_PRICE_ID,
+          price: monthlyPriceId,
           quantity: 1,
         },
       ],
@@ -62,17 +91,21 @@ serve(async (req) => {
       success_url: `${req.headers.get("origin")}/payment-success`,
       cancel_url: `${req.headers.get("origin")}/get-started`,
       subscription_data: {
-        trial_period_days: 14, // First monthly charge after 14 days
+        trial_period_days: 14,
         metadata: {
           businessName: businessName || "",
           industry: industry || "",
+          product: productTier,
         },
       },
       metadata: {
         businessName: businessName || "",
         industry: industry || "",
+        product: productTier,
       },
     });
+
+    logStep("Checkout session created", { sessionId: session.id, url: session.url });
 
     return new Response(JSON.stringify({ url: session.url }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -80,7 +113,7 @@ serve(async (req) => {
     });
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : String(error);
-    console.error("Checkout error:", errorMessage);
+    logStep("ERROR in create-checkout", { message: errorMessage });
     return new Response(JSON.stringify({ error: errorMessage }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500,

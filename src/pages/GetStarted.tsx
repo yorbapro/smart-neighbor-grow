@@ -5,6 +5,8 @@ import Footer from "@/components/Footer";
 import LeadCaptureForm from "@/components/checkout/LeadCaptureForm";
 import TailoredReport from "@/components/checkout/TailoredReport";
 import CheckoutStep from "@/components/checkout/CheckoutStep";
+import ProductSelector from "@/components/checkout/ProductSelector";
+import { ProductTier } from "@/lib/products";
 
 export type LeadData = {
   businessName: string;
@@ -17,7 +19,8 @@ export type LeadData = {
 };
 
 const GetStarted = () => {
-  const [step, setStep] = useState<"capture" | "report" | "checkout">("capture");
+  const [step, setStep] = useState<"product" | "capture" | "report" | "checkout">("product");
+  const [selectedProduct, setSelectedProduct] = useState<ProductTier>("launchPad360");
   const [leadData, setLeadData] = useState<LeadData | null>(null);
   const navigate = useNavigate();
 
@@ -44,6 +47,14 @@ const GetStarted = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const handleProductSelect = (product: ProductTier) => {
+    setSelectedProduct(product);
+  };
+
+  const handleProceedFromProduct = () => {
+    setStep("capture");
+  };
+
   const handleLeadCapture = (data: LeadData) => {
     setLeadData(data);
     setStep("report");
@@ -57,12 +68,12 @@ const GetStarted = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-24 pb-20">
-        <div className="container max-w-4xl">
+        <div className="container max-w-5xl">
           {/* Progress Indicator */}
-          <div className="flex items-center justify-center gap-4 mb-12">
-            {["Business Info", "Your Report", "Checkout"].map((label, index) => {
+          <div className="flex items-center justify-center gap-2 md:gap-4 mb-12 flex-wrap">
+            {["Choose Plan", "Business Info", "Your Report", "Checkout"].map((label, index) => {
               const stepIndex = index;
-              const currentIndex = step === "capture" ? 0 : step === "report" ? 1 : 2;
+              const currentIndex = step === "product" ? 0 : step === "capture" ? 1 : step === "report" ? 2 : 3;
               const isActive = stepIndex === currentIndex;
               const isComplete = stepIndex < currentIndex;
               
@@ -80,14 +91,14 @@ const GetStarted = () => {
                     {isComplete ? "✓" : index + 1}
                   </div>
                   <span
-                    className={`text-sm font-medium ${
+                    className={`text-sm font-medium hidden sm:inline ${
                       isActive ? "text-foreground" : "text-muted-foreground"
                     }`}
                   >
                     {label}
                   </span>
-                  {index < 2 && (
-                    <div className="w-8 md:w-16 h-0.5 bg-border mx-2" />
+                  {index < 3 && (
+                    <div className="w-4 md:w-8 h-0.5 bg-border mx-1 md:mx-2" />
                   )}
                 </div>
               );
@@ -95,8 +106,27 @@ const GetStarted = () => {
           </div>
 
           {/* Step Content */}
+          {step === "product" && (
+            <div className="space-y-6">
+              <ProductSelector
+                selectedProduct={selectedProduct}
+                onSelectProduct={handleProductSelect}
+              />
+              <div className="flex justify-center">
+                <button
+                  onClick={handleProceedFromProduct}
+                  className="px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-xl hover:bg-primary/90 transition-colors"
+                >
+                  Continue with {selectedProduct === "localLift" ? "LocalLift™" : selectedProduct === "leadLine" ? "LeadLine™" : "LaunchPad 360™"}
+                </button>
+              </div>
+            </div>
+          )}
+          
           {step === "capture" && (
-            <LeadCaptureForm onSubmit={handleLeadCapture} />
+            <div className="max-w-4xl mx-auto">
+              <LeadCaptureForm onSubmit={handleLeadCapture} />
+            </div>
           )}
           
           {step === "report" && leadData && (
@@ -110,6 +140,7 @@ const GetStarted = () => {
           {step === "checkout" && leadData && (
             <CheckoutStep 
               leadData={leadData}
+              selectedProduct={selectedProduct}
               onBack={() => setStep("report")}
             />
           )}
