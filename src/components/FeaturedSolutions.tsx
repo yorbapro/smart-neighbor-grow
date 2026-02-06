@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Search, Rocket, Cog, ArrowRight, Sparkles } from "lucide-react";
+import { Search, Rocket, Cog, ArrowRight, Sparkles, Phone } from "lucide-react";
 
 const FeaturedSolutions = () => {
   const solutions = [
@@ -11,6 +11,16 @@ const FeaturedSolutions = () => {
       description: "Dominate AI search, voice assistants, and Google Maps.",
       price: "$299/mo",
       slug: "locallift",
+    },
+    {
+      icon: Phone,
+      name: "LeadLine™",
+      tagline: "Instant Lead Response",
+      description: "24/7 AI voice assistant that answers and qualifies leads in seconds.",
+      price: "$399/mo",
+      slug: "leadline",
+      hasDemo: true,
+      demoUrl: "https://agent.retellai.com/preview/agent_19d43cf736300711221e30a6b0",
     },
     {
       icon: Rocket,
@@ -48,11 +58,10 @@ const FeaturedSolutions = () => {
         </div>
 
         {/* Solution Cards - Compact Grid */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-10">
           {solutions.map((solution) => (
-            <Link
+            <div
               key={solution.name}
-              to={`/products/${solution.slug}`}
               className={`group relative rounded-xl p-6 transition-all duration-300 hover:scale-[1.02] ${
                 solution.featured
                   ? "bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary/30"
@@ -81,15 +90,31 @@ const FeaturedSolutions = () => {
                 {solution.description}
               </p>
 
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between mb-4">
                 <span className="font-display text-lg font-bold text-secondary-foreground">
                   {solution.price}
                 </span>
-                <span className="text-primary group-hover:translate-x-1 transition-transform">
+                <Link 
+                  to={`/products/${solution.slug}`}
+                  className="text-primary group-hover:translate-x-1 transition-transform"
+                >
                   <ArrowRight className="w-5 h-5" />
-                </span>
+                </Link>
               </div>
-            </Link>
+
+              {/* Live Demo Button for LeadLine™ */}
+              {solution.hasDemo && solution.demoUrl && (
+                <a
+                  href={solution.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-lg bg-accent text-accent-foreground font-semibold text-sm transition-all duration-300 hover:bg-accent/90 shadow-button-accent hover:shadow-glow-accent"
+                >
+                  <Phone className="w-4 h-4" />
+                  Experience LeadLine™ (Live Demo)
+                </a>
+              )}
+            </div>
           ))}
         </div>
 
