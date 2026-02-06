@@ -28,7 +28,7 @@ const Pricing = () => {
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Transparent pricing for AI-powered sales automation. LaunchPad 360™ starts at $2,500 setup + $599/month. Get a 24/7 digital teammate for just $19.97/day.");
+      metaDescription.setAttribute("content", "Transparent pricing for AI-powered sales automation. LocalLift™ at $299/mo, LeadLine™ at $399/mo, LaunchPad 360™ at $500/mo. Get a 24/7 digital teammate for under $17/day.");
     }
 
     // Add keywords meta
@@ -101,11 +101,11 @@ const Pricing = () => {
             "description": "Complete AI sales engine with human oversight, multi-channel outreach, and 60-second lead response.",
             "offers": {
               "@type": "Offer",
-              "price": "599",
+              "price": "500",
               "priceCurrency": "USD",
               "priceSpecification": {
                 "@type": "UnitPriceSpecification",
-                "price": "599",
+                "price": "500",
                 "priceCurrency": "USD",
                 "unitText": "MONTH"
               }
@@ -182,9 +182,9 @@ const Pricing = () => {
       name: "LaunchPad 360™",
       tagline: "The Growth Engine",
       description: "Increase Revenue, Lead Generation & Booking Meetings. Everything in LocalLift™ plus automated sales.",
-      setup: "$2,500",
-      monthly: "$599",
-      dailyCost: "$19.97",
+      setup: "$1,500",
+      monthly: "$500",
+      dailyCost: "$16.60",
       deployment: "30-Day Deployment",
       includesText: "Includes everything in LocalLift™ plus...",
       features: [
@@ -220,8 +220,8 @@ const Pricing = () => {
   ];
 
   const comparisonItems = [
-    { feature: "Annual cost", human: "$80,000+", ai: "$9,688" },
-    { feature: "Daily cost", human: "$308/day", ai: "$19.97/day" },
+    { feature: "Annual cost", human: "$80,000+", ai: "$7,500" },
+    { feature: "Daily cost", human: "$308/day", ai: "$16.60/day" },
     { feature: "Hours available", human: "40 hrs/week", ai: "168 hrs/week" },
     { feature: "Response time", human: "Hours to days", ai: "Under 60 seconds" },
     { feature: "Sick days", human: "Yes", ai: "Never" },
@@ -272,7 +272,7 @@ const Pricing = () => {
             
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
               A Digital Teammate for<br />
-              <span className="text-gradient">Under $20/Day</span>
+              <span className="text-gradient">Under $17/Day</span>
             </h1>
             
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
@@ -281,7 +281,7 @@ const Pricing = () => {
 
             <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-secondary text-secondary-foreground">
               <Calculator className="w-5 h-5 text-primary" />
-              <span className="font-semibold">The Math: $599/mo ÷ 30 days = $19.97/day</span>
+              <span className="font-semibold">The Math: $500/mo ÷ 30 days = $16.60/day</span>
             </div>
           </div>
         </div>
