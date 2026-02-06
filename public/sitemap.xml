@@ -7,49 +7,49 @@
   <!-- Main Pages -->
   <url>
     <loc>https://brightlaunchiq.com/</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>https://brightlaunchiq.com/about</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
     <loc>https://brightlaunchiq.com/pricing</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
     <loc>https://brightlaunchiq.com/contact</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://brightlaunchiq.com/faq</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://brightlaunchiq.com/get-started</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
     <loc>https://brightlaunchiq.com/aeo-audit</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -57,7 +57,7 @@
   <!-- Learning Center & Resources -->
   <url>
     <loc>https://brightlaunchiq.com/resources/blog</loc>
-    <lastmod>2026-01-20</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <!-- Learning Center: AI & Sales Insights hub -->
@@ -65,28 +65,28 @@
   
   <url>
     <loc>https://brightlaunchiq.com/resources/glossary</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://brightlaunchiq.com/resources/case-studies</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://brightlaunchiq.com/resources/comparison</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://brightlaunchiq.com/resources/how-it-works</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -94,42 +94,42 @@
   <!-- Learning Center Articles -->
   <url>
     <loc>https://brightlaunchiq.com/resources/blog/what-is-aeo</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://brightlaunchiq.com/resources/blog/ai-lead-generation-guide</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://brightlaunchiq.com/resources/blog/human-guided-ai-vs-automated</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://brightlaunchiq.com/resources/blog/speed-to-lead-problem</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://brightlaunchiq.com/resources/blog/gbp-optimization-ai</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://brightlaunchiq.com/resources/blog/crm-integration-ai</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -137,22 +137,36 @@
   <!-- Product Pages -->
   <url>
     <loc>https://brightlaunchiq.com/products/launchpad-360</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://brightlaunchiq.com/products/leadline</loc>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
     <loc>https://brightlaunchiq.com/products/locallift</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://brightlaunchiq.com/products/custom-ai-workflows</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   
   <!-- Location Hub -->
   <url>
     <loc>https://brightlaunchiq.com/locations</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -160,42 +174,42 @@
   <!-- Location Pages - California -->
   <url>
     <loc>https://brightlaunchiq.com/locations/sacramento</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://brightlaunchiq.com/locations/bakersfield</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://brightlaunchiq.com/locations/fresno</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://brightlaunchiq.com/locations/stockton</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://brightlaunchiq.com/locations/culver-city</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://brightlaunchiq.com/locations/monterey</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -203,7 +217,7 @@
   <!-- Location Pages - Nevada -->
   <url>
     <loc>https://brightlaunchiq.com/locations/henderson</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -211,21 +225,21 @@
   <!-- Legal Pages -->
   <url>
     <loc>https://brightlaunchiq.com/terms</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
     <loc>https://brightlaunchiq.com/privacy</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
     <loc>https://brightlaunchiq.com/accessibility</loc>
-    <lastmod>2026-01-09</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
