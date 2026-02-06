@@ -80,6 +80,23 @@ const Pricing = () => {
           {
             "@type": "Product",
             "position": 2,
+            "name": "LeadLine™",
+            "description": "AI-powered voice assistant for 24/7 call answering and lead qualification.",
+            "offers": {
+              "@type": "Offer",
+              "price": "399",
+              "priceCurrency": "USD",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "399",
+                "priceCurrency": "USD",
+                "unitText": "MONTH"
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "position": 3,
             "name": "LaunchPad 360™",
             "description": "Complete AI sales engine with human oversight, multi-channel outreach, and 60-second lead response.",
             "offers": {
@@ -96,7 +113,7 @@ const Pricing = () => {
           },
           {
             "@type": "Product",
-            "position": 3,
+            "position": 4,
             "name": "OmniLogic™",
             "description": "Custom enterprise AI workflows and business automation solutions."
           }
@@ -137,6 +154,28 @@ const Pricing = () => {
       cta: "Get Found",
       slug: "locallift",
       isCustom: false
+    },
+    {
+      icon: Phone,
+      name: "LeadLine™",
+      tagline: "Instant Response",
+      description: "24/7 AI voice assistant that answers calls, qualifies leads, and books appointments automatically.",
+      setup: "$1,500",
+      monthly: "$399",
+      dailyCost: "$13.30",
+      deployment: "14-Day Deployment",
+      features: [
+        "24/7 AI call answering",
+        "Lead qualification & scoring",
+        "Real-time appointment booking",
+        "Call transcription & analytics",
+      ],
+      highlighted: false,
+      cta: "Never Miss a Lead",
+      slug: "leadline",
+      isCustom: false,
+      hasDemo: true,
+      demoUrl: "https://agent.retellai.com/preview/agent_19d43cf736300711221e30a6b0"
     },
     {
       icon: Rocket,
@@ -264,31 +303,31 @@ const Pricing = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             {products.map((product) => (
               <div
                 key={product.name}
-                className={`relative rounded-2xl p-8 transition-all duration-300 ${
+                className={`relative rounded-2xl p-6 transition-all duration-300 ${
                   product.highlighted
-                    ? "bg-secondary text-secondary-foreground shadow-card-hover scale-[1.02] lg:scale-105"
+                    ? "bg-secondary text-secondary-foreground shadow-card-hover scale-[1.02] lg:scale-[1.03]"
                     : "bg-card border border-border hover:shadow-card-hover"
                 }`}
               >
 
                 {/* Icon & Name */}
-                <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
                   product.highlighted ? "bg-primary/20" : "bg-primary/10"
                 }`}>
-                  <product.icon className="w-7 h-7 text-primary" />
+                  <product.icon className="w-6 h-6 text-primary" />
                 </div>
 
-                <h2 className="font-display text-2xl font-bold mb-1">
+                <h2 className="font-display text-xl font-bold mb-1">
                   {product.name}
                 </h2>
-                <p className="text-sm font-medium text-primary mb-4">
+                <p className="text-sm font-medium text-primary mb-3">
                   {product.tagline}
                 </p>
-                <p className={`text-sm mb-6 ${
+                <p className={`text-sm mb-4 ${
                   product.highlighted ? "text-secondary-foreground/80" : "text-muted-foreground"
                 }`}>
                   {product.description}
@@ -296,40 +335,40 @@ const Pricing = () => {
 
                 {/* Pricing */}
                 {product.isCustom ? (
-                  <div className="mb-6 pb-6 border-b border-primary/20">
-                    <div className="font-display text-3xl font-bold mb-2">
-                      Custom Pricing
+                  <div className="mb-4 pb-4 border-b border-primary/20">
+                    <div className="font-display text-2xl font-bold mb-1">
+                      Custom
                     </div>
-                    <p className="text-sm opacity-70">
-                      Tailored solutions for your unique business needs
+                    <p className="text-xs opacity-70">
+                      Tailored for your needs
                     </p>
                   </div>
                 ) : (
-                  <div className="mb-6 pb-6 border-b border-primary/20">
-                    <div className="flex items-baseline gap-2 mb-1">
-                      <span className="font-display text-4xl font-bold">{product.setup}</span>
-                      <span className="text-sm opacity-70">one-time setup</span>
+                  <div className="mb-4 pb-4 border-b border-primary/20">
+                    <div className="flex items-baseline gap-1 mb-1">
+                      <span className="font-display text-2xl font-bold">{product.setup}</span>
+                      <span className="text-xs opacity-70">setup</span>
                     </div>
-                    <p className="text-sm opacity-70 mb-3">
-                      then <span className="font-semibold">{product.monthly}/month</span> ongoing
+                    <p className="text-xs opacity-70 mb-2">
+                      then <span className="font-semibold">{product.monthly}/mo</span>
                     </p>
-                    <div className="flex items-center gap-2 text-primary">
-                      <DollarSign className="w-4 h-4" />
-                      <span className="text-sm font-semibold">
-                        Just {product.dailyCost}/day for a 24/7 teammate
+                    <div className="flex items-center gap-1 text-primary">
+                      <DollarSign className="w-3 h-3" />
+                      <span className="text-xs font-semibold">
+                        {product.dailyCost}/day
                       </span>
                     </div>
                   </div>
                 )}
 
                 {/* Features */}
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-2 mb-6">
                   {product.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3">
-                      <Check className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
+                    <li key={feature} className="flex items-start gap-2">
+                      <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
                         product.highlighted ? "text-primary" : "text-accent"
                       }`} />
-                      <span className={`text-sm ${
+                      <span className={`text-xs ${
                         product.highlighted ? "text-secondary-foreground/90" : "text-muted-foreground"
                       }`}>
                         {feature}
@@ -341,14 +380,28 @@ const Pricing = () => {
                 {/* CTA */}
                 <Button
                   variant={product.highlighted ? "hero" : "outline"}
-                  className="w-full"
+                  className="w-full mb-2"
+                  size="sm"
                   asChild
                 >
-                  <Link to={product.isCustom ? "/contact" : "/get-started"}>
-                    {product.isCustom ? "Request Custom Enterprise Quote" : "Schedule My 15-Minute Revenue Audit"}
+                  <Link to={product.isCustom ? "/contact" : `/products/${product.slug}`}>
+                    {product.isCustom ? "Contact Us" : "Learn More"}
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
                 </Button>
+
+                {/* Demo Button for LeadLine */}
+                {product.hasDemo && product.demoUrl && (
+                  <a
+                    href={product.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 w-full py-2 px-3 rounded-lg bg-accent text-accent-foreground font-semibold text-xs transition-all duration-300 hover:bg-accent/90"
+                  >
+                    <Phone className="w-3 h-3" />
+                    Live Demo
+                  </a>
+                )}
               </div>
             ))}
           </div>
