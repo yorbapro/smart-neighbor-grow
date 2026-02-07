@@ -9,6 +9,20 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://brightlaunchiq.com/" />
     
+    <!-- Preconnect to external origins for faster resource loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Preload critical fonts with display=swap for FOUT over FOIT -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+    </noscript>
+    
+    <!-- DNS prefetch for known third-party domains -->
+    <link rel="dns-prefetch" href="https://mhrshvbzeasyqlnksxml.supabase.co" />
+    
     <!-- Accessibility: Theme color for mobile browsers -->
     <meta name="theme-color" content="#f5a623" />
     
