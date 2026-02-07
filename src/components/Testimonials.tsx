@@ -102,6 +102,8 @@ const Testimonials = () => {
                     src={testimonial.photo} 
                     alt={`${testimonial.name}, ${testimonial.role} at ${testimonial.company}`}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="flex-1">

@@ -83,6 +83,8 @@ const About = () => {
                 src={teamPhoto} 
                 alt="Professional team collaborating on AI-powered business solutions" 
                 className="w-full h-auto object-cover"
+                loading="lazy"
+                decoding="async"
               />
               {/* Subtle overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-transparent to-transparent" />
