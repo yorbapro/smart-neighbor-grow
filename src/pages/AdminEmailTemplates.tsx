@@ -95,6 +95,19 @@ const AdminEmailTemplates = () => {
     setEditedBody(template.body_html);
   };
 
+  // Shared DOMPurify configuration for defense-in-depth XSS prevention
+  const SANITIZE_CONFIG = {
+    ALLOWED_TAGS: [
+      'p', 'br', 'strong', 'em', 'a', 'ul', 'ol', 'li',
+      'h1', 'h2', 'h3', 'h4', 'div', 'span', 'table', 'tr',
+      'td', 'th', 'tbody', 'thead', 'hr', 'img'
+    ],
+    ALLOWED_ATTR: ['href', 'style', 'class', 'src', 'alt', 'width', 'height'],
+    ALLOW_DATA_ATTR: false,
+    FORBID_TAGS: ['script', 'iframe', 'object', 'embed', 'base', 'form', 'input', 'textarea', 'button'],
+    FORBID_ATTR: ['onerror', 'onload', 'onclick', 'onmouseover', 'onmouseout', 'onfocus', 'onblur', 'onchange', 'onsubmit'],
+  };
+
   const saveTemplate = async () => {
     if (!selectedTemplate) return;
     setIsSaving(true);
@@ -102,15 +115,7 @@ const AdminEmailTemplates = () => {
     const { data: { user } } = await supabase.auth.getUser();
 
     // Sanitize HTML before saving (defense-in-depth, server also sanitizes)
-    const sanitizedHtml = DOMPurify.sanitize(editedBody, {
-      ALLOWED_TAGS: [
-        'p', 'br', 'strong', 'em', 'a', 'ul', 'ol', 'li',
-        'h1', 'h2', 'h3', 'h4', 'div', 'span', 'table', 'tr',
-        'td', 'th', 'tbody', 'thead', 'hr', 'img'
-      ],
-      ALLOWED_ATTR: ['href', 'style', 'class', 'src', 'alt', 'width', 'height'],
-    });
-
+    const sanitizedHtml = DOMPurify.sanitize(editedBody, SANITIZE_CONFIG) as string;
     const { error } = await supabase
       .from("email_templates")
       .update({
@@ -159,8 +164,8 @@ const AdminEmailTemplates = () => {
     Object.entries(sampleData).forEach(([key, value]) => {
       html = html.replace(new RegExp(`\\{\\{${key}\\}\\}`, 'g'), value);
     });
-    // Sanitize HTML to prevent XSS
-    return DOMPurify.sanitize(html);
+    // Sanitize HTML with defense-in-depth config to prevent XSS
+    return DOMPurify.sanitize(html, SANITIZE_CONFIG) as string;
   }, [editedBody]);
 
   const getPreviewSubject = () => {
@@ -308,10 +313,34 @@ const AdminEmailTemplates = () => {
                           className="font-mono text-xs min-h-[400px]"
                         />
                       ) : (
-                        <div className="border border-border rounded-lg bg-white min-h-[400px] overflow-auto">
-                          <div 
-                            className="p-4"
-                            dangerouslySetInnerHTML={{ __html: getPreviewHtml }}
+                        <div className="border border-border rounded-lg bg-white min-h-[400px] overflow-hidden">
+                          {/* Use iframe sandbox for defense-in-depth XSS prevention */}
+                          <iframe
+                            sandbox="allow-same-origin"
+                            srcDoc={`
+                              <!DOCTYPE html>
+                              <html>
+                                <head>
+                                  <style>
+                                    body { 
+                                      font-family: system-ui, -apple-system, sans-serif; 
+                                      padding: 16px; 
+                                      margin: 0;
+                                      color: #1a1a1a;
+                                      font-size: 14px;
+                                      line-height: 1.6;
+                                    }
+                                    a { color: #3b82f6; }
+                                    table { border-collapse: collapse; width: 100%; }
+                                    td, th { padding: 8px; border: 1px solid #e5e5e5; }
+                                    img { max-width: 100%; height: auto; }
+                                  </style>
+                                </head>
+                                <body>${getPreviewHtml}</body>
+                              </html>
+                            `}
+                            className="w-full min-h-[400px] border-0"
+                            title="Email template preview"
                           />
                         </div>
                       )}
