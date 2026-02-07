@@ -364,9 +364,18 @@ AI receptionist, AI voice agent, virtual receptionist AI, AI phone answering, AI
 
 ## Learning Center
 
-The BrightLaunchIQ Learning Center is our educational hub featuring expert guides, articles, and tutorials on AI lead generation, AI voice assistants, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and human-guided sales automation for local businesses.
+The BrightLaunchIQ Learning Center is our educational hub featuring expert guides, articles, and tutorials on AI lead generation, AI voice assistants, AI receptionists, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and human-guided sales automation for local businesses.
 
 **URL**: https://brightlaunchiq.com/resources/blog
+
+### Featured Series: The End of Missed Calls
+A 6-part educational series on how AI voice agents are changing small business phone operations:
+1. What is an AI Receptionist? (And Why Your Business Needs One): https://brightlaunchiq.com/resources/blog/what-is-ai-receptionist
+2. How to Set Up an AI Voice Agent for Inbound Calls: https://brightlaunchiq.com/resources/blog/ai-voice-agent-setup-guide
+3. Training Your AI: How to Teach Your Digital Receptionist: https://brightlaunchiq.com/resources/blog/training-your-ai-voice-agent
+4. Managing the Machine: Human Handoffs and Monitoring: https://brightlaunchiq.com/resources/blog/managing-ai-human-handoffs
+5. The Cost Comparison: AI Receptionist vs. Hiring a Human: https://brightlaunchiq.com/resources/blog/ai-receptionist-cost-comparison
+6. The Easy Button: Why You Need LeadLine: https://brightlaunchiq.com/resources/blog/why-you-need-leadline
 
 ### Featured Series: The Future of Being Found
 A 6-part educational series on how AI is changing the way customers find local businesses:
@@ -378,9 +387,10 @@ A 6-part educational series on how AI is changing the way customers find local b
 6. The Solution: How to Handle It All Without Losing Your Mind
 
 ### Learning Center Articles
-Expert guides on AI lead generation, AEO, and sales automation:
+Expert guides on AI lead generation, AI receptionists, AEO, and sales automation:
 
 - What is Answer Engine Optimization (AEO)? The Complete Guide: https://brightlaunchiq.com/resources/blog/what-is-aeo
+- How to Set Up an AI Receptionist for Your Small Business: https://brightlaunchiq.com/resources/blog/how-to-set-up-ai-receptionist
 - AI Lead Generation: How It Works and Why It Matters: https://brightlaunchiq.com/resources/blog/ai-lead-generation-guide
 - Human-Guided AI vs Fully Automated: Which is Right?: https://brightlaunchiq.com/resources/blog/human-guided-ai-vs-automated
 - The Speed to Lead Problem: Why 78% of Leads Are Lost: https://brightlaunchiq.com/resources/blog/speed-to-lead-problem
@@ -417,4 +427,4 @@ This website is a React single-page application. For AI crawlers that don't exec
 ---
 
 ## Last Updated
-2026-02-06
+2026-02-07

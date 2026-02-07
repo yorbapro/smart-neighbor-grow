@@ -60,83 +60,119 @@ const Blog = () => {
       "mainEntity": {
         "@type": "ItemList",
         "name": "Learning Center Articles",
-        "numberOfItems": 13,
+        "numberOfItems": 19,
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
+            "name": "What is an AI Receptionist? (And Why Your Business Needs One)",
+            "url": "https://brightlaunchiq.com/resources/blog/what-is-ai-receptionist"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "How to Set Up an AI Voice Agent for Inbound Calls",
+            "url": "https://brightlaunchiq.com/resources/blog/ai-voice-agent-setup-guide"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Training Your AI: How to Teach Your Digital Receptionist",
+            "url": "https://brightlaunchiq.com/resources/blog/training-your-ai-voice-agent"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Managing the Machine: Human Handoffs and Monitoring",
+            "url": "https://brightlaunchiq.com/resources/blog/managing-ai-human-handoffs"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "The Cost Comparison: AI Receptionist vs. Hiring a Human",
+            "url": "https://brightlaunchiq.com/resources/blog/ai-receptionist-cost-comparison"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "The Easy Button: Why You Need LeadLine",
+            "url": "https://brightlaunchiq.com/resources/blog/why-you-need-leadline"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
             "name": "What is Answer Engine Optimization (AEO)? The Complete Guide for 2026",
             "url": "https://brightlaunchiq.com/resources/blog/what-is-aeo"
           },
           {
             "@type": "ListItem",
-            "position": 2,
+            "position": 8,
             "name": "The Shift: From Typing Keywords to Asking Questions",
             "url": "https://brightlaunchiq.com/resources/blog/the-shift-from-typing-to-asking"
           },
           {
             "@type": "ListItem",
-            "position": 3,
+            "position": 9,
             "name": "SEO vs. AEO: Why Being #1 Isn't Enough Anymore",
             "url": "https://brightlaunchiq.com/resources/blog/seo-vs-aeo-why-being-number-one-isnt-enough"
           },
           {
             "@type": "ListItem",
-            "position": 4,
+            "position": 10,
             "name": "GEO: How to Speak Robot to AI Assistants",
             "url": "https://brightlaunchiq.com/resources/blog/geo-how-to-speak-robot-to-ai-assistants"
           },
           {
             "@type": "ListItem",
-            "position": 5,
+            "position": 11,
             "name": "Local Search: Why Google Maps is Your New Storefront",
             "url": "https://brightlaunchiq.com/resources/blog/local-search-google-maps-is-your-new-storefront"
           },
           {
             "@type": "ListItem",
-            "position": 6,
+            "position": 12,
             "name": "Reviews: The Fuel That Powers AI Recommendations",
             "url": "https://brightlaunchiq.com/resources/blog/reviews-the-fuel-that-powers-ai-recommendations"
           },
           {
             "@type": "ListItem",
-            "position": 7,
+            "position": 13,
             "name": "The Solution: How to Handle It All Without Losing Your Mind",
             "url": "https://brightlaunchiq.com/resources/blog/the-solution-how-to-handle-it-all"
           },
           {
             "@type": "ListItem",
-            "position": 8,
+            "position": 14,
             "name": "AI Lead Generation: How It Works and Why It Matters for Small Business",
             "url": "https://brightlaunchiq.com/resources/blog/ai-lead-generation-guide"
           },
           {
             "@type": "ListItem",
-            "position": 9,
+            "position": 15,
             "name": "Human-Guided AI vs Fully Automated: Which is Right for Your Business?",
             "url": "https://brightlaunchiq.com/resources/blog/human-guided-ai-vs-automated"
           },
           {
             "@type": "ListItem",
-            "position": 10,
+            "position": 16,
             "name": "The Speed to Lead Problem: Why 78% of Leads Are Lost",
             "url": "https://brightlaunchiq.com/resources/blog/speed-to-lead-problem"
           },
           {
             "@type": "ListItem",
-            "position": 11,
+            "position": 17,
             "name": "How to Optimize Your Google Business Profile for AI Search",
             "url": "https://brightlaunchiq.com/resources/blog/gbp-optimization-ai"
           },
           {
             "@type": "ListItem",
-            "position": 12,
+            "position": 18,
             "name": "CRM Integration Best Practices for AI Sales Automation",
             "url": "https://brightlaunchiq.com/resources/blog/crm-integration-ai"
           },
           {
             "@type": "ListItem",
-            "position": 13,
+            "position": 19,
             "name": "How to Set Up an AI Receptionist for Your Small Business",
             "url": "https://brightlaunchiq.com/resources/blog/how-to-set-up-ai-receptionist"
           }
@@ -262,15 +298,79 @@ const Blog = () => {
   }, []);
 
   const featuredArticle = {
-    title: "What is Answer Engine Optimization (AEO)? The Complete Guide for 2026",
-    excerpt: "Answer Engine Optimization is transforming how businesses get discovered online. Learn how to optimize your content for AI assistants like ChatGPT, Gemini, and Perplexity.",
-    slug: "what-is-aeo",
-    author: "Dr. Sarah Chen",
-    authorRole: "Chief AI Officer",
-    date: "January 5, 2026",
-    readTime: "8 min read",
-    category: "AEO",
+    title: "What is an AI Receptionist? (And Why Your Business Needs One)",
+    excerpt: "If your phone rings and nobody answers, you just lost money. Learn how an AI receptionist can engage customers instantly—24/7, 365 days a year.",
+    slug: "what-is-ai-receptionist",
+    author: "David Thompson",
+    authorRole: "VP of Customer Success",
+    date: "February 6, 2026",
+    readTime: "3 min read",
+    category: "AI Voice Agent",
   };
+
+  // AI Voice Agent Series: The End of Missed Calls
+  const voiceAgentSeries = [
+    {
+      title: "What is an AI Receptionist? (And Why Your Business Needs One)",
+      excerpt: "If your phone rings and nobody answers, you just lost money. Learn how an AI receptionist can engage customers instantly.",
+      slug: "what-is-ai-receptionist",
+      author: "David Thompson",
+      date: "February 6, 2026",
+      readTime: "3 min read",
+      category: "AI Voice Agent Series",
+      part: 1,
+    },
+    {
+      title: "How to Set Up an AI Voice Agent for Inbound Calls",
+      excerpt: "You decided you want an AI to handle your phones. Here's the simple breakdown of how to get it running.",
+      slug: "ai-voice-agent-setup-guide",
+      author: "Marcus Reynolds",
+      date: "February 5, 2026",
+      readTime: "4 min read",
+      category: "AI Voice Agent Series",
+      part: 2,
+    },
+    {
+      title: "Training Your AI: How to Teach Your Digital Receptionist",
+      excerpt: "An AI voice agent is only as smart as you teach it. Learn how to build the knowledge base that powers your AI.",
+      slug: "training-your-ai-voice-agent",
+      author: "Dr. Sarah Chen",
+      date: "February 4, 2026",
+      readTime: "4 min read",
+      category: "AI Voice Agent Series",
+      part: 3,
+    },
+    {
+      title: "Managing the Machine: Human Handoffs and Monitoring",
+      excerpt: "The best systems are a mix of AI speed and human skill. Learn about human handoffs and monitoring.",
+      slug: "managing-ai-human-handoffs",
+      author: "David Thompson",
+      date: "February 3, 2026",
+      readTime: "3 min read",
+      category: "AI Voice Agent Series",
+      part: 4,
+    },
+    {
+      title: "The Cost Comparison: AI Receptionist vs. Hiring a Human",
+      excerpt: "Is an AI voice agent worth the money? Let's break down the numbers and compare the ROI.",
+      slug: "ai-receptionist-cost-comparison",
+      author: "Marcus Reynolds",
+      date: "February 2, 2026",
+      readTime: "4 min read",
+      category: "AI Voice Agent Series",
+      part: 5,
+    },
+    {
+      title: "The Easy Button: Why You Need LeadLine™",
+      excerpt: "AI voice agents are powerful—but setting them up is complicated. That's why we built LeadLine™.",
+      slug: "why-you-need-leadline",
+      author: "Marcus Reynolds",
+      date: "February 1, 2026",
+      readTime: "3 min read",
+      category: "AI Voice Agent Series",
+      part: 6,
+    },
+  ];
 
   // The Future of Being Found Series
   const seriesArticles = [
@@ -454,6 +554,55 @@ const Blog = () => {
                   </Link>
                 </Button>
               </article>
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Series: The End of Missed Calls */}
+        <section className="py-12 md:py-16 bg-gradient-to-b from-accent/30 to-transparent">
+          <div className="container">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex items-center gap-3 mb-2">
+                <BookOpen className="w-5 h-5 text-accent-foreground" />
+                <span className="text-sm font-semibold uppercase tracking-wider text-accent-foreground">
+                  New 6-Part Series
+                </span>
+              </div>
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">
+                The End of Missed Calls
+              </h2>
+              <p className="text-muted-foreground mb-8 max-w-2xl">
+                How AI Voice Agents Are Changing Small Business. Learn everything about AI receptionists—from setup to ROI.
+              </p>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {voiceAgentSeries.map((article) => (
+                  <Link
+                    key={article.slug}
+                    to={`/resources/blog/${article.slug}`}
+                    className="group bg-card rounded-xl border border-border p-5 hover:shadow-card-hover hover:border-primary/30 transition-all"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg">
+                        {article.part}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-display text-base font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2 mb-1">
+                          {article.title}
+                        </h3>
+                        <p className="text-xs text-muted-foreground line-clamp-2">
+                          {article.excerpt}
+                        </p>
+                        <div className="flex items-center gap-2 mt-2 text-xs text-muted-foreground">
+                          <span>{article.author}</span>
+                          <span>•</span>
+                          <span>{article.readTime}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </section>
