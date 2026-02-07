@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "https://esm.sh/resend@2.0.0";
+import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
@@ -9,14 +10,15 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
-interface ContactEmailRequest {
-  name: string;
-  email: string;
-  phone?: string;
-  company?: string;
-  subject: string;
-  message: string;
-}
+// Zod schema for input validation
+const ContactEmailSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
+  phone: z.string().max(20, "Phone must be less than 20 characters").optional().or(z.literal('')),
+  company: z.string().max(100, "Company must be less than 100 characters").optional().or(z.literal('')),
+  subject: z.string().trim().min(1, "Subject is required").max(200, "Subject must be less than 200 characters"),
+  message: z.string().trim().min(10, "Message must be at least 10 characters").max(2000, "Message must be less than 2000 characters"),
+});
 
 // HTML escape function to prevent XSS
 const escapeHtml = (text: string): string => {
@@ -38,15 +40,33 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { name, email, phone, company, subject, message }: ContactEmailRequest = await req.json();
+    const body = await req.json();
+    
+    // Validate input with Zod
+    const validation = ContactEmailSchema.safeParse(body);
+    if (!validation.success) {
+      console.warn("Contact form validation failed:", validation.error.issues);
+      return new Response(
+        JSON.stringify({ 
+          error: "Invalid input. Please check your form data and try again.",
+          details: validation.error.issues.map(i => i.message)
+        }),
+        { 
+          status: 400, 
+          headers: { "Content-Type": "application/json", ...corsHeaders } 
+        }
+      );
+    }
+
+    const { name, email, phone, company, subject, message } = validation.data;
 
     // Escape all user-provided data
-    const safeName = escapeHtml(name || '');
-    const safeEmail = escapeHtml(email || '');
+    const safeName = escapeHtml(name);
+    const safeEmail = escapeHtml(email);
     const safePhone = phone ? escapeHtml(phone) : '';
     const safeCompany = company ? escapeHtml(company) : '';
-    const safeSubject = escapeHtml(subject || '');
-    const safeMessage = escapeHtml(message || '');
+    const safeSubject = escapeHtml(subject);
+    const safeMessage = escapeHtml(message);
 
     // Send notification email to the team
     const teamEmailResponse = await resend.emails.send({
@@ -159,10 +179,11 @@ const handler = async (req: Request): Promise<Response> => {
         ...corsHeaders,
       },
     });
-  } catch (error: any) {
-    console.error("Error in send-contact-email function:", error);
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    console.error("Error in send-contact-email function:", errorMessage);
     return new Response(
-      JSON.stringify({ error: error.message }),
+      JSON.stringify({ error: "An error occurred while sending your message. Please try again." }),
       {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders },
