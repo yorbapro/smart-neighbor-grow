@@ -38,7 +38,7 @@ export const PRODUCTS: Record<ProductTier, ProductConfig> = {
   leadLine: {
     id: "leadLine",
     name: "LeadLine™",
-    tagline: "AI Voice Assistant",
+    tagline: "AI Receptionist & Voice Agent",
     setupPrice: 1500,
     monthlyPrice: 399,
     setupPriceId: "price_1SxsJSCUVmu4OLZnt5E5JP3o",
@@ -46,7 +46,7 @@ export const PRODUCTS: Record<ProductTier, ProductConfig> = {
     trialDays: 14,
     dailyCost: "$13.30",
     features: [
-      "24/7 AI voice assistant",
+      "24/7 AI receptionist",
       "Instant lead qualification",
       "Automated appointment booking",
       "CRM integration",

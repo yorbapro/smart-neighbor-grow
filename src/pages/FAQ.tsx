@@ -7,11 +7,11 @@ import { ArrowRight } from "lucide-react";
 
 const FAQ = () => {
   useEffect(() => {
-    document.title = "FAQ | AI Lead Generation, Sales Automation & AEO Questions | BrightLaunchIQ";
+    document.title = "FAQ | AI Receptionist, AI Voice Agent, Lead Generation & AEO Questions | BrightLaunchIQ";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Answers to common questions about AI lead generation, AI sales automation, Answer Engine Optimization (AEO), pricing, and how human-guided AI works for small businesses.");
+      metaDescription.setAttribute("content", "Answers to common questions about AI receptionists, AI voice agents, AI lead generation, AI sales automation, Answer Engine Optimization (AEO), pricing, and how human-guided AI works for small businesses.");
     }
 
     window.scrollTo(0, 0);
@@ -24,13 +24,13 @@ const FAQ = () => {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
+        { "@type": "Question", "name": "What is an AI receptionist?", "acceptedAnswer": { "@type": "Answer", "text": "An AI receptionist is an artificial intelligence system that answers phone calls, qualifies leads, and books appointments automatically—just like a human receptionist, but available 24/7/365. BrightLaunchIQ's LeadLine™ AI receptionist answers calls within 1-2 rings, handles complex conversations naturally, and costs just $13.30/day compared to $3,000+/month for human staff." }},
+        { "@type": "Question", "name": "How do I set up an AI voice agent?", "acceptedAnswer": { "@type": "Answer", "text": "Setting up an AI voice agent like LeadLine™ takes 7-14 days. Schedule a strategy call, we customize the AI receptionist with your scripts, integrate with your CRM and calendar, then launch. No technical expertise required—BrightLaunchIQ handles all setup for the $1,500 one-time fee." }},
+        { "@type": "Question", "name": "How much does an AI receptionist cost?", "acceptedAnswer": { "@type": "Answer", "text": "LeadLine™ AI receptionist costs $1,500 one-time setup plus $399/month—that's just $13.30/day for 24/7 call answering. Compare that to a human receptionist at $3,000+/month (only 40 hours/week) or an answering service at $1-2 per call." }},
         { "@type": "Question", "name": "What is AI lead generation?", "acceptedAnswer": { "@type": "Answer", "text": "AI lead generation uses artificial intelligence to identify, qualify, and engage potential customers automatically. For small businesses, this means having a 24/7 digital teammate that finds prospects showing buying intent, responds in under 60 seconds, and nurtures leads through personalized outreach—all supervised by human experts." }},
         { "@type": "Question", "name": "What is human-guided AI?", "acceptedAnswer": { "@type": "Answer", "text": "Human-guided AI means real experts supervise every AI system. Our consultants set the rules, monitor results, and ensure customer touchpoints feel authentic—never robotic. This gives you AI power with human judgment." }},
-        { "@type": "Question", "name": "How much does AI sales automation cost?", "acceptedAnswer": { "@type": "Answer", "text": "BrightLaunchIQ offers AI sales automation starting at $500/month after a one-time $1,500 setup fee. This breaks down to $16.60 per day for a 24/7 AI sales team—compared to $80,000+ per year for a human hire." }},
-        { "@type": "Question", "name": "What is LeadLine™?", "acceptedAnswer": { "@type": "Answer", "text": "LeadLine™ is an AI-powered voice assistant that answers calls and qualifies leads within seconds. It works 24/7/365, books appointments automatically, and costs just $13.30/day—compared to $3,000+/month for a human receptionist." }},
-        { "@type": "Question", "name": "How fast does LeadLine™ answer calls?", "acceptedAnswer": { "@type": "Answer", "text": "LeadLine™ answers calls instantly—within 1-2 rings. For form submissions, it can call leads back within seconds, ensuring you're always first to respond." }},
-        { "@type": "Question", "name": "What is Answer Engine Optimization (AEO)?", "acceptedAnswer": { "@type": "Answer", "text": "AEO optimizes your business to be cited as the direct answer when people ask AI tools like ChatGPT, Gemini, Perplexity, or voice assistants. Unlike traditional SEO, AEO positions you as the authoritative answer across AI platforms." }},
-        { "@type": "Question", "name": "What is an AI SDR?", "acceptedAnswer": { "@type": "Answer", "text": "An AI SDR (Sales Development Representative) is an automated system that handles prospecting, outreach, and lead qualification using AI. LaunchPad 360™ is a human-guided AI SDR that combines automation with expert oversight." }}
+        { "@type": "Question", "name": "What is LeadLine™?", "acceptedAnswer": { "@type": "Answer", "text": "LeadLine™ is an AI receptionist and AI voice agent that answers calls and qualifies leads within seconds. It works 24/7/365, books appointments automatically, and costs just $13.30/day—compared to $3,000+/month for a human receptionist." }},
+        { "@type": "Question", "name": "What is Answer Engine Optimization (AEO)?", "acceptedAnswer": { "@type": "Answer", "text": "AEO optimizes your business to be cited as the direct answer when people ask AI tools like ChatGPT, Gemini, Perplexity, or voice assistants. Unlike traditional SEO, AEO positions you as the authoritative answer across AI platforms." }}
       ]
     });
     document.head.appendChild(faqScript);
@@ -51,13 +51,15 @@ const FAQ = () => {
       ]
     },
     {
-      title: "LeadLine™ AI Voice Assistant",
+      title: "LeadLine™ AI Receptionist & Voice Agent",
       faqs: [
-        { q: "What is LeadLine™?", a: "LeadLine™ is an AI-powered voice assistant that answers calls and qualifies leads within seconds. It works 24/7/365, books appointments automatically, and costs just $13.30/day—compared to $3,000+/month for a human receptionist." },
-        { q: "How fast does LeadLine™ answer calls?", a: "LeadLine™ answers calls instantly—within 1-2 rings. For form submissions, it can call leads back within seconds of submission, ensuring you're always first to respond. Research shows 50% of sales go to the first business that responds." },
-        { q: "Can LeadLine™ book appointments on my calendar?", a: "Yes! LeadLine™ integrates with your calendar to check availability and book appointments in real-time during the call. It sends confirmations and reminders automatically—no more back-and-forth scheduling." },
-        { q: "Does LeadLine™ sound like a robot?", a: "LeadLine™ uses advanced conversational AI with natural-sounding voices. Most callers can't tell they're talking to AI. The system handles complex conversations, follows up on questions, and maintains context throughout the call." },
-        { q: "How much does LeadLine™ cost?", a: "LeadLine™ costs $1,500 one-time setup plus $399/month ongoing—just $13.30/day for 24/7 AI-powered call answering. Compare that to $3,000+/month for a human receptionist who only works business hours." },
+        { q: "What is an AI receptionist?", a: "An AI receptionist is an artificial intelligence system that answers phone calls, qualifies leads, and books appointments automatically—just like a human receptionist, but available 24/7/365. LeadLine™ answers calls within 1-2 rings, handles complex conversations naturally, and costs just $13.30/day." },
+        { q: "How do I set up an AI voice agent for my business?", a: "Setting up an AI voice agent like LeadLine™ takes 7-14 days. Schedule a strategy call, we customize the AI receptionist with your scripts, integrate with your CRM and calendar, then launch. No technical expertise required—we handle all setup." },
+        { q: "What is LeadLine™?", a: "LeadLine™ is an AI receptionist and AI voice agent that answers calls and qualifies leads within seconds. It works 24/7/365, books appointments automatically, and costs just $13.30/day—compared to $3,000+/month for a human receptionist." },
+        { q: "How fast does LeadLine™ answer calls?", a: "LeadLine™ answers calls instantly—within 1-2 rings. For form submissions, this AI voice agent can call leads back within seconds of submission, ensuring you're always first to respond. Research shows 50% of sales go to the first business that responds." },
+        { q: "Can the AI receptionist book appointments on my calendar?", a: "Yes! LeadLine™ integrates with your calendar to check availability and book appointments in real-time during the call. It sends confirmations and reminders automatically—no more back-and-forth scheduling." },
+        { q: "Does the AI voice agent sound like a robot?", a: "LeadLine™ uses advanced conversational AI with natural-sounding voices. Most callers can't tell they're talking to AI. The system handles complex conversations, follows up on questions, and maintains context throughout the call." },
+        { q: "How much does an AI receptionist cost?", a: "LeadLine™ AI receptionist costs $1,500 one-time setup plus $399/month ongoing—just $13.30/day for 24/7 AI-powered call answering. Compare that to $3,000+/month for a human receptionist who only works business hours." },
       ]
     },
     {
