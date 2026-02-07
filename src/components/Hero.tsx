@@ -171,6 +171,8 @@ const Hero = () => {
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
+                width={1200}
+                height={800}
               />
               {/* Gradient overlay for blend */}
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
