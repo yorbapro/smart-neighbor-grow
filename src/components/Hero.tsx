@@ -166,6 +166,9 @@ const Hero = () => {
                 src={businessOwnerPhoto} 
                 alt="Business owner reviewing AI-powered analytics dashboard" 
                 className="w-full h-auto object-cover"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
               />
               {/* Gradient overlay for blend */}
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
