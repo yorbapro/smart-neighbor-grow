@@ -60,7 +60,7 @@ const Blog = () => {
       "mainEntity": {
         "@type": "ItemList",
         "name": "Learning Center Articles",
-        "numberOfItems": 12,
+        "numberOfItems": 13,
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -133,6 +133,12 @@ const Blog = () => {
             "position": 12,
             "name": "CRM Integration Best Practices for AI Sales Automation",
             "url": "https://brightlaunchiq.com/resources/blog/crm-integration-ai"
+          },
+          {
+            "@type": "ListItem",
+            "position": 13,
+            "name": "How to Set Up an AI Receptionist for Your Small Business",
+            "url": "https://brightlaunchiq.com/resources/blog/how-to-set-up-ai-receptionist"
           }
         ]
       },
@@ -331,6 +337,15 @@ const Blog = () => {
   ];
 
   const articles = [
+    {
+      title: "How to Set Up an AI Receptionist for Your Small Business",
+      excerpt: "Complete guide to setting up an AI receptionist or AI voice agent. No technical expertise required. Learn the 7-step process in 7-14 days.",
+      slug: "how-to-set-up-ai-receptionist",
+      author: "David Thompson",
+      date: "February 7, 2026",
+      readTime: "8 min read",
+      category: "AI Receptionist",
+    },
     {
       title: "AI Lead Generation: How It Works and Why It Matters for Small Business",
       excerpt: "AI lead generation uses artificial intelligence to identify, qualify, and engage potential customers automatically. Here's how small businesses can leverage this technology.",
