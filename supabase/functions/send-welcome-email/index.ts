@@ -1,16 +1,18 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "https://esm.sh/resend@2.0.0";
+import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-interface WelcomeEmailRequest {
-  email: string;
-  businessName: string;
-  industry: string;
-}
+// Zod schema for input validation
+const WelcomeEmailSchema = z.object({
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
+  businessName: z.string().trim().min(1, "Business name is required").max(100, "Business name must be less than 100 characters"),
+  industry: z.string().trim().min(1, "Industry is required").max(100, "Industry must be less than 100 characters"),
+});
 
 // HTML escape function to prevent XSS
 const escapeHtml = (text: string): string => {
@@ -37,15 +39,29 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     const resend = new Resend(resendKey);
-    const { email, businessName, industry }: WelcomeEmailRequest = await req.json();
+    const body = await req.json();
 
-    if (!email) {
-      throw new Error("Email is required");
+    // Validate input with Zod
+    const validation = WelcomeEmailSchema.safeParse(body);
+    if (!validation.success) {
+      console.warn("Welcome email validation failed:", validation.error.issues);
+      return new Response(
+        JSON.stringify({ 
+          error: "Invalid input",
+          details: validation.error.issues.map(i => i.message)
+        }),
+        { 
+          status: 400, 
+          headers: { "Content-Type": "application/json", ...corsHeaders } 
+        }
+      );
     }
 
+    const { email, businessName, industry } = validation.data;
+
     // Escape user-provided data
-    const safeBusinessName = escapeHtml(businessName || 'there');
-    const safeIndustry = escapeHtml(industry || 'business');
+    const safeBusinessName = escapeHtml(businessName);
+    const safeIndustry = escapeHtml(industry);
 
     const emailResponse = await resend.emails.send({
       from: "BrightLaunchIQ <onboarding@resend.dev>",
@@ -153,7 +169,7 @@ const handler = async (req: Request): Promise<Response> => {
     const errorMessage = error instanceof Error ? error.message : String(error);
     console.error("Error in send-welcome-email function:", errorMessage);
     return new Response(
-      JSON.stringify({ error: errorMessage }),
+      JSON.stringify({ error: "An error occurred while sending the welcome email. Please try again." }),
       {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders },
