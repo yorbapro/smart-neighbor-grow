@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Users, Zap, TrendingUp } from "lucide-react";
-import businessOwnerPhoto from "@/assets/photos/business-owner-woman.jpg";
+
+// Use public folder path for hero image - enables HTML preloading for faster LCP
+const businessOwnerPhoto = "/images/hero-business-owner.jpg";
 
 const Hero = () => {
   return (
