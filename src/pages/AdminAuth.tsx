@@ -149,6 +149,7 @@ const AdminAuth = () => {
                     placeholder="admin@company.com"
                     required
                     disabled={isLoading}
+                    autoComplete="email"
                   />
                 </div>
 
@@ -162,6 +163,7 @@ const AdminAuth = () => {
                     placeholder="••••••••"
                     required
                     disabled={isLoading}
+                    autoComplete={isSignUp ? "new-password" : "current-password"}
                   />
                 </div>
 
