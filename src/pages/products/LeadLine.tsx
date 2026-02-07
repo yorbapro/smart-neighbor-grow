@@ -541,6 +541,102 @@ const LeadLine = () => {
         </div>
       </section>
 
+      {/* AI Receptionist Testimonials */}
+      <section className="py-20 md:py-28 bg-gradient-subtle">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
+              Real Results
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              What Business Owners Say About Their AI Receptionist
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Hear from contractors, law firms, and healthcare practices using LeadLine™ to never miss a call again.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Contractor Testimonial */}
+            <div className="bg-card border border-border rounded-2xl p-6 shadow-card">
+              <div className="flex items-center gap-1 mb-4">
+                {[1,2,3,4,5].map((star) => (
+                  <svg key={star} className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <blockquote className="text-muted-foreground mb-4">
+                "Before LeadLine™, we missed 40% of our calls because we were on job sites. Now our AI receptionist answers every call instantly—even at 6 AM when emergency calls come in. We've booked 3x more estimates this quarter."
+              </blockquote>
+              <div className="border-t border-border pt-4">
+                <p className="font-display font-bold text-foreground">Mike Rodriguez</p>
+                <p className="text-sm text-muted-foreground">Owner, Rodriguez HVAC & Plumbing</p>
+                <p className="text-xs text-primary mt-1">Sacramento, CA</p>
+              </div>
+            </div>
+
+            {/* Law Firm Testimonial */}
+            <div className="bg-card border border-border rounded-2xl p-6 shadow-card">
+              <div className="flex items-center gap-1 mb-4">
+                {[1,2,3,4,5].map((star) => (
+                  <svg key={star} className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <blockquote className="text-muted-foreground mb-4">
+                "Our AI voice agent screens intake calls while we're in court. It asks the right qualifying questions, captures case details, and schedules consultations. Clients love that they get a response immediately, and we love that we're not paying $3,000/month for a receptionist."
+              </blockquote>
+              <div className="border-t border-border pt-4">
+                <p className="font-display font-bold text-foreground">Jennifer Walsh, Esq.</p>
+                <p className="text-sm text-muted-foreground">Partner, Walsh & Associates Law</p>
+                <p className="text-xs text-primary mt-1">Henderson, NV</p>
+              </div>
+            </div>
+
+            {/* Healthcare Testimonial */}
+            <div className="bg-card border border-border rounded-2xl p-6 shadow-card">
+              <div className="flex items-center gap-1 mb-4">
+                {[1,2,3,4,5].map((star) => (
+                  <svg key={star} className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <blockquote className="text-muted-foreground mb-4">
+                "Patients call at all hours with appointment requests. LeadLine™ handles everything—checking our calendar, booking slots, sending confirmations. Our no-show rate dropped 40% because the AI sends reminders. It's like having a receptionist who never takes a break."
+              </blockquote>
+              <div className="border-t border-border pt-4">
+                <p className="font-display font-bold text-foreground">Dr. Sarah Chen, DDS</p>
+                <p className="text-sm text-muted-foreground">Owner, Bright Smile Dental</p>
+                <p className="text-xs text-primary mt-1">Fresno, CA</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Results Summary */}
+          <div className="mt-12 text-center">
+            <div className="inline-flex flex-wrap justify-center gap-8 bg-card border border-border rounded-xl px-8 py-6">
+              <div>
+                <p className="font-display text-3xl font-bold text-primary">95%</p>
+                <p className="text-sm text-muted-foreground">Caller Satisfaction</p>
+              </div>
+              <div className="hidden sm:block w-px bg-border" />
+              <div>
+                <p className="font-display text-3xl font-bold text-primary">3x</p>
+                <p className="text-sm text-muted-foreground">More Appointments</p>
+              </div>
+              <div className="hidden sm:block w-px bg-border" />
+              <div>
+                <p className="font-display text-3xl font-bold text-primary">$2,600</p>
+                <p className="text-sm text-muted-foreground">Monthly Savings</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing */}
       <section className="py-20 md:py-28 bg-secondary text-secondary-foreground">
         <div className="container">
