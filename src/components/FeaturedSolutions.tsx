@@ -15,8 +15,8 @@ const FeaturedSolutions = () => {
     {
       icon: Phone,
       name: "LeadLine™",
-      tagline: "Instant Lead Response",
-      description: "24/7 AI voice assistant that answers and qualifies leads in seconds.",
+      tagline: "AI Receptionist & Voice Agent",
+      description: "24/7 AI receptionist that answers calls, qualifies leads, and books appointments.",
       price: "$399/mo",
       slug: "leadline",
       hasDemo: true,
@@ -111,7 +111,7 @@ const FeaturedSolutions = () => {
                   className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-lg bg-accent text-accent-foreground font-semibold text-sm transition-all duration-300 hover:bg-accent/90 shadow-button-accent hover:shadow-glow-accent"
                 >
                   <Phone className="w-4 h-4" />
-                  Experience LeadLine™ (Live Demo)
+                  Talk to Our AI Receptionist
                 </a>
               )}
             </div>

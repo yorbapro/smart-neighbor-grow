@@ -23,11 +23,23 @@ import {
 
 const LeadLine = () => {
   useEffect(() => {
-    document.title = "LeadLine™ - 24/7 AI Voice Engagement | BrightLaunchIQ";
+    document.title = "AI Receptionist & AI Voice Agent for Small Business | LeadLine™ by BrightLaunchIQ";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "LeadLine™ is an AI-powered voice assistant that answers calls and qualifies leads within seconds. 24/7 instant lead response, appointment booking, and intelligent call routing.");
+      metaDescription.setAttribute("content", "LeadLine™ is the #1 AI receptionist and AI voice agent for small businesses. Answer every call 24/7, qualify leads instantly, and book appointments automatically. Set up your AI receptionist in days, not months. $399/mo.");
+    }
+
+    // Add keywords meta for AI receptionist targeting
+    const existingKeywords = document.querySelector('meta[name="keywords"]');
+    const keywordsContent = "AI receptionist, AI voice agent, virtual receptionist AI, AI phone answering service, AI call answering, automated receptionist, AI voice assistant for business, 24/7 AI receptionist, small business AI receptionist, how to set up AI receptionist, AI receptionist cost, best AI receptionist 2025, AI receptionist for contractors, AI receptionist for law firms, AI receptionist for healthcare";
+    if (existingKeywords) {
+      existingKeywords.setAttribute("content", keywordsContent);
+    } else {
+      const keywordsMeta = document.createElement("meta");
+      keywordsMeta.name = "keywords";
+      keywordsMeta.content = keywordsContent;
+      document.head.appendChild(keywordsMeta);
     }
 
     window.scrollTo(0, 0);
@@ -36,25 +48,31 @@ const LeadLine = () => {
     const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
     existingScripts.forEach(script => script.remove());
 
-    // Product Schema
+    // Product Schema optimized for AI receptionist
     const productScript = document.createElement("script");
     productScript.type = "application/ld+json";
     productScript.id = "product-schema";
     productScript.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Product",
-      "name": "LeadLine™",
-      "description": "AI-powered voice assistant that answers calls and qualifies leads within seconds. 24/7 instant lead response with intelligent appointment booking.",
+      "name": "LeadLine™ AI Receptionist",
+      "alternateName": ["LeadLine AI Voice Agent", "LeadLine Virtual Receptionist"],
+      "description": "LeadLine™ is an AI receptionist and AI voice agent that answers every business call 24/7. This AI-powered virtual receptionist qualifies leads, books appointments, and never misses a call—all for $399/month.",
       "brand": {
         "@type": "Organization",
         "name": "BrightLaunchIQ"
       },
-      "category": "AI Voice Assistant Software",
+      "category": "AI Receptionist Software",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Response Time", "value": "Under 3 seconds" },
+        { "@type": "PropertyValue", "name": "Availability", "value": "24/7/365" },
+        { "@type": "PropertyValue", "name": "Setup Time", "value": "7-14 days" }
+      ],
       "offers": {
         "@type": "Offer",
         "priceCurrency": "USD",
         "price": "399",
-        "priceValidUntil": "2026-12-31",
+        "priceValidUntil": "2027-12-31",
         "availability": "https://schema.org/InStock",
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -72,39 +90,85 @@ const LeadLine = () => {
     });
     document.head.appendChild(productScript);
 
-    // Service Schema for GEO
+    // Service Schema optimized for AI receptionist and voice agent
     const serviceScript = document.createElement("script");
     serviceScript.type = "application/ld+json";
     serviceScript.id = "service-schema";
     serviceScript.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "AI Voice Assistant",
-      "serviceType": "Automated Call Answering and Lead Qualification",
+      "name": "AI Receptionist Service",
+      "alternateName": ["AI Voice Agent", "Virtual Receptionist AI", "Automated Phone Answering"],
+      "serviceType": "AI Receptionist and Voice Agent for Small Business",
       "provider": {
         "@type": "Organization",
         "name": "BrightLaunchIQ"
       },
-      "description": "24/7 AI voice assistant that answers inbound calls, qualifies leads, and books appointments automatically. Never miss a call again.",
+      "description": "LeadLine™ is a complete AI receptionist solution that answers calls 24/7, qualifies leads, and books appointments automatically. Set up your AI voice agent in days—no technical expertise required. Perfect for contractors, law firms, healthcare practices, and service businesses.",
       "areaServed": {
         "@type": "Country",
         "name": "United States"
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "LeadLine™ Features",
+        "name": "AI Receptionist Features",
         "itemListElement": [
-          { "@type": "Service", "name": "24/7 Call Answering" },
+          { "@type": "Service", "name": "24/7 AI Call Answering" },
           { "@type": "Service", "name": "AI Lead Qualification" },
-          { "@type": "Service", "name": "Appointment Booking" },
-          { "@type": "Service", "name": "Call Routing" },
-          { "@type": "Service", "name": "Voicemail to Text" }
+          { "@type": "Service", "name": "Automated Appointment Booking" },
+          { "@type": "Service", "name": "Intelligent Call Routing" },
+          { "@type": "Service", "name": "Voicemail Transcription" },
+          { "@type": "Service", "name": "CRM Integration" }
         ]
       }
     });
     document.head.appendChild(serviceScript);
 
-    // FAQ Schema
+    // HowTo Schema for "how to set up an AI receptionist"
+    const howToScript = document.createElement("script");
+    howToScript.type = "application/ld+json";
+    howToScript.id = "howto-schema";
+    howToScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Set Up an AI Receptionist for Your Business",
+      "description": "Learn how to set up an AI receptionist or AI voice agent for your small business. LeadLine™ can be deployed in 7-14 days with no technical expertise required.",
+      "totalTime": "P14D",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "1899"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Schedule a Strategy Call",
+          "text": "Book a 15-minute call with our team to discuss your business needs, call volume, and customer service goals for your AI receptionist."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Customize Your AI Voice Agent",
+          "text": "We configure your AI receptionist with custom scripts, your business hours, appointment availability, and lead qualification questions."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Integrate with Your Systems",
+          "text": "Connect LeadLine™ to your CRM, calendar, and phone system. We handle all technical setup—no IT expertise needed."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Test and Launch",
+          "text": "Review test calls, approve your AI receptionist's responses, and go live. Your 24/7 AI voice agent is now answering calls."
+        }
+      ]
+    });
+    document.head.appendChild(howToScript);
+
+    // FAQ Schema optimized for AI receptionist queries
     const faqScript = document.createElement("script");
     faqScript.type = "application/ld+json";
     faqScript.id = "faq-schema";
@@ -114,26 +178,50 @@ const LeadLine = () => {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How fast does LeadLine™ answer calls?",
+          "name": "What is an AI receptionist?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "LeadLine™ answers calls instantly—within 1-2 rings. For form submissions, it can call leads back within seconds of submission, ensuring you're always first to respond."
+            "text": "An AI receptionist is an artificial intelligence system that answers phone calls, qualifies leads, and books appointments automatically—just like a human receptionist, but available 24/7/365. LeadLine™ is an AI receptionist that answers calls within 1-2 rings, handles complex conversations naturally, and costs just $13.30/day compared to $3,000+/month for a human receptionist."
           }
         },
         {
           "@type": "Question",
-          "name": "Can LeadLine™ book appointments on my calendar?",
+          "name": "How do I set up an AI voice agent for my business?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes! LeadLine™ integrates with your calendar to check availability and book appointments in real-time during the call. No more back-and-forth scheduling."
+            "text": "Setting up an AI voice agent like LeadLine™ takes 7-14 days. First, schedule a strategy call to discuss your needs. We then customize the AI with your business scripts, integrate it with your CRM and calendar, and launch. No technical expertise is required—BrightLaunchIQ handles all setup. The $1,500 one-time setup fee covers everything."
           }
         },
         {
           "@type": "Question",
-          "name": "Does LeadLine™ sound like a robot?",
+          "name": "How much does an AI receptionist cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "LeadLine™ uses advanced conversational AI with natural-sounding voices. Most callers can't tell they're talking to an AI. The system handles complex conversations, follows up on questions, and maintains context throughout the call."
+            "text": "LeadLine™ AI receptionist costs $1,500 one-time setup plus $399/month ongoing—that's just $13.30/day for 24/7 call answering. Compare that to a human receptionist at $3,000+/month (only 40 hours/week) or an answering service at $1-2 per call. AI receptionists pay for themselves by capturing leads you'd otherwise miss after-hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can an AI receptionist book appointments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! LeadLine™ integrates with your calendar (Google Calendar, Outlook, Calendly) to check real-time availability and book appointments during the call. The AI sends confirmation emails and SMS reminders automatically. No more phone tag or missed scheduling opportunities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does an AI voice agent sound robotic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Modern AI voice agents like LeadLine™ use advanced conversational AI that sounds natural and professional. Most callers can't tell they're speaking with AI. The system handles interruptions, follow-up questions, and complex conversations with context awareness—far beyond simple IVR phone trees."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What businesses benefit most from an AI receptionist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI receptionists are ideal for service businesses, contractors (HVAC, plumbing, electrical), law firms, healthcare practices, real estate agents, and any business where missing a call means losing a customer. If you receive 20+ calls/week and can't always answer, an AI receptionist captures revenue you're currently losing."
           }
         }
       ]
@@ -141,7 +229,7 @@ const LeadLine = () => {
     document.head.appendChild(faqScript);
 
     return () => {
-      ['product-schema', 'service-schema', 'faq-schema'].forEach(id => {
+      ['product-schema', 'service-schema', 'howto-schema', 'faq-schema'].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.remove();
       });
@@ -151,68 +239,68 @@ const LeadLine = () => {
   const features = [
     {
       icon: Zap,
-      title: "Instant Lead Response",
-      description: "Answers inbound calls within 1-2 rings. Calls back form leads within seconds of submission—before they can reach a competitor."
+      title: "Instant Call Answering",
+      description: "Your AI receptionist answers inbound calls within 1-2 rings—24/7/365. Calls back form leads within seconds, before they reach a competitor."
     },
     {
       icon: Bot,
       title: "Intelligent Lead Qualification",
-      description: "AI asks the right questions to understand needs, budget, and timeline. Scores leads and routes hot prospects directly to your team."
+      description: "This AI voice agent asks the right questions to understand needs, budget, and timeline. Scores leads and routes hot prospects directly to your team."
     },
     {
       icon: Calendar,
       title: "Automated Appointment Booking",
-      description: "Checks your real-time calendar availability and books appointments during the call. Sends confirmations and reminders automatically."
+      description: "Your AI receptionist checks real-time calendar availability and books appointments during the call. Sends confirmations and reminders automatically."
     },
     {
       icon: MessageSquare,
       title: "Natural Conversations",
-      description: "Advanced conversational AI that handles complex questions, follows up naturally, and maintains context throughout the entire call."
+      description: "Advanced conversational AI that handles complex questions, follows up naturally, and maintains context—callers won't know they're talking to an AI voice agent."
     },
     {
       icon: Headphones,
       title: "24/7 Availability",
-      description: "Never miss a call—day, night, weekends, or holidays. Your AI receptionist is always on duty, always professional."
+      description: "Never miss a call—day, night, weekends, or holidays. Your AI receptionist is always on duty, always professional, always capturing leads."
     },
     {
       icon: BarChart3,
       title: "Call Analytics & Insights",
-      description: "Every call transcribed and analyzed. Track lead sources, common questions, and conversion patterns to optimize your funnel."
+      description: "Every call transcribed and analyzed. Track lead sources, common questions, and conversion patterns to optimize your AI voice agent's performance."
     }
   ];
 
   const useCases = [
     {
       icon: Users,
-      title: "Service Businesses",
-      description: "HVAC, plumbing, electrical, and home services—qualify leads and book estimates while you're on the job."
+      title: "Contractors & Home Services",
+      description: "HVAC, plumbing, electrical—your AI receptionist qualifies leads and books estimates while you're on the job. Never miss an emergency call."
     },
     {
       icon: Shield,
-      title: "Professional Services",
-      description: "Law firms, consultants, and agencies—screen potential clients and schedule consultations automatically."
+      title: "Law Firms & Professional Services",
+      description: "Screen potential clients with your AI voice agent. Capture intake information and schedule consultations automatically—even after hours."
     },
     {
       icon: Heart,
       title: "Healthcare & Wellness",
-      description: "Medical practices, dentists, and therapists—handle appointment requests and patient inquiries 24/7."
+      description: "Medical practices, dentists, therapists—your AI receptionist handles appointment requests, answers FAQs, and routes urgent calls 24/7."
     }
   ];
 
   const metrics = [
     { value: "<3s", label: "Answer Time", suffix: "" },
-    { value: "24/7", label: "Availability", suffix: "" },
+    { value: "24/7", label: "AI Receptionist", suffix: "" },
     { value: "95%", label: "Caller Satisfaction", suffix: "" },
     { value: "3x", label: "More Appointments", suffix: "" }
   ];
 
   const comparisonItems = [
-    { feature: "Availability", traditional: "Business hours only", leadline: "24/7/365" },
+    { feature: "Availability", traditional: "Business hours only", leadline: "24/7/365 AI Receptionist" },
     { feature: "Answer speed", traditional: "3-4 rings (if available)", leadline: "1-2 rings, always" },
-    { feature: "Cost per month", traditional: "$3,000+ (receptionist)", leadline: "$399/month" },
+    { feature: "Cost per month", traditional: "$3,000+ (human)", leadline: "$399/month AI" },
     { feature: "Appointment booking", traditional: "Manual, callbacks", leadline: "Real-time, automatic" },
-    { feature: "Lead qualification", traditional: "Inconsistent", leadline: "Standardized, intelligent" },
-    { feature: "After-hours calls", traditional: "Voicemail (60% abandoned)", leadline: "Live AI engagement" }
+    { feature: "Lead qualification", traditional: "Inconsistent", leadline: "AI-standardized scoring" },
+    { feature: "After-hours calls", traditional: "Voicemail (60% lost)", leadline: "Live AI voice agent" }
   ];
 
   return (
@@ -226,19 +314,19 @@ const LeadLine = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-6">
               <Phone className="w-5 h-5" />
-              <span className="font-semibold">AI Voice Engagement</span>
+              <span className="font-semibold">AI Receptionist & Voice Agent</span>
             </div>
             
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              LeadLine™
+              LeadLine™ AI Receptionist
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-4">
-              Instant Lead Response. 24/7 AI Voice Engagement.
+              Your 24/7 AI Voice Agent That Never Misses a Call
             </p>
             
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-              Never miss another call or lead. LeadLine™ answers every call instantly, qualifies leads intelligently, and books appointments automatically—while you focus on closing deals.
+              LeadLine™ is the AI receptionist built for small businesses. Answer every call instantly, qualify leads intelligently, and book appointments automatically—while you focus on closing deals. Set up in days, not months.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -254,12 +342,12 @@ const LeadLine = () => {
                   rel="noopener noreferrer"
                 >
                   <Phone className="mr-2 w-5 h-5" />
-                  Experience LeadLine™ (Live Demo)
+                  Talk to Our AI Receptionist (Live Demo)
                 </a>
               </Button>
               <Button variant="heroOutline" size="lg" asChild>
                 <Link to="/get-started">
-                  Get Started
+                  Get Your AI Voice Agent
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
@@ -317,20 +405,20 @@ const LeadLine = () => {
             <div className="bg-secondary rounded-2xl p-8 text-secondary-foreground">
               <div className="flex items-center gap-3 mb-6">
                 <Phone className="w-8 h-8 text-primary" />
-                <h3 className="font-display text-2xl font-bold">The LeadLine™ Solution</h3>
+                <h3 className="font-display text-2xl font-bold">The AI Receptionist Solution</h3>
               </div>
               <p className="text-secondary-foreground/80 mb-6">
-                An AI voice assistant that answers every call instantly, engages callers naturally, qualifies leads, and books appointments—24/7/365.
+                LeadLine™ is an AI voice agent that answers every call instantly, engages callers naturally, qualifies leads, and books appointments—24/7/365. Your virtual receptionist that never takes a break.
               </p>
               <div className="flex items-center justify-center gap-8 py-4">
                 <div className="text-center">
                   <p className="font-display text-3xl font-bold text-primary">$13.30</p>
-                  <p className="text-sm text-secondary-foreground/70">per day</p>
+                  <p className="text-sm text-secondary-foreground/70">per day AI receptionist</p>
                 </div>
                 <div className="text-secondary-foreground/30 text-3xl">vs</div>
                 <div className="text-center">
                   <p className="font-display text-3xl font-bold text-destructive">$3,000+</p>
-                  <p className="text-sm text-secondary-foreground/70">per month receptionist</p>
+                  <p className="text-sm text-secondary-foreground/70">per month human</p>
                 </div>
               </div>
             </div>
@@ -343,13 +431,13 @@ const LeadLine = () => {
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
-              Capabilities
+              AI Receptionist Capabilities
             </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Your AI Receptionist, Always On Duty
+              Your AI Voice Agent, Always On Duty
             </h2>
             <p className="text-lg text-muted-foreground">
-              LeadLine™ handles calls with the professionalism of your best team member—at a fraction of the cost.
+              LeadLine™ is the AI receptionist that handles calls with the professionalism of your best team member—at a fraction of the cost.
             </p>
           </div>
 

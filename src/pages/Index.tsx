@@ -32,7 +32,7 @@ const Index = () => {
 
     // Add keywords meta
     const existingKeywords = document.querySelector('meta[name="keywords"]');
-    const keywordsContent = "AI for business, AI lead generation, AI sales automation, human-guided AI, AI SDR, automated sales, local business AI, small business automation, AI marketing automation, answer engine optimization, AEO, Sacramento AI sales, California AI services";
+    const keywordsContent = "AI for business, AI lead generation, AI sales automation, human-guided AI, AI SDR, automated sales, local business AI, small business automation, AI marketing automation, answer engine optimization, AEO, Sacramento AI sales, California AI services, AI receptionist, AI voice agent, virtual receptionist AI, AI phone answering, 24/7 AI receptionist";
     if (existingKeywords) {
       existingKeywords.setAttribute("content", keywordsContent);
     } else {
@@ -237,10 +237,18 @@ const Index = () => {
         },
         {
           "@type": "Question",
-          "name": "How does human-guided AI differ from fully automated AI?",
+          "name": "What is an AI receptionist?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Human-guided AI means real experts supervise every AI system. Our consultants set the rules, monitor results, and ensure customer touchpoints feel authentic—never robotic. This 'bounded autonomy' approach gives you AI power with human judgment, so your brand voice stays consistent and customers feel valued."
+            "text": "An AI receptionist is an artificial intelligence system that answers phone calls, qualifies leads, and books appointments automatically—just like a human receptionist, but available 24/7/365. BrightLaunchIQ's LeadLine™ AI receptionist answers calls within 1-2 rings, handles complex conversations naturally, and costs just $13.30/day compared to $3,000+/month for human staff."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I set up an AI voice agent for my business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Setting up an AI voice agent takes 7-14 days with BrightLaunchIQ. Schedule a strategy call, we customize the AI receptionist with your scripts, integrate it with your CRM and calendar, then launch. No technical expertise required—we handle all setup for the $1,500 one-time fee."
           }
         },
         {
@@ -248,7 +256,7 @@ const Index = () => {
           "name": "How much does AI sales automation cost for a small business?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "BrightLaunchIQ offers AI sales automation starting at $500/month after a one-time $1,500 setup fee. This breaks down to just $16.60 per day for a 24/7 AI sales team—compared to $80,000+ per year for a human hire. Most clients see ROI within the first 30 days."
+            "text": "BrightLaunchIQ offers AI sales automation starting at $299/month for LocalLift™, $399/month for LeadLine™ AI receptionist, and $500/month for LaunchPad 360™—all after a $1,500 setup fee. That's $10-17 per day for a 24/7 AI team compared to $80,000+ per year for human hires."
           }
         },
         {
