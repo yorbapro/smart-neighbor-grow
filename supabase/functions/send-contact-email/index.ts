@@ -10,6 +10,37 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
+// Rate limiting: 3 requests per hour per IP to prevent email spam
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT_MAX = 3;
+const RATE_LIMIT_WINDOW_MS = 3600000; // 1 hour
+
+function checkRateLimit(identifier: string): boolean {
+  const now = Date.now();
+  const record = rateLimitMap.get(identifier);
+  
+  // Clean up expired entries periodically
+  if (rateLimitMap.size > 1000) {
+    for (const [key, value] of rateLimitMap.entries()) {
+      if (now > value.resetAt) {
+        rateLimitMap.delete(key);
+      }
+    }
+  }
+  
+  if (!record || now > record.resetAt) {
+    rateLimitMap.set(identifier, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    return true;
+  }
+  
+  if (record.count >= RATE_LIMIT_MAX) {
+    return false;
+  }
+  
+  record.count++;
+  return true;
+}
+
 // Zod schema for input validation
 const ContactEmailSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
@@ -37,6 +68,19 @@ const handler = async (req: Request): Promise<Response> => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
+  }
+
+  // Rate limiting check
+  const clientIp = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 
+                   req.headers.get('x-real-ip') || 
+                   'unknown';
+  
+  if (!checkRateLimit(clientIp)) {
+    console.warn(`Rate limit exceeded for IP: ${clientIp}`);
+    return new Response(
+      JSON.stringify({ error: "Rate limit exceeded. Please try again in 1 hour." }),
+      { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+    );
   }
 
   try {
