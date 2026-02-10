@@ -137,8 +137,8 @@ const FAQ = () => {
                   </Link>
                 </Button>
                 <Button variant="ghost" size="lg" asChild className="text-primary-foreground border border-primary-foreground/20 hover:bg-white/10">
-                  <a href="tel:1-800-LAUNCH-IQ">
-                    Call 1-800-LAUNCH-IQ
+                  <a href="tel:1-877-879-5552">
+                    Call 1-877-879-5552
                   </a>
                 </Button>
               </div>

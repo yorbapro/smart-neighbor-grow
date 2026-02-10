@@ -313,7 +313,7 @@ const LaunchPad360 = () => {
                 </Link>
               </Button>
               <Button variant="heroOutline" size="lg" asChild>
-                <a href="tel:1-800-LAUNCH-IQ">
+                <a href="tel:1-877-879-5552">
                   <Phone className="mr-2 w-5 h-5" />
                   Talk to an Expert
                 </a>

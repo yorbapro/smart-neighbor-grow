@@ -62,13 +62,13 @@ const CTA = () => {
           {/* Contact Info */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-8 border-t border-white/10">
             <a
-              href="tel:1-800-LAUNCH-IQ"
+              href="tel:1-877-879-5552"
               className="flex items-center gap-3 text-white/80 hover:text-primary transition-colors group"
             >
               <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                 <Phone size={18} />
               </div>
-              <span className="font-semibold">1-800-LAUNCH-IQ</span>
+              <span className="font-semibold">1-877-879-5552</span>
             </a>
             <a
               href="mailto:success@BrightLaunchIQ.com"

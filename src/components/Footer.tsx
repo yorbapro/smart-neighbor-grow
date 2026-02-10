@@ -46,10 +46,10 @@ const Footer = () => {
             </p>
             <div className="space-y-3 text-sm">
               <a 
-                href="tel:1-800-LAUNCH-IQ" 
+                href="tel:1-877-879-5552" 
                 className="block text-secondary-foreground/80 hover:text-primary transition-colors"
               >
-                1-800-LAUNCH-IQ
+                1-877-879-5552
               </a>
               <a 
                 href="mailto:success@BrightLaunchIQ.com"
