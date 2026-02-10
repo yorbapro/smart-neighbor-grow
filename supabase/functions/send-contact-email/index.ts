@@ -194,7 +194,7 @@ const handler = async (req: Request): Promise<Response> => {
             </ul>
             
             <p style="color: #374151; font-size: 16px; line-height: 1.6;">
-              Need faster help? Call us at <a href="tel:1-800-LAUNCH-IQ" style="color: #4F46E5;">1-800-LAUNCH-IQ</a>.
+              Need faster help? Call us at <a href="tel:1-877-879-5552" style="color: #4F46E5;">1-877-879-5552</a>.
             </p>
             
             <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-top: 24px;">
@@ -206,7 +206,7 @@ const handler = async (req: Request): Promise<Response> => {
             
             <p style="color: #6b7280; font-size: 12px;">
               BrightLaunchIQ - Human-Guided AI Lead Generation<br>
-              success@BrightLaunchIQ.com | 1-800-LAUNCH-IQ
+              success@BrightLaunchIQ.com | 1-877-879-5552
             </p>
           </div>
         </div>
