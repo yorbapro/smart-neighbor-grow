@@ -181,7 +181,7 @@ const handler = async (req: Request): Promise<Response> => {
       <div style="background-color: #f3f4f6; padding: 20px; border-radius: 8px; margin-top: 30px;">
         <h3 style="color: #1a1a2e; margin: 0 0 10px 0; font-size: 16px;">Need Help?</h3>
         <p style="color: #6b7280; margin: 0;">
-          📞 Call us: <a href="tel:1-800-LAUNCH-IQ" style="color: #f59e0b;">1-800-LAUNCH-IQ</a><br>
+          📞 Call us: <a href="tel:1-877-879-5552" style="color: #f59e0b;">1-877-879-5552</a><br>
           📧 Email: <a href="mailto:success@BrightLaunchIQ.com" style="color: #f59e0b;">success@BrightLaunchIQ.com</a>
         </p>
       </div>
