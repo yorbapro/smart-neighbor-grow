@@ -138,7 +138,7 @@ const Accessibility = () => {
               </p>
               <ul className="list-none space-y-2 mt-4">
                 <li><strong>Email:</strong> <a href="mailto:success@BrightLaunchIQ.com" className="text-primary hover:underline">success@BrightLaunchIQ.com</a></li>
-                <li><strong>Phone:</strong> 1-800-LAUNCH-IQ</li>
+                <li><strong>Phone:</strong> 1-877-879-5552</li>
                 <li><strong>Business Hours:</strong> Monday–Friday, 8AM–6PM Pacific Time</li>
               </ul>
               <p className="mt-4">

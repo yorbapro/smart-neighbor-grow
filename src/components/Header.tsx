@@ -158,7 +158,7 @@ const Header = () => {
               asChild
               className={isScrolled || !isHomepage ? "" : "border-white/20 text-white hover:bg-white/10"}
             >
-              <a href="tel:1-800-LAUNCH-IQ">1-800-LAUNCH-IQ</a>
+              <a href="tel:1-877-879-5552">1-877-879-5552</a>
             </Button>
             <Button variant="hero" size="default" asChild>
               <Link to="/get-started">Get Started</Link>
@@ -241,7 +241,7 @@ const Header = () => {
 
               <div className="flex flex-col gap-3 pt-4 border-t border-border">
                 <Button variant="outline" size="default" className="w-full" asChild>
-                  <a href="tel:1-800-LAUNCH-IQ">1-800-LAUNCH-IQ</a>
+                  <a href="tel:1-877-879-5552">1-877-879-5552</a>
                 </Button>
                 <Button variant="hero" size="default" className="w-full" asChild>
                   <Link to="/get-started">Get Started</Link>

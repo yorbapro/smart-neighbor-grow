@@ -184,7 +184,7 @@ const Privacy = () => {
               </p>
               <ul className="list-none space-y-2">
                 <li><strong>Email:</strong> <a href="mailto:success@BrightLaunchIQ.com" className="text-primary hover:underline">success@BrightLaunchIQ.com</a></li>
-                <li><strong>Phone:</strong> 1-800-LAUNCH-IQ</li>
+                <li><strong>Phone:</strong> 1-877-879-5552</li>
                 <li><strong>Business Hours:</strong> Monday–Friday, 8AM–6PM Pacific Time</li>
               </ul>
             </section>

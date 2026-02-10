@@ -59,7 +59,7 @@ const Index = () => {
       "description": "BrightLaunchIQ provides human-guided AI sales automation and lead generation for local businesses. We combine expert oversight with AI technology to help contractors, consultants, and service businesses respond first and win more customers.",
       "url": "https://brightlaunchiq.com",
       "logo": "https://brightlaunchiq.com/logo.png",
-      "telephone": "1-800-LAUNCH-IQ",
+      "telephone": "1-877-879-5552",
       "email": "success@BrightLaunchIQ.com",
       "foundingDate": "2023",
       "founder": {
@@ -97,7 +97,7 @@ const Index = () => {
       "name": "BrightLaunchIQ",
       "description": "Human-guided AI lead generation and sales automation for local businesses. Expert-supervised AI that helps you respond first, automate the busywork, and win more customers.",
       "url": "https://brightlaunchiq.com",
-      "telephone": "1-800-LAUNCH-IQ",
+      "telephone": "1-877-879-5552",
       "email": "success@BrightLaunchIQ.com",
       "priceRange": "$500-$2000/month",
       "areaServed": ["Sacramento", "Stockton", "Fresno", "Bakersfield", "Monterey", "Henderson", "Culver City"],

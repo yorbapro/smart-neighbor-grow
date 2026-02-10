@@ -82,7 +82,7 @@ const Contact = () => {
       "mainEntity": {
         "@type": "Organization",
         "name": "BrightLaunchIQ",
-        "telephone": "1-800-LAUNCH-IQ",
+        "telephone": "1-877-879-5552",
         "email": "success@BrightLaunchIQ.com",
         "areaServed": {
           "@type": "Country",
@@ -91,7 +91,7 @@ const Contact = () => {
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "sales",
-          "telephone": "1-800-LAUNCH-IQ",
+          "telephone": "1-877-879-5552",
           "email": "success@BrightLaunchIQ.com",
           "availableLanguage": "English"
         }
@@ -167,8 +167,8 @@ const Contact = () => {
     {
       icon: Phone,
       label: "Phone",
-      value: "1-800-LAUNCH-IQ",
-      href: "tel:1-800-LAUNCH-IQ",
+      value: "1-877-879-5552",
+      href: "tel:1-877-879-5552",
     },
     {
       icon: Mail,
