@@ -89,10 +89,19 @@ const Hero = () => {
 
             {/* Value prop line */}
             <p 
-              className="text-base text-white/50 max-w-xl mb-10 animate-slide-up"
+              className="text-base text-white/50 max-w-xl mb-4 animate-slide-up"
               style={{ animationDelay: "0.15s" }}
             >
               The power of a 50-person sales team. The personal touch of a trusted partner.
+            </p>
+
+            {/* Security reassurance */}
+            <p 
+              className="text-sm text-primary/80 max-w-xl mb-10 animate-slide-up flex items-center gap-2"
+              style={{ animationDelay: "0.18s" }}
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block" />
+              Secure. Compliant. Built with enterprise-grade infrastructure.
             </p>
 
             {/* CTA Buttons - Bold and clear */}
