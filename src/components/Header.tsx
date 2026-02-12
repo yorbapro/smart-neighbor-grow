@@ -149,6 +149,13 @@ const Header = () => {
             >
               Contact
             </Link>
+
+            <Link
+              to="/trust-security"
+              className={`${mutedColor} hover:${textColor} transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-md`}
+            >
+              Trust & Security
+            </Link>
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
@@ -237,6 +244,14 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
+              </Link>
+
+              <Link
+                to="/trust-security"
+                className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2 focus:outline-none focus:ring-2 focus:ring-ring rounded-md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Trust & Security
               </Link>
 
               <div className="flex flex-col gap-3 pt-4 border-t border-border">

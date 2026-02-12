@@ -1,9 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
+import DataProtectionModal from "@/components/DataProtectionModal";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { 
   Phone, 
   Check, 
@@ -18,10 +20,16 @@ import {
   BarChart3,
   Users,
   Bell,
-  Heart
+  Heart,
+  Lock,
+  Eye,
+  Ban,
+  ShieldCheck,
+  Mic
 } from "lucide-react";
 
 const LeadLine = () => {
+  const [demoConsent, setDemoConsent] = useState(false);
   useEffect(() => {
     document.title = "AI Receptionist & AI Voice Agent for Small Business | LeadLine™ by BrightLaunchIQ";
     
@@ -329,28 +337,57 @@ const LeadLine = () => {
               LeadLine™ is the AI receptionist built for small businesses. Answer every call instantly, qualify leads intelligently, and book appointments automatically—while you focus on closing deals. Set up in days, not months.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                variant="hero" 
-                size="lg" 
-                asChild
-                className="bg-accent hover:bg-accent/90 text-accent-foreground"
-              >
-                <a 
-                  href="https://agent.retellai.com/preview/agent_19d43cf736300711221e30a6b0" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+            <div className="flex flex-col items-center gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  variant="hero" 
+                  size="lg" 
+                  asChild={demoConsent}
+                  disabled={!demoConsent}
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground"
                 >
-                  <Phone className="mr-2 w-5 h-5" />
-                  Talk to Our AI Receptionist (Live Demo)
-                </a>
-              </Button>
-              <Button variant="heroOutline" size="lg" asChild>
-                <Link to="/get-started">
-                  Get Your AI Voice Agent
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-              </Button>
+                  {demoConsent ? (
+                    <a 
+                      href="https://agent.retellai.com/preview/agent_19d43cf736300711221e30a6b0" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <Phone className="mr-2 w-5 h-5" />
+                      Talk to Our AI Receptionist (Live Demo)
+                    </a>
+                  ) : (
+                    <span>
+                      <Phone className="mr-2 w-5 h-5" />
+                      Talk to Our AI Receptionist (Live Demo)
+                    </span>
+                  )}
+                </Button>
+                <Button variant="heroOutline" size="lg" asChild>
+                  <Link to="/get-started">
+                    Get Your AI Voice Agent
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Link>
+                </Button>
+              </div>
+
+              {/* Consent checkbox */}
+              <div className="flex items-start gap-2 max-w-lg">
+                <Checkbox
+                  id="demo-consent"
+                  checked={demoConsent}
+                  onCheckedChange={(checked) => setDemoConsent(checked === true)}
+                  className="mt-0.5"
+                />
+                <label htmlFor="demo-consent" className="text-sm text-muted-foreground cursor-pointer leading-snug">
+                  I agree to receive a one-time AI demo call and understand this call may be recorded for quality assurance.
+                </label>
+              </div>
+
+              <p className="text-xs text-muted-foreground/70 max-w-md text-center">
+                We only use your number for this one-time demo. We never sell your data, and we do not initiate automated follow-up calls unless you specifically request a consultation.
+              </p>
+
+              <DataProtectionModal />
             </div>
           </div>
         </div>
@@ -537,6 +574,91 @@ const LeadLine = () => {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Human-in-the-Loop Guarantee */}
+      <section className="py-20 md:py-28 bg-card">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
+                Your Guarantee
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+                🤝 AI With Oversight — Never Unsupervised
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                LeadLine™ never operates in a vacuum. Every call generates an immediate report to your inbox. You have 100% visibility and can override, monitor, or step in at any second.
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-5">
+              {[
+                { icon: Bell, title: "Real-time call notifications", desc: "Get instant alerts for every call — know what's happening as it happens." },
+                { icon: Ban, title: "Blacklist protection", desc: "Prevent specific numbers from being contacted. Full control over who the AI reaches." },
+                { icon: Shield, title: "Guardrails against off-script behavior", desc: "Strict prompt engineering ensures the AI stays on-message, every time." },
+                { icon: Mic, title: "Custom tone calibration", desc: "We calibrate tone, pacing, and language to match your brand voice perfectly." },
+              ].map((item) => (
+                <div key={item.title} className="flex items-start gap-4 p-5 rounded-2xl bg-background border border-border">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <item.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-display font-bold text-foreground mb-1">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Icons Row */}
+      <section className="py-16 bg-background">
+        <div className="container">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {[
+              { icon: Lock, label: "End-to-End Encryption", desc: "All data encrypted in transit and at rest" },
+              { icon: ShieldCheck, label: "Secure Cloud Storage", desc: "SOC 2 compliant infrastructure" },
+              { icon: Ban, label: "Zero-Training Policy", desc: "Your data never trains public models" },
+              { icon: Eye, label: "Compliance-Ready", desc: "GDPR, CCPA, and HIPAA-ready" },
+            ].map((item) => (
+              <div key={item.label} className="text-center p-5 rounded-2xl bg-card border border-border">
+                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                  <item.icon className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="font-display font-bold text-foreground text-sm mb-1">{item.label}</h3>
+                <p className="text-xs text-muted-foreground">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* White-Label Brand Protection */}
+      <section className="py-20 md:py-28 bg-secondary text-secondary-foreground">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
+              🎙 Designed to Protect Your Brand Reputation
+            </h2>
+            <p className="text-lg text-secondary-foreground/70 mb-10 max-w-2xl mx-auto">
+              LeadLine™ is not a "robo-caller." We calibrate tone, pacing, and latency to sound like a professional assistant aligned with your brand voice. Your customers experience seamless service — not experimental AI.
+            </p>
+            <div className="grid sm:grid-cols-3 gap-6">
+              {[
+                { title: "Structured Conversations", desc: "Every interaction follows carefully designed conversation flows — no random tangents." },
+                { title: "Hallucination Mitigation", desc: "Strict prompt guardrails and knowledge boundaries prevent the AI from making things up." },
+                { title: "Monitored Scripts", desc: "All scripts are controlled, versioned, and monitored by our expert team." },
+              ].map((item) => (
+                <div key={item.title} className="p-5 rounded-2xl bg-secondary-foreground/5 border border-primary/10">
+                  <h3 className="font-display font-bold text-secondary-foreground mb-2">{item.title}</h3>
+                  <p className="text-sm text-secondary-foreground/70">{item.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

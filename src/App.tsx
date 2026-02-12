@@ -23,6 +23,7 @@ const PaymentSuccess = lazy(() => import("./pages/PaymentSuccess"));
 const Terms = lazy(() => import("./pages/Terms"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Accessibility = lazy(() => import("./pages/Accessibility"));
+const TrustSecurity = lazy(() => import("./pages/TrustSecurity"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const Contact = lazy(() => import("./pages/Contact"));
 const AboutPage = lazy(() => import("./pages/About"));
@@ -116,6 +117,7 @@ const App = () => (
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/accessibility" element={<Accessibility />} />
+            <Route path="/trust-security" element={<TrustSecurity />} />
             
             {/* Admin pages */}
             <Route path="/admin" element={<AdminAuth />} />

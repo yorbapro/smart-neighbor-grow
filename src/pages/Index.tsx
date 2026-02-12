@@ -10,6 +10,7 @@ import Testimonials from "@/components/Testimonials";
 import About from "@/components/About";
 import FAQ from "@/components/FAQ";
 import Locations from "@/components/Locations";
+import SecurityPillar from "@/components/SecurityPillar";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -290,6 +291,38 @@ const Index = () => {
             "@type": "Answer",
             "text": "Absolutely not. In fact, our clients find it does the opposite. By handling the initial response instantly and professionally 24/7, the AI frees you and your team up to have higher-quality, personal conversations with qualified, engaged leads. You're still in complete control, and every interaction is designed to reflect your brand's voice. It's the best of both worlds: efficiency and the personal touch your customers love."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my customer data safe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. All data is encrypted in transit and at rest using AES-256 encryption — the same standard used by major banks. We do not train public AI models on your business data and maintain a strict zero-training policy on client data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does AI record calls?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only if recording is enabled. All recording is consent-based only. You control retention periods, and recordings are encrypted and stored securely. You can delete recordings at any time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can this integrate securely with my CRM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We use secure API connections and permission-based access for all CRM integrations. No credentials are stored in plain text, and all connections are audited."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I operate in a regulated industry?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer HIPAA-ready workflows and compliance-conscious deployments for healthcare, legal, financial, and other regulated industries. Our team works with your compliance officers to ensure industry-specific requirements are met."
+          }
         }
       ]
     });
@@ -317,6 +350,7 @@ const Index = () => {
         <RevenueReadinessCTA />
         <Testimonials />
         <About />
+        <SecurityPillar />
         <FAQ />
         <Locations />
         <CTA />

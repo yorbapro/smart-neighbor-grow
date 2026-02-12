@@ -70,6 +70,30 @@ const FAQ = () => {
       detail:
         "In fact, our clients find it does the opposite. By handling the initial response instantly and professionally 24/7, the AI frees you and your team up to have higher-quality, personal conversations with qualified, engaged leads. You're still in complete control, and every interaction is designed to reflect your brand's voice. It's the best of both worlds: efficiency and the personal touch your customers love.",
     },
+    {
+      question: "Is my customer data safe?",
+      directAnswer: "Yes. All data is encrypted in transit and at rest. We do not train public AI models on your business data.",
+      detail:
+        "We use AES-256 encryption — the same standard used by major banks — for all data storage. Every data transfer uses SSL/TLS encryption. Your proprietary business data is never used to retrain AI models. We maintain a strict zero-training policy on client data, and you can request full deletion at any time.",
+    },
+    {
+      question: "Does AI record calls?",
+      directAnswer: "Only if recording is enabled. All recording is consent-based only.",
+      detail:
+        "Call recording is an optional feature that must be explicitly enabled. When active, all recordings follow consent-based protocols. You control retention periods, and recordings are encrypted and stored securely. You can delete recordings at any time.",
+    },
+    {
+      question: "Can this integrate securely with my CRM?",
+      directAnswer: "Yes. We use secure API connections and permission-based access for all integrations.",
+      detail:
+        "All CRM integrations use secure, encrypted API connections with role-based permission controls. We support major CRMs and only access the data fields you authorize. No credentials are stored in plain text, and all connections are audited.",
+    },
+    {
+      question: "What if I operate in a regulated industry?",
+      directAnswer: "We offer HIPAA-ready workflows and compliance-conscious deployments for regulated industries.",
+      detail:
+        "For healthcare, legal, financial, and other regulated industries, we offer HIPAA-ready configurations, enhanced access controls, audit logging, and custom compliance reviews. Our team works with your compliance officers to ensure your deployment meets industry-specific requirements.",
+    },
   ];
 
   return (
