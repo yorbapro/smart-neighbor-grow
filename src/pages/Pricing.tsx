@@ -573,6 +573,46 @@ const Pricing = () => {
         </div>
       </section>
 
+      {/* Trust & Security CTA */}
+      <section className="py-16 md:py-20 bg-background">
+        <div className="container">
+          <div className="max-w-3xl mx-auto">
+            <div className="p-8 md:p-10 rounded-3xl bg-gradient-to-br from-secondary via-background to-secondary border border-border text-center">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <Shield className="w-6 h-6 text-primary" />
+                </div>
+              </div>
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">
+                Security You Can Count On
+              </h2>
+              <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+                AES-256 encryption, GDPR & CCPA alignment, zero-training policy on your data, and human oversight on every AI interaction. Your data stays yours — always.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 mb-6">
+                {[
+                  { icon: "🔒", label: "AES-256 Encrypted" },
+                  { icon: "🛡️", label: "GDPR & CCPA Aligned" },
+                  { icon: "🚫", label: "Zero-Training Policy" },
+                  { icon: "👁️", label: "Human Oversight" },
+                ].map((badge) => (
+                  <div key={badge.label} className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/5 border border-primary/10 text-sm text-foreground">
+                    <span>{badge.icon}</span>
+                    <span className="font-medium">{badge.label}</span>
+                  </div>
+                ))}
+              </div>
+              <Button variant="outline" size="sm" asChild>
+                <Link to="/trust-security">
+                  Learn More About Our Security
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 md:py-28">
         <div className="container">
