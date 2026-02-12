@@ -9,7 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { ArrowRight, Zap } from "lucide-react";
+import { ArrowRight, Zap, Shield, Lock } from "lucide-react";
 import type { LeadData } from "@/pages/GetStarted";
 
 interface LeadCaptureFormProps {
@@ -260,6 +260,25 @@ const LeadCaptureForm = ({ onSubmit }: LeadCaptureFormProps) => {
           No credit card required. See your growth potential in 60 seconds.
         </p>
       </form>
+
+      {/* Trust Badges */}
+      <div className="mt-10 pt-8 border-t border-border">
+        <p className="text-xs text-muted-foreground text-center mb-4 font-medium uppercase tracking-wide">Trusted by Smart Business Owners</p>
+        <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-primary/5 border border-primary/10">
+            <Lock className="w-4 h-4 text-primary" />
+            <span className="text-xs font-medium text-foreground">AES-256 Encrypted</span>
+          </div>
+          <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-primary/5 border border-primary/10">
+            <Shield className="w-4 h-4 text-primary" />
+            <span className="text-xs font-medium text-foreground">Zero-Training Policy</span>
+          </div>
+          <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-primary/5 border border-primary/10">
+            <span className="text-xs">✓</span>
+            <span className="text-xs font-medium text-foreground">GDPR & CCPA Ready</span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
