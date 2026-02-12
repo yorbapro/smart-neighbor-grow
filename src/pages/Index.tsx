@@ -274,6 +274,22 @@ const Index = () => {
             "@type": "Answer",
             "text": "AI doesn't replace your sales team—it amplifies them. Our AI handles the repetitive work of finding leads, initial outreach, and lead qualification, while your team focuses on relationship building and closing deals. Think of it as making a 3-person team perform like a 50-person powerhouse."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "I've been burned by software before. How is this different?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We hear that a lot. Many of our clients came to us after trying complex CRMs or marketing tools that ended up being expensive paperweights. The difference is in our model: we are a service, not just software. Our team of experts does the setup for you and stays with you to ensure it works. You're not buying a tool you have to learn; you're hiring a teammate dedicated to your growth."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will this make my business feel less personal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely not. In fact, our clients find it does the opposite. By handling the initial response instantly and professionally 24/7, the AI frees you and your team up to have higher-quality, personal conversations with qualified, engaged leads. You're still in complete control, and every interaction is designed to reflect your brand's voice. It's the best of both worlds: efficiency and the personal touch your customers love."
+          }
         }
       ]
     });
