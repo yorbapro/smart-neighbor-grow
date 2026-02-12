@@ -62,8 +62,9 @@ const Benefits = () => {
             <span className="text-gradient block mt-2">Local Business</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            We believe small business owners deserve enterprise-grade sales automation without sacrificing 
-            what makes their company special. Get AI that works for you, guided by experts who know your market.
+            Tired of tech that over-promises and under-delivers? We get it. That's why we built a different 
+            kind of AI. It's not another DIY tool that collects dust. It's a fully managed system, guided by 
+            real experts who learn your business, so you get results without becoming a tech expert yourself.
           </p>
         </div>
 
@@ -114,7 +115,7 @@ const Benefits = () => {
                   <benefit.icon className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <span className="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">
-                  {benefit.stat}
+      {benefit.stat}
                 </span>
               </div>
 
@@ -127,6 +128,16 @@ const Benefits = () => {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* True Cost of a Missed Call */}
+        <div className="relative p-6 md:p-8 rounded-2xl overflow-hidden bg-card border border-destructive/20 mb-6">
+          <div className="relative z-10">
+            <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-3">The True Cost of a Missed Call</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              It's not just a missed call. It's a missed opportunity. For a typical services business, a single new client can be worth $2,000 or more. If you miss just 3–4 of those calls a month, that's over <span className="font-bold text-destructive">$60,000 a year</span> in lost revenue. Our system pays for itself if it captures just <em>one</em> of those jobs for you.
+            </p>
+          </div>
         </div>
 
         {/* Cost Comparison Banner - Compact */}

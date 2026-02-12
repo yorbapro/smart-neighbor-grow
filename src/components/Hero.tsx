@@ -71,9 +71,9 @@ const Hero = () => {
             <h1 
               className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-8 animate-slide-up"
             >
-              Get More Customers with
+              You built a great business.
               <br />
-              <span className="text-gradient">Human-Guided AI.</span>
+              <span className="text-gradient">We'll help you catch every opportunity.</span>
             </h1>
 
             {/* Subheadline - Clean, informative */}
@@ -81,9 +81,10 @@ const Hero = () => {
               className="text-lg md:text-xl text-white/70 max-w-2xl mb-6 leading-relaxed animate-slide-up"
               style={{ animationDelay: "0.1s" }}
             >
-              We help contractors, consultants, and local businesses respond first, 
-              automate the busywork, and win more customers—using AI that's always 
-              supervised by real experts.
+              You're busy managing jobs and serving clients. You don't have time to 
+              chase every call and email. Our human-guided AI acts as your 24/7 teammate, 
+              ensuring every new customer gets an instant, professional response, so you 
+              can focus on running your business.
             </p>
 
             {/* Value prop line */}
@@ -91,7 +92,7 @@ const Hero = () => {
               className="text-base text-white/50 max-w-xl mb-10 animate-slide-up"
               style={{ animationDelay: "0.15s" }}
             >
-              Making big tech work for Main Street.
+              The power of a 50-person sales team. The personal touch of a trusted partner.
             </p>
 
             {/* CTA Buttons - Bold and clear */}
@@ -140,8 +141,8 @@ const Hero = () => {
                   <Zap className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-display font-bold text-white text-sm">$16.60/day</p>
-                  <p className="text-xs text-white/50">AI Sales Team</p>
+                  <p className="font-display font-bold text-white text-sm">$5,000+</p>
+                  <p className="text-xs text-white/50">Monthly Revenue Rescued</p>
                 </div>
               </div>
               

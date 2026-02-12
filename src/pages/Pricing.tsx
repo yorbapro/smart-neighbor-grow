@@ -408,6 +408,25 @@ const Pricing = () => {
         </div>
       </section>
 
+      {/* No-Regret Onboarding Guarantee */}
+      <section className="py-16 md:py-20 bg-background">
+        <div className="container">
+          <div className="max-w-3xl mx-auto">
+            <div className="relative p-8 md:p-10 rounded-3xl bg-gradient-to-br from-primary/5 via-background to-accent/5 border-2 border-primary/20 text-center">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Shield className="w-10 h-10 text-primary" />
+              </div>
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                Our "No-Regret" Onboarding Guarantee
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+                We are so confident that our human-guided onboarding will set you up for success that we offer a <span className="font-bold text-foreground">100% money-back guarantee on your setup fee</span>. If you're not live and capturing leads within 14 days, we'll refund the fee in full. We take on the risk, so you don't have to.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Daily Teammate Math */}
       <DailyTeammateMath />
 
