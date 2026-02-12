@@ -40,10 +40,10 @@ const ImplementationRoadmap = () => {
             The Implementation Roadmap
           </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary-foreground mb-4">
-            From Kickoff to Go-Live in 14 Days
+            Your AI Sales Engine, Live in 14 Days. We Do the Heavy Lifting.
           </h2>
           <p className="text-lg text-secondary-foreground/70">
-            Our proven deployment process gets your AI sales engine running fast—with zero disruption to your business.
+            You don't have time for a complex setup. Our expert team handles everything from CRM integration to writing your messaging. All we need from you is a 30-minute kickoff call and your final approval. You focus on your business; we'll build your growth engine.
           </p>
         </div>
 

@@ -58,6 +58,18 @@ const FAQ = () => {
       detail:
         "AEO is the practice of optimizing your business to be cited as the answer when people use AI search tools like ChatGPT, Gemini, Perplexity, or voice assistants. Unlike traditional SEO which focuses on ranking in Google results, AEO ensures your business is the direct answer AI agents provide. Our LocalLift™ service positions you as the local expert across all answer engines.",
     },
+    {
+      question: "I've been burned by software before. How is this different?",
+      directAnswer: "We're a fully managed service, not another DIY tool—our experts handle everything so you get results without becoming a tech expert.",
+      detail:
+        "We hear that a lot. Many of our clients came to us after trying complex CRMs or marketing tools that ended up being expensive paperweights. The difference is in our model: we are a service, not just software. Our team of experts does the setup for you and stays with you to ensure it works. You're not buying a tool you have to learn; you're hiring a teammate dedicated to your growth.",
+    },
+    {
+      question: "Will this make my business feel less personal?",
+      directAnswer: "Absolutely not—by handling initial responses instantly, the AI frees you up for higher-quality personal conversations with qualified leads.",
+      detail:
+        "In fact, our clients find it does the opposite. By handling the initial response instantly and professionally 24/7, the AI frees you and your team up to have higher-quality, personal conversations with qualified, engaged leads. You're still in complete control, and every interaction is designed to reflect your brand's voice. It's the best of both worlds: efficiency and the personal touch your customers love.",
+    },
   ];
 
   return (
