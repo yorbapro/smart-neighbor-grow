@@ -20,21 +20,20 @@ export type LeadData = {
 
 const GetStarted = () => {
   const [step, setStep] = useState<"product" | "capture" | "report" | "checkout">("product");
-  const [selectedProduct, setSelectedProduct] = useState<ProductTier>("launchPad360");
+  const [selectedProduct, setSelectedProduct] = useState<ProductTier>("leadlineGrowth");
   const [leadData, setLeadData] = useState<LeadData | null>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = "Get Started - Schedule Your Revenue Audit | BrightLaunchIQ";
+    document.title = "Get Started - Book a Strategy Call | BrightLaunchIQ";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Start your AI sales automation journey. Schedule a free 15-minute revenue audit and get a personalized growth roadmap for your business.");
+      metaDescription.setAttribute("content", "Start your AI revenue infrastructure journey. Book a strategy call and get a personalized growth roadmap for your business.");
     }
 
-    // Add keywords meta
     const existingKeywords = document.querySelector('meta[name="keywords"]');
-    const keywordsContent = "get started, revenue audit, AI sales demo, schedule consultation, business growth, lead generation setup";
+    const keywordsContent = "get started, strategy call, AI sales demo, schedule consultation, business growth, lead generation setup";
     if (existingKeywords) {
       existingKeywords.setAttribute("content", keywordsContent);
     } else {
@@ -64,6 +63,21 @@ const GetStarted = () => {
     setStep("checkout");
   };
 
+  const getProductLabel = (id: ProductTier): string => {
+    const labels: Record<ProductTier, string> = {
+      leadlineCore: "LeadLine AI Core",
+      leadlineGrowth: "LeadLine AI Growth",
+      leadlinePro: "LeadLine AI Pro",
+      proactiveLaunch: "Proactive Launch",
+      proactiveScale: "Proactive Scale",
+      proactiveDominate: "Proactive Dominate",
+      lp360Growth: "LaunchPad 360™ Growth",
+      lp360Scale: "LaunchPad 360™ Scale",
+      lp360Dominate: "LaunchPad 360™ Dominate",
+    };
+    return labels[id] || id;
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -72,10 +86,9 @@ const GetStarted = () => {
           {/* Progress Indicator */}
           <div className="flex items-center justify-center gap-2 md:gap-4 mb-12 flex-wrap">
             {["Choose Plan", "Business Info", "Your Report", "Checkout"].map((label, index) => {
-              const stepIndex = index;
               const currentIndex = step === "product" ? 0 : step === "capture" ? 1 : step === "report" ? 2 : 3;
-              const isActive = stepIndex === currentIndex;
-              const isComplete = stepIndex < currentIndex;
+              const isActive = index === currentIndex;
+              const isComplete = index < currentIndex;
               
               return (
                 <div key={label} className="flex items-center gap-2">
@@ -117,7 +130,7 @@ const GetStarted = () => {
                   onClick={handleProceedFromProduct}
                   className="px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-xl hover:bg-primary/90 transition-colors"
                 >
-                  Continue with {selectedProduct === "localLift" ? "LocalLift™" : selectedProduct === "leadLine" ? "LeadLine™" : "LaunchPad 360™"}
+                  Continue with {getProductLabel(selectedProduct)}
                 </button>
               </div>
             </div>

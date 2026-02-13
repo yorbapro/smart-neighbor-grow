@@ -1,6 +1,6 @@
 import { Check, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { ProductTier, ProductConfig, getAllProducts } from "@/lib/products";
+import { LEADLINE_TIERS, LAUNCHPAD_TIERS, ProductConfig, ProductTier } from "@/lib/products";
 
 interface ProductSelectorProps {
   selectedProduct: ProductTier;
@@ -8,7 +8,12 @@ interface ProductSelectorProps {
 }
 
 const ProductSelector = ({ selectedProduct, onSelectProduct }: ProductSelectorProps) => {
-  const products = getAllProducts();
+  // Show key tiers for the checkout flow
+  const selectableProducts: ProductConfig[] = [
+    LEADLINE_TIERS[0], // Core
+    LEADLINE_TIERS[1], // Growth (highlighted)
+    LAUNCHPAD_TIERS[0], // LP360 Growth
+  ];
 
   return (
     <div className="space-y-4">
@@ -20,7 +25,7 @@ const ProductSelector = ({ selectedProduct, onSelectProduct }: ProductSelectorPr
       </p>
 
       <div className="grid md:grid-cols-3 gap-4">
-        {products.map((product) => (
+        {selectableProducts.map((product) => (
           <ProductCard
             key={product.id}
             product={product}
@@ -62,7 +67,7 @@ const ProductCard = ({ product, isSelected, onSelect }: ProductCardProps) => {
       <div className="space-y-3">
         <div>
           <h3 className="font-display text-lg font-bold text-foreground">
-            {product.name}
+            {product.name} — {product.tierName}
           </h3>
           <p className="text-sm text-muted-foreground">{product.tagline}</p>
         </div>
@@ -70,18 +75,12 @@ const ProductCard = ({ product, isSelected, onSelect }: ProductCardProps) => {
         <div className="space-y-1">
           <div className="flex items-baseline gap-1">
             <span className="text-2xl font-bold text-foreground">
-              ${product.setupPrice.toLocaleString()}
-            </span>
-            <span className="text-sm text-muted-foreground">setup</span>
-          </div>
-          <div className="flex items-baseline gap-1">
-            <span className="text-lg font-semibold text-foreground">
-              ${product.monthlyPrice}
+              ${product.monthlyPrice.toLocaleString()}
             </span>
             <span className="text-sm text-muted-foreground">/month</span>
           </div>
-          <p className="text-xs text-accent font-medium">
-            {product.dailyCost}/day digital teammate
+          <p className="text-xs text-muted-foreground">
+            {product.usageMinutes}
           </p>
         </div>
 
@@ -95,11 +94,6 @@ const ProductCard = ({ product, isSelected, onSelect }: ProductCardProps) => {
               <span className="text-muted-foreground">{feature}</span>
             </li>
           ))}
-          {product.features.length > 4 && (
-            <li className="text-xs text-muted-foreground pl-6">
-              +{product.features.length - 4} more features
-            </li>
-          )}
         </ul>
       </div>
 

@@ -36,6 +36,7 @@ const Onboarding = lazy(() => import("./pages/Onboarding"));
 const LaunchPad360 = lazy(() => import("./pages/products/LaunchPad360"));
 const LocalLift = lazy(() => import("./pages/products/LocalLift"));
 const LeadLine = lazy(() => import("./pages/products/LeadLine"));
+const LeadLineProactive = lazy(() => import("./pages/products/LeadLineProactive"));
 const CustomAIWorkflows = lazy(() => import("./pages/products/CustomAIWorkflows"));
 
 // Location pages
@@ -92,6 +93,7 @@ const App = () => (
             <Route path="/products/launchpad-360" element={<LaunchPad360 />} />
             <Route path="/products/locallift" element={<LocalLift />} />
             <Route path="/products/leadline" element={<LeadLine />} />
+            <Route path="/products/leadline-proactive" element={<LeadLineProactive />} />
             <Route path="/products/custom-ai-workflows" element={<CustomAIWorkflows />} />
             
             {/* Content/SEO pages */}

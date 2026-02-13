@@ -22,9 +22,10 @@ const Header = () => {
   }, []);
 
   const solutionLinks = [
-    { label: "LaunchPad 360™", href: "/products/launchpad-360" },
-    { label: "LeadLine™ - AI Receptionist", href: "/products/leadline" },
-    { label: "LocalLift™", href: "/products/locallift" },
+    { label: "LeadLine AI — Inbound", href: "/products/leadline" },
+    { label: "LeadLine AI Proactive — Outbound", href: "/products/leadline-proactive" },
+    { label: "LaunchPad 360™ — Full System", href: "/products/launchpad-360" },
+    { label: "LocalLift™ — SEO & Authority", href: "/products/locallift" },
   ];
 
   const resourceLinks = [

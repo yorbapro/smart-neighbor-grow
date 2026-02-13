@@ -5,7 +5,11 @@ import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import type { LeadData } from "@/pages/GetStarted";
-import { ProductTier, getProductByTier } from "@/lib/products";
+import { ProductTier, LEADLINE_TIERS, PROACTIVE_TIERS, LAUNCHPAD_TIERS, ProductConfig } from "@/lib/products";
+
+const getProductConfig = (tier: ProductTier): ProductConfig | undefined => {
+  return [...LEADLINE_TIERS, ...PROACTIVE_TIERS, ...LAUNCHPAD_TIERS].find(p => p.id === tier);
+};
 
 interface CheckoutStepProps {
   leadData: LeadData;
@@ -15,7 +19,9 @@ interface CheckoutStepProps {
 
 const CheckoutStep = ({ leadData, selectedProduct, onBack }: CheckoutStepProps) => {
   const [isLoading, setIsLoading] = useState(false);
-  const product = getProductByTier(selectedProduct);
+  const product = getProductConfig(selectedProduct);
+
+  if (!product) return null;
 
   const handleCheckout = async () => {
     setIsLoading(true);
@@ -32,7 +38,6 @@ const CheckoutStep = ({ leadData, selectedProduct, onBack }: CheckoutStepProps) 
       if (error) throw error;
 
       if (data?.url) {
-        // Store lead data for welcome email after payment
         sessionStorage.setItem("checkoutLeadData", JSON.stringify(leadData));
         window.open(data.url, "_blank");
       } else {
@@ -57,28 +62,20 @@ const CheckoutStep = ({ leadData, selectedProduct, onBack }: CheckoutStepProps) 
         <div className="space-y-4 mb-6">
           <div className="flex justify-between items-center py-3 border-b border-border">
             <div>
-              <p className="font-semibold text-foreground">{product.name} Setup</p>
-              <p className="text-sm text-muted-foreground">One-time infrastructure build</p>
+              <p className="font-semibold text-foreground">{product.name} — {product.tierName}</p>
+              <p className="text-sm text-muted-foreground">{product.tagline}</p>
             </div>
-            <span className="font-bold text-foreground">${product.setupPrice.toLocaleString()}</span>
-          </div>
-
-          <div className="flex justify-between items-center py-3 border-b border-border">
-            <div>
-              <p className="font-semibold text-foreground">{product.name} Monthly</p>
-              <p className="text-sm text-muted-foreground">Starts {product.trialDays} days after onboarding</p>
-            </div>
-            <span className="font-bold text-foreground">${product.monthlyPrice}/mo</span>
+            <span className="font-bold text-foreground">${product.monthlyPrice.toLocaleString()}/mo</span>
           </div>
         </div>
 
         <div className="bg-secondary/50 rounded-xl p-4 mb-6">
           <div className="flex justify-between items-center">
-            <span className="font-semibold text-foreground">Due Today</span>
-            <span className="font-display text-2xl font-bold text-primary">${product.setupPrice.toLocaleString()}</span>
+            <span className="font-semibold text-foreground">Monthly Investment</span>
+            <span className="font-display text-2xl font-bold text-primary">${product.monthlyPrice.toLocaleString()}/mo</span>
           </div>
           <p className="text-sm text-muted-foreground mt-1">
-            Then ${product.monthlyPrice}/month starting {product.trialDays} days after your strategy session
+            {product.usageMinutes}
           </p>
         </div>
 
@@ -127,7 +124,7 @@ const CheckoutStep = ({ leadData, selectedProduct, onBack }: CheckoutStepProps) 
             ) : (
               <>
                 <CreditCard className="mr-2" size={20} />
-                Pay ${product.setupPrice.toLocaleString()} Now
+                Proceed to Payment
               </>
             )}
           </Button>
@@ -150,9 +147,9 @@ const CheckoutStep = ({ leadData, selectedProduct, onBack }: CheckoutStepProps) 
             <div className="flex items-start gap-3">
               <Check className="w-5 h-5 text-accent mt-0.5" />
               <div>
-                <p className="font-medium text-foreground">14-Day Speed to Lead</p>
+                <p className="font-medium text-foreground">Fast Implementation</p>
                 <p className="text-sm text-muted-foreground">
-                  From zero to automated meetings in 14 days, or we work free.
+                  From zero to live in days, not months.
                 </p>
               </div>
             </div>
