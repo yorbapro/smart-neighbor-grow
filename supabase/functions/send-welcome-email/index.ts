@@ -185,6 +185,31 @@ const handler = async (req: Request): Promise<Response> => {
           📧 Email: <a href="mailto:success@BrightLaunchIQ.com" style="color: #f59e0b;">success@BrightLaunchIQ.com</a>
         </p>
       </div>
+
+      <!-- Security Section -->
+      <div style="background-color: #f0fdf4; border: 1px solid #bbf7d0; padding: 20px; border-radius: 8px; margin-top: 20px;">
+        <h3 style="color: #166534; margin: 0 0 12px 0; font-size: 16px;">🔐 Your Data Is Protected</h3>
+        <p style="color: #15803d; margin: 0 0 12px 0; font-size: 14px;">
+          Your payment was processed securely via Stripe. Here's how we protect your business:
+        </p>
+        <table style="width: 100%; border-collapse: collapse;">
+          <tr>
+            <td style="padding: 6px 0; color: #166534; font-size: 13px;">🔒 <strong>AES-256 Encryption</strong> — bank-grade data protection</td>
+          </tr>
+          <tr>
+            <td style="padding: 6px 0; color: #166534; font-size: 13px;">🚫 <strong>Zero-Training Policy</strong> — your data never trains AI models</td>
+          </tr>
+          <tr>
+            <td style="padding: 6px 0; color: #166534; font-size: 13px;">🛡️ <strong>SOC 2 Compliant</strong> — enterprise-grade infrastructure</td>
+          </tr>
+          <tr>
+            <td style="padding: 6px 0; color: #166534; font-size: 13px;">👁️ <strong>GDPR & CCPA Ready</strong> — global privacy compliance</td>
+          </tr>
+        </table>
+        <p style="color: #15803d; margin: 12px 0 0 0; font-size: 13px;">
+          Learn more: <a href="https://brightlaunchiq.com/trust-security" style="color: #f59e0b; font-weight: bold;">Our Security Practices →</a>
+        </p>
+      </div>
     </div>
     
     <!-- Footer -->
