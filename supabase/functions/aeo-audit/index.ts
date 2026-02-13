@@ -490,7 +490,7 @@ Generate an AEO audit with the following structure - return ONLY valid JSON, no 
       <p style="color: rgba(255,255,255,0.9); margin: 0 0 16px; font-size: 14px;">
         Local dominance through AEO optimization, stellar content creation, and reputation management across 100+ directories.
       </p>
-      <a href="https://brightlaunchiq.com/products/local-lift" style="display: inline-block; background: white; color: #ea580c; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px;">Discover LocalLift™ →</a>
+      <a href="https://brightlaunchiq.com/products/locallift" style="display: inline-block; background: white; color: #ea580c; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px;">Discover LocalLift™ →</a>
     </div>
 
     <!-- Get Started CTA -->
