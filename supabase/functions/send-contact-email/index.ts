@@ -114,7 +114,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send notification email to the team
     const teamEmailResponse = await resend.emails.send({
-      from: "BrightLaunchIQ <onboarding@resend.dev>",
+      from: "BrightLaunchIQ <onboarding@account.brightlaunchiq.com>",
       to: ["success@BrightLaunchIQ.com"],
       reply_to: email,
       subject: `New Contact Form: ${safeSubject}`,
@@ -169,7 +169,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send confirmation email to the user
     const userEmailResponse = await resend.emails.send({
-      from: "BrightLaunchIQ <onboarding@resend.dev>",
+      from: "BrightLaunchIQ <onboarding@account.brightlaunchiq.com>",
       to: [email],
       subject: "We received your message - BrightLaunchIQ",
       html: `

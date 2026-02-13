@@ -213,7 +213,7 @@ serve(async (req) => {
 
       try {
         await resend.emails.send({
-          from: "BrightLaunchIQ <onboarding@resend.dev>",
+          from: "BrightLaunchIQ <onboarding@account.brightlaunchiq.com>",
           to: [lead.email],
           subject,
           html: bodyHtml,
