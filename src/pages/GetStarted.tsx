@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LeadCaptureForm from "@/components/checkout/LeadCaptureForm";
@@ -23,8 +23,15 @@ const GetStarted = () => {
   const [selectedProduct, setSelectedProduct] = useState<ProductTier>("leadlineGrowth");
   const [leadData, setLeadData] = useState<LeadData | null>(null);
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
 
   useEffect(() => {
+    // Check if a product was passed via query param
+    const productParam = searchParams.get("product");
+    if (productParam) {
+      setSelectedProduct(productParam as ProductTier);
+    }
+
     document.title = "Get Started - Book a Strategy Call | BrightLaunchIQ";
     
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -44,7 +51,7 @@ const GetStarted = () => {
     }
 
     window.scrollTo(0, 0);
-  }, []);
+  }, [searchParams]);
 
   const handleProductSelect = (product: ProductTier) => {
     setSelectedProduct(product);
@@ -119,22 +126,23 @@ const GetStarted = () => {
           </div>
 
           {/* Step Content */}
-          {step === "product" && (
-            <div className="space-y-6">
-              <ProductSelector
-                selectedProduct={selectedProduct}
-                onSelectProduct={handleProductSelect}
-              />
-              <div className="flex justify-center">
-                <button
-                  onClick={handleProceedFromProduct}
-                  className="px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-xl hover:bg-primary/90 transition-colors"
-                >
-                  Continue with {getProductLabel(selectedProduct)}
-                </button>
-              </div>
-            </div>
-          )}
+           {step === "product" && (
+             <div className="space-y-6">
+               <ProductSelector
+                 selectedProduct={selectedProduct}
+                 onSelectProduct={handleProductSelect}
+                 showProactive={selectedProduct.startsWith("proactive")}
+               />
+               <div className="flex justify-center">
+                 <button
+                   onClick={handleProceedFromProduct}
+                   className="px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-xl hover:bg-primary/90 transition-colors"
+                 >
+                   Continue with {getProductLabel(selectedProduct)}
+                 </button>
+               </div>
+             </div>
+           )}
           
           {step === "capture" && (
             <div className="max-w-4xl mx-auto">

@@ -1,19 +1,26 @@
 import { Check, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { LEADLINE_TIERS, LAUNCHPAD_TIERS, ProductConfig, ProductTier } from "@/lib/products";
+import { LEADLINE_TIERS, PROACTIVE_TIERS, LAUNCHPAD_TIERS, ProductConfig, ProductTier } from "@/lib/products";
 
 interface ProductSelectorProps {
   selectedProduct: ProductTier;
   onSelectProduct: (product: ProductTier) => void;
+  showProactive?: boolean;
 }
 
-const ProductSelector = ({ selectedProduct, onSelectProduct }: ProductSelectorProps) => {
+const ProductSelector = ({ selectedProduct, onSelectProduct, showProactive = false }: ProductSelectorProps) => {
   // Show key tiers for the checkout flow
-  const selectableProducts: ProductConfig[] = [
-    LEADLINE_TIERS[0], // Core
-    LEADLINE_TIERS[1], // Growth (highlighted)
-    LAUNCHPAD_TIERS[0], // LP360 Growth
-  ];
+  const selectableProducts: ProductConfig[] = showProactive
+    ? [
+        PROACTIVE_TIERS[0], // Launch
+        PROACTIVE_TIERS[1], // Scale (highlighted)
+        PROACTIVE_TIERS[2], // Dominate
+      ]
+    : [
+        LEADLINE_TIERS[0], // Core
+        LEADLINE_TIERS[1], // Growth (highlighted)
+        LAUNCHPAD_TIERS[0], // LP360 Growth
+      ];
 
   return (
     <div className="space-y-4">
