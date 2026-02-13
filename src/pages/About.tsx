@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
+import TrustBadges from "@/components/TrustBadges";
 import { Button } from "@/components/ui/button";
 import { 
   ArrowRight, 
@@ -15,7 +16,11 @@ import {
   MapPin,
   Linkedin,
   Brain,
-  TrendingUp
+  TrendingUp,
+  Lock,
+  Eye,
+  ShieldCheck,
+  Ban
 } from "lucide-react";
 
 const About = () => {
@@ -426,6 +431,54 @@ const About = () => {
         </div>
       </section>
 
+      {/* Data Protection & Compliance Section */}
+      <section className="py-16 md:py-24 bg-card">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
+                <Shield className="w-4 h-4" />
+                Our Commitment to Security
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Your Data. Your Business. <span className="text-primary">Our Promise.</span>
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                We believe AI should grow your business — never put it at risk. Security and transparency are built into everything we do.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+              {[
+                { icon: Lock, title: "AES-256 Encryption", desc: "All data is encrypted in transit and at rest using the same standards trusted by major financial institutions." },
+                { icon: Ban, title: "Zero-Training Policy", desc: "Your proprietary business data is never used to train public AI models. Your data stays yours — period." },
+                { icon: Eye, title: "GDPR & CCPA Ready", desc: "Our data handling practices are aligned with global privacy regulations so your customers' data is protected." },
+                { icon: ShieldCheck, title: "SOC 2 Infrastructure", desc: "Our enterprise AI providers maintain SOC 2 Type II compliance, ensuring rigorous operational security." },
+                { icon: Users, title: "Human Oversight", desc: "Every AI action is supervised by our expert team. You always have real-time override and blacklist capabilities." },
+                { icon: Shield, title: "Transparent Operations", desc: "We publish our security practices openly. Visit our Trust & Security page for full details on how we protect you." },
+              ].map((item) => (
+                <div key={item.title} className="p-5 rounded-2xl bg-background border border-border">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-3">
+                    <item.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <h3 className="font-display font-bold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/trust-security">
+                  Learn More About Our Security
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 md:py-24">
         <div className="container">
@@ -452,6 +505,7 @@ const About = () => {
         </div>
       </section>
 
+      <TrustBadges />
       <Footer />
     </div>
   );
