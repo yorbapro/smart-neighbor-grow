@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
+import TrustBadges from "@/components/TrustBadges";
 import { Button } from "@/components/ui/button";
 import {
   Brain,
@@ -298,6 +299,7 @@ const CustomAIWorkflows = () => {
         </section>
       </main>
 
+      <TrustBadges />
       <Footer />
     </div>
   );

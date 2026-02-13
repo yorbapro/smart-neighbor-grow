@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
+import TrustBadges from "@/components/TrustBadges";
 import DataProtectionModal from "@/components/DataProtectionModal";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -863,6 +864,7 @@ const LeadLine = () => {
         </div>
       </section>
 
+      <TrustBadges />
       <Footer />
     </div>
   );

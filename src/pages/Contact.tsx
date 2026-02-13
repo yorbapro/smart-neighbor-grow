@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import TrustBadges from "@/components/TrustBadges";
 import { 
   Phone, 
   Mail, 
@@ -404,6 +405,7 @@ const Contact = () => {
         </div>
       </section>
 
+      <TrustBadges />
       <Footer />
     </div>
   );
