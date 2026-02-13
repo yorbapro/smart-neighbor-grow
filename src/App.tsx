@@ -30,6 +30,7 @@ const AboutPage = lazy(() => import("./pages/About"));
 const LocationsPage = lazy(() => import("./pages/Locations"));
 const FAQPage = lazy(() => import("./pages/FAQ"));
 const AEOAudit = lazy(() => import("./pages/AEOAudit"));
+const Onboarding = lazy(() => import("./pages/Onboarding"));
 
 // Product pages
 const LaunchPad360 = lazy(() => import("./pages/products/LaunchPad360"));
@@ -84,6 +85,7 @@ const App = () => (
             <Route path="/get-started" element={<GetStarted />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/aeo-audit" element={<AEOAudit />} />
+            <Route path="/onboarding" element={<Onboarding />} />
             <Route path="/contact" element={<Contact />} />
             
             {/* Product pages */}
