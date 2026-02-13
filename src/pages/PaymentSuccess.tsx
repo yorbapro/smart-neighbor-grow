@@ -2,8 +2,9 @@ import { useEffect, useRef } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TrustBadges from "@/components/TrustBadges";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Calendar, Mail, Phone } from "lucide-react";
+import { CheckCircle, Calendar, Mail, Phone, Lock, Shield } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 const PaymentSuccess = () => {
@@ -116,6 +117,28 @@ const PaymentSuccess = () => {
             </p>
           </div>
 
+          {/* Security Reassurance */}
+          <div className="bg-card border border-border rounded-2xl p-6 mb-8">
+            <div className="flex items-center justify-center gap-2 mb-3">
+              <Shield className="w-5 h-5 text-primary" />
+              <p className="text-foreground font-semibold">Your Data Is Protected</p>
+            </div>
+            <p className="text-muted-foreground text-sm mb-4">
+              Your payment was processed securely via Stripe. Your business data is encrypted with AES-256 
+              and never used to train AI models.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/5 border border-primary/10">
+                <Lock className="w-3.5 h-3.5 text-primary" />
+                <span className="text-xs font-medium text-foreground">AES-256 Encrypted</span>
+              </div>
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/5 border border-primary/10">
+                <Shield className="w-3.5 h-3.5 text-primary" />
+                <span className="text-xs font-medium text-foreground">Zero-Training Policy</span>
+              </div>
+            </div>
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="lg" asChild>
               <a href="mailto:success@BrightLaunchIQ.com">Contact Support</a>
@@ -126,6 +149,7 @@ const PaymentSuccess = () => {
           </div>
         </div>
       </main>
+      <TrustBadges />
       <Footer />
     </div>
   );
