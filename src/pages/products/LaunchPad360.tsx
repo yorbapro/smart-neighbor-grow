@@ -58,9 +58,9 @@ const LaunchPad360 = () => {
     },
     {
       icon: Zap,
-      title: "SEO & Authority",
-      description: "AEO optimization, local visibility, and content authority to ensure you're found first.",
-      features: ["AEO Optimization", "Local Authority Building", "Content Expansion", "Reputation Management"]
+      title: "Answer Engine Optimization (AEO)",
+      description: "Dominate AI search results across ChatGPT, Gemini, Claude, and other answer engines. Get found where prospects search today.",
+      features: ["AI Search Engine Dominance", "Answer Engine Optimization", "Multi-Engine Visibility", "Authority Building"]
     },
     {
       icon: LineChart,

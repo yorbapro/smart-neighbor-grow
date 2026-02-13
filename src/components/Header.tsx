@@ -25,7 +25,7 @@ const Header = () => {
     { label: "LeadLine AI — Inbound", href: "/products/leadline" },
     { label: "LeadLine AI Proactive — Outbound", href: "/products/leadline-proactive" },
     { label: "LaunchPad 360™ — Full System", href: "/products/launchpad-360" },
-    { label: "LocalLift™ — SEO & Authority", href: "/products/locallift" },
+    { label: "LocalLift™ — AEO & Authority", href: "/products/locallift" },
   ];
 
   const resourceLinks = [
