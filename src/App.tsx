@@ -95,6 +95,7 @@ const App = () => (
             <Route path="/products/leadline" element={<LeadLine />} />
             <Route path="/products/leadline-proactive" element={<LeadLineProactive />} />
             <Route path="/products/custom-ai-workflows" element={<CustomAIWorkflows />} />
+            <Route path="/products/omnilogic" element={<CustomAIWorkflows />} />
             
             {/* Content/SEO pages */}
             <Route path="/about" element={<AboutPage />} />
