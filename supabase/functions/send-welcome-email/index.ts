@@ -108,7 +108,7 @@ const handler = async (req: Request): Promise<Response> => {
     const safeIndustry = escapeHtml(industry);
 
     const emailResponse = await resend.emails.send({
-      from: "BrightLaunchIQ <onboarding@resend.dev>",
+      from: "BrightLaunchIQ <onboarding@brightlaunchiq.com>",
       to: [email],
       subject: "Welcome to BrightLaunchIQ - Your 14-Day Launch Begins Now! 🚀",
       html: `
