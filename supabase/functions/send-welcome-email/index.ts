@@ -109,8 +109,14 @@ const handler = async (req: Request): Promise<Response> => {
 
     const emailResponse = await resend.emails.send({
       from: "BrightLaunchIQ <onboarding@account.brightlaunchiq.com>",
+      reply_to: "success@BrightLaunchIQ.com",
       to: [email],
       subject: "Welcome to BrightLaunchIQ - Your 14-Day Launch Begins Now! 🚀",
+      headers: {
+        "List-Unsubscribe": "<mailto:unsubscribe@account.brightlaunchiq.com?subject=unsubscribe>",
+        "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+      },
+      text: `Welcome to BrightLaunchIQ, ${businessName}!\n\nThank you for choosing BrightLaunchIQ as your AI sales automation partner. Your 14-Day Speed to Lead Guarantee is now active.\n\nNext steps:\n1. Complete your onboarding questionnaire: https://brightlaunchiq.com/onboarding\n2. Schedule your 60-minute strategy session\n3. We build your custom sales engine\n\nNeed help? Call 1-877-879-5552 or email success@BrightLaunchIQ.com\n\nBrightLaunchIQ | Sacramento, CA 95814`,
       html: `
 <!DOCTYPE html>
 <html>
@@ -217,8 +223,11 @@ const handler = async (req: Request): Promise<Response> => {
       <p style="color: #9ca3af; margin: 0 0 10px 0; font-size: 14px;">
         BrightLaunchIQ | Human-Guided AI Sales Automation
       </p>
-      <p style="color: #6b7280; margin: 0; font-size: 12px;">
-        Sacramento • Stockton • Fresno • Bakersfield
+      <p style="color: #6b7280; margin: 0 0 8px; font-size: 12px;">
+        Sacramento, CA 95814
+      </p>
+      <p style="color: #6b7280; margin: 0; font-size: 11px;">
+        <a href="mailto:unsubscribe@account.brightlaunchiq.com?subject=unsubscribe" style="color: #6b7280;">Unsubscribe</a> | <a href="https://brightlaunchiq.com/privacy" style="color: #6b7280;">Privacy Policy</a>
       </p>
     </div>
     

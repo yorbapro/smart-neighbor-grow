@@ -36,7 +36,8 @@ import {
   Target,
   Clock,
   FileText,
-  Eye
+  Eye,
+  Rocket
 } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
@@ -57,6 +58,7 @@ import {
   Legend
 } from "recharts";
 import LeadDetailModal from "@/components/admin/LeadDetailModal";
+import AdminOnboardingTab from "@/components/admin/AdminOnboardingTab";
 
 
 interface Lead {
@@ -378,6 +380,10 @@ const AdminLeads = () => {
                 <Users className="w-4 h-4" />
                 Leads
               </TabsTrigger>
+              <TabsTrigger value="onboarding" className="flex items-center gap-2">
+                <Rocket className="w-4 h-4" />
+                Onboarding
+              </TabsTrigger>
               <TabsTrigger value="analytics" className="flex items-center gap-2">
                 <BarChart3 className="w-4 h-4" />
                 Analytics
@@ -696,6 +702,11 @@ const AdminLeads = () => {
                   </div>
                 )}
               </div>
+            </TabsContent>
+
+            {/* Onboarding Tab */}
+            <TabsContent value="onboarding">
+              <AdminOnboardingTab />
             </TabsContent>
           </Tabs>
         </div>

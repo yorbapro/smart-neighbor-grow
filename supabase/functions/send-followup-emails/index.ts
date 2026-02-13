@@ -214,8 +214,14 @@ serve(async (req) => {
       try {
         await resend.emails.send({
           from: "BrightLaunchIQ <onboarding@account.brightlaunchiq.com>",
+          reply_to: "success@BrightLaunchIQ.com",
           to: [lead.email],
           subject,
+          headers: {
+            "List-Unsubscribe": "<mailto:unsubscribe@account.brightlaunchiq.com?subject=unsubscribe>",
+            "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+          },
+          text: `Hi ${lead.business_name},\n\nYour AEO score: ${lead.overall_score}/100. Potential: ${lead.potential_score}/100.\n\nReady to improve? Visit https://brightlaunchiq.com/get-started\n\nBrightLaunchIQ | Sacramento, CA 95814\nUnsubscribe: mailto:unsubscribe@account.brightlaunchiq.com?subject=unsubscribe`,
           html: bodyHtml,
         });
 

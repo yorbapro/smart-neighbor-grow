@@ -507,7 +507,9 @@ Generate an AEO audit with the following structure - return ONLY valid JSON, no 
     <!-- Footer -->
     <div style="text-align: center; color: #999; font-size: 12px; margin-top: 24px; padding-top: 24px; border-top: 1px solid #eee;">
       <p style="margin: 0 0 8px;"><strong style="color: #1e3a5f;">BrightLaunchIQ</strong> • Human-Guided AI for Local Business Growth</p>
-      <p style="margin: 0;">You received this email because you requested an AEO audit at brightlaunchiq.com</p>
+      <p style="margin: 0 0 8px;">Sacramento, CA 95814</p>
+      <p style="margin: 0 0 8px;">You received this email because you requested an AEO audit at brightlaunchiq.com</p>
+      <p style="margin: 0; font-size: 11px;"><a href="mailto:unsubscribe@account.brightlaunchiq.com?subject=unsubscribe" style="color: #999;">Unsubscribe</a> | <a href="https://brightlaunchiq.com/privacy" style="color: #999;">Privacy Policy</a></p>
     </div>
   </div>
 </body>
@@ -516,8 +518,14 @@ Generate an AEO audit with the following structure - return ONLY valid JSON, no 
       try {
         const emailResponse = await resend.emails.send({
           from: "BrightLaunchIQ <onboarding@account.brightlaunchiq.com>",
+          reply_to: "success@BrightLaunchIQ.com",
           to: [email],
           subject: `Your AEO Score: ${auditResult.overallScore}/100 - ${htmlBusinessName}`,
+          headers: {
+            "List-Unsubscribe": "<mailto:unsubscribe@account.brightlaunchiq.com?subject=unsubscribe>",
+            "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+          },
+          text: `Your AEO Audit Results for ${businessName}\n\nOverall Score: ${auditResult.overallScore}/100\nPotential Score: ${auditResult.potentialScore}/100\n\nReady to improve? Visit https://brightlaunchiq.com/get-started\n\nBrightLaunchIQ | Sacramento, CA 95814\nUnsubscribe: mailto:unsubscribe@account.brightlaunchiq.com?subject=unsubscribe`,
           html: emailHtml,
         });
         console.log("Email sent:", emailResponse);

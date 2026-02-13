@@ -170,8 +170,14 @@ const handler = async (req: Request): Promise<Response> => {
     // Send confirmation email to the user
     const userEmailResponse = await resend.emails.send({
       from: "BrightLaunchIQ <onboarding@account.brightlaunchiq.com>",
+      reply_to: "success@BrightLaunchIQ.com",
       to: [email],
       subject: "We received your message - BrightLaunchIQ",
+      headers: {
+        "List-Unsubscribe": "<mailto:unsubscribe@account.brightlaunchiq.com?subject=unsubscribe>",
+        "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+      },
+      text: `Thanks for reaching out, ${name}!\n\nWe've received your message and our team will get back to you within 24 hours.\n\nNeed faster help? Call 1-877-879-5552.\n\nBest regards,\nThe BrightLaunchIQ Team\nSacramento, CA 95814`,
       html: `
         <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background: linear-gradient(135deg, #4F46E5, #7C3AED); padding: 32px; border-radius: 12px 12px 0 0;">
@@ -206,7 +212,11 @@ const handler = async (req: Request): Promise<Response> => {
             
             <p style="color: #6b7280; font-size: 12px;">
               BrightLaunchIQ - Human-Guided AI Lead Generation<br>
+              Sacramento, CA 95814<br>
               success@BrightLaunchIQ.com | 1-877-879-5552
+            </p>
+            <p style="color: #9ca3af; font-size: 11px; margin-top: 8px;">
+              <a href="mailto:unsubscribe@account.brightlaunchiq.com?subject=unsubscribe" style="color: #9ca3af;">Unsubscribe</a> | <a href="https://brightlaunchiq.com/privacy" style="color: #9ca3af;">Privacy Policy</a>
             </p>
           </div>
         </div>
