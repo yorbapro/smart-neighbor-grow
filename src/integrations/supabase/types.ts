@@ -139,6 +139,78 @@ export type Database = {
           },
         ]
       }
+      onboarding_submissions: {
+        Row: {
+          additional_notes: string | null
+          business_name: string
+          competitors: string | null
+          created_at: string
+          current_crm: string | null
+          current_lead_sources: string | null
+          current_outreach_tools: string | null
+          differentiators: string | null
+          email: string
+          id: string
+          industry: string
+          launch_urgency: string
+          monthly_meeting_goal: number | null
+          preferred_channels: string[] | null
+          revenue_target: string | null
+          sales_cycle_length: string | null
+          status: string
+          target_company_size: string
+          target_industries: string
+          target_job_titles: string
+          target_locations: string
+        }
+        Insert: {
+          additional_notes?: string | null
+          business_name: string
+          competitors?: string | null
+          created_at?: string
+          current_crm?: string | null
+          current_lead_sources?: string | null
+          current_outreach_tools?: string | null
+          differentiators?: string | null
+          email: string
+          id?: string
+          industry: string
+          launch_urgency?: string
+          monthly_meeting_goal?: number | null
+          preferred_channels?: string[] | null
+          revenue_target?: string | null
+          sales_cycle_length?: string | null
+          status?: string
+          target_company_size: string
+          target_industries: string
+          target_job_titles: string
+          target_locations: string
+        }
+        Update: {
+          additional_notes?: string | null
+          business_name?: string
+          competitors?: string | null
+          created_at?: string
+          current_crm?: string | null
+          current_lead_sources?: string | null
+          current_outreach_tools?: string | null
+          differentiators?: string | null
+          email?: string
+          id?: string
+          industry?: string
+          launch_urgency?: string
+          monthly_meeting_goal?: number | null
+          preferred_channels?: string[] | null
+          revenue_target?: string | null
+          sales_cycle_length?: string | null
+          status?: string
+          target_company_size?: string
+          target_industries?: string
+          target_job_titles?: string
+          target_locations?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string
