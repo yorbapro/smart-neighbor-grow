@@ -5,20 +5,21 @@ import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import TrustBadges from "@/components/TrustBadges";
 import { Button } from "@/components/ui/button";
+import { PROACTIVE_TIERS } from "@/lib/products";
 import {
   Megaphone,
   Check,
   ArrowRight,
-  Zap,
   Phone,
   MessageSquare,
   BarChart3,
-  Shield,
   Target,
   Clock,
-  Users,
   TrendingUp,
   RefreshCw,
+  Zap,
+  Users,
+  ShieldCheck,
 } from "lucide-react";
 
 const LeadLineProactive = () => {
@@ -56,14 +57,14 @@ const LeadLineProactive = () => {
     productScript.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Product",
-      "name": "LeadLine AI Proactive",
-      "description":
+      name: "LeadLine AI Proactive",
+      description:
         "AI-powered outbound sales engine that automates follow-up, reactivation campaigns, and outbound calling to drive measurable revenue for local and service businesses.",
-      "brand": {
+      brand: {
         "@type": "Organization",
-        "name": "BrightLaunchIQ",
+        name: "BrightLaunchIQ",
       },
-      "category": "AI Sales Automation Software",
+      category: "AI Sales Automation Software",
     });
     document.head.appendChild(productScript);
 
@@ -73,7 +74,7 @@ const LeadLineProactive = () => {
     };
   }, []);
 
-  const features = [
+  const capabilities = [
     {
       icon: Megaphone,
       title: "Cold & Warm Outbound Campaigns",
@@ -120,10 +121,30 @@ const LeadLineProactive = () => {
   ];
 
   const steps = [
-    { step: "1", title: "Strategy & Training", description: "We build your outbound playbook and train the AI on your business, objections, and ideal customers." },
-    { step: "2", title: "Campaign Configuration", description: "Set up cold outreach, warm follow-up, and reactivation sequences across phone and SMS." },
-    { step: "3", title: "CRM & Revenue Integration", description: "Connect to your CRM for automatic logging, pipeline tracking, and revenue attribution." },
-    { step: "4", title: "Launch & Optimize", description: "Go live, monitor performance, and continuously optimize for higher conversion rates." },
+    {
+      step: "1",
+      title: "Strategy & Training",
+      description:
+        "We build your outbound playbook and train the AI on your business, objections, and ideal customers.",
+    },
+    {
+      step: "2",
+      title: "Campaign Configuration",
+      description:
+        "Set up cold outreach, warm follow-up, and reactivation sequences across phone and SMS.",
+    },
+    {
+      step: "3",
+      title: "CRM & Revenue Integration",
+      description:
+        "Connect to your CRM for automatic logging, pipeline tracking, and revenue attribution.",
+    },
+    {
+      step: "4",
+      title: "Launch & Optimize",
+      description:
+        "Go live, monitor performance, and continuously optimize for higher conversion rates.",
+    },
   ];
 
   return (
@@ -141,15 +162,15 @@ const LeadLineProactive = () => {
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              LeadLine AI Proactive
+              Stop Leaving Revenue in Your CRM.
             </h1>
 
             <p className="text-xl md:text-2xl text-muted-foreground mb-4">
-              Automated Follow-Up & Outbound Revenue Engine
+              LeadLine AI Proactive follows up with every lead, reactivates dormant contacts, and drives outbound sales conversations — automatically.
             </p>
 
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-              Stop leaving revenue on the table. LeadLine AI Proactive follows up with every lead, reactivates dormant contacts, and drives outbound sales conversations — automatically.
+              An AI-powered outbound system that replaces manual follow-up with intelligent, revenue-driving conversations at scale. No more unworked leads. No more stale pipelines.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -193,14 +214,27 @@ const LeadLineProactive = () => {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
               Leads Don't Convert Themselves.
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Most businesses generate leads — but never follow up fast enough. Missed callbacks, stale CRM records, and inconsistent outreach cost you thousands every month. LeadLine AI Proactive fixes the follow-up gap.
+            <p className="text-lg text-muted-foreground mb-6">
+              Most businesses generate leads — but never follow up fast enough. Missed callbacks, stale CRM records, and inconsistent outreach cost you thousands every month.
             </p>
+            <div className="grid sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
+              {[
+                "Leads sit untouched for hours — or days",
+                "Missed calls never get returned",
+                "Follow-up sequences are inconsistent",
+                "Your CRM is full of unworked opportunities",
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3 p-4 rounded-xl bg-destructive/5 border border-destructive/10">
+                  <div className="w-2 h-2 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                  <span className="text-sm text-foreground">{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Features */}
+      {/* Capabilities */}
       <section className="py-16 md:py-24 bg-muted/30">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-14">
@@ -213,7 +247,7 @@ const LeadLineProactive = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {features.map((feature) => (
+            {capabilities.map((feature) => (
               <div
                 key={feature.title}
                 className="p-6 rounded-2xl bg-card border border-border hover:shadow-card-hover transition-shadow"
@@ -252,6 +286,113 @@ const LeadLineProactive = () => {
         </div>
       </section>
 
+      {/* Pricing Tiers */}
+      <section className="py-16 md:py-24 bg-muted/30">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
+              Outbound Pricing
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Choose Your Outbound Engine
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Scale outbound revenue without hiring SDRs or sales reps.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {PROACTIVE_TIERS.map((tier) => (
+              <div
+                key={tier.id}
+                className={`relative rounded-2xl border overflow-hidden transition-all duration-300 ${
+                  tier.highlighted
+                    ? "border-primary bg-gradient-to-br from-primary/5 to-primary/2 shadow-lg scale-105"
+                    : "border-border bg-card hover:shadow-card-hover"
+                }`}
+              >
+                {tier.highlighted && (
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent" />
+                )}
+
+                <div className="p-6">
+                  {tier.highlighted && (
+                    <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold mb-4">
+                      Most Popular
+                    </div>
+                  )}
+
+                  <h3 className="font-display text-2xl font-bold text-foreground mb-2">
+                    {tier.tierName}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-6">{tier.tagline}</p>
+
+                  <div className="border-t border-border pt-6 mb-6">
+                    <div className="text-4xl font-display font-bold text-foreground mb-1">
+                      ${tier.monthlyPrice.toLocaleString()}
+                    </div>
+                    <div className="text-sm text-muted-foreground mb-4">/month</div>
+
+                    <div className="space-y-2 text-xs text-muted-foreground">
+                      <div>{tier.usageMinutes}</div>
+                      <div>{tier.usageCalls}</div>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-3 mb-8">
+                    {tier.features.map((feature: string) => (
+                      <li key={feature} className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
+                        <span className="text-sm text-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Button className="w-full" variant={tier.highlighted ? "hero" : "outline"} asChild>
+                    <Link to="/get-started">
+                      {tier.cta}
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Who It's For */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Built for Revenue-Driven Businesses
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                LeadLine AI Proactive is built for operators who know leads exist — but need a system to work them.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                { icon: Users, text: "Service businesses with unworked CRM leads" },
+                { icon: TrendingUp, text: "Companies scaling beyond manual follow-up" },
+                { icon: Phone, text: "Teams that miss callbacks and lose deals" },
+                { icon: ShieldCheck, text: "Operators ready to automate outbound revenue" },
+              ].map((item) => (
+                <div key={item.text} className="flex items-center gap-4 p-5 rounded-xl bg-card border border-border">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <item.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <span className="text-foreground font-medium">{item.text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 md:py-24 bg-gradient-hero-dark relative overflow-hidden">
         <div className="absolute inset-0">
@@ -265,12 +406,17 @@ const LeadLineProactive = () => {
           <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
             Stop leaving revenue in your CRM. Let AI follow up, re-engage, and drive sales automatically.
           </p>
-          <Button variant="hero" size="xl" asChild className="group">
-            <Link to="/get-started">
-              Schedule Strategy Call
-              <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
-            </Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="hero" size="xl" asChild className="group">
+              <Link to="/get-started">
+                Schedule Strategy Call
+                <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Button>
+            <Button variant="heroOutline" size="lg" asChild>
+              <Link to="/pricing">Compare Plans</Link>
+            </Button>
+          </div>
         </div>
       </section>
 
