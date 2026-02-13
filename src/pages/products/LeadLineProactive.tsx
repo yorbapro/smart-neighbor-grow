@@ -173,13 +173,13 @@ const LeadLineProactive = () => {
               An AI-powered outbound system that replaces manual follow-up with intelligent, revenue-driving conversations at scale. No more unworked leads. No more stale pipelines.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="lg" asChild>
-                <Link to="/get-started">
-                  Book a Strategy Call
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-              </Button>
+             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+               <Button variant="hero" size="lg" asChild>
+                 <Link to="/get-started?product=proactiveScale">
+                   Book a Strategy Call
+                   <ArrowRight className="ml-2 w-5 h-5" />
+                 </Link>
+               </Button>
               <Button variant="heroOutline" size="lg" asChild>
                 <Link to="/pricing">See Pricing</Link>
               </Button>
@@ -348,12 +348,12 @@ const LeadLineProactive = () => {
                     ))}
                   </ul>
 
-                  <Button className="w-full" variant={tier.highlighted ? "hero" : "outline"} asChild>
-                    <Link to="/get-started">
-                      {tier.cta}
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </Link>
-                  </Button>
+                   <Button className="w-full" variant={tier.highlighted ? "hero" : "outline"} asChild>
+                     <Link to={`/get-started?product=${tier.id}`}>
+                       {tier.cta}
+                       <ArrowRight className="ml-2 w-4 h-4" />
+                     </Link>
+                   </Button>
                 </div>
               </div>
             ))}
@@ -406,13 +406,13 @@ const LeadLineProactive = () => {
           <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
             Stop leaving revenue in your CRM. Let AI follow up, re-engage, and drive sales automatically.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="xl" asChild className="group">
-              <Link to="/get-started">
-                Schedule Strategy Call
-                <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
-              </Link>
-            </Button>
+           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+             <Button variant="hero" size="xl" asChild className="group">
+               <Link to="/get-started?product=proactiveScale">
+                 Schedule Strategy Call
+                 <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+               </Link>
+             </Button>
             <Button variant="heroOutline" size="lg" asChild>
               <Link to="/pricing">Compare Plans</Link>
             </Button>
