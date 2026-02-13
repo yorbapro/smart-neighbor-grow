@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TrustBadges from "@/components/TrustBadges";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -16,7 +17,9 @@ import {
   AlertCircle,
   CheckCircle,
   Loader2,
-  Sparkles
+  Sparkles,
+  Lock,
+  Shield
 } from "lucide-react";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -337,11 +340,28 @@ const AEOAudit = () => {
                     </>
                   )}
                 </Button>
+
+                {/* Trust Badges */}
+                <div className="flex flex-wrap justify-center gap-3 pt-2">
+                  <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/5 border border-primary/10">
+                    <Lock className="w-3.5 h-3.5 text-primary" />
+                    <span className="text-xs font-medium text-foreground">AES-256 Encrypted</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/5 border border-primary/10">
+                    <Shield className="w-3.5 h-3.5 text-primary" />
+                    <span className="text-xs font-medium text-foreground">Zero-Training Policy</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/5 border border-primary/10">
+                    <span className="text-xs">✓</span>
+                    <span className="text-xs font-medium text-foreground">GDPR & CCPA Ready</span>
+                  </div>
+                </div>
               </form>
             </div>
           </div>
         </div>
       </section>
+
 
       {/* Results Section */}
       {result && (
@@ -536,6 +556,7 @@ const AEOAudit = () => {
         </section>
       )}
 
+      <TrustBadges />
       <Footer />
     </div>
   );
