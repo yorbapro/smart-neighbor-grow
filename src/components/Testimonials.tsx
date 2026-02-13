@@ -1,4 +1,4 @@
-import { Star, Quote, ArrowRight } from "lucide-react";
+import { Star, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import contractorPhoto from "@/assets/photos/contractor-professional.jpg";
 import lawyerPhoto from "@/assets/photos/lawyer-professional.jpg";
@@ -11,9 +11,9 @@ const Testimonials = () => {
       role: "Owner",
       company: "Valley HVAC Solutions",
       location: "Sacramento, CA",
-      quote: "We went from missing 60% of after-hours leads to capturing every single one. LaunchPad 360™ paid for itself in the first month.",
-      metric: "340%",
-      metricLabel: "Lead Capture Increase",
+      quote: "We went from missing 60% of after-hours leads to capturing every single one. The system paid for itself in the first month.",
+      metric: "100%",
+      metricLabel: "Call Capture Rate",
       photo: contractorPhoto,
     },
     {
@@ -21,9 +21,9 @@ const Testimonials = () => {
       role: "Managing Partner",
       company: "Rodriguez Law Group",
       location: "Fresno, CA",
-      quote: "The AI responds to inquiries in under 60 seconds. Our competitors can't match that speed. We're now the first call back, every time.",
-      metric: "< 60s",
-      metricLabel: "Average Response Time",
+      quote: "Response time dropped from hours to seconds. We're booking 3x more consultations without adding staff.",
+      metric: "3x",
+      metricLabel: "More Booked Appointments",
       photo: lawyerPhoto,
     },
     {
@@ -31,9 +31,9 @@ const Testimonials = () => {
       role: "CEO",
       company: "Central Valley Logistics",
       location: "Stockton, CA",
-      quote: "I was skeptical about AI, but the human oversight made all the difference. Every message sounds like us, not a robot.",
-      metric: "78%",
-      metricLabel: "More Qualified Leads",
+      quote: "We cut payroll dependency by 40% while increasing revenue. The infrastructure just works — no more guesswork.",
+      metric: "$47K",
+      metricLabel: "Monthly Revenue Gained",
       photo: logisticsPhoto,
     },
   ];
@@ -42,13 +42,13 @@ const Testimonials = () => {
     {
       industry: "Professional Services",
       challenge: "Law firm losing leads to competitors who responded faster",
-      solution: "Implemented LaunchPad 360™ with instant SMS and email response",
+      solution: "Installed LeadLine AI with instant call answering and CRM integration",
       result: "First-response rate improved from 4 hours to under 60 seconds. Monthly consultations increased 156%.",
     },
     {
       industry: "Trade Services",
       challenge: "HVAC company missing 60% of after-hours emergency calls",
-      solution: "24/7 AI voice and SMS engagement with hot lead mobile alerts",
+      solution: "Deployed 24/7 AI receptionist with smart routing and appointment booking",
       result: "Captured 100% of leads. After-hours revenue increased $47,000/month.",
     },
   ];
@@ -63,16 +63,16 @@ const Testimonials = () => {
             <span className="w-8 h-[2px] bg-primary" />
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Real Results from
+            What Happens When Infrastructure
             <br />
-            <span className="text-gradient">Real Businesses</span>
+            <span className="text-gradient">Replaces Guesswork</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            See how local businesses across California are transforming their sales with AI-powered lead generation.
+            See how local businesses are transforming revenue with AI-powered infrastructure.
           </p>
         </div>
 
-        {/* Testimonial Cards with Photos */}
+        {/* Testimonial Cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {testimonials.map((testimonial, index) => (
             <div
@@ -80,7 +80,6 @@ const Testimonials = () => {
               className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-card-hover transition-all duration-300"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Metric - Featured at top */}
               <div className="mb-6">
                 <div className="font-display text-4xl font-bold text-primary mb-1">
                   {testimonial.metric}
@@ -90,16 +89,14 @@ const Testimonials = () => {
                 </div>
               </div>
 
-              {/* Quote */}
               <p className="text-foreground/80 mb-8 leading-relaxed">
                 "{testimonial.quote}"
               </p>
 
-              {/* Author with Photo */}
               <div className="flex items-center gap-4 pt-6 border-t border-border">
                 <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-primary/20">
-                  <img 
-                    src={testimonial.photo} 
+                  <img
+                    src={testimonial.photo}
                     alt={`${testimonial.name}, ${testimonial.role} at ${testimonial.company}`}
                     className="w-full h-full object-cover"
                     loading="lazy"
@@ -114,7 +111,6 @@ const Testimonials = () => {
                 </div>
               </div>
 
-              {/* Stars */}
               <div className="flex gap-1 mt-4">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-accent text-accent" />
@@ -124,16 +120,16 @@ const Testimonials = () => {
           ))}
         </div>
 
-        {/* Results Infographic - Redesigned */}
+        {/* Results Stats */}
         <div className="mb-12 grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { value: "340%", label: "Lead Capture Increase", icon: "📈" },
-            { value: "18x", label: "Faster Response Time", icon: "⚡" },
-            { value: "$47K", label: "Monthly Revenue Gained", icon: "💰" },
-            { value: "156%", label: "More Consultations", icon: "📅" },
+            { value: "100%", label: "Increased Call Capture", icon: "📞" },
+            { value: "<60s", label: "Faster Response Times", icon: "⚡" },
+            { value: "3x", label: "More Booked Appointments", icon: "📅" },
+            { value: "40%", label: "Reduced Payroll Dependency", icon: "💰" },
           ].map((stat, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="relative p-6 rounded-2xl bg-card border border-border text-center group hover:border-primary/30 transition-colors"
             >
               <span className="text-2xl mb-2 block">{stat.icon}</span>
@@ -151,15 +147,15 @@ const Testimonials = () => {
             <h3 className="font-display text-xl md:text-2xl font-bold text-foreground">
               Case Studies
             </h3>
-            <Link 
-              to="/resources/case-studies" 
+            <Link
+              to="/resources/case-studies"
               className="hidden sm:flex items-center gap-2 text-primary hover:gap-3 transition-all font-medium text-sm"
             >
               View All
               <ArrowRight size={14} />
             </Link>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-6">
             {caseStudies.map((study, index) => (
               <div
@@ -169,7 +165,7 @@ const Testimonials = () => {
                 <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-6">
                   {study.industry}
                 </span>
-                
+
                 <div className="space-y-6">
                   <div>
                     <p className="text-xs uppercase tracking-wider text-secondary-foreground/50 mb-2">
@@ -179,7 +175,7 @@ const Testimonials = () => {
                       {study.challenge}
                     </p>
                   </div>
-                  
+
                   <div>
                     <p className="text-xs uppercase tracking-wider text-secondary-foreground/50 mb-2">
                       Solution
@@ -188,7 +184,7 @@ const Testimonials = () => {
                       {study.solution}
                     </p>
                   </div>
-                  
+
                   <div className="pt-6 border-t border-secondary-foreground/10">
                     <p className="text-xs uppercase tracking-wider text-primary mb-2">
                       Result
@@ -201,9 +197,9 @@ const Testimonials = () => {
               </div>
             ))}
           </div>
-          
-          <Link 
-            to="/resources/case-studies" 
+
+          <Link
+            to="/resources/case-studies"
             className="sm:hidden flex items-center justify-center gap-2 text-primary mt-6 font-medium"
           >
             View All Case Studies
