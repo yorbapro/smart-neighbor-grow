@@ -37,6 +37,7 @@ const LaunchPad360 = lazy(() => import("./pages/products/LaunchPad360"));
 const LocalLift = lazy(() => import("./pages/products/LocalLift"));
 const LeadLine = lazy(() => import("./pages/products/LeadLine"));
 const LeadLineProactive = lazy(() => import("./pages/products/LeadLineProactive"));
+const LeadLineProactiveFeatures = lazy(() => import("./pages/products/LeadLineProactiveFeatures"));
 const LeadLineFeatures = lazy(() => import("./pages/products/LeadLineFeatures"));
 const CustomAIWorkflows = lazy(() => import("./pages/products/CustomAIWorkflows"));
 
@@ -95,6 +96,7 @@ const App = () => (
             <Route path="/products/locallift" element={<LocalLift />} />
             <Route path="/products/leadline" element={<LeadLine />} />
             <Route path="/products/leadline-proactive" element={<LeadLineProactive />} />
+            <Route path="/products/leadline-proactive/features" element={<LeadLineProactiveFeatures />} />
             <Route path="/products/leadline/features" element={<LeadLineFeatures />} />
             <Route path="/products/custom-ai-workflows" element={<Navigate to="/products/omnilogic" replace />} />
             <Route path="/products/omnilogic" element={<CustomAIWorkflows />} />
