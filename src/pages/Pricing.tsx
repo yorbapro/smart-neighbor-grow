@@ -73,15 +73,10 @@ const Pricing = () => {
           <div className="text-4xl font-display font-bold text-foreground mb-1">
             ${tier.monthlyPrice}
           </div>
-          <div className="text-sm text-muted-foreground mb-4">/month</div>
-          
-          <div className="space-y-2 text-xs text-muted-foreground">
-            <div>{tier.usageMinutes}</div>
-            <div>{tier.usageCalls}</div>
-          </div>
+          <div className="text-sm text-muted-foreground">/month</div>
         </div>
         
-        <ul className="space-y-3 mb-8">
+        <ul className="space-y-3 mb-6">
           {tier.features.map((feature: string) => (
             <li key={feature} className="flex items-start gap-2">
               <Check className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
@@ -89,6 +84,11 @@ const Pricing = () => {
             </li>
           ))}
         </ul>
+
+        <div className="space-y-1 text-xs text-muted-foreground mb-8 pt-4 border-t border-border">
+          <div>{tier.usageMinutes}</div>
+          <div>{tier.usageCalls}</div>
+        </div>
         
         <Button className="w-full" variant={tier.highlighted ? "hero" : "outline"} asChild>
           <Link to="/get-started">
@@ -246,15 +246,10 @@ const Pricing = () => {
                       <div className="text-4xl font-display font-bold text-foreground mb-1">
                         ${tier.monthlyPrice}
                       </div>
-                      <div className="text-sm text-muted-foreground mb-4">/month</div>
-                      
-                      <div className="space-y-2 text-xs text-muted-foreground">
-                        <div>{tier.usageMinutes}</div>
-                        <div>{tier.usageCalls}</div>
-                      </div>
+                      <div className="text-sm text-muted-foreground">/month</div>
                     </div>
                     
-                    <ul className="space-y-3 mb-8">
+                    <ul className="space-y-3 mb-6">
                       {tier.features.map((feature: string) => (
                         <li key={feature} className="flex items-start gap-2">
                           <Check className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
@@ -262,6 +257,11 @@ const Pricing = () => {
                         </li>
                       ))}
                     </ul>
+
+                    <div className="space-y-1 text-xs text-muted-foreground mb-8 pt-4 border-t border-white/10">
+                      <div>{tier.usageMinutes}</div>
+                      <div>{tier.usageCalls}</div>
+                    </div>
                     
                     <Button className="w-full" variant={tier.highlighted ? "hero" : "outline"} asChild>
                       <Link to={tier.isApplication ? "/contact" : "/get-started"}>
