@@ -178,6 +178,15 @@ const LeadLine = () => {
               </div>
             ))}
           </div>
+
+          <div className="text-center mt-10">
+            <Button variant="outline" size="lg" asChild>
+              <Link to="/products/leadline/features">
+                See All Features
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 
