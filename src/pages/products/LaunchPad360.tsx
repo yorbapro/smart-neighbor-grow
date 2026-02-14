@@ -283,15 +283,7 @@ const LaunchPad360 = () => {
                     <div className="text-sm text-muted-foreground">/month</div>
                   </div>
                   
-                  <div className="mb-8 p-4 rounded-lg bg-background/20 space-y-2">
-                    <h4 className="font-semibold text-foreground text-sm">Includes:</h4>
-                    <ul className="space-y-1 text-xs text-muted-foreground">
-                      <li>{tier.usageMinutes}</li>
-                      <li>{tier.usageCalls}</li>
-                    </ul>
-                  </div>
-                  
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-3 mb-6">
                     {tier.features.map((feature: string) => (
                       <li key={feature} className="flex items-start gap-2">
                         <Check className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
@@ -299,6 +291,14 @@ const LaunchPad360 = () => {
                       </li>
                     ))}
                   </ul>
+
+                  <div className="mb-8 p-4 rounded-lg bg-background/20 space-y-2">
+                    <h4 className="font-semibold text-foreground text-sm">Includes:</h4>
+                    <ul className="space-y-1 text-xs text-muted-foreground">
+                      <li>{tier.usageMinutes}</li>
+                      <li>{tier.usageCalls}</li>
+                    </ul>
+                  </div>
                   
                   <Button className="w-full" variant={tier.highlighted ? "hero" : "outline"} asChild>
                     <Link to="/contact">
