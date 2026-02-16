@@ -375,7 +375,7 @@ const Onboarding = () => {
                     </Label>
                     <Input
                       id="targetLocations"
-                      placeholder="e.g., Sacramento metro, Central Valley"
+                      placeholder="e.g., Sacramento metro, Tri-State area"
                       value={form.targetLocations}
                       onChange={(e) =>
                         updateField("targetLocations", e.target.value)

@@ -29,7 +29,7 @@ const Testimonials = () => {
     {
       name: "David Thompson",
       role: "CEO",
-      company: "Central Valley Logistics",
+      company: "Pacific Coast Logistics",
       location: "Stockton, CA",
       quote: "We cut payroll dependency by 40% while increasing revenue. The infrastructure just works — no more guesswork.",
       metric: "$47K",

@@ -19,7 +19,7 @@ const Benefits = () => {
     {
       icon: Brain,
       title: "AI + Local Expertise",
-      description: "Cutting-edge automation guided by people who understand the Central Valley market. Technology that adapts to your community, not the other way around.",
+      description: "Cutting-edge automation guided by people who understand your local market. Technology that adapts to your community, not the other way around.",
       highlight: "Human-Guided Automation",
       stat: "Just $16.60/day",
     },
