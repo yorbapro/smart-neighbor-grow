@@ -18,7 +18,7 @@ const CaseStudies = () => {
 
   const caseStudies = [
     {
-      company: "Central Valley HVAC",
+      company: "Summit HVAC Services",
       industry: "Trade Services",
       location: "Fresno, CA",
       challenge: "Missing 80% of after-hours leads with 2-day average response time",
