@@ -185,7 +185,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: "Serving",
-      value: "California & Nevada",
+      value: "Nationwide",
     },
   ];
 

@@ -20,7 +20,7 @@ const CaseStudies = () => {
     {
       company: "Summit HVAC Services",
       industry: "Trade Services",
-      location: "Fresno, CA",
+      location: "Phoenix, AZ",
       challenge: "Missing 80% of after-hours leads with 2-day average response time",
       results: [
         { metric: "Response Time", before: "47 hours", after: "58 seconds", improvement: "99.9%" },
@@ -35,7 +35,7 @@ const CaseStudies = () => {
     {
       company: "Precision Legal Consulting",
       industry: "Professional Services",
-      location: "Sacramento, CA",
+      location: "Atlanta, GA",
       challenge: "High-value leads falling through the cracks due to slow follow-up",
       results: [
         { metric: "Lead Response Time", before: "8 hours", after: "<60 sec", improvement: "99.8%" },
@@ -50,7 +50,7 @@ const CaseStudies = () => {
     {
       company: "SunPower Solar Solutions",
       industry: "Solar Installation",
-      location: "Bakersfield, CA",
+      location: "Tampa, FL",
       challenge: "Competing against national brands with limited marketing budget",
       results: [
         { metric: "Cost Per Lead", before: "$180", after: "$42", improvement: "77%" },

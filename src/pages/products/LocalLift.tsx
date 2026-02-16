@@ -506,7 +506,7 @@ const LocalLift = () => {
               <cite className="text-muted-foreground not-italic">
                 <span className="font-semibold text-foreground">Alex Reed</span>
                 <span className="mx-2">•</span>
-                Small Business Owner, Sacramento
+                Small Business Owner, Denver
               </cite>
             </div>
           </div>
