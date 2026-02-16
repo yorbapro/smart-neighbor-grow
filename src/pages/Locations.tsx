@@ -184,8 +184,8 @@ const LocationsPage = () => {
             Don't See Your City?
           </h2>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            We serve businesses across the Western United States. Contact us to discuss 
-            AI lead generation solutions for your region.
+            We serve businesses nationwide. Contact us to discuss 
+            AI lead generation solutions for your market.
           </p>
           <Button asChild size="lg" className="bg-gradient-hero hover:opacity-90">
             <Link to="/get-started">Get Started Anywhere</Link>
