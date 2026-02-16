@@ -76,7 +76,7 @@ const LocationsPage = () => {
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Find BrightLaunchIQ offices in Sacramento, Bakersfield, Culver City, Henderson NV, and Monterey. Local AI lead generation expertise for your region."
+        "Find BrightLaunchIQ regional hubs nationwide. Local AI lead generation expertise with hands-on support for your market."
       );
     }
     window.scrollTo(0, 0);

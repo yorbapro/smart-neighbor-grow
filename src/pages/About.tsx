@@ -130,9 +130,9 @@ const About = () => {
   ];
 
   const milestones = [
-    { year: "2023", event: "Founded in Sacramento with a mission to democratize AI sales" },
-    { year: "2024", event: "Launched LaunchPad 360™ and served 100+ local businesses" },
-    { year: "2025", event: "Expanded to 5 regional hubs across California and Nevada" },
+    { year: "2023", event: "Founded with a mission to democratize AI sales for local businesses" },
+    { year: "2024", event: "Launched LaunchPad 360™ and served 100+ businesses nationwide" },
+    { year: "2025", event: "Expanded to regional hubs across the United States" },
     { year: "2026", event: "Pioneering Agentic Go-To-Market solutions for SMBs" },
   ];
 
