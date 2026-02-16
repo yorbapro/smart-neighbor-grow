@@ -14,8 +14,8 @@ const Locations = () => {
             Boost Your Business in Your Local Area
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Elevate your online presence with expert website content tailored for small business success.
-            We serve businesses across Sacramento, Bakersfield, Culver City, Henderson NV, and Monterey.
+            Elevate your online presence with AI-powered revenue infrastructure built for small business success.
+            We serve businesses nationwide with regional hubs for hands-on local support.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
