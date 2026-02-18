@@ -11,6 +11,8 @@ export interface ProductConfig {
   tierName: string;
   tagline: string;
   monthlyPrice: number;
+  setupFee?: number;
+  setupFeatures?: string[];
   features: string[];
   usageMinutes: string;
   usageCalls: string;
@@ -24,10 +26,18 @@ export const LEADLINE_TIERS: ProductConfig[] = [
   {
     id: "leadlineCore",
     family: "leadline",
-    name: "LeadLine AI",
+    name: "AI Receptionist",
     tierName: "Core",
     tagline: "AI Receptionist for Inbound Calls",
     monthlyPrice: 497,
+    setupFee: 1500,
+    setupFeatures: [
+      "Script customization",
+      "Call routing configuration",
+      "Knowledge base ingestion",
+      "Initial testing",
+      "Basic optimization pass",
+    ],
     usageMinutes: "Up to 500 minutes/month",
     usageCalls: "Handles up to 250 calls/month",
     cta: "Get Started",
@@ -41,10 +51,18 @@ export const LEADLINE_TIERS: ProductConfig[] = [
   {
     id: "leadlineGrowth",
     family: "leadline",
-    name: "LeadLine AI",
+    name: "AI Receptionist",
     tierName: "Growth",
     tagline: "AI Receptionist for Inbound Calls",
     monthlyPrice: 997,
+    setupFee: 2500,
+    setupFeatures: [
+      "Calendar integration",
+      "CRM integration",
+      "Booking logic setup",
+      "Automation configuration",
+      "Testing booking flows",
+    ],
     usageMinutes: "Up to 1,500 minutes/month",
     usageCalls: "Handles up to 750 calls/month",
     highlighted: true,
@@ -59,10 +77,18 @@ export const LEADLINE_TIERS: ProductConfig[] = [
   {
     id: "leadlinePro",
     family: "leadline",
-    name: "LeadLine AI",
+    name: "AI Receptionist",
     tierName: "Pro",
     tagline: "AI Receptionist for Inbound Calls",
     monthlyPrice: 1497,
+    setupFee: 5000,
+    setupFeatures: [
+      "Advanced reporting setup",
+      "Multi-location routing",
+      "Custom voice configuration",
+      "Advanced analytics configuration",
+      "Priority optimization cycle",
+    ],
     usageMinutes: "Up to 2,500 minutes/month",
     usageCalls: "Handles up to 1,200 calls/month",
     cta: "Replace My Front Desk",
