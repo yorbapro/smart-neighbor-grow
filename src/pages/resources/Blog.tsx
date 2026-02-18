@@ -95,7 +95,7 @@ const Blog = () => {
           {
             "@type": "ListItem",
             "position": 6,
-            "name": "The Easy Button: Why You Need LeadLine",
+            "name": "The Easy Button: Why You Need BrightLaunchIQ AI Receptionist",
             "url": "https://brightlaunchiq.com/resources/blog/why-you-need-leadline"
           },
           {
@@ -361,8 +361,8 @@ const Blog = () => {
       part: 5,
     },
     {
-      title: "The Easy Button: Why You Need LeadLine™",
-      excerpt: "AI voice agents are powerful—but setting them up is complicated. That's why we built LeadLine™.",
+      title: "The Easy Button: Why You Need BrightLaunchIQ AI Receptionist",
+      excerpt: "AI voice agents are powerful—but setting them up is complicated. That's why we built the BrightLaunchIQ AI Receptionist.",
       slug: "why-you-need-leadline",
       author: "Marcus Reynolds",
       date: "February 1, 2026",

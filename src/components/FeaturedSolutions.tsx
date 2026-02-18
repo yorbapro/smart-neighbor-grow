@@ -14,11 +14,11 @@ const FeaturedSolutions = () => {
     },
     {
       icon: Phone,
-      name: "LeadLine™",
-      tagline: "AI Receptionist & Voice Agent",
+      name: "AI Receptionist",
+      tagline: "24/7 AI Phone Answering",
       description: "24/7 AI receptionist that answers calls, qualifies leads, and books appointments.",
       price: "From $497/mo",
-      slug: "leadline",
+      slug: "ai-receptionist",
       hasDemo: true,
       demoUrl: "https://agent.retellai.com/preview/agent_19d43cf736300711221e30a6b0",
     },
@@ -102,7 +102,7 @@ const FeaturedSolutions = () => {
                 </Link>
               </div>
 
-              {/* Live Demo Button for LeadLine™ */}
+              {/* Live Demo Button for AI Receptionist */}
               {solution.hasDemo && solution.demoUrl && (
                 <a
                   href={solution.demoUrl}
