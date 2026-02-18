@@ -42,10 +42,12 @@ export const LEADLINE_TIERS: ProductConfig[] = [
     usageCalls: "Handles up to 250 calls/month",
     cta: "Get Started",
     features: [
-      "24/7 AI call answering",
-      "Lead capture & routing",
-      "Secure infrastructure",
-      "Call transcripts + summaries",
+      "24/7 AI call answering — never miss a lead",
+      "Lead capture & smart qualification",
+      "Intelligent call routing & escalation",
+      "Custom voice persona & script design",
+      "Call transcripts + sentiment analysis",
+      "Encrypted, secure infrastructure",
     ],
   },
   {
@@ -69,9 +71,11 @@ export const LEADLINE_TIERS: ProductConfig[] = [
     cta: "Scale My Calls",
     features: [
       "Everything in Core, plus:",
-      "Appointment booking",
-      "CRM integration",
-      "Analytics dashboard",
+      "Appointment booking & calendar sync",
+      "CRM integration (HubSpot, Salesforce, etc.)",
+      "Analytics dashboard & ROI reporting",
+      "Automated SMS/email confirmations",
+      "Zapier & Slack integrations",
     ],
   },
   {
@@ -94,9 +98,11 @@ export const LEADLINE_TIERS: ProductConfig[] = [
     cta: "Replace My Front Desk",
     features: [
       "Everything in Growth, plus:",
-      "Multi-location support",
-      "Advanced analytics",
-      "Priority optimization",
+      "Multi-location call routing",
+      "Custom AI voice cloning",
+      "Advanced analytics & executive reporting",
+      "Priority optimization & dedicated support",
+      "Revenue attribution modeling",
     ],
   },
 ];
