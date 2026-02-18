@@ -24,7 +24,7 @@ const systems = [
       "Performance reporting",
     ],
     cta: "Learn More About LeadLine",
-    href: "/products/leadline",
+    href: "/products/ai-receptionist",
     color: "primary" as const,
   },
   {
@@ -41,7 +41,7 @@ const systems = [
       "Revenue tracking & CRM automation",
     ],
     cta: "Explore Outbound AI",
-    href: "/products/leadline-proactive",
+    href: "/products/ai-voice-agent",
     color: "accent" as const,
   },
   {

@@ -94,10 +94,15 @@ const App = () => (
             {/* Product pages */}
             <Route path="/products/launchpad-360" element={<LaunchPad360 />} />
             <Route path="/products/locallift" element={<LocalLift />} />
-            <Route path="/products/leadline" element={<LeadLine />} />
-            <Route path="/products/leadline-proactive" element={<LeadLineProactive />} />
-            <Route path="/products/leadline-proactive/features" element={<LeadLineProactiveFeatures />} />
-            <Route path="/products/leadline/features" element={<LeadLineFeatures />} />
+            <Route path="/products/ai-receptionist" element={<LeadLine />} />
+            <Route path="/products/ai-voice-agent" element={<LeadLineProactive />} />
+            <Route path="/products/ai-voice-agent/features" element={<LeadLineProactiveFeatures />} />
+            <Route path="/products/ai-receptionist/features" element={<LeadLineFeatures />} />
+            {/* Legacy redirects for SEO */}
+            <Route path="/products/leadline" element={<Navigate to="/products/ai-receptionist" replace />} />
+            <Route path="/products/leadline-proactive" element={<Navigate to="/products/ai-voice-agent" replace />} />
+            <Route path="/products/leadline-proactive/features" element={<Navigate to="/products/ai-voice-agent/features" replace />} />
+            <Route path="/products/leadline/features" element={<Navigate to="/products/ai-receptionist/features" replace />} />
             <Route path="/products/custom-ai-workflows" element={<Navigate to="/products/omnilogic" replace />} />
             <Route path="/products/omnilogic" element={<CustomAIWorkflows />} />
             

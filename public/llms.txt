@@ -125,7 +125,7 @@ An AI receptionist is an artificial intelligence system that answers phone calls
 | Scalability | Limited | Unlimited |
 
 **CTA**: Talk to Our AI Receptionist (Live Demo)
-**URL**: https://brightlaunchiq.com/products/leadline
+**URL**: https://brightlaunchiq.com/products/ai-receptionist
 
 ---
 
@@ -351,7 +351,7 @@ AI receptionist, AI voice agent, virtual receptionist AI, AI phone answering, AI
 - Homepage: https://brightlaunchiq.com
 - About Us: https://brightlaunchiq.com/about
 - Products: https://brightlaunchiq.com/products/launchpad-360
-- LeadLine: https://brightlaunchiq.com/products/leadline
+- AI Receptionist: https://brightlaunchiq.com/products/ai-receptionist
 - LocalLift: https://brightlaunchiq.com/products/locallift
 - OmniLogic: https://brightlaunchiq.com/products/custom-ai-workflows
 - Free AEO Audit: https://brightlaunchiq.com/aeo-audit

@@ -299,8 +299,8 @@ const LeadLineFeatures = () => {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/products/leadline">
-                  Back to LeadLine AI
+                <Link to="/products/ai-receptionist">
+                  Back to AI Receptionist
                 </Link>
               </Button>
             </div>
@@ -375,7 +375,7 @@ const LeadLineFeatures = () => {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/products/leadline">View Pricing</Link>
+                <Link to="/products/ai-receptionist">View Pricing</Link>
               </Button>
             </div>
           </div>
