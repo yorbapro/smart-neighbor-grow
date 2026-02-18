@@ -24,19 +24,19 @@ import {
 
 const LeadLineProactive = () => {
   useEffect(() => {
-    document.title = "LeadLine AI Proactive — AI Outbound Sales Engine | BrightLaunchIQ";
+    document.title = "BrightLaunchIQ AI Sales Agent — Automated Outbound Sales & Follow-Up for SMBs";
 
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "LeadLine AI Proactive is an automated outbound revenue engine. AI-powered follow-up, reactivation campaigns, and outbound calling that drives measurable revenue for local businesses."
+        "BrightLaunchIQ AI Sales Agent automates outbound follow-up, reactivation campaigns, and sales conversations. Drive measurable revenue for your local business — automatically."
       );
     }
 
     const existingKeywords = document.querySelector('meta[name="keywords"]');
     const keywordsContent =
-      "AI outbound sales, AI follow-up, automated sales calls, AI SDR, outbound AI engine, automated lead follow-up, AI sales agent, outbound calling automation, missed call callback AI";
+      "AI sales agent, AI outbound sales, AI follow-up, automated sales calls, AI SDR, outbound AI engine, automated lead follow-up, outbound calling automation, missed call callback AI, AI sales agent for small business";
     if (existingKeywords) {
       existingKeywords.setAttribute("content", keywordsContent);
     } else {
@@ -57,9 +57,9 @@ const LeadLineProactive = () => {
     productScript.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Product",
-      name: "LeadLine AI Proactive",
+      name: "BrightLaunchIQ AI Sales Agent",
       description:
-        "AI-powered outbound sales engine that automates follow-up, reactivation campaigns, and outbound calling to drive measurable revenue for local and service businesses.",
+        "AI-powered outbound sales agent that automates follow-up, reactivation campaigns, and outbound calling to drive measurable revenue for local and service businesses.",
       brand: {
         "@type": "Organization",
         name: "BrightLaunchIQ",
@@ -166,7 +166,7 @@ const LeadLineProactive = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-muted-foreground mb-4">
-              LeadLine AI Proactive follows up with every lead, reactivates dormant contacts, and drives outbound sales conversations — automatically.
+              BrightLaunchIQ AI Sales Agent follows up with every lead, reactivates dormant contacts, and drives outbound sales conversations — automatically.
             </p>
 
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
@@ -251,7 +251,7 @@ const LeadLineProactive = () => {
               Core Capabilities
             </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              What LeadLine AI Proactive Handles Automatically
+              What BrightLaunchIQ AI Sales Agent Handles Automatically
             </h2>
           </div>
 
@@ -335,7 +335,7 @@ const LeadLineProactive = () => {
                 Built for Revenue-Driven Businesses
               </h2>
               <p className="text-lg text-muted-foreground">
-                LeadLine AI Proactive is built for operators who know leads exist — but need a system to work them.
+                BrightLaunchIQ AI Sales Agent is built for operators who know leads exist — but need a system to work them.
               </p>
             </div>
 
