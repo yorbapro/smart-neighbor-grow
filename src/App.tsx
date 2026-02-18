@@ -42,6 +42,9 @@ const LeadLineFeatures = lazy(() => import("./pages/products/LeadLineFeatures"))
 const AIReceptionistCoreFeatures = lazy(() => import("./pages/products/AIReceptionistCoreFeatures"));
 const AIReceptionistGrowthFeatures = lazy(() => import("./pages/products/AIReceptionistGrowthFeatures"));
 const AIReceptionistProFeatures = lazy(() => import("./pages/products/AIReceptionistProFeatures"));
+const AIReceptionistCoreIncludes = lazy(() => import("./pages/products/AIReceptionistCoreIncludes"));
+const AIReceptionistGrowthIncludes = lazy(() => import("./pages/products/AIReceptionistGrowthIncludes"));
+const AIReceptionistProIncludes = lazy(() => import("./pages/products/AIReceptionistProIncludes"));
 const CustomAIWorkflows = lazy(() => import("./pages/products/CustomAIWorkflows"));
 
 // Location pages
@@ -104,6 +107,9 @@ const App = () => (
             <Route path="/products/ai-receptionist/core/features" element={<AIReceptionistCoreFeatures />} />
             <Route path="/products/ai-receptionist/growth/features" element={<AIReceptionistGrowthFeatures />} />
             <Route path="/products/ai-receptionist/pro/features" element={<AIReceptionistProFeatures />} />
+            <Route path="/products/ai-receptionist/core/whats-included" element={<AIReceptionistCoreIncludes />} />
+            <Route path="/products/ai-receptionist/growth/whats-included" element={<AIReceptionistGrowthIncludes />} />
+            <Route path="/products/ai-receptionist/pro/whats-included" element={<AIReceptionistProIncludes />} />
             <Route path="/products/custom-ai-workflows" element={<Navigate to="/products/omnilogic" replace />} />
             <Route path="/products/custom-ai-workflows" element={<Navigate to="/products/omnilogic" replace />} />
             <Route path="/products/omnilogic" element={<CustomAIWorkflows />} />
