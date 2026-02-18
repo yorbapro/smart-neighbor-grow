@@ -97,43 +97,6 @@ const Pricing = () => {
           </div>
         </section>
 
-        {/* VALUE POSITIONING */}
-        <section className="py-16 md:py-24 bg-background">
-          <div className="container">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-10">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
-                  <DollarSign className="w-4 h-4" />
-                  The ROI Case
-                </div>
-                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-                  One Missed Job Can
-                  <span className="text-gradient"> Pay for This.</span>
-                </h2>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-                  If your average job is $500–$2,000+, capturing just one or two additional jobs per month can more than cover your AI Receptionist investment.
-                </p>
-              </div>
-
-              <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-                {[
-                  "Capture after-hours calls",
-                  "Eliminate voicemail drop-off",
-                  "Reduce staff interruptions",
-                  "Book more appointments automatically",
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-3 p-4 rounded-xl bg-card border border-border">
-                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Check className="w-4 h-4 text-primary" />
-                    </div>
-                    <span className="text-sm text-foreground font-medium">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* PLANS */}
         <section className="py-16 md:py-24 bg-secondary">
           <div className="container">
@@ -175,6 +138,7 @@ const Pricing = () => {
                     <h3 className="font-display text-2xl font-bold text-secondary-foreground mb-1">
                       {tier.name}
                     </h3>
+                    <p className="text-sm text-muted-foreground mb-4">{tier.tagline}</p>
 
                     {/* Monthly price — primary */}
                     <div className="mb-2">
@@ -256,6 +220,43 @@ const Pricing = () => {
               <p className="text-sm text-secondary-foreground/50">
                 Need a custom plan? <Link to="/contact" className="text-primary hover:underline">Contact us</Link> for tailored solutions.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* VALUE POSITIONING — ROI Case */}
+        <section className="py-16 md:py-24 bg-background">
+          <div className="container">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-10">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
+                  <DollarSign className="w-4 h-4" />
+                  The ROI Case
+                </div>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+                  One Missed Job Can
+                  <span className="text-gradient"> Pay for This.</span>
+                </h2>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+                  If your average job is $500–$2,000+, capturing just one or two additional jobs per month can more than cover your AI Receptionist investment.
+                </p>
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+                {[
+                  "Capture after-hours calls",
+                  "Eliminate voicemail drop-off",
+                  "Reduce staff interruptions",
+                  "Book more appointments automatically",
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-3 p-4 rounded-xl bg-card border border-border">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <Check className="w-4 h-4 text-primary" />
+                    </div>
+                    <span className="text-sm text-foreground font-medium">{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
