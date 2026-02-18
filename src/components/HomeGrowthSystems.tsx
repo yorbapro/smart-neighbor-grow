@@ -41,7 +41,7 @@ const systems = [
       "Revenue tracking & CRM automation",
     ],
     cta: "Explore Outbound AI",
-    href: "/products/ai-voice-agent",
+    href: "/products/ai-sales-agent",
     color: "accent" as const,
   },
   {

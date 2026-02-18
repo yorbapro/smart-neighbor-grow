@@ -261,8 +261,8 @@ const LeadLineProactiveFeatures = () => {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/products/ai-voice-agent">
-                  Back to AI Voice Agent
+                <Link to="/products/ai-sales-agent">
+                  Back to AI Sales Agent
                 </Link>
               </Button>
             </div>
@@ -337,7 +337,7 @@ const LeadLineProactiveFeatures = () => {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/products/ai-voice-agent">View Pricing</Link>
+                <Link to="/products/ai-sales-agent">View Pricing</Link>
               </Button>
             </div>
           </div>

@@ -95,8 +95,8 @@ const App = () => (
             <Route path="/products/launchpad-360" element={<LaunchPad360 />} />
             <Route path="/products/locallift" element={<LocalLift />} />
             <Route path="/products/ai-receptionist" element={<LeadLine />} />
-            <Route path="/products/ai-voice-agent" element={<LeadLineProactive />} />
-            <Route path="/products/ai-voice-agent/features" element={<LeadLineProactiveFeatures />} />
+            <Route path="/products/ai-sales-agent" element={<LeadLineProactive />} />
+            <Route path="/products/ai-sales-agent/features" element={<LeadLineProactiveFeatures />} />
             <Route path="/products/ai-receptionist/features" element={<LeadLineFeatures />} />
             <Route path="/products/custom-ai-workflows" element={<Navigate to="/products/omnilogic" replace />} />
             <Route path="/products/custom-ai-workflows" element={<Navigate to="/products/omnilogic" replace />} />
