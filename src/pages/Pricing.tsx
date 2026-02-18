@@ -4,13 +4,26 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
-import { Check, ArrowRight, DollarSign, Phone, Shield, Star, HelpCircle } from "lucide-react";
+import { Check, ArrowRight, DollarSign, Phone, Shield, Star, HelpCircle, Wrench } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { LEADLINE_TIERS } from "@/lib/products";
+
+const tierColors: Record<string, { badge: string; border: string; accent: string }> = {
+  Core: { badge: "bg-emerald-500", border: "border-border", accent: "text-emerald-500" },
+  Growth: { badge: "bg-blue-500", border: "border-primary", accent: "text-blue-500" },
+  Pro: { badge: "bg-red-500", border: "border-red-500", accent: "text-red-500" },
+};
+
+const tierPsychology: Record<string, string> = {
+  Core: "Serious but accessible — everything you need to stop missing calls today.",
+  Growth: "Operationally deeper — calendar, CRM, and automation working together.",
+  Pro: "Enterprise-grade infrastructure — multi-location, custom voice, priority optimization.",
+};
 
 const Pricing = () => {
   useEffect(() => {
@@ -18,7 +31,7 @@ const Pricing = () => {
 
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Simple AI Receptionist pricing. Less than the cost of one part-time employee. Available 24/7. No long-term contracts. Cancel anytime.");
+      metaDescription.setAttribute("content", "Simple AI Receptionist pricing. Core, Growth, and Pro plans with transparent setup fees. Less than the cost of one part-time employee. Available 24/7.");
     }
 
     window.scrollTo(0, 0);
@@ -44,38 +57,13 @@ const Pricing = () => {
     };
   }, []);
 
-  const standardFeatures = [
-    "24/7 call answering",
-    "Custom branded greeting",
-    "Appointment booking",
-    "Basic lead qualification",
-    "SMS & email confirmations",
-    "Call summaries",
-    "CRM integration (basic)",
-    "Monthly analytics report",
-    "Email support",
-  ];
-
-  const premiumFeatures = [
-    "Everything in Standard, plus:",
-    "Advanced multi-step lead qualification",
-    "Smart call routing & escalation",
-    "Multiple calendar integrations",
-    "CRM advanced automation",
-    "After-hours overflow rules",
-    "Custom voice tuning",
-    "Priority onboarding",
-    "Dedicated optimization support",
-    "Advanced analytics dashboard",
-  ];
-
   const faqs = [
     { q: "How long does setup take?", a: "Most businesses are live within a few days. We handle all training, configuration, and integration — no technical skills needed on your end." },
     { q: "Can it transfer live calls?", a: "Yes. You set the routing rules. Urgent calls, VIPs, or specific request types are instantly transferred to a live person." },
     { q: "Can it book into my calendar?", a: "Yes. BrightLaunchIQ integrates with popular calendar tools for real-time appointment booking with no double-bookings." },
     { q: "Does it sound human?", a: "Yes. The AI uses natural language processing to hold fluid, human-like conversations. Most callers assume they're speaking with a live receptionist." },
     { q: "What happens if I cancel?", a: "No penalties. You can cancel anytime and your service will continue through the end of your billing period." },
-    { q: "Can I upgrade later?", a: "Absolutely. Upgrade from Standard to Premium at any time. Changes take effect on your next billing cycle." },
+    { q: "What if I want to upgrade?", a: "Upgrade anytime! Any setup fee you've already paid is credited toward the new tier's setup fee. You only pay the difference." },
   ];
 
   return (
@@ -103,7 +91,7 @@ const Pricing = () => {
                 Less than the cost of one part-time employee. Available 24/7.
               </p>
               <p className="text-sm text-white/50">
-                No long-term contracts. Cancel anytime.
+                No long-term contracts. Cancel anytime. Setup fees credited on upgrades.
               </p>
             </div>
           </div>
@@ -153,55 +141,115 @@ const Pricing = () => {
               <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary-foreground mb-4">
                 Choose Your Plan
               </h2>
+              <p className="text-muted-foreground">
+                Every plan includes a one-time setup fee for custom configuration. Upgrading? Your previous setup fee is credited toward the new tier.
+              </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {/* STANDARD */}
-              <div className="rounded-2xl border border-secondary-foreground/10 bg-secondary-foreground/5 p-8 hover:border-primary/30 transition-colors">
-                <h3 className="font-display text-2xl font-bold text-secondary-foreground mb-2">Standard</h3>
-                <p className="text-sm text-secondary-foreground/60 mb-8">Best for small teams getting started.</p>
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {LEADLINE_TIERS.map((tier) => {
+                const colors = tierColors[tier.tierName] || tierColors.Core;
+                const psychology = tierPsychology[tier.tierName];
+                const isHighlighted = tier.highlighted;
 
-                <ul className="space-y-3 mb-8">
-                  {standardFeatures.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-secondary-foreground/80">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                return (
+                  <div
+                    key={tier.id}
+                    className={`relative rounded-2xl p-8 transition-colors ${
+                      isHighlighted
+                        ? `border-2 ${colors.border} bg-gradient-to-br from-primary/10 to-primary/5 shadow-lg`
+                        : `border ${colors.border} bg-secondary-foreground/5 hover:border-primary/30`
+                    }`}
+                  >
+                    {isHighlighted && (
+                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground text-xs font-bold rounded-full">
+                        Most Popular
+                      </div>
+                    )}
 
-                <Button variant="outline" size="lg" asChild className="w-full border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground/10">
-                  <Link to="/get-started">
-                    Start Standard Plan
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
-                </Button>
-              </div>
+                    {/* Tier badge */}
+                    <div className={`inline-block px-3 py-1 rounded-full text-white text-xs font-bold mb-4 ${colors.badge}`}>
+                      {tier.tierName}
+                    </div>
 
-              {/* PREMIUM */}
-              <div className="relative rounded-2xl border-2 border-primary bg-gradient-to-br from-primary/10 to-primary/5 p-8 shadow-lg">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground text-xs font-bold rounded-full">
-                  Most Popular
-                </div>
-                <h3 className="font-display text-2xl font-bold text-secondary-foreground mb-2">Premium</h3>
-                <p className="text-sm text-secondary-foreground/60 mb-8">Best for growing businesses with higher call volume.</p>
+                    <h3 className="font-display text-2xl font-bold text-secondary-foreground mb-1">
+                      {tier.name}
+                    </h3>
 
-                <ul className="space-y-3 mb-8">
-                  {premiumFeatures.map((feature, i) => (
-                    <li key={feature} className="flex items-start gap-2">
-                      <Check className={`w-4 h-4 flex-shrink-0 mt-0.5 ${i === 0 ? "text-accent" : "text-primary"}`} />
-                      <span className={`text-sm ${i === 0 ? "font-semibold text-primary" : "text-secondary-foreground/80"}`}>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                    {/* Monthly price — primary */}
+                    <div className="mb-2">
+                      <span className="text-4xl font-display font-bold text-secondary-foreground">
+                        ${tier.monthlyPrice.toLocaleString()}
+                      </span>
+                      <span className="text-secondary-foreground/60 text-sm">/month</span>
+                    </div>
 
-                <Button variant="hero" size="lg" asChild className="w-full">
-                  <Link to="/get-started">
-                    Start Premium Plan
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
-                </Button>
-              </div>
+                    {/* Setup fee — secondary */}
+                    {tier.setupFee && (
+                      <div className="mb-6 px-3 py-2 rounded-lg bg-secondary-foreground/5 border border-secondary-foreground/10">
+                        <p className="text-sm text-secondary-foreground/70">
+                          One-time setup: <span className="font-semibold text-secondary-foreground">${tier.setupFee.toLocaleString()}</span>
+                        </p>
+                      </div>
+                    )}
+
+                    {/* Monthly features */}
+                    <ul className="space-y-3 mb-6">
+                      {tier.features.map((feature, i) => (
+                        <li key={feature} className="flex items-start gap-2">
+                          <Check className={`w-4 h-4 flex-shrink-0 mt-0.5 ${i === 0 && tier.tierName !== "Core" ? colors.accent : "text-primary"}`} />
+                          <span className={`text-sm ${i === 0 && tier.tierName !== "Core" ? `font-semibold ${colors.accent}` : "text-secondary-foreground/80"}`}>
+                            {feature}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Setup justification */}
+                    {tier.setupFeatures && tier.setupFeatures.length > 0 && (
+                      <div className="mb-6 pt-4 border-t border-secondary-foreground/10">
+                        <div className="flex items-center gap-2 mb-3">
+                          <Wrench className="w-4 h-4 text-muted-foreground" />
+                          <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">What Setup Includes</span>
+                        </div>
+                        <ul className="space-y-2">
+                          {tier.setupFeatures.map((sf) => (
+                            <li key={sf} className="flex items-start gap-2">
+                              <Check className="w-3.5 h-3.5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                              <span className="text-xs text-secondary-foreground/60">{sf}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        {psychology && (
+                          <p className="mt-3 text-xs italic text-muted-foreground">{psychology}</p>
+                        )}
+                      </div>
+                    )}
+
+                    <Button
+                      variant={isHighlighted ? "hero" : "outline"}
+                      size="lg"
+                      asChild
+                      className={`w-full ${!isHighlighted ? "border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground/10" : ""}`}
+                    >
+                      <Link to="/get-started">
+                        {tier.cta}
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </Link>
+                    </Button>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Upgrade credit callout */}
+            <div className="max-w-3xl mx-auto mt-10 p-6 rounded-2xl bg-primary/5 border border-primary/20 text-center">
+              <p className="text-sm font-semibold text-primary mb-1">
+                Upgrade Anytime — Your Setup Fee Travels With You
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Already on Core and want to move to Growth? Your $1,500 setup fee is applied as a credit — you only pay the $1,000 difference. Moving from Growth to Pro? Your $2,500 is credited toward the $5,000 setup.
+              </p>
             </div>
 
             <div className="text-center mt-8">
@@ -230,7 +278,7 @@ const Pricing = () => {
                 </div>
                 <div className="p-8 rounded-2xl bg-primary/5 border border-primary/20">
                   <h3 className="font-display text-xl font-bold text-foreground mb-4">BrightLaunchIQ AI Receptionist</h3>
-                  <p className="text-3xl font-display font-bold text-primary mb-2">A fraction of the cost</p>
+                  <p className="text-3xl font-display font-bold text-primary mb-2">From $497/month</p>
                   <p className="text-sm text-muted-foreground">24/7 coverage. No overhead. No turnover. Predictable monthly rate.</p>
                 </div>
               </div>
