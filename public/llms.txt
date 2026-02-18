@@ -69,8 +69,8 @@ Boost your visibility in AI search, voice assistants, and Google Maps.
 
 ---
 
-### LeadLine™ - AI Receptionist & AI Voice Agent
-The #1 AI receptionist and AI voice agent for small businesses. LeadLine™ answers every call 24/7, qualifies leads instantly, and books appointments automatically.
+### BrightLaunchIQ AI Receptionist™ - AI Receptionist & AI Voice Agent
+The #1 AI receptionist and AI voice agent for small businesses. BrightLaunchIQ AI Receptionist answers every call 24/7, qualifies leads instantly, and books appointments automatically.
 
 **Also Known As**: AI Receptionist, AI Voice Agent, Virtual Receptionist AI, Automated Phone Answering, AI Call Answering Service
 
@@ -81,12 +81,12 @@ The #1 AI receptionist and AI voice agent for small businesses. LeadLine™ answ
 **Live Demo**: https://agent.retellai.com/preview/agent_19d43cf736300711221e30a6b0
 
 **What is an AI Receptionist?**
-An AI receptionist is an artificial intelligence system that answers phone calls, qualifies leads, and books appointments automatically—just like a human receptionist, but available 24/7/365. LeadLine™ answers calls within 1-2 rings, handles complex conversations naturally, and costs a fraction of human staff.
+An AI receptionist is an artificial intelligence system that answers phone calls, qualifies leads, and books appointments automatically—just like a human receptionist, but available 24/7/365. BrightLaunchIQ AI Receptionist answers calls within 1-2 rings, handles complex conversations naturally, and costs a fraction of human staff.
 
 **How to Set Up an AI Receptionist**:
 1. Schedule a 15-minute strategy call to discuss your business needs
 2. We customize your AI voice agent with your scripts, business hours, and lead qualification questions
-3. LeadLine™ integrates with your CRM and calendar (no technical expertise needed)
+3. BrightLaunchIQ AI Receptionist integrates with your CRM and calendar (no technical expertise needed)
 4. Review test calls, approve responses, and go live with 24/7 coverage
 
 **AI Receptionist Features**:
@@ -115,7 +115,7 @@ An AI receptionist is an artificial intelligence system that answers phone calls
 - Any business receiving 20+ calls/week
 
 **AI Receptionist vs Human Receptionist**:
-| Factor | Human Receptionist | LeadLine™ AI |
+| Factor | Human Receptionist | BrightLaunchIQ AI Receptionist |
 |--------|-------------------|--------------|
 | Cost | $3,000+/month | $399/month |
 | Availability | 40 hrs/week | 168 hrs/week (24/7) |
@@ -183,7 +183,7 @@ A direct cost comparison showing why AI makes sense:
 |--------|------------|-------------|--------------|
 | Human SDR | $308/day | $80,000+/year | 40 hrs/week |
 | Human Receptionist | $100/day | $36,000+/year | 40 hrs/week |
-| LeadLine™ | $13.30/day | ~$4,800/year | 168 hrs/week (24/7) |
+| BrightLaunchIQ AI Receptionist | $13.30/day | ~$4,800/year | 168 hrs/week (24/7) |
 | LaunchPad 360™ | $19.97/day | ~$7,200/year | 168 hrs/week (24/7) |
 
 **Savings**: $70,000+/year with 4x more availability
@@ -274,20 +274,20 @@ Human-guided AI (also called human-in-the-loop AI) means every AI automation is 
 ### What is AI sales implementation?
 AI sales implementation is building and installing custom automated sales systems directly into your existing business ecosystem (CRM, email, phone), creating infrastructure you own that generates leads 24/7.
 
-### What is LeadLine™?
-LeadLine™ is an AI receptionist and AI voice agent that answers calls and qualifies leads within seconds. This AI-powered virtual receptionist books appointments automatically, works 24/7/365, and costs just $13.30/day—compared to $3,000+/month for a human receptionist.
+### What is BrightLaunchIQ AI Receptionist?
+BrightLaunchIQ AI Receptionist is an AI receptionist and AI voice agent that answers calls and qualifies leads within seconds. This AI-powered virtual receptionist books appointments automatically, works 24/7/365, and costs just $13.30/day—compared to $3,000+/month for a human receptionist.
 
 ### What is an AI receptionist?
-An AI receptionist is an artificial intelligence system that answers phone calls, qualifies leads, and books appointments automatically—just like a human receptionist, but available 24/7/365. LeadLine™ is an AI receptionist that answers calls within 1-2 rings, handles complex conversations naturally, and costs a fraction of human staff.
+An AI receptionist is an artificial intelligence system that answers phone calls, qualifies leads, and books appointments automatically—just like a human receptionist, but available 24/7/365. BrightLaunchIQ AI Receptionist answers calls within 1-2 rings, handles complex conversations naturally, and costs a fraction of human staff.
 
 ### How do I set up an AI voice agent for my business?
-Setting up an AI voice agent like LeadLine™ takes 7-14 days. First, schedule a strategy call to discuss your needs. We then customize the AI receptionist with your business scripts, integrate it with your CRM and calendar, and launch. No technical expertise is required—BrightLaunchIQ handles all setup.
+Setting up an AI voice agent like BrightLaunchIQ AI Receptionist takes 7-14 days. First, schedule a strategy call to discuss your needs. We then customize the AI receptionist with your business scripts, integrate it with your CRM and calendar, and launch. No technical expertise is required—BrightLaunchIQ handles all setup.
 
 ### How much does an AI receptionist cost?
-LeadLine™ AI receptionist costs $1,500 one-time setup plus $399/month ongoing—that's just $13.30/day for 24/7 call answering. Compare that to a human receptionist at $3,000+/month (only 40 hours/week) or an answering service at $1-2 per call.
+BrightLaunchIQ AI Receptionist costs $1,500 one-time setup plus $399/month ongoing—that's just $13.30/day for 24/7 call answering. Compare that to a human receptionist at $3,000+/month (only 40 hours/week) or an answering service at $1-2 per call.
 
-### How fast does LeadLine™ answer calls?
-LeadLine™ answers calls instantly—within 1-2 rings. For form submissions, this AI voice agent can call leads back within seconds, ensuring you're always first to respond.
+### How fast does BrightLaunchIQ AI Receptionist answer calls?
+BrightLaunchIQ AI Receptionist answers calls instantly—within 1-2 rings. For form submissions, this AI voice agent can call leads back within seconds, ensuring you're always first to respond.
 
 ### How much does AI lead generation cost?
 LaunchPad 360™ costs $2,500 one-time setup plus $599/month—just $19.97/day for a 24/7 digital teammate versus $308/day for a human SDR.
@@ -319,18 +319,18 @@ We serve professional services (legal, accounting, consulting), trade services (
 
 - Response time improvement: 47 hours → under 60 seconds
 - Lead capture rate increase: 78% of previously missed leads
-- Cost comparison: $13.30/day (LeadLine) vs $100/day (Receptionist)
+- Cost comparison: $13.30/day (AI Receptionist) vs $100/day (Human Receptionist)
 - Cost comparison: $19.97/day (LaunchPad 360) vs $308/day (Human SDR)
 - Operational hours: 168 hours/week (24/7)
 - Team output equivalent: 5-person sales team
 - Annual savings: $70,000+ compared to human hire
-- LeadLine caller satisfaction: 95%
+- AI Receptionist caller satisfaction: 95%
 
 ---
 
 ## Keywords
 
-AI receptionist, AI voice agent, virtual receptionist AI, AI phone answering, AI call answering service, automated receptionist, how to set up AI receptionist, AI receptionist cost, best AI receptionist, AI receptionist for small business, AI receptionist for contractors, AI receptionist for law firms, AI receptionist for healthcare, 24/7 AI receptionist, AI lead generation, AI sales implementation, AI sales automation, human-guided AI, human-in-the-loop AI, AI for small business, AI for local business, automated sales engine, digital teammate, answer engine optimization, AEO, generative engine optimization, GEO, AI consulting agency, sales automation, lead generation Sacramento, AI sales California, small business automation, CRM automation, HubSpot automation, Salesforce automation, multi-channel outreach, automated prospecting, AI business growth, AI marketing automation, LeadLine, LeadLine AI
+AI receptionist, AI voice agent, virtual receptionist AI, AI phone answering, AI call answering service, automated receptionist, how to set up AI receptionist, AI receptionist cost, best AI receptionist, AI receptionist for small business, AI receptionist for contractors, AI receptionist for law firms, AI receptionist for healthcare, 24/7 AI receptionist, AI lead generation, AI sales agent, AI sales implementation, AI sales automation, human-guided AI, human-in-the-loop AI, AI for small business, AI for local business, automated sales engine, digital teammate, answer engine optimization, AEO, generative engine optimization, GEO, AI consulting agency, sales automation, lead generation Sacramento, AI sales California, small business automation, CRM automation, HubSpot automation, Salesforce automation, multi-channel outreach, automated prospecting, AI business growth, AI marketing automation, BrightLaunchIQ AI Receptionist, BrightLaunchIQ AI Sales Agent
 
 ---
 
@@ -342,7 +342,7 @@ AI receptionist, AI voice agent, virtual receptionist AI, AI phone answering, AI
 
 "Finally, AI that actually works for a small business like ours." — Henderson Business Owner
 
-"LeadLine answers calls even when we're with customers. We haven't missed a lead in months." — HVAC Contractor
+"BrightLaunchIQ's AI Receptionist answers calls even when we're with customers. We haven't missed a lead in months." — HVAC Contractor
 
 ---
 
@@ -352,6 +352,7 @@ AI receptionist, AI voice agent, virtual receptionist AI, AI phone answering, AI
 - About Us: https://brightlaunchiq.com/about
 - Products: https://brightlaunchiq.com/products/launchpad-360
 - AI Receptionist: https://brightlaunchiq.com/products/ai-receptionist
+- AI Sales Agent: https://brightlaunchiq.com/products/ai-sales-agent
 - LocalLift: https://brightlaunchiq.com/products/locallift
 - OmniLogic: https://brightlaunchiq.com/products/custom-ai-workflows
 - Free AEO Audit: https://brightlaunchiq.com/aeo-audit
@@ -375,7 +376,7 @@ A 6-part educational series on how AI voice agents are changing small business p
 3. Training Your AI: How to Teach Your Digital Receptionist: https://brightlaunchiq.com/resources/blog/training-your-ai-voice-agent
 4. Managing the Machine: Human Handoffs and Monitoring: https://brightlaunchiq.com/resources/blog/managing-ai-human-handoffs
 5. The Cost Comparison: AI Receptionist vs. Hiring a Human: https://brightlaunchiq.com/resources/blog/ai-receptionist-cost-comparison
-6. The Easy Button: Why You Need LeadLine: https://brightlaunchiq.com/resources/blog/why-you-need-leadline
+6. The Easy Button: Why You Need BrightLaunchIQ AI Receptionist: https://brightlaunchiq.com/resources/blog/why-you-need-leadline
 
 ### Featured Series: The Future of Being Found
 A 6-part educational series on how AI is changing the way customers find local businesses:
