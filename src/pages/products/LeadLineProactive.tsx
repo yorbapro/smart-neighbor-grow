@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import TrustBadges from "@/components/TrustBadges";
 import { Button } from "@/components/ui/button";
-import { PROACTIVE_TIERS } from "@/lib/products";
+
 import {
   Megaphone,
   Check,
@@ -181,7 +181,7 @@ const LeadLineProactive = () => {
                  </Link>
                </Button>
               <Button variant="heroOutline" size="lg" asChild>
-                <Link to="/pricing">See Pricing</Link>
+                <Link to="/contact">Contact Us for Pricing</Link>
               </Button>
             </div>
           </div>
@@ -295,77 +295,33 @@ const LeadLineProactive = () => {
         </div>
       </section>
 
-      {/* Pricing Tiers */}
+      {/* Get Started */}
       <section className="py-16 md:py-24 bg-muted/30">
         <div className="container">
-          <div className="text-center max-w-3xl mx-auto mb-14">
+          <div className="text-center max-w-3xl mx-auto">
             <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
-              Outbound Pricing
+              Get Started
             </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Choose Your Outbound Engine
+              Ready to Scale Outbound Revenue?
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Scale outbound revenue without hiring SDRs or sales reps.
+            <p className="text-lg text-muted-foreground mb-8">
+              Custom pricing based on your outbound volume, campaign goals, and business scale. Let's build the right plan for you.
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {PROACTIVE_TIERS.map((tier) => (
-              <div
-                key={tier.id}
-                className={`relative rounded-2xl border overflow-hidden transition-all duration-300 ${
-                  tier.highlighted
-                    ? "border-primary bg-gradient-to-br from-primary/5 to-primary/2 shadow-lg scale-105"
-                    : "border-border bg-card hover:shadow-card-hover"
-                }`}
-              >
-                {tier.highlighted && (
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent" />
-                )}
-
-                <div className="p-6">
-                  {tier.highlighted && (
-                    <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold mb-4">
-                      Most Popular
-                    </div>
-                  )}
-
-                  <h3 className="font-display text-2xl font-bold text-foreground mb-2">
-                    {tier.tierName}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-6">{tier.tagline}</p>
-
-                  <div className="border-t border-border pt-6 mb-6">
-                    <div className="text-4xl font-display font-bold text-foreground mb-1">
-                      ${tier.monthlyPrice.toLocaleString()}
-                    </div>
-                    <div className="text-sm text-muted-foreground">/month</div>
-                  </div>
-
-                  <ul className="space-y-3 mb-6">
-                    {tier.features.map((feature: string) => (
-                      <li key={feature} className="flex items-start gap-2">
-                        <Check className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
-                        <span className="text-sm text-foreground">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="space-y-1 text-xs text-muted-foreground mb-8 pt-4 border-t border-border">
-                    <div>{tier.usageMinutes}</div>
-                    <div>{tier.usageCalls}</div>
-                  </div>
-
-                   <Button className="w-full" variant={tier.highlighted ? "hero" : "outline"} asChild>
-                     <Link to={`/get-started?product=${tier.id}`}>
-                       {tier.cta}
-                       <ArrowRight className="ml-2 w-4 h-4" />
-                     </Link>
-                   </Button>
-                </div>
-              </div>
-            ))}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="hero" size="lg" asChild>
+                <Link to="/contact">
+                  Contact Us for Pricing
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <a href="tel:1-877-879-5552">
+                  <Phone className="mr-2 w-5 h-5" />
+                  Talk to an Expert
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

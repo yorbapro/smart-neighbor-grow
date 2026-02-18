@@ -59,7 +59,7 @@ const DailyTeammateMath = () => {
             <div className="absolute top-4 right-4">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold">
                 <Calculator className="w-3 h-3" />
-                15x Savings
+                Massive Savings
               </span>
             </div>
 
@@ -77,11 +77,11 @@ const DailyTeammateMath = () => {
               <div className="space-y-4">
                 <div className="flex justify-between items-baseline border-b border-primary/20 pb-3">
                   <span className="text-sm text-secondary-foreground/70">Annual Cost</span>
-                  <span className="font-display text-2xl font-bold text-primary">$9,688</span>
+                  <span className="font-display text-2xl font-bold text-primary">Fraction of a hire</span>
                 </div>
                 <div className="flex justify-between items-baseline border-b border-primary/20 pb-3">
-                  <span className="text-sm text-secondary-foreground/70">Daily Cost</span>
-                  <span className="font-display text-xl font-semibold text-primary">$20/day</span>
+                  <span className="text-sm text-secondary-foreground/70">ROI</span>
+                  <span className="font-display text-xl font-semibold text-primary">Immediate</span>
                 </div>
                 <div className="flex justify-between items-baseline border-b border-primary/20 pb-3">
                   <span className="text-sm text-secondary-foreground/70">Availability</span>

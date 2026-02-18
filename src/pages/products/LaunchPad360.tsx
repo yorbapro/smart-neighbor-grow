@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import { Rocket, Check, ArrowRight, Zap, Users, Target, Phone, MessageSquare, Linkedin, Mail, BarChart3, Brain, Bell, LineChart } from "lucide-react";
-import { LAUNCHPAD_TIERS } from "@/lib/products";
+
 
 const LaunchPad360 = () => {
   useEffect(() => {
@@ -241,74 +241,30 @@ const LaunchPad360 = () => {
         </div>
       </section>
 
-      {/* Pricing Tiers */}
+      {/* Get Started */}
       <section className="py-20 md:py-28 bg-foreground text-background">
         <div className="container">
-          <div className="max-w-4xl mx-auto mb-16 text-center">
+          <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-              Three Tiers to Scale With You
+              Custom-Built for Your Business
             </h2>
-            <p className="text-lg text-background/80">
-              Start with Growth or scale to Dominate. Each tier is built for a different stage of your business.
+            <p className="text-lg text-background/80 mb-8">
+              Every LaunchPad 360™ deployment is tailored to your business scale, industry, and growth goals. Talk to our team to build your custom plan.
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {LAUNCHPAD_TIERS.map((tier) => (
-              <div key={tier.id} className={`relative rounded-2xl border-2 overflow-hidden transition-all duration-300 ${
-                tier.highlighted
-                  ? "border-primary bg-gradient-to-br from-primary/10 to-primary/5 shadow-2xl md:scale-105"
-                  : "border-white/10 bg-background/5 backdrop-blur-sm"
-              }`}>
-                {tier.highlighted && (
-                  <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary to-accent"></div>
-                )}
-                
-                <div className="p-8">
-                  {tier.highlighted && (
-                    <div className="inline-block px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-bold mb-4">
-                      Best Value
-                    </div>
-                  )}
-                  
-                  <h3 className="font-display text-2xl font-bold text-foreground mb-2">
-                    {tier.tierName}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-6">{tier.tagline}</p>
-                  
-                  <div className="border-t border-white/10 pt-6 mb-6">
-                    <div className="text-4xl font-display font-bold text-foreground mb-1">
-                      ${tier.monthlyPrice}
-                    </div>
-                    <div className="text-sm text-muted-foreground">/month</div>
-                  </div>
-                  
-                  <ul className="space-y-3 mb-6">
-                    {tier.features.map((feature: string) => (
-                      <li key={feature} className="flex items-start gap-2">
-                        <Check className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
-                        <span className="text-sm text-foreground">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="mb-8 p-4 rounded-lg bg-background/20 space-y-2">
-                    <h4 className="font-semibold text-foreground text-sm">Includes:</h4>
-                    <ul className="space-y-1 text-xs text-muted-foreground">
-                      <li>{tier.usageMinutes}</li>
-                      <li>{tier.usageCalls}</li>
-                    </ul>
-                  </div>
-                  
-                  <Button className="w-full" variant={tier.highlighted ? "hero" : "outline"} asChild>
-                    <Link to="/contact">
-                      {tier.cta}
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            ))}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="hero" size="lg" asChild>
+                <Link to="/contact">
+                  Apply for LaunchPad 360
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <a href="tel:1-877-879-5552">
+                  <Phone className="mr-2 w-5 h-5" />
+                  Talk to an Expert
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
