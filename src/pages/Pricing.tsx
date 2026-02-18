@@ -113,20 +113,16 @@ const Pricing = () => {
               {LEADLINE_TIERS.map((tier) => {
                 const colors = tierColors[tier.tierName] || tierColors.Core;
                 const psychology = tierPsychology[tier.tierName];
-                const isHighlighted = tier.highlighted;
+                const isCore = tier.tierName === "Core";
 
                 return (
                   <div
                     key={tier.id}
-                    className={`relative rounded-2xl p-8 transition-colors ${
-                      isHighlighted
-                        ? `border-2 ${colors.border} bg-gradient-to-br from-primary/10 to-primary/5 shadow-lg`
-                        : `border ${colors.border} bg-secondary-foreground/5 hover:border-primary/30`
-                    }`}
+                    className={`relative rounded-2xl p-8 transition-colors border ${colors.border} bg-secondary-foreground/5 hover:border-primary/30`}
                   >
-                    {isHighlighted && (
-                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground text-xs font-bold rounded-full">
-                        Most Popular
+                    {isCore && (
+                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-emerald-500 text-white text-xs font-bold rounded-full whitespace-nowrap">
+                        Recommended Starting Point
                       </div>
                     )}
 
@@ -135,10 +131,11 @@ const Pricing = () => {
                       {tier.tierName}
                     </div>
 
-                    <h3 className="font-display text-2xl font-bold text-secondary-foreground mb-1">
-                      {tier.name}
+                    {/* Tier name — primary */}
+                    <h3 className={`font-display text-3xl md:text-4xl font-bold mb-2 ${colors.accent}`}>
+                      {tier.tierName}
                     </h3>
-                    <p className="text-sm text-muted-foreground mb-4">{tier.tagline}</p>
+                    <p className="text-sm text-muted-foreground mb-5 leading-relaxed">{tier.tagline}</p>
 
                     {/* Monthly price — primary */}
                     <div className="mb-2">
@@ -190,11 +187,17 @@ const Pricing = () => {
                       </div>
                     )}
 
+                    {/* Usage info */}
+                    <div className="mb-6 pt-4 border-t border-secondary-foreground/10">
+                      <p className="text-sm font-semibold text-secondary-foreground/70">{tier.usageMinutes}</p>
+                      <p className="text-xs text-muted-foreground">{tier.usageCalls}</p>
+                    </div>
+
                     <Button
-                      variant={isHighlighted ? "hero" : "outline"}
+                      variant={isCore ? "hero" : "outline"}
                       size="lg"
                       asChild
-                      className={`w-full ${!isHighlighted ? "border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground/10" : ""}`}
+                      className={`w-full ${!isCore ? "border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground/10" : ""}`}
                     >
                       <Link to="/get-started">
                         {tier.cta}

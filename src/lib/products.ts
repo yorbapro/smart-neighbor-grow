@@ -28,7 +28,7 @@ export const LEADLINE_TIERS: ProductConfig[] = [
     family: "leadline",
     name: "AI Receptionist",
     tierName: "Core",
-    tagline: "Smart Call Answering for Growing Businesses",
+    tagline: "Your AI receptionist that answers, qualifies, and routes — so you never miss a lead",
     monthlyPrice: 497,
     setupFee: 1500,
     setupFeatures: [
@@ -53,7 +53,7 @@ export const LEADLINE_TIERS: ProductConfig[] = [
     family: "leadline",
     name: "AI Receptionist",
     tierName: "Growth",
-    tagline: "Automated Scheduling & CRM-Connected Calls",
+    tagline: "An AI receptionist that books appointments, syncs your CRM, and automates follow-up",
     monthlyPrice: 997,
     setupFee: 2500,
     setupFeatures: [
@@ -65,7 +65,7 @@ export const LEADLINE_TIERS: ProductConfig[] = [
     ],
     usageMinutes: "Up to 1,500 minutes/month",
     usageCalls: "Handles up to 750 calls/month",
-    highlighted: true,
+    highlighted: false,
     cta: "Scale My Calls",
     features: [
       "Everything in Core, plus:",
@@ -79,7 +79,7 @@ export const LEADLINE_TIERS: ProductConfig[] = [
     family: "leadline",
     name: "AI Receptionist",
     tierName: "Pro",
-    tagline: "Enterprise-Grade AI Phone Infrastructure",
+    tagline: "A fully custom AI receptionist with multi-location routing, advanced analytics, and priority support",
     monthlyPrice: 1497,
     setupFee: 5000,
     setupFeatures: [
