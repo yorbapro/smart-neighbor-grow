@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import { Check, ArrowRight, DollarSign, Users, Megaphone, Globe, Wrench, Zap } from "lucide-react";
-import { LEADLINE_TIERS, PROACTIVE_TIERS, LAUNCHPAD_TIERS } from "@/lib/products";
+import { LEADLINE_TIERS } from "@/lib/products";
 
 const Pricing = () => {
   useEffect(() => {
@@ -186,19 +186,31 @@ const Pricing = () => {
         {/* LeadLine AI Proactive */}
         <section className="py-20 md:py-28">
           <div className="container">
-            <div className="max-w-4xl mx-auto mb-16 text-center">
+            <div className="max-w-4xl mx-auto text-center">
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
                 LeadLine AI Proactive
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-muted-foreground mb-6">
                 Automated Outbound Revenue Engine — Follow-Up & Sales Automation
               </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {PROACTIVE_TIERS.map((tier) => (
-                <PricingCard key={tier.id} tier={tier} isProactive={true} />
-              ))}
+              
+              <div className="max-w-2xl mx-auto p-8 rounded-2xl bg-card border border-border">
+                <ul className="space-y-3 mb-8 text-left">
+                  {["Cold & warm outbound campaigns", "Missed-call callbacks", "Sales conversation engine", "Objection handling AI", "Revenue tracking & CRM automation", "Lead reactivation campaigns"].map((feature) => (
+                    <li key={feature} className="flex items-start gap-2">
+                      <Check className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
+                      <span className="text-sm text-foreground">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-muted-foreground mb-6">Custom pricing based on your outbound volume and goals.</p>
+                <Button variant="hero" size="lg" asChild className="w-full">
+                  <Link to="/contact">
+                    Contact Us for Pricing
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </section>
@@ -206,7 +218,7 @@ const Pricing = () => {
         {/* LaunchPad 360 */}
         <section className="py-20 md:py-28 bg-foreground text-background">
           <div className="container">
-            <div className="max-w-4xl mx-auto mb-16 text-center">
+            <div className="max-w-4xl mx-auto text-center">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary mb-4">
                 <Zap className="w-4 h-4" />
                 <span className="font-semibold text-sm">Flagship System</span>
@@ -214,64 +226,27 @@ const Pricing = () => {
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
                 LaunchPad 360™
               </h2>
-              <p className="text-lg text-background/80">
+              <p className="text-lg text-background/80 mb-6">
                 The Complete AI-Powered Growth Infrastructure
               </p>
-            </div>
 
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {LAUNCHPAD_TIERS.map((tier) => (
-                <div key={tier.id} className={`relative rounded-2xl border-2 overflow-hidden transition-all duration-300 ${
-                  tier.highlighted
-                    ? "border-primary bg-gradient-to-br from-primary/10 to-primary/5 shadow-2xl scale-105"
-                    : "border-white/10 bg-background/5 backdrop-blur-sm"
-                }`}>
-                  {tier.highlighted && (
-                    <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary to-accent"></div>
-                  )}
-                  
-                  <div className="p-8">
-                    {tier.highlighted && (
-                      <div className="inline-block px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-bold mb-4">
-                        Most Popular
-                      </div>
-                    )}
-                    
-                    <h3 className="font-display text-2xl font-bold text-foreground mb-2">
-                      {tier.tierName}
-                    </h3>
-                    <p className="text-sm text-muted-foreground mb-6">{tier.tagline}</p>
-                    
-                    <div className="border-t border-white/10 pt-6 mb-6">
-                      <div className="text-4xl font-display font-bold text-foreground mb-1">
-                        ${tier.monthlyPrice}
-                      </div>
-                      <div className="text-sm text-muted-foreground">/month</div>
-                    </div>
-                    
-                    <ul className="space-y-3 mb-6">
-                      {tier.features.map((feature: string) => (
-                        <li key={feature} className="flex items-start gap-2">
-                          <Check className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
-                          <span className="text-sm text-foreground">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div className="space-y-1 text-xs text-muted-foreground mb-8 pt-4 border-t border-white/10">
-                      <div>{tier.usageMinutes}</div>
-                      <div>{tier.usageCalls}</div>
-                    </div>
-                    
-                    <Button className="w-full" variant={tier.highlighted ? "hero" : "outline"} asChild>
-                      <Link to={tier.isApplication ? "/contact" : "/get-started"}>
-                        {tier.cta}
-                        <ArrowRight className="ml-2 w-4 h-4" />
-                      </Link>
-                    </Button>
-                  </div>
-                </div>
-              ))}
+              <div className="max-w-2xl mx-auto p-8 rounded-2xl border-2 border-white/10 bg-background/5 backdrop-blur-sm">
+                <ul className="space-y-3 mb-8 text-left">
+                  {["AI inbound call handling", "AI outbound sales engine", "SEO & authority building", "Conversion-optimized websites", "CRM & automation infrastructure", "Revenue reporting dashboards"].map((feature) => (
+                    <li key={feature} className="flex items-start gap-2">
+                      <Check className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
+                      <span className="text-sm text-foreground">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-muted-foreground mb-6">Custom pricing tailored to your business scale and goals.</p>
+                <Button variant="hero" size="lg" asChild className="w-full">
+                  <Link to="/contact">
+                    Apply for LaunchPad 360
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </section>

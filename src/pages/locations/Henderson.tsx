@@ -55,7 +55,7 @@ const Henderson = () => {
         },
         {
           question: "How much does AI sales automation cost for Henderson businesses?",
-          answer: "BrightLaunchIQ costs $1,500 one-time setup plus $500/month—that is just $16.60/day. In Henderson's booming real estate and healthcare markets, capturing one additional client typically covers months of service. Most Nevada clients see positive ROI within 30 days."
+          answer: "BrightLaunchIQ is a fraction of the cost of a single hire. In Henderson's booming real estate and healthcare markets, capturing one additional client typically covers months of service. Most Nevada clients see positive ROI within 30 days. Contact us for custom pricing."
         },
         {
           question: "Do you have a local office in Henderson?",

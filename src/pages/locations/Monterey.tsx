@@ -55,7 +55,7 @@ const Monterey = () => {
         },
         {
           question: "How does AI sales automation benefit Monterey tourism businesses?",
-          answer: "In tourism, speed wins. When a traveler inquires about your hotel or tour, our AI responds in under 60 seconds with personalized information. At $500/month, we cost less than one no-show booking while working 24/7 to capture every inquiry—even during peak season when your staff is overwhelmed."
+          answer: "In tourism, speed wins. When a traveler inquires about your hotel or tour, our AI responds in under 60 seconds with personalized information. We cost less than one no-show booking while working 24/7 to capture every inquiry—even during peak season when your staff is overwhelmed. Contact us for custom pricing."
         },
         {
           question: "Do you have a local office in Monterey?",

@@ -29,8 +29,8 @@ const Comparison = () => {
     {
       category: "Cost & Efficiency",
       features: [
-        { name: "Monthly Cost", ai: "$500/month", traditional: "$6,000+/month (SDR salary)", winner: "ai" },
-        { name: "Daily Cost", ai: "$16.60/day", traditional: "$220+/day", winner: "ai" },
+        { name: "Monthly Cost", ai: "Fraction of a hire", traditional: "$6,000+/month (SDR salary)", winner: "ai" },
+        { name: "Daily Cost", ai: "Pennies on the dollar", traditional: "$220+/day", winner: "ai" },
         { name: "Leads Processed", ai: "Unlimited", traditional: "50-100/day max", winner: "ai" },
         { name: "Setup Time", ai: "30 days", traditional: "3-6 months to hire & train", winner: "ai" },
         { name: "Scaling Cost", ai: "Minimal increase", traditional: "Linear (hire more people)", winner: "ai" },

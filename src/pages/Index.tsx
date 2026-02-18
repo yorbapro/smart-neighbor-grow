@@ -92,7 +92,7 @@ const Index = () => {
       "url": "https://brightlaunchiq.com",
       "telephone": "1-877-879-5552",
       "email": "success@BrightLaunchIQ.com",
-      "priceRange": "$497-$8,500+/month",
+      "priceRange": "Starting at $497/month",
       "areaServed": ["Sacramento", "Stockton", "Fresno", "Bakersfield", "Monterey", "Henderson", "Culver City"],
       "serviceType": [
         "AI Receptionist",
