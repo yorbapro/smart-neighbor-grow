@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Phone, CheckCircle } from "lucide-react";
 
 const businessOwnerPhoto = "/images/hero-business-owner.jpg";
 
@@ -33,40 +33,44 @@ const Hero = () => {
           <div>
             <div className="inline-flex items-center gap-3 mb-8 animate-fade-in">
               <span className="uppercase text-xs font-bold tracking-[0.25em] text-primary">
-                AI Revenue Infrastructure
+                AI Receptionist
               </span>
               <span className="w-12 h-[2px] bg-gradient-hero" />
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-8 animate-slide-up">
-              We Build AI-Powered Revenue Systems
+              Never Miss Another
               <br />
-              <span className="text-gradient">for Local & Service Businesses.</span>
+              <span className="text-gradient">Customer Call.</span>
             </h1>
 
             <p className="text-lg md:text-xl text-white/70 max-w-2xl mb-6 leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
-              Capture every lead. Convert every opportunity. Scale without hiring more staff.
+              Your 24/7 AI Receptionist answers, qualifies, and books callers automatically — so every opportunity turns into revenue.
             </p>
 
-            <p className="text-base text-white/50 max-w-xl mb-4 animate-slide-up" style={{ animationDelay: "0.15s" }}>
-              BrightLaunchIQ integrates AI receptionists, AI sales agents, SEO authority, and conversion infrastructure into one seamless growth system. No more missed calls. No more unworked leads. No more marketing chaos.
-            </p>
-
-            <p className="text-sm text-primary/80 max-w-xl mb-10 animate-slide-up flex items-center gap-2" style={{ animationDelay: "0.18s" }}>
-              <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block" />
-              Secure. Compliant. Built with enterprise-grade infrastructure.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-start gap-4 mb-12 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+            <div className="flex flex-col sm:flex-row items-start gap-4 mb-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
               <Button variant="hero" size="xl" asChild className="group">
                 <Link to="/get-started">
-                  Book a Strategy Call
+                  Get Started
                   <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
               <Button variant="heroOutline" size="xl" asChild>
-                <Link to="/pricing">Explore Our Growth Systems</Link>
+                <Link to="#how-it-works">See How It Works</Link>
               </Button>
+            </div>
+
+            <p className="text-sm text-white/50 mb-8 animate-slide-up" style={{ animationDelay: "0.25s" }}>
+              No contracts. Fast setup. Works with your existing number.
+            </p>
+
+            <div className="flex flex-wrap gap-6 animate-slide-up" style={{ animationDelay: "0.3s" }}>
+              {["Trusted by 100+ businesses", "Live in days, not months", "Enterprise-grade security"].map((item) => (
+                <div key={item} className="flex items-center gap-2 text-white/60">
+                  <CheckCircle className="w-4 h-4 text-primary" />
+                  <span className="text-sm">{item}</span>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -75,7 +79,7 @@ const Hero = () => {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img
                 src={businessOwnerPhoto}
-                alt="Business owner reviewing AI-powered revenue dashboard"
+                alt="Business owner using AI receptionist to capture every customer call"
                 className="w-full h-auto object-cover"
                 loading="eager"
                 fetchPriority="high"

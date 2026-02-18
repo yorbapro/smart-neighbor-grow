@@ -2,20 +2,22 @@ import { useEffect } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import HomeProblem from "@/components/HomeProblem";
-import HomeGrowthSystems from "@/components/HomeGrowthSystems";
-import HomeCostSavings from "@/components/HomeCostSavings";
-import Testimonials from "@/components/Testimonials";
-import SecurityPillar from "@/components/SecurityPillar";
-import FAQ from "@/components/FAQ";
-import CTA from "@/components/CTA";
+import HomeSolution from "@/components/HomeSolution";
+import HomeHowItWorks from "@/components/HomeHowItWorks";
+import HomeComparison from "@/components/HomeComparison";
+import HomeIdealFor from "@/components/HomeIdealFor";
+import HomeResults from "@/components/HomeResults";
+import HomePricingPosition from "@/components/HomePricingPosition";
+import HomeFAQ from "@/components/HomeFAQ";
+import HomeCTA from "@/components/HomeCTA";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "BrightLaunchIQ | AI-Powered Revenue Infrastructure for Local Businesses";
+    document.title = "BrightLaunchIQ | 24/7 AI Receptionist for Small Businesses";
 
     const metaDescription = document.querySelector('meta[name="description"]');
-    const descriptionContent = "BrightLaunchIQ builds AI-powered revenue systems for local and service businesses. AI receptionists, AI sales agents, SEO authority, and conversion infrastructure — integrated into one growth system.";
+    const descriptionContent = "Never miss another customer call. BrightLaunchIQ's 24/7 AI Receptionist answers, qualifies, and books callers automatically — so every opportunity turns into revenue. Fast setup, no contracts.";
     if (metaDescription) {
       metaDescription.setAttribute("content", descriptionContent);
     } else {
@@ -26,7 +28,7 @@ const Index = () => {
     }
 
     const existingKeywords = document.querySelector('meta[name="keywords"]');
-    const keywordsContent = "AI revenue infrastructure, AI receptionist, AI sales agent, AI lead generation, AI for local business, small business automation, AI phone answering, virtual receptionist AI, AI sales automation, answer engine optimization, AEO, AI growth system";
+    const keywordsContent = "AI receptionist, AI answering service, 24/7 AI receptionist, virtual receptionist, AI phone answering, small business AI receptionist, AI call answering, missed call prevention, automated receptionist, business phone answering service";
     if (existingKeywords) {
       existingKeywords.setAttribute("content", keywordsContent);
     } else {
@@ -50,7 +52,7 @@ const Index = () => {
       "@id": "https://brightlaunchiq.com/#organization",
       "name": "BrightLaunchIQ",
       "alternateName": "Bright Launch IQ",
-      "description": "BrightLaunchIQ builds AI-powered revenue infrastructure for local and service businesses. AI receptionists, AI sales agents, SEO authority, and conversion infrastructure integrated into one seamless growth system.",
+      "description": "BrightLaunchIQ provides a 24/7 AI Receptionist that answers calls, qualifies leads, and books appointments automatically for small and service businesses.",
       "url": "https://brightlaunchiq.com",
       "logo": "https://brightlaunchiq.com/logo.png",
       "telephone": "1-877-879-5552",
@@ -65,14 +67,13 @@ const Index = () => {
         "name": "United States"
       },
       "knowsAbout": [
-        "AI Revenue Infrastructure",
         "AI Receptionist",
-        "AI Sales Agent",
-        "Answer Engine Optimization",
-        "AI for Local Business",
-        "Revenue Automation"
+        "AI Answering Service",
+        "Virtual Receptionist",
+        "AI Phone Answering",
+        "Small Business Automation"
       ],
-      "slogan": "AI-Powered Revenue Infrastructure for Local Businesses",
+      "slogan": "Never Miss Another Customer Call",
       "sameAs": [
         "https://www.linkedin.com/company/brightlaunchiq"
       ]
@@ -88,45 +89,28 @@ const Index = () => {
       "@type": "LocalBusiness",
       "@id": "https://brightlaunchiq.com/#localbusiness",
       "name": "BrightLaunchIQ",
-      "description": "AI-powered revenue infrastructure for local and service businesses. AI receptionists, outbound sales agents, SEO authority, and conversion systems integrated into one growth engine.",
+      "description": "24/7 AI Receptionist for small and service businesses. Answers calls, qualifies leads, and books appointments automatically.",
       "url": "https://brightlaunchiq.com",
       "telephone": "1-877-879-5552",
       "email": "success@BrightLaunchIQ.com",
-      "priceRange": "Starting at $497/month",
-      "areaServed": ["Sacramento", "Stockton", "Fresno", "Bakersfield", "Monterey", "Henderson", "Culver City"],
+      "priceRange": "Contact for pricing",
+      "areaServed": "United States",
       "serviceType": [
         "AI Receptionist",
-        "AI Sales Automation",
-        "AI Outbound Sales",
-        "Answer Engine Optimization",
-        "Revenue Infrastructure"
+        "AI Answering Service",
+        "Virtual Receptionist",
+        "Automated Call Handling"
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "AI Revenue Infrastructure",
+        "name": "AI Receptionist",
         "itemListElement": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "LeadLine AI",
-              "description": "24/7 AI receptionist that answers every call, qualifies leads, and books appointments automatically."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "LeadLine AI Proactive",
-              "description": "AI-powered outbound sales engine that follows up, reactivates, and drives revenue automatically."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "LaunchPad 360™",
-              "description": "Complete AI-powered growth engine — inbound, outbound, SEO, funnels, and automation integrated into one system."
+              "name": "BrightLaunchIQ AI Receptionist",
+              "description": "24/7 AI receptionist that answers every call, qualifies leads, captures caller information, and books appointments automatically."
             }
           }
         ]
@@ -144,42 +128,42 @@ const Index = () => {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is AI revenue infrastructure?",
+          "name": "Will customers know it's AI?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "AI revenue infrastructure is a complete system that captures, qualifies, books, follows up, and converts leads automatically using artificial intelligence. BrightLaunchIQ integrates AI receptionists, AI sales agents, SEO authority, and conversion funnels into one seamless growth system."
+            "text": "Most callers don't notice. The AI uses natural, conversational language trained on your business. It sounds professional and human-like, handling conversations just like a real front desk."
           }
         },
         {
           "@type": "Question",
-          "name": "What is an AI receptionist?",
+          "name": "Can the AI receptionist transfer calls?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "An AI receptionist is an artificial intelligence system that answers phone calls, qualifies leads, and books appointments automatically—just like a human receptionist, but available 24/7/365. LeadLine AI answers calls within 1-2 rings, handles complex conversations naturally, and costs less than hiring staff."
+            "text": "Yes. The AI can transfer urgent or high-priority calls to you or your team in real time. You set the routing rules for which call types get transferred."
           }
         },
         {
           "@type": "Question",
-          "name": "How much does it cost compared to hiring staff?",
+          "name": "Does it integrate with my calendar?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Hiring a receptionist costs $45,000-$65,000/year. An SDR costs $60,000+ plus commissions. BrightLaunchIQ replaces fragmented tools and payroll with one integrated AI-powered growth system, starting at a fraction of the cost of a single hire."
+            "text": "Yes. BrightLaunchIQ integrates with popular calendar and scheduling tools so appointments are booked in real time. No double-bookings, no back-and-forth."
           }
         },
         {
           "@type": "Question",
-          "name": "Is my customer data safe?",
+          "name": "How long does setup take?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. All data is encrypted in transit and at rest using AES-256 encryption — the same standard used by major banks. We do not train public AI models on your business data and maintain a strict zero-training policy on client data."
+            "text": "Most businesses are live within a few days. We train the AI on your business — services, FAQs, scheduling preferences, routing rules, and tone. No technical skills needed."
           }
         },
         {
           "@type": "Question",
-          "name": "Can AI replace my sales team?",
+          "name": "How much does an AI receptionist cost compared to hiring staff?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "AI doesn't replace your sales team—it amplifies them. Our AI handles the repetitive work of answering calls, qualifying leads, and follow-up, while your team focuses on relationship building and closing deals."
+            "text": "An AI receptionist costs a fraction of hiring a full-time employee. No payroll taxes, no benefits, no overtime, no training costs, and no turnover. It works 24/7 at a predictable monthly rate."
           }
         }
       ]
@@ -201,12 +185,14 @@ const Index = () => {
       <main id="main-content" role="main">
         <Hero />
         <HomeProblem />
-        <HomeGrowthSystems />
-        <HomeCostSavings />
-        <Testimonials />
-        <SecurityPillar />
-        <FAQ />
-        <CTA />
+        <HomeSolution />
+        <HomeHowItWorks />
+        <HomeComparison />
+        <HomeIdealFor />
+        <HomeResults />
+        <HomePricingPosition />
+        <HomeFAQ />
+        <HomeCTA />
       </main>
       <Footer />
     </div>
