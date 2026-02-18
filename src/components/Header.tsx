@@ -62,7 +62,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
             <Link
-              to="/products/leadline"
+              to="/products/ai-receptionist"
               className={`${mutedColor} hover:${textColor} transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-md`}
             >
               AI Receptionist
@@ -154,7 +154,7 @@ const Header = () => {
           >
             <div className="container py-4 flex flex-col gap-4">
               <Link
-                to="/products/leadline"
+                to="/products/ai-receptionist"
                 className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2 focus:outline-none focus:ring-2 focus:ring-ring rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
