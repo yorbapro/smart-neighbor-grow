@@ -101,11 +101,14 @@ const Pricing = () => {
         <section className="py-16 md:py-24 bg-secondary">
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-14">
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary-foreground mb-4">
-                Choose Your Plan
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary-foreground mb-2">
+                BrightLaunchIQ AI Receptionist
               </h2>
-              <p className="text-muted-foreground">
-                Every plan includes a one-time setup fee for custom configuration. Upgrading? Your previous setup fee is credited toward the new tier.
+              <p className="text-lg text-secondary-foreground/70 mb-4">
+                Choose the plan that fits your business — every tier includes a one-time setup fee for custom configuration.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Upgrading? Your previous setup fee is credited toward the new tier.
               </p>
             </div>
 
@@ -154,7 +157,7 @@ const Pricing = () => {
                       </div>
                     )}
 
-                    {/* Monthly features */}
+                    {/* Key features */}
                     <ul className="space-y-3 mb-6">
                       {tier.features.map((feature, i) => (
                         <li key={feature} className="flex items-start gap-2">
@@ -165,6 +168,16 @@ const Pricing = () => {
                         </li>
                       ))}
                     </ul>
+
+                    {/* See all features link */}
+                    <div className="mb-6">
+                      <Link
+                        to={`/products/ai-receptionist/${tier.tierName.toLowerCase()}/features`}
+                        className="text-sm font-medium text-primary hover:underline inline-flex items-center gap-1"
+                      >
+                        See all {tier.tierName} features <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    </div>
 
                     {/* Setup justification */}
                     {tier.setupFeatures && tier.setupFeatures.length > 0 && (
