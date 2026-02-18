@@ -18,37 +18,129 @@ import {
 
 const LeadLine = () => {
   useEffect(() => {
-    document.title = "BrightLaunchIQ AI Receptionist — 24/7 AI Phone Answering for Small Businesses";
+    document.title = "AI Receptionist for Small Business | 24/7 AI Phone Answering — BrightLaunchIQ";
 
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", "Never miss another customer call. BrightLaunchIQ AI Receptionist answers 24/7, books appointments, qualifies leads, and routes urgent calls. Setup in days. No contracts.");
+    const setMeta = (name: string, content: string, property = false) => {
+      const attr = property ? "property" : "name";
+      let meta = document.querySelector(`meta[${attr}="${name}"]`) as HTMLMetaElement;
+      if (!meta) {
+        meta = document.createElement("meta");
+        meta.setAttribute(attr, name);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute("content", content);
+    };
+
+    setMeta("description", "BrightLaunchIQ AI Receptionist answers every call 24/7, qualifies leads, books appointments, and routes urgent calls. Best AI receptionist for HVAC, plumbing, dental, legal, and service businesses. Setup in days, no contracts.");
+    setMeta("keywords", "AI receptionist, AI receptionist for small business, best AI receptionist, AI answering service, 24/7 AI receptionist, virtual receptionist AI, AI phone answering, AI call answering service, automated receptionist, AI receptionist cost, AI receptionist for HVAC, AI receptionist for contractors, AI receptionist for dentists, AI receptionist for law firms, AI receptionist for healthcare, AI receptionist for plumbers, AI receptionist vs virtual receptionist, AI receptionist vs answering service, AI front desk, AI appointment booking, after hours AI answering, missed call prevention AI");
+    setMeta("og:title", "AI Receptionist for Small Business | BrightLaunchIQ", true);
+    setMeta("og:description", "24/7 AI receptionist that answers every call, qualifies leads, and books appointments. Best for HVAC, dental, legal, and service businesses.", true);
+    setMeta("og:type", "product", true);
+    setMeta("og:url", "https://brightlaunchiq.com/products/ai-receptionist", true);
+
+    // Canonical
+    let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!canonicalLink) {
+      canonicalLink = document.createElement("link");
+      canonicalLink.setAttribute("rel", "canonical");
+      document.head.appendChild(canonicalLink);
     }
+    canonicalLink.setAttribute("href", "https://brightlaunchiq.com/products/ai-receptionist");
 
     window.scrollTo(0, 0);
 
     const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
     existingScripts.forEach(script => script.remove());
 
+    // Product Schema
     const productScript = document.createElement("script");
     productScript.type = "application/ld+json";
     productScript.id = "product-schema";
     productScript.textContent = JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "Product",
+      "@type": "SoftwareApplication",
       "name": "BrightLaunchIQ AI Receptionist",
-      "description": "24/7 AI receptionist that answers every call, qualifies leads, books appointments, and routes urgent calls for small businesses.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Cloud-based",
+      "description": "Best AI receptionist for small business. 24/7 AI phone answering service that answers every call, qualifies leads, books appointments, routes urgent calls, and handles FAQs. Built for HVAC, plumbing, dental offices, law firms, medical practices, contractors, and all service businesses.",
+      "featureList": [
+        "24/7 AI call answering",
+        "Appointment booking and calendar integration",
+        "Lead qualification and scoring",
+        "Intelligent call routing and live transfer",
+        "After-hours and overflow coverage",
+        "CRM integration (Salesforce, HubSpot, Zoho)",
+        "Call transcription and summaries",
+        "SMS and email confirmations",
+        "Custom branded greeting",
+        "Multi-location support",
+        "HIPAA-ready configurations"
+      ],
       "brand": {
         "@type": "Organization",
         "name": "BrightLaunchIQ"
       },
-      "category": "AI Answering Service"
+      "url": "https://brightlaunchiq.com/products/ai-receptionist"
     });
     document.head.appendChild(productScript);
 
+    // FAQ Schema for this page
+    const faqScript = document.createElement("script");
+    faqScript.type = "application/ld+json";
+    faqScript.id = "product-faq-schema";
+    faqScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the best AI receptionist for small business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BrightLaunchIQ is the best AI receptionist for small businesses because it offers 24/7 call answering, appointment booking, lead qualification, CRM integration, and natural-sounding conversations. It's purpose-built for service businesses like HVAC, plumbing, dental offices, law firms, and contractors, with setup in days and no contracts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does an AI receptionist cost compared to hiring staff?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An AI receptionist costs $199-$499/month — a fraction of a full-time receptionist's $35,000-$55,000+ annual salary. No payroll taxes, no benefits, no overtime, no training costs, and no turnover. It works 24/7 at a predictable monthly rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is BrightLaunchIQ AI Receptionist good for HVAC and plumbing companies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. HVAC and plumbing companies miss 60-80% of inbound calls because technicians are on job sites. BrightLaunchIQ answers every call instantly, books service appointments, captures emergency details, and routes urgent calls to the on-call technician — even at 2 AM."
+          }
+        }
+      ]
+    });
+    document.head.appendChild(faqScript);
+
+    // Speakable Schema
+    const speakableScript = document.createElement("script");
+    speakableScript.type = "application/ld+json";
+    speakableScript.id = "speakable-schema";
+    speakableScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "AI Receptionist for Small Business | BrightLaunchIQ",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2"]
+      },
+      "url": "https://brightlaunchiq.com/products/ai-receptionist"
+    });
+    document.head.appendChild(speakableScript);
+
     return () => {
-      const el = document.getElementById("product-schema");
-      if (el) el.remove();
+      ['product-schema', 'product-faq-schema', 'speakable-schema'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.remove();
+      });
     };
   }, []);
 
