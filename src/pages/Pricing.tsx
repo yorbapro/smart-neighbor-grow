@@ -169,13 +169,19 @@ const Pricing = () => {
                       ))}
                     </ul>
 
-                    {/* See all features link */}
-                    <div className="mb-6">
+                    {/* See all features + What's Included links */}
+                    <div className="mb-6 flex flex-col gap-1">
                       <Link
                         to={`/products/ai-receptionist/${tier.tierName.toLowerCase()}/features`}
                         className="text-sm font-medium text-primary hover:underline inline-flex items-center gap-1"
                       >
                         See all {tier.tierName} features <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                      <Link
+                        to={`/products/ai-receptionist/${tier.tierName.toLowerCase()}/whats-included`}
+                        className="text-sm font-medium text-muted-foreground hover:text-primary hover:underline inline-flex items-center gap-1"
+                      >
+                        What's included <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                     </div>
 
