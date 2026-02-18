@@ -98,11 +98,7 @@ const App = () => (
             <Route path="/products/ai-voice-agent" element={<LeadLineProactive />} />
             <Route path="/products/ai-voice-agent/features" element={<LeadLineProactiveFeatures />} />
             <Route path="/products/ai-receptionist/features" element={<LeadLineFeatures />} />
-            {/* Legacy redirects for SEO */}
-            <Route path="/products/leadline" element={<Navigate to="/products/ai-receptionist" replace />} />
-            <Route path="/products/leadline-proactive" element={<Navigate to="/products/ai-voice-agent" replace />} />
-            <Route path="/products/leadline-proactive/features" element={<Navigate to="/products/ai-voice-agent/features" replace />} />
-            <Route path="/products/leadline/features" element={<Navigate to="/products/ai-receptionist/features" replace />} />
+            <Route path="/products/custom-ai-workflows" element={<Navigate to="/products/omnilogic" replace />} />
             <Route path="/products/custom-ai-workflows" element={<Navigate to="/products/omnilogic" replace />} />
             <Route path="/products/omnilogic" element={<CustomAIWorkflows />} />
             
