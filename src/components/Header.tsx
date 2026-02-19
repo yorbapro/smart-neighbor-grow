@@ -69,6 +69,13 @@ const Header = () => {
             </Link>
 
             <Link
+              to="/industries"
+              className={`${mutedColor} hover:${textColor} transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-md`}
+            >
+              Industries
+            </Link>
+
+            <Link
               to="/pricing"
               className={`${mutedColor} hover:${textColor} transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-md`}
             >
@@ -159,6 +166,14 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 AI Receptionist
+              </Link>
+
+              <Link
+                to="/industries"
+                className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2 focus:outline-none focus:ring-2 focus:ring-ring rounded-md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Industries
               </Link>
 
               <Link

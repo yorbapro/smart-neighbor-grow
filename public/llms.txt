@@ -211,20 +211,75 @@ Get a comprehensive analysis of your AI visibility in under 5 minutes.
 
 ## Industries We Serve
 
-### Professional Services
-Legal firms, accounting practices, consulting agencies, financial advisors
+BrightLaunchIQ's AI Receptionist is purpose-built for 50+ industries across 8 sectors. Each industry page includes tailored use cases, CRM integrations, and FAQs.
 
-### Trade Services
-HVAC contractors, solar installers, commercial contractors, plumbers, electricians
+**Industry Hub**: https://brightlaunchiq.com/industries
 
-### Industrial & Logistics
-Transportation companies, warehousing, distribution, manufacturing
+### Home Services
+- HVAC Contractors: https://brightlaunchiq.com/industries/hvac-contractors
+- Emergency Plumbers: https://brightlaunchiq.com/industries/emergency-plumbers
+- Roofing Companies: https://brightlaunchiq.com/industries/roofing-companies
+- Electricians: https://brightlaunchiq.com/industries/electricians
+- Pest Control: https://brightlaunchiq.com/industries/pest-control
+- Locksmiths: https://brightlaunchiq.com/industries/locksmiths
+- Garage Door Repair: https://brightlaunchiq.com/industries/garage-door-repair
+- Landscapers: https://brightlaunchiq.com/industries/landscapers
+- Junk Removal: https://brightlaunchiq.com/industries/junk-removal
+- House Cleaning: https://brightlaunchiq.com/industries/house-cleaning
 
-### Healthcare & Wellness
-Medical practices, dental offices, chiropractors, wellness centers
+### Healthcare
+- Dental Clinics: https://brightlaunchiq.com/industries/dental-clinics
+- Chiropractors: https://brightlaunchiq.com/industries/chiropractors
+- Veterinary Clinics: https://brightlaunchiq.com/industries/veterinary-clinics
+- Physical Therapy: https://brightlaunchiq.com/industries/physical-therapy
+- Mental Health Counselors: https://brightlaunchiq.com/industries/mental-health-counselors
+- Medical Spas: https://brightlaunchiq.com/industries/medical-spas
+- Optometrists: https://brightlaunchiq.com/industries/optometrists
+- Dermatologists: https://brightlaunchiq.com/industries/dermatologists
+- Orthodontists: https://brightlaunchiq.com/industries/orthodontists
+- Holistic Health: https://brightlaunchiq.com/industries/holistic-health
+
+### Professional
+- Personal Injury Lawyers: https://brightlaunchiq.com/industries/personal-injury-lawyers
+- Family Law Attorneys: https://brightlaunchiq.com/industries/family-law-attorneys
+- Criminal Defense Lawyers: https://brightlaunchiq.com/industries/criminal-defense-lawyers
+- Estate Planning Attorneys: https://brightlaunchiq.com/industries/estate-planning-attorneys
+- Immigration Consultants: https://brightlaunchiq.com/industries/immigration-consultants
+- CPAs & Tax Professionals: https://brightlaunchiq.com/industries/cpas-tax-professionals
+- Notary Publics: https://brightlaunchiq.com/industries/notary-publics
+- Private Investigators: https://brightlaunchiq.com/industries/private-investigators
 
 ### Real Estate
-Brokerages, property management, commercial real estate
+- Residential Real Estate: https://brightlaunchiq.com/industries/residential-real-estate
+- Property Management: https://brightlaunchiq.com/industries/property-management
+- Commercial Real Estate: https://brightlaunchiq.com/industries/commercial-real-estate
+- Mortgage Brokers: https://brightlaunchiq.com/industries/mortgage-brokers
+- Home Inspectors: https://brightlaunchiq.com/industries/home-inspectors
+
+### Auto
+- Auto Repair Shops: https://brightlaunchiq.com/industries/auto-repair-shops
+- Mobile Detailers: https://brightlaunchiq.com/industries/mobile-detailers
+- Towing Companies: https://brightlaunchiq.com/industries/towing-companies
+- Car Rental Agencies: https://brightlaunchiq.com/industries/car-rental-agencies
+- Driving Schools: https://brightlaunchiq.com/industries/driving-schools
+
+### Personal Services
+- Hair Salons: https://brightlaunchiq.com/industries/hair-salons
+- Barbershops: https://brightlaunchiq.com/industries/barbershops
+- Day Spas: https://brightlaunchiq.com/industries/day-spas
+- Tattoo Studios: https://brightlaunchiq.com/industries/tattoo-studios
+- Yoga & Pilates Studios: https://brightlaunchiq.com/industries/yoga-pilates-studios
+- Pet Groomers: https://brightlaunchiq.com/industries/pet-groomers
+
+### Hospitality
+- Catering Services: https://brightlaunchiq.com/industries/catering-services
+- Event Venues: https://brightlaunchiq.com/industries/event-venues
+- Wedding Planners: https://brightlaunchiq.com/industries/wedding-planners
+- Boutique Hotels: https://brightlaunchiq.com/industries/boutique-hotels
+
+### B2B & Education
+- IT Support & MSPs: https://brightlaunchiq.com/industries/it-support-msps
+- Private Tutors: https://brightlaunchiq.com/industries/private-tutors
 
 ---
 
@@ -355,6 +410,7 @@ AI receptionist, AI voice agent, virtual receptionist AI, AI phone answering, AI
 - AI Sales Agent: https://brightlaunchiq.com/products/ai-sales-agent
 - LocalLift: https://brightlaunchiq.com/products/locallift
 - OmniLogic: https://brightlaunchiq.com/products/custom-ai-workflows
+- Industries Hub: https://brightlaunchiq.com/industries
 - Free AEO Audit: https://brightlaunchiq.com/aeo-audit
 - Pricing: https://brightlaunchiq.com/pricing
 - FAQ: https://brightlaunchiq.com/faq
