@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import useSEO from "@/hooks/useSEO";
+import { useEffect } from "react";
 import {
   Phone, Check, ArrowRight, Zap, Bot, Shield, Users,
   Headphones, Lock, Rocket, TrendingUp, Settings, MessageSquare,
@@ -115,6 +116,33 @@ const includedSections = [
   },
 ];
 
+const coreFaqItems = [
+  {
+    question: "What does an AI receptionist include?",
+    answer: "BrightLaunchIQ's AI Receptionist Core plan includes 24/7 intelligent call answering, custom voice persona training, lead capture and qualification, intelligent call routing, security and compliance infrastructure, done-for-you onboarding, ongoing optimization, and full call reporting with transcripts — all for $497/month.",
+  },
+  {
+    question: "How much does an AI phone answering service cost?",
+    answer: "BrightLaunchIQ's AI Receptionist starts at $497/month for the Core plan, which includes up to 500 minutes and 250 calls per month. A one-time $1,500 setup fee covers script development, call routing configuration, test simulations, and a 30-day performance review.",
+  },
+  {
+    question: "Can an AI receptionist answer calls 24/7?",
+    answer: "Yes. BrightLaunchIQ's AI Receptionist answers every call instantly — mornings, nights, weekends, and holidays — with natural, human-like voice conversations. There's no voicemail and no missed revenue.",
+  },
+  {
+    question: "Does an AI receptionist capture leads?",
+    answer: "Absolutely. Every caller is captured with name, phone, email, and service interest. The AI also performs urgency and budget pre-qualification, detects new vs. existing customers, and flags high-intent callers for immediate follow-up.",
+  },
+  {
+    question: "How is an AI receptionist set up?",
+    answer: "BrightLaunchIQ handles everything for you. The $1,500 setup fee covers an onboarding strategy session, custom script development, call routing configuration, test call simulations, a 7-day optimization review, and a 30-day performance review.",
+  },
+  {
+    question: "Is an AI receptionist secure?",
+    answer: "Yes. BrightLaunchIQ uses AES-256 encrypted data storage, secure API connections, role-based access controls, call recording compliance messaging, audit logging, and configurable data retention controls.",
+  },
+];
+
 const AIReceptionistCoreIncludes = () => {
   useSEO({
     title: "What's Included — BrightLaunchIQ AI Receptionist Core Plan",
@@ -122,6 +150,34 @@ const AIReceptionistCoreIncludes = () => {
     canonical: "https://brightlaunchiq.com/products/ai-receptionist/core/whats-included",
     keywords: "AI receptionist included, AI receptionist plan details, what's included AI phone answering, BrightLaunchIQ Core plan, AI call answering service features",
   });
+
+  // Inject FAQPage JSON-LD
+  useEffect(() => {
+    const existingFaq = document.getElementById("faq-schema-core-includes");
+    if (existingFaq) existingFaq.remove();
+
+    const faqScript = document.createElement("script");
+    faqScript.type = "application/ld+json";
+    faqScript.id = "faq-schema-core-includes";
+    faqScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": coreFaqItems.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer,
+        },
+      })),
+    });
+    document.head.appendChild(faqScript);
+
+    return () => {
+      const el = document.getElementById("faq-schema-core-includes");
+      if (el) el.remove();
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
