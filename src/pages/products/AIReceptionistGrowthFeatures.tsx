@@ -407,9 +407,14 @@ const AIReceptionistGrowthFeatures = () => {
             <div className="mt-12 p-6 rounded-2xl bg-primary/5 border border-primary/20 text-center">
               <p className="text-sm font-semibold text-primary mb-1">Need multi-location routing and advanced analytics?</p>
               <p className="text-sm text-muted-foreground mb-4">Upgrade to Pro for enterprise-grade AI phone infrastructure.</p>
-              <Button variant="outline" size="sm" asChild>
-                <Link to="/products/ai-receptionist/pro/features">Pro Features</Link>
-              </Button>
+              <div className="flex flex-wrap gap-3 justify-center">
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/products/ai-receptionist/pro/features">Pro Features</Link>
+                </Button>
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/products/ai-receptionist/features/complete-library">View Complete Feature Library →</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>

@@ -469,6 +469,20 @@ const AIReceptionistProFeatures = () => {
         </div>
       </section>
 
+      <section className="py-12">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="p-6 rounded-2xl bg-primary/5 border border-primary/20 text-center">
+              <p className="text-sm font-semibold text-primary mb-1">Want to see every feature across all tiers?</p>
+              <p className="text-sm text-muted-foreground mb-4">Browse all 55+ features organized by capability category.</p>
+              <Button variant="outline" size="sm" asChild>
+                <Link to="/products/ai-receptionist/features/complete-library">View Complete Feature Library →</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 md:py-28 bg-gradient-subtle">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
