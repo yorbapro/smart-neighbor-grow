@@ -69,6 +69,14 @@ const Optometrists = lazy(() => import("./pages/industries/Optometrists"));
 const Dermatologists = lazy(() => import("./pages/industries/Dermatologists"));
 const Orthodontists = lazy(() => import("./pages/industries/Orthodontists"));
 const HolisticHealth = lazy(() => import("./pages/industries/HolisticHealth"));
+const PersonalInjuryLawyers = lazy(() => import("./pages/industries/PersonalInjuryLawyers"));
+const FamilyLawAttorneys = lazy(() => import("./pages/industries/FamilyLawAttorneys"));
+const CriminalDefenseLawyers = lazy(() => import("./pages/industries/CriminalDefenseLawyers"));
+const EstatePlanningAttorneys = lazy(() => import("./pages/industries/EstatePlanningAttorneys"));
+const ImmigrationConsultants = lazy(() => import("./pages/industries/ImmigrationConsultants"));
+const CPAsTaxProfessionals = lazy(() => import("./pages/industries/CPAsTaxProfessionals"));
+const NotaryPublics = lazy(() => import("./pages/industries/NotaryPublics"));
+const PrivateInvestigators = lazy(() => import("./pages/industries/PrivateInvestigators"));
 
 // Location pages
 const Sacramento = lazy(() => import("./pages/locations/Sacramento"));
@@ -169,6 +177,14 @@ const App = () => (
             <Route path="/industries/dermatologists" element={<Dermatologists />} />
             <Route path="/industries/orthodontists" element={<Orthodontists />} />
             <Route path="/industries/holistic-health" element={<HolisticHealth />} />
+            <Route path="/industries/personal-injury-lawyers" element={<PersonalInjuryLawyers />} />
+            <Route path="/industries/family-law-attorneys" element={<FamilyLawAttorneys />} />
+            <Route path="/industries/criminal-defense-lawyers" element={<CriminalDefenseLawyers />} />
+            <Route path="/industries/estate-planning-attorneys" element={<EstatePlanningAttorneys />} />
+            <Route path="/industries/immigration-consultants" element={<ImmigrationConsultants />} />
+            <Route path="/industries/cpas-tax-professionals" element={<CPAsTaxProfessionals />} />
+            <Route path="/industries/notary-publics" element={<NotaryPublics />} />
+            <Route path="/industries/private-investigators" element={<PrivateInvestigators />} />
             
             {/* Location pages */}
             <Route path="/locations" element={<LocationsPage />} />

@@ -61,6 +61,14 @@ const routeLabels: Record<string, string> = {
   "dermatologists": "Dermatologists",
   "orthodontists": "Orthodontists",
   "holistic-health": "Holistic Health",
+  "personal-injury-lawyers": "Personal Injury Lawyers",
+  "family-law-attorneys": "Family Law Attorneys",
+  "criminal-defense-lawyers": "Criminal Defense Lawyers",
+  "estate-planning-attorneys": "Estate Planning Attorneys",
+  "immigration-consultants": "Immigration Consultants",
+  "cpas-tax-professionals": "CPAs & Tax Professionals",
+  "notary-publics": "Notary Publics",
+  "private-investigators": "Private Investigators",
 };
 
 const Breadcrumb = ({ items, className = "" }: BreadcrumbProps) => {
