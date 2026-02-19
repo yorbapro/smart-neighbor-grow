@@ -47,6 +47,19 @@ const AIReceptionistGrowthIncludes = lazy(() => import("./pages/products/AIRecep
 const AIReceptionistProIncludes = lazy(() => import("./pages/products/AIReceptionistProIncludes"));
 const CustomAIWorkflows = lazy(() => import("./pages/products/CustomAIWorkflows"));
 
+// Industry pages
+const IndustryIndex = lazy(() => import("./pages/industries/IndustryIndex"));
+const HVACContractors = lazy(() => import("./pages/industries/HVACContractors"));
+const EmergencyPlumbers = lazy(() => import("./pages/industries/EmergencyPlumbers"));
+const RoofingCompanies = lazy(() => import("./pages/industries/RoofingCompanies"));
+const Electricians = lazy(() => import("./pages/industries/Electricians"));
+const PestControl = lazy(() => import("./pages/industries/PestControl"));
+const Locksmiths = lazy(() => import("./pages/industries/Locksmiths"));
+const GarageDoorRepair = lazy(() => import("./pages/industries/GarageDoorRepair"));
+const Landscapers = lazy(() => import("./pages/industries/Landscapers"));
+const JunkRemoval = lazy(() => import("./pages/industries/JunkRemoval"));
+const HouseCleaning = lazy(() => import("./pages/industries/HouseCleaning"));
+
 // Location pages
 const Sacramento = lazy(() => import("./pages/locations/Sacramento"));
 const Stockton = lazy(() => import("./pages/locations/Stockton"));
@@ -123,6 +136,19 @@ const App = () => (
             <Route path="/resources/case-studies" element={<CaseStudies />} />
             <Route path="/resources/comparison" element={<Comparison />} />
             <Route path="/resources/how-it-works" element={<HowItWorks />} />
+            
+            {/* Industry pages */}
+            <Route path="/industries" element={<IndustryIndex />} />
+            <Route path="/industries/hvac-contractors" element={<HVACContractors />} />
+            <Route path="/industries/emergency-plumbers" element={<EmergencyPlumbers />} />
+            <Route path="/industries/roofing-companies" element={<RoofingCompanies />} />
+            <Route path="/industries/electricians" element={<Electricians />} />
+            <Route path="/industries/pest-control" element={<PestControl />} />
+            <Route path="/industries/locksmiths" element={<Locksmiths />} />
+            <Route path="/industries/garage-door-repair" element={<GarageDoorRepair />} />
+            <Route path="/industries/landscapers" element={<Landscapers />} />
+            <Route path="/industries/junk-removal" element={<JunkRemoval />} />
+            <Route path="/industries/house-cleaning" element={<HouseCleaning />} />
             
             {/* Location pages */}
             <Route path="/locations" element={<LocationsPage />} />

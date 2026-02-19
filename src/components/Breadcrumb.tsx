@@ -40,6 +40,17 @@ const routeLabels: Record<string, string> = {
   "terms": "Terms of Service",
   "privacy": "Privacy Policy",
   "accessibility": "Accessibility",
+  "industries": "Industries",
+  "hvac-contractors": "HVAC Contractors",
+  "emergency-plumbers": "Emergency Plumbers",
+  "roofing-companies": "Roofing Companies",
+  "electricians": "Electricians",
+  "pest-control": "Pest Control Services",
+  "locksmiths": "Locksmiths",
+  "garage-door-repair": "Garage Door Repair",
+  "landscapers": "Landscapers",
+  "junk-removal": "Junk Removal",
+  "house-cleaning": "House Cleaning Services",
 };
 
 const Breadcrumb = ({ items, className = "" }: BreadcrumbProps) => {
