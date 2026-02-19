@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import useSEO from "@/hooks/useSEO";
+import { useEffect } from "react";
 import {
   Phone, Check, ArrowRight, Zap, Bot, Calendar, Shield, BarChart3,
   Users, Headphones, Lock, Rocket, TrendingUp, Settings, MessageSquare,
@@ -109,6 +110,33 @@ const includedSections = [
   },
 ];
 
+const proFaqItems = [
+  {
+    question: "What does an enterprise AI receptionist include?",
+    answer: "BrightLaunchIQ's Pro plan includes everything in Growth plus multi-location call routing, custom AI voice cloning, advanced analytics with revenue attribution, executive reporting, priority support with a dedicated account contact, and 2,500 minutes per month — all for $1,497/month.",
+  },
+  {
+    question: "Can an AI receptionist handle multiple office locations?",
+    answer: "Yes. BrightLaunchIQ's Pro plan includes multi-location call routing with location-based routing, department-specific handling, territory and ZIP code routing, per-location greetings, cross-location overflow, and centralized reporting across all locations.",
+  },
+  {
+    question: "How much does an enterprise AI phone system cost?",
+    answer: "BrightLaunchIQ's AI Receptionist Pro plan is $1,497/month with a one-time $5,000 setup fee covering multi-location configuration, custom voice creation, advanced analytics setup, and executive reporting — plus up to 2,500 minutes and 1,200 calls per month.",
+  },
+  {
+    question: "Can I get a custom AI voice for my business phone system?",
+    answer: "Yes. BrightLaunchIQ's Pro plan includes custom AI voice cloning — a unique, branded voice profile with brand-aligned tone and cadence, pronunciation fine-tuning, multi-voice support for different departments, and voice consistency across all interactions.",
+  },
+  {
+    question: "What kind of reporting does an enterprise AI receptionist provide?",
+    answer: "The Pro plan provides revenue attribution modeling, multi-location performance comparison, trend analysis and forecasting, executive summary reports, custom KPI tracking, and exportable reports with API access.",
+  },
+  {
+    question: "Does an enterprise AI receptionist come with dedicated support?",
+    answer: "Yes. BrightLaunchIQ's Pro plan includes a priority support queue, dedicated account contact, proactive optimization cycles, quarterly business reviews, priority feature requests, and custom integration development.",
+  },
+];
+
 const AIReceptionistProIncludes = () => {
   useSEO({
     title: "What's Included — BrightLaunchIQ AI Receptionist Pro Plan",
@@ -116,6 +144,33 @@ const AIReceptionistProIncludes = () => {
     canonical: "https://brightlaunchiq.com/products/ai-receptionist/pro/whats-included",
     keywords: "AI receptionist Pro plan, enterprise AI phone system, multi-location AI receptionist, custom AI voice, BrightLaunchIQ Pro, AI call answering enterprise",
   });
+
+  useEffect(() => {
+    const existingFaq = document.getElementById("faq-schema-pro-includes");
+    if (existingFaq) existingFaq.remove();
+
+    const faqScript = document.createElement("script");
+    faqScript.type = "application/ld+json";
+    faqScript.id = "faq-schema-pro-includes";
+    faqScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": proFaqItems.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer,
+        },
+      })),
+    });
+    document.head.appendChild(faqScript);
+
+    return () => {
+      const el = document.getElementById("faq-schema-pro-includes");
+      if (el) el.remove();
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">

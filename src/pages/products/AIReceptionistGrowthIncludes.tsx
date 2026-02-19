@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import useSEO from "@/hooks/useSEO";
+import { useEffect } from "react";
 import {
   Phone, Check, ArrowRight, Zap, Bot, Calendar, Shield, BarChart3,
   Users, Headphones, Lock, Rocket, TrendingUp, Settings, MessageSquare,
@@ -109,6 +110,33 @@ const includedSections = [
   },
 ];
 
+const growthFaqItems = [
+  {
+    question: "What does an AI receptionist with CRM integration include?",
+    answer: "BrightLaunchIQ's Growth plan includes everything in Core plus real-time calendar integration, CRM sync with HubSpot, Salesforce, and Zoho, automated SMS/email follow-up, analytics dashboards with ROI reporting, and 1,500 minutes per month — all for $997/month.",
+  },
+  {
+    question: "Can an AI receptionist book appointments automatically?",
+    answer: "Yes. BrightLaunchIQ's Growth-tier AI Receptionist books appointments directly into your calendar with real-time availability checking, double-booking prevention, appointment type classification, and rescheduling and cancellation handling.",
+  },
+  {
+    question: "How much does an AI receptionist with scheduling cost?",
+    answer: "BrightLaunchIQ's AI Receptionist Growth plan is $997/month with a one-time $2,500 setup fee. It includes calendar integration, CRM connection, booking logic, automation workflows, and up to 1,500 minutes and 750 calls per month.",
+  },
+  {
+    question: "Does an AI phone answering service integrate with my CRM?",
+    answer: "Yes. BrightLaunchIQ's Growth plan integrates with HubSpot, Salesforce, Zoho, and more via direct API connections. It also supports Zapier and Slack integrations with automatic contact creation, lead status updates, and custom field mapping.",
+  },
+  {
+    question: "Can an AI receptionist send follow-up texts and emails?",
+    answer: "Absolutely. The Growth plan includes automated SMS confirmations, email appointment reminders, post-call follow-up sequences, custom messaging templates, and no-show re-engagement — all triggered automatically after each call.",
+  },
+  {
+    question: "What analytics does an AI receptionist provide?",
+    answer: "BrightLaunchIQ's Growth plan provides real-time call analytics, lead conversion tracking, booking rate optimization, ROI reporting with revenue attribution, call quality metrics, and weekly performance summaries.",
+  },
+];
+
 const AIReceptionistGrowthIncludes = () => {
   useSEO({
     title: "What's Included — BrightLaunchIQ AI Receptionist Growth Plan",
@@ -116,6 +144,33 @@ const AIReceptionistGrowthIncludes = () => {
     canonical: "https://brightlaunchiq.com/products/ai-receptionist/growth/whats-included",
     keywords: "AI receptionist Growth plan, AI phone answering with calendar booking, CRM integration AI receptionist, BrightLaunchIQ Growth, AI call answering with scheduling",
   });
+
+  useEffect(() => {
+    const existingFaq = document.getElementById("faq-schema-growth-includes");
+    if (existingFaq) existingFaq.remove();
+
+    const faqScript = document.createElement("script");
+    faqScript.type = "application/ld+json";
+    faqScript.id = "faq-schema-growth-includes";
+    faqScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": growthFaqItems.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer,
+        },
+      })),
+    });
+    document.head.appendChild(faqScript);
+
+    return () => {
+      const el = document.getElementById("faq-schema-growth-includes");
+      if (el) el.remove();
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
