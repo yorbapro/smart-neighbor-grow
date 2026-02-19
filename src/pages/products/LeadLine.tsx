@@ -552,6 +552,61 @@ const LeadLine = () => {
         </div>
       </section>
 
+      {/* BUILT FOR YOUR INDUSTRY */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
+              Industry Solutions
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              Built for
+              <span className="text-gradient"> Your Industry</span>
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Purpose-built AI workflows for the industries that depend on incoming calls the most.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
+            {[
+              { icon: Wrench, name: "HVAC Contractors", slug: "hvac-contractors", desc: "Capture emergency repair calls 24/7 and book service appointments instantly." },
+              { icon: Stethoscope, name: "Dental Clinics", slug: "dental-clinics", desc: "Fill cancellations, book new patients, and handle insurance questions." },
+              { icon: Scale, name: "Personal Injury Lawyers", slug: "personal-injury-lawyers", desc: "Qualify high-value case leads and schedule consultations around the clock." },
+              { icon: Building2, name: "Real Estate Agents", slug: "residential-real-estate", desc: "Capture buyer & seller inquiries and book showings on their schedule." },
+              { icon: Phone, name: "Emergency Plumbers", slug: "emergency-plumbers", desc: "Dispatch emergency calls instantly and never lose an after-hours job." },
+              { icon: Calendar, name: "Medical Spas", slug: "medical-spas", desc: "Book treatments, sell packages, and manage client consultations effortlessly." },
+            ].map((ind) => (
+              <Link
+                key={ind.slug}
+                to={`/industries/${ind.slug}`}
+                className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-card-hover transition-all"
+              >
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <ind.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-display text-lg font-bold text-foreground group-hover:text-primary transition-colors mb-2">
+                  {ind.name}
+                </h3>
+                <p className="text-sm text-muted-foreground mb-3">{ind.desc}</p>
+                <span className="text-sm font-semibold text-primary flex items-center gap-1">
+                  Read Case Study <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Button variant="outline" size="lg" asChild className="group">
+              <Link to="/industries">
+                View All 50+ Industries
+                <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-16 md:py-24 bg-secondary">
         <div className="container">
