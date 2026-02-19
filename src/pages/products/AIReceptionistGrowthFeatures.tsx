@@ -271,11 +271,54 @@ const AIReceptionistGrowthFeatures = () => {
     });
     document.head.appendChild(schema);
 
+    const faqSchema = document.createElement("script");
+    faqSchema.type = "application/ld+json";
+    faqSchema.id = "growth-features-faq-schema";
+    faqSchema.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can an AI receptionist schedule appointments?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. BrightLaunchIQ's Growth plan includes real-time calendar integration with automatic availability checking, appointment type classification, double-booking prevention, rescheduling and cancellation handling, and multi-provider scheduling support." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does an AI receptionist work with HubSpot and Salesforce?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Growth plan integrates directly with HubSpot, Salesforce, Zoho, and more. It supports automatic contact creation, real-time lead status updates, custom field mapping, and automated workflow triggers via Zapier and Slack." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can an AI receptionist send text messages after a call?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. BrightLaunchIQ's Growth plan includes automated SMS confirmations, email appointment reminders, post-call follow-up sequences, custom messaging templates, and no-show re-engagement — all triggered automatically." }
+        },
+        {
+          "@type": "Question",
+          "name": "What reports does an AI phone answering service provide?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The Growth plan provides real-time call analytics, lead conversion tracking, booking rate optimization, ROI reporting with revenue attribution, call quality metrics, weekly performance summaries, and a full analytics dashboard." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does an AI receptionist improve over time?",
+          "acceptedAnswer": { "@type": "Answer", "text": "BrightLaunchIQ's Growth plan includes monthly script refinement, booking conversion analysis, CRM pipeline optimization, automation refinement, integration health monitoring, and AI retraining on real call transcripts." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is included in the Growth plan setup fee?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The $2,500 Growth setup fee covers everything in Core setup plus calendar system integration, CRM connection and field mapping, booking logic configuration, automation workflow design, and end-to-end booking flow testing." }
+        }
+      ]
+    });
+    document.head.appendChild(faqSchema);
+
     window.scrollTo(0, 0);
 
     return () => {
       const el = document.getElementById("growth-features-schema");
       if (el) el.remove();
+      const faqEl = document.getElementById("growth-features-faq-schema");
+      if (faqEl) faqEl.remove();
     };
   }, []);
 

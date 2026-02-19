@@ -306,11 +306,54 @@ const AIReceptionistProFeatures = () => {
     });
     document.head.appendChild(schema);
 
+    const faqSchema = document.createElement("script");
+    faqSchema.type = "application/ld+json";
+    faqSchema.id = "pro-features-faq-schema";
+    faqSchema.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can an AI receptionist handle calls for multiple locations?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. BrightLaunchIQ's Pro plan includes multi-location call routing with location-based routing, department-specific handling, territory and ZIP code routing, per-location greetings and scripts, cross-location overflow handling, and centralized reporting across all locations." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I create a custom AI voice for my business?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Pro plan includes custom AI voice cloning with a unique branded voice profile, brand-aligned tone and cadence, pronunciation fine-tuning, multi-voice support for different departments, and voice consistency across all interactions." }
+        },
+        {
+          "@type": "Question",
+          "name": "What enterprise analytics does an AI receptionist offer?",
+          "acceptedAnswer": { "@type": "Answer", "text": "BrightLaunchIQ's Pro plan provides revenue attribution modeling, multi-location performance comparison, trend analysis and forecasting, executive summary reports, custom KPI tracking, and exportable reports with API access." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the Pro AI receptionist plan include dedicated support?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Pro plan includes a priority support queue, dedicated account contact, proactive optimization cycles, quarterly business reviews, priority feature requests, and custom integration development." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the best AI receptionist for large businesses?",
+          "acceptedAnswer": { "@type": "Answer", "text": "BrightLaunchIQ's Pro plan at $1,497/month is designed for multi-location businesses needing enterprise-grade AI phone infrastructure — including custom voice cloning, advanced analytics with revenue attribution, multi-location routing, and priority support with a dedicated account contact." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the Pro plan setup include?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The $5,000 Pro setup fee covers everything in Growth setup plus advanced reporting setup, multi-location routing architecture, custom voice configuration and AI voice tuning, advanced analytics and attribution configuration, and priority optimization cycle." }
+        }
+      ]
+    });
+    document.head.appendChild(faqSchema);
+
     window.scrollTo(0, 0);
 
     return () => {
       const el = document.getElementById("pro-features-schema");
       if (el) el.remove();
+      const faqEl = document.getElementById("pro-features-faq-schema");
+      if (faqEl) faqEl.remove();
     };
   }, []);
 
