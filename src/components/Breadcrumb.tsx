@@ -51,6 +51,16 @@ const routeLabels: Record<string, string> = {
   "landscapers": "Landscapers",
   "junk-removal": "Junk Removal",
   "house-cleaning": "House Cleaning Services",
+  "dental-clinics": "Dental Clinics",
+  "chiropractors": "Chiropractors",
+  "veterinary-clinics": "Veterinary Clinics",
+  "physical-therapy": "Physical Therapy Centers",
+  "mental-health-counselors": "Mental Health Counselors",
+  "medical-spas": "Medical Spas",
+  "optometrists": "Optometrists",
+  "dermatologists": "Dermatologists",
+  "orthodontists": "Orthodontists",
+  "holistic-health": "Holistic Health",
 };
 
 const Breadcrumb = ({ items, className = "" }: BreadcrumbProps) => {
