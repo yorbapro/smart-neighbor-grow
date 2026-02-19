@@ -133,6 +133,14 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- AI Receptionist Feature Library -->
+  <url>
+    <loc>https://brightlaunchiq.com/products/ai-receptionist/features/complete-library</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Product Pages -->
   <url>
     <loc>https://brightlaunchiq.com/products/launchpad-360</loc>
