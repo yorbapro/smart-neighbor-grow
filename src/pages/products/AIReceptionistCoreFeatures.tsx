@@ -209,11 +209,54 @@ const AIReceptionistCoreFeatures = () => {
     });
     document.head.appendChild(schema);
 
+    const faqSchema = document.createElement("script");
+    faqSchema.type = "application/ld+json";
+    faqSchema.id = "core-features-faq-schema";
+    faqSchema.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What features does an AI receptionist have?",
+          "acceptedAnswer": { "@type": "Answer", "text": "BrightLaunchIQ's AI Receptionist includes 24/7 intelligent call answering with natural voice, custom greeting scripts, lead capture and qualification with urgency scoring, intelligent call routing with VIP recognition, AES-256 encryption, and ongoing optimization with monthly script refinement." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does an AI receptionist qualify leads?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The AI captures name, phone, email, and service interest on every call. It performs urgency and budget pre-qualification, detects new vs. existing customers, scores lead quality, and flags high-intent callers for immediate follow-up." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can an AI receptionist route calls to different people?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. BrightLaunchIQ's AI Receptionist supports conditional routing by intent, warm and cold transfers, VIP client recognition, emergency routing logic, priority escalation detection, and voicemail fallback." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does an AI receptionist sound on the phone?",
+          "acceptedAnswer": { "@type": "Answer", "text": "BrightLaunchIQ's AI Receptionist uses natural, human-like voice with dynamic pacing and emotion modeling, filler-word smoothing, conversational transitions, and smart interruption handling — designed to sound like your best front-desk employee." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is an AI receptionist better than a traditional answering service?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Unlike traditional answering services, an AI receptionist answers instantly 24/7 with zero hold times, qualifies leads automatically, routes calls intelligently, provides full transcripts and sentiment analysis, and improves continuously through AI retraining — all at a fraction of the cost." }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens during AI receptionist setup?",
+          "acceptedAnswer": { "@type": "Answer", "text": "BrightLaunchIQ's setup includes an onboarding strategy session, custom script development, call routing configuration, knowledge base ingestion from your website and FAQs, test call simulations, a 7-day optimization review, and a 30-day performance review." }
+        }
+      ]
+    });
+    document.head.appendChild(faqSchema);
+
     window.scrollTo(0, 0);
 
     return () => {
       const el = document.getElementById("core-features-schema");
       if (el) el.remove();
+      const faqEl = document.getElementById("core-features-faq-schema");
+      if (faqEl) faqEl.remove();
     };
   }, []);
 
