@@ -77,6 +77,16 @@ const ImmigrationConsultants = lazy(() => import("./pages/industries/Immigration
 const CPAsTaxProfessionals = lazy(() => import("./pages/industries/CPAsTaxProfessionals"));
 const NotaryPublics = lazy(() => import("./pages/industries/NotaryPublics"));
 const PrivateInvestigators = lazy(() => import("./pages/industries/PrivateInvestigators"));
+const ResidentialRealEstate = lazy(() => import("./pages/industries/ResidentialRealEstate"));
+const PropertyManagement = lazy(() => import("./pages/industries/PropertyManagement"));
+const CommercialRealEstate = lazy(() => import("./pages/industries/CommercialRealEstate"));
+const MortgageBrokers = lazy(() => import("./pages/industries/MortgageBrokers"));
+const HomeInspectors = lazy(() => import("./pages/industries/HomeInspectors"));
+const AutoRepairShops = lazy(() => import("./pages/industries/AutoRepairShops"));
+const MobileDetailers = lazy(() => import("./pages/industries/MobileDetailers"));
+const TowingCompanies = lazy(() => import("./pages/industries/TowingCompanies"));
+const CarRentalAgencies = lazy(() => import("./pages/industries/CarRentalAgencies"));
+const DrivingSchools = lazy(() => import("./pages/industries/DrivingSchools"));
 
 // Location pages
 const Sacramento = lazy(() => import("./pages/locations/Sacramento"));
@@ -185,6 +195,16 @@ const App = () => (
             <Route path="/industries/cpas-tax-professionals" element={<CPAsTaxProfessionals />} />
             <Route path="/industries/notary-publics" element={<NotaryPublics />} />
             <Route path="/industries/private-investigators" element={<PrivateInvestigators />} />
+            <Route path="/industries/residential-real-estate" element={<ResidentialRealEstate />} />
+            <Route path="/industries/property-management" element={<PropertyManagement />} />
+            <Route path="/industries/commercial-real-estate" element={<CommercialRealEstate />} />
+            <Route path="/industries/mortgage-brokers" element={<MortgageBrokers />} />
+            <Route path="/industries/home-inspectors" element={<HomeInspectors />} />
+            <Route path="/industries/auto-repair-shops" element={<AutoRepairShops />} />
+            <Route path="/industries/mobile-detailers" element={<MobileDetailers />} />
+            <Route path="/industries/towing-companies" element={<TowingCompanies />} />
+            <Route path="/industries/car-rental-agencies" element={<CarRentalAgencies />} />
+            <Route path="/industries/driving-schools" element={<DrivingSchools />} />
             
             {/* Location pages */}
             <Route path="/locations" element={<LocationsPage />} />
