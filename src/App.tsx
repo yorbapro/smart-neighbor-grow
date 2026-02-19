@@ -59,6 +59,16 @@ const GarageDoorRepair = lazy(() => import("./pages/industries/GarageDoorRepair"
 const Landscapers = lazy(() => import("./pages/industries/Landscapers"));
 const JunkRemoval = lazy(() => import("./pages/industries/JunkRemoval"));
 const HouseCleaning = lazy(() => import("./pages/industries/HouseCleaning"));
+const DentalClinics = lazy(() => import("./pages/industries/DentalClinics"));
+const Chiropractors = lazy(() => import("./pages/industries/Chiropractors"));
+const VeterinaryClinics = lazy(() => import("./pages/industries/VeterinaryClinics"));
+const PhysicalTherapy = lazy(() => import("./pages/industries/PhysicalTherapy"));
+const MentalHealthCounselors = lazy(() => import("./pages/industries/MentalHealthCounselors"));
+const MedicalSpas = lazy(() => import("./pages/industries/MedicalSpas"));
+const Optometrists = lazy(() => import("./pages/industries/Optometrists"));
+const Dermatologists = lazy(() => import("./pages/industries/Dermatologists"));
+const Orthodontists = lazy(() => import("./pages/industries/Orthodontists"));
+const HolisticHealth = lazy(() => import("./pages/industries/HolisticHealth"));
 
 // Location pages
 const Sacramento = lazy(() => import("./pages/locations/Sacramento"));
@@ -149,6 +159,16 @@ const App = () => (
             <Route path="/industries/landscapers" element={<Landscapers />} />
             <Route path="/industries/junk-removal" element={<JunkRemoval />} />
             <Route path="/industries/house-cleaning" element={<HouseCleaning />} />
+            <Route path="/industries/dental-clinics" element={<DentalClinics />} />
+            <Route path="/industries/chiropractors" element={<Chiropractors />} />
+            <Route path="/industries/veterinary-clinics" element={<VeterinaryClinics />} />
+            <Route path="/industries/physical-therapy" element={<PhysicalTherapy />} />
+            <Route path="/industries/mental-health-counselors" element={<MentalHealthCounselors />} />
+            <Route path="/industries/medical-spas" element={<MedicalSpas />} />
+            <Route path="/industries/optometrists" element={<Optometrists />} />
+            <Route path="/industries/dermatologists" element={<Dermatologists />} />
+            <Route path="/industries/orthodontists" element={<Orthodontists />} />
+            <Route path="/industries/holistic-health" element={<HolisticHealth />} />
             
             {/* Location pages */}
             <Route path="/locations" element={<LocationsPage />} />
