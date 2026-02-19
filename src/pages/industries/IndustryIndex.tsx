@@ -10,98 +10,97 @@ import { useEffect } from "react";
 interface IndustryLink {
   name: string;
   slug: string;
-  loss: string;
 }
 
 const sectors: { label: string; industries: IndustryLink[] }[] = [
   {
     label: "Home Services",
     industries: [
-      { name: "HVAC Contractors", slug: "hvac-contractors", loss: "$150k" },
-      { name: "Emergency Plumbers", slug: "emergency-plumbers", loss: "$120k" },
-      { name: "Roofing Companies", slug: "roofing-companies", loss: "$250k" },
-      { name: "Electricians", slug: "electricians", loss: "$90k" },
-      { name: "Pest Control Services", slug: "pest-control", loss: "$60k" },
-      { name: "Locksmiths", slug: "locksmiths", loss: "$45k" },
-      { name: "Garage Door Repair", slug: "garage-door-repair", loss: "$75k" },
-      { name: "Landscapers", slug: "landscapers", loss: "$55k" },
-      { name: "Junk Removal", slug: "junk-removal", loss: "$40k" },
-      { name: "House Cleaning Services", slug: "house-cleaning", loss: "$35k" },
+      { name: "HVAC Contractors", slug: "hvac-contractors" },
+      { name: "Emergency Plumbers", slug: "emergency-plumbers" },
+      { name: "Roofing Companies", slug: "roofing-companies" },
+      { name: "Electricians", slug: "electricians" },
+      { name: "Pest Control Services", slug: "pest-control" },
+      { name: "Locksmiths", slug: "locksmiths" },
+      { name: "Garage Door Repair", slug: "garage-door-repair" },
+      { name: "Landscapers", slug: "landscapers" },
+      { name: "Junk Removal", slug: "junk-removal" },
+      { name: "House Cleaning Services", slug: "house-cleaning" },
     ],
   },
   {
-    label: "Medical & Health",
+    label: "Healthcare",
     industries: [
-      { name: "Dental Clinics", slug: "dental-clinics", loss: "$200k" },
-      { name: "Chiropractors", slug: "chiropractors", loss: "$80k" },
-      { name: "Veterinary Clinics", slug: "veterinary-clinics", loss: "$110k" },
-      { name: "Physical Therapy Centers", slug: "physical-therapy", loss: "$95k" },
-      { name: "Mental Health Counselors", slug: "mental-health-counselors", loss: "$70k" },
-      { name: "Medical Spas", slug: "medical-spas", loss: "$130k" },
-      { name: "Optometrists", slug: "optometrists", loss: "$65k" },
-      { name: "Dermatologists", slug: "dermatologists", loss: "$140k" },
-      { name: "Orthodontists", slug: "orthodontists", loss: "$180k" },
-      { name: "Holistic Health", slug: "holistic-health", loss: "$50k" },
+      { name: "Dental Clinics", slug: "dental-clinics" },
+      { name: "Chiropractors", slug: "chiropractors" },
+      { name: "Veterinary Clinics", slug: "veterinary-clinics" },
+      { name: "Physical Therapy Centers", slug: "physical-therapy" },
+      { name: "Mental Health Counselors", slug: "mental-health-counselors" },
+      { name: "Medical Spas", slug: "medical-spas" },
+      { name: "Optometrists", slug: "optometrists" },
+      { name: "Dermatologists", slug: "dermatologists" },
+      { name: "Orthodontists", slug: "orthodontists" },
+      { name: "Holistic Health", slug: "holistic-health" },
     ],
   },
   {
-    label: "Legal & Professional",
+    label: "Professional",
     industries: [
-      { name: "Personal Injury Lawyers", slug: "personal-injury-lawyers", loss: "$500k" },
-      { name: "Family Law Attorneys", slug: "family-law-attorneys", loss: "$220k" },
-      { name: "Criminal Defense Lawyers", slug: "criminal-defense-lawyers", loss: "$300k" },
-      { name: "Estate Planning Attorneys", slug: "estate-planning-attorneys", loss: "$160k" },
-      { name: "Immigration Consultants", slug: "immigration-consultants", loss: "$140k" },
-      { name: "CPAs & Tax Professionals", slug: "cpas-tax-professionals", loss: "$110k" },
-      { name: "Notary Publics", slug: "notary-publics", loss: "$25k" },
-      { name: "Private Investigators", slug: "private-investigators", loss: "$85k" },
+      { name: "Personal Injury Lawyers", slug: "personal-injury-lawyers" },
+      { name: "Family Law Attorneys", slug: "family-law-attorneys" },
+      { name: "Criminal Defense Lawyers", slug: "criminal-defense-lawyers" },
+      { name: "Estate Planning Attorneys", slug: "estate-planning-attorneys" },
+      { name: "Immigration Consultants", slug: "immigration-consultants" },
+      { name: "CPAs & Tax Professionals", slug: "cpas-tax-professionals" },
+      { name: "Notary Publics", slug: "notary-publics" },
+      { name: "Private Investigators", slug: "private-investigators" },
     ],
   },
   {
-    label: "Real Estate & Property",
+    label: "Real Estate",
     industries: [
-      { name: "Residential Real Estate", slug: "residential-real-estate", loss: "$180k" },
-      { name: "Property Management", slug: "property-management", loss: "$120k" },
-      { name: "Commercial Real Estate", slug: "commercial-real-estate", loss: "$400k" },
-      { name: "Mortgage Brokers", slug: "mortgage-brokers", loss: "$200k" },
-      { name: "Home Inspectors", slug: "home-inspectors", loss: "$45k" },
+      { name: "Residential Real Estate", slug: "residential-real-estate" },
+      { name: "Property Management", slug: "property-management" },
+      { name: "Commercial Real Estate", slug: "commercial-real-estate" },
+      { name: "Mortgage Brokers", slug: "mortgage-brokers" },
+      { name: "Home Inspectors", slug: "home-inspectors" },
     ],
   },
   {
-    label: "Automotive",
+    label: "Auto",
     industries: [
-      { name: "Auto Repair Shops", slug: "auto-repair-shops", loss: "$110k" },
-      { name: "Mobile Detailers", slug: "mobile-detailers", loss: "$30k" },
-      { name: "Towing Companies", slug: "towing-companies", loss: "$90k" },
-      { name: "Car Rental Agencies", slug: "car-rental-agencies", loss: "$60k" },
-      { name: "Driving Schools", slug: "driving-schools", loss: "$40k" },
+      { name: "Auto Repair Shops", slug: "auto-repair-shops" },
+      { name: "Mobile Detailers", slug: "mobile-detailers" },
+      { name: "Towing Companies", slug: "towing-companies" },
+      { name: "Car Rental Agencies", slug: "car-rental-agencies" },
+      { name: "Driving Schools", slug: "driving-schools" },
     ],
   },
   {
-    label: "Beauty & Wellness",
+    label: "Personal Services",
     industries: [
-      { name: "Hair Salons", slug: "hair-salons", loss: "$50k" },
-      { name: "Barbershops", slug: "barbershops", loss: "$35k" },
-      { name: "Day Spas", slug: "day-spas", loss: "$70k" },
-      { name: "Tattoo Studios", slug: "tattoo-studios", loss: "$55k" },
-      { name: "Yoga & Pilates Studios", slug: "yoga-pilates-studios", loss: "$45k" },
+      { name: "Hair Salons", slug: "hair-salons" },
+      { name: "Barbershops", slug: "barbershops" },
+      { name: "Day Spas", slug: "day-spas" },
+      { name: "Tattoo Studios", slug: "tattoo-studios" },
+      { name: "Yoga & Pilates Studios", slug: "yoga-pilates-studios" },
+      { name: "Pet Groomers", slug: "pet-groomers" },
     ],
   },
   {
-    label: "Events & Hospitality",
+    label: "Hospitality",
     industries: [
-      { name: "Catering Services", slug: "catering-services", loss: "$150k" },
-      { name: "Event Venues", slug: "event-venues", loss: "$300k" },
-      { name: "Wedding Planners", slug: "wedding-planners", loss: "$120k" },
-      { name: "Boutique Hotels", slug: "boutique-hotels", loss: "$85k" },
+      { name: "Catering Services", slug: "catering-services" },
+      { name: "Event Venues", slug: "event-venues" },
+      { name: "Wedding Planners", slug: "wedding-planners" },
+      { name: "Boutique Hotels", slug: "boutique-hotels" },
     ],
   },
   {
-    label: "Other Services",
+    label: "B2B & Education",
     industries: [
-      { name: "IT Support & MSPs", slug: "it-support-msps", loss: "$140k" },
-      { name: "Pet Groomers", slug: "pet-groomers", loss: "$40k" },
-      { name: "Private Tutors", slug: "private-tutors", loss: "$30k" },
+      { name: "IT Support & MSPs", slug: "it-support-msps" },
+      { name: "Private Tutors", slug: "private-tutors" },
     ],
   },
 ];
@@ -136,6 +135,7 @@ const IndustryIndex = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main id="main-content">
+        {/* Hero */}
         <section className="relative pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-hero-dark overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsla(187,92%,42%,0.12),transparent_60%)]" />
           <div className="container relative z-10">
@@ -149,6 +149,7 @@ const IndustryIndex = () => {
           </div>
         </section>
 
+        {/* Industry Card Grid */}
         <section className="py-16 md:py-24">
           <div className="container">
             {sectors.map((sector) => (
@@ -161,13 +162,12 @@ const IndustryIndex = () => {
                     <Link
                       key={ind.slug}
                       to={`/industries/${ind.slug}`}
-                      className="group flex items-center justify-between p-4 bg-card border border-border rounded-xl shadow-card hover:shadow-card-hover hover:border-primary/30 transition-all"
+                      className="group p-5 bg-card border border-border rounded-xl shadow-card hover:shadow-card-hover hover:border-primary/30 transition-all flex items-center justify-between"
                     >
-                      <div>
-                        <span className="font-medium text-foreground group-hover:text-primary transition-colors">{ind.name}</span>
-                        <span className="block text-xs text-muted-foreground mt-1">Avg. loss: {ind.loss}/yr</span>
-                      </div>
-                      <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
+                      <span className="font-medium text-foreground group-hover:text-primary transition-colors">
+                        {ind.name}
+                      </span>
+                      <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors shrink-0 ml-3" />
                     </Link>
                   ))}
                 </div>
@@ -176,6 +176,7 @@ const IndustryIndex = () => {
           </div>
         </section>
 
+        {/* CTA */}
         <section className="py-16 md:py-24 bg-gradient-hero-dark">
           <div className="container text-center">
             <h2 className="font-display text-2xl md:text-4xl font-bold text-white mb-4">Don't See Your Industry?</h2>

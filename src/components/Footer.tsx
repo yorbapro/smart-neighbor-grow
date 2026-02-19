@@ -12,6 +12,14 @@ const Footer = () => {
       { label: "OmniLogic™", href: "/products/omnilogic" },
       { label: "Free AI Audit", href: "/aeo-audit" },
     ],
+    industries: [
+      { label: "HVAC Contractors", href: "/industries/hvac-contractors" },
+      { label: "Emergency Plumbing", href: "/industries/emergency-plumbers" },
+      { label: "Personal Injury Law", href: "/industries/personal-injury-lawyers" },
+      { label: "Medical Practices", href: "/industries/dental-clinics" },
+      { label: "Real Estate", href: "/industries/residential-real-estate" },
+      { label: "View All Industries →", href: "/industries" },
+    ],
     resources: [
       { label: "How It Works", href: "/resources/how-it-works" },
       { label: "Case Studies", href: "/resources/case-studies" },
@@ -31,7 +39,7 @@ const Footer = () => {
     <footer className="bg-secondary text-secondary-foreground" role="contentinfo">
       {/* Main Footer */}
       <div className="container py-16 md:py-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-12 mb-16">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-6">
@@ -69,6 +77,25 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3">
               {footerLinks.solutions.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    to={link.href}
+                    className="text-secondary-foreground/70 hover:text-primary transition-colors text-sm"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Industries */}
+          <div>
+            <h4 className="font-display font-semibold mb-5 text-sm uppercase tracking-wider text-secondary-foreground/50">
+              Industries
+            </h4>
+            <ul className="space-y-3">
+              {footerLinks.industries.map((link) => (
                 <li key={link.label}>
                   <Link
                     to={link.href}
