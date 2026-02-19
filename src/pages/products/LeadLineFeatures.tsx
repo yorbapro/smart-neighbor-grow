@@ -358,6 +358,21 @@ const LeadLineFeatures = () => {
         </div>
       </section>
 
+      {/* Complete Library Link */}
+      <section className="py-12">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center p-8 rounded-2xl border border-primary/20 bg-primary/5">
+            <h3 className="font-display text-xl font-bold text-foreground mb-2">Want the full breakdown?</h3>
+            <p className="text-sm text-muted-foreground mb-4">See every feature across all 11 capability categories — Standard and Premium.</p>
+            <Button variant="outline" asChild>
+              <Link to="/products/ai-receptionist/features/complete-library">
+                View Complete Feature Library <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 md:py-28">
         <div className="container">

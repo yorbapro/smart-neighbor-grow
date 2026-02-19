@@ -328,6 +328,9 @@ const AIReceptionistCoreFeatures = () => {
                 <Button variant="outline" size="sm" asChild>
                   <Link to="/products/ai-receptionist/pro/features">Pro Features</Link>
                 </Button>
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/products/ai-receptionist/features/complete-library">Complete Library</Link>
+                </Button>
               </div>
             </div>
           </div>
