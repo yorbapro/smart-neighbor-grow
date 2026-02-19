@@ -87,6 +87,18 @@ const MobileDetailers = lazy(() => import("./pages/industries/MobileDetailers"))
 const TowingCompanies = lazy(() => import("./pages/industries/TowingCompanies"));
 const CarRentalAgencies = lazy(() => import("./pages/industries/CarRentalAgencies"));
 const DrivingSchools = lazy(() => import("./pages/industries/DrivingSchools"));
+const HairSalons = lazy(() => import("./pages/industries/HairSalons"));
+const Barbershops = lazy(() => import("./pages/industries/Barbershops"));
+const DaySpas = lazy(() => import("./pages/industries/DaySpas"));
+const TattooStudios = lazy(() => import("./pages/industries/TattooStudios"));
+const YogaPilatesStudios = lazy(() => import("./pages/industries/YogaPilatesStudios"));
+const CateringServices = lazy(() => import("./pages/industries/CateringServices"));
+const EventVenues = lazy(() => import("./pages/industries/EventVenues"));
+const WeddingPlanners = lazy(() => import("./pages/industries/WeddingPlanners"));
+const BoutiqueHotels = lazy(() => import("./pages/industries/BoutiqueHotels"));
+const ITSupportMSPs = lazy(() => import("./pages/industries/ITSupportMSPs"));
+const PetGroomers = lazy(() => import("./pages/industries/PetGroomers"));
+const PrivateTutors = lazy(() => import("./pages/industries/PrivateTutors"));
 
 // Location pages
 const Sacramento = lazy(() => import("./pages/locations/Sacramento"));
@@ -205,6 +217,18 @@ const App = () => (
             <Route path="/industries/towing-companies" element={<TowingCompanies />} />
             <Route path="/industries/car-rental-agencies" element={<CarRentalAgencies />} />
             <Route path="/industries/driving-schools" element={<DrivingSchools />} />
+            <Route path="/industries/hair-salons" element={<HairSalons />} />
+            <Route path="/industries/barbershops" element={<Barbershops />} />
+            <Route path="/industries/day-spas" element={<DaySpas />} />
+            <Route path="/industries/tattoo-studios" element={<TattooStudios />} />
+            <Route path="/industries/yoga-pilates-studios" element={<YogaPilatesStudios />} />
+            <Route path="/industries/catering-services" element={<CateringServices />} />
+            <Route path="/industries/event-venues" element={<EventVenues />} />
+            <Route path="/industries/wedding-planners" element={<WeddingPlanners />} />
+            <Route path="/industries/boutique-hotels" element={<BoutiqueHotels />} />
+            <Route path="/industries/it-support-msps" element={<ITSupportMSPs />} />
+            <Route path="/industries/pet-groomers" element={<PetGroomers />} />
+            <Route path="/industries/private-tutors" element={<PrivateTutors />} />
             
             {/* Location pages */}
             <Route path="/locations" element={<LocationsPage />} />
