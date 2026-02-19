@@ -46,6 +46,7 @@ const AIReceptionistCoreIncludes = lazy(() => import("./pages/products/AIRecepti
 const AIReceptionistGrowthIncludes = lazy(() => import("./pages/products/AIReceptionistGrowthIncludes"));
 const AIReceptionistProIncludes = lazy(() => import("./pages/products/AIReceptionistProIncludes"));
 const CustomAIWorkflows = lazy(() => import("./pages/products/CustomAIWorkflows"));
+const AIReceptionistFeatureLibrary = lazy(() => import("./pages/products/AIReceptionistFeatureLibrary"));
 
 // Industry pages
 const IndustryIndex = lazy(() => import("./pages/industries/IndustryIndex"));
@@ -166,7 +167,7 @@ const App = () => (
             <Route path="/products/custom-ai-workflows" element={<Navigate to="/products/omnilogic" replace />} />
             <Route path="/products/custom-ai-workflows" element={<Navigate to="/products/omnilogic" replace />} />
             <Route path="/products/omnilogic" element={<CustomAIWorkflows />} />
-            
+            <Route path="/products/ai-receptionist/features/complete-library" element={<AIReceptionistFeatureLibrary />} />
             {/* Content/SEO pages */}
             <Route path="/about" element={<AboutPage />} />
             <Route path="/faq" element={<FAQPage />} />
