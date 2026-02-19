@@ -79,6 +79,18 @@ const routeLabels: Record<string, string> = {
   "towing-companies": "Towing Companies",
   "car-rental-agencies": "Car Rental Agencies",
   "driving-schools": "Driving Schools",
+  "hair-salons": "Hair Salons",
+  "barbershops": "Barbershops",
+  "day-spas": "Day Spas",
+  "tattoo-studios": "Tattoo Studios",
+  "yoga-pilates-studios": "Yoga & Pilates Studios",
+  "catering-services": "Catering Services",
+  "event-venues": "Event Venues",
+  "wedding-planners": "Wedding Planners",
+  "boutique-hotels": "Boutique Hotels",
+  "it-support-msps": "IT Support & MSPs",
+  "pet-groomers": "Pet Groomers",
+  "private-tutors": "Private Tutors",
 };
 
 const Breadcrumb = ({ items, className = "" }: BreadcrumbProps) => {
