@@ -69,6 +69,16 @@ const routeLabels: Record<string, string> = {
   "cpas-tax-professionals": "CPAs & Tax Professionals",
   "notary-publics": "Notary Publics",
   "private-investigators": "Private Investigators",
+  "residential-real-estate": "Residential Real Estate Agents",
+  "property-management": "Property Management Companies",
+  "commercial-real-estate": "Commercial Real Estate Brokers",
+  "mortgage-brokers": "Mortgage Brokers",
+  "home-inspectors": "Home Inspectors",
+  "auto-repair-shops": "Auto Repair Shops",
+  "mobile-detailers": "Mobile Detailers",
+  "towing-companies": "Towing Companies",
+  "car-rental-agencies": "Car Rental Agencies",
+  "driving-schools": "Driving Schools",
 };
 
 const Breadcrumb = ({ items, className = "" }: BreadcrumbProps) => {
