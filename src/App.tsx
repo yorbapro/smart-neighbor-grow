@@ -133,6 +133,10 @@ const AIReceptionistPricing = lazy(() => import("./pages/learning-center/AIRecep
 const SignsYouNeedAIReceptionist = lazy(() => import("./pages/learning-center/SignsYouNeedAIReceptionist"));
 const CalculateAIReceptionistROI = lazy(() => import("./pages/learning-center/CalculateAIReceptionistROI"));
 const PrecisionHVACSuccessStory = lazy(() => import("./pages/case-studies/PrecisionHVACSuccessStory"));
+const AIvsHumanReceptionist = lazy(() => import("./pages/learning-center/AIvsHumanReceptionist"));
+const AIvsAnsweringService = lazy(() => import("./pages/learning-center/AIvsAnsweringService"));
+const AIvsVirtualReceptionist = lazy(() => import("./pages/learning-center/AIvsVirtualReceptionist"));
+const AIReceptionistBuyersGuide = lazy(() => import("./pages/learning-center/AIReceptionistBuyersGuide"));
 
 // Admin pages (rarely accessed)
 const AdminAuth = lazy(() => import("./pages/AdminAuth"));
@@ -197,6 +201,10 @@ const App = () => (
             <Route path="/learning-center/business-growth/signs-you-need-ai-receptionist" element={<SignsYouNeedAIReceptionist />} />
             <Route path="/learning-center/business-growth/calculate-ai-receptionist-roi" element={<CalculateAIReceptionistROI />} />
             <Route path="/case-studies/precision-hvac-success-story" element={<PrecisionHVACSuccessStory />} />
+            <Route path="/learning-center/business-growth/ai-vs-human-receptionist" element={<AIvsHumanReceptionist />} />
+            <Route path="/learning-center/business-growth/ai-vs-answering-service" element={<AIvsAnsweringService />} />
+            <Route path="/learning-center/business-growth/ai-vs-virtual-receptionist" element={<AIvsVirtualReceptionist />} />
+            <Route path="/learning-center/business-growth/ai-receptionist-buyers-guide" element={<AIReceptionistBuyersGuide />} />
             <Route path="/learning-center/:slug" element={<BlogArticle />} />
             {/* Legacy redirects */}
             <Route path="/resources/blog" element={<Navigate to="/learning-center" replace />} />
