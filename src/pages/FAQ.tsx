@@ -4,16 +4,17 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import useSEO from "@/hooks/useSEO";
 
 const FAQ = () => {
-  useEffect(() => {
-    document.title = "FAQ | AI Receptionist, AI Voice Agent, Lead Generation & AEO Questions | BrightLaunchIQ";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", "Answers to common questions about AI receptionists, AI voice agents, AI lead generation, AI sales automation, Answer Engine Optimization (AEO), pricing, and how human-guided AI works for small businesses.");
-    }
+  useSEO({
+    title: "FAQ | AI Receptionist & Lead Generation | BrightLaunchIQ",
+    description: "Answers about AI receptionists, lead generation, sales automation, AEO pricing, and how human-guided AI works for small businesses.",
+    canonical: "https://brightlaunchiq.com/faq",
+    keywords: "AI receptionist FAQ, AI lead generation questions, AEO, human-guided AI, BrightLaunchIQ",
+  });
 
+  useEffect(() => {
     window.scrollTo(0, 0);
 
     // Comprehensive FAQ Schema for GEO

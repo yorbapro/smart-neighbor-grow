@@ -1,16 +1,6 @@
-import { useEffect } from "react";
 import LocationPage from "@/components/locations/LocationPage";
 
 const Bakersfield = () => {
-  useEffect(() => {
-    document.title = "AI Lead Generation Bakersfield CA | BrightLaunchIQ Bakersfield";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute("content", "AI lead generation and sales automation for Bakersfield businesses. Human-guided AI for energy, agriculture, industrial services in the 661 area. Respond to leads in 60 seconds.");
-    }
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <LocationPage
       city="Bakersfield"

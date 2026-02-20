@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import useSEO from "@/hooks/useSEO";
 import { 
   MapPin, 
   Phone, 
@@ -95,6 +96,14 @@ const LocationPage = ({
     metric: "3x",
     metricLabel: "More Leads"
   };
+
+  // SEO: proper canonical, title, and meta description
+  useSEO({
+    title: `AI Lead Generation ${city} ${state} | BrightLaunchIQ`,
+    description: `AI lead generation and sales automation for ${city} businesses. Human-guided AI for ${specialty.toLowerCase()} in the ${areaCode} area. 60-second response.`,
+    canonical: `https://brightlaunchiq.com/locations/${slug}`,
+    keywords: `AI lead generation ${city}, sales automation ${city} ${state}, ${specialty}, ${areaCode}`,
+  });
 
   useEffect(() => {
     // Remove existing schemas
@@ -238,6 +247,21 @@ const LocationPage = ({
     });
     document.head.appendChild(serviceScript);
 
+    // BreadcrumbList Schema
+    const breadcrumbScript = document.createElement("script");
+    breadcrumbScript.type = "application/ld+json";
+    breadcrumbScript.id = "breadcrumb-schema";
+    breadcrumbScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://brightlaunchiq.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://brightlaunchiq.com/locations" },
+        { "@type": "ListItem", "position": 3, "name": `${city}, ${state}`, "item": `https://brightlaunchiq.com/locations/${slug}` }
+      ]
+    });
+    document.head.appendChild(breadcrumbScript);
+
     // Organization Schema for authority
     const orgScript = document.createElement("script");
     orgScript.type = "application/ld+json";
@@ -260,7 +284,7 @@ const LocationPage = ({
     document.head.appendChild(orgScript);
 
     return () => {
-      ['local-business-schema', 'review-schema', 'faq-schema', 'service-schema', 'org-schema'].forEach(id => {
+      ['local-business-schema', 'review-schema', 'faq-schema', 'service-schema', 'breadcrumb-schema', 'org-schema'].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.remove();
       });
