@@ -4,11 +4,10 @@ import { ArrowRight, FileText, CheckCircle } from "lucide-react";
 
 const RevenueReadinessCTA = () => {
   return (
-    <section className="py-12 bg-gradient-hero-dark relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/3 w-[400px] h-[400px] bg-primary/15 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] bg-accent/10 rounded-full blur-[100px]" />
+    <section className="py-12 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, hsl(215, 28%, 12%) 0%, hsl(215, 28%, 7%) 50%, hsl(220, 30%, 3%) 100%)' }}>
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full opacity-18" style={{ background: 'radial-gradient(ellipse at center, hsl(212, 92%, 45%) 0%, transparent 70%)' }} />
+        <div className="absolute bottom-0 right-1/3 w-[500px] h-[300px] rounded-full opacity-12" style={{ background: 'radial-gradient(ellipse at center, hsl(260, 80%, 55%) 0%, transparent 70%)' }} />
       </div>
 
       <div className="container relative z-10">
