@@ -21,10 +21,10 @@ const Header = () => {
 
   const resourceLinks = [
     { label: "How It Works", href: "/resources/how-it-works" },
+    { label: "AI Receptionist Guide", href: "/learning-center/ai-receptionist-guide" },
     { label: "Learning Center", href: "/learning-center" },
     { label: "Case Studies", href: "/resources/case-studies" },
     { label: "Glossary", href: "/resources/glossary" },
-    
   ];
 
   const headerBg = isScrolled 
