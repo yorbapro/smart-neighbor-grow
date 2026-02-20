@@ -1,16 +1,6 @@
-import { useEffect } from "react";
 import LocationPage from "@/components/locations/LocationPage";
 
 const CulverCity = () => {
-  useEffect(() => {
-    document.title = "AI Lead Generation Culver City CA | BrightLaunchIQ Los Angeles";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute("content", "AI lead generation and sales automation for Culver City and LA Westside businesses. Human-guided AI for creative agencies, tech companies, and entertainment industry. 60-second lead response.");
-    }
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <LocationPage
       city="Culver City"

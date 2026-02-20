@@ -1,16 +1,6 @@
-import { useEffect } from "react";
 import LocationPage from "@/components/locations/LocationPage";
 
 const Stockton = () => {
-  useEffect(() => {
-    document.title = "AI Lead Generation Stockton CA | BrightLaunchIQ San Joaquin";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute("content", "AI lead generation and sales automation for Stockton businesses. Human-guided AI for logistics, distribution, agriculture, and manufacturing in the 209 area.");
-    }
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <LocationPage
       city="Stockton"

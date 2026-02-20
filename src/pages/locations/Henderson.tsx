@@ -1,16 +1,6 @@
-import { useEffect } from "react";
 import LocationPage from "@/components/locations/LocationPage";
 
 const Henderson = () => {
-  useEffect(() => {
-    document.title = "AI Lead Generation Henderson NV | BrightLaunchIQ Las Vegas Metro";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute("content", "AI lead generation and sales automation for Henderson and Las Vegas businesses. Human-guided AI for hospitality, real estate, healthcare, and professional services in the 702 area.");
-    }
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <LocationPage
       city="Henderson"

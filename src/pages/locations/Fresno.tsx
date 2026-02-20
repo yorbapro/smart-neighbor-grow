@@ -1,16 +1,6 @@
-import { useEffect } from "react";
 import LocationPage from "@/components/locations/LocationPage";
 
 const Fresno = () => {
-  useEffect(() => {
-    document.title = "AI Lead Generation Fresno CA | BrightLaunchIQ Central Valley";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute("content", "AI lead generation and sales automation for Fresno businesses. Human-guided AI for agriculture, healthcare, logistics, and professional services in the 559 area.");
-    }
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <LocationPage
       city="Fresno"

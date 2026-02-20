@@ -48,6 +48,7 @@ const Pricing = () => {
     const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
     existingScripts.forEach(script => script.remove());
 
+    // WebPage schema
     const pricingSchema = document.createElement("script");
     pricingSchema.type = "application/ld+json";
     pricingSchema.id = "pricing-schema";
@@ -60,9 +61,53 @@ const Pricing = () => {
     });
     document.head.appendChild(pricingSchema);
 
+    // BreadcrumbList schema
+    const breadcrumbSchema = document.createElement("script");
+    breadcrumbSchema.type = "application/ld+json";
+    breadcrumbSchema.id = "breadcrumb-schema";
+    breadcrumbSchema.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://brightlaunchiq.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://brightlaunchiq.com/pricing" }
+      ]
+    });
+    document.head.appendChild(breadcrumbSchema);
+
+    // Product + Offer schema for each tier
+    const productSchema = document.createElement("script");
+    productSchema.type = "application/ld+json";
+    productSchema.id = "product-schema";
+    productSchema.textContent = JSON.stringify(
+      LEADLINE_TIERS.map((tier) => ({
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": `BrightLaunchIQ AI Receptionist — ${tier.tierName}`,
+        "description": tier.tagline,
+        "brand": { "@type": "Brand", "name": "BrightLaunchIQ" },
+        "offers": {
+          "@type": "Offer",
+          "price": tier.monthlyPrice.toString(),
+          "priceCurrency": "USD",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": tier.monthlyPrice.toString(),
+            "priceCurrency": "USD",
+            "unitText": "MONTH"
+          },
+          "availability": "https://schema.org/InStock",
+          "url": "https://brightlaunchiq.com/pricing"
+        }
+      }))
+    );
+    document.head.appendChild(productSchema);
+
     return () => {
-      const el = document.getElementById("pricing-schema");
-      if (el) el.remove();
+      ['pricing-schema', 'breadcrumb-schema', 'product-schema'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.remove();
+      });
     };
   }, []);
 

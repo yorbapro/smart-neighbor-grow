@@ -1,16 +1,6 @@
-import { useEffect } from "react";
 import LocationPage from "@/components/locations/LocationPage";
 
 const Sacramento = () => {
-  useEffect(() => {
-    document.title = "AI Lead Generation Sacramento CA | BrightLaunchIQ Sacramento";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute("content", "AI lead generation and sales automation for Sacramento businesses. Human-guided AI responds in 60 seconds. Serving professional services, legal, accounting, and government contractors in the 916 area.");
-    }
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <LocationPage
       city="Sacramento"

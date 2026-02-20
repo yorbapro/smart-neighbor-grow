@@ -1,16 +1,6 @@
-import { useEffect } from "react";
 import LocationPage from "@/components/locations/LocationPage";
 
 const Monterey = () => {
-  useEffect(() => {
-    document.title = "AI Lead Generation Monterey CA | BrightLaunchIQ Central Coast";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute("content", "AI lead generation and sales automation for Monterey and Central Coast businesses. Human-guided AI for hospitality, tourism, agriculture, and professional services in the 831 area.");
-    }
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <LocationPage
       city="Monterey"
