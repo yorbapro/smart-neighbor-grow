@@ -102,8 +102,8 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Straight fade to background */}
-      <div className="absolute bottom-0 left-0 right-0 h-32" style={{ background: 'linear-gradient(180deg, transparent, hsl(0, 0%, 100%))' }} />
+      {/* Seamless fade into next dark section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32" style={{ background: 'linear-gradient(180deg, transparent, hsl(220, 30%, 3%))' }} />
     </section>
   );
 };

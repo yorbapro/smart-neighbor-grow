@@ -22,16 +22,16 @@ const valueBlocks = [
 
 const HomeSolution = () => {
   return (
-    <section className="py-16 md:py-24 bg-secondary">
+    <section className="py-16 md:py-24" style={{ background: 'linear-gradient(180deg, hsl(215, 28%, 7%) 0%, hsl(215, 28%, 12%) 50%, hsl(215, 28%, 7%) 100%)' }}>
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
             The Solution
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-foreground mb-4">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Meet Your 24/7
             <br />
-            <span className="text-gradient">AI Receptionist.</span>
+            <span className="text-primary">AI Receptionist.</span>
           </h2>
         </div>
 
@@ -39,15 +39,15 @@ const HomeSolution = () => {
           {valueBlocks.map((block) => (
             <div
               key={block.title}
-              className="relative rounded-2xl p-8 bg-secondary-foreground/5 border border-secondary-foreground/10 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] text-center"
+              className="relative rounded-2xl p-8 bg-white/5 border border-white/10 hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] text-center"
             >
               <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
                 <block.icon className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="font-display text-xl font-bold text-secondary-foreground mb-3">
+              <h3 className="font-display text-xl font-bold text-white mb-3">
                 {block.title}
               </h3>
-              <p className="text-sm text-secondary-foreground/70 leading-relaxed">
+              <p className="text-sm text-white/60 leading-relaxed">
                 {block.description}
               </p>
             </div>

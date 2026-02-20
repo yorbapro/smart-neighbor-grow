@@ -14,26 +14,25 @@ const comparisons = [
 
 const HomeComparison = () => {
   return (
-    <section className="py-16 md:py-24 bg-secondary">
+    <section className="py-16 md:py-24" style={{ background: 'linear-gradient(180deg, hsl(215, 28%, 7%) 0%, hsl(215, 28%, 12%) 50%, hsl(215, 28%, 7%) 100%)' }}>
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
             The Economics
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-foreground mb-4">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             AI Receptionist vs
             <br />
-            <span className="text-gradient">Hiring Front Desk Staff</span>
+            <span className="text-primary">Hiring Front Desk Staff</span>
           </h2>
         </div>
 
         <div className="max-w-3xl mx-auto mb-10">
-          <div className="rounded-2xl overflow-hidden border border-secondary-foreground/10">
-            {/* Header */}
-            <div className="grid grid-cols-3 bg-secondary-foreground/10 p-4">
-              <div className="text-sm font-bold text-secondary-foreground">Feature</div>
+          <div className="rounded-2xl overflow-hidden border border-white/10">
+            <div className="grid grid-cols-3 bg-white/10 p-4">
+              <div className="text-sm font-bold text-white">Feature</div>
               <div className="text-sm font-bold text-primary text-center">AI Receptionist</div>
-              <div className="text-sm font-bold text-secondary-foreground/60 text-center">Hiring Staff</div>
+              <div className="text-sm font-bold text-white/50 text-center">Hiring Staff</div>
             </div>
 
             {/* Rows */}
@@ -41,10 +40,10 @@ const HomeComparison = () => {
               <div
                 key={row.feature}
                 className={`grid grid-cols-3 p-4 items-center ${
-                  index % 2 === 0 ? "bg-secondary-foreground/5" : "bg-transparent"
+                  index % 2 === 0 ? "bg-white/5" : "bg-transparent"
                 }`}
               >
-                <div className="text-sm font-medium text-secondary-foreground">{row.feature}</div>
+                <div className="text-sm font-medium text-white">{row.feature}</div>
                 <div className="flex justify-center">
                   {row.aiText ? (
                     <span className="text-sm font-semibold text-primary">{row.aiText}</span>
@@ -60,7 +59,7 @@ const HomeComparison = () => {
                 </div>
                 <div className="flex justify-center">
                   {row.staffText ? (
-                    <span className="text-sm text-secondary-foreground/60">{row.staffText}</span>
+                    <span className="text-sm text-white/50">{row.staffText}</span>
                   ) : row.staff ? (
                     <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center">
                       <Check className="w-4 h-4 text-primary" />
@@ -77,7 +76,7 @@ const HomeComparison = () => {
         </div>
 
         <div className="text-center max-w-2xl mx-auto">
-          <p className="text-lg text-secondary-foreground/80 mb-8">
+          <p className="text-lg text-white/70 mb-8">
             For less than the cost of a part-time employee, you get a fully trained, always-available front desk.
           </p>
           <Button variant="hero" size="lg" asChild className="group">

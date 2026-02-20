@@ -351,7 +351,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen" style={{ background: 'hsl(215, 28%, 7%)' }}>
       <Header />
       <main id="main-content" role="main">
         <Hero />
