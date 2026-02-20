@@ -6,25 +6,12 @@ const businessOwnerPhoto = "/images/hero-business-owner.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-hero-dark">
-      {/* Background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 opacity-30">
-          <svg className="w-full h-full" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
-            <defs>
-              <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="hsl(187, 92%, 42%)" stopOpacity="0.6" />
-                <stop offset="50%" stopColor="hsl(210, 100%, 50%)" stopOpacity="0.3" />
-                <stop offset="100%" stopColor="hsl(38, 92%, 50%)" stopOpacity="0.1" />
-              </linearGradient>
-            </defs>
-            <path d="M-100 600 Q 300 400, 600 500 T 1000 400 T 1400 500 T 1900 300 T 2100 400" stroke="url(#lineGradient)" strokeWidth="2" fill="none" className="animate-pulse-soft" />
-            <path d="M-100 700 Q 400 500, 700 600 T 1100 500 T 1500 600 T 2000 400" stroke="url(#lineGradient)" strokeWidth="1.5" fill="none" className="animate-pulse-soft" style={{ animationDelay: "0.5s" }} />
-            <path d="M-100 800 Q 500 600, 800 700 T 1200 600 T 1600 700 T 2100 500" stroke="url(#lineGradient)" strokeWidth="1" fill="none" className="animate-pulse-soft" style={{ animationDelay: "1s" }} />
-          </svg>
-        </div>
-        <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 left-1/6 w-[400px] h-[400px] bg-accent/8 rounded-full blur-[100px]" />
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden" style={{ background: 'linear-gradient(180deg, hsl(215, 28%, 12%) 0%, hsl(215, 28%, 7%) 50%, hsl(220, 30%, 3%) 100%)' }}>
+      {/* GitHub-style glow effect */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[1200px] h-[600px] rounded-full opacity-20" style={{ background: 'radial-gradient(ellipse at center, hsl(212, 92%, 45%) 0%, transparent 70%)' }} />
+        <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full opacity-15" style={{ background: 'radial-gradient(ellipse at center, hsl(260, 80%, 55%) 0%, transparent 70%)' }} />
+        <div className="absolute top-[5%] left-[30%] w-[500px] h-[500px] rounded-full opacity-10" style={{ background: 'radial-gradient(ellipse at center, hsl(190, 80%, 45%) 0%, transparent 70%)' }} />
       </div>
 
       <div className="container relative z-10 pt-24 pb-16 md:pt-32 md:pb-24">
@@ -115,11 +102,8 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-24 overflow-hidden">
-        <svg viewBox="0 0 1440 120" className="absolute bottom-0 w-full h-full" preserveAspectRatio="none">
-          <path d="M0,60 C480,120 960,0 1440,60 L1440,120 L0,120 Z" className="fill-background" />
-        </svg>
-      </div>
+      {/* Straight fade to background */}
+      <div className="absolute bottom-0 left-0 right-0 h-32" style={{ background: 'linear-gradient(180deg, transparent, hsl(0, 0%, 100%))' }} />
     </section>
   );
 };
