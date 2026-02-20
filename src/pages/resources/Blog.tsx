@@ -117,7 +117,7 @@ const Blog = () => {
       description: "Weekly updates on AI voice technology, feature releases, industry trends, and actionable tips.",
       href: "/learning-center/news",
       icon: Newspaper,
-      articleCount: "Coming soon",
+      articleCount: "1 article",
       series: [],
       color: "text-accent-foreground",
       bgColor: "bg-accent/30",

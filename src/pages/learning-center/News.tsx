@@ -5,7 +5,18 @@ import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import useSEO from "@/hooks/useSEO";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Newspaper, Bell } from "lucide-react";
+import { ArrowRight, Calendar, Clock } from "lucide-react";
+
+const weeklyArticles = [
+  {
+    title: "The Zero-Pause Revolution: Why 2026 is the Year the \"Robot Voice\" Finally Died",
+    slug: "zero-pause-revolution",
+    date: "February 20, 2026",
+    readTime: "4 min read",
+    category: "Voice Insights",
+    excerpt: "Edge-Inference and Predictive Phonetics have slashed AI response times to under 500ms — and it's changing everything.",
+  },
+];
 
 const News = () => {
   useSEO({
@@ -61,38 +72,51 @@ const News = () => {
           </div>
         </section>
 
-        {/* Coming Soon State */}
-        <section className="py-20 md:py-32">
+        {/* Weekly Drops */}
+        <section className="py-12 md:py-20">
           <div className="container">
-            <div className="max-w-2xl mx-auto text-center">
-              <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-8">
-                <Newspaper className="w-10 h-10 text-primary" />
+            <div className="max-w-3xl mx-auto">
+              <div className="space-y-6">
+                {weeklyArticles.map((article) => (
+                  <Link
+                    key={article.slug}
+                    to={`/learning-center/${article.slug}`}
+                    className="group block bg-card rounded-2xl border border-border p-8 hover:shadow-card-hover hover:border-primary/30 transition-all"
+                  >
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="inline-block px-3 py-1 text-xs font-semibold bg-primary/10 text-primary rounded-full">{article.category}</span>
+                      <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                        <Calendar className="w-3.5 h-3.5" />
+                        {article.date}
+                      </span>
+                      <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                        <Clock className="w-3.5 h-3.5" />
+                        {article.readTime}
+                      </span>
+                    </div>
+                    <h2 className="font-display text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors mb-3">
+                      {article.title}
+                    </h2>
+                    <p className="text-muted-foreground text-sm mb-4">{article.excerpt}</p>
+                    <span className="text-sm font-semibold text-primary flex items-center gap-1">
+                      Read article <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </Link>
+                ))}
               </div>
-              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">Coming Soon</h2>
-              <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
-                Our weekly intelligence feed is launching soon. We'll cover AI voice technology breakthroughs, feature releases, industry case studies, and practical tips for getting the most from your AI receptionist.
-              </p>
-              <div className="bg-card rounded-xl border border-border p-6 mb-8">
-                <div className="flex items-center gap-3 mb-3">
-                  <Bell className="w-5 h-5 text-primary" />
-                  <h3 className="font-display font-semibold text-foreground">What to Expect</h3>
-                </div>
-                <ul className="text-sm text-muted-foreground space-y-2 text-left">
-                  <li>• <strong className="text-foreground">Weekly AI Digest:</strong> What's new in AI voice technology this week</li>
-                  <li>• <strong className="text-foreground">Feature Spotlights:</strong> Deep dives into new BrightLaunchIQ capabilities</li>
-                  <li>• <strong className="text-foreground">Industry Trends:</strong> How AI is reshaping specific verticals (HVAC, legal, dental)</li>
-                  <li>• <strong className="text-foreground">Quick Tips:</strong> Actionable advice you can implement today</li>
-                </ul>
-              </div>
-              <p className="text-sm text-muted-foreground mb-6">In the meantime, explore our evergreen guides:</p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Button variant="hero" size="default" asChild>
-                  <Link to="/learning-center/for-business">Business Guides<ArrowRight className="ml-2 w-4 h-4" /></Link>
-                </Button>
-                <Button variant="outline" size="default" asChild>
-                  <Link to="/learning-center/for-everyone">Consumer Guides<ArrowRight className="ml-2 w-4 h-4" /></Link>
-                </Button>
-              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-16 md:py-20">
+          <div className="container">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">Ready to See AI in Action?</h2>
+              <p className="text-muted-foreground mb-8">Get a free AEO audit and discover how visible your business is to AI assistants.</p>
+              <Button variant="hero" size="lg" asChild>
+                <Link to="/aeo-audit">Get Your Free Audit<ArrowRight className="ml-2 w-5 h-5" /></Link>
+              </Button>
             </div>
           </div>
         </section>
