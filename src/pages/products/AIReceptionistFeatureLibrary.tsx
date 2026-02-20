@@ -343,11 +343,12 @@ const AIReceptionistFeatureLibrary = () => {
             <h2 className="font-display text-2xl font-bold text-foreground mb-8 text-center">
               Explore by Plan
             </h2>
-            <div className="grid sm:grid-cols-3 gap-4">
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { label: "Core Features", href: "/products/ai-receptionist/core/features", color: "emerald", price: "$497/mo" },
-                { label: "Growth Features", href: "/products/ai-receptionist/growth/features", color: "blue", price: "$897/mo" },
-                { label: "Pro Features", href: "/products/ai-receptionist/pro/features", color: "red", price: "$1,497/mo" },
+                { label: "How It Works", href: "/products/ai-receptionist/how-it-works", price: "Step-by-step guide" },
+                { label: "Core Features", href: "/products/ai-receptionist/core/features", price: "$497/mo" },
+                { label: "Growth Features", href: "/products/ai-receptionist/growth/features", price: "$897/mo" },
+                { label: "Pro Features", href: "/products/ai-receptionist/pro/features", price: "$1,497/mo" },
               ].map((plan) => (
                 <Link
                   key={plan.label}
