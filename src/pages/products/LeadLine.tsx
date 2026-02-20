@@ -18,7 +18,7 @@ import {
 
 const LeadLine = () => {
   useEffect(() => {
-    document.title = "AI Receptionist for Small Business | 24/7 AI Phone Answering — BrightLaunchIQ";
+    document.title = "AI Receptionist — 24/7 AI Phone Answering | BrightLaunchIQ";
 
     const setMeta = (name: string, content: string, property = false) => {
       const attr = property ? "property" : "name";
@@ -31,7 +31,7 @@ const LeadLine = () => {
       meta.setAttribute("content", content);
     };
 
-    setMeta("description", "BrightLaunchIQ AI Receptionist answers every call 24/7, qualifies leads, books appointments, and routes urgent calls. Best AI receptionist for HVAC, plumbing, dental, legal, and service businesses. Setup in days, no contracts.");
+    setMeta("description", "24/7 AI receptionist that answers every call, books appointments, qualifies leads & routes urgent calls. Best for HVAC, dental, legal. No contracts.");
     setMeta("keywords", "AI receptionist, AI receptionist for small business, best AI receptionist, AI answering service, 24/7 AI receptionist, virtual receptionist AI, AI phone answering, AI call answering service, automated receptionist, AI receptionist cost, AI receptionist for HVAC, AI receptionist for contractors, AI receptionist for dentists, AI receptionist for law firms, AI receptionist for healthcare, AI receptionist for plumbers, AI receptionist vs virtual receptionist, AI receptionist vs answering service, AI front desk, AI appointment booking, after hours AI answering, missed call prevention AI");
     setMeta("og:title", "AI Receptionist for Small Business | BrightLaunchIQ", true);
     setMeta("og:description", "24/7 AI receptionist that answers every call, qualifies leads, and books appointments. Best for HVAC, dental, legal, and service businesses.", true);

@@ -65,16 +65,15 @@ const useSEO = ({
     setMeta("twitter:image", ogImage);
     setMeta("twitter:site", "@BrightLaunchIQ");
 
-    // Canonical link
+    // Canonical link — always set to prevent stale homepage canonical from index.html
+    const canonicalHref = canonical || `https://brightlaunchiq.com${window.location.pathname}`;
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (canonical) {
-      if (!canonicalLink) {
-        canonicalLink = document.createElement("link");
-        canonicalLink.setAttribute("rel", "canonical");
-        document.head.appendChild(canonicalLink);
-      }
-      canonicalLink.setAttribute("href", canonical);
+    if (!canonicalLink) {
+      canonicalLink = document.createElement("link");
+      canonicalLink.setAttribute("rel", "canonical");
+      document.head.appendChild(canonicalLink);
     }
+    canonicalLink.setAttribute("href", canonicalHref);
 
     // Speakable Schema for voice assistants
     if (speakable && speakable.length > 0) {

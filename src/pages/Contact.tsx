@@ -46,14 +46,23 @@ const Contact = () => {
   });
 
   useEffect(() => {
-    document.title = "Contact Us | BrightLaunchIQ - AI Lead Generation";
+    document.title = "Contact Us | BrightLaunchIQ AI Receptionist";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Contact BrightLaunchIQ for AI lead generation and sales automation. Get answers to your questions or schedule a free revenue audit."
+        "Contact BrightLaunchIQ for AI receptionist solutions. Get answers or schedule a free demo."
       );
     }
+
+    // Set canonical
+    let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!canonicalLink) {
+      canonicalLink = document.createElement("link");
+      canonicalLink.setAttribute("rel", "canonical");
+      document.head.appendChild(canonicalLink);
+    }
+    canonicalLink.setAttribute("href", "https://brightlaunchiq.com/contact");
 
     // Add keywords meta
     const existingKeywords = document.querySelector('meta[name="keywords"]');

@@ -98,7 +98,7 @@ const LocationsPage = () => {
             Regional Hubs
           </span>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-            AI Lead Generation <span className="text-primary">Near You</span>
+            AI Receptionist <span className="text-primary">Near You</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             Local expertise with world-class AI sales implementation. We understand your market 

@@ -27,12 +27,21 @@ const tierPsychology: Record<string, string> = {
 
 const Pricing = () => {
   useEffect(() => {
-    document.title = "Pricing — BrightLaunchIQ AI Receptionist | Simple Plans, Immediate ROI";
+    document.title = "AI Receptionist Pricing | BrightLaunchIQ";
 
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Simple AI Receptionist pricing. Core, Growth, and Pro plans with transparent setup fees. Less than the cost of one part-time employee. Available 24/7.");
+      metaDescription.setAttribute("content", "Simple AI Receptionist pricing. Core, Growth, and Pro plans. Less than one part-time employee. 24/7.");
     }
+
+    // Set canonical
+    let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!canonicalLink) {
+      canonicalLink = document.createElement("link");
+      canonicalLink.setAttribute("rel", "canonical");
+      document.head.appendChild(canonicalLink);
+    }
+    canonicalLink.setAttribute("href", "https://brightlaunchiq.com/pricing");
 
     window.scrollTo(0, 0);
 
