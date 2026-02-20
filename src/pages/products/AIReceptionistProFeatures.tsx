@@ -475,9 +475,14 @@ const AIReceptionistProFeatures = () => {
             <div className="p-6 rounded-2xl bg-primary/5 border border-primary/20 text-center">
               <p className="text-sm font-semibold text-primary mb-1">Want to see every feature across all tiers?</p>
               <p className="text-sm text-muted-foreground mb-4">Browse all 55+ features organized by capability category.</p>
-              <Button variant="outline" size="sm" asChild>
-                <Link to="/products/ai-receptionist/features/complete-library">View Complete Feature Library →</Link>
-              </Button>
+              <div className="flex flex-wrap gap-3 justify-center">
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/products/ai-receptionist/how-it-works">How It Works</Link>
+                </Button>
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/products/ai-receptionist/features/complete-library">Complete Library</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
