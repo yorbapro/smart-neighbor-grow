@@ -6,11 +6,11 @@
     <title>AI Receptionist for Small Business | 24/7 AI Phone Answering — BrightLaunchIQ</title>
     <meta name="description" content="BrightLaunchIQ AI Receptionist answers every call 24/7, qualifies leads, and books appointments automatically. The best AI receptionist for small businesses — HVAC, plumbing, dental, legal, and more. Setup in days, no contracts." />
     <meta name="author" content="BrightLaunchIQ" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="robots" content="noindex, nofollow" />
     <script>
-      // Block indexing on non-canonical domains (e.g., lovable.app staging)
-      if (window.location.hostname !== 'brightlaunchiq.com' && window.location.hostname !== 'www.brightlaunchiq.com') {
-        document.querySelector('meta[name="robots"]').setAttribute('content', 'noindex, nofollow');
+      // Allow indexing ONLY on the canonical domain
+      if (window.location.hostname === 'brightlaunchiq.com' || window.location.hostname === 'www.brightlaunchiq.com') {
+        document.querySelector('meta[name="robots"]').setAttribute('content', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
       }
     </script>
     <link rel="canonical" href="https://brightlaunchiq.com/" />
