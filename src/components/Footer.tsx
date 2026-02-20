@@ -23,7 +23,7 @@ const Footer = () => {
     resources: [
       { label: "How It Works", href: "/resources/how-it-works" },
       { label: "Case Studies", href: "/resources/case-studies" },
-      { label: "Learning Center", href: "/resources/blog" },
+      { label: "Learning Center", href: "/learning-center" },
       { label: "Glossary", href: "/resources/glossary" },
     ],
     company: [
