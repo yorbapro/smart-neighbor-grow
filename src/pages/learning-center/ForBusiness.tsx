@@ -72,6 +72,13 @@ const ForBusiness = () => {
     { title: "The Solution: How to Handle It All Without Losing Your Mind", slug: "the-solution-how-to-handle-it-all", author: "Marcus Reynolds", readTime: "4 min read", part: 6 },
   ];
 
+  const deepTrainingSeries = [
+    { title: "The Brand Persona: Giving Your AI a Soul, Not Just a Script", slug: "ai-brand-persona-training", author: "Dr. Sarah Chen", readTime: "5 min read", part: 1 },
+    { title: "The Physics of Phrasing: Masterclass in Cadence, Tone, and Prosody", slug: "ai-voice-cadence-prosody", author: "Dr. Sarah Chen", readTime: "6 min read", part: 2 },
+    { title: "The Guardrails of Excellence: Compliance, Messaging, and Strategic Control", slug: "ai-receptionist-compliance-guardrails", author: "David Thompson", readTime: "6 min read", part: 3 },
+    { title: "The Professional Edge: Why \"DIY\" AI is a Risky Business Move", slug: "professional-ai-training-vs-diy", author: "Marcus Reynolds", readTime: "6 min read", part: 4 },
+  ];
+
   const standaloneArticles = [
     { title: "How to Set Up an AI Receptionist for Your Small Business", slug: "how-to-set-up-ai-receptionist", author: "David Thompson", readTime: "8 min read", category: "AI Receptionist" },
     { title: "AI Lead Generation: How It Works and Why It Matters", slug: "ai-lead-generation-guide", author: "Marcus Reynolds", readTime: "6 min read", category: "AI Sales" },
@@ -165,6 +172,21 @@ const ForBusiness = () => {
               <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">The Future of Being Found</h2>
               <p className="text-muted-foreground mb-8 max-w-2xl">How AI is changing the way customers find local businesses. SEO, AEO, and GEO.</p>
               {renderSeriesGrid(aeoSeries, "text-primary", "bg-primary/10")}
+            </div>
+          </div>
+        </section>
+
+        {/* The Deep Training Blueprint */}
+        <section className="py-12 md:py-16 bg-gradient-to-b from-accent/20 to-transparent">
+          <div className="container">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex items-center gap-3 mb-2">
+                <BookOpen className="w-5 h-5 text-accent-foreground" />
+                <span className="text-sm font-semibold uppercase tracking-wider text-accent-foreground">4-Part Series</span>
+              </div>
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">The Deep Training Blueprint</h2>
+              <p className="text-muted-foreground mb-8 max-w-2xl">Brand persona, cadence mastery, compliance guardrails, and why professional training is the edge.</p>
+              {renderSeriesGrid(deepTrainingSeries, "text-accent-foreground", "bg-accent/30")}
             </div>
           </div>
         </section>
