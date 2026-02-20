@@ -137,6 +137,11 @@ const AIvsHumanReceptionist = lazy(() => import("./pages/learning-center/AIvsHum
 const AIvsAnsweringService = lazy(() => import("./pages/learning-center/AIvsAnsweringService"));
 const AIvsVirtualReceptionist = lazy(() => import("./pages/learning-center/AIvsVirtualReceptionist"));
 const AIReceptionistBuyersGuide = lazy(() => import("./pages/learning-center/AIReceptionistBuyersGuide"));
+const WhatIsAIReceptionist = lazy(() => import("./pages/learning-center/WhatIsAIReceptionist"));
+const HowAIReceptionistsWork = lazy(() => import("./pages/learning-center/HowAIReceptionistsWork"));
+const AIReceptionistBenefits = lazy(() => import("./pages/learning-center/AIReceptionistBenefits"));
+const AIVoiceQuality = lazy(() => import("./pages/learning-center/AIVoiceQuality"));
+const AIReceptionistSetupGuide = lazy(() => import("./pages/learning-center/AIReceptionistSetupGuide"));
 
 // Admin pages (rarely accessed)
 const AdminAuth = lazy(() => import("./pages/AdminAuth"));
@@ -205,6 +210,11 @@ const App = () => (
             <Route path="/learning-center/business-growth/ai-vs-answering-service" element={<AIvsAnsweringService />} />
             <Route path="/learning-center/business-growth/ai-vs-virtual-receptionist" element={<AIvsVirtualReceptionist />} />
             <Route path="/learning-center/business-growth/ai-receptionist-buyers-guide" element={<AIReceptionistBuyersGuide />} />
+            <Route path="/learning-center/business-growth/what-is-an-ai-receptionist" element={<WhatIsAIReceptionist />} />
+            <Route path="/learning-center/business-growth/how-ai-receptionists-work" element={<HowAIReceptionistsWork />} />
+            <Route path="/learning-center/business-growth/ai-receptionist-benefits" element={<AIReceptionistBenefits />} />
+            <Route path="/learning-center/consumer-guide/ai-voice-quality" element={<AIVoiceQuality />} />
+            <Route path="/learning-center/business-growth/ai-receptionist-setup-guide" element={<AIReceptionistSetupGuide />} />
             <Route path="/learning-center/:slug" element={<BlogArticle />} />
             {/* Legacy redirects */}
             <Route path="/resources/blog" element={<Navigate to="/learning-center" replace />} />
