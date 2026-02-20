@@ -9,9 +9,9 @@ const Hero = () => {
     <section className="relative min-h-[90vh] flex items-center overflow-hidden" style={{ background: 'linear-gradient(180deg, hsl(215, 28%, 12%) 0%, hsl(215, 28%, 7%) 50%, hsl(220, 30%, 3%) 100%)' }}>
       {/* GitHub-style glow effect */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[1200px] h-[600px] rounded-full opacity-20" style={{ background: 'radial-gradient(ellipse at center, hsl(212, 92%, 45%) 0%, transparent 70%)' }} />
-        <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full opacity-15" style={{ background: 'radial-gradient(ellipse at center, hsl(260, 80%, 55%) 0%, transparent 70%)' }} />
-        <div className="absolute top-[5%] left-[30%] w-[500px] h-[500px] rounded-full opacity-10" style={{ background: 'radial-gradient(ellipse at center, hsl(190, 80%, 45%) 0%, transparent 70%)' }} />
+        <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[600px] md:w-[1200px] h-[300px] md:h-[600px] rounded-full opacity-20" style={{ background: 'radial-gradient(ellipse at center, hsl(212, 92%, 45%) 0%, transparent 70%)' }} />
+        <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[400px] md:w-[800px] h-[200px] md:h-[400px] rounded-full opacity-15" style={{ background: 'radial-gradient(ellipse at center, hsl(260, 80%, 55%) 0%, transparent 70%)' }} />
+        <div className="absolute top-[5%] left-[20%] md:left-[30%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] rounded-full opacity-10" style={{ background: 'radial-gradient(ellipse at center, hsl(190, 80%, 45%) 0%, transparent 70%)' }} />
       </div>
 
       <div className="container relative z-10 pt-24 pb-16 md:pt-32 md:pb-24">

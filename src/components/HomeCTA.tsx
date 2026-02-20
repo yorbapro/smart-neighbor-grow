@@ -4,10 +4,10 @@ import { ArrowRight, Phone, Mail } from "lucide-react";
 
 const HomeCTA = () => {
   return (
-    <section className="py-24 md:py-32 bg-gradient-hero-dark relative overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/15 rounded-full blur-[150px]" />
-        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[120px]" />
+    <section className="py-24 md:py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, hsl(215, 28%, 12%) 0%, hsl(215, 28%, 7%) 50%, hsl(220, 30%, 3%) 100%)' }}>
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] rounded-full opacity-20" style={{ background: 'radial-gradient(ellipse at center, hsl(212, 92%, 45%) 0%, transparent 70%)' }} />
+        <div className="absolute bottom-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] rounded-full opacity-15" style={{ background: 'radial-gradient(ellipse at center, hsl(260, 80%, 55%) 0%, transparent 70%)' }} />
       </div>
 
       <div className="container relative z-10">
