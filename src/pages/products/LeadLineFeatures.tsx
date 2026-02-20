@@ -15,6 +15,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import useSEO from "@/hooks/useSEO";
 
 const coreFeatures = [
   {
@@ -256,17 +257,14 @@ const FeatureCategory = ({
 );
 
 const LeadLineFeatures = () => {
+  useSEO({
+    title: "AI Receptionist Features | BrightLaunchIQ",
+    description: "Explore every AI Receptionist feature — 24/7 AI call automation, lead qualification, smart scheduling, CRM integration, and AI phone answering capabilities.",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/features",
+    keywords: "AI receptionist features, AI call automation platform, AI phone answering features, AI receptionist capabilities, virtual receptionist features",
+  });
+
   useEffect(() => {
-    document.title = "LeadLine AI Features - Complete AI Receptionist Capabilities | BrightLaunchIQ";
-
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Explore every feature of LeadLine AI — 24/7 call answering, lead qualification, smart scheduling, CRM integration, analytics, and more. See why businesses trust our AI receptionist."
-      );
-    }
-
     window.scrollTo(0, 0);
   }, []);
 
@@ -285,11 +283,11 @@ const LeadLineFeatures = () => {
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Every Feature. Every Call Handled.
+              AI Receptionist Features
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              A complete breakdown of what LeadLine AI delivers — from intelligent call answering and lead qualification to CRM integrations and advanced analytics.
+              A complete breakdown of our AI call automation platform — from intelligent AI phone answering features and lead qualification to CRM integrations and advanced analytics.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
