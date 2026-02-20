@@ -178,13 +178,6 @@ const App = () => (
             <Route path="/omnilogic" element={<CustomAIWorkflows />} />
             <Route path="/ai-receptionist/features/complete-library" element={<AIReceptionistFeatureLibrary />} />
             <Route path="/ai-receptionist/how-it-works" element={<AIReceptionistHowItWorks />} />
-            {/* Legacy /products/ redirects */}
-            <Route path="/products/ai-receptionist/*" element={<Navigate to="/ai-receptionist" replace />} />
-            <Route path="/products/ai-sales-agent/*" element={<Navigate to="/ai-sales-agent" replace />} />
-            <Route path="/products/launchpad-360" element={<Navigate to="/launchpad-360" replace />} />
-            <Route path="/products/locallift" element={<Navigate to="/locallift" replace />} />
-            <Route path="/products/omnilogic" element={<Navigate to="/omnilogic" replace />} />
-            <Route path="/products/custom-ai-workflows" element={<Navigate to="/omnilogic" replace />} />
             {/* Content/SEO pages */}
             <Route path="/about" element={<AboutPage />} />
             <Route path="/faq" element={<FAQPage />} />
