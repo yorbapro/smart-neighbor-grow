@@ -321,7 +321,10 @@ const AIReceptionistCoreFeatures = () => {
             <div className="mt-12 p-6 rounded-2xl bg-primary/5 border border-primary/20 text-center">
               <p className="text-sm font-semibold text-primary mb-1">Want scheduling, CRM integration, and analytics?</p>
               <p className="text-sm text-muted-foreground mb-4">Upgrade to Growth or Pro to unlock premium capabilities.</p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <div className="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
+                <Button variant="outline" size="sm" asChild>
+                  <Link to="/products/ai-receptionist/how-it-works">How It Works</Link>
+                </Button>
                 <Button variant="outline" size="sm" asChild>
                   <Link to="/products/ai-receptionist/growth/features">Growth Features</Link>
                 </Button>
