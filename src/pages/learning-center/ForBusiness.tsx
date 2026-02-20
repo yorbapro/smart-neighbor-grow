@@ -82,6 +82,7 @@ const ForBusiness = () => {
   const standaloneArticles = [
     { title: "How to Set Up an AI Receptionist for Your Small Business", slug: "how-to-set-up-ai-receptionist", category: "AI Receptionist" },
     { title: "AI Lead Generation: How It Works and Why It Matters", slug: "ai-lead-generation-guide", category: "AI Sales" },
+    { title: "How AI Lead Generation Works: The Complete 6-Step Process", slug: "how-ai-lead-generation-works", category: "AI Sales" },
     { title: "Human-Guided AI vs Fully Automated: Which is Right?", slug: "human-guided-ai-vs-automated", category: "Strategy" },
     { title: "The Speed to Lead Problem: Why 78% of Leads Are Lost", slug: "speed-to-lead-problem", category: "Sales" },
     { title: "How to Optimize Your Google Business Profile for AI Search", slug: "gbp-optimization-ai", category: "AEO" },
