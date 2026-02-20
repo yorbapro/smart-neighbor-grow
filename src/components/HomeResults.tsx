@@ -11,17 +11,20 @@ const metrics = [
 
 const HomeResults = () => {
   return (
-    <section className="py-16 md:py-24 bg-muted/30">
-      <div className="container">
+    <section className="py-16 md:py-24 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, hsl(215, 28%, 7%) 0%, hsl(215, 28%, 12%) 50%, hsl(215, 28%, 7%) 100%)' }}>
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full opacity-15" style={{ background: 'radial-gradient(ellipse at center, hsl(212, 92%, 45%) 0%, transparent 70%)' }} />
+      </div>
+      <div className="container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="inline-flex items-center gap-2 uppercase text-xs font-bold tracking-[0.2em] text-primary mb-4">
             Results
             <span className="w-8 h-[2px] bg-primary" />
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Businesses Are Capturing
             <br />
-            <span className="text-gradient">More Revenue.</span>
+            <span className="text-primary">More Revenue.</span>
           </h2>
         </div>
 
@@ -29,13 +32,13 @@ const HomeResults = () => {
           {metrics.map((metric) => (
             <div
               key={metric.value}
-              className="relative p-8 rounded-2xl bg-card border border-border text-center group hover:border-primary/30 transition-colors"
+              className="relative p-8 rounded-2xl bg-white/5 border border-white/10 text-center group hover:border-primary/30 transition-colors"
             >
               <span className="text-3xl mb-4 block">{metric.emoji}</span>
-              <p className="font-display text-lg font-bold text-gradient mb-2">
+              <p className="font-display text-lg font-bold text-primary mb-2">
                 {metric.value}
               </p>
-              <p className="text-sm text-muted-foreground">{metric.label}</p>
+              <p className="text-sm text-white/60">{metric.label}</p>
             </div>
           ))}
         </div>
