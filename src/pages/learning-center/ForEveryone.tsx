@@ -43,11 +43,11 @@ const ForEveryone = () => {
   }, []);
 
   const consumerGuideSeries = [
-    { title: "The Death of the Busy Signal: How AI is Fixing the Customer Experience", excerpt: "Nobody wants to wait on hold for 10 minutes. AI eliminates hold times, lost messages, and the dreaded 'Please Hold' — forever.", slug: "death-of-busy-signal", author: "Elena Rodriguez", readTime: "4 min read", part: 1 },
-    { title: "Is it a Human or a Bot? Navigating the Era of Conversational AI", excerpt: "AI voices have evolved from robotic monotones to natural inflection. Here's how to navigate — and get the best results.", slug: "human-or-bot-conversational-ai", author: "Dr. Sarah Chen", readTime: "5 min read", part: 2 },
-    { title: "Your Data, Your Voice: Privacy and Security in the Age of AI Answering", excerpt: "Where does your audio go? Is AI always listening? Honest answers to the #1 consumer concern.", slug: "ai-receptionist-privacy-security", author: "David Thompson", readTime: "5 min read", part: 3 },
-    { title: "Accents, Dialects, and Accessibility: Why AI is More Inclusive than Humans", excerpt: "AI doesn't judge your accent, age, or speech pattern. It focuses solely on intent — in 50+ languages.", slug: "ai-accents-accessibility-inclusivity", author: "Elena Rodriguez", readTime: "5 min read", part: 4 },
-    { title: "The Future of Your Neighborhood: How AI Keeps Local Shops Alive", excerpt: "AI isn't taking jobs — it's helping the local mom-and-pop shop compete against Amazon and national franchises.", slug: "ai-keeps-local-shops-alive", author: "Marcus Reynolds", readTime: "5 min read", part: 5 },
+    { title: "The Death of the Busy Signal: How AI is Fixing the Customer Experience", excerpt: "Nobody wants to wait on hold for 10 minutes. AI eliminates hold times, lost messages, and the dreaded 'Please Hold' — forever.", slug: "death-of-busy-signal", part: 1 },
+    { title: "Is it a Human or a Bot? Navigating the Era of Conversational AI", excerpt: "AI voices have evolved from robotic monotones to natural inflection. Here's how to navigate — and get the best results.", slug: "human-or-bot-conversational-ai", part: 2 },
+    { title: "Your Data, Your Voice: Privacy and Security in the Age of AI Answering", excerpt: "Where does your audio go? Is AI always listening? Honest answers to the #1 consumer concern.", slug: "ai-receptionist-privacy-security", part: 3 },
+    { title: "Accents, Dialects, and Accessibility: Why AI is More Inclusive than Humans", excerpt: "AI doesn't judge your accent, age, or speech pattern. It focuses solely on intent — in 50+ languages.", slug: "ai-accents-accessibility-inclusivity", part: 4 },
+    { title: "The Future of Your Neighborhood: How AI Keeps Local Shops Alive", excerpt: "AI isn't taking jobs — it's helping the local mom-and-pop shop compete against Amazon and national franchises.", slug: "ai-keeps-local-shops-alive", part: 5 },
   ];
 
   return (
@@ -93,9 +93,6 @@ const ForEveryone = () => {
                       <div className="flex-1">
                         <h3 className="font-display text-lg md:text-xl font-semibold text-foreground group-hover:text-primary transition-colors mb-2">{article.title}</h3>
                         <p className="text-sm text-muted-foreground mb-3">{article.excerpt}</p>
-                        <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                          <span>{article.author}</span><span>•</span><span>{article.readTime}</span>
-                        </div>
                       </div>
                     </div>
                   </Link>
