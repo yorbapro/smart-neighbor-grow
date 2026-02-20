@@ -1,4 +1,5 @@
-import { Phone, MessageSquare, Calendar, ArrowRightLeft, Shield, Clock, Headphones } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Phone, MessageSquare, Calendar, ArrowRightLeft, Shield, Clock, Headphones, ArrowRight } from "lucide-react";
 
 const demoFeatures = [
   {
@@ -139,12 +140,26 @@ const HomeLiveDemo = () => {
             <h3 className="font-display text-lg font-semibold text-white mb-3">
               What You'll Experience
             </h3>
-            <p className="text-white/60 leading-relaxed text-sm md:text-base">
+            <p className="text-white/60 leading-relaxed text-sm md:text-base mb-4">
               Our AI receptionist uses advanced natural language processing to
               understand and respond to callers just like a human receptionist
               would — but it never takes a break, never calls in sick, and
               handles unlimited calls simultaneously.
             </p>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <Link
+                to="/ai-receptionist-readiness-assessment"
+                className="text-primary text-sm font-semibold hover:underline inline-flex items-center gap-1"
+              >
+                Take the Free AI Receptionist Assessment <ArrowRight className="w-3 h-3" />
+              </Link>
+              <Link
+                to="/pricing"
+                className="text-white/50 text-sm font-semibold hover:text-white/80 hover:underline inline-flex items-center gap-1"
+              >
+                View AI Receptionist Pricing <ArrowRight className="w-3 h-3" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
