@@ -46,8 +46,8 @@ const CTA = () => {
           </div>
 
           <Button variant="hero" size="xl" asChild className="group">
-            <Link to="/get-started">
-              Book Strategy Call
+            <Link to="/ai-receptionist-readiness-assessment" aria-label="Book your AI receptionist demo">
+              Book Your AI Receptionist Demo
               <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>

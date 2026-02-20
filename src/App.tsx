@@ -37,6 +37,7 @@ const LocationsPage = lazy(() => import("./pages/Locations"));
 const FAQPage = lazy(() => import("./pages/FAQ"));
 const AEOAudit = lazy(() => import("./pages/AEOAudit"));
 const Onboarding = lazy(() => import("./pages/Onboarding"));
+const AIReceptionistAssessment = lazy(() => import("./pages/AIReceptionistAssessment"));
 
 // Product pages
 const LaunchPad360 = lazy(() => import("./pages/products/LaunchPad360"));
@@ -160,6 +161,7 @@ const App = () => (
             <Route path="/aeo-audit" element={<AEOAudit />} />
             <Route path="/onboarding" element={<Onboarding />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/ai-receptionist-readiness-assessment" element={<AIReceptionistAssessment />} />
             
             {/* Product pages */}
             <Route path="/launchpad-360" element={<LaunchPad360 />} />

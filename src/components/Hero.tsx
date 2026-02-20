@@ -37,13 +37,13 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row items-start gap-4 mb-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
               <Button variant="hero" size="xl" asChild className="group">
-                <Link to="/get-started">
-                  Get Started
+                <Link to="/ai-receptionist-readiness-assessment" aria-label="Take the free AI Receptionist Readiness Assessment">
+                  Take the Free AI Receptionist Assessment
                   <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
               <Button variant="heroOutline" size="xl" asChild>
-                <Link to="#how-it-works">See How It Works</Link>
+                <a href="tel:1-877-879-5552" aria-label="Talk to a live AI receptionist now">Talk to a Live AI Receptionist Now</a>
               </Button>
             </div>
 

@@ -20,7 +20,7 @@ const RevenueReadinessCTA = () => {
                 Free Revenue Readiness Audit
               </div>
               <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">
-                Discover Your Hidden Revenue Potential
+                Is Your Business Ready for an AI Receptionist?
               </h2>
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start text-white/80 text-sm mb-6">
                 <div className="flex items-center gap-2">
@@ -41,8 +41,8 @@ const RevenueReadinessCTA = () => {
             {/* CTA Button */}
             <div className="flex-shrink-0">
               <Button variant="hero" size="xl" asChild className="group">
-                <Link to="/get-started">
-                  Schedule My Revenue Audit
+                <Link to="/ai-receptionist-readiness-assessment" aria-label="Take the AI receptionist readiness assessment">
+                  Take the AI Receptionist Assessment
                   <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
