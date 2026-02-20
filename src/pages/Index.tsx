@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import HomeProblem from "@/components/HomeProblem";
 import HomeSolution from "@/components/HomeSolution";
 import HomeHowItWorks from "@/components/HomeHowItWorks";
+import HomeLiveDemo from "@/components/HomeLiveDemo";
 import HomeComparison from "@/components/HomeComparison";
 import HomeIdealFor from "@/components/HomeIdealFor";
 import HomeResults from "@/components/HomeResults";
@@ -358,6 +359,7 @@ const Index = () => {
         <HomeProblem />
         <HomeSolution />
         <HomeHowItWorks />
+        <HomeLiveDemo />
         <HomeComparison />
         <HomeIdealFor />
         <HomeResults />
