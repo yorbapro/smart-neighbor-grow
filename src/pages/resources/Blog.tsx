@@ -60,7 +60,7 @@ const Blog = () => {
       "mainEntity": {
         "@type": "ItemList",
         "name": "Learning Center Articles",
-        "numberOfItems": 24,
+        "numberOfItems": 29,
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -205,6 +205,36 @@ const Blog = () => {
             "position": 24,
             "name": "From Sign-up to Dial-tone: The 10-Minute Implementation",
             "url": "https://brightlaunchiq.com/resources/blog/ten-minute-implementation"
+          },
+          {
+            "@type": "ListItem",
+            "position": 25,
+            "name": "The Death of the Busy Signal: How AI is Fixing the Customer Experience",
+            "url": "https://brightlaunchiq.com/resources/blog/death-of-busy-signal"
+          },
+          {
+            "@type": "ListItem",
+            "position": 26,
+            "name": "Is it a Human or a Bot? Navigating the Era of Conversational AI",
+            "url": "https://brightlaunchiq.com/resources/blog/human-or-bot-conversational-ai"
+          },
+          {
+            "@type": "ListItem",
+            "position": 27,
+            "name": "Your Data, Your Voice: Privacy and Security in the Age of AI Answering",
+            "url": "https://brightlaunchiq.com/resources/blog/ai-receptionist-privacy-security"
+          },
+          {
+            "@type": "ListItem",
+            "position": 28,
+            "name": "Accents, Dialects, and Accessibility: Why AI is More Inclusive than Humans",
+            "url": "https://brightlaunchiq.com/resources/blog/ai-accents-accessibility-inclusivity"
+          },
+          {
+            "@type": "ListItem",
+            "position": 29,
+            "name": "The Future of Your Neighborhood: How AI Keeps Local Shops Alive",
+            "url": "https://brightlaunchiq.com/resources/blog/ai-keeps-local-shops-alive"
           }
         ]
       },
@@ -520,6 +550,60 @@ const Blog = () => {
     },
   ];
 
+  // The Consumer's Guide to AI Receptionists Series
+  const consumerGuideSeries = [
+    {
+      title: "The Death of the Busy Signal: How AI is Fixing the Customer Experience",
+      excerpt: "Nobody wants to wait on hold for 10 minutes. AI eliminates hold times, lost messages, and the dreaded 'Please Hold' — forever.",
+      slug: "death-of-busy-signal",
+      author: "Elena Rodriguez",
+      date: "February 20, 2026",
+      readTime: "4 min read",
+      category: "Consumer's Guide",
+      part: 1,
+    },
+    {
+      title: "Is it a Human or a Bot? Navigating the Era of Conversational AI",
+      excerpt: "AI voices have evolved from robotic monotones to natural inflection. Here's how to navigate — and get the best results.",
+      slug: "human-or-bot-conversational-ai",
+      author: "Dr. Sarah Chen",
+      date: "February 19, 2026",
+      readTime: "5 min read",
+      category: "Consumer's Guide",
+      part: 2,
+    },
+    {
+      title: "Your Data, Your Voice: Privacy and Security in the Age of AI Answering",
+      excerpt: "Where does your audio go? Is AI always listening? Honest answers to the #1 consumer concern about AI receptionists.",
+      slug: "ai-receptionist-privacy-security",
+      author: "David Thompson",
+      date: "February 18, 2026",
+      readTime: "5 min read",
+      category: "Consumer's Guide",
+      part: 3,
+    },
+    {
+      title: "Accents, Dialects, and Accessibility: Why AI is More Inclusive than Humans",
+      excerpt: "AI doesn't judge your accent, age, or speech pattern. It focuses solely on intent — in 50+ languages.",
+      slug: "ai-accents-accessibility-inclusivity",
+      author: "Elena Rodriguez",
+      date: "February 17, 2026",
+      readTime: "5 min read",
+      category: "Consumer's Guide",
+      part: 4,
+    },
+    {
+      title: "The Future of Your Neighborhood: How AI Keeps Local Shops Alive",
+      excerpt: "AI isn't taking jobs — it's helping the local mom-and-pop shop compete against Amazon and national franchises.",
+      slug: "ai-keeps-local-shops-alive",
+      author: "Marcus Reynolds",
+      date: "February 16, 2026",
+      readTime: "5 min read",
+      category: "Consumer's Guide",
+      part: 5,
+    },
+  ];
+
   const articles = [
     {
       title: "How to Set Up an AI Receptionist for Your Small Business",
@@ -668,6 +752,55 @@ const Blog = () => {
                   >
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg">
+                        {article.part}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-display text-base font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2 mb-1">
+                          {article.title}
+                        </h3>
+                        <p className="text-xs text-muted-foreground line-clamp-2">
+                          {article.excerpt}
+                        </p>
+                        <div className="flex items-center gap-2 mt-2 text-xs text-muted-foreground">
+                          <span>{article.author}</span>
+                          <span>•</span>
+                          <span>{article.readTime}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Series: The Consumer's Guide to AI Receptionists */}
+        <section className="py-12 md:py-16 bg-gradient-to-b from-destructive/5 to-transparent">
+          <div className="container">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex items-center gap-3 mb-2">
+                <BookOpen className="w-5 h-5 text-destructive" />
+                <span className="text-sm font-semibold uppercase tracking-wider text-destructive">
+                  New 5-Part Series
+                </span>
+              </div>
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">
+                The Consumer's Guide to AI Receptionists
+              </h2>
+              <p className="text-muted-foreground mb-8 max-w-2xl">
+                Written for consumers, not businesses. Privacy, accessibility, voice quality, and how AI is keeping your neighborhood shops alive.
+              </p>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {consumerGuideSeries.map((article) => (
+                  <Link
+                    key={article.slug}
+                    to={`/resources/blog/${article.slug}`}
+                    className="group bg-card rounded-xl border border-border p-5 hover:shadow-card-hover hover:border-primary/30 transition-all"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-destructive/10 flex items-center justify-center text-destructive font-bold text-lg">
                         {article.part}
                       </div>
                       <div className="flex-1 min-w-0">
