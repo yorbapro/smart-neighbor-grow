@@ -121,6 +121,7 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
             <p className="mt-6 text-lg md:text-xl text-white/70 max-w-2xl">
               Your customers call when they need you — nights, weekends, holidays. Every missed call is lost revenue.
               Our AI Receptionist answers 24/7, qualifies leads, and books appointments in real time.
+              BrightLaunchIQ provides AI call handling for {name.toLowerCase()} so you never lose another lead.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button variant="hero" size="lg" asChild>
