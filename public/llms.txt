@@ -408,6 +408,7 @@ AI receptionist, AI voice agent, virtual receptionist AI, AI phone answering, AI
 - Products: https://brightlaunchiq.com/products/launchpad-360
 - AI Receptionist: https://brightlaunchiq.com/products/ai-receptionist
 - AI Receptionist Complete Feature Library: https://brightlaunchiq.com/products/ai-receptionist/features/complete-library
+- AI Receptionist How It Works: https://brightlaunchiq.com/products/ai-receptionist/how-it-works
 - AI Sales Agent: https://brightlaunchiq.com/products/ai-sales-agent
 - LocalLift: https://brightlaunchiq.com/products/locallift
 - OmniLogic: https://brightlaunchiq.com/products/custom-ai-workflows

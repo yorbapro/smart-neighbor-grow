@@ -24,6 +24,7 @@ const routeLabels: Record<string, string> = {
   "products": "Products",
   "launchpad-360": "LaunchPad 360™",
   "locallift": "LocalLift™",
+  "ai-receptionist": "AI Receptionist",
   "resources": "Resources",
   "blog": "Blog",
   "glossary": "Glossary",
