@@ -87,6 +87,7 @@ const ForBusiness = () => {
     { title: "How to Optimize Your Google Business Profile for AI Search", slug: "gbp-optimization-ai", category: "AEO" },
     { title: "CRM Integration Best Practices for AI Sales Automation", slug: "crm-integration-ai", category: "Technology" },
     { title: "What is Answer Engine Optimization (AEO)? Complete Guide", slug: "what-is-aeo", category: "AEO" },
+    { title: "AI Lead Generation vs Traditional Marketing", slug: "comparison", category: "Strategy", href: "/resources/comparison" },
   ];
 
   const renderSeriesGrid = (series: typeof voiceAgentSeries, colorClass: string, bgClass: string) => (
@@ -198,7 +199,7 @@ const ForBusiness = () => {
                   <article key={article.slug} className="bg-background rounded-xl border border-border p-6 hover:shadow-card-hover transition-shadow">
                     <span className="inline-block px-2 py-1 text-xs font-semibold bg-primary/10 text-primary rounded mb-3">{article.category}</span>
                     <h3 className="font-display text-lg font-bold text-foreground mb-2">
-                      <Link to={`/learning-center/${article.slug}`} className="hover:text-primary transition-colors">{article.title}</Link>
+                      <Link to={(article as any).href || `/learning-center/${article.slug}`} className="hover:text-primary transition-colors">{article.title}</Link>
                     </h3>
                   </article>
                 ))}
