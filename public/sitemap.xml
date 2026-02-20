@@ -135,7 +135,7 @@
 
   <!-- AI Receptionist Feature Library -->
   <url>
-    <loc>https://brightlaunchiq.com/products/ai-receptionist/features/complete-library</loc>
+    <loc>https://brightlaunchiq.com/ai-receptionist/features/complete-library</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -143,7 +143,7 @@
 
   <!-- AI Receptionist How It Works -->
   <url>
-    <loc>https://brightlaunchiq.com/products/ai-receptionist/how-it-works</loc>
+    <loc>https://brightlaunchiq.com/ai-receptionist/how-it-works</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -151,35 +151,35 @@
 
   <!-- Product Pages -->
   <url>
-    <loc>https://brightlaunchiq.com/products/launchpad-360</loc>
+    <loc>https://brightlaunchiq.com/launchpad-360</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://brightlaunchiq.com/products/ai-receptionist</loc>
+    <loc>https://brightlaunchiq.com/ai-receptionist</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://brightlaunchiq.com/products/ai-sales-agent</loc>
+    <loc>https://brightlaunchiq.com/ai-sales-agent</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://brightlaunchiq.com/products/locallift</loc>
+    <loc>https://brightlaunchiq.com/locallift</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://brightlaunchiq.com/products/custom-ai-workflows</loc>
+    <loc>https://brightlaunchiq.com/omnilogic</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

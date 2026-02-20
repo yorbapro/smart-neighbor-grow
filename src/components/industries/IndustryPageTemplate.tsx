@@ -129,7 +129,7 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
                 </Link>
               </Button>
               <Button variant="heroOutline" size="lg" asChild className="border-white/20 text-white hover:bg-white/10">
-                <Link to="/products/ai-receptionist">Learn About AI Receptionist</Link>
+                <Link to="/ai-receptionist">Learn About AI Receptionist</Link>
               </Button>
             </div>
           </div>
@@ -223,7 +223,7 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
             </h2>
             <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-8">
               BrightLaunchIQ serves the entire {sectorLabel} sector. Our{" "}
-              <Link to="/products/ai-receptionist" className="text-primary font-semibold hover:underline">
+              <Link to="/ai-receptionist" className="text-primary font-semibold hover:underline">
                 AI Receptionist
               </Link>{" "}
               is purpose-built for businesses that depend on incoming calls to generate revenue.

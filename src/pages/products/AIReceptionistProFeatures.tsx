@@ -302,7 +302,7 @@ const AIReceptionistProFeatures = () => {
       "@type": "WebPage",
       "name": "BrightLaunchIQ AI Receptionist Pro Features",
       "description": "Complete feature breakdown of the AI Receptionist Pro plan — multi-location, custom voice, advanced analytics, and priority support.",
-      "url": "https://brightlaunchiq.com/products/ai-receptionist/pro/features"
+      "url": "https://brightlaunchiq.com/ai-receptionist/pro/features"
     });
     document.head.appendChild(schema);
 
@@ -477,10 +477,10 @@ const AIReceptionistProFeatures = () => {
               <p className="text-sm text-muted-foreground mb-4">Browse all 55+ features organized by capability category.</p>
               <div className="flex flex-wrap gap-3 justify-center">
                 <Button variant="outline" size="sm" asChild>
-                  <Link to="/products/ai-receptionist/how-it-works">How It Works</Link>
+                  <Link to="/ai-receptionist/how-it-works">How It Works</Link>
                 </Button>
                 <Button variant="outline" size="sm" asChild>
-                  <Link to="/products/ai-receptionist/features/complete-library">Complete Library</Link>
+                  <Link to="/ai-receptionist/features/complete-library">Complete Library</Link>
                 </Button>
               </div>
             </div>

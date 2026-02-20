@@ -205,7 +205,7 @@ const AIReceptionistCoreFeatures = () => {
       "@type": "WebPage",
       "name": "BrightLaunchIQ AI Receptionist Core Features",
       "description": "Complete feature breakdown of the AI Receptionist Core plan — intelligent call answering, lead capture, routing, and security.",
-      "url": "https://brightlaunchiq.com/products/ai-receptionist/core/features"
+      "url": "https://brightlaunchiq.com/ai-receptionist/core/features"
     });
     document.head.appendChild(schema);
 
@@ -323,16 +323,16 @@ const AIReceptionistCoreFeatures = () => {
               <p className="text-sm text-muted-foreground mb-4">Upgrade to Growth or Pro to unlock premium capabilities.</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
                 <Button variant="outline" size="sm" asChild>
-                  <Link to="/products/ai-receptionist/how-it-works">How It Works</Link>
+                  <Link to="/ai-receptionist/how-it-works">How It Works</Link>
                 </Button>
                 <Button variant="outline" size="sm" asChild>
-                  <Link to="/products/ai-receptionist/growth/features">Growth Features</Link>
+                  <Link to="/ai-receptionist/growth/features">Growth Features</Link>
                 </Button>
                 <Button variant="outline" size="sm" asChild>
-                  <Link to="/products/ai-receptionist/pro/features">Pro Features</Link>
+                  <Link to="/ai-receptionist/pro/features">Pro Features</Link>
                 </Button>
                 <Button variant="outline" size="sm" asChild>
-                  <Link to="/products/ai-receptionist/features/complete-library">Complete Library</Link>
+                  <Link to="/ai-receptionist/features/complete-library">Complete Library</Link>
                 </Button>
               </div>
             </div>

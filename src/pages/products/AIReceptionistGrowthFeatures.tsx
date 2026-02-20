@@ -267,7 +267,7 @@ const AIReceptionistGrowthFeatures = () => {
       "@type": "WebPage",
       "name": "BrightLaunchIQ AI Receptionist Growth Features",
       "description": "Complete feature breakdown of the AI Receptionist Growth plan — scheduling, CRM integration, analytics, and more.",
-      "url": "https://brightlaunchiq.com/products/ai-receptionist/growth/features"
+      "url": "https://brightlaunchiq.com/ai-receptionist/growth/features"
     });
     document.head.appendChild(schema);
 
@@ -409,13 +409,13 @@ const AIReceptionistGrowthFeatures = () => {
               <p className="text-sm text-muted-foreground mb-4">Upgrade to Pro for enterprise-grade AI phone infrastructure.</p>
               <div className="flex flex-wrap gap-3 justify-center">
                 <Button variant="outline" size="sm" asChild>
-                  <Link to="/products/ai-receptionist/how-it-works">How It Works</Link>
+                  <Link to="/ai-receptionist/how-it-works">How It Works</Link>
                 </Button>
                 <Button variant="outline" size="sm" asChild>
-                  <Link to="/products/ai-receptionist/pro/features">Pro Features</Link>
+                  <Link to="/ai-receptionist/pro/features">Pro Features</Link>
                 </Button>
                 <Button variant="outline" size="sm" asChild>
-                  <Link to="/products/ai-receptionist/features/complete-library">Complete Library</Link>
+                  <Link to="/ai-receptionist/features/complete-library">Complete Library</Link>
                 </Button>
               </div>
             </div>

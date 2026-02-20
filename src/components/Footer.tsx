@@ -6,10 +6,10 @@ const Footer = () => {
 
   const footerLinks = {
     solutions: [
-      { label: "LaunchPad 360™", href: "/products/launchpad-360" },
-      { label: "AI Receptionist", href: "/products/ai-receptionist" },
-      { label: "LocalLift™", href: "/products/locallift" },
-      { label: "OmniLogic™", href: "/products/omnilogic" },
+      { label: "LaunchPad 360™", href: "/launchpad-360" },
+      { label: "AI Receptionist", href: "/ai-receptionist" },
+      { label: "LocalLift™", href: "/locallift" },
+      { label: "OmniLogic™", href: "/omnilogic" },
       { label: "Free AI Audit", href: "/aeo-audit" },
     ],
     industries: [

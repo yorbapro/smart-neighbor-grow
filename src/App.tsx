@@ -162,23 +162,29 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             
             {/* Product pages */}
-            <Route path="/products/launchpad-360" element={<LaunchPad360 />} />
-            <Route path="/products/locallift" element={<LocalLift />} />
-            <Route path="/products/ai-receptionist" element={<LeadLine />} />
-            <Route path="/products/ai-sales-agent" element={<LeadLineProactive />} />
-            <Route path="/products/ai-sales-agent/features" element={<LeadLineProactiveFeatures />} />
-            <Route path="/products/ai-receptionist/features" element={<LeadLineFeatures />} />
-            <Route path="/products/ai-receptionist/core/features" element={<AIReceptionistCoreFeatures />} />
-            <Route path="/products/ai-receptionist/growth/features" element={<AIReceptionistGrowthFeatures />} />
-            <Route path="/products/ai-receptionist/pro/features" element={<AIReceptionistProFeatures />} />
-            <Route path="/products/ai-receptionist/core/whats-included" element={<AIReceptionistCoreIncludes />} />
-            <Route path="/products/ai-receptionist/growth/whats-included" element={<AIReceptionistGrowthIncludes />} />
-            <Route path="/products/ai-receptionist/pro/whats-included" element={<AIReceptionistProIncludes />} />
-            <Route path="/products/custom-ai-workflows" element={<Navigate to="/products/omnilogic" replace />} />
-            <Route path="/products/custom-ai-workflows" element={<Navigate to="/products/omnilogic" replace />} />
-            <Route path="/products/omnilogic" element={<CustomAIWorkflows />} />
-            <Route path="/products/ai-receptionist/features/complete-library" element={<AIReceptionistFeatureLibrary />} />
-            <Route path="/products/ai-receptionist/how-it-works" element={<AIReceptionistHowItWorks />} />
+            <Route path="/launchpad-360" element={<LaunchPad360 />} />
+            <Route path="/locallift" element={<LocalLift />} />
+            <Route path="/ai-receptionist" element={<LeadLine />} />
+            <Route path="/ai-sales-agent" element={<LeadLineProactive />} />
+            <Route path="/ai-sales-agent/features" element={<LeadLineProactiveFeatures />} />
+            <Route path="/ai-receptionist/features" element={<LeadLineFeatures />} />
+            <Route path="/ai-receptionist/core/features" element={<AIReceptionistCoreFeatures />} />
+            <Route path="/ai-receptionist/growth/features" element={<AIReceptionistGrowthFeatures />} />
+            <Route path="/ai-receptionist/pro/features" element={<AIReceptionistProFeatures />} />
+            <Route path="/ai-receptionist/core/whats-included" element={<AIReceptionistCoreIncludes />} />
+            <Route path="/ai-receptionist/growth/whats-included" element={<AIReceptionistGrowthIncludes />} />
+            <Route path="/ai-receptionist/pro/whats-included" element={<AIReceptionistProIncludes />} />
+            <Route path="/custom-ai-workflows" element={<Navigate to="/omnilogic" replace />} />
+            <Route path="/omnilogic" element={<CustomAIWorkflows />} />
+            <Route path="/ai-receptionist/features/complete-library" element={<AIReceptionistFeatureLibrary />} />
+            <Route path="/ai-receptionist/how-it-works" element={<AIReceptionistHowItWorks />} />
+            {/* Legacy /products/ redirects */}
+            <Route path="/products/ai-receptionist/*" element={<Navigate to="/ai-receptionist" replace />} />
+            <Route path="/products/ai-sales-agent/*" element={<Navigate to="/ai-sales-agent" replace />} />
+            <Route path="/products/launchpad-360" element={<Navigate to="/launchpad-360" replace />} />
+            <Route path="/products/locallift" element={<Navigate to="/locallift" replace />} />
+            <Route path="/products/omnilogic" element={<Navigate to="/omnilogic" replace />} />
+            <Route path="/products/custom-ai-workflows" element={<Navigate to="/omnilogic" replace />} />
             {/* Content/SEO pages */}
             <Route path="/about" element={<AboutPage />} />
             <Route path="/faq" element={<FAQPage />} />

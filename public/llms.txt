@@ -65,7 +65,7 @@ Boost your visibility in AI search, voice assistants, and Google Maps.
 - Review management and reputation building
 
 **CTA**: Schedule My 15-Minute Revenue Audit
-**URL**: https://brightlaunchiq.com/products/locallift
+**URL**: https://brightlaunchiq.com/locallift
 
 ---
 
@@ -125,7 +125,7 @@ An AI receptionist is an artificial intelligence system that answers phone calls
 | Scalability | Limited | Unlimited |
 
 **CTA**: Talk to Our AI Receptionist (Live Demo)
-**URL**: https://brightlaunchiq.com/products/ai-receptionist
+**URL**: https://brightlaunchiq.com/ai-receptionist
 
 ---
 
@@ -153,7 +153,7 @@ Your complete AI sales implementation system that works 24/7.
 - Output of 5-person sales team at fraction of cost
 
 **CTA**: Schedule My 15-Minute Revenue Audit
-**URL**: https://brightlaunchiq.com/products/launchpad-360
+**URL**: https://brightlaunchiq.com/launchpad-360
 
 ---
 
@@ -171,7 +171,7 @@ Custom enterprise-grade AI solutions for complex business needs.
 - Dedicated implementation team
 
 **CTA**: Request Custom Enterprise Quote
-**URL**: https://brightlaunchiq.com/products/custom-ai-workflows
+**URL**: https://brightlaunchiq.com/omnilogic
 
 ---
 
@@ -405,13 +405,13 @@ AI receptionist, AI voice agent, virtual receptionist AI, AI phone answering, AI
 
 - Homepage: https://brightlaunchiq.com
 - About Us: https://brightlaunchiq.com/about
-- Products: https://brightlaunchiq.com/products/launchpad-360
-- AI Receptionist: https://brightlaunchiq.com/products/ai-receptionist
-- AI Receptionist Complete Feature Library: https://brightlaunchiq.com/products/ai-receptionist/features/complete-library
-- AI Receptionist How It Works: https://brightlaunchiq.com/products/ai-receptionist/how-it-works
-- AI Sales Agent: https://brightlaunchiq.com/products/ai-sales-agent
-- LocalLift: https://brightlaunchiq.com/products/locallift
-- OmniLogic: https://brightlaunchiq.com/products/custom-ai-workflows
+- Products: https://brightlaunchiq.com/launchpad-360
+- AI Receptionist: https://brightlaunchiq.com/ai-receptionist
+- AI Receptionist Complete Feature Library: https://brightlaunchiq.com/ai-receptionist/features/complete-library
+- AI Receptionist How It Works: https://brightlaunchiq.com/ai-receptionist/how-it-works
+- AI Sales Agent: https://brightlaunchiq.com/ai-sales-agent
+- LocalLift: https://brightlaunchiq.com/locallift
+- OmniLogic: https://brightlaunchiq.com/omnilogic
 - Industries Hub: https://brightlaunchiq.com/industries
 - Free AEO Audit: https://brightlaunchiq.com/aeo-audit
 - Pricing: https://brightlaunchiq.com/pricing

@@ -299,7 +299,7 @@ const LeadLineFeatures = () => {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/products/ai-receptionist">
+                <Link to="/ai-receptionist">
                   Back to AI Receptionist
                 </Link>
               </Button>
@@ -365,7 +365,7 @@ const LeadLineFeatures = () => {
             <h3 className="font-display text-xl font-bold text-foreground mb-2">Want the full breakdown?</h3>
             <p className="text-sm text-muted-foreground mb-4">See every feature across all 11 capability categories — Standard and Premium.</p>
             <Button variant="outline" asChild>
-              <Link to="/products/ai-receptionist/features/complete-library">
+              <Link to="/ai-receptionist/features/complete-library">
                 View Complete Feature Library <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </Button>
@@ -390,7 +390,7 @@ const LeadLineFeatures = () => {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/products/ai-receptionist">View Pricing</Link>
+                <Link to="/ai-receptionist">View Pricing</Link>
               </Button>
             </div>
           </div>

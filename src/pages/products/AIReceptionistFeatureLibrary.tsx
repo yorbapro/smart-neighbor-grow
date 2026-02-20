@@ -193,7 +193,7 @@ const AIReceptionistFeatureLibrary = () => {
   useSEO({
     title: "AI Receptionist Complete Feature Library | Every Capability Explained — BrightLaunchIQ",
     description: "The complete feature library for BrightLaunchIQ's AI Receptionist — 11 capability categories, 55+ features across Standard (Core) and Premium (Growth & Pro) tiers. Call handling, voice training, lead capture, CRM integration, analytics, and more.",
-    canonical: "https://brightlaunchiq.com/products/ai-receptionist/features/complete-library",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/features/complete-library",
     keywords: "AI receptionist features, AI receptionist capabilities, AI phone answering features, AI receptionist call handling, AI receptionist CRM integration, AI receptionist appointment booking, AI receptionist analytics, virtual receptionist features list",
   });
 
@@ -345,10 +345,10 @@ const AIReceptionistFeatureLibrary = () => {
             </h2>
             <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { label: "How It Works", href: "/products/ai-receptionist/how-it-works", price: "Step-by-step guide" },
-                { label: "Core Features", href: "/products/ai-receptionist/core/features", price: "$497/mo" },
-                { label: "Growth Features", href: "/products/ai-receptionist/growth/features", price: "$897/mo" },
-                { label: "Pro Features", href: "/products/ai-receptionist/pro/features", price: "$1,497/mo" },
+                { label: "How It Works", href: "/ai-receptionist/how-it-works", price: "Step-by-step guide" },
+                { label: "Core Features", href: "/ai-receptionist/core/features", price: "$497/mo" },
+                { label: "Growth Features", href: "/ai-receptionist/growth/features", price: "$897/mo" },
+                { label: "Pro Features", href: "/ai-receptionist/pro/features", price: "$1,497/mo" },
               ].map((plan) => (
                 <Link
                   key={plan.label}

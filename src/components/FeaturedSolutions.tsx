@@ -95,7 +95,7 @@ const FeaturedSolutions = () => {
                   {solution.price}
                 </span>
                 <Link 
-                  to={`/products/${solution.slug}`}
+                  to={`/${solution.slug}`}
                   className="text-primary group-hover:translate-x-1 transition-transform"
                 >
                   <ArrowRight className="w-5 h-5" />

@@ -24,7 +24,7 @@ const systems = [
       "Performance reporting",
     ],
     cta: "Learn More About LeadLine",
-    href: "/products/ai-receptionist",
+    href: "/ai-receptionist",
     color: "primary" as const,
   },
   {
@@ -41,7 +41,7 @@ const systems = [
       "Revenue tracking & CRM automation",
     ],
     cta: "Explore Outbound AI",
-    href: "/products/ai-sales-agent",
+    href: "/ai-sales-agent",
     color: "accent" as const,
   },
   {
@@ -59,7 +59,7 @@ const systems = [
       "Revenue reporting dashboards",
     ],
     cta: "See LaunchPad 360",
-    href: "/products/launchpad-360",
+    href: "/launchpad-360",
     color: "primary" as const,
     featured: true,
   },

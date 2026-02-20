@@ -141,7 +141,7 @@ const AIReceptionistProIncludes = () => {
   useSEO({
     title: "What's Included — BrightLaunchIQ AI Receptionist Pro Plan",
     description: "See everything included in the BrightLaunchIQ AI Receptionist Pro plan at $1,497/month — multi-location routing, custom AI voice, advanced analytics, priority support, and everything in Growth.",
-    canonical: "https://brightlaunchiq.com/products/ai-receptionist/pro/whats-included",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/pro/whats-included",
     keywords: "AI receptionist Pro plan, enterprise AI phone system, multi-location AI receptionist, custom AI voice, BrightLaunchIQ Pro, AI call answering enterprise",
   });
 
@@ -203,7 +203,7 @@ const AIReceptionistProIncludes = () => {
                 </Link>
               </Button>
               <Button variant="heroOutline" size="lg" asChild>
-                <Link to="/products/ai-receptionist/pro/features">View Full Feature List</Link>
+                <Link to="/ai-receptionist/pro/features">View Full Feature List</Link>
               </Button>
             </div>
           </div>
