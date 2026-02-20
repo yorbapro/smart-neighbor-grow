@@ -24,7 +24,7 @@ const Header = () => {
     { label: "Learning Center", href: "/learning-center" },
     { label: "Case Studies", href: "/resources/case-studies" },
     { label: "Glossary", href: "/resources/glossary" },
-    { label: "AI vs Traditional", href: "/resources/comparison" },
+    
   ];
 
   const headerBg = isScrolled 
