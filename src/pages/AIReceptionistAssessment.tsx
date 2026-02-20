@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -253,6 +253,70 @@ const AIReceptionistAssessment = () => {
     canonical: "https://brightlaunchiq.com/ai-receptionist-readiness-assessment",
     keywords: "AI receptionist assessment, AI receptionist readiness, AI receptionist quiz, AI receptionist for small business, AI phone receptionist",
   });
+
+  // Structured data for the assessment page
+  useEffect(() => {
+    const existingSchemas = document.querySelectorAll('script[data-assessment-schema]');
+    existingSchemas.forEach(el => el.remove());
+
+    // FAQPage schema
+    const faqScript = document.createElement("script");
+    faqScript.type = "application/ld+json";
+    faqScript.setAttribute("data-assessment-schema", "faq");
+    faqScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is an AI Receptionist Readiness Assessment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An AI Receptionist Readiness Assessment is a free, 2-minute quiz that evaluates your business's call handling challenges and scores how much you'd benefit from an AI receptionist. It analyzes your call volume, missed call rate, after-hours needs, and current setup to generate a personalized readiness score from 0–100."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does the AI Receptionist Readiness Assessment take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The assessment takes approximately 2 minutes to complete. It consists of 9 quick questions about your business call handling, followed by a brief contact form to receive your personalized AI Receptionist Readiness Report."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the AI Receptionist Readiness Assessment free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the AI Receptionist Readiness Assessment is completely free. You'll receive an instant readiness score and a detailed report sent to your email with personalized recommendations for your business."
+          }
+        }
+      ]
+    });
+    document.head.appendChild(faqScript);
+
+    // HowTo schema
+    const howToScript = document.createElement("script");
+    howToScript.type = "application/ld+json";
+    howToScript.setAttribute("data-assessment-schema", "howto");
+    howToScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Take the AI Receptionist Readiness Assessment",
+      "description": "Complete a free 2-minute assessment to discover your AI receptionist readiness score and get personalized recommendations.",
+      "step": [
+        { "@type": "HowToStep", "name": "Answer 9 quick questions", "text": "Tell us about your business type, call volume, missed call rate, and current call handling setup." },
+        { "@type": "HowToStep", "name": "Enter your contact details", "text": "Provide your name, email, and business name to receive your personalized report." },
+        { "@type": "HowToStep", "name": "Get your readiness score", "text": "Instantly see your AI Receptionist Readiness Score from 0–100 with tailored insights and recommendations." }
+      ]
+    });
+    document.head.appendChild(howToScript);
+
+    return () => {
+      const schemas = document.querySelectorAll('script[data-assessment-schema]');
+      schemas.forEach(el => el.remove());
+    };
+  }, []);
 
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState<Partial<QuizAnswer>>({});
