@@ -128,6 +128,7 @@ const Glossary = lazy(() => import("./pages/resources/Glossary"));
 const CaseStudies = lazy(() => import("./pages/resources/CaseStudies"));
 const Comparison = lazy(() => import("./pages/resources/Comparison"));
 const HowItWorks = lazy(() => import("./pages/resources/HowItWorks"));
+const AIReceptionistGuide = lazy(() => import("./pages/learning-center/AIReceptionistGuide"));
 
 // Admin pages (rarely accessed)
 const AdminAuth = lazy(() => import("./pages/AdminAuth"));
@@ -187,6 +188,7 @@ const App = () => (
             <Route path="/learning-center/for-business" element={<ForBusiness />} />
             <Route path="/learning-center/for-everyone" element={<ForEveryone />} />
             <Route path="/learning-center/news" element={<LearningCenterNews />} />
+            <Route path="/learning-center/ai-receptionist-guide" element={<AIReceptionistGuide />} />
             <Route path="/learning-center/:slug" element={<BlogArticle />} />
             {/* Legacy redirects */}
             <Route path="/resources/blog" element={<Navigate to="/learning-center" replace />} />
