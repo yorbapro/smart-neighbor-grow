@@ -1100,7 +1100,7 @@ const BlogArticle = () => {
   useSEO({
     title: article ? `${article.title} | BrightLaunchIQ` : "Article Not Found | BrightLaunchIQ",
     description: article?.excerpt || "Article not found",
-    canonical: `https://brightlaunchiq.com/resources/blog/${slug}`,
+    canonical: `https://brightlaunchiq.com/learning-center/${slug}`,
     keywords: article?.keywords,
     speakable: ["h1", ".article-intro", ".article-content h2"],
   });
@@ -1196,7 +1196,7 @@ const BlogArticle = () => {
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": `https://brightlaunchiq.com/resources/blog/${slug}`
+        "@id": `https://brightlaunchiq.com/learning-center/${slug}`
       },
       "articleSection": article.category,
       "keywords": article.keywords,
@@ -1224,7 +1224,7 @@ const BlogArticle = () => {
           <h1 className="font-display text-4xl font-bold text-foreground mb-4">Article Not Found</h1>
           <p className="text-muted-foreground mb-8">The article you're looking for doesn't exist.</p>
           <Button variant="hero" asChild>
-            <Link to="/resources/blog">Back to Blog</Link>
+            <Link to="/learning-center">Back to Learning Center</Link>
           </Button>
         </main>
         <Footer />
@@ -1338,13 +1338,13 @@ const BlogArticle = () => {
               {/* Navigation */}
               <div className="mt-12 flex justify-between items-center border-t border-border pt-8">
                 {prevArticle ? (
-                  <Link to={`/resources/blog/${prevArticle}`} className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                  <Link to={`/learning-center/${prevArticle}`} className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
                     <ArrowLeft className="w-4 h-4" />
                     <span className="text-sm">Previous Article</span>
                   </Link>
                 ) : <div />}
                 {nextArticle ? (
-                  <Link to={`/resources/blog/${nextArticle}`} className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                  <Link to={`/learning-center/${nextArticle}`} className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
                     <span className="text-sm">Next Article</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>

@@ -21,7 +21,7 @@ const Header = () => {
 
   const resourceLinks = [
     { label: "How It Works", href: "/resources/how-it-works" },
-    { label: "Learning Center", href: "/resources/blog" },
+    { label: "Learning Center", href: "/learning-center" },
     { label: "Case Studies", href: "/resources/case-studies" },
     { label: "Glossary", href: "/resources/glossary" },
     { label: "AI vs Traditional", href: "/resources/comparison" },

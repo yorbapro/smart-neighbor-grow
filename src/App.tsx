@@ -3,8 +3,14 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+
+// Legacy redirect helper
+const BlogSlugRedirect = () => {
+  const { slug } = useParams();
+  return <Navigate to={`/learning-center/${slug}`} replace />;
+};
 
 // Critical path - load eagerly for SEO/LCP
 import Index from "./pages/Index";
@@ -114,6 +120,9 @@ const Monterey = lazy(() => import("./pages/locations/Monterey"));
 // Resource pages
 const Blog = lazy(() => import("./pages/resources/Blog"));
 const BlogArticle = lazy(() => import("./pages/resources/BlogArticle"));
+const ForBusiness = lazy(() => import("./pages/learning-center/ForBusiness"));
+const ForEveryone = lazy(() => import("./pages/learning-center/ForEveryone"));
+const LearningCenterNews = lazy(() => import("./pages/learning-center/News"));
 const Glossary = lazy(() => import("./pages/resources/Glossary"));
 const CaseStudies = lazy(() => import("./pages/resources/CaseStudies"));
 const Comparison = lazy(() => import("./pages/resources/Comparison"));
@@ -173,8 +182,14 @@ const App = () => (
             {/* Content/SEO pages */}
             <Route path="/about" element={<AboutPage />} />
             <Route path="/faq" element={<FAQPage />} />
-            <Route path="/resources/blog" element={<Blog />} />
-            <Route path="/resources/blog/:slug" element={<BlogArticle />} />
+            <Route path="/learning-center" element={<Blog />} />
+            <Route path="/learning-center/for-business" element={<ForBusiness />} />
+            <Route path="/learning-center/for-everyone" element={<ForEveryone />} />
+            <Route path="/learning-center/news" element={<LearningCenterNews />} />
+            <Route path="/learning-center/:slug" element={<BlogArticle />} />
+            {/* Legacy redirects */}
+            <Route path="/resources/blog" element={<Navigate to="/learning-center" replace />} />
+            <Route path="/resources/blog/:slug" element={<BlogSlugRedirect />} />
             <Route path="/resources/glossary" element={<Glossary />} />
             <Route path="/resources/case-studies" element={<CaseStudies />} />
             <Route path="/resources/comparison" element={<Comparison />} />
