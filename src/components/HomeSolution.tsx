@@ -56,10 +56,10 @@ const HomeSolution = () => {
 
         <div className="text-center">
           <Button variant="hero" size="lg" asChild className="group">
-            <Link to="/ai-receptionist">
-              See It In Action
+            <a href="tel:1-877-879-5552" aria-label="Experience an AI receptionist live">
+              Experience an AI Receptionist Live
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-            </Link>
+            </a>
           </Button>
         </div>
       </div>

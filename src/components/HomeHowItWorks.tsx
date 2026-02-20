@@ -64,8 +64,8 @@ const HomeHowItWorks = () => {
 
         <div className="text-center">
           <Button variant="hero" size="lg" asChild className="group">
-            <Link to="/get-started">
-              Launch My AI Receptionist
+            <Link to="/ai-receptionist-readiness-assessment" aria-label="Start your AI receptionist assessment">
+              Start Your AI Receptionist Assessment
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>

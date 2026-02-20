@@ -74,6 +74,75 @@ export type Database = {
         }
         Relationships: []
       }
+      ai_receptionist_quiz_responses: {
+        Row: {
+          after_hours_needs: string
+          ai_receptionist_awareness: string
+          appointment_booking: string
+          business_name: string
+          business_type: string
+          calculated_score: number
+          call_volume: string
+          created_at: string
+          current_call_handling: string
+          email: string
+          email_consent: boolean
+          first_name: string
+          id: string
+          last_name: string
+          missed_call_frequency: string
+          phone: string | null
+          primary_pain_point: string
+          report_sent_at: string | null
+          score_segment: string
+          timeline: string
+        }
+        Insert: {
+          after_hours_needs: string
+          ai_receptionist_awareness: string
+          appointment_booking: string
+          business_name: string
+          business_type: string
+          calculated_score?: number
+          call_volume: string
+          created_at?: string
+          current_call_handling: string
+          email: string
+          email_consent?: boolean
+          first_name: string
+          id?: string
+          last_name: string
+          missed_call_frequency: string
+          phone?: string | null
+          primary_pain_point: string
+          report_sent_at?: string | null
+          score_segment?: string
+          timeline: string
+        }
+        Update: {
+          after_hours_needs?: string
+          ai_receptionist_awareness?: string
+          appointment_booking?: string
+          business_name?: string
+          business_type?: string
+          calculated_score?: number
+          call_volume?: string
+          created_at?: string
+          current_call_handling?: string
+          email?: string
+          email_consent?: boolean
+          first_name?: string
+          id?: string
+          last_name?: string
+          missed_call_frequency?: string
+          phone?: string | null
+          primary_pain_point?: string
+          report_sent_at?: string | null
+          score_segment?: string
+          timeline?: string
+        }
+        Relationships: []
+      }
       email_templates: {
         Row: {
           body_html: string
