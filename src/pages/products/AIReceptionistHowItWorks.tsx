@@ -139,7 +139,7 @@ const AIReceptionistHowItWorks = () => {
   useSEO({
     title: "How the AI Receptionist Works | Step-by-Step Guide — BrightLaunchIQ",
     description: "See exactly how BrightLaunchIQ's AI Receptionist works in 6 steps — from onboarding and voice training to 24/7 call answering, lead qualification, smart routing, and continuous optimization.",
-    canonical: "https://brightlaunchiq.com/products/ai-receptionist/how-it-works",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/how-it-works",
     keywords: "how AI receptionist works, AI receptionist setup, AI phone answering process, AI receptionist onboarding, how does an AI receptionist work",
   });
 
@@ -170,7 +170,7 @@ const AIReceptionistHowItWorks = () => {
         "position": s.number,
         "name": s.title,
         "text": s.description,
-        "url": `https://brightlaunchiq.com/products/ai-receptionist/how-it-works#step-${s.number}`,
+        "url": `https://brightlaunchiq.com/ai-receptionist/how-it-works#step-${s.number}`,
       })),
     });
     document.head.appendChild(howToScript);
@@ -231,7 +231,7 @@ const AIReceptionistHowItWorks = () => {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/products/ai-receptionist/features/complete-library">
+                <Link to="/ai-receptionist/features/complete-library">
                   View All 55+ Features
                 </Link>
               </Button>
@@ -435,7 +435,7 @@ const AIReceptionistHowItWorks = () => {
               <p className="text-sm font-semibold text-primary mb-1">Want to see every feature?</p>
               <p className="text-sm text-muted-foreground mb-4">Browse all 55+ features across 11 capability categories.</p>
               <Button variant="outline" size="sm" asChild>
-                <Link to="/products/ai-receptionist/features/complete-library">Complete Feature Library →</Link>
+                <Link to="/ai-receptionist/features/complete-library">Complete Feature Library →</Link>
               </Button>
             </div>
             <div className="p-6 rounded-2xl bg-accent/5 border border-accent/20 text-center">

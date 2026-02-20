@@ -147,7 +147,7 @@ const AIReceptionistCoreIncludes = () => {
   useSEO({
     title: "What's Included — BrightLaunchIQ AI Receptionist Core Plan",
     description: "See everything included in the BrightLaunchIQ AI Receptionist Core plan at $497/month — 24/7 call answering, lead qualification, custom voice training, intelligent routing, and ongoing optimization.",
-    canonical: "https://brightlaunchiq.com/products/ai-receptionist/core/whats-included",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/core/whats-included",
     keywords: "AI receptionist included, AI receptionist plan details, what's included AI phone answering, BrightLaunchIQ Core plan, AI call answering service features",
   });
 
@@ -210,7 +210,7 @@ const AIReceptionistCoreIncludes = () => {
                 </Link>
               </Button>
               <Button variant="heroOutline" size="lg" asChild>
-                <Link to="/products/ai-receptionist/core/features">View Full Feature List</Link>
+                <Link to="/ai-receptionist/core/features">View Full Feature List</Link>
               </Button>
             </div>
           </div>
@@ -281,7 +281,7 @@ const AIReceptionistCoreIncludes = () => {
             <p className="text-sm text-muted-foreground mb-4">Upgrade to Growth for calendar sync, CRM integration, and 3× the call volume.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button variant="outline" size="sm" asChild>
-                <Link to="/products/ai-receptionist/growth/whats-included">See Growth Includes</Link>
+                <Link to="/ai-receptionist/growth/whats-included">See Growth Includes</Link>
               </Button>
               <Button variant="outline" size="sm" asChild>
                 <Link to="/pricing">Compare All Plans</Link>

@@ -36,7 +36,7 @@ const LeadLine = () => {
     setMeta("og:title", "AI Receptionist for Small Business | BrightLaunchIQ", true);
     setMeta("og:description", "24/7 AI receptionist that answers every call, qualifies leads, and books appointments. Best for HVAC, dental, legal, and service businesses.", true);
     setMeta("og:type", "product", true);
-    setMeta("og:url", "https://brightlaunchiq.com/products/ai-receptionist", true);
+    setMeta("og:url", "https://brightlaunchiq.com/ai-receptionist", true);
 
     // Canonical
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
@@ -45,7 +45,7 @@ const LeadLine = () => {
       canonicalLink.setAttribute("rel", "canonical");
       document.head.appendChild(canonicalLink);
     }
-    canonicalLink.setAttribute("href", "https://brightlaunchiq.com/products/ai-receptionist");
+    canonicalLink.setAttribute("href", "https://brightlaunchiq.com/ai-receptionist");
 
     window.scrollTo(0, 0);
 
@@ -80,7 +80,7 @@ const LeadLine = () => {
         "@type": "Organization",
         "name": "BrightLaunchIQ"
       },
-      "url": "https://brightlaunchiq.com/products/ai-receptionist"
+      "url": "https://brightlaunchiq.com/ai-receptionist"
     });
     document.head.appendChild(productScript);
 
@@ -132,7 +132,7 @@ const LeadLine = () => {
         "@type": "SpeakableSpecification",
         "cssSelector": ["h1", "h2"]
       },
-      "url": "https://brightlaunchiq.com/products/ai-receptionist"
+      "url": "https://brightlaunchiq.com/ai-receptionist"
     });
     document.head.appendChild(speakableScript);
 

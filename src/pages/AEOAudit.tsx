@@ -497,7 +497,7 @@ const AEOAudit = () => {
                     </Link>
                   </Button>
                   <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10" asChild>
-                    <Link to="/products/locallift">
+                    <Link to="/locallift">
                       Learn More About AEO
                     </Link>
                   </Button>

@@ -56,7 +56,7 @@ const HomeSolution = () => {
 
         <div className="text-center">
           <Button variant="hero" size="lg" asChild className="group">
-            <Link to="/products/ai-receptionist">
+            <Link to="/ai-receptionist">
               See It In Action
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </Link>
