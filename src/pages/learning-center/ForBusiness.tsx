@@ -80,6 +80,10 @@ const ForBusiness = () => {
   ];
 
   const standaloneArticles = [
+    { title: "AI Receptionist Pricing: What Does It Really Cost?", slug: "business-growth/ai-receptionist-pricing", category: "Pricing" },
+    { title: "5 Signs You Need an AI Receptionist", slug: "business-growth/signs-you-need-ai-receptionist", category: "Business Growth" },
+    { title: "How to Calculate AI Receptionist ROI", slug: "business-growth/calculate-ai-receptionist-roi", category: "ROI" },
+    { title: "Case Study: Precision HVAC Success Story", slug: "precision-hvac-success-story", category: "Case Study", href: "/case-studies/precision-hvac-success-story" },
     { title: "How to Set Up an AI Receptionist for Your Small Business", slug: "how-to-set-up-ai-receptionist", category: "AI Receptionist" },
     { title: "AI Lead Generation: How It Works and Why It Matters", slug: "ai-lead-generation-guide", category: "AI Sales" },
     { title: "How AI Lead Generation Works: The Complete 6-Step Process", slug: "how-ai-lead-generation-works", category: "AI Sales" },

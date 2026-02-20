@@ -129,6 +129,10 @@ const CaseStudies = lazy(() => import("./pages/resources/CaseStudies"));
 const Comparison = lazy(() => import("./pages/resources/Comparison"));
 const HowItWorks = lazy(() => import("./pages/resources/HowItWorks"));
 const AIReceptionistGuide = lazy(() => import("./pages/learning-center/AIReceptionistGuide"));
+const AIReceptionistPricing = lazy(() => import("./pages/learning-center/AIReceptionistPricing"));
+const SignsYouNeedAIReceptionist = lazy(() => import("./pages/learning-center/SignsYouNeedAIReceptionist"));
+const CalculateAIReceptionistROI = lazy(() => import("./pages/learning-center/CalculateAIReceptionistROI"));
+const PrecisionHVACSuccessStory = lazy(() => import("./pages/case-studies/PrecisionHVACSuccessStory"));
 
 // Admin pages (rarely accessed)
 const AdminAuth = lazy(() => import("./pages/AdminAuth"));
@@ -189,6 +193,10 @@ const App = () => (
             <Route path="/learning-center/for-everyone" element={<ForEveryone />} />
             <Route path="/learning-center/news" element={<LearningCenterNews />} />
             <Route path="/learning-center/ai-receptionist-guide" element={<AIReceptionistGuide />} />
+            <Route path="/learning-center/business-growth/ai-receptionist-pricing" element={<AIReceptionistPricing />} />
+            <Route path="/learning-center/business-growth/signs-you-need-ai-receptionist" element={<SignsYouNeedAIReceptionist />} />
+            <Route path="/learning-center/business-growth/calculate-ai-receptionist-roi" element={<CalculateAIReceptionistROI />} />
+            <Route path="/case-studies/precision-hvac-success-story" element={<PrecisionHVACSuccessStory />} />
             <Route path="/learning-center/:slug" element={<BlogArticle />} />
             {/* Legacy redirects */}
             <Route path="/resources/blog" element={<Navigate to="/learning-center" replace />} />
