@@ -60,7 +60,7 @@ const Blog = () => {
       "mainEntity": {
         "@type": "ItemList",
         "name": "Learning Center Articles",
-        "numberOfItems": 19,
+        "numberOfItems": 24,
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -175,6 +175,36 @@ const Blog = () => {
             "position": 19,
             "name": "How to Set Up an AI Receptionist for Your Small Business",
             "url": "https://brightlaunchiq.com/resources/blog/how-to-set-up-ai-receptionist"
+          },
+          {
+            "@type": "ListItem",
+            "position": 20,
+            "name": "What is an AI Receptionist? The Digital Evolution of the Front Desk",
+            "url": "https://brightlaunchiq.com/resources/blog/ai-receptionist-digital-evolution"
+          },
+          {
+            "@type": "ListItem",
+            "position": 21,
+            "name": "Behind the Mic: How AI Voice Agents \"Think\" in Real-Time",
+            "url": "https://brightlaunchiq.com/resources/blog/how-ai-voice-agents-think"
+          },
+          {
+            "@type": "ListItem",
+            "position": 22,
+            "name": "Calculating the Leak: Why Missed Calls are Your Biggest Expense",
+            "url": "https://brightlaunchiq.com/resources/blog/missed-calls-biggest-expense"
+          },
+          {
+            "@type": "ListItem",
+            "position": 23,
+            "name": "Man vs. Machine? Why the \"Hybrid\" Receptionist Wins",
+            "url": "https://brightlaunchiq.com/resources/blog/hybrid-receptionist-wins"
+          },
+          {
+            "@type": "ListItem",
+            "position": 24,
+            "name": "From Sign-up to Dial-tone: The 10-Minute Implementation",
+            "url": "https://brightlaunchiq.com/resources/blog/ten-minute-implementation"
           }
         ]
       },
@@ -436,6 +466,60 @@ const Blog = () => {
     },
   ];
 
+  // AI Receptionist Deep Dive Series
+  const deepDiveSeries = [
+    {
+      title: "What is an AI Receptionist? The Digital Evolution of the Front Desk",
+      excerpt: "An AI Receptionist is a conversational voice agent powered by NLP — not a clunky IVR. Learn the three core pillars of modern AI receptionists.",
+      slug: "ai-receptionist-digital-evolution",
+      author: "Dr. Sarah Chen",
+      date: "February 14, 2026",
+      readTime: "4 min read",
+      category: "AI Receptionist Deep Dive",
+      part: 1,
+    },
+    {
+      title: "Behind the Mic: How AI Voice Agents \"Think\" in Real-Time",
+      excerpt: "Discover the three lightning-fast steps that happen in under 800 milliseconds to power a natural AI phone conversation.",
+      slug: "how-ai-voice-agents-think",
+      author: "Dr. Sarah Chen",
+      date: "February 13, 2026",
+      readTime: "4 min read",
+      category: "AI Receptionist Deep Dive",
+      part: 2,
+    },
+    {
+      title: "Calculating the Leak: Why Missed Calls are Your Biggest Expense",
+      excerpt: "67% of customers hire the first person who answers. See the math on how missed calls drain $130K–$520K annually.",
+      slug: "missed-calls-biggest-expense",
+      author: "Marcus Reynolds",
+      date: "February 12, 2026",
+      readTime: "5 min read",
+      category: "AI Receptionist Deep Dive",
+      part: 3,
+    },
+    {
+      title: "Man vs. Machine? Why the \"Hybrid\" Receptionist Wins",
+      excerpt: "The most successful SMBs in 2026 use a Hybrid Model — AI handles the noise so humans can focus on relationships.",
+      slug: "hybrid-receptionist-wins",
+      author: "David Thompson",
+      date: "February 11, 2026",
+      readTime: "5 min read",
+      category: "AI Receptionist Deep Dive",
+      part: 4,
+    },
+    {
+      title: "From Sign-up to Dial-tone: The 10-Minute Implementation",
+      excerpt: "Here's exactly how to \"hire\" your AI assistant in the time it takes to grab a cup of coffee.",
+      slug: "ten-minute-implementation",
+      author: "David Thompson",
+      date: "February 10, 2026",
+      readTime: "4 min read",
+      category: "AI Receptionist Deep Dive",
+      part: 5,
+    },
+  ];
+
   const articles = [
     {
       title: "How to Set Up an AI Receptionist for Your Small Business",
@@ -584,6 +668,55 @@ const Blog = () => {
                   >
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg">
+                        {article.part}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-display text-base font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2 mb-1">
+                          {article.title}
+                        </h3>
+                        <p className="text-xs text-muted-foreground line-clamp-2">
+                          {article.excerpt}
+                        </p>
+                        <div className="flex items-center gap-2 mt-2 text-xs text-muted-foreground">
+                          <span>{article.author}</span>
+                          <span>•</span>
+                          <span>{article.readTime}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Series: AI Receptionist Deep Dive */}
+        <section className="py-12 md:py-16 bg-gradient-to-b from-secondary/30 to-transparent">
+          <div className="container">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex items-center gap-3 mb-2">
+                <BookOpen className="w-5 h-5 text-secondary-foreground" />
+                <span className="text-sm font-semibold uppercase tracking-wider text-secondary-foreground">
+                  New 5-Part Series
+                </span>
+              </div>
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">
+                AI Receptionist Deep Dive
+              </h2>
+              <p className="text-muted-foreground mb-8 max-w-2xl">
+                Go beyond the basics. Understand the technology, the ROI math, the hybrid strategy, and how to get started in minutes.
+              </p>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {deepDiveSeries.map((article) => (
+                  <Link
+                    key={article.slug}
+                    to={`/resources/blog/${article.slug}`}
+                    className="group bg-card rounded-xl border border-border p-5 hover:shadow-card-hover hover:border-primary/30 transition-all"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-secondary/50 flex items-center justify-center text-secondary-foreground font-bold text-lg">
                         {article.part}
                       </div>
                       <div className="flex-1 min-w-0">
