@@ -25,14 +25,23 @@ import {
 
 const About = () => {
   useEffect(() => {
-    document.title = "About Us | BrightLaunchIQ - Human-Guided AI for Local Business Growth";
+    document.title = "About Us | BrightLaunchIQ AI Receptionist";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Meet the BrightLaunchIQ team. We're Cognitive Architects combining local experts and AI-driven sales tools to help local businesses grow their reach and outperform competitors. Human-guided AI that delivers real results."
+        "Meet BrightLaunchIQ. Human-guided AI receptionist helping local businesses capture every call and grow revenue."
       );
     }
+
+    // Set canonical
+    let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!canonicalLink) {
+      canonicalLink = document.createElement("link");
+      canonicalLink.setAttribute("rel", "canonical");
+      document.head.appendChild(canonicalLink);
+    }
+    canonicalLink.setAttribute("href", "https://brightlaunchiq.com/about");
 
     // Add Organization and AboutPage schema
     const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');

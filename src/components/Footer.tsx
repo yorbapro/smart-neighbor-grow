@@ -72,9 +72,9 @@ const Footer = () => {
 
           {/* Solutions */}
           <div>
-            <h4 className="font-display font-semibold mb-5 text-sm uppercase tracking-wider text-secondary-foreground/50">
+            <p className="font-display font-semibold mb-5 text-sm uppercase tracking-wider text-secondary-foreground/50">
               Solutions
-            </h4>
+            </p>
             <ul className="space-y-3">
               {footerLinks.solutions.map((link) => (
                 <li key={link.label}>
@@ -91,9 +91,9 @@ const Footer = () => {
 
           {/* Industries */}
           <div>
-            <h4 className="font-display font-semibold mb-5 text-sm uppercase tracking-wider text-secondary-foreground/50">
+            <p className="font-display font-semibold mb-5 text-sm uppercase tracking-wider text-secondary-foreground/50">
               Industries
-            </h4>
+            </p>
             <ul className="space-y-3">
               {footerLinks.industries.map((link) => (
                 <li key={link.label}>
@@ -110,9 +110,9 @@ const Footer = () => {
 
           {/* Resources */}
           <div>
-            <h4 className="font-display font-semibold mb-5 text-sm uppercase tracking-wider text-secondary-foreground/50">
+            <p className="font-display font-semibold mb-5 text-sm uppercase tracking-wider text-secondary-foreground/50">
               Resources
-            </h4>
+            </p>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.label}>
@@ -129,9 +129,9 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h4 className="font-display font-semibold mb-5 text-sm uppercase tracking-wider text-secondary-foreground/50">
+            <p className="font-display font-semibold mb-5 text-sm uppercase tracking-wider text-secondary-foreground/50">
               Company
-            </h4>
+            </p>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
