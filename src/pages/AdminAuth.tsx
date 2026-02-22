@@ -19,10 +19,28 @@ const AdminAuth = () => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
   const [isSignUp, setIsSignUp] = useState(false);
+  const [isResetting, setIsResetting] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+
+  const handleResetPassword = async () => {
+    if (!formData.email) {
+      toast.error("Enter your email address first");
+      return;
+    }
+    setIsResetting(true);
+    const { error } = await supabase.auth.resetPasswordForEmail(formData.email, {
+      redirectTo: `${window.location.origin}/admin`,
+    });
+    if (error) {
+      toast.error(error.message);
+    } else {
+      toast.success("Password reset email sent! Check your inbox.");
+    }
+    setIsResetting(false);
+  };
 
   useEffect(() => {
     document.title = "Admin Login | BrightLaunchIQ";
@@ -166,6 +184,19 @@ const AdminAuth = () => {
                     autoComplete={isSignUp ? "new-password" : "current-password"}
                   />
                 </div>
+
+                {!isSignUp && (
+                  <div className="text-right">
+                    <button
+                      type="button"
+                      onClick={handleResetPassword}
+                      disabled={isResetting}
+                      className="text-xs text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {isResetting ? "Sending..." : "Forgot password?"}
+                    </button>
+                  </div>
+                )}
 
                 <Button 
                   type="submit" 
