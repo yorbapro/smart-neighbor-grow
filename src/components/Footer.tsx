@@ -44,9 +44,9 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-6">
-              <img src={logoIcon} alt="BrightLaunchIQ logo" className="w-10 h-10 rounded-xl object-cover" />
+              <img src={logoIcon} alt="BrightLaunchIQ logo" className="w-10 h-10 object-contain" />
               <span className="font-display font-bold text-xl">
-                BrightLaunch<span className="text-primary">IQ</span>
+                BrightLaunch<span className="text-iq-blue">IQ</span>
               </span>
             </Link>
             <p className="text-secondary-foreground/60 mb-6 max-w-sm leading-relaxed">

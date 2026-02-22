@@ -52,9 +52,9 @@ const Header = () => {
       >
         <div className="container flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-3">
-            <img src={logoIcon} alt="BrightLaunchIQ logo" className="w-10 h-10 rounded-xl object-cover" />
+            <img src={logoIcon} alt="BrightLaunchIQ logo" className="w-10 h-10 object-contain" />
             <span className={`font-display font-bold text-xl ${logoTextColor}`}>
-              BrightLaunch<span className="text-primary">IQ</span>
+              BrightLaunch<span className="text-iq-blue">IQ</span>
             </span>
           </Link>
 
