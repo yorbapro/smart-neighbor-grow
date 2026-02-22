@@ -135,6 +135,14 @@ const Header = () => {
             >
               <a href="tel:1-877-879-5552">1-877-879-5552</a>
             </Button>
+            <Button 
+              variant={isScrolled || !isHomepage ? "outline" : "heroOutline"} 
+              size="sm" 
+              asChild
+              className={isScrolled || !isHomepage ? "" : "border-white/20 text-white hover:bg-white/10"}
+            >
+              <Link to="/login">Sign In</Link>
+            </Button>
             <Button variant="hero" size="default" asChild>
               <Link to="/get-started">Get Started</Link>
             </Button>
@@ -219,8 +227,11 @@ const Header = () => {
                 <Button variant="outline" size="default" className="w-full" asChild>
                   <a href="tel:1-877-879-5552">1-877-879-5552</a>
                 </Button>
+                <Button variant="outline" size="default" className="w-full" asChild>
+                  <Link to="/login" onClick={() => setIsMenuOpen(false)}>Sign In</Link>
+                </Button>
                 <Button variant="hero" size="default" className="w-full" asChild>
-                  <Link to="/get-started">Get Started</Link>
+                  <Link to="/get-started" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
                 </Button>
               </div>
             </div>
