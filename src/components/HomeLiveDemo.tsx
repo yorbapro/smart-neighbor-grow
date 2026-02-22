@@ -151,7 +151,7 @@ const HomeLiveDemo = () => {
                 to="/ai-receptionist-readiness-assessment"
                 className="text-primary text-sm font-semibold hover:underline inline-flex items-center gap-1"
               >
-                Take the Free AI Receptionist Assessment <ArrowRight className="w-3 h-3" />
+                Get My Free AI Score <ArrowRight className="w-3 h-3" />
               </Link>
               <Link
                 to="/pricing"
