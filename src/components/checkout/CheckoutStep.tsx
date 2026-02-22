@@ -136,7 +136,7 @@ const CheckoutStep = ({ leadData, selectedProduct, onBack }: CheckoutStepProps) 
 
           <Button variant="outline" onClick={onBack} className="w-full">
             <ArrowLeft className="mr-2" size={16} />
-            Back to Report
+            Back
           </Button>
         </div>
 
