@@ -154,17 +154,6 @@ const Pricing = () => {
         {/* PLANS */}
         <section className="py-16 md:py-24 bg-secondary">
           <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary-foreground mb-2">
-                BrightLaunchIQ AI Receptionist
-              </h2>
-              <p className="text-lg text-secondary-foreground/70 mb-4">
-                Choose the plan that fits your business — every tier includes a one-time setup fee for custom configuration.
-              </p>
-              <p className="text-sm text-muted-foreground">
-                Upgrading? Your previous setup fee is credited toward the new tier.
-              </p>
-            </div>
 
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {LEADLINE_TIERS.map((tier) => {
