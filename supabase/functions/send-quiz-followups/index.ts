@@ -201,6 +201,7 @@ BrightLaunchIQ`;
 <p>Hi ${name},</p>
 <p>Yesterday you scored <strong>${lead.calculated_score}/100</strong> on the AI Receptionist Assessment for ${biz}. Since ${escapeHtml(painInsight)}, I wanted to share something:</p>
 <p>Most businesses like yours get fully set up in a few days — no tech skills needed.</p>
+<p style="margin:20px 0;"><a href="https://brightlaunchiq.com/get-started" style="display:inline-block;padding:12px 24px;background-color:#333333;color:#ffffff;text-decoration:none;border-radius:6px;font-weight:600;font-size:15px;">Get Started Now →</a></p>
 <p>Want to hear what it sounds like? Call <a href="tel:1-877-879-5552" style="color:#333333;">1-877-879-5552</a>. It's our live AI receptionist.</p>
 <p>Just reply if you have questions.</p>
 <p>Anthony<br>BrightLaunchIQ</p>
@@ -239,7 +240,8 @@ BrightLaunchIQ`;
 <p style="margin:4px 0;padding-left:12px;">— Asked your custom intake questions</p>
 <p style="margin:4px 0;padding-left:12px;">— Booked the appointment to your calendar</p>
 <p style="margin:4px 0;padding-left:12px;">— Sent a confirmation text to the caller</p>
-<p>You can try it right now: call <a href="tel:1-877-879-5552" style="color:#333333;">1-877-879-5552</a>.</p>
+<p style="margin:20px 0;"><a href="https://brightlaunchiq.com/get-started" style="display:inline-block;padding:12px 24px;background-color:#333333;color:#ffffff;text-decoration:none;border-radius:6px;font-weight:600;font-size:15px;">Choose a Plan & Get Started →</a></p>
+<p>You can also try it right now: call <a href="tel:1-877-879-5552" style="color:#333333;">1-877-879-5552</a>.</p>
 <p>Anthony<br>BrightLaunchIQ</p>
   `);
 
@@ -275,6 +277,7 @@ BrightLaunchIQ
 <p style="margin:4px 0;padding-left:12px;">— 100% of calls answered — zero missed opportunities</p>
 <p style="margin:4px 0;padding-left:12px;">— 35% more appointments booked</p>
 <p style="margin:4px 0;padding-left:12px;">— $3,000–$8,000+ in recovered revenue</p>
+<p style="margin:20px 0;"><a href="https://brightlaunchiq.com/get-started" style="display:inline-block;padding:12px 24px;background-color:#333333;color:#ffffff;text-decoration:none;border-radius:6px;font-weight:600;font-size:15px;">See Plans & Get Started →</a></p>
 <p>If you want to see what this looks like for ${biz}, just reply to this email. Happy to walk you through it.</p>
 <p>Anthony<br>BrightLaunchIQ<br>
 <span style="color:#888888;font-size:13px;">1-877-879-5552</span></p>
