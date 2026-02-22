@@ -148,6 +148,8 @@ const AdminAuth = lazy(() => import("./pages/AdminAuth"));
 const AdminLeads = lazy(() => import("./pages/AdminLeads"));
 const AdminEmailTemplates = lazy(() => import("./pages/AdminEmailTemplates"));
 const ResetPassword = lazy(() => import("./pages/ResetPassword"));
+const Login = lazy(() => import("./pages/Login"));
+const Dashboard = lazy(() => import("./pages/Dashboard"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -295,11 +297,15 @@ const App = () => (
             <Route path="/accessibility" element={<Accessibility />} />
             <Route path="/trust-security" element={<TrustSecurity />} />
             
+            {/* Auth pages */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/reset-password" element={<ResetPassword />} />
+            
             {/* Admin pages */}
             <Route path="/admin" element={<AdminAuth />} />
             <Route path="/admin/leads" element={<AdminLeads />} />
             <Route path="/admin/templates" element={<AdminEmailTemplates />} />
-            <Route path="/reset-password" element={<ResetPassword />} />
             
             {/* Catch-all */}
             <Route path="*" element={<NotFound />} />
