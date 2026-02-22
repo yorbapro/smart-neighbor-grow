@@ -77,7 +77,9 @@ ${data.insights.map((i) => `<p style="margin:4px 0;padding-left:12px;">— ${i}<
 <p style="margin-top:16px;"><strong>What we recommend:</strong></p>
 ${data.recommendations.map((r) => `<p style="margin:4px 0;padding-left:12px;">— ${r}</p>`).join("")}
 
-<p style="margin-top:20px;">Want to hear our AI receptionist in action? Call <a href="tel:1-877-879-5552" style="color:#333333;">1-877-879-5552</a> — it's live right now.</p>
+<p style="margin:24px 0;"><a href="https://brightlaunchiq.com/get-started" style="display:inline-block;padding:12px 24px;background-color:#333333;color:#ffffff;text-decoration:none;border-radius:6px;font-weight:600;font-size:15px;">Get Started with BrightLaunchIQ →</a></p>
+
+<p>Want to hear our AI receptionist in action? Call <a href="tel:1-877-879-5552" style="color:#333333;">1-877-879-5552</a> — it's live right now.</p>
 
 <p>If you have any questions, just reply to this email.</p>
 
