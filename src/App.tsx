@@ -147,6 +147,7 @@ const AIReceptionistSetupGuide = lazy(() => import("./pages/learning-center/AIRe
 const AdminAuth = lazy(() => import("./pages/AdminAuth"));
 const AdminLeads = lazy(() => import("./pages/AdminLeads"));
 const AdminEmailTemplates = lazy(() => import("./pages/AdminEmailTemplates"));
+const ResetPassword = lazy(() => import("./pages/ResetPassword"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -298,6 +299,7 @@ const App = () => (
             <Route path="/admin" element={<AdminAuth />} />
             <Route path="/admin/leads" element={<AdminLeads />} />
             <Route path="/admin/templates" element={<AdminEmailTemplates />} />
+            <Route path="/reset-password" element={<ResetPassword />} />
             
             {/* Catch-all */}
             <Route path="*" element={<NotFound />} />
