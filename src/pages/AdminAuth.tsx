@@ -32,7 +32,7 @@ const AdminAuth = () => {
     }
     setIsResetting(true);
     const { error } = await supabase.auth.resetPasswordForEmail(formData.email, {
-      redirectTo: `${window.location.origin}/admin`,
+      redirectTo: `${window.location.origin}/reset-password`,
     });
     if (error) {
       toast.error(error.message);
