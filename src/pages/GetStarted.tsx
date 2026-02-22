@@ -6,11 +6,6 @@ import ProductSelector from "@/components/checkout/ProductSelector";
 import CheckoutStep from "@/components/checkout/CheckoutStep";
 import { ProductTier } from "@/lib/products";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { ArrowLeft } from "lucide-react";
-import { toast } from "sonner";
-import { z } from "zod";
 
 export type LeadData = {
   businessName: string;
@@ -22,16 +17,9 @@ export type LeadData = {
   biggestChallenge: string;
 };
 
-const captureSchema = z.object({
-  name: z.string().trim().min(1, "Name is required").max(100),
-  email: z.string().trim().email("Valid email is required").max(255),
-  businessName: z.string().trim().min(1, "Business name is required").max(100),
-});
-
 const GetStarted = () => {
-  const [step, setStep] = useState<"product" | "capture" | "checkout">("product");
+  const [step, setStep] = useState<"product" | "checkout">("product");
   const [selectedProduct, setSelectedProduct] = useState<ProductTier>("leadlineCore");
-  const [captureData, setCaptureData] = useState({ name: "", email: "", businessName: "" });
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
@@ -50,15 +38,6 @@ const GetStarted = () => {
     window.scrollTo(0, 0);
   }, [searchParams]);
 
-  const handleProductSelect = (product: ProductTier) => {
-    setSelectedProduct(product);
-  };
-
-  const handleProceedFromProduct = () => {
-    setStep("capture");
-    window.scrollTo(0, 0);
-  };
-
   const getProductLabel = (id: ProductTier): string => {
     const labels: Record<ProductTier, string> = {
       leadlineCore: "AI Receptionist Core",
@@ -74,30 +53,18 @@ const GetStarted = () => {
     return labels[id] || id;
   };
 
-  const handleCapture = (e: React.FormEvent) => {
-    e.preventDefault();
-    const validation = captureSchema.safeParse(captureData);
-    if (!validation.success) {
-      toast.error(validation.error.errors[0].message);
-      return;
-    }
-    setStep("checkout");
-    window.scrollTo(0, 0);
-  };
-
-  // Build the LeadData shape that CheckoutStep expects
   const leadData: LeadData = {
-    businessName: captureData.businessName,
+    businessName: "",
     industry: "",
-    email: captureData.email,
+    email: "",
     phone: "",
     monthlyRevenue: "",
     currentLeadSource: "",
     biggestChallenge: "",
   };
 
-  const stepLabels = ["Choose Plan", "Your Info", "Checkout"];
-  const currentIndex = step === "product" ? 0 : step === "capture" ? 1 : 2;
+  const stepLabels = ["Choose Plan", "Checkout"];
+  const currentIndex = step === "product" ? 0 : 1;
 
   return (
     <div className="min-h-screen bg-background">
@@ -142,14 +109,14 @@ const GetStarted = () => {
             <div className="space-y-6">
               <ProductSelector
                 selectedProduct={selectedProduct}
-                onSelectProduct={handleProductSelect}
+                onSelectProduct={(product) => setSelectedProduct(product)}
                 showProactive={selectedProduct.startsWith("proactive")}
               />
               <div className="flex justify-center">
                 <Button
                   variant="hero"
                   size="lg"
-                  onClick={handleProceedFromProduct}
+                  onClick={() => { setStep("checkout"); window.scrollTo(0, 0); }}
                 >
                   Continue with {getProductLabel(selectedProduct)}
                 </Button>
@@ -157,76 +124,12 @@ const GetStarted = () => {
             </div>
           )}
 
-          {/* Step 2: Quick Info Capture */}
-          {step === "capture" && (
-            <div className="max-w-md mx-auto">
-              <div className="bg-card border border-border rounded-2xl p-8">
-                <h2 className="font-display text-2xl font-bold text-foreground text-center mb-2">
-                  Almost There
-                </h2>
-                <p className="text-muted-foreground text-center mb-6">
-                  Enter your info so we can set up your {getProductLabel(selectedProduct)} account.
-                </p>
-
-                <form onSubmit={handleCapture} className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Your Name</Label>
-                    <Input
-                      id="name"
-                      value={captureData.name}
-                      onChange={(e) => setCaptureData({ ...captureData, name: e.target.value })}
-                      placeholder="Jane Smith"
-                      required
-                      maxLength={100}
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      value={captureData.email}
-                      onChange={(e) => setCaptureData({ ...captureData, email: e.target.value })}
-                      placeholder="jane@company.com"
-                      required
-                      maxLength={255}
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="businessName">Business Name</Label>
-                    <Input
-                      id="businessName"
-                      value={captureData.businessName}
-                      onChange={(e) => setCaptureData({ ...captureData, businessName: e.target.value })}
-                      placeholder="Acme Plumbing"
-                      required
-                      maxLength={100}
-                    />
-                  </div>
-
-                  <Button variant="hero" size="lg" type="submit" className="w-full">
-                    Continue to Checkout
-                  </Button>
-                </form>
-
-                <Button
-                  variant="ghost"
-                  className="w-full mt-3"
-                  onClick={() => { setStep("product"); window.scrollTo(0, 0); }}
-                >
-                  <ArrowLeft className="mr-2 w-4 h-4" />
-                  Back to Plans
-                </Button>
-              </div>
-            </div>
-          )}
-
-          {/* Step 3: Checkout */}
+          {/* Step 2: Checkout */}
           {step === "checkout" && (
             <CheckoutStep
               leadData={leadData}
               selectedProduct={selectedProduct}
-              onBack={() => { setStep("capture"); window.scrollTo(0, 0); }}
+              onBack={() => { setStep("product"); window.scrollTo(0, 0); }}
             />
           )}
         </div>
