@@ -213,7 +213,7 @@ serve(async (req) => {
 
       try {
         await resend.emails.send({
-          from: "BrightLaunchIQ <onboarding@account.brightlaunchiq.com>",
+          from: "Anthony from BrightLaunchIQ <onboarding@account.brightlaunchiq.com>",
           reply_to: "success@BrightLaunchIQ.com",
           to: [lead.email],
           subject,
@@ -221,7 +221,7 @@ serve(async (req) => {
             "List-Unsubscribe": "<mailto:unsubscribe@account.brightlaunchiq.com?subject=unsubscribe>",
             "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
           },
-          text: `Hi ${lead.business_name},\n\nYour AEO score: ${lead.overall_score}/100. Potential: ${lead.potential_score}/100.\n\nReady to improve? Visit https://brightlaunchiq.com/get-started\n\nBrightLaunchIQ | Sacramento, CA 95814\nUnsubscribe: mailto:unsubscribe@account.brightlaunchiq.com?subject=unsubscribe`,
+          text: `Hi ${lead.business_name},\n\nYour AEO visibility score is ${lead.overall_score}/100 with a potential of ${lead.potential_score}/100.\n\nWant to improve it? Just reply to this email or visit https://brightlaunchiq.com/get-started\n\nAnthony\nBrightLaunchIQ\nSacramento, CA 95814\nReply "unsubscribe" to stop receiving emails.`,
           html: bodyHtml,
         });
 

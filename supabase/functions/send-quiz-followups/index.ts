@@ -29,9 +29,9 @@ interface QuizLead {
 }
 
 const FOLLOWUP_SCHEDULE = [
-  { day: 1, field: "followup_day" as const, templateFn: buildDay1Email },
-  { day: 3, field: "followup_day" as const, templateFn: buildDay3Email },
-  { day: 7, field: "followup_day" as const, templateFn: buildDay7Email },
+  { day: 1, templateFn: buildDay1Email },
+  { day: 3, templateFn: buildDay3Email },
+  { day: 7, templateFn: buildDay7Email },
 ];
 
 serve(async (req) => {
@@ -45,7 +45,6 @@ serve(async (req) => {
     const resendApiKey = Deno.env.get("RESEND_API_KEY")!;
     const cronSecret = Deno.env.get("CRON_SECRET");
 
-    // Auth: CRON_SECRET or admin JWT
     const authHeader = req.headers.get("Authorization");
     let isAuthorized = false;
 
@@ -79,7 +78,6 @@ serve(async (req) => {
     const resend = new Resend(resendApiKey);
     const now = new Date();
 
-    // Fetch quiz leads with consent who received their initial report
     const { data: leads, error: fetchError } = await supabase
       .from("ai_receptionist_quiz_responses")
       .select("*")
@@ -96,8 +94,6 @@ serve(async (req) => {
       const createdAt = new Date(lead.created_at);
       const daysSince = Math.floor((now.getTime() - createdAt.getTime()) / (1000 * 60 * 60 * 24));
 
-      // Determine which follow-up to send using score_segment metadata
-      // We store follow-up state in score_segment suffix: "High Priority|f1" means followup 1 sent
       const segmentParts = lead.score_segment.split("|");
       const lastFollowup = segmentParts.length > 1 ? parseInt(segmentParts[1].replace("f", "")) : 0;
 
@@ -109,24 +105,22 @@ serve(async (req) => {
       if (followupIndex === -1) continue;
 
       const schedule = FOLLOWUP_SCHEDULE[followupIndex];
-      const emailHtml = schedule.templateFn(lead);
-      const subject = getSubject(followupIndex, lead);
+      const { subject, text, html } = schedule.templateFn(lead);
 
       try {
         await resend.emails.send({
-          from: "BrightLaunchIQ <success@account.brightlaunchiq.com>",
+          from: "Anthony from BrightLaunchIQ <success@account.brightlaunchiq.com>",
           reply_to: "success@BrightLaunchIQ.com",
           to: [lead.email],
           subject,
-          html: emailHtml,
-          text: `Hi ${lead.first_name}, following up on your AI Receptionist Readiness Score of ${lead.calculated_score}/100. Call 1-877-879-5552 to experience our AI receptionist. BrightLaunchIQ | Sacramento, CA 95814`,
+          text,
+          html,
           headers: {
             "List-Unsubscribe": "<mailto:success@BrightLaunchIQ.com?subject=unsubscribe>",
             "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
           },
         });
 
-        // Track follow-up state
         const newSegment = `${segmentParts[0]}|f${followupIndex + 1}`;
         await supabase
           .from("ai_receptionist_quiz_responses")
@@ -158,133 +152,133 @@ serve(async (req) => {
   }
 });
 
-function getSubject(index: number, lead: QuizLead): string {
-  const subjects = [
-    `${lead.first_name}, your AI receptionist could be live this week`,
-    `${lead.first_name}, see how ${lead.business_name} can stop missing calls`,
-    `Last chance: ${lead.first_name}, your AI receptionist readiness score expires soon`,
-  ];
-  return subjects[index];
-}
-
 function escapeHtml(text: string): string {
   return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
 
-function emailWrapper(content: string): string {
+function plainWrapper(body: string): string {
   return `<!DOCTYPE html><html><head><meta charset="utf-8" /></head>
-<body style="margin:0;padding:0;background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
-<div style="max-width:600px;margin:0 auto;padding:40px 24px;">
-${content}
-<hr style="border:none;border-top:1px solid #e2e8f0;margin:32px 0;" />
-<div style="text-align:center;color:#a0aec0;font-size:12px;line-height:1.6;">
-  <p>BrightLaunchIQ — AI Receptionist for Small Business</p>
-  <p>1-877-879-5552 | success@BrightLaunchIQ.com</p>
-  <p style="margin-top:8px;"><a href="https://brightlaunchiq.com/privacy" style="color:#a0aec0;">Privacy Policy</a> | <a href="https://brightlaunchiq.com/terms" style="color:#a0aec0;">Terms of Service</a></p>
-  <p style="margin-top:8px;">If you no longer wish to receive emails, reply with "unsubscribe."</p>
-</div>
+<body style="margin:0;padding:0;background-color:#ffffff;">
+<div style="max-width:580px;margin:0 auto;padding:40px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:15px;line-height:1.7;color:#333333;">
+${body}
+<p style="color:#aaaaaa;font-size:11px;margin-top:32px;border-top:1px solid #eeeeee;padding-top:16px;">
+BrightLaunchIQ · Sacramento, CA 95814<br>
+Reply "unsubscribe" to stop receiving emails.
+</p>
 </div></body></html>`;
 }
 
-function buildDay1Email(lead: QuizLead): string {
+function buildDay1Email(lead: QuizLead): { subject: string; text: string; html: string } {
   const name = escapeHtml(lead.first_name);
   const biz = escapeHtml(lead.business_name);
+
   const painMap: Record<string, string> = {
-    "Missing calls during busy times": "you're losing leads during your busiest hours",
-    "After-hours calls going to voicemail": "after-hours callers are hitting voicemail instead of booking",
-    "Staff overwhelmed with call volume": "your team is stretched thin answering phones",
-    "Inconsistent call quality": "call quality varies depending on who picks up",
-    "Difficulty scheduling appointments": "scheduling is eating up your team's time",
+    "Missing calls during busy times": "you mentioned losing leads during busy hours",
+    "After-hours calls going to voicemail": "after-hours callers are hitting voicemail",
+    "Staff overwhelmed with call volume": "your team is stretched thin on phones",
+    "Inconsistent call quality": "call quality varies by who picks up",
+    "Difficulty scheduling appointments": "scheduling is eating your team's time",
     "High cost of current solution": "you're overpaying for call coverage",
   };
-  const painInsight = painMap[lead.primary_pain_point] || "you could be capturing more revenue from every call";
+  const painInsight = painMap[lead.primary_pain_point] || "you could be capturing more revenue from calls";
 
-  return emailWrapper(`
-    <h1 style="font-size:22px;color:#1a202c;margin:0 0 16px;">Hi ${name},</h1>
-    <p style="color:#4a5568;font-size:15px;line-height:1.7;margin-bottom:16px;">
-      Yesterday you took our AI Receptionist Readiness Assessment and scored <strong>${lead.calculated_score}/100</strong> for ${biz}. That tells us ${painInsight}.
-    </p>
-    <p style="color:#4a5568;font-size:15px;line-height:1.7;margin-bottom:24px;">
-      The good news? Most businesses like yours are fully set up with an AI receptionist in just a few days — no technical skills needed.
-    </p>
-    <p style="color:#4a5568;font-size:15px;line-height:1.7;margin-bottom:24px;">
-      Want to hear what it sounds like? Call our live demo line right now:
-    </p>
-    <div style="text-align:center;margin-bottom:24px;">
-      <a href="tel:1-877-879-5552" style="display:inline-block;padding:14px 32px;background:#1a7f37;color:#ffffff;text-decoration:none;border-radius:8px;font-weight:600;font-size:16px;">
-        Call AI Receptionist Demo: 1-877-879-5552
-      </a>
-    </div>
-    <p style="color:#718096;font-size:14px;">— The BrightLaunchIQ Team</p>
+  const subject = `${lead.first_name}, quick follow-up on your assessment`;
+
+  const text = `Hi ${lead.first_name},
+
+Yesterday you scored ${lead.calculated_score}/100 on the AI Receptionist Assessment for ${lead.business_name}. Since ${painInsight}, I wanted to share something:
+
+Most businesses like yours get fully set up in a few days — no tech skills needed.
+
+Want to hear what it sounds like? Call 1-877-879-5552. It's our live AI receptionist.
+
+Just reply if you have questions.
+
+Anthony
+BrightLaunchIQ`;
+
+  const html = plainWrapper(`
+<p>Hi ${name},</p>
+<p>Yesterday you scored <strong>${lead.calculated_score}/100</strong> on the AI Receptionist Assessment for ${biz}. Since ${escapeHtml(painInsight)}, I wanted to share something:</p>
+<p>Most businesses like yours get fully set up in a few days — no tech skills needed.</p>
+<p>Want to hear what it sounds like? Call <a href="tel:1-877-879-5552" style="color:#333333;">1-877-879-5552</a>. It's our live AI receptionist.</p>
+<p>Just reply if you have questions.</p>
+<p>Anthony<br>BrightLaunchIQ</p>
   `);
+
+  return { subject, text, html };
 }
 
-function buildDay3Email(lead: QuizLead): string {
+function buildDay3Email(lead: QuizLead): { subject: string; text: string; html: string } {
   const name = escapeHtml(lead.first_name);
   const biz = escapeHtml(lead.business_name);
 
-  return emailWrapper(`
-    <h1 style="font-size:22px;color:#1a202c;margin:0 0 16px;">Hi ${name},</h1>
-    <p style="color:#4a5568;font-size:15px;line-height:1.7;margin-bottom:16px;">
-      Quick question: how many calls did ${biz} miss since you took the assessment 3 days ago?
-    </p>
-    <p style="color:#4a5568;font-size:15px;line-height:1.7;margin-bottom:16px;">
-      If the answer is "even one" — that's revenue you left on the table. Here's what an AI receptionist would have done with each of those calls:
-    </p>
-    <ul style="padding-left:20px;color:#4a5568;font-size:15px;line-height:1.8;margin-bottom:24px;">
-      <li>Answered within 2 seconds — no hold music, no voicemail</li>
-      <li>Qualified the lead with your custom intake questions</li>
-      <li>Booked the appointment directly to your calendar</li>
-      <li>Sent the caller a confirmation via SMS</li>
-      <li>Routed urgent calls to your cell phone instantly</li>
-    </ul>
-    <p style="color:#4a5568;font-size:15px;line-height:1.7;margin-bottom:24px;">
-      Don't take our word for it — experience it yourself:
-    </p>
-    <div style="text-align:center;margin-bottom:16px;">
-      <a href="tel:1-877-879-5552" style="display:inline-block;padding:14px 32px;background:#1a7f37;color:#ffffff;text-decoration:none;border-radius:8px;font-weight:600;font-size:16px;">
-        Call Our Live AI Receptionist
-      </a>
-    </div>
-    <div style="text-align:center;margin-bottom:24px;">
-      <a href="https://brightlaunchiq.com/pricing" style="color:#2563eb;text-decoration:underline;font-size:14px;">View AI Receptionist Pricing</a>
-    </div>
-    <p style="color:#718096;font-size:14px;">— The BrightLaunchIQ Team</p>
+  const subject = `How many calls did ${lead.business_name} miss this week?`;
+
+  const text = `Hi ${lead.first_name},
+
+Quick question — how many calls did ${lead.business_name} miss since your assessment 3 days ago?
+
+If the answer is "even one," that's revenue left on the table. An AI receptionist would have:
+
+- Answered in 2 seconds
+- Asked your custom intake questions
+- Booked the appointment to your calendar
+- Sent a confirmation text to the caller
+
+You can try it right now: call 1-877-879-5552.
+
+Anthony
+BrightLaunchIQ`;
+
+  const html = plainWrapper(`
+<p>Hi ${name},</p>
+<p>Quick question — how many calls did ${biz} miss since your assessment 3 days ago?</p>
+<p>If the answer is "even one," that's revenue left on the table. An AI receptionist would have:</p>
+<p style="margin:4px 0;padding-left:12px;">— Answered in 2 seconds</p>
+<p style="margin:4px 0;padding-left:12px;">— Asked your custom intake questions</p>
+<p style="margin:4px 0;padding-left:12px;">— Booked the appointment to your calendar</p>
+<p style="margin:4px 0;padding-left:12px;">— Sent a confirmation text to the caller</p>
+<p>You can try it right now: call <a href="tel:1-877-879-5552" style="color:#333333;">1-877-879-5552</a>.</p>
+<p>Anthony<br>BrightLaunchIQ</p>
   `);
+
+  return { subject, text, html };
 }
 
-function buildDay7Email(lead: QuizLead): string {
+function buildDay7Email(lead: QuizLead): { subject: string; text: string; html: string } {
   const name = escapeHtml(lead.first_name);
   const biz = escapeHtml(lead.business_name);
-  const scoreColor = lead.calculated_score >= 80 ? "#22c55e" : lead.calculated_score >= 60 ? "#3b82f6" : "#f59e0b";
 
-  return emailWrapper(`
-    <h1 style="font-size:22px;color:#1a202c;margin:0 0 16px;">Hi ${name},</h1>
-    <p style="color:#4a5568;font-size:15px;line-height:1.7;margin-bottom:16px;">
-      It's been a week since your AI Receptionist Readiness Assessment. Your score of <span style="color:${scoreColor};font-weight:700;">${lead.calculated_score}/100</span> for ${biz} told us something important: you have a real opportunity to capture more revenue from your existing call volume.
-    </p>
-    <p style="color:#4a5568;font-size:15px;line-height:1.7;margin-bottom:16px;">
-      Here's what businesses like yours typically see in the first 30 days with an AI receptionist:
-    </p>
-    <ul style="padding-left:20px;color:#4a5568;font-size:15px;line-height:1.8;margin-bottom:24px;">
-      <li><strong>100% of calls answered</strong> — zero missed opportunities</li>
-      <li><strong>35% more appointments booked</strong> — including after-hours callers</li>
-      <li><strong>$3,000–$8,000+ in recovered revenue</strong> — from calls that used to go to voicemail</li>
-    </ul>
-    <p style="color:#4a5568;font-size:15px;line-height:1.7;margin-bottom:24px;">
-      Ready to stop leaving money on the table? Let's get ${biz} set up:
-    </p>
-    <div style="text-align:center;margin-bottom:16px;">
-      <a href="https://brightlaunchiq.com/contact" style="display:inline-block;padding:14px 32px;background:#1a7f37;color:#ffffff;text-decoration:none;border-radius:8px;font-weight:600;font-size:16px;">
-        Book Your AI Receptionist Demo
-      </a>
-    </div>
-    <div style="text-align:center;margin-bottom:16px;">
-      <a href="tel:1-877-879-5552" style="color:#2563eb;text-decoration:underline;font-size:14px;">Or call our live AI receptionist: 1-877-879-5552</a>
-    </div>
-    <div style="text-align:center;margin-bottom:24px;">
-      <a href="https://brightlaunchiq.com/pricing" style="color:#2563eb;text-decoration:underline;font-size:14px;">View AI Receptionist Pricing & Plans</a>
-    </div>
-    <p style="color:#718096;font-size:14px;">— The BrightLaunchIQ Team</p>
+  const subject = `${lead.first_name}, one last thought about ${lead.business_name}`;
+
+  const text = `Hi ${lead.first_name},
+
+It's been a week since your assessment. Your score of ${lead.calculated_score}/100 told us ${lead.business_name} has a real opportunity to capture more revenue from existing call volume.
+
+Here's what businesses like yours typically see in 30 days:
+
+- 100% of calls answered — zero missed opportunities
+- 35% more appointments booked
+- $3,000–$8,000+ in recovered revenue
+
+If you want to see what this looks like for ${lead.business_name}, just reply to this email. Happy to walk you through it.
+
+Anthony
+BrightLaunchIQ
+1-877-879-5552`;
+
+  const html = plainWrapper(`
+<p>Hi ${name},</p>
+<p>It's been a week since your assessment. Your score of <strong>${lead.calculated_score}/100</strong> told us ${biz} has a real opportunity to capture more revenue from existing call volume.</p>
+<p>Here's what businesses like yours typically see in 30 days:</p>
+<p style="margin:4px 0;padding-left:12px;">— 100% of calls answered — zero missed opportunities</p>
+<p style="margin:4px 0;padding-left:12px;">— 35% more appointments booked</p>
+<p style="margin:4px 0;padding-left:12px;">— $3,000–$8,000+ in recovered revenue</p>
+<p>If you want to see what this looks like for ${biz}, just reply to this email. Happy to walk you through it.</p>
+<p>Anthony<br>BrightLaunchIQ<br>
+<span style="color:#888888;font-size:13px;">1-877-879-5552</span></p>
   `);
+
+  return { subject, text, html };
 }
