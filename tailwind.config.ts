@@ -59,6 +59,7 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "iq-blue": "hsl(var(--iq-blue))",
       },
       borderRadius: {
         lg: "var(--radius)",
