@@ -15,14 +15,7 @@ const NotificationSchema = z.object({
 });
 
 const escapeHtml = (text: string): string => {
-  const map: Record<string, string> = {
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': "&quot;",
-    "'": "&#x27;",
-    "/": "&#x2F;",
-  };
+  const map: Record<string, string> = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#x27;", "/": "&#x2F;" };
   return text.replace(/[&<>"'/]/g, (char) => map[char]);
 };
 
@@ -54,48 +47,25 @@ serve(async (req) => {
     };
 
     const urgencyLabel =
-      safe.urgency === "asap"
-        ? "🔴 ASAP"
-        : safe.urgency === "planning"
-          ? "🟡 Planning"
-          : "🟢 Standard (14-day)";
+      safe.urgency === "asap" ? "ASAP" : safe.urgency === "planning" ? "Planning" : "Standard (14-day)";
 
     const resend = new Resend(resendKey);
 
+    // Internal notification — formatting is fine here since it goes to your team
     await resend.emails.send({
       from: "BrightLaunchIQ <onboarding@account.brightlaunchiq.com>",
       to: ["success@BrightLaunchIQ.com"],
       subject: `New Onboarding: ${safe.businessName} [${urgencyLabel}]`,
-      html: `
-        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto;">
-          <div style="background: linear-gradient(135deg, #f59e0b, #d97706); padding: 32px; border-radius: 12px 12px 0 0;">
-            <h1 style="color: white; margin: 0; font-size: 24px;">🎉 New Onboarding Submitted</h1>
-          </div>
-          <div style="background: #f9fafb; padding: 32px; border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 12px 12px;">
-            <table style="width: 100%; border-collapse: collapse;">
-              <tr>
-                <td style="padding: 8px 0; color: #6b7280; width: 140px;"><strong>Business:</strong></td>
-                <td style="padding: 8px 0; color: #111827;">${safe.businessName}</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; color: #6b7280;"><strong>Email:</strong></td>
-                <td style="padding: 8px 0; color: #111827;"><a href="mailto:${safe.email}" style="color: #f59e0b;">${safe.email}</a></td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; color: #6b7280;"><strong>Industry:</strong></td>
-                <td style="padding: 8px 0; color: #111827;">${safe.industry}</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px 0; color: #6b7280;"><strong>Urgency:</strong></td>
-                <td style="padding: 8px 0; color: #111827; font-weight: bold;">${urgencyLabel}</td>
-              </tr>
-            </table>
-            <p style="color: #6b7280; font-size: 13px; margin-top: 24px;">
-              View full details in the admin panel. Schedule their strategy session ASAP.
-            </p>
-          </div>
-        </div>
-      `,
+      text: `New onboarding submitted.\n\nBusiness: ${businessName}\nEmail: ${email}\nIndustry: ${industry || "Not specified"}\nUrgency: ${urgencyLabel}\n\nSchedule their strategy session.`,
+      html: `<div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:20px;">
+<h2>New Onboarding Submitted</h2>
+<p><strong>Business:</strong> ${safe.businessName}</p>
+<p><strong>Email:</strong> ${safe.email}</p>
+<p><strong>Industry:</strong> ${safe.industry}</p>
+<p><strong>Urgency:</strong> ${urgencyLabel}</p>
+<hr>
+<p style="color:#888;">Schedule their strategy session ASAP.</p>
+</div>`,
     });
 
     return new Response(JSON.stringify({ success: true }), {
