@@ -21,7 +21,7 @@ const Header = () => {
   }, []);
 
   const resourceLinks = [
-    { label: "How It Works", href: "/resources/how-it-works" },
+    { label: "Industries", href: "/industries" },
     { label: "AI Receptionist Guide", href: "/learning-center/ai-receptionist-guide" },
     { label: "Learning Center", href: "/learning-center" },
     { label: "Case Studies", href: "/resources/case-studies" },
@@ -70,10 +70,10 @@ const Header = () => {
             </Link>
 
             <Link
-              to="/industries"
+              to="/resources/how-it-works"
               className={`${mutedColor} hover:${textColor} transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-md`}
             >
-              Industries
+              How It Works
             </Link>
 
             <Link
@@ -204,11 +204,11 @@ const Header = () => {
               </Link>
 
               <Link
-                to="/industries"
+                to="/resources/how-it-works"
                 className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2 focus:outline-none focus:ring-2 focus:ring-ring rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Industries
+                How It Works
               </Link>
 
               <Link
