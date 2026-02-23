@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import logoIcon from "@/assets/logo-icon.png";
+import logoDarkBg from "@/assets/logo-dark-bg.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -44,10 +44,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-6">
-              <img src={logoIcon} alt="BrightLaunchIQ logo" className="w-10 h-10 object-contain" />
-              <span className="font-display font-bold text-xl">
-                BrightLaunch<span className="text-iq-blue">IQ</span>
-              </span>
+              <img src={logoDarkBg} alt="BrightLaunchIQ logo" className="h-10 object-contain" />
             </Link>
             <p className="text-secondary-foreground/60 mb-6 max-w-sm leading-relaxed">
               Human-Guided AI sales automation for local businesses. 
