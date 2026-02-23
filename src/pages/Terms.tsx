@@ -47,6 +47,13 @@ const Terms = () => {
                 <li>All payments are processed securely through Stripe.</li>
                 <li>Prices are in USD and exclude applicable taxes.</li>
               </ul>
+
+              <h3 className="font-semibold text-foreground text-xl mb-2 mt-6">Setup Fee Credit on Upgrades</h3>
+              <p>
+                If you upgrade to a higher tier, the setup fee you previously paid will be credited toward the new tier's setup fee. 
+                You will only be charged the difference between the two setup fees. For example, if you paid a $1,500 setup fee 
+                on Core and upgrade to Growth ($2,500 setup), you would only owe $1,000 for the upgrade setup.
+              </p>
             </section>
 
             <section>
