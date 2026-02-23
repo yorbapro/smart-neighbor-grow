@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
-import logoIcon from "@/assets/logo-icon.png";
+import logoDarkBg from "@/assets/logo-dark-bg.png";
+import logoLightBg from "@/assets/logo-light-bg.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,10 +53,7 @@ const Header = () => {
       >
         <div className="container flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-3">
-            <img src={logoIcon} alt="BrightLaunchIQ logo" className="w-10 h-10 object-contain" />
-            <span className={`font-display font-bold text-xl ${logoTextColor}`}>
-              BrightLaunch<span className="text-iq-blue">IQ</span>
-            </span>
+            <img src={isScrolled || !isHomepage ? logoLightBg : logoDarkBg} alt="BrightLaunchIQ logo" className="h-10 object-contain" />
           </Link>
 
           {/* Desktop Navigation */}
