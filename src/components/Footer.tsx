@@ -44,7 +44,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-6">
-              <img src={logoDarkBg} alt="BrightLaunchIQ logo" className="h-10 object-contain" />
+              <img src={logoDarkBg} alt="BrightLaunchIQ logo" className="h-10 object-contain max-w-[240px]" />
             </Link>
             <p className="text-secondary-foreground/60 mb-6 max-w-sm leading-relaxed">
               Human-Guided AI sales automation for local businesses. 

@@ -53,7 +53,7 @@ const Header = () => {
       >
         <div className="container flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-3">
-            <img src={isScrolled || !isHomepage ? logoLightBg : logoDarkBg} alt="BrightLaunchIQ logo" className="h-10 object-contain" />
+            <img src={isScrolled || !isHomepage ? logoLightBg : logoDarkBg} alt="BrightLaunchIQ logo" className="h-8 md:h-10 object-contain max-w-[200px] md:max-w-[240px]" />
           </Link>
 
           {/* Desktop Navigation */}
