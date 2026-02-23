@@ -72,7 +72,7 @@ const SignsYouNeedAIReceptionist = () => {
               <p className="text-muted-foreground mb-6"><strong>Take a free readiness assessment to find out exactly how much revenue you're losing to missed calls.</strong> It takes 2 minutes and gives you a personalized action plan.</p>
               <div className="flex flex-wrap gap-4">
                 <Button variant="hero" size="lg" asChild>
-                  <Link to="/ai-receptionist-readiness-assessment">Take the Readiness Assessment <ArrowRight className="ml-2 w-5 h-5" /></Link>
+                  <Link to="/ai-receptionist-readiness-assessment">Get My Free AI Score <ArrowRight className="ml-2 w-5 h-5" /></Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
                   <Link to="/aeo-audit">Get a Free AEO Audit</Link>

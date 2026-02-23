@@ -45,8 +45,8 @@ const HomeResults = () => {
 
         <div className="text-center">
           <Button variant="hero" size="lg" asChild className="group">
-            <Link to="/ai-receptionist-readiness-assessment" aria-label="Start your AI receptionist assessment">
-              Start Your AI Receptionist Assessment
+            <Link to="/ai-receptionist-readiness-assessment" aria-label="Get my free AI score">
+              Get My Free AI Score
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>
