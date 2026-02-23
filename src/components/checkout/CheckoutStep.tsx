@@ -88,6 +88,17 @@ const CheckoutStep = ({ leadData, selectedProduct, onBack }: CheckoutStepProps) 
             </div>
           ))}
         </div>
+
+        {product.setupFee && (
+          <div className="mt-6 bg-accent/10 border border-accent/20 rounded-xl p-4">
+            <p className="text-sm font-medium text-foreground">
+              ✦ Setup Fee Credit on Upgrades
+            </p>
+            <p className="text-xs text-muted-foreground mt-1">
+              If you upgrade later, your setup fee is credited toward the new tier's setup fee — you only pay the difference.
+            </p>
+          </div>
+        )}
       </div>
 
       {/* Payment Section */}
