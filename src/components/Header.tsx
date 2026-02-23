@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import logoRocket from "@/assets/logo-rocket.png";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -51,9 +52,7 @@ const Header = () => {
       >
         <div className="container flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-hero flex items-center justify-center shadow-button">
-              <span className="text-white font-display font-bold text-lg">B</span>
-            </div>
+            <img src={logoRocket} alt="BrightLaunchIQ logo" className="w-10 h-10 object-contain" />
             <span className={`font-display font-bold text-xl ${logoTextColor}`}>
               BrightLaunch<span className="text-primary">IQ</span>
             </span>
