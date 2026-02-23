@@ -11,7 +11,7 @@ import {
 const systems = [
   {
     icon: Phone,
-    name: "LeadLine AI",
+    name: "BrightLaunchIQ AI Receptionist",
     subtitle: "AI Receptionist & Inbound Automation",
     description:
       "Your 24/7 AI receptionist that answers every call, captures every lead, books appointments, and routes calls intelligently — without payroll.",
@@ -23,13 +23,13 @@ const systems = [
       "CRM automation",
       "Performance reporting",
     ],
-    cta: "Learn More About LeadLine",
+    cta: "Learn More About AI Receptionist",
     href: "/ai-receptionist",
     color: "primary" as const,
   },
   {
     icon: Megaphone,
-    name: "LeadLine AI Proactive",
+    name: "BrightLaunchIQ AI Sales Agent",
     subtitle: "AI Sales & Follow-Up Engine",
     description:
       "An AI-powered outbound system that follows up, reactivates, books, and drives revenue automatically.",
