@@ -78,7 +78,7 @@ const ROICalculator = () => {
 
       <div className="mt-6 text-center">
         <Button variant="hero" size="lg" asChild>
-          <Link to="/ai-receptionist-readiness-assessment">Take the Readiness Assessment</Link>
+          <Link to="/ai-receptionist-readiness-assessment">Get My Free AI Score</Link>
         </Button>
       </div>
     </div>

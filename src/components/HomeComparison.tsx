@@ -80,8 +80,8 @@ const HomeComparison = () => {
             For less than the cost of a part-time employee, you get a fully trained, always-available front desk.
           </p>
           <Button variant="hero" size="lg" asChild className="group">
-            <Link to="/ai-receptionist-readiness-assessment" aria-label="Get my AI receptionist readiness score">
-              Get My AI Receptionist Readiness Score
+            <Link to="/ai-receptionist-readiness-assessment" aria-label="Get my free AI score">
+              Get My Free AI Score
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>

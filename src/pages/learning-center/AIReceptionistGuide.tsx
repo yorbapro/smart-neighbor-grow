@@ -166,7 +166,7 @@ const AIReceptionistGuide = () => {
               <div className="flex flex-wrap gap-4 justify-center">
                 <Button variant="hero" size="lg" asChild>
                   <Link to="/ai-receptionist-readiness-assessment">
-                    Take the Free Readiness Assessment <ArrowRight className="ml-2 w-5 h-5" />
+                    Get My Free AI Score <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
                 </Button>
                 <Button variant="heroOutline" size="lg" className="border-white/20 text-white hover:bg-white/10" asChild>
@@ -322,7 +322,7 @@ const AIReceptionistGuide = () => {
                 <p className="text-muted-foreground mb-4">The average service business misses 40% of inbound calls. At an average job value of $500, just 5 missed calls per week = <strong className="text-foreground">$130,000 in lost revenue per year</strong>.</p>
                 <Button variant="hero" size="lg" asChild>
                   <Link to="/ai-receptionist-readiness-assessment">
-                    Calculate Your Missed Call Cost <ArrowRight className="ml-2 w-5 h-5" />
+                    Get My Free AI Score <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
                 </Button>
               </div>
@@ -591,7 +591,7 @@ const AIReceptionistGuide = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="lg" asChild>
                   <Link to="/ai-receptionist-readiness-assessment">
-                    Take the Free AI Receptionist Readiness Assessment <ArrowRight className="ml-2 w-5 h-5" />
+                    Get My Free AI Score <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
                 </Button>
                 <Button variant="heroOutline" size="lg" className="border-white/20 text-white hover:bg-white/10" asChild>
