@@ -46,10 +46,7 @@
     --input: 212 14% 85%;
     --ring: 215 85% 52%;
 
-    /* Lighter blue for IQ branding */
-    --iq-blue: 199 89% 60%;
-
-
+    --radius: 0.375rem;
 
     /* GitHub-style flat colors — no gradients */
     --gradient-hero: none;
