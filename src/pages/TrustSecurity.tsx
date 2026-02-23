@@ -180,7 +180,7 @@ const TrustSecurity = () => {
               <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0">
                 {[
                   { label: "Customer", sublabel: "Your clients" },
-                  { label: "AI Layer", sublabel: "LeadLine™" },
+                  { label: "AI Layer", sublabel: "BrightLaunchIQ" },
                   { label: "Secure API", sublabel: "Encrypted" },
                   { label: "CRM", sublabel: "Your system" },
                   { label: "Dashboard", sublabel: "Your insights" },

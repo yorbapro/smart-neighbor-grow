@@ -133,7 +133,7 @@ const TailoredReport = ({ leadData, onProceed, onBack }: TailoredReportProps) =>
       <div className="bg-secondary/50 rounded-xl p-6">
         <h2 className="font-display text-xl font-bold text-foreground mb-4 flex items-center gap-2">
           <CheckCircle className="w-5 h-5 text-accent" />
-          What LaunchPad 360™ Will Deliver
+          What BrightLaunchIQ Will Deliver
         </h2>
         <div className="grid md:grid-cols-2 gap-4">
           <div className="flex items-start gap-3">

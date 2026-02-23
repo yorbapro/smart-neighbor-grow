@@ -26,7 +26,7 @@ export const LEADLINE_TIERS: ProductConfig[] = [
   {
     id: "leadlineCore",
     family: "leadline",
-    name: "AI Receptionist",
+    name: "BrightLaunchIQ AI Receptionist",
     tierName: "Core",
     tagline: "Your AI receptionist that answers, qualifies, and routes — so you never miss a lead",
     monthlyPrice: 497,
@@ -53,7 +53,7 @@ export const LEADLINE_TIERS: ProductConfig[] = [
   {
     id: "leadlineGrowth",
     family: "leadline",
-    name: "AI Receptionist",
+    name: "BrightLaunchIQ AI Receptionist",
     tierName: "Growth",
     tagline: "An AI receptionist that books appointments, syncs your CRM, and automates follow-up",
     monthlyPrice: 997,
@@ -81,7 +81,7 @@ export const LEADLINE_TIERS: ProductConfig[] = [
   {
     id: "leadlinePro",
     family: "leadline",
-    name: "AI Receptionist",
+    name: "BrightLaunchIQ AI Receptionist",
     tierName: "Pro",
     tagline: "A fully custom AI receptionist with multi-location routing, advanced analytics, and priority support",
     monthlyPrice: 1497,
@@ -112,7 +112,7 @@ export const PROACTIVE_TIERS: ProductConfig[] = [
   {
     id: "proactiveLaunch",
     family: "proactive",
-    name: "LeadLine AI Proactive",
+    name: "BrightLaunchIQ AI Sales Agent",
     tierName: "Launch",
     tagline: "Automated Outbound Revenue Engine",
     monthlyPrice: 997,
@@ -129,7 +129,7 @@ export const PROACTIVE_TIERS: ProductConfig[] = [
   {
     id: "proactiveScale",
     family: "proactive",
-    name: "LeadLine AI Proactive",
+    name: "BrightLaunchIQ AI Sales Agent",
     tierName: "Scale",
     tagline: "Automated Outbound Revenue Engine",
     monthlyPrice: 2000,
@@ -147,7 +147,7 @@ export const PROACTIVE_TIERS: ProductConfig[] = [
   {
     id: "proactiveDominate",
     family: "proactive",
-    name: "LeadLine AI Proactive",
+    name: "BrightLaunchIQ AI Sales Agent",
     tierName: "Dominate",
     tagline: "Automated Outbound Revenue Engine",
     monthlyPrice: 3500,
@@ -172,12 +172,12 @@ export const LAUNCHPAD_TIERS: ProductConfig[] = [
     tierName: "Growth",
     tagline: "The Complete AI Revenue System",
     monthlyPrice: 2997,
-    usageMinutes: "Includes LeadLine AI Growth + LocalLift",
+    usageMinutes: "Includes AI Receptionist Growth + LocalLift",
     usageCalls: "Funnel infrastructure included",
     cta: "Apply for Growth",
     isApplication: true,
     features: [
-      "LeadLine AI (Growth tier)",
+      "AI Receptionist (Growth tier)",
       "LocalLift SEO & authority",
       "Funnel infrastructure",
       "CRM automation",
@@ -196,7 +196,7 @@ export const LAUNCHPAD_TIERS: ProductConfig[] = [
     cta: "Apply for Scale",
     isApplication: true,
     features: [
-      "LeadLine AI Pro (Inbound)",
+      "AI Receptionist Pro (Inbound)",
       "Proactive Scale (Outbound)",
       "Advanced SEO & authority",
       "Funnel optimization",
@@ -215,7 +215,7 @@ export const LAUNCHPAD_TIERS: ProductConfig[] = [
     cta: "Apply for Dominate",
     isApplication: true,
     features: [
-      "LeadLine AI Pro+ (Inbound)",
+      "AI Receptionist Pro+ (Inbound)",
       "Proactive Dominate (Outbound)",
       "Full SEO authority buildout",
       "Advanced automations",
