@@ -156,9 +156,18 @@ const CheckoutStep = ({ leadData, selectedProduct, onBack }: CheckoutStepProps) 
             <div className="flex items-start gap-3">
               <Check className="w-5 h-5 text-accent mt-0.5" />
               <div>
-                <p className="font-medium text-foreground">No Long-Term Contracts</p>
+                <p className="font-medium text-foreground">Cancel Anytime</p>
                 <p className="text-sm text-muted-foreground">
-                  Cancel anytime with 5 days notice before billing.
+                  No long-term contracts. Cancel before your next billing date.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <Check className="w-5 h-5 text-accent mt-0.5" />
+              <div>
+                <p className="font-medium text-foreground">You Own Your Data</p>
+                <p className="text-sm text-muted-foreground">
+                  All leads, workflows, and infrastructure belong to you.
                 </p>
               </div>
             </div>
