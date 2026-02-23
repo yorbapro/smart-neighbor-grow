@@ -141,6 +141,13 @@ const Header = () => {
                   >
                     Contact
                   </Link>
+                  <Link
+                    to="/trust-security"
+                    className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                    onClick={() => setIsCompanyOpen(false)}
+                  >
+                    Trust & Security
+                  </Link>
                 </div>
               )}
             </div>
@@ -243,6 +250,13 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Contact
+                </Link>
+                <Link
+                  to="/trust-security"
+                  className="block text-muted-foreground hover:text-foreground transition-colors font-medium py-2 pl-4 focus:outline-none focus:ring-2 focus:ring-ring rounded-md"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Trust & Security
                 </Link>
               </div>
 
