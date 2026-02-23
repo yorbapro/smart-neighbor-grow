@@ -21,7 +21,7 @@ export interface ProductConfig {
   isApplication?: boolean;
 }
 
-// LeadLine AI — Inbound AI Receptionist
+// BrightLaunchIQ AI Receptionist — Inbound AI Receptionist
 export const LEADLINE_TIERS: ProductConfig[] = [
   {
     id: "leadlineCore",
@@ -107,7 +107,7 @@ export const LEADLINE_TIERS: ProductConfig[] = [
   },
 ];
 
-// LeadLine AI Proactive — Outbound AI Sales Engine
+// BrightLaunchIQ AI Sales Agent — Outbound AI Sales Engine
 export const PROACTIVE_TIERS: ProductConfig[] = [
   {
     id: "proactiveLaunch",

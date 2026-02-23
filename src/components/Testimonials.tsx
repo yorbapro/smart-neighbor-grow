@@ -42,7 +42,7 @@ const Testimonials = () => {
     {
       industry: "Professional Services",
       challenge: "Law firm losing leads to competitors who responded faster",
-      solution: "Installed LeadLine AI with instant call answering and CRM integration",
+      solution: "Installed BrightLaunchIQ AI Receptionist with instant call answering and CRM integration",
       result: "First-response rate improved from 4 hours to under 60 seconds. Monthly consultations increased 156%.",
     },
     {

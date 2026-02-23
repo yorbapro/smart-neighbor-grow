@@ -44,7 +44,7 @@ const FAQ = () => {
       question: "How much does AI lead generation cost compared to hiring?",
       directAnswer: "Our AI systems cost a fraction of a single hire—starting at $497/month for inbound automation, with custom pricing for outbound and full-stack solutions.",
       detail:
-        "LeadLine AI inbound starts at $497/month. For outbound sales automation and our flagship LaunchPad 360™ system, we build custom plans based on your business scale and goals. Compare any of these to a human hire costing $80,000+/year (including benefits and taxes), and the ROI is immediate. Contact us for a custom quote tailored to your needs.",
+        "BrightLaunchIQ AI Receptionist starts at $497/month. For outbound sales automation and our flagship LaunchPad 360™ system, we build custom plans based on your business scale and goals. Compare any of these to a human hire costing $80,000+/year (including benefits and taxes), and the ROI is immediate. Contact us for a custom quote tailored to your needs.",
     },
     {
       question: "Do I need technical skills to use your AI sales services?",

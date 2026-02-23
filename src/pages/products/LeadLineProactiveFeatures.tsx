@@ -219,13 +219,13 @@ const FeatureCategory = ({
 
 const LeadLineProactiveFeatures = () => {
   useEffect(() => {
-    document.title = "LeadLine AI Proactive Features - Outbound Sales & Engagement | BrightLaunchIQ";
+    document.title = "BrightLaunchIQ AI Sales Agent Features - Outbound Sales & Engagement | BrightLaunchIQ";
 
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Explore every feature of LeadLine AI Proactive — automated outbound campaigns, AI sales intelligence, revenue tracking, CRM integration, and enterprise-grade options. Supercharge your outbound sales."
+        "Explore every feature of BrightLaunchIQ AI Sales Agent — automated outbound campaigns, AI sales intelligence, revenue tracking, CRM integration, and enterprise-grade options. Supercharge your outbound sales."
       );
     }
 
@@ -251,7 +251,7 @@ const LeadLineProactiveFeatures = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              A complete breakdown of what LeadLine AI Proactive delivers — from intelligent outbound campaigns and AI sales conversations to revenue tracking and advanced automation.
+              A complete breakdown of what BrightLaunchIQ AI Sales Agent delivers — from intelligent outbound campaigns and AI sales conversations to revenue tracking and advanced automation.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
