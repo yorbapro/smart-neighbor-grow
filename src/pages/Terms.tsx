@@ -27,12 +27,12 @@ const Terms = () => {
                 1. Subscription Overview
               </h2>
               <p>
-                BrightLaunchIQ offers AI lead generation and sales implementation services through our LaunchPad 360™ program. 
-                The service consists of:
+                BrightLaunchIQ offers AI receptionist and revenue infrastructure services through multiple product tiers. 
+                Each service consists of:
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>One-Time Setup Fee:</strong> $1,500 USD - Covers custom infrastructure build, data calibration, lead discovery, and deliverability warming.</li>
-                <li><strong>Monthly Subscription:</strong> $500 USD/month - Includes continuous lead refresh, hyper-personalized outreach, automated inbox triage, and monthly success audits.</li>
+                <li><strong>One-Time Setup Fee:</strong> A non-refundable fee charged at signup that covers custom infrastructure build, configuration, and initial optimization.</li>
+                <li><strong>Monthly Subscription:</strong> Recurring monthly fee charged at signup and automatically on the same date each subsequent month.</li>
               </ul>
             </section>
 
@@ -41,9 +41,9 @@ const Terms = () => {
                 2. Billing Terms
               </h2>
               <ul className="list-disc pl-6 space-y-2">
-                <li>The one-time setup fee of $1,500 is charged immediately upon enrollment.</li>
-                <li>The first monthly subscription payment of $500 begins 14 days after your onboarding call.</li>
-                <li>Subsequent monthly payments are automatically charged on the same day each month.</li>
+                <li>The one-time setup fee and first month's subscription are both charged immediately at signup.</li>
+                <li>Subsequent monthly payments are automatically charged on the same date each month.</li>
+                <li>There is no free trial period. Your subscription begins immediately upon enrollment.</li>
                 <li>All payments are processed securely through Stripe.</li>
                 <li>Prices are in USD and exclude applicable taxes.</li>
               </ul>
@@ -51,12 +51,12 @@ const Terms = () => {
 
             <section>
               <h2 className="font-display text-2xl font-bold text-foreground mb-4">
-                3. The 14-Day Speed to Lead Guarantee
+                3. Service Commitment
               </h2>
               <p>
-                We guarantee to move your business from "Zero" to "Automated Meetings" within 14 days of your onboarding session. 
-                If we do not significantly increase your lead response rate and pipeline velocity within the first 30 days 
-                of operation, we will continue working at no additional monthly cost until the agreed-upon metrics are achieved.
+                Your service is active from the moment of enrollment. We are committed to fast implementation — 
+                from zero to live in days, not months. Our team works with you to configure your AI receptionist, 
+                integrations, and workflows as quickly as possible so you start seeing results right away.
               </p>
             </section>
 
@@ -77,9 +77,10 @@ const Terms = () => {
               <h3 className="font-semibold text-foreground text-xl mb-2 mt-6">Cancellation Terms</h3>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>No Long-Term Contracts:</strong> There are no annual commitments. You can cancel month-to-month.</li>
-                <li><strong>Billing Cycle:</strong> Cancellation requests must be submitted at least 5 business days before your next billing date to avoid the next charge.</li>
-                <li><strong>Service Access:</strong> Upon cancellation, you will retain access to your services until the end of your current billing period.</li>
-                <li><strong>Setup Fee Non-Refundable:</strong> The one-time setup fee of $1,500 is non-refundable as it covers completed infrastructure work.</li>
+                <li><strong>Cancel Anytime:</strong> You may cancel at any time before your next billing date to avoid the next charge.</li>
+                <li><strong>Service Access:</strong> Upon cancellation, you will retain access to your services through the end of your current paid period.</li>
+                <li><strong>Setup Fee Non-Refundable:</strong> The one-time setup fee is non-refundable as it covers completed infrastructure work.</li>
+                <li><strong>No Partial Month Refunds:</strong> Monthly subscription fees are not refunded for partial months. Your service remains active through the end of the billing period.</li>
               </ul>
             </section>
 
@@ -88,9 +89,8 @@ const Terms = () => {
                 5. Refund Policy
               </h2>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>Setup Fee:</strong> Non-refundable after the 72-hour cooling-off period from enrollment.</li>
-                <li><strong>Monthly Subscription:</strong> Prorated refunds are not provided for partial months. You retain full access until the end of your billing period.</li>
-                <li><strong>Guarantee Claims:</strong> If you believe the 14-Day Guarantee was not met, contact us within 45 days of enrollment for review.</li>
+                <li><strong>Setup Fee:</strong> Non-refundable. Covers completed infrastructure and configuration work.</li>
+                <li><strong>Monthly Subscription:</strong> No partial-month refunds. Your service remains active through the end of the paid billing period.</li>
               </ul>
             </section>
 
