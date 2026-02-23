@@ -91,7 +91,6 @@ serve(async (req) => {
       success_url: `${req.headers.get("origin")}/payment-success`,
       cancel_url: `${req.headers.get("origin")}/get-started`,
       subscription_data: {
-        trial_period_days: 14,
         metadata: {
           businessName: businessName || "",
           industry: industry || "",
