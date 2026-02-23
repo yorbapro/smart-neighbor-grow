@@ -39,9 +39,11 @@ const useSEO = ({
       meta.setAttribute("content", content);
     };
 
-    // Block indexing on non-canonical domains
-    const isCanonicalDomain = window.location.hostname === 'brightlaunchiq.com' || window.location.hostname === 'www.brightlaunchiq.com';
-    setMeta("robots", isCanonicalDomain ? "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" : "noindex, nofollow");
+    // Block indexing on non-canonical domains only
+    const isNonCanonical = window.location.hostname !== 'brightlaunchiq.com' && window.location.hostname !== 'www.brightlaunchiq.com';
+    if (isNonCanonical) {
+      setMeta("robots", "noindex, nofollow");
+    }
 
     // Basic meta tags
     setMeta("description", description);

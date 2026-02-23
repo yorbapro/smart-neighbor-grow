@@ -6,11 +6,11 @@
     <title>AI Receptionist for Small Business | BrightLaunchIQ</title>
     <meta name="description" content="24/7 AI receptionist for small business. Answers calls, qualifies leads, books appointments. HVAC, dental, legal & more. No contracts." />
     <meta name="author" content="BrightLaunchIQ" />
-    <meta name="robots" content="noindex, nofollow" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <script>
-      // Allow indexing ONLY on the canonical domain
-      if (window.location.hostname === 'brightlaunchiq.com' || window.location.hostname === 'www.brightlaunchiq.com') {
-        document.querySelector('meta[name="robots"]').setAttribute('content', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
+      // Block indexing on non-production domains (e.g. lovable.app previews)
+      if (window.location.hostname !== 'brightlaunchiq.com' && window.location.hostname !== 'www.brightlaunchiq.com') {
+        document.querySelector('meta[name="robots"]').setAttribute('content', 'noindex, nofollow');
       }
     </script>
     <link rel="canonical" href="https://brightlaunchiq.com/" />
