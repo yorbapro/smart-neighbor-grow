@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { HelpCircle, MessageCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -72,6 +73,35 @@ const faqs = [
 ];
 
 const HomeFAQ = () => {
+  useEffect(() => {
+    const schemaId = "home-faq-schema";
+    const existing = document.getElementById(schemaId);
+    if (existing) existing.remove();
+
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `${faq.directAnswer} ${faq.detail}`,
+        },
+      })),
+    };
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = schemaId;
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+
+    return () => {
+      document.getElementById(schemaId)?.remove();
+    };
+  }, []);
+
   return (
     <section id="faq" className="py-20 md:py-28 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, hsl(215, 28%, 7%) 0%, hsl(215, 28%, 10%) 50%, hsl(215, 28%, 7%) 100%)' }}>
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
