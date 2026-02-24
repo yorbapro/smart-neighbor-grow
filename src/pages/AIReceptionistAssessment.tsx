@@ -535,6 +535,20 @@ const AIReceptionistAssessment = () => {
       <Header />
       <main id="main-content" className="flex-1 pt-28 pb-20">
         <div className="container max-w-2xl mx-auto">
+          {/* Page Title */}
+          <div className="text-center mb-10">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary text-sm font-semibold mb-4">
+              <ClipboardCheck className="w-4 h-4" />
+              Free 2-Minute Assessment
+            </span>
+            <h1 className="font-display text-3xl md:text-4xl font-bold text-white mb-3">
+              AI Receptionist Readiness Assessment
+            </h1>
+            <p className="text-white/60 text-base max-w-lg mx-auto">
+              Answer 9 quick questions to discover how much revenue you're losing to missed calls — and get a personalized action plan.
+            </p>
+          </div>
+
           {/* Progress */}
           <div className="mb-8">
             <div className="flex items-center justify-between text-sm text-white/60 mb-2">
