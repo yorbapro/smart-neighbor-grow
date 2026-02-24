@@ -121,7 +121,7 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
             <p className="mt-6 text-lg md:text-xl text-white/70 max-w-2xl">
               Your customers call when they need you — nights, weekends, holidays. Every missed call is lost revenue.
               Our AI Receptionist answers 24/7, qualifies leads, and books appointments in real time.
-              BrightLaunchIQ provides AI call handling for {name.toLowerCase()} so you never lose another lead.
+              BrightLaunchIQ provides AI call handling for {name.toLowerCase()} so you never lose another lead. Learn more about how this fits into the new world of <Link to="/learning-center/what-is-aeo" className="text-primary hover:underline">Answer Engine Optimization (AEO)</Link>.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button variant="hero" size="lg" asChild>
@@ -179,7 +179,7 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
               Built for {name}
             </h2>
             <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-              Purpose-built AI workflows that integrate with <strong className="text-foreground">{crm}</strong> and handle the calls that matter most.
+              Purpose-built AI workflows that integrate with <strong className="text-foreground">{crm}</strong> and handle the calls that matter most. See our <Link to="/learning-center/crm-integration-ai" className="text-primary hover:underline">CRM integration guide</Link> for best practices.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
               {useCases.map((useCase, i) => (
