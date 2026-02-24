@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -24,132 +24,132 @@ const PageLoader = () => (
 );
 
 // Lazy load all secondary pages for faster initial bundle
-const GetStarted = lazy(() => import("./pages/GetStarted"));
-const PaymentSuccess = lazy(() => import("./pages/PaymentSuccess"));
-const Terms = lazy(() => import("./pages/Terms"));
-const Privacy = lazy(() => import("./pages/Privacy"));
-const Accessibility = lazy(() => import("./pages/Accessibility"));
-const TrustSecurity = lazy(() => import("./pages/TrustSecurity"));
-const Pricing = lazy(() => import("./pages/Pricing"));
-const Contact = lazy(() => import("./pages/Contact"));
-const AboutPage = lazy(() => import("./pages/About"));
-const LocationsPage = lazy(() => import("./pages/Locations"));
-const FAQPage = lazy(() => import("./pages/FAQ"));
-const AEOAudit = lazy(() => import("./pages/AEOAudit"));
-const Onboarding = lazy(() => import("./pages/Onboarding"));
-const AIReceptionistAssessment = lazy(() => import("./pages/AIReceptionistAssessment"));
+import GetStarted from "./pages/GetStarted";
+import PaymentSuccess from "./pages/PaymentSuccess";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import Accessibility from "./pages/Accessibility";
+import TrustSecurity from "./pages/TrustSecurity";
+import Pricing from "./pages/Pricing";
+import Contact from "./pages/Contact";
+import AboutPage from "./pages/About";
+import LocationsPage from "./pages/Locations";
+import FAQPage from "./pages/FAQ";
+import AEOAudit from "./pages/AEOAudit";
+import Onboarding from "./pages/Onboarding";
+import AIReceptionistAssessment from "./pages/AIReceptionistAssessment";
 
 // Product pages
-const LaunchPad360 = lazy(() => import("./pages/products/LaunchPad360"));
-const LocalLift = lazy(() => import("./pages/products/LocalLift"));
-const LeadLine = lazy(() => import("./pages/products/LeadLine"));
-const LeadLineProactive = lazy(() => import("./pages/products/LeadLineProactive"));
-const LeadLineProactiveFeatures = lazy(() => import("./pages/products/LeadLineProactiveFeatures"));
-const LeadLineFeatures = lazy(() => import("./pages/products/LeadLineFeatures"));
-const AIReceptionistCoreFeatures = lazy(() => import("./pages/products/AIReceptionistCoreFeatures"));
-const AIReceptionistGrowthFeatures = lazy(() => import("./pages/products/AIReceptionistGrowthFeatures"));
-const AIReceptionistProFeatures = lazy(() => import("./pages/products/AIReceptionistProFeatures"));
-const AIReceptionistCoreIncludes = lazy(() => import("./pages/products/AIReceptionistCoreIncludes"));
-const AIReceptionistGrowthIncludes = lazy(() => import("./pages/products/AIReceptionistGrowthIncludes"));
-const AIReceptionistProIncludes = lazy(() => import("./pages/products/AIReceptionistProIncludes"));
-const CustomAIWorkflows = lazy(() => import("./pages/products/CustomAIWorkflows"));
-const AIReceptionistFeatureLibrary = lazy(() => import("./pages/products/AIReceptionistFeatureLibrary"));
-const AIReceptionistHowItWorks = lazy(() => import("./pages/products/AIReceptionistHowItWorks"));
+import LaunchPad360 from "./pages/products/LaunchPad360";
+import LocalLift from "./pages/products/LocalLift";
+import LeadLine from "./pages/products/LeadLine";
+import LeadLineProactive from "./pages/products/LeadLineProactive";
+import LeadLineProactiveFeatures from "./pages/products/LeadLineProactiveFeatures";
+import LeadLineFeatures from "./pages/products/LeadLineFeatures";
+import AIReceptionistCoreFeatures from "./pages/products/AIReceptionistCoreFeatures";
+import AIReceptionistGrowthFeatures from "./pages/products/AIReceptionistGrowthFeatures";
+import AIReceptionistProFeatures from "./pages/products/AIReceptionistProFeatures";
+import AIReceptionistCoreIncludes from "./pages/products/AIReceptionistCoreIncludes";
+import AIReceptionistGrowthIncludes from "./pages/products/AIReceptionistGrowthIncludes";
+import AIReceptionistProIncludes from "./pages/products/AIReceptionistProIncludes";
+import CustomAIWorkflows from "./pages/products/CustomAIWorkflows";
+import AIReceptionistFeatureLibrary from "./pages/products/AIReceptionistFeatureLibrary";
+import AIReceptionistHowItWorks from "./pages/products/AIReceptionistHowItWorks";
 
 // Industry pages
-const IndustryIndex = lazy(() => import("./pages/industries/IndustryIndex"));
-const HVACContractors = lazy(() => import("./pages/industries/HVACContractors"));
-const EmergencyPlumbers = lazy(() => import("./pages/industries/EmergencyPlumbers"));
-const RoofingCompanies = lazy(() => import("./pages/industries/RoofingCompanies"));
-const Electricians = lazy(() => import("./pages/industries/Electricians"));
-const PestControl = lazy(() => import("./pages/industries/PestControl"));
-const Locksmiths = lazy(() => import("./pages/industries/Locksmiths"));
-const GarageDoorRepair = lazy(() => import("./pages/industries/GarageDoorRepair"));
-const Landscapers = lazy(() => import("./pages/industries/Landscapers"));
-const JunkRemoval = lazy(() => import("./pages/industries/JunkRemoval"));
-const HouseCleaning = lazy(() => import("./pages/industries/HouseCleaning"));
-const DentalClinics = lazy(() => import("./pages/industries/DentalClinics"));
-const Chiropractors = lazy(() => import("./pages/industries/Chiropractors"));
-const VeterinaryClinics = lazy(() => import("./pages/industries/VeterinaryClinics"));
-const PhysicalTherapy = lazy(() => import("./pages/industries/PhysicalTherapy"));
-const MentalHealthCounselors = lazy(() => import("./pages/industries/MentalHealthCounselors"));
-const MedicalSpas = lazy(() => import("./pages/industries/MedicalSpas"));
-const Optometrists = lazy(() => import("./pages/industries/Optometrists"));
-const Dermatologists = lazy(() => import("./pages/industries/Dermatologists"));
-const Orthodontists = lazy(() => import("./pages/industries/Orthodontists"));
-const HolisticHealth = lazy(() => import("./pages/industries/HolisticHealth"));
-const PersonalInjuryLawyers = lazy(() => import("./pages/industries/PersonalInjuryLawyers"));
-const FamilyLawAttorneys = lazy(() => import("./pages/industries/FamilyLawAttorneys"));
-const CriminalDefenseLawyers = lazy(() => import("./pages/industries/CriminalDefenseLawyers"));
-const EstatePlanningAttorneys = lazy(() => import("./pages/industries/EstatePlanningAttorneys"));
-const ImmigrationConsultants = lazy(() => import("./pages/industries/ImmigrationConsultants"));
-const CPAsTaxProfessionals = lazy(() => import("./pages/industries/CPAsTaxProfessionals"));
-const NotaryPublics = lazy(() => import("./pages/industries/NotaryPublics"));
-const PrivateInvestigators = lazy(() => import("./pages/industries/PrivateInvestigators"));
-const ResidentialRealEstate = lazy(() => import("./pages/industries/ResidentialRealEstate"));
-const PropertyManagement = lazy(() => import("./pages/industries/PropertyManagement"));
-const CommercialRealEstate = lazy(() => import("./pages/industries/CommercialRealEstate"));
-const MortgageBrokers = lazy(() => import("./pages/industries/MortgageBrokers"));
-const HomeInspectors = lazy(() => import("./pages/industries/HomeInspectors"));
-const AutoRepairShops = lazy(() => import("./pages/industries/AutoRepairShops"));
-const MobileDetailers = lazy(() => import("./pages/industries/MobileDetailers"));
-const TowingCompanies = lazy(() => import("./pages/industries/TowingCompanies"));
-const CarRentalAgencies = lazy(() => import("./pages/industries/CarRentalAgencies"));
-const DrivingSchools = lazy(() => import("./pages/industries/DrivingSchools"));
-const HairSalons = lazy(() => import("./pages/industries/HairSalons"));
-const Barbershops = lazy(() => import("./pages/industries/Barbershops"));
-const DaySpas = lazy(() => import("./pages/industries/DaySpas"));
-const TattooStudios = lazy(() => import("./pages/industries/TattooStudios"));
-const YogaPilatesStudios = lazy(() => import("./pages/industries/YogaPilatesStudios"));
-const CateringServices = lazy(() => import("./pages/industries/CateringServices"));
-const EventVenues = lazy(() => import("./pages/industries/EventVenues"));
-const WeddingPlanners = lazy(() => import("./pages/industries/WeddingPlanners"));
-const BoutiqueHotels = lazy(() => import("./pages/industries/BoutiqueHotels"));
-const ITSupportMSPs = lazy(() => import("./pages/industries/ITSupportMSPs"));
-const PetGroomers = lazy(() => import("./pages/industries/PetGroomers"));
-const PrivateTutors = lazy(() => import("./pages/industries/PrivateTutors"));
+import IndustryIndex from "./pages/industries/IndustryIndex";
+import HVACContractors from "./pages/industries/HVACContractors";
+import EmergencyPlumbers from "./pages/industries/EmergencyPlumbers";
+import RoofingCompanies from "./pages/industries/RoofingCompanies";
+import Electricians from "./pages/industries/Electricians";
+import PestControl from "./pages/industries/PestControl";
+import Locksmiths from "./pages/industries/Locksmiths";
+import GarageDoorRepair from "./pages/industries/GarageDoorRepair";
+import Landscapers from "./pages/industries/Landscapers";
+import JunkRemoval from "./pages/industries/JunkRemoval";
+import HouseCleaning from "./pages/industries/HouseCleaning";
+import DentalClinics from "./pages/industries/DentalClinics";
+import Chiropractors from "./pages/industries/Chiropractors";
+import VeterinaryClinics from "./pages/industries/VeterinaryClinics";
+import PhysicalTherapy from "./pages/industries/PhysicalTherapy";
+import MentalHealthCounselors from "./pages/industries/MentalHealthCounselors";
+import MedicalSpas from "./pages/industries/MedicalSpas";
+import Optometrists from "./pages/industries/Optometrists";
+import Dermatologists from "./pages/industries/Dermatologists";
+import Orthodontists from "./pages/industries/Orthodontists";
+import HolisticHealth from "./pages/industries/HolisticHealth";
+import PersonalInjuryLawyers from "./pages/industries/PersonalInjuryLawyers";
+import FamilyLawAttorneys from "./pages/industries/FamilyLawAttorneys";
+import CriminalDefenseLawyers from "./pages/industries/CriminalDefenseLawyers";
+import EstatePlanningAttorneys from "./pages/industries/EstatePlanningAttorneys";
+import ImmigrationConsultants from "./pages/industries/ImmigrationConsultants";
+import CPAsTaxProfessionals from "./pages/industries/CPAsTaxProfessionals";
+import NotaryPublics from "./pages/industries/NotaryPublics";
+import PrivateInvestigators from "./pages/industries/PrivateInvestigators";
+import ResidentialRealEstate from "./pages/industries/ResidentialRealEstate";
+import PropertyManagement from "./pages/industries/PropertyManagement";
+import CommercialRealEstate from "./pages/industries/CommercialRealEstate";
+import MortgageBrokers from "./pages/industries/MortgageBrokers";
+import HomeInspectors from "./pages/industries/HomeInspectors";
+import AutoRepairShops from "./pages/industries/AutoRepairShops";
+import MobileDetailers from "./pages/industries/MobileDetailers";
+import TowingCompanies from "./pages/industries/TowingCompanies";
+import CarRentalAgencies from "./pages/industries/CarRentalAgencies";
+import DrivingSchools from "./pages/industries/DrivingSchools";
+import HairSalons from "./pages/industries/HairSalons";
+import Barbershops from "./pages/industries/Barbershops";
+import DaySpas from "./pages/industries/DaySpas";
+import TattooStudios from "./pages/industries/TattooStudios";
+import YogaPilatesStudios from "./pages/industries/YogaPilatesStudios";
+import CateringServices from "./pages/industries/CateringServices";
+import EventVenues from "./pages/industries/EventVenues";
+import WeddingPlanners from "./pages/industries/WeddingPlanners";
+import BoutiqueHotels from "./pages/industries/BoutiqueHotels";
+import ITSupportMSPs from "./pages/industries/ITSupportMSPs";
+import PetGroomers from "./pages/industries/PetGroomers";
+import PrivateTutors from "./pages/industries/PrivateTutors";
 
 // Location pages
-const Sacramento = lazy(() => import("./pages/locations/Sacramento"));
-const Stockton = lazy(() => import("./pages/locations/Stockton"));
-const Fresno = lazy(() => import("./pages/locations/Fresno"));
-const Bakersfield = lazy(() => import("./pages/locations/Bakersfield"));
-const CulverCity = lazy(() => import("./pages/locations/CulverCity"));
-const Henderson = lazy(() => import("./pages/locations/Henderson"));
-const Monterey = lazy(() => import("./pages/locations/Monterey"));
+import Sacramento from "./pages/locations/Sacramento";
+import Stockton from "./pages/locations/Stockton";
+import Fresno from "./pages/locations/Fresno";
+import Bakersfield from "./pages/locations/Bakersfield";
+import CulverCity from "./pages/locations/CulverCity";
+import Henderson from "./pages/locations/Henderson";
+import Monterey from "./pages/locations/Monterey";
 
 // Resource pages
-const Blog = lazy(() => import("./pages/resources/Blog"));
-const BlogArticle = lazy(() => import("./pages/resources/BlogArticle"));
-const ForBusiness = lazy(() => import("./pages/learning-center/ForBusiness"));
-const ForEveryone = lazy(() => import("./pages/learning-center/ForEveryone"));
-const LearningCenterNews = lazy(() => import("./pages/learning-center/News"));
-const Glossary = lazy(() => import("./pages/resources/Glossary"));
-const CaseStudies = lazy(() => import("./pages/resources/CaseStudies"));
-const Comparison = lazy(() => import("./pages/resources/Comparison"));
-const HowItWorks = lazy(() => import("./pages/resources/HowItWorks"));
-const AIReceptionistGuide = lazy(() => import("./pages/learning-center/AIReceptionistGuide"));
-const AIReceptionistPricing = lazy(() => import("./pages/learning-center/AIReceptionistPricing"));
-const SignsYouNeedAIReceptionist = lazy(() => import("./pages/learning-center/SignsYouNeedAIReceptionist"));
-const CalculateAIReceptionistROI = lazy(() => import("./pages/learning-center/CalculateAIReceptionistROI"));
-const PrecisionHVACSuccessStory = lazy(() => import("./pages/case-studies/PrecisionHVACSuccessStory"));
-const AIvsHumanReceptionist = lazy(() => import("./pages/learning-center/AIvsHumanReceptionist"));
-const AIvsAnsweringService = lazy(() => import("./pages/learning-center/AIvsAnsweringService"));
-const AIvsVirtualReceptionist = lazy(() => import("./pages/learning-center/AIvsVirtualReceptionist"));
-const AIReceptionistBuyersGuide = lazy(() => import("./pages/learning-center/AIReceptionistBuyersGuide"));
-const WhatIsAIReceptionist = lazy(() => import("./pages/learning-center/WhatIsAIReceptionist"));
-const HowAIReceptionistsWork = lazy(() => import("./pages/learning-center/HowAIReceptionistsWork"));
-const AIReceptionistBenefits = lazy(() => import("./pages/learning-center/AIReceptionistBenefits"));
-const AIVoiceQuality = lazy(() => import("./pages/learning-center/AIVoiceQuality"));
-const AIReceptionistSetupGuide = lazy(() => import("./pages/learning-center/AIReceptionistSetupGuide"));
+import Blog from "./pages/resources/Blog";
+import BlogArticle from "./pages/resources/BlogArticle";
+import ForBusiness from "./pages/learning-center/ForBusiness";
+import ForEveryone from "./pages/learning-center/ForEveryone";
+import LearningCenterNews from "./pages/learning-center/News";
+import Glossary from "./pages/resources/Glossary";
+import CaseStudies from "./pages/resources/CaseStudies";
+import Comparison from "./pages/resources/Comparison";
+import HowItWorks from "./pages/resources/HowItWorks";
+import AIReceptionistGuide from "./pages/learning-center/AIReceptionistGuide";
+import AIReceptionistPricing from "./pages/learning-center/AIReceptionistPricing";
+import SignsYouNeedAIReceptionist from "./pages/learning-center/SignsYouNeedAIReceptionist";
+import CalculateAIReceptionistROI from "./pages/learning-center/CalculateAIReceptionistROI";
+import PrecisionHVACSuccessStory from "./pages/case-studies/PrecisionHVACSuccessStory";
+import AIvsHumanReceptionist from "./pages/learning-center/AIvsHumanReceptionist";
+import AIvsAnsweringService from "./pages/learning-center/AIvsAnsweringService";
+import AIvsVirtualReceptionist from "./pages/learning-center/AIvsVirtualReceptionist";
+import AIReceptionistBuyersGuide from "./pages/learning-center/AIReceptionistBuyersGuide";
+import WhatIsAIReceptionist from "./pages/learning-center/WhatIsAIReceptionist";
+import HowAIReceptionistsWork from "./pages/learning-center/HowAIReceptionistsWork";
+import AIReceptionistBenefits from "./pages/learning-center/AIReceptionistBenefits";
+import AIVoiceQuality from "./pages/learning-center/AIVoiceQuality";
+import AIReceptionistSetupGuide from "./pages/learning-center/AIReceptionistSetupGuide";
 
 // Admin pages (rarely accessed)
-const AdminAuth = lazy(() => import("./pages/AdminAuth"));
-const AdminLeads = lazy(() => import("./pages/AdminLeads"));
-const AdminEmailTemplates = lazy(() => import("./pages/AdminEmailTemplates"));
-const ResetPassword = lazy(() => import("./pages/ResetPassword"));
-const Login = lazy(() => import("./pages/Login"));
-const Dashboard = lazy(() => import("./pages/Dashboard"));
+import AdminAuth from "./pages/AdminAuth";
+import AdminLeads from "./pages/AdminLeads";
+import AdminEmailTemplates from "./pages/AdminEmailTemplates";
+import ResetPassword from "./pages/ResetPassword";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -165,7 +165,6 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
         <ScrollToTop />
         <Suspense fallback={<PageLoader />}>
           <Routes>
@@ -311,7 +310,6 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
-      </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
