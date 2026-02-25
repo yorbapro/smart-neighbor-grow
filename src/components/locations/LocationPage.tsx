@@ -1,10 +1,9 @@
 import { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import useSEO from "@/hooks/useSEO";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import useSEO from "@/hooks/useSEO";
 import { 
   MapPin, 
   Phone, 
