@@ -175,6 +175,8 @@ const App = () => (
             <Route path="/get-started" element={<GetStarted />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/aeo-audit" element={<AEOAudit />} />
+            <Route path="/free-ai-audit" element={<AEOAudit />} />
+            <Route path="/how-it-works" element={<AIReceptionistHowItWorks />} />
             <Route path="/onboarding" element={<Onboarding />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/ai-receptionist-readiness-assessment" element={<AIReceptionistAssessment />} />

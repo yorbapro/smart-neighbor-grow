@@ -116,12 +116,11 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
               className="mb-8 text-white/60"
             />
             <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-4xl">
-              How {name} Lose <span className="text-primary">${lossAmount}+</span> Per Year in Missed Calls
+              Recover <span className="text-primary">${lossAmount}+</span> in Annual Revenue for Your {name} Business
             </h1>
             <p className="mt-6 text-lg md:text-xl text-white/70 max-w-2xl">
-              Your customers call when they need you — nights, weekends, holidays. Every missed call is lost revenue.
-              Our AI Receptionist answers 24/7, qualifies leads, and books appointments in real time.
-              BrightLaunchIQ provides AI call handling for {name.toLowerCase()} so you never lose another lead. Learn more about how this fits into the new world of <Link to="/learning-center/what-is-aeo" className="text-primary hover:underline">Answer Engine Optimization (AEO)</Link>.
+              Stop losing high-value leads to voicemail. Our enterprise-grade AI Receptionist reduces missed calls by 98%, increases booked appointments by up to 40%, and saves your staff 15+ hours per week. 
+              BrightLaunchIQ provides custom-trained AI voice agents for {name.toLowerCase()} that integrate directly with {crm} to turn every call into a measurable outcome.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button variant="hero" size="lg" asChild>

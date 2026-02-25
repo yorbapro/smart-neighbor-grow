@@ -249,7 +249,7 @@ function calculateScore(answers: QuizAnswer): QuizResult {
 const AIReceptionistAssessment = () => {
   useSEO({
     title: "AI Receptionist Readiness Assessment | BrightLaunchIQ",
-    description: "Take our free AI Receptionist Readiness Assessment to discover how an AI receptionist can transform your call handling. Get your personalized score in 2 minutes.",
+    description: "Take our free 2-minute AI Receptionist Readiness Assessment. Discover how much revenue you're losing to missed calls and get a personalized ROI report for your business.",
     canonical: "https://brightlaunchiq.com/ai-receptionist-readiness-assessment",
     keywords: "AI receptionist assessment, AI receptionist readiness, AI receptionist quiz, AI receptionist for small business, AI phone receptionist",
   });
@@ -542,10 +542,10 @@ const AIReceptionistAssessment = () => {
               Free 2-Minute Assessment
             </span>
             <h1 className="font-display text-3xl md:text-4xl font-bold text-white mb-3">
-              AI Receptionist Readiness Assessment
+              Free 2-Minute AI Readiness Audit
             </h1>
             <p className="text-white/60 text-base max-w-lg mx-auto">
-              Answer 9 quick questions to discover how much revenue you're losing to missed calls — and get a personalized action plan.
+              Stop guessing. Discover exactly how much revenue you're losing to missed calls and get a personalized ROI report on how an AI receptionist will scale your business.
             </p>
           </div>
 

@@ -26,13 +26,13 @@ const Hero = () => {
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-8 animate-slide-up">
-              Never Miss Another
+              Enterprise-Grade
               <br />
-              <span className="text-gradient">Customer Call.</span>
+              <span className="text-gradient">AI Receptionist.</span>
             </h1>
 
             <p className="text-lg md:text-xl text-white/70 max-w-2xl mb-6 leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
-              Your 24/7 AI Receptionist answers, qualifies, and books callers automatically — so every opportunity turns into revenue.
+              Stop losing revenue to missed calls. Our advanced AI voice agents answer 24/7, qualify leads with custom logic, and book appointments directly into your CRM — delivering 10x ROI over human staff.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-4 mb-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
