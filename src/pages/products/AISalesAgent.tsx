@@ -22,7 +22,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-const LeadLineProactive = () => {
+const AISalesAgent = () => {
   useEffect(() => {
     document.title = "BrightLaunchIQ AI Sales Agent — Automated Outbound Sales & Follow-Up for SMBs";
 
@@ -391,4 +391,4 @@ const LeadLineProactive = () => {
   );
 };
 
-export default LeadLineProactive;
+export default AISalesAgent;

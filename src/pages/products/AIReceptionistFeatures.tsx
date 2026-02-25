@@ -256,7 +256,7 @@ const FeatureCategory = ({
   </AccordionItem>
 );
 
-const LeadLineFeatures = () => {
+const AIReceptionistFeatures = () => {
   useSEO({
     title: "AI Receptionist Features | BrightLaunchIQ",
     description: "Explore every AI Receptionist feature — 24/7 AI call automation, lead qualification, smart scheduling, CRM integration, and AI phone answering capabilities.",
@@ -400,4 +400,4 @@ const LeadLineFeatures = () => {
   );
 };
 
-export default LeadLineFeatures;
+export default AIReceptionistFeatures;

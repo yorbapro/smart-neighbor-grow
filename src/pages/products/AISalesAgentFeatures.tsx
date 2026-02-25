@@ -217,7 +217,7 @@ const FeatureCategory = ({
   </AccordionItem>
 );
 
-const LeadLineProactiveFeatures = () => {
+const AISalesAgentFeatures = () => {
   useEffect(() => {
     document.title = "BrightLaunchIQ AI Sales Agent Features - Outbound Sales & Engagement | BrightLaunchIQ";
 
@@ -349,4 +349,4 @@ const LeadLineProactiveFeatures = () => {
   );
 };
 
-export default LeadLineProactiveFeatures;
+export default AISalesAgentFeatures;

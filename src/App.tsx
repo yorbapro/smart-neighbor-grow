@@ -42,10 +42,10 @@ import AIReceptionistAssessment from "./pages/AIReceptionistAssessment";
 // Product pages
 import LaunchPad360 from "./pages/products/LaunchPad360";
 import LocalLift from "./pages/products/LocalLift";
-import LeadLine from "./pages/products/LeadLine";
-import LeadLineProactive from "./pages/products/LeadLineProactive";
-import LeadLineProactiveFeatures from "./pages/products/LeadLineProactiveFeatures";
-import LeadLineFeatures from "./pages/products/LeadLineFeatures";
+import AIReceptionist from "./pages/products/AIReceptionist";
+import AISalesAgent from "./pages/products/AISalesAgent";
+import AISalesAgentFeatures from "./pages/products/AISalesAgentFeatures";
+import AIReceptionistFeatures from "./pages/products/AIReceptionistFeatures";
 import AIReceptionistCoreFeatures from "./pages/products/AIReceptionistCoreFeatures";
 import AIReceptionistGrowthFeatures from "./pages/products/AIReceptionistGrowthFeatures";
 import AIReceptionistProFeatures from "./pages/products/AIReceptionistProFeatures";
@@ -182,10 +182,10 @@ const App = () => (
             {/* Product pages */}
             <Route path="/launchpad-360" element={<LaunchPad360 />} />
             <Route path="/locallift" element={<LocalLift />} />
-            <Route path="/ai-receptionist" element={<LeadLine />} />
-            <Route path="/ai-sales-agent" element={<LeadLineProactive />} />
-            <Route path="/ai-sales-agent/features" element={<LeadLineProactiveFeatures />} />
-            <Route path="/ai-receptionist/features" element={<LeadLineFeatures />} />
+            <Route path="/ai-receptionist" element={<AIReceptionist />} />
+            <Route path="/ai-sales-agent" element={<AISalesAgent />} />
+            <Route path="/ai-sales-agent/features" element={<AISalesAgentFeatures />} />
+            <Route path="/ai-receptionist/features" element={<AIReceptionistFeatures />} />
             <Route path="/ai-receptionist/core/features" element={<AIReceptionistCoreFeatures />} />
             <Route path="/ai-receptionist/growth/features" element={<AIReceptionistGrowthFeatures />} />
             <Route path="/ai-receptionist/pro/features" element={<AIReceptionistProFeatures />} />

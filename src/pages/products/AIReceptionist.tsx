@@ -16,7 +16,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const LeadLine = () => {
+const AIReceptionist = () => {
   useEffect(() => {
     document.title = "AI Receptionist — 24/7 AI Phone Answering | BrightLaunchIQ";
 
@@ -674,4 +674,4 @@ const LeadLine = () => {
   );
 };
 
-export default LeadLine;
+export default AIReceptionist;
