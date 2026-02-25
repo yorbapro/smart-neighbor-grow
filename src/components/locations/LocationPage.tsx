@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -98,6 +99,199 @@ const LocationPage = ({
   };
 
   // SEO: proper canonical, title, and meta description
+  useSEO({
+    title: `AI Lead Generation ${city} ${state} | BrightLaunchIQ`,
+    description: `AI lead generation and sales automation for ${city} businesses. Human-guided AI for ${specialty.toLowerCase()} in the ${areaCode} area. 60-second response.`,
+    canonical: `https://brightlaunchiq.com/locations/${slug}`,
+    keywords: `AI lead generation ${city}, sales automation ${city} ${state}, ${specialty}, ${areaCode}`,
+  });
+
+  useEffect(() => {
+    // Remove existing schemas
+    const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
+    existingScripts.forEach(script => script.remove());
+
+    // LocalBusiness structured data with enhanced E-E-A-T signals
+    const localBusinessScript = document.createElement("script");
+    localBusinessScript.type = "application/ld+json";
+    localBusinessScript.id = "local-business-schema";
+    localBusinessScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": `https://brightlaunchiq.com/locations/${slug}#business`,
+      "name": `BrightLaunchIQ ${city}`,
+      "description": `Human-guided AI lead generation and sales automation for ${city}, ${state} businesses. ${specialty}. Expert-supervised AI that responds to leads in under 60 seconds while keeping your brand voice authentic.`,
+      "url": `https://brightlaunchiq.com/locations/${slug}`,
+      "telephone": contact.phone,
+      "email": contact.email,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": contact.address,
+        "addressLocality": contact.city,
+        "addressRegion": contact.state,
+        "postalCode": contact.zip,
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": city,
+          "containedInPlace": {
+            "@type": "State",
+            "name": state
+          }
+        },
+        ...nearbyAreas.map(area => ({
+          "@type": "City",
+          "name": area
+        }))
+      ],
+      "serviceType": [
+        "AI Lead Generation",
+        "AI Sales Automation",
+        "Human-Guided AI",
+        "Answer Engine Optimization",
+        specialty
+      ],
+      "priceRange": "$500-$1500/month",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "47",
+        "bestRating": "5"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/brightlaunchiq"
+      ]
+    });
+    document.head.appendChild(localBusinessScript);
+
+    // Review Schema for E-E-A-T
+    const reviewScript = document.createElement("script");
+    reviewScript.type = "application/ld+json";
+    reviewScript.id = "review-schema";
+    reviewScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "LocalBusiness",
+        "name": `BrightLaunchIQ ${city}`,
+        "@id": `https://brightlaunchiq.com/locations/${slug}#business`
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": localTestimonial.name
+      },
+      "reviewBody": localTestimonial.quote
+    });
+    document.head.appendChild(reviewScript);
+
+    // FAQPage structured data for AEO
+    const faqScript = document.createElement("script");
+    faqScript.type = "application/ld+json";
+    faqScript.id = "faq-schema";
+    faqScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    });
+    document.head.appendChild(faqScript);
+
+    // Service structured data for GEO
+    const serviceScript = document.createElement("script");
+    serviceScript.type = "application/ld+json";
+    serviceScript.id = "service-schema";
+    serviceScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": `AI Lead Generation in ${city}`,
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": `BrightLaunchIQ ${city}`,
+        "@id": `https://brightlaunchiq.com/locations/${slug}#business`
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": city
+      },
+      "description": `Human-guided AI lead generation and sales automation for ${city} businesses. Our expert team supervises every AI interaction to ensure authentic, brand-aligned communication. We respond to leads in under 60 seconds.`,
+      "serviceType": "AI Sales Automation",
+      "offers": {
+        "@type": "Offer",
+        "price": "500",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "500",
+          "priceCurrency": "USD",
+          "unitText": "MONTH"
+        }
+      }
+    });
+    document.head.appendChild(serviceScript);
+
+    // BreadcrumbList Schema
+    const breadcrumbScript = document.createElement("script");
+    breadcrumbScript.type = "application/ld+json";
+    breadcrumbScript.id = "breadcrumb-schema";
+    breadcrumbScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://brightlaunchiq.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://brightlaunchiq.com/locations" },
+        { "@type": "ListItem", "position": 3, "name": `${city}, ${state}`, "item": `https://brightlaunchiq.com/locations/${slug}` }
+      ]
+    });
+    document.head.appendChild(breadcrumbScript);
+
+    // Organization Schema for authority
+    const orgScript = document.createElement("script");
+    orgScript.type = "application/ld+json";
+    orgScript.id = "org-schema";
+    orgScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "BrightLaunchIQ",
+      "description": "Human-guided AI for business growth. We help local businesses respond first, automate the busywork, and win more customers.",
+      "url": "https://brightlaunchiq.com",
+      "knowsAbout": [
+        "AI Lead Generation",
+        "AI Sales Automation",
+        "Answer Engine Optimization",
+        "Human-Guided AI",
+        "Small Business Automation",
+        `${city} Business Services`
+      ]
+    });
+    document.head.appendChild(orgScript);
+
+    return () => {
+      ['local-business-schema', 'review-schema', 'faq-schema', 'service-schema', 'breadcrumb-schema', 'org-schema'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.remove();
+      });
+    };
+  }, [city, state, specialty, contact, faqs, nearbyAreas, slug, localTestimonial]);
+
   useSEO({
     title: `AI Lead Generation ${city} ${state} | BrightLaunchIQ`,
     description: `AI lead generation and sales automation for ${city} businesses. Human-guided AI for ${specialty.toLowerCase()} in the ${areaCode} area. 60-second response.`,
