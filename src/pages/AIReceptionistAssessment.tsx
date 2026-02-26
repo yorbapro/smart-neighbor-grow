@@ -502,6 +502,9 @@ const AIReceptionistAssessment = () => {
                 <Button variant="heroOutline" size="lg" asChild>
                   <Link to="/contact">Book a Personalized Demo</Link>
                 </Button>
+                <Button variant="heroOutline" size="lg" asChild>
+                  <Link to="/ai-receptionist">Learn More About AI Receptionist</Link>
+                </Button>
               </div>
               <Button variant="ghost" size="lg" asChild className="text-white/60 hover:text-white">
                 <Link to="/pricing">View AI Receptionist Pricing</Link>
@@ -544,8 +547,7 @@ const AIReceptionistAssessment = () => {
             <h1 className="font-display text-3xl md:text-4xl font-bold text-white mb-3">
               Free 2-Minute AI Readiness Audit
             </h1>
-            <p className="text-white/60 text-base max-w-lg mx-auto">
-              Stop guessing. Discover exactly how much revenue you're losing to missed calls and get a personalized ROI report on how an AI receptionist will scale your business.
+            <p className="text-white/60 text-base max-w-lg mx-auto">              Discover your business\'s AI readiness and unlock a personalized ROI report, revealing how an AI receptionist can boost your revenue and efficiency.
             </p>
           </div>
 
