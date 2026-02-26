@@ -166,8 +166,9 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <ScrollToTop />
-      <Suspense fallback={<PageLoader />}>
+      <BrowserRouter>
+        <ScrollToTop />
+        <Suspense fallback={<PageLoader />}>
           <Routes>
             {/* Critical route - eager loaded */}
             <Route path="/" element={<Index />} />
@@ -211,8 +212,8 @@ const App = () => (
             <Route path="/learning-center/business-growth/ai-receptionist-pricing" element={<AIReceptionistPricing />} />
             <Route path="/learning-center/business-growth/signs-you-need-ai-receptionist" element={<SignsYouNeedAIReceptionist />} />
             <Route path="/learning-center/business-growth/calculate-ai-receptionist-roi" element={<CalculateAIReceptionistROI />} />
-            <Route path="/case-studies/precision-hvac-success-story" element={<PrecisionHVACSuccessStory />} />
-            <Route path="/learning-center/business-growth/ai-vs-human-receptionist" element={<AIvsHumanReceptionist />} />
+            <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/case-studies/:slug" element={<WhitepaperPage />} />
             <Route path="/learning-center/business-growth/ai-vs-answering-service" element={<AIvsAnsweringService />} />
             <Route path="/learning-center/business-growth/ai-vs-virtual-receptionist" element={<AIvsVirtualReceptionist />} />
             <Route path="/learning-center/business-growth/ai-receptionist-buyers-guide" element={<AIReceptionistBuyersGuide />} />
@@ -227,8 +228,7 @@ const App = () => (
             <Route path="/resources/blog" element={<Navigate to="/learning-center" replace />} />
             <Route path="/resources/blog/:slug" element={<BlogSlugRedirect />} />
             <Route path="/resources/glossary" element={<Glossary />} />
-            <Route path="/case-studies" element={<CaseStudies />} />
-            <Route path="/case-studies/:slug" element={<WhitepaperPage />} />
+            <Route path="/resources/case-studies" element={<CaseStudies />} />
             <Route path="/resources/comparison" element={<Comparison />} />
             <Route path="/resources/how-it-works" element={<HowItWorks />} />
 
@@ -284,6 +284,7 @@ const App = () => (
             <Route path="/industries/it-support-msps" element={<ITSupportMSPs />} />
             <Route path="/industries/pet-groomers" element={<PetGroomers />} />
             <Route path="/industries/private-tutors" element={<PrivateTutors />} />
+
             {/* Location pages */}
             <Route path="/locations" element={<LocationsPage />} />
             <Route path="/locations/sacramento" element={<Sacramento />} />
@@ -293,6 +294,7 @@ const App = () => (
             <Route path="/locations/culver-city" element={<CulverCity />} />
             <Route path="/locations/henderson" element={<Henderson />} />
             <Route path="/locations/monterey" element={<Monterey />} />
+
             {/* Legal/utility pages */}
             <Route path="/payment-success" element={<PaymentSuccess />} />
             <Route path="/terms" element={<Terms />} />
@@ -314,6 +316,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
+      </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
