@@ -41,11 +41,19 @@ const HomeIdealFor = () => {
           ))}
         </div>
 
-        <div className="text-center">
+        <div className="text-center mb-10">
           <p className="text-xl font-display font-bold text-white">
             If your customers call before they buy —{" "}
             <span className="text-primary">this is for you.</span>
           </p>
+        </div>
+        <div className="text-center">
+          <Button variant="hero" size="lg" asChild className="group">
+            <Link to="/industries" aria-label="See How AI Receptionist Helps Your Industry">
+              See How AI Receptionist Helps Your Industry
+              <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

@@ -55,6 +55,14 @@ const HomeSolution = () => {
         </div>
 
       </div>
+      <div className="text-center mt-12">
+        <Button variant="hero" size="lg" asChild className="group">
+          <Link to="/ai-receptionist/features" aria-label="Explore AI Receptionist Features">
+            Explore AI Receptionist Features
+            <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+          </Link>
+        </Button>
+      </div>
     </section>
   );
 };
