@@ -142,7 +142,7 @@ const Pricing = () => {
                 <span className="text-gradient">Immediate ROI.</span>
               </h1>
               <p className="text-xl text-white/70 max-w-2xl mx-auto mb-4">
-                Less than the cost of one part-time employee. Available 24/7.
+                Less than the cost of one part-time employee. Available 24/7. Our AI Receptionist delivers a proven ROI by capturing lost leads and optimizing your operational efficiency.
               </p>
               <p className="text-sm text-white/50">
                 No long-term contracts. Cancel anytime. Setup fees credited on upgrades.
