@@ -126,6 +126,7 @@ import ForEveryone from "./pages/learning-center/ForEveryone";
 import LearningCenterNews from "./pages/learning-center/News";
 import Glossary from "./pages/resources/Glossary";
 import CaseStudies from "./pages/resources/CaseStudies";
+import WhitepaperPage from "./pages/WhitepaperPage";
 import Comparison from "./pages/resources/Comparison";
 import HowItWorks from "./pages/resources/HowItWorks";
 import AIReceptionistGuide from "./pages/learning-center/AIReceptionistGuide";
@@ -224,7 +225,8 @@ const App = () => (
             <Route path="/resources/blog" element={<Navigate to="/learning-center" replace />} />
             <Route path="/resources/blog/:slug" element={<BlogSlugRedirect />} />
             <Route path="/resources/glossary" element={<Glossary />} />
-            <Route path="/resources/case-studies" element={<CaseStudies />} />
+            <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/case-studies/:slug" element={<WhitepaperPage />} />
             <Route path="/resources/comparison" element={<Comparison />} />
             <Route path="/resources/how-it-works" element={<HowItWorks />} />
             
