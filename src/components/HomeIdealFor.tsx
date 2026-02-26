@@ -1,4 +1,6 @@
-import { Wrench, Stethoscope, Scale, Briefcase, Building2, MapPin } from "lucide-react";
+import { Wrench, Stethoscope, Scale, Briefcase, Building2, MapPin, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const industries = [
   { icon: Wrench, name: "Home Services", detail: "HVAC, plumbing, roofing" },

@@ -55,7 +55,7 @@ export const LEADLINE_TIERS: ProductConfig[] = [
     family: "leadline",
     name: "BrightLaunchIQ AI Receptionist",
     tierName: "Growth",
-    tagline: "Maximize conversions. This AI receptionist books appointments, integrates with your CRM, and automates follow-ups to drive consistent growth."
+    tagline: "Maximize conversions. This AI receptionist books appointments, integrates with your CRM, and automates follow-ups to drive consistent growth.",
     monthlyPrice: 997,
     setupFee: 2500,
     setupFeatures: [
@@ -83,7 +83,7 @@ export const LEADLINE_TIERS: ProductConfig[] = [
     family: "leadline",
     name: "BrightLaunchIQ AI Receptionist",
     tierName: "Pro",
-    tagline: "Dominate your market. A custom AI receptionist solution with multi-location support, advanced analytics, and priority optimization for unparalleled efficiency and revenue."
+    tagline: "Dominate your market. A custom AI receptionist solution with multi-location support, advanced analytics, and priority optimization for unparalleled efficiency and revenue.",
     monthlyPrice: 1497,
     setupFee: 5000,
     setupFeatures: [
