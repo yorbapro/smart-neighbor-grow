@@ -166,7 +166,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <ScrollToTop />
         <Suspense fallback={<PageLoader />}>
           <Routes>
             {/* Critical route - eager loaded */}
@@ -199,6 +199,7 @@ const App = () => (
             <Route path="/omnilogic" element={<CustomAIWorkflows />} />
             <Route path="/ai-receptionist/features/complete-library" element={<AIReceptionistFeatureLibrary />} />
             <Route path="/ai-receptionist/how-it-works" element={<AIReceptionistHowItWorks />} />
+
             {/* Content/SEO pages */}
             <Route path="/about" element={<AboutPage />} />
             <Route path="/faq" element={<FAQPage />} />
@@ -210,10 +211,27 @@ const App = () => (
             <Route path="/learning-center/business-growth/ai-receptionist-pricing" element={<AIReceptionistPricing />} />
             <Route path="/learning-center/business-growth/signs-you-need-ai-receptionist" element={<SignsYouNeedAIReceptionist />} />
             <Route path="/learning-center/business-growth/calculate-ai-receptionist-roi" element={<CalculateAIReceptionistROI />} />
+            <Route path="/case-studies/precision-hvac-success-story" element={<PrecisionHVACSuccessStory />} />
+            <Route path="/learning-center/business-growth/ai-vs-human-receptionist" element={<AIvsHumanReceptionist />} />
+            <Route path="/learning-center/business-growth/ai-vs-answering-service" element={<AIvsAnsweringService />} />
+            <Route path="/learning-center/business-growth/ai-vs-virtual-receptionist" element={<AIvsVirtualReceptionist />} />
+            <Route path="/learning-center/business-growth/ai-receptionist-buyers-guide" element={<AIReceptionistBuyersGuide />} />
+            <Route path="/learning-center/business-growth/what-is-an-ai-receptionist" element={<WhatIsAIReceptionist />} />
+            <Route path="/learning-center/business-growth/how-ai-receptionists-work" element={<HowAIReceptionistsWork />} />
+            <Route path="/learning-center/business-growth/ai-receptionist-benefits" element={<AIReceptionistBenefits />} />
+            <Route path="/learning-center/consumer-guide/ai-voice-quality" element={<AIVoiceQuality />} />
+            <Route path="/learning-center/business-growth/ai-receptionist-setup-guide" element={<AIReceptionistSetupGuide />} />
+            <Route path="/learning-center/:slug" element={<BlogArticle />} />
+
+            {/* Legacy redirects */}
+            <Route path="/resources/blog" element={<Navigate to="/learning-center" replace />} />
+            <Route path="/resources/blog/:slug" element={<BlogSlugRedirect />} />
+            <Route path="/resources/glossary" element={<Glossary />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/case-studies/:slug" element={<WhitepaperPage />} />
             <Route path="/resources/comparison" element={<Comparison />} />
             <Route path="/resources/how-it-works" element={<HowItWorks />} />
+
             {/* Industry pages */}
             <Route path="/industries" element={<IndustryIndex />} />
             <Route path="/industries/hvac-contractors" element={<HVACContractors />} />
@@ -275,19 +293,27 @@ const App = () => (
             <Route path="/locations/culver-city" element={<CulverCity />} />
             <Route path="/locations/henderson" element={<Henderson />} />
             <Route path="/locations/monterey" element={<Monterey />} />
+            {/* Legal/utility pages */}
+            <Route path="/payment-success" element={<PaymentSuccess />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/accessibility" element={<Accessibility />} />
+            <Route path="/trust-security" element={<TrustSecurity />} />
+
+            {/* Auth pages */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/reset-password" element={<ResetPassword />} />
+
             {/* Admin pages */}
             <Route path="/admin" element={<AdminAuth />} />
             <Route path="/admin/leads" element={<AdminLeads />} />
             <Route path="/admin/templates" element={<AdminEmailTemplates />} />
-            <Route path="/reset-password" element={<ResetPassword />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            {/* Catch all other routes */}
+
+            {/* Catch-all */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
-      </BrowserRouter>
-      {typeof window !== 'undefined' && <ScrollToTop />}
     </TooltipProvider>
   </QueryClientProvider>
 );
