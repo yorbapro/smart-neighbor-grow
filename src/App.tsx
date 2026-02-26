@@ -167,7 +167,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <ScrollToTop />
-        <Suspense fallback={<PageLoader />}>
+      <Suspense fallback={<PageLoader />}>
           <Routes>
             {/* Critical route - eager loaded */}
             <Route path="/" element={<Index />} />
