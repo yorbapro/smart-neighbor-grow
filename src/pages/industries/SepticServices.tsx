@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Septic Services", slug: "septic-services", lossAmount: "75,000", lossAmountNum: 75000, useCases: ["Pumping Scheduling", "Emergency Calls", "Inspection Booking", "Installation Inquiries", "Repair Requests", "Maintenance Plans"], crm: "Housecall Pro", sectorLabel: "Trades & Construction", similarBusinesses: [{ name: "Emergency Plumbers", slug: "emergency-plumbers" }, { name: "General Contractors", slug: "general-contractors" }, { name: "Landscapers", slug: "landscapers" }], faqs: [{ question: "Can the AI handle septic emergencies?", answer: "Yes. It triages overflow and backup calls and dispatches your team immediately." }, { question: "How fast can we go live?", answer: "Most septic companies are live within 48 hours." }] };
+const SepticServices = () => <IndustryPageTemplate data={data} />;
+export default SepticServices;

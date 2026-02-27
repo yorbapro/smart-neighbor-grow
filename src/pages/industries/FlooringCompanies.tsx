@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Flooring Companies", slug: "flooring-companies", lossAmount: "80,000", lossAmountNum: 80000, useCases: ["Estimate Requests", "Material Questions", "Installation Scheduling", "Repair Inquiries", "Commercial Projects", "Follow-Up"], crm: "Jobber", sectorLabel: "Trades & Construction", similarBusinesses: [{ name: "General Contractors", slug: "general-contractors" }, { name: "Painters", slug: "painters" }, { name: "Concrete Contractors", slug: "concrete-contractors" }], faqs: [{ question: "Can the AI discuss flooring materials?", answer: "Yes. It handles questions about hardwood, tile, laminate, and carpet options." }, { question: "How fast can we go live?", answer: "Most flooring companies are live within 48 hours." }] };
+const FlooringCompanies = () => <IndustryPageTemplate data={data} />;
+export default FlooringCompanies;

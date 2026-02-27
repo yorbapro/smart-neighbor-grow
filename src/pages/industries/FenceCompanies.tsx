@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Fence Companies", slug: "fence-companies", lossAmount: "75,000", lossAmountNum: 75000, useCases: ["Estimate Scheduling", "Material Questions", "Permit Inquiries", "Repair Requests", "Commercial Fencing Leads", "Gate Installation"], crm: "Jobber", sectorLabel: "Home Services", similarBusinesses: [{ name: "Landscapers", slug: "landscapers" }, { name: "General Contractors", slug: "general-contractors" }, { name: "Concrete Contractors", slug: "concrete-contractors" }], faqs: [{ question: "Can the AI handle fence material questions?", answer: "Yes. It discusses wood, vinyl, chain-link, and aluminum options." }, { question: "How fast can we go live?", answer: "Most fence companies are live within 48 hours." }] };
+const FenceCompanies = () => <IndustryPageTemplate data={data} />;
+export default FenceCompanies;

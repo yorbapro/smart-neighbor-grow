@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Lash & Brow Studios", slug: "lash-brow-studios", lossAmount: "55,000", lossAmountNum: 55000, useCases: ["Appointment Booking", "Service Questions", "Aftercare Instructions", "Touch-Up Scheduling", "New Client Intake", "Gift Cards"], crm: "Vagaro", sectorLabel: "Personal Services", similarBusinesses: [{ name: "Hair Salons", slug: "hair-salons" }, { name: "Nail Salons", slug: "nail-salons" }, { name: "Day Spas", slug: "day-spas" }], faqs: [{ question: "Can the AI book lash extension appointments?", answer: "Yes. It captures service type, desired look, and schedules with your preferred artist." }, { question: "How fast can we go live?", answer: "Most lash and brow studios are live within 48 hours." }] };
+const LashAndBrowStudios = () => <IndustryPageTemplate data={data} />;
+export default LashAndBrowStudios;

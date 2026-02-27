@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Party Rental Companies", slug: "party-rental-companies", lossAmount: "75,000", lossAmountNum: 75000, useCases: ["Inventory Availability", "Quote Requests", "Delivery Scheduling", "Event Planning", "Equipment Questions", "Follow-Up Calls"], crm: "Goodshuffle Pro", sectorLabel: "Hospitality", similarBusinesses: [{ name: "Event Venues", slug: "event-venues" }, { name: "Wedding Planners", slug: "wedding-planners" }, { name: "Catering Services", slug: "catering-services" }], faqs: [{ question: "Can the AI check rental availability?", answer: "Yes. It handles item availability, pricing, and delivery scheduling." }, { question: "How fast can we go live?", answer: "Most party rental companies are live within 48 hours." }] };
+const PartyRentalCompanies = () => <IndustryPageTemplate data={data} />;
+export default PartyRentalCompanies;

@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Oil Change Services", slug: "oil-change-services", lossAmount: "55,000", lossAmountNum: 55000, useCases: ["Appointment Booking", "Service Menu Questions", "Wait Time Updates", "Fleet Service", "Synthetic vs Conventional", "Maintenance Reminders"], crm: "Shop-Ware", sectorLabel: "Auto", similarBusinesses: [{ name: "Auto Repair Shops", slug: "auto-repair-shops" }, { name: "Tire Shops", slug: "tire-shops" }, { name: "Auto Body Shops", slug: "auto-body-shops" }], faqs: [{ question: "Can the AI book oil change appointments?", answer: "Yes. It captures vehicle type, oil preference, and schedules appointments." }, { question: "How fast can we go live?", answer: "Most oil change services are live within 48 hours." }] };
+const OilChangeServices = () => <IndustryPageTemplate data={data} />;
+export default OilChangeServices;

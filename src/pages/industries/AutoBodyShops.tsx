@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Auto Body Shops", slug: "auto-body-shops", lossAmount: "85,000", lossAmountNum: 85000, useCases: ["Estimate Scheduling", "Insurance Claims", "Repair Status Updates", "Paint Matching", "Collision Repair Inquiries", "Rental Car Coordination"], crm: "CCC ONE", sectorLabel: "Auto", similarBusinesses: [{ name: "Auto Repair Shops", slug: "auto-repair-shops" }, { name: "Towing Companies", slug: "towing-companies" }, { name: "Tire Shops", slug: "tire-shops" }], faqs: [{ question: "Can the AI handle insurance claim calls?", answer: "Yes. It captures claim numbers, damage details, and schedules estimates." }, { question: "How fast can we go live?", answer: "Most auto body shops are live within 48 hours." }] };
+const AutoBodyShops = () => <IndustryPageTemplate data={data} />;
+export default AutoBodyShops;

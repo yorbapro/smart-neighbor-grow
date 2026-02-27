@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Storage Facilities", slug: "storage-facilities", lossAmount: "70,000", lossAmountNum: 70000, useCases: ["Unit Availability", "Pricing Inquiries", "Reservation Booking", "Access Hours", "Payment Questions", "Move-In Scheduling"], crm: "SiteLink", sectorLabel: "Real Estate", similarBusinesses: [{ name: "Moving Companies", slug: "moving-companies" }, { name: "Property Management", slug: "property-management" }, { name: "Junk Removal", slug: "junk-removal" }], faqs: [{ question: "Can the AI check unit availability?", answer: "Yes. It provides real-time availability and pricing for different unit sizes." }, { question: "How fast can we go live?", answer: "Most storage facilities are live within 48 hours." }] };
+const StorageFacilities = () => <IndustryPageTemplate data={data} />;
+export default StorageFacilities;

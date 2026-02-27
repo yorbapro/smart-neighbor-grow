@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Print Shops", slug: "print-shops", lossAmount: "55,000", lossAmountNum: 55000, useCases: ["Quote Requests", "Order Status", "Material Questions", "Rush Orders", "Large Format Inquiries", "Design Services"], crm: "PrintSmith", sectorLabel: "B2B & Education", similarBusinesses: [{ name: "IT Support & MSPs", slug: "it-support-msps" }, { name: "Photography Studios", slug: "photography-studios" }, { name: "Business Consultants", slug: "business-consultants" }], faqs: [{ question: "Can the AI handle print quotes?", answer: "Yes. It captures quantity, material, size, and turnaround requirements." }, { question: "How fast can we go live?", answer: "Most print shops are live within 48 hours." }] };
+const PrintShops = () => <IndustryPageTemplate data={data} />;
+export default PrintShops;

@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "General Contractors", slug: "general-contractors", lossAmount: "120,000", lossAmountNum: 120000, useCases: ["Bid Request Intake", "Subcontractor Coordination", "Client Updates", "Permit Questions", "Scheduling", "Emergency Calls"], crm: "Buildertrend", sectorLabel: "Trades & Construction", similarBusinesses: [{ name: "Roofing Companies", slug: "roofing-companies" }, { name: "Electricians", slug: "electricians" }, { name: "Concrete Contractors", slug: "concrete-contractors" }], faqs: [{ question: "Can the AI handle bid requests?", answer: "Yes. It captures project scope, timeline, and budget to qualify leads." }, { question: "How fast can we go live?", answer: "Most general contractors are live within 48 hours." }] };
+const GeneralContractors = () => <IndustryPageTemplate data={data} />;
+export default GeneralContractors;

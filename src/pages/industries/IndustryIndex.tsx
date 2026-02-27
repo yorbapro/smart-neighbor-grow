@@ -12,7 +12,7 @@ interface IndustryLink {
   slug: string;
 }
 
-const sectors: { label: string; industries: IndustryLink[] }[] = const sectors: { label: string; industries: IndustryLink[] }[] = [
+const sectors: { label: string; industries: IndustryLink[] }[] = [
   {
     label: "Home Services",
     industries: [
@@ -33,7 +33,7 @@ const sectors: { label: string; industries: IndustryLink[] }[] = const sectors: 
       { name: "Pool Service Companies", slug: "pool-service-companies" },
       { name: "Appliance Repair", slug: "appliance-repair" }
     ],
-  }},
+    },
   {
     label: "Healthcare",
     industries: [
@@ -54,7 +54,7 @@ const sectors: { label: string; industries: IndustryLink[] }[] = const sectors: 
       { name: "Acupuncture Clinics", slug: "acupuncture-clinics" },
       { name: "Home Health Care Agencies", slug: "home-health-care-agencies" }
     ],
-  }},
+    },
   {
     label: "Professional",
     industries: [
@@ -73,7 +73,7 @@ const sectors: { label: string; industries: IndustryLink[] }[] = const sectors: 
       { name: "Financial Advisors", slug: "financial-advisors" },
       { name: "Bookkeepers", slug: "bookkeepers" }
     ],
-  }},
+    },
   {
     label: "Real Estate",
     industries: [
@@ -87,7 +87,7 @@ const sectors: { label: string; industries: IndustryLink[] }[] = const sectors: 
       { name: "Moving Companies", slug: "moving-companies" },
       { name: "Storage Facilities", slug: "storage-facilities" }
     ],
-  }},
+    },
   {
     label: "Auto",
     industries: [
@@ -102,7 +102,7 @@ const sectors: { label: string; industries: IndustryLink[] }[] = const sectors: 
       { name: "Motorcycle Dealers", slug: "motorcycle-dealers" },
       { name: "RV Dealers & Service", slug: "rv-dealers-service" }
     ],
-  }},
+    },
   {
     label: "Personal Services",
     industries: [
@@ -119,7 +119,7 @@ const sectors: { label: string; industries: IndustryLink[] }[] = const sectors: 
       { name: "Dance Studios", slug: "dance-studios" },
       { name: "Photography Studios", slug: "photography-studios" }
     ],
-  }},
+    },
   {
     label: "Hospitality",
     industries: [
@@ -133,7 +133,7 @@ const sectors: { label: string; industries: IndustryLink[] }[] = const sectors: 
       { name: "Travel Agencies", slug: "travel-agencies" },
       { name: "Party Rental Companies", slug: "party-rental-companies" }
     ],
-  }},
+    },
   {
     label: "B2B & Education",
     industries: [
@@ -146,7 +146,7 @@ const sectors: { label: string; industries: IndustryLink[] }[] = const sectors: 
       { name: "Language Schools", slug: "language-schools" },
       { name: "Test Prep Centers", slug: "test-prep-centers" }
     ],
-  }},
+  },
   {
     label: "Trades & Construction",
     industries: [
@@ -157,8 +157,8 @@ const sectors: { label: string; industries: IndustryLink[] }[] = const sectors: 
       { name: "Septic Services", slug: "septic-services" },
       { name: "Tree Service Companies", slug: "tree-service-companies" }
     ],
-  }}
-];;
+  }
+];
 
 const IndustryIndex = () => {
   useSEO({

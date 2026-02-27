@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Tire Shops", slug: "tire-shops", lossAmount: "70,000", lossAmountNum: 70000, useCases: ["Tire Size Questions", "Appointment Scheduling", "Price Quotes", "Rotation/Alignment", "Emergency Flat Service", "Fleet Accounts"], crm: "Shop-Ware", sectorLabel: "Auto", similarBusinesses: [{ name: "Auto Repair Shops", slug: "auto-repair-shops" }, { name: "Auto Body Shops", slug: "auto-body-shops" }, { name: "Oil Change Services", slug: "oil-change-services" }], faqs: [{ question: "Can the AI handle tire inquiries?", answer: "Yes. It captures vehicle info, tire size, and schedules appointments." }, { question: "How fast can we go live?", answer: "Most tire shops are live within 48 hours." }] };
+const TireShops = () => <IndustryPageTemplate data={data} />;
+export default TireShops;

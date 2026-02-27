@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Bed & Breakfasts", slug: "bed-breakfasts", lossAmount: "70,000", lossAmountNum: 70000, useCases: ["Room Availability", "Reservation Booking", "Amenity Questions", "Special Occasion Packages", "Check-In Instructions", "Local Activity Info"], crm: "Little Hotelier", sectorLabel: "Hospitality", similarBusinesses: [{ name: "Boutique Hotels", slug: "boutique-hotels" }, { name: "Event Venues", slug: "event-venues" }, { name: "Wedding Planners", slug: "wedding-planners" }], faqs: [{ question: "Can the AI check room availability?", answer: "Yes. It provides real-time availability and handles direct bookings." }, { question: "How fast can we go live?", answer: "Most B&Bs are live within 48 hours." }] };
+const BedAndBreakfasts = () => <IndustryPageTemplate data={data} />;
+export default BedAndBreakfasts;

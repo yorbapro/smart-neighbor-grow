@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "RV Dealers & Service", slug: "rv-dealers-service", lossAmount: "100,000", lossAmountNum: 100000, useCases: ["Inventory Questions", "Service Scheduling", "Parts Inquiries", "Financing Questions", "Trade-In Valuations", "Tour Scheduling"], crm: "DealerSocket", sectorLabel: "Auto", similarBusinesses: [{ name: "Motorcycle Dealers", slug: "motorcycle-dealers" }, { name: "Car Rental Agencies", slug: "car-rental-agencies" }, { name: "Auto Repair Shops", slug: "auto-repair-shops" }], faqs: [{ question: "Can the AI handle RV inquiries?", answer: "Yes. It provides model details, pricing, and schedules showroom visits." }, { question: "How fast can we go live?", answer: "Most RV dealers are live within 48 hours." }] };
+const RvDealersAndService = () => <IndustryPageTemplate data={data} />;
+export default RvDealersAndService;

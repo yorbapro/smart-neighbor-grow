@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Appraisers", slug: "appraisers", lossAmount: "75,000", lossAmountNum: 75000, useCases: ["Appraisal Scheduling", "Order Intake", "Status Updates", "Rush Requests", "Commercial Appraisals", "Client Follow-Up"], crm: "Total", sectorLabel: "Real Estate", similarBusinesses: [{ name: "Home Inspectors", slug: "home-inspectors" }, { name: "Title Companies", slug: "title-companies" }, { name: "Mortgage Brokers", slug: "mortgage-brokers" }], faqs: [{ question: "Can the AI handle appraisal orders?", answer: "Yes. It captures property details, purpose, and schedules inspections." }, { question: "How fast can we go live?", answer: "Most appraisal firms are live within 48 hours." }] };
+const Appraisers = () => <IndustryPageTemplate data={data} />;
+export default Appraisers;
