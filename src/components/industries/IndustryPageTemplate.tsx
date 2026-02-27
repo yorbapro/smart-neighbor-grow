@@ -7,7 +7,7 @@ import useSEO from "@/hooks/useSEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Phone, PhoneCall, Calendar, Shield, ArrowRight, CheckCircle } from "lucide-react";
+import { Phone, PhoneCall, Calendar, Shield, ArrowRight, CheckCircle, Clock, Users, Zap } from "lucide-react";
 
 export interface IndustryFAQ {
   question: string;
@@ -17,6 +17,11 @@ export interface IndustryFAQ {
 export interface SimilarBusiness {
   name: string;
   slug: string;
+}
+
+export interface IndustryPainPoint {
+  title: string;
+  description: string;
 }
 
 export interface IndustryPageData {
@@ -29,16 +34,22 @@ export interface IndustryPageData {
   similarBusinesses: SimilarBusiness[];
   faqs: IndustryFAQ[];
   sectorLabel: string;
+  /** NEW: Industry-specific pain points that make this page unique */
+  painPoints?: IndustryPainPoint[];
+  /** NEW: A paragraph explaining why this industry specifically needs an AI receptionist */
+  whyThisIndustry?: string;
+  /** NEW: A real-world scenario showing the AI in action */
+  dayInTheLife?: string;
 }
 
 const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
-  const { name, slug, lossAmount, lossAmountNum, useCases, crm, similarBusinesses, faqs, sectorLabel } = data;
+  const { name, slug, lossAmount, lossAmountNum, useCases, crm, similarBusinesses, faqs, sectorLabel, painPoints, whyThisIndustry, dayInTheLife } = data;
 
   useSEO({
     title: `AI Receptionist for ${name} | BrightLaunchIQ`,
-    description: `Stop losing up to $${lossAmount}/year in missed calls. Our 24/7 AI Receptionist for ${name} captures leads & books appointments instantly. See the case study.`,
+    description: `24/7 AI Receptionist built for ${name}. Answers every call, qualifies leads, and books appointments into ${crm}. See how it works for your business.`,
     canonical: `https://brightlaunchiq.com/industries/${slug}`,
-    keywords: `AI receptionist ${name.toLowerCase()}, ${name.toLowerCase()} phone answering, ${name.toLowerCase()} missed calls, AI voice agent ${name.toLowerCase()}`,
+    keywords: `AI receptionist ${name.toLowerCase()}, ${name.toLowerCase()} phone answering, AI voice agent ${name.toLowerCase()}`,
   });
 
   // Inject Service + SoftwareApplication + FAQPage JSON-LD
@@ -54,25 +65,26 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
         "name": `AI Receptionist for ${name}`,
         "provider": {
           "@type": "Organization",
+          "@id": "https://brightlaunchiq.com/#organization",
           "name": "BrightLaunchIQ",
           "url": "https://brightlaunchiq.com",
         },
-        "description": `24/7 AI-powered phone answering service designed specifically for ${name}. Never miss a customer call again.`,
+        "description": `24/7 AI-powered phone answering service designed for ${name}. Answers calls, qualifies leads, books appointments into ${crm}, and routes urgent calls.`,
         "areaServed": "US",
         "serviceType": "AI Phone Answering Service",
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "BrightLaunchIQ AI Receptionist",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Cloud-based",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD",
-          "description": "Free consultation for " + name,
-        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "AI Receptionist Plans",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": `AI Receptionist Core for ${name}` },
+              "price": "497",
+              "priceCurrency": "USD",
+              "priceSpecification": { "@type": "UnitPriceSpecification", "unitText": "MONTH" }
+            }
+          ]
+        }
       },
       {
         "@context": "https://schema.org",
@@ -86,6 +98,15 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
           },
         })),
       },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://brightlaunchiq.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://brightlaunchiq.com/industries" },
+          { "@type": "ListItem", "position": 3, "name": name, "item": `https://brightlaunchiq.com/industries/${slug}` },
+        ]
+      }
     ];
 
     const script = document.createElement("script");
@@ -97,7 +118,7 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
     return () => {
       document.getElementById(schemaId)?.remove();
     };
-  }, [slug, name, faqs]);
+  }, [slug, name, faqs, crm]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -116,11 +137,10 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
               className="mb-8 text-white/60"
             />
             <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-4xl">
-              Recover <span className="text-primary">${lossAmount}+</span> in Annual Revenue for Your {name} Business
+              AI Receptionist for <span className="text-primary">{name}</span>
             </h1>
             <p className="mt-6 text-lg md:text-xl text-white/70 max-w-2xl">
-              Stop losing high-value leads to voicemail. Our enterprise-grade AI Receptionist reduces missed calls by 98%, increases booked appointments by up to 40%, and saves your staff 15+ hours per week. 
-              BrightLaunchIQ provides custom-trained AI voice agents for {name.toLowerCase()} that integrate directly with {crm} to turn every call into a measurable outcome.
+              {whyThisIndustry || `${name} depend on incoming calls to generate revenue. When those calls go to voicemail, potential customers call the next business on the list. BrightLaunchIQ's AI Receptionist answers every call 24/7, qualifies leads, and books appointments directly into ${crm} — so you never lose a job to a missed call.`}
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button variant="hero" size="lg" asChild>
@@ -135,41 +155,83 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
           </div>
         </section>
 
-        {/* The Cost of Missed Calls */}
-        <section className="py-16 md:py-24 bg-background">
-          <div className="container">
-            <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground text-center mb-4">
-              The True Cost for {name}
-            </h2>
-            <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-              Industry data shows {name.toLowerCase()} lose an average of <strong className="text-foreground">${lossAmount}</strong> per year from unanswered calls.
-              Here's how our AI Receptionist stops that leak.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6">
-              <Card className="shadow-card hover:shadow-card-hover transition-shadow">
-                <CardContent className="p-6 text-center">
-                  <PhoneCall className="w-10 h-10 text-primary mx-auto mb-4" />
-                  <h3 className="font-display font-semibold text-lg mb-2 text-foreground">24/7 Call Answering</h3>
-                  <p className="text-muted-foreground text-sm">Never miss an after-hours emergency or weekend inquiry again. Every call is answered instantly.</p>
-                </CardContent>
-              </Card>
-              <Card className="shadow-card hover:shadow-card-hover transition-shadow">
-                <CardContent className="p-6 text-center">
-                  <Calendar className="w-10 h-10 text-primary mx-auto mb-4" />
-                  <h3 className="font-display font-semibold text-lg mb-2 text-foreground">Instant Scheduling</h3>
-                  <p className="text-muted-foreground text-sm">The AI books appointments directly into your calendar or {crm}, eliminating phone tag.</p>
-                </CardContent>
-              </Card>
-              <Card className="shadow-card hover:shadow-card-hover transition-shadow">
-                <CardContent className="p-6 text-center">
-                  <Shield className="w-10 h-10 text-primary mx-auto mb-4" />
-                  <h3 className="font-display font-semibold text-lg mb-2 text-foreground">Lead Qualification</h3>
-                  <p className="text-muted-foreground text-sm">AI screens callers, captures key details, and routes hot leads to your team instantly.</p>
-                </CardContent>
-              </Card>
+        {/* Industry-Specific Pain Points — NEW unique section */}
+        {painPoints && painPoints.length > 0 && (
+          <section className="py-16 md:py-24 bg-background">
+            <div className="container">
+              <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground text-center mb-4">
+                Why {name} Lose Revenue to Missed Calls
+              </h2>
+              <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
+                Every industry has unique call patterns and challenges. Here's what we hear most from {name.toLowerCase()} owners.
+              </p>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {painPoints.map((point, i) => (
+                  <Card key={i} className="shadow-card hover:shadow-card-hover transition-shadow">
+                    <CardContent className="p-6">
+                      <h3 className="font-display font-semibold text-lg mb-2 text-foreground">{point.title}</h3>
+                      <p className="text-muted-foreground text-sm">{point.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
+
+        {/* Fallback: Generic call handling section if no painPoints provided */}
+        {(!painPoints || painPoints.length === 0) && (
+          <section className="py-16 md:py-24 bg-background">
+            <div className="container">
+              <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground text-center mb-4">
+                How AI Receptionist Works for {name}
+              </h2>
+              <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
+                Our AI receptionist is configured specifically for {name.toLowerCase()}, handling the call types and workflows that matter most to your business.
+              </p>
+              <div className="grid md:grid-cols-3 gap-6">
+                <Card className="shadow-card hover:shadow-card-hover transition-shadow">
+                  <CardContent className="p-6 text-center">
+                    <PhoneCall className="w-10 h-10 text-primary mx-auto mb-4" />
+                    <h3 className="font-display font-semibold text-lg mb-2 text-foreground">24/7 Call Answering</h3>
+                    <p className="text-muted-foreground text-sm">Every call is answered instantly — no voicemail, no hold times, no missed opportunities after hours or on weekends.</p>
+                  </CardContent>
+                </Card>
+                <Card className="shadow-card hover:shadow-card-hover transition-shadow">
+                  <CardContent className="p-6 text-center">
+                    <Calendar className="w-10 h-10 text-primary mx-auto mb-4" />
+                    <h3 className="font-display font-semibold text-lg mb-2 text-foreground">Direct {crm} Integration</h3>
+                    <p className="text-muted-foreground text-sm">The AI books appointments directly into {crm}, eliminating phone tag and manual data entry for your team.</p>
+                  </CardContent>
+                </Card>
+                <Card className="shadow-card hover:shadow-card-hover transition-shadow">
+                  <CardContent className="p-6 text-center">
+                    <Shield className="w-10 h-10 text-primary mx-auto mb-4" />
+                    <h3 className="font-display font-semibold text-lg mb-2 text-foreground">Lead Qualification</h3>
+                    <p className="text-muted-foreground text-sm">AI screens callers, captures key details, and routes qualified leads to your team so you focus on the jobs that matter.</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Day in the Life — NEW unique narrative section */}
+        {dayInTheLife && (
+          <section className="py-16 md:py-24 bg-muted/30">
+            <div className="container max-w-4xl">
+              <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground text-center mb-4">
+                A Day with BrightLaunchIQ
+              </h2>
+              <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-8">
+                Here's what it looks like when your AI receptionist is handling calls for your {name.toLowerCase()} business.
+              </p>
+              <div className="bg-card border border-border rounded-2xl p-8 md:p-10">
+                <p className="text-muted-foreground leading-relaxed whitespace-pre-line">{dayInTheLife}</p>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Use Cases */}
         <section className="py-16 md:py-24 bg-muted/50">
@@ -178,7 +240,7 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
               Built for {name}
             </h2>
             <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-              Purpose-built AI workflows that integrate with <strong className="text-foreground">{crm}</strong> and handle the calls that matter most. See our <Link to="/learning-center/crm-integration-ai" className="text-primary hover:underline">CRM integration guide</Link> for best practices.
+              Purpose-built AI workflows that integrate with <strong className="text-foreground">{crm}</strong> and handle the calls that matter most to your business.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
               {useCases.map((useCase, i) => (
@@ -191,14 +253,76 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
           </div>
         </section>
 
-        {/* FAQ Section */}
+        {/* Comparison Table — NEW answer-ready content */}
         <section className="py-16 md:py-24 bg-background">
+          <div className="container max-w-4xl">
+            <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground text-center mb-4">
+              AI Receptionist vs. Traditional Options for {name}
+            </h2>
+            <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
+              How does an AI receptionist compare to the alternatives?
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="border-b border-border">
+                    <th className="py-4 px-4 text-foreground font-display font-bold">Feature</th>
+                    <th className="py-4 px-4 text-primary font-display font-bold">AI Receptionist</th>
+                    <th className="py-4 px-4 text-muted-foreground font-display font-bold">Hiring Staff</th>
+                    <th className="py-4 px-4 text-muted-foreground font-display font-bold">Answering Service</th>
+                  </tr>
+                </thead>
+                <tbody className="text-sm">
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 px-4 text-foreground font-medium">Available 24/7</td>
+                    <td className="py-3 px-4 text-primary">Yes</td>
+                    <td className="py-3 px-4 text-muted-foreground">No — limited hours</td>
+                    <td className="py-3 px-4 text-muted-foreground">Often — with surcharges</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 px-4 text-foreground font-medium">Books into {crm}</td>
+                    <td className="py-3 px-4 text-primary">Yes — automatically</td>
+                    <td className="py-3 px-4 text-muted-foreground">Manual entry</td>
+                    <td className="py-3 px-4 text-muted-foreground">Rarely</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 px-4 text-foreground font-medium">Qualifies leads</td>
+                    <td className="py-3 px-4 text-primary">Yes — custom logic</td>
+                    <td className="py-3 px-4 text-muted-foreground">Depends on training</td>
+                    <td className="py-3 px-4 text-muted-foreground">Basic message taking</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 px-4 text-foreground font-medium">Handles peak volume</td>
+                    <td className="py-3 px-4 text-primary">Unlimited simultaneous calls</td>
+                    <td className="py-3 px-4 text-muted-foreground">1 call at a time</td>
+                    <td className="py-3 px-4 text-muted-foreground">Queue with hold times</td>
+                  </tr>
+                  <tr className="border-b border-border/50">
+                    <td className="py-3 px-4 text-foreground font-medium">Monthly cost</td>
+                    <td className="py-3 px-4 text-primary">Starting at $497/mo</td>
+                    <td className="py-3 px-4 text-muted-foreground">$3,000–$5,000+/mo</td>
+                    <td className="py-3 px-4 text-muted-foreground">$250–$1,000+/mo + per-call fees</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 px-4 text-foreground font-medium">Setup time</td>
+                    <td className="py-3 px-4 text-primary">Days</td>
+                    <td className="py-3 px-4 text-muted-foreground">Weeks to months</td>
+                    <td className="py-3 px-4 text-muted-foreground">1–2 weeks</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 md:py-24 bg-muted/50">
           <div className="container max-w-3xl">
             <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground text-center mb-4">
               Frequently Asked Questions
             </h2>
             <p className="text-center text-muted-foreground mb-12">
-              Common questions about AI Receptionists for {name.toLowerCase()}.
+              Common questions about AI receptionists for {name.toLowerCase()}.
             </p>
             <Accordion type="single" collapsible className="space-y-3">
               {faqs.map((faq, i) => (
@@ -216,7 +340,7 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
         </section>
 
         {/* Beyond [Industry] - Cross-linking */}
-        <section className="py-16 md:py-24 bg-muted/50">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container max-w-4xl">
             <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground text-center mb-4">
               Beyond {name}
@@ -227,7 +351,6 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
                 AI Receptionist
               </Link>{" "}
               is purpose-built for businesses that depend on incoming calls to generate revenue.
-              Explore how we help similar businesses:
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {similarBusinesses.map((biz) => (
@@ -247,10 +370,10 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
         <section className="py-16 md:py-24 bg-gradient-hero-dark">
           <div className="container text-center">
             <h2 className="font-display text-2xl md:text-4xl font-bold text-white mb-4">
-              Stop Losing ${lossAmount}+ Per Year
+              Ready to Stop Missing Calls?
             </h2>
             <p className="text-white/70 max-w-xl mx-auto mb-8">
-              Join hundreds of {name.toLowerCase()} using BrightLaunchIQ to capture every call, book every appointment, and grow revenue on autopilot.
+              See how BrightLaunchIQ's AI Receptionist works for {name.toLowerCase()}. Get a free demo — no commitment required.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button variant="hero" size="lg" asChild>

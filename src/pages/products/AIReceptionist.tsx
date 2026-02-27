@@ -113,7 +113,7 @@ const AIReceptionist = () => {
           "name": "Is BrightLaunchIQ AI Receptionist good for HVAC and plumbing companies?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. HVAC and plumbing companies miss 60-80% of inbound calls because technicians are on job sites. BrightLaunchIQ answers every call instantly, books service appointments, captures emergency details, and routes urgent calls to the on-call technician — even at 2 AM."
+            "text": "Yes. HVAC and plumbing companies frequently miss inbound calls because technicians are on job sites. BrightLaunchIQ answers every call instantly, books service appointments, captures emergency details, and routes urgent calls to the on-call technician — even at 2 AM."
           }
         }
       ]
@@ -525,7 +525,7 @@ const AIReceptionist = () => {
                 role: "HVAC Company Owner",
               },
               {
-                quote: "Response time dropped from hours to seconds. We're booking 3x more consultations without adding staff.",
+                quote: "Response time dropped from hours to seconds. We're booking significantly more consultations without adding staff.",
                 name: "Sarah R.",
                 role: "Managing Partner, Law Firm",
               },

@@ -16,7 +16,6 @@ const data: IndustryPageData = {
   faqs: [
     { question: "Can an AI receptionist schedule dermatology appointments?", answer: "Yes. The AI books skin checks, cosmetic consultations, Mohs surgery follow-ups, and acne treatment visits directly into your calendar." },
     { question: "Does the AI integrate with Modernizing Medicine?", answer: "Yes. BrightLaunchIQ connects with Modernizing Medicine to manage scheduling, patient records, and referral tracking automatically." },
-    { question: "How much do dermatologists lose from missed calls?", answer: "$140,000 or more per year. Cosmetic dermatology patients are high-value — a single Mohs patient can represent $5,000+ in procedures." },
     { question: "Can the AI answer skincare product questions?", answer: "Yes. The AI provides information about your recommended skincare lines, product availability, and pricing based on your configured catalog." },
     { question: "Does the AI handle dermatology referrals?", answer: "Yes. The AI captures referring physician details, diagnosis codes, and urgency level, then creates the referral record in your system." },
     { question: "How quickly can a dermatology practice get started?", answer: "Most dermatology practices are live within 48 hours. We configure procedure scheduling, integrate with Modernizing Medicine, and customize for your specialties." },

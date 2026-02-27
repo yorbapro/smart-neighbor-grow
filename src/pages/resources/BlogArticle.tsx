@@ -475,7 +475,7 @@ const articles: Record<string, ArticleData> = {
       "An AI receptionist is an artificial intelligence system that answers phone calls, engages callers in natural conversation, qualifies leads, and books appointments—just like a human receptionist, but available 24/7/365.",
       "Unlike basic IVR phone trees that frustrate callers with 'Press 1 for sales,' modern AI receptionists use conversational AI that sounds natural and can handle complex questions, interruptions, and follow-ups.",
       "## Why Small Businesses Need an AI Receptionist",
-      "The data is clear: 85% of callers who don't reach you the first time won't call back—they'll call your competitor. And 50% of sales go to the first business that responds.",
+      "The reality is clear: most callers who don't reach you the first time won't call back—they'll call your competitor. And the first business to respond has a significant advantage in winning the sale.",
       "For small businesses, the challenge is coverage. You can't always answer the phone when you're:",
       "- On a job site (contractors)",
       "- In court or with clients (law firms)",

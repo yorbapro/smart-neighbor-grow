@@ -21,7 +21,7 @@ const Testimonials = () => {
       role: "Managing Partner",
       company: "Rodriguez Law Group",
       location: "Austin, TX",
-      quote: "Response time dropped from hours to seconds. We're booking 3x more consultations without adding staff.",
+      quote: "Response time dropped from hours to seconds. We're booking significantly more consultations without adding staff.",
       metric: "3x",
       metricLabel: "More Booked Appointments",
       photo: lawyerPhoto,

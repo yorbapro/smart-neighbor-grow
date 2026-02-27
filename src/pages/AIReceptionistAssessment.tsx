@@ -103,7 +103,7 @@ const questions = [
     key: "competitorPercent" as const,
     icon: Users,
     question: "What percentage of missed callers do you think call a competitor instead?",
-    helpText: "Studies show that 85% of callers who can't reach a business will not call back — they simply call the next business on the list.",
+    helpText: "Research suggests that most callers who can't reach a business will not call back — they simply call the next business on the list.",
     options: ["50%", "60%", "70%", "80%", "85% (industry average)", "90%", "95%+"],
   },
   {

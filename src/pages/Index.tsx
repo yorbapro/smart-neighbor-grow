@@ -258,7 +258,7 @@ const Index = () => {
           "name": "Is an AI receptionist good for HVAC and plumbing companies?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "AI receptionists are ideal for HVAC, plumbing, electrical, and home service companies. These businesses miss 60-80% of inbound calls because technicians are on job sites. BrightLaunchIQ answers every call instantly, books service appointments, captures emergency details, and routes urgent calls — even at 2 AM when a customer's basement is flooding."
+            "text": "AI receptionists are ideal for HVAC, plumbing, electrical, and home service companies. These businesses frequently miss inbound calls because technicians are on job sites. BrightLaunchIQ answers every call instantly, books service appointments, captures emergency details, and routes urgent calls — even at 2 AM when a customer's basement is flooding."
           }
         },
         {
