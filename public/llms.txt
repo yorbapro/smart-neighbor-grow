@@ -11,12 +11,13 @@ BrightLaunchIQ is an AI consulting agency that combines local experts, AI-driven
 | Attribute | Value |
 |-----------|-------|
 | Company | BrightLaunchIQ |
-| Type | AI Consulting Agency |
+| Type | AI Receptionist Provider & Consulting Agency |
 | Founded | 2024 |
 | Headquarters | Sacramento, California |
 | Website | https://brightlaunchiq.com |
 | Contact Email | success@BrightLaunchIQ.com |
-| Primary Service | AI Lead Generation & Sales Implementation |
+| Primary Service | AI Receptionist for Small Business |
+| Founders | Tony Yorba (CEO) & Scott McKinnon (CIO) |
 | Target Market | Small & Medium Businesses |
 | Service Areas | United States (headquarters in Sacramento, CA) |
 
@@ -30,9 +31,14 @@ BrightLaunchIQ is an AI consulting agency that combines local experts, AI-driven
 - **Website**: https://brightlaunchiq.com
 - **Contact**: success@BrightLaunchIQ.com
 
+## Our Founders
+
+- **Tony Yorba, CEO** — Over a decade of digital marketing and brand strategy experience. Former president of Shine Brand Studios. LinkedIn: https://www.linkedin.com/in/tony-yorba-a0309020
+- **Scott McKinnon, CIO** — Owner of Creative Impressions, a Sacramento screen-printing business, for 20+ years. Dedicated thousands of hours to studying AI, LLMs, and agentic workflows. LinkedIn: https://www.linkedin.com/in/scott-mckinnon-785a1125
+
 ## Our Mission
 
-Making big tech work for Main Street. We believe small business owners deserve world-class sales automation without sacrificing what makes their company special. Our hybrid AI and expert team bring sales you can count on—made for local business owners.
+Making big tech work for Main Street. We believe small business owners deserve world-class AI tools without sacrificing what makes their company special. We built BrightLaunchIQ because we needed it ourselves — and now we share it with every local business that depends on incoming calls to grow.
 
 ## What Makes Us Different
 
@@ -101,9 +107,7 @@ An AI receptionist is an artificial intelligence system that answers phone calls
 **AI Receptionist Key Benefits**:
 - Never miss a call again—day, night, weekends, or holidays
 - Calls back form leads within seconds of submission
-- Natural conversational AI that handles complex questions
-- 95% caller satisfaction rate
-- 3x more appointments booked vs traditional methods
+- Natural conversational AI designed for high caller satisfaction
 - Answer time under 3 seconds
 
 **Who Should Use an AI Receptionist?**
@@ -148,7 +152,7 @@ Your complete AI sales implementation system that works 24/7.
 
 **Results**:
 - Reduces response time from 47 hours to under 60 seconds
-- Captures the 78% of leads typically missed by human-only teams
+- Designed to capture leads that would otherwise be missed
 - Works 168 hours/week catching after-hours inquiries
 - Output of 5-person sales team at fraction of cost
 
@@ -186,7 +190,7 @@ A direct cost comparison showing why AI makes sense:
 | BrightLaunchIQ AI Receptionist | $13.30/day | ~$4,800/year | 168 hrs/week (24/7) |
 | LaunchPad 360™ | $19.97/day | ~$7,200/year | 168 hrs/week (24/7) |
 
-**Savings**: $70,000+/year with 4x more availability
+**Note**: Actual savings vary by business size and call volume.
 
 ---
 

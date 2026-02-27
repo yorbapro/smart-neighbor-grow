@@ -25,16 +25,15 @@ import {
 
 const About = () => {
   useEffect(() => {
-    document.title = "About Us | BrightLaunchIQ AI Receptionist";
+    document.title = "About Us — Tony Yorba & Scott McKinnon | BrightLaunchIQ";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Meet BrightLaunchIQ. Human-guided AI receptionist helping local businesses capture every call and grow revenue."
+        "BrightLaunchIQ was founded by Tony Yorba and Scott McKinnon — two business owners who built AI receptionist tools because they needed them first. Learn our story."
       );
     }
 
-    // Set canonical
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (!canonicalLink) {
       canonicalLink = document.createElement("link");
@@ -43,37 +42,63 @@ const About = () => {
     }
     canonicalLink.setAttribute("href", "https://brightlaunchiq.com/about");
 
-    // Add Organization and AboutPage schema
     const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
     existingScripts.forEach(script => script.remove());
 
     const aboutSchema = document.createElement("script");
     aboutSchema.type = "application/ld+json";
     aboutSchema.id = "about-schema";
-    aboutSchema.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "AboutPage",
-      "name": "About BrightLaunchIQ",
-      "description": "BrightLaunchIQ combines local experts, AI-driven sales tools, and local businesses. Our mission is to help small business owners use AI sales tools to grow their income without increasing their stress.",
-      "mainEntity": {
-        "@type": "Organization",
-        "name": "BrightLaunchIQ",
-        "description": "Human-guided AI for business growth. We help contractors, consultants, and local businesses respond first, automate the busywork, and win more customers.",
-        "foundingDate": "2023",
-        "slogan": "Making Big Tech Work for Main Street",
-        "areaServed": {
-          "@type": "Country",
-          "name": "United States"
-        },
-        "knowsAbout": [
-          "AI Lead Generation",
-          "AI Sales Automation",
-          "Answer Engine Optimization",
-          "Human-Guided AI",
-          "Small Business Automation"
-        ]
+    aboutSchema.textContent = JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About BrightLaunchIQ",
+        "description": "BrightLaunchIQ was founded by Tony Yorba and Scott McKinnon to help local service businesses capture every customer call using AI receptionist technology.",
+        "mainEntity": {
+          "@type": "Organization",
+          "@id": "https://brightlaunchiq.com/#organization",
+          "name": "BrightLaunchIQ",
+          "description": "AI receptionist provider for small businesses. Founded by Tony Yorba and Scott McKinnon.",
+          "foundingDate": "2024",
+          "founder": [
+            { "@type": "Person", "@id": "https://brightlaunchiq.com/#tony-yorba" },
+            { "@type": "Person", "@id": "https://brightlaunchiq.com/#scott-mckinnon" }
+          ],
+          "slogan": "Never Miss Another Customer Call",
+          "areaServed": {
+            "@type": "Country",
+            "name": "United States"
+          },
+          "knowsAbout": [
+            "AI Receptionist",
+            "AI Phone Answering",
+            "Small Business Automation",
+            "Lead Qualification",
+            "Appointment Booking"
+          ]
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://brightlaunchiq.com/#tony-yorba",
+        "name": "Tony Yorba",
+        "jobTitle": "Chief Executive Officer",
+        "worksFor": { "@type": "Organization", "name": "BrightLaunchIQ" },
+        "knowsAbout": ["Digital Marketing", "AI Business Automation", "Brand Strategy", "Small Business Growth"],
+        "sameAs": ["https://www.linkedin.com/in/tony-yorba-a0309020"]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://brightlaunchiq.com/#scott-mckinnon",
+        "name": "Scott McKinnon",
+        "jobTitle": "Chief Information Officer",
+        "worksFor": { "@type": "Organization", "name": "BrightLaunchIQ" },
+        "knowsAbout": ["AI Implementation", "Business Operations", "Screen Printing", "Small Business Technology"],
+        "sameAs": ["https://www.linkedin.com/in/scott-mckinnon-785a1125"]
       }
-    });
+    ]);
     document.head.appendChild(aboutSchema);
 
     window.scrollTo(0, 0);
@@ -86,63 +111,48 @@ const About = () => {
 
   const teamMembers = [
     {
-      name: "Marcus Reynolds",
-      role: "Founder & CEO",
-      bio: "Former enterprise sales leader who saw local businesses getting left behind in the AI revolution. Founded BrightLaunchIQ to democratize access to world-class sales automation.",
-      avatar: "MR",
-      linkedin: "#",
+      name: "Tony Yorba",
+      role: "CEO & Co-Founder",
+      bio: "Tony brings over a decade of hands-on digital marketing and brand strategy experience to BrightLaunchIQ. As the former president of Shine Brand Studios, he helped local businesses build their online presence from the ground up. When he saw how many of his clients were losing leads to missed calls and slow follow-ups, he knew AI could close that gap — and co-founded BrightLaunchIQ to make it happen.",
+      avatar: "TY",
+      linkedin: "https://www.linkedin.com/in/tony-yorba-a0309020",
     },
     {
-      name: "Dr. Sarah Chen",
-      role: "Chief AI Officer",
-      bio: "PhD in Machine Learning from Stanford. Previously led AI initiatives at a Fortune 500 company. Passionate about responsible AI that augments human decision-making.",
-      avatar: "SC",
-      linkedin: "#",
-    },
-    {
-      name: "David Thompson",
-      role: "VP of Customer Success",
-      bio: "20+ years helping small businesses grow. Believes technology should feel invisible—powerful results without complexity. Leads our human oversight team.",
-      avatar: "DT",
-      linkedin: "#",
-    },
-    {
-      name: "Elena Rodriguez",
-      role: "Head of Operations",
-      bio: "Operations expert who built scalable systems for high-growth startups. Ensures every client gets enterprise-grade infrastructure with boutique-level attention.",
-      avatar: "ER",
-      linkedin: "#",
+      name: "Scott McKinnon",
+      role: "CIO & Co-Founder",
+      bio: "Scott has owned and operated Creative Impressions, a Sacramento screen-printing business, for over 20 years. He knows firsthand what it means to miss a call while you're on the production floor. Over the past year, Scott has dedicated thousands of hours to studying AI, large language models, and agentic workflows — turning that knowledge into practical tools that help small business owners like himself capture every opportunity.",
+      avatar: "SM",
+      linkedin: "https://www.linkedin.com/in/scott-mckinnon-785a1125",
     },
   ];
 
   const values = [
     {
       icon: Users,
-      title: "Human-in-the-Loop",
-      description: "Our expert consultants guide and supervise every AI system, so your customer touchpoints always feel real and never robotic.",
+      title: "Built by Business Owners, for Business Owners",
+      description: "We didn't build BrightLaunchIQ in a lab. We built it because we needed it. Every feature solves a problem we've faced ourselves.",
     },
     {
       icon: Shield,
-      title: "Bounded Autonomy",
-      description: "AI should be powerful but controllable. We design systems with clear guardrails that keep you in command of your business decisions.",
+      title: "Human Oversight, Always",
+      description: "AI handles the calls. Humans set the rules. You stay in control of how your business is represented to every caller.",
     },
     {
       icon: Heart,
       title: "Local First",
-      description: "We're not building for faceless corporations. Every feature is designed for the local business owner who cares about their community.",
+      description: "We serve the contractors, dentists, lawyers, and shop owners who are the backbone of their communities. Big-company tools, small-business values.",
     },
     {
       icon: Lightbulb,
-      title: "Invisible Infrastructure",
-      description: "The best technology disappears. We build systems that work silently in the background, delivering results without adding complexity.",
+      title: "Honest Results",
+      description: "We don't make promises we can't back up. If something isn't working, we'll tell you — and fix it. Transparency is non-negotiable.",
     },
   ];
 
   const milestones = [
-    { year: "2023", event: "Founded with a mission to democratize AI sales for local businesses" },
-    { year: "2024", event: "Launched LaunchPad 360™ and served 100+ businesses nationwide" },
-    { year: "2025", event: "Expanded to regional hubs across the United States" },
-    { year: "2026", event: "Pioneering Agentic Go-To-Market solutions for SMBs" },
+    { year: "2024", event: "Tony and Scott founded BrightLaunchIQ after seeing local businesses lose revenue to missed calls and slow lead follow-up." },
+    { year: "2025", event: "Launched the AI Receptionist product and began serving service businesses across California and the western United States." },
+    { year: "2026", event: "Expanding AI receptionist capabilities with deeper CRM integrations, multi-location support, and industry-specific voice agents." },
   ];
 
   return (
@@ -157,69 +167,73 @@ const About = () => {
               Our Story
             </span>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Making Big Tech Work for <span className="text-primary">Main Street</span>
+              Two Business Owners Who Got Tired of <span className="text-primary">Missing Calls</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              BrightLaunchIQ connects local experts, AI-driven sales tools, and local businesses. 
-              We understand your unique needs and help you grow without increasing stress.
+              BrightLaunchIQ wasn't born in a Silicon Valley incubator. It was born in a screen-printing shop 
+              and a digital marketing agency — two businesses where every missed call meant lost revenue. 
+              We built the AI receptionist we wished we'd had years ago.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* Origin Story Section */}
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div>
               <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
-                Our Mission: Your Growth
+                Why We Started
               </span>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-                The Human Touch in an AI World
+                We Know What a Missed Call Costs
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                We believe small business owners deserve world-class sales automation, without 
-                sacrificing what makes their company special. Our hybrid AI and expert team brings 
-                sales you can count on—made for local business owners.
+                Between us, we have over 30 years of experience running local businesses. Tony spent years 
+                helping small companies build their brands through digital marketing at Shine Brand Studios. 
+                Scott has run Creative Impressions, a Sacramento screen-printing company, for over two decades. 
+                We both learned the same hard lesson: it doesn't matter how good your marketing is if nobody 
+                picks up the phone.
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Our expert team guides the AI to keep every interaction friendly and real for your 
-                customers. We build your sales engine around your story and values, making sure 
-                your technology listens and responds like a trusted member of your team—never a robot.
+                When Scott started experimenting with AI and large language models, the lightbulb went on. 
+                What if a small business could have an AI-powered receptionist that answers every call, 
+                qualifies every lead, and books appointments — without hiring another employee? That question 
+                became BrightLaunchIQ.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                If a tool doesn't help you make more money or save more time, we don't use it. 
-                Simple as that. You'll see clear results in less time, and every step is checked 
-                by an expert.
+                We're not a faceless tech company. We're two guys who have stood behind counters, answered 
+                our own phones, and lost sleep over missed opportunities. BrightLaunchIQ is the tool we 
+                built for ourselves — and now we're sharing it with every local business that needs it.
               </p>
             </div>
 
             <div className="bg-secondary rounded-2xl p-8 text-secondary-foreground">
-              <h3 className="font-display text-2xl font-bold mb-6">The Math of Success</h3>
+              <h3 className="font-display text-2xl font-bold mb-6">The Numbers That Matter</h3>
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-display text-xl font-bold text-primary">$16.60</span>
+                    <span className="font-display text-xl font-bold text-primary">30+</span>
                   </div>
                   <div>
-                    <p className="font-semibold">Per Day</p>
-                    <p className="text-sm text-secondary-foreground/70">Your 24/7 AI sales teammate</p>
+                    <p className="font-semibold">Years of Business Ownership</p>
+                    <p className="text-sm text-secondary-foreground/70">Combined experience running local businesses</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-xl bg-destructive/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-display text-xl font-bold text-destructive">$80k+</span>
+                  <div className="w-16 h-16 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <span className="font-display text-xl font-bold text-primary">24/7</span>
                   </div>
                   <div>
-                    <p className="font-semibold">Per Year</p>
-                    <p className="text-sm text-secondary-foreground/70">Traditional human hire cost</p>
+                    <p className="font-semibold">Always-On Coverage</p>
+                    <p className="text-sm text-secondary-foreground/70">Your AI receptionist never takes a day off</p>
                   </div>
                 </div>
                 <div className="pt-4 border-t border-secondary-foreground/10">
                   <p className="text-sm text-secondary-foreground/80">
-                    Our tools are made for small local businesses—so you get the strength of a big 
-                    company without hiring a huge staff. More sales, less stress, simple systems.
+                    We price BrightLaunchIQ for the businesses we know — not enterprise budgets. 
+                    Our AI Receptionist starts at $497/month, a fraction of what a part-time hire costs.
                   </p>
                 </div>
               </div>
@@ -234,10 +248,10 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
-                Human-Guided AI
+                Our Approach
               </span>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-                AI Plus Experts: How We Work
+                AI That Works Because Humans Set It Up Right
               </h2>
             </div>
 
@@ -246,10 +260,10 @@ const About = () => {
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
                   <Brain className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="font-display font-bold text-foreground mb-2">AI Does the Work</h3>
+                <h3 className="font-display font-bold text-foreground mb-2">We Train It On Your Business</h3>
                 <p className="text-sm text-muted-foreground">
-                  Our AI tools track leads around the clock so you never miss an opportunity. 
-                  Automated outreach, instant responses, continuous prospecting.
+                  Your AI receptionist learns your services, your FAQs, your scheduling rules, and your 
+                  tone of voice. It represents your business, not a generic script.
                 </p>
               </div>
 
@@ -257,10 +271,10 @@ const About = () => {
                 <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
                   <Users className="w-7 h-7 text-accent" />
                 </div>
-                <h3 className="font-display font-bold text-foreground mb-2">Experts Guide Everything</h3>
+                <h3 className="font-display font-bold text-foreground mb-2">Real People Oversee Everything</h3>
                 <p className="text-sm text-muted-foreground">
-                  Real people work side-by-side with you to design the logic behind your AI. 
-                  Human-verified, local strategies for smarter sales.
+                  We review call logs, refine scripts, and adjust routing rules. The AI handles volume; 
+                  our team handles quality.
                 </p>
               </div>
 
@@ -268,10 +282,10 @@ const About = () => {
                 <div className="w-14 h-14 rounded-xl bg-secondary/30 flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-7 h-7 text-secondary" />
                 </div>
-                <h3 className="font-display font-bold text-foreground mb-2">You Get Results</h3>
+                <h3 className="font-display font-bold text-foreground mb-2">You See Measurable Results</h3>
                 <p className="text-sm text-muted-foreground">
-                  Grow your reach and outperform competitors. Fill your pipeline and manage 
-                  growth with less effort using AI that understands your unique needs.
+                  Fewer missed calls. More booked appointments. Clear reporting so you know 
+                  exactly what your AI receptionist is doing for your business.
                 </p>
               </div>
             </div>
@@ -290,7 +304,7 @@ const About = () => {
               Our Core Values
             </h2>
             <p className="text-lg text-muted-foreground">
-              These principles guide every decision we make and every system we build.
+              These aren't corporate slogans. They're the principles we apply to our own businesses every day.
             </p>
           </div>
 
@@ -317,41 +331,43 @@ const About = () => {
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 block">
-              Meet The Team
+              Meet The Founders
             </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              The Humans Behind the AI
+              The People Behind BrightLaunchIQ
             </h2>
             <p className="text-lg text-muted-foreground">
-              We're a team of sales veterans, AI researchers, and operations experts 
-              united by a mission to help local businesses thrive.
+              We're not AI researchers in a lab. We're business owners who use this technology every day 
+              to solve real problems.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {teamMembers.map((member) => (
               <div
                 key={member.name}
-                className="p-6 rounded-2xl bg-card border border-border hover:shadow-card-hover transition-shadow text-center"
+                className="p-8 rounded-2xl bg-card border border-border hover:shadow-card-hover transition-shadow"
               >
-                <div className="w-20 h-20 rounded-full bg-gradient-hero flex items-center justify-center mx-auto mb-4">
+                <div className="w-20 h-20 rounded-full bg-gradient-hero flex items-center justify-center mb-6">
                   <span className="text-primary-foreground font-display font-bold text-2xl">
                     {member.avatar}
                   </span>
                 </div>
-                <h3 className="font-display text-xl font-bold text-foreground mb-1">
+                <h3 className="font-display text-2xl font-bold text-foreground mb-1">
                   {member.name}
                 </h3>
-                <p className="text-sm font-medium text-primary mb-3">{member.role}</p>
-                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                <p className="text-sm font-medium text-primary mb-4">{member.role}</p>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
                   {member.bio}
                 </p>
                 <a
                   href={member.linkedin}
-                  className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Linkedin className="w-4 h-4" />
-                  Connect
+                  Connect on LinkedIn
                 </a>
               </div>
             ))}
@@ -367,7 +383,7 @@ const About = () => {
               Our Journey
             </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Building the Future of Local Business
+              From Idea to Impact
             </h2>
           </div>
 
@@ -403,15 +419,15 @@ const About = () => {
                 Where We Work
               </span>
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
-                Serving Communities Across the West
+                Based in Sacramento. Serving Businesses Nationwide.
               </h2>
               <p className="text-secondary-foreground/80 mb-6">
-                We're not a faceless tech company. Get connected to a real expert who 
-                understands your area. Our local focus means smarter answers and faster 
-                growth for your business.
+                BrightLaunchIQ is headquartered in Sacramento, California. Our AI receptionist 
+                technology works for any service business in the United States — no matter where 
+                your customers are calling from.
               </p>
               <div className="flex flex-wrap gap-3">
-                {["Sacramento", "Bakersfield", "Culver City", "Henderson", "Monterey"].map((city) => (
+                {["Sacramento, CA"].map((city) => (
                   <span
                     key={city}
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"
@@ -425,15 +441,15 @@ const About = () => {
 
             <div className="flex flex-col gap-4">
               <Button variant="hero" size="lg" className="w-full sm:w-auto" asChild>
-                <Link to="/locations">
-                  Find Your Local Hub
+                <Link to="/contact">
+                  Get in Touch
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
               <Button variant="outline" size="lg" className="w-full sm:w-auto border-primary/30 text-secondary-foreground hover:bg-primary/10" asChild>
-                <Link to="/contact">
-                  Get in Touch
-                </Link>
+                <a href="tel:1-877-879-5552">
+                  Call Us: 1-877-879-5552
+                </a>
               </Button>
             </div>
           </div>
@@ -453,18 +469,18 @@ const About = () => {
                 Your Data. Your Business. <span className="text-primary">Our Promise.</span>
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                We believe AI should grow your business — never put it at risk. Security and transparency are built into everything we do.
+                We take data security seriously because our own businesses depend on it too.
               </p>
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
               {[
-                { icon: Lock, title: "AES-256 Encryption", desc: "All data is encrypted in transit and at rest using the same standards trusted by major financial institutions." },
-                { icon: Ban, title: "Zero-Training Policy", desc: "Your proprietary business data is never used to train public AI models. Your data stays yours — period." },
-                { icon: Eye, title: "GDPR & CCPA Ready", desc: "Our data handling practices are aligned with global privacy regulations so your customers' data is protected." },
-                { icon: ShieldCheck, title: "SOC 2 Infrastructure", desc: "Our enterprise AI providers maintain SOC 2 Type II compliance, ensuring rigorous operational security." },
-                { icon: Users, title: "Human Oversight", desc: "Every AI action is supervised by our expert team. You always have real-time override and blacklist capabilities." },
-                { icon: Shield, title: "Transparent Operations", desc: "We publish our security practices openly. Visit our Trust & Security page for full details on how we protect you." },
+                { icon: Lock, title: "AES-256 Encryption", desc: "All data is encrypted in transit and at rest using industry-standard AES-256 encryption." },
+                { icon: Ban, title: "Zero-Training Policy", desc: "Your business data is never used to train AI models. Your data stays yours." },
+                { icon: Eye, title: "GDPR & CCPA Aligned", desc: "Our data handling practices are designed to align with GDPR and CCPA privacy regulations." },
+                { icon: ShieldCheck, title: "SOC 2 Infrastructure", desc: "Our enterprise AI infrastructure providers maintain SOC 2 Type II compliance." },
+                { icon: Users, title: "Human Oversight", desc: "Every AI system is supervised. You always have real-time override and control." },
+                { icon: Shield, title: "Transparent Operations", desc: "We publish our security practices openly. Visit our Trust & Security page for details." },
               ].map((item) => (
                 <div key={item.title} className="p-5 rounded-2xl bg-background border border-border">
                   <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-3">
@@ -493,16 +509,16 @@ const About = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Ready to Grow Your Business the Right Way?
+              Ready to Stop Missing Calls?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Get a free AI Visibility Audit to see how your business appears to AI search 
-              engines, or schedule a call with our team to discuss your growth goals.
+              Talk to us about how an AI receptionist can work for your business. 
+              No pressure, no jargon — just a straightforward conversation with people who get it.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/aeo-audit">
-                  Free AI Visibility Audit
+                <Link to="/ai-receptionist-readiness-assessment">
+                  Get My Free AI Score
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>

@@ -16,7 +16,6 @@ const data: IndustryPageData = {
   faqs: [
     { question: "Can an AI receptionist capture wedding planning leads?", answer: "Yes. The AI captures wedding date, guest count, budget range, and planning needs, then schedules a consultation with the appropriate planner." },
     { question: "Does the AI integrate with Aisle Planner?", answer: "Yes. BrightLaunchIQ connects with Aisle Planner to create new client records, manage consultation schedules, and track lead pipelines." },
-    { question: "How much do wedding planners lose from missed calls?", answer: "$220,000 or more per year. Engaged couples contact multiple planners — the first to respond and build rapport wins the contract." },
     { question: "Can the AI explain service packages?", answer: "Yes. The AI walks callers through full-service, partial, and day-of coordination packages, capturing which tier interests them for follow-up." },
     { question: "Does the AI handle vendor referral requests?", answer: "Yes. The AI provides recommended vendor categories and captures specific needs, then routes referral requests to your vendor network." },
     { question: "How quickly can a wedding planner get started?", answer: "Most planners are live within 48 hours. We configure service packages, integrate with Aisle Planner, and customize the AI for your brand." },

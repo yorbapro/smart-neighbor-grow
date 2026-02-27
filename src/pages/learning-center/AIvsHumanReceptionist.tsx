@@ -46,7 +46,7 @@ const AIvsHumanReceptionist = () => {
         "@type": "FAQPage",
         "mainEntity": [
           { "@type": "Question", "name": "Is an AI receptionist better than a human receptionist?", "acceptedAnswer": { "@type": "Answer", "text": "For most service businesses, yes. AI receptionists cost 70% less, never miss calls, and provide 24/7 coverage with instant appointment booking." } },
-          { "@type": "Question", "name": "Can an AI receptionist replace a human?", "acceptedAnswer": { "@type": "Answer", "text": "AI receptionists handle 85-95% of routine calls. Most businesses use a hybrid approach where AI handles volume and humans handle complex situations." } },
+          { "@type": "Question", "name": "Can an AI receptionist replace a human?", "acceptedAnswer": { "@type": "Answer", "text": "AI receptionists handle the majority of routine calls. Most businesses use a hybrid approach where AI handles volume and humans handle complex situations." } },
         ],
       },
     ]);
@@ -128,7 +128,7 @@ const AIvsHumanReceptionist = () => {
 
             <section className="mb-12">
               <h2 className="font-display text-2xl font-bold text-foreground mb-3">Can an AI Receptionist Replace a Human Completely?</h2>
-              <p className="text-muted-foreground"><strong>AI receptionists handle 85–95% of routine calls without human intervention.</strong> Most businesses don't eliminate their receptionist — they redeploy them to higher-value tasks like client relationships while AI handles the phone.</p>
+              <p className="text-muted-foreground"><strong>AI receptionists handle the vast majority of routine calls without human intervention.</strong> Most businesses don't eliminate their receptionist — they redeploy them to higher-value tasks like client relationships while AI handles the phone.</p>
             </section>
           </div>
         </article>

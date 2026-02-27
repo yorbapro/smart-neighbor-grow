@@ -16,7 +16,6 @@ const data: IndustryPageData = {
   faqs: [
     { question: "Can an AI receptionist capture mortgage leads?", answer: "Yes. The AI collects income range, purchase price, credit score estimate, and timeline, then routes pre-qualified leads to available loan officers." },
     { question: "Does the AI integrate with Encompass?", answer: "Yes. BrightLaunchIQ connects with Encompass to create new loan files, update borrower records, and trigger milestone notifications." },
-    { question: "How much do mortgage brokers lose from missed calls?", answer: "$275,000 or more per year. Borrowers shopping rates will call the next lender within minutes if you don't answer — speed to lead is everything." },
     { question: "Can the AI handle refinance inquiries?", answer: "Yes. The AI captures current rate, loan balance, and property value to determine refinance eligibility, then books a consultation with your team." },
     { question: "Does the AI provide rate information?", answer: "Yes. The AI shares your current published rates and programs, then schedules a detailed consultation for personalized quotes and lock-in options." },
     { question: "How quickly can a mortgage brokerage get started?", answer: "Most brokerages launch within 48 hours. We configure lead qualification scripts, integrate with Encompass, and customize for your loan programs." },

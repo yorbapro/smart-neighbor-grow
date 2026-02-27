@@ -32,7 +32,7 @@ const Hero = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-white/70 max-w-2xl mb-6 leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
-              Our advanced AI voice agents answer 24/7, qualify leads with custom logic, and book appointments directly into your CRM — ensuring you capture every opportunity and deliver 10x ROI over human staff.
+              Our AI voice agents answer 24/7, qualify leads with custom logic, and book appointments directly into your CRM — so you capture opportunities that would otherwise go to voicemail.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-4 mb-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
@@ -52,7 +52,7 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-wrap gap-6 animate-slide-up" style={{ animationDelay: "0.3s" }}>
-              {["Trusted by 100+ businesses", "Live in days, not months", "Enterprise-grade security"].map((item) => (
+              {["Founded by business owners", "Live in days, not months", "Enterprise-grade security"].map((item) => (
                 <div key={item} className="flex items-center gap-2 text-white/60">
                   <CheckCircle className="w-4 h-4 text-primary" />
                   <span className="text-sm">{item}</span>
@@ -84,8 +84,8 @@ const Hero = () => {
                   <Phone className="w-7 h-7 text-primary-foreground" />
                 </div>
                 <div>
-                  <p className="font-display text-2xl font-bold text-foreground">100%</p>
-                  <p className="text-sm text-muted-foreground">Calls Answered</p>
+                  <p className="font-display text-2xl font-bold text-foreground">24/7</p>
+                  <p className="text-sm text-muted-foreground">Every Call Answered</p>
                 </div>
               </div>
             </div>

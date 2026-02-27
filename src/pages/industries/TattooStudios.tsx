@@ -16,7 +16,6 @@ const data: IndustryPageData = {
   faqs: [
     { question: "Can an AI receptionist book tattoo consultations?", answer: "Yes. The AI captures design ideas, placement preferences, and size estimates, then schedules a consultation with the appropriate artist." },
     { question: "Does the AI integrate with DaySmart?", answer: "Yes. BrightLaunchIQ connects with DaySmart to manage artist schedules, track client consultations, and send appointment reminders." },
-    { question: "How much do tattoo studios lose from missed calls?", answer: "$80,000 or more per year. Artists are tattooing when calls come in — missed consultation requests mean lost custom work and walk-in revenue." },
     { question: "Can the AI match clients with the right artist?", answer: "Yes. The AI asks about style preferences — traditional, realism, fine line, blackwork — and routes to the artist who specializes in that style." },
     { question: "Does the AI handle touch-up requests?", answer: "Yes. The AI captures original tattoo details and scheduling preferences, then books touch-up appointments during available slots." },
     { question: "How quickly can a tattoo studio get started?", answer: "Most studios are live within 48 hours. We configure artist profiles, integrate with TattooPro, and customize for your studio's specialties." },

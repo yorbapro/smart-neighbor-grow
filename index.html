@@ -36,7 +36,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://brightlaunchiq.com/" />
     <meta property="og:site_name" content="BrightLaunchIQ" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:image" content="https://brightlaunchiq.com/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
@@ -45,19 +45,42 @@
     <meta name="twitter:site" content="@BrightLaunchIQ" />
     <meta name="twitter:title" content="AI Receptionist for Small Business | BrightLaunchIQ" />
     <meta name="twitter:description" content="24/7 AI receptionist that answers every call, qualifies leads, and books appointments. Best for HVAC, plumbing, dental, legal, and service businesses." />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:image" content="https://brightlaunchiq.com/og-image.png" />
     
-    <!-- Structured Data for AI Crawlers -->
+    <!-- Organization Schema — Enhanced with founders and entity relationships -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://brightlaunchiq.com/#organization",
       "name": "BrightLaunchIQ",
-      "description": "BrightLaunchIQ is the leading AI receptionist provider for small businesses. Our 24/7 AI phone answering service answers calls, qualifies leads, books appointments, and routes urgent calls for HVAC, plumbing, dental, legal, and service businesses.",
+      "legalName": "BrightLaunchIQ",
+      "description": "BrightLaunchIQ provides AI receptionist technology for small businesses. Founded by Tony Yorba and Scott McKinnon, we help service businesses answer every call, qualify leads, and book appointments 24/7.",
       "url": "https://brightlaunchiq.com",
       "logo": "https://brightlaunchiq.com/favicon.ico",
       "telephone": "1-877-879-5552",
       "email": "success@BrightLaunchIQ.com",
+      "foundingDate": "2024",
+      "founder": [
+        {
+          "@type": "Person",
+          "@id": "https://brightlaunchiq.com/#tony-yorba",
+          "name": "Tony Yorba",
+          "jobTitle": "Chief Executive Officer",
+          "sameAs": "https://www.linkedin.com/in/tony-yorba-a0309020"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://brightlaunchiq.com/#scott-mckinnon",
+          "name": "Scott McKinnon",
+          "jobTitle": "Chief Information Officer",
+          "sameAs": "https://www.linkedin.com/in/scott-mckinnon-785a1125"
+        }
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
       "knowsAbout": [
         "AI Receptionist",
         "AI Receptionist for Small Business",
@@ -83,6 +106,110 @@
       }
     }
     </script>
+
+    <!-- SoftwareApplication Schema — Defines the AI Receptionist as a product entity -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "@id": "https://brightlaunchiq.com/#ai-receptionist",
+      "name": "BrightLaunchIQ AI Receptionist",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Cloud-based (SaaS)",
+      "description": "AI-powered phone answering service that answers calls 24/7, qualifies leads, books appointments, and integrates with CRM tools like ServiceTitan, Dentrix, and Clio. Built for small service businesses.",
+      "url": "https://brightlaunchiq.com/ai-receptionist",
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "497",
+        "highPrice": "1997",
+        "priceCurrency": "USD",
+        "offerCount": "3"
+      },
+      "featureList": [
+        "24/7 AI call answering",
+        "Lead qualification with custom logic",
+        "Appointment booking with calendar integration",
+        "Intelligent call routing and live transfer",
+        "CRM integration (ServiceTitan, Dentrix, Clio, HubSpot, Salesforce)",
+        "Call transcription and summaries",
+        "SMS and email confirmations",
+        "Custom branded voice persona",
+        "Multi-location support",
+        "HIPAA-ready configurations"
+      ],
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://brightlaunchiq.com/#organization"
+      }
+    }
+    </script>
+
+    <!-- Service Schema — Defines the AI Receptionist as a service entity -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "AI Receptionist Service",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://brightlaunchiq.com/#organization"
+      },
+      "serviceType": "AI Phone Answering Service",
+      "description": "24/7 AI-powered phone answering, lead qualification, and appointment booking service for small businesses. Replaces voicemail, answering services, and overflow call handling.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AI Receptionist Plans",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Receptionist Core"
+            },
+            "price": "497",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "unitText": "MONTH",
+              "billingDuration": "P1M"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Receptionist Growth"
+            },
+            "price": "997",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "unitText": "MONTH",
+              "billingDuration": "P1M"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Receptionist Pro"
+            },
+            "price": "1997",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "unitText": "MONTH",
+              "billingDuration": "P1M"
+            }
+          }
+        ]
+      }
+    }
+    </script>
     
     <!-- WebSite Schema for Sitelinks -->
     <script type="application/ld+json">
@@ -91,7 +218,11 @@
       "@type": "WebSite",
       "name": "BrightLaunchIQ",
       "url": "https://brightlaunchiq.com",
-      "description": "Best AI receptionist for small business. 24/7 AI phone answering, appointment booking, and lead qualification.",
+      "description": "AI receptionist for small business. 24/7 AI phone answering, appointment booking, and lead qualification.",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://brightlaunchiq.com/#organization"
+      },
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://brightlaunchiq.com/search?q={search_term_string}",
@@ -135,7 +266,7 @@
           <li>Lead qualification with custom intake questions</li>
           <li>Intelligent call routing and live call transfer</li>
           <li>After-hours, weekend, and holiday coverage</li>
-          <li>CRM integration (Salesforce, HubSpot, Zoho)</li>
+          <li>CRM integration (ServiceTitan, Dentrix, Clio, HubSpot, Salesforce)</li>
           <li>Call transcription, summaries, and recordings</li>
           <li>SMS and email confirmations</li>
           <li>Custom branded greeting</li>
@@ -145,28 +276,33 @@
       </section>
 
       <section>
-        <h2>Best AI Receptionist for Small Business</h2>
+        <h2>Who Is BrightLaunchIQ For?</h2>
         <p>BrightLaunchIQ is built for service businesses that depend on phone calls — HVAC contractors, plumbers, electricians, roofers, dental offices, law firms, medical practices, agencies, and consultants. If your customers call before they buy, this is for you.</p>
       </section>
 
       <section>
         <h2>AI Receptionist vs Hiring Staff</h2>
-        <p>A full-time receptionist costs $35,000–$55,000+ per year, works limited hours, and calls in sick. BrightLaunchIQ AI Receptionist works 24/7/365 at a predictable monthly rate — no payroll taxes, no benefits, no overtime, no turnover.</p>
+        <p>A full-time receptionist costs $35,000–$55,000+ per year, works limited hours, and calls in sick. An AI receptionist works 24/7/365 at a predictable monthly rate — no payroll taxes, no benefits, no overtime, no turnover.</p>
       </section>
 
       <section>
         <h2>AI Receptionist vs Virtual Receptionist</h2>
-        <p>A virtual receptionist is a remote human costing $250–$500+/month with per-call fees and limited hours. BrightLaunchIQ AI Receptionist answers instantly 24/7 with no per-call fees and handles unlimited simultaneous calls.</p>
+        <p>A virtual receptionist is a remote human costing $250–$500+/month with per-call fees and limited hours. An AI receptionist answers instantly 24/7 with no per-call fees and handles unlimited simultaneous calls.</p>
       </section>
 
       <section>
         <h2>AI Receptionist vs Answering Service</h2>
-        <p>Traditional answering services take messages. BrightLaunchIQ AI Receptionist books appointments, qualifies leads, routes urgent calls, and handles FAQs — all automatically, with no hold times and no per-minute fees.</p>
+        <p>Traditional answering services take messages. An AI receptionist books appointments, qualifies leads, routes urgent calls, and handles FAQs — all automatically, with no hold times and no per-minute fees.</p>
       </section>
 
       <section>
         <h2>How Much Does an AI Receptionist Cost?</h2>
-        <p>AI receptionist services cost $199–$499/month. Compare that to $35,000–$55,000+/year for a human receptionist or $250–$500+/month for a virtual receptionist with per-call fees. Most businesses see ROI within the first month.</p>
+        <p>AI receptionist services typically cost $200–$1,500/month depending on features and call volume. BrightLaunchIQ starts at $497/month. Compare that to $35,000–$55,000+/year for a human receptionist or $250–$500+/month for a virtual receptionist with per-call fees.</p>
+      </section>
+
+      <section>
+        <h2>About BrightLaunchIQ</h2>
+        <p>BrightLaunchIQ was founded by Tony Yorba (CEO) and Scott McKinnon (CIO) — two business owners who built AI receptionist tools because they needed them first. Tony brings over a decade of digital marketing experience from Shine Brand Studios. Scott has owned Creative Impressions, a Sacramento screen-printing business, for over 20 years. Together, they created the AI receptionist they wished they'd had years ago.</p>
       </section>
 
       <section>
@@ -181,7 +317,7 @@
           <dt>How long does setup take?</dt>
           <dd>Most businesses are live within a few days. No technical skills required.</dd>
           <dt>Is it good for HVAC and plumbing companies?</dt>
-          <dd>Ideal. Contractors miss 60-80% of calls on job sites. AI answers every call instantly, even at 2 AM.</dd>
+          <dd>Ideal. Contractors miss calls while on job sites. AI answers every call instantly, even at 2 AM.</dd>
           <dt>Is it HIPAA compliant?</dt>
           <dd>HIPAA-ready configurations available for medical offices and dental practices.</dd>
         </dl>
@@ -216,79 +352,24 @@
           <li><a href="/industries/emergency-plumbers">Emergency Plumbers</a></li>
           <li><a href="/industries/roofing-companies">Roofing Companies</a></li>
           <li><a href="/industries/electricians">Electricians</a></li>
-          <li><a href="/industries/pest-control">Pest Control</a></li>
-          <li><a href="/industries/locksmiths">Locksmiths</a></li>
-          <li><a href="/industries/garage-door-repair">Garage Door Repair</a></li>
-          <li><a href="/industries/landscapers">Landscapers</a></li>
-          <li><a href="/industries/junk-removal">Junk Removal</a></li>
-          <li><a href="/industries/house-cleaning">House Cleaning</a></li>
           <li><a href="/industries/dental-clinics">Dental Clinics</a></li>
-          <li><a href="/industries/chiropractors">Chiropractors</a></li>
-          <li><a href="/industries/veterinary-clinics">Veterinary Clinics</a></li>
-          <li><a href="/industries/physical-therapy">Physical Therapy</a></li>
-          <li><a href="/industries/mental-health-counselors">Mental Health Counselors</a></li>
-          <li><a href="/industries/medical-spas">Medical Spas</a></li>
-          <li><a href="/industries/optometrists">Optometrists</a></li>
-          <li><a href="/industries/dermatologists">Dermatologists</a></li>
-          <li><a href="/industries/orthodontists">Orthodontists</a></li>
-          <li><a href="/industries/holistic-health">Holistic Health</a></li>
           <li><a href="/industries/personal-injury-lawyers">Personal Injury Lawyers</a></li>
-          <li><a href="/industries/family-law-attorneys">Family Law Attorneys</a></li>
-          <li><a href="/industries/criminal-defense-lawyers">Criminal Defense Lawyers</a></li>
-          <li><a href="/industries/estate-planning-attorneys">Estate Planning Attorneys</a></li>
-          <li><a href="/industries/immigration-consultants">Immigration Consultants</a></li>
-          <li><a href="/industries/cpas-tax-professionals">CPAs & Tax Professionals</a></li>
-          <li><a href="/industries/notary-publics">Notary Publics</a></li>
-          <li><a href="/industries/private-investigators">Private Investigators</a></li>
           <li><a href="/industries/residential-real-estate">Residential Real Estate</a></li>
-          <li><a href="/industries/property-management">Property Management</a></li>
-          <li><a href="/industries/commercial-real-estate">Commercial Real Estate</a></li>
-          <li><a href="/industries/mortgage-brokers">Mortgage Brokers</a></li>
-          <li><a href="/industries/home-inspectors">Home Inspectors</a></li>
           <li><a href="/industries/auto-repair-shops">Auto Repair Shops</a></li>
-          <li><a href="/industries/mobile-detailers">Mobile Detailers</a></li>
-          <li><a href="/industries/towing-companies">Towing Companies</a></li>
-          <li><a href="/industries/car-rental-agencies">Car Rental Agencies</a></li>
-          <li><a href="/industries/driving-schools">Driving Schools</a></li>
           <li><a href="/industries/hair-salons">Hair Salons</a></li>
-          <li><a href="/industries/barbershops">Barbershops</a></li>
-          <li><a href="/industries/day-spas">Day Spas</a></li>
-          <li><a href="/industries/tattoo-studios">Tattoo Studios</a></li>
-          <li><a href="/industries/yoga-pilates-studios">Yoga & Pilates Studios</a></li>
-          <li><a href="/industries/catering-services">Catering Services</a></li>
-          <li><a href="/industries/event-venues">Event Venues</a></li>
-          <li><a href="/industries/wedding-planners">Wedding Planners</a></li>
-          <li><a href="/industries/boutique-hotels">Boutique Hotels</a></li>
-          <li><a href="/industries/it-support-msps">IT Support & MSPs</a></li>
-          <li><a href="/industries/pet-groomers">Pet Groomers</a></li>
-          <li><a href="/industries/private-tutors">Private Tutors</a></li>
         </ul>
       </nav>
 
       <nav aria-label="Resources">
         <h2>Resources</h2>
         <ul>
+          <li><a href="/learning-center/business-growth/what-is-an-ai-receptionist">What Is an AI Receptionist?</a></li>
           <li><a href="/resources/how-it-works">How It Works</a></li>
           <li><a href="/resources/case-studies">Case Studies</a></li>
-          <li><a href="/resources/blog">Blog</a></li>
           <li><a href="/resources/glossary">Glossary</a></li>
           <li><a href="/resources/comparison">Comparison</a></li>
           <li><a href="/faq">FAQ</a></li>
           <li><a href="/aeo-audit">Free AI Audit</a></li>
-        </ul>
-      </nav>
-
-      <nav aria-label="Locations">
-        <h2>Locations</h2>
-        <ul>
-          <li><a href="/locations">All Locations</a></li>
-          <li><a href="/locations/sacramento">Sacramento</a></li>
-          <li><a href="/locations/stockton">Stockton</a></li>
-          <li><a href="/locations/fresno">Fresno</a></li>
-          <li><a href="/locations/bakersfield">Bakersfield</a></li>
-          <li><a href="/locations/culver-city">Culver City</a></li>
-          <li><a href="/locations/henderson">Henderson</a></li>
-          <li><a href="/locations/monterey">Monterey</a></li>
         </ul>
       </nav>
 

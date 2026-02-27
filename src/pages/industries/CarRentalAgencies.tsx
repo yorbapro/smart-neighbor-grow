@@ -16,7 +16,6 @@ const data: IndustryPageData = {
   faqs: [
     { question: "Can an AI receptionist book car rentals?", answer: "Yes. The AI captures pickup date, return date, vehicle class preference, and driver details, then creates the reservation in your rental management system." },
     { question: "Does the AI integrate with TSD Rental?", answer: "Yes. BrightLaunchIQ connects with TSD Rental to check fleet availability, create reservations, and manage pickup/return logistics." },
-    { question: "How much do car rental agencies lose from missed calls?", answer: "$120,000 or more per year. Travelers booking rentals will immediately call a competitor if they can't reach you — speed wins the reservation." },
     { question: "Can the AI upsell insurance and add-ons?", answer: "Yes. The AI offers collision damage waivers, GPS units, child seats, and other add-ons during the booking process, increasing your revenue per rental." },
     { question: "Does the AI handle corporate account inquiries?", answer: "Yes. The AI captures company name, estimated volume, and billing preferences, then routes corporate leads to your account management team." },
     { question: "How quickly can a car rental agency get started?", answer: "Most agencies are live within 48 hours. We configure vehicle class menus, integrate with TSD Rental, and customize the AI for your locations." },
