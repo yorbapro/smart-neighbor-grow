@@ -34,37 +34,57 @@ const handler = async (req: Request): Promise<Response> => {
       throw new Error("Missing required fields");
     }
 
-    const insightsList = data.insights.map((i) => `- ${i}`).join("\n");
-    const recsList = data.recommendations.map((r) => `- ${r}`).join("\n");
+    // Extract dynamic fields from answers
+    const customerValue = data.answers?.customerValue || "your average";
+    const missedCalls = data.answers?.missedCallsPerDay || "several";
+    const competitorPercent = data.answers?.competitorPercent || "85%";
+    const missedCallTiming = data.answers?.missedCallTiming || "during busy times";
+    const annualLossMatch = data.recommendations?.[0]?.match(/\$[\d,]+/);
+    const annualLoss = annualLossMatch ? annualLossMatch[0] : `$${(data.score * 1000).toLocaleString()}`;
+
+    // Timing description for email
+    const timingMap: Record<string, string> = {
+      "During peak business hours when my team is busy": "during peak hours",
+      "After hours and on weekends": "after hours and on weekends",
+      "Both equally": "during peak hours and after hours",
+    };
+    const timingText = timingMap[missedCallTiming] || missedCallTiming.toLowerCase();
 
     const plainText = `Hi ${data.firstName},
 
-Thanks for taking the AI Receptionist Readiness Assessment for ${data.businessName}.
+Thank you for completing our Missed Call Revenue Calculator. The results are in, and they show a significant opportunity for growth.
 
-Your score: ${data.score}/100 (${data.segment})
+Based on the numbers you provided for ${data.businessName}, you are losing an estimated ${annualLoss} in potential revenue each year from missed calls.
 
-${data.headline}
+Here's a quick breakdown based on your answers:
 
-Key insights:
-${insightsList}
+- You miss an average of ${missedCalls} calls per day.
+- With an average customer value of ${customerValue}, and with ${competitorPercent} of missed callers immediately contacting a competitor, the losses add up quickly.
+- Your biggest challenge is missing calls ${timingText}, which is a common and costly problem for successful businesses.
 
-What we recommend:
-${recsList}
+But here's the good news: this is completely recoverable.
 
-Want to hear our AI receptionist in action? Call 1-877-879-5552 — it's live right now.
+The BrightLaunchIQ AI Receptionist is designed to capture 100% of your calls, 24/7, turning those potential losses into loyal customers. For less than the cost of one lost customer per month, you can secure all of them.
 
-If you have any questions, just reply to this email.
+Ready to stop losing revenue and start growing your business?
 
-Anthony
-BrightLaunchIQ
+Choose your next step:
+
+1. Start Recovering Your Lost Revenue — Buy Now: https://brightlaunchiq.com/get-started
+2. Book a Free 15-Minute Call: https://brightlaunchiq.com/contact
+3. Hear It in Action: Call Our Live AI Receptionist Now at 1-877-879-5552
+
+Best,
+
+The Team at BrightLaunchIQ
 1-877-879-5552 | success@BrightLaunchIQ.com`;
 
     // Plain-text only — no HTML — to land in Gmail Primary inbox
 
     const { error } = await resend.emails.send({
-      from: "Anthony from BrightLaunchIQ <success@account.brightlaunchiq.com>",
+      from: "BrightLaunchIQ <success@account.brightlaunchiq.com>",
       to: [data.email],
-      subject: `Your readiness score for ${data.businessName}`,
+      subject: `Your Personalized Report: You're Losing an Estimated ${annualLoss} a Year`,
       reply_to: "success@BrightLaunchIQ.com",
       text: plainText,
       headers: {
