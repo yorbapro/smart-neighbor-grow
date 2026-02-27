@@ -68,12 +68,28 @@ const Index = () => {
       "@id": "https://brightlaunchiq.com/#organization",
       "name": "BrightLaunchIQ",
       "alternateName": ["Bright Launch IQ", "BrightLaunch IQ"],
-      "description": "BrightLaunchIQ is the leading AI receptionist provider for small businesses. Our 24/7 AI phone answering service answers calls, qualifies leads, books appointments, and routes urgent calls automatically for HVAC, plumbing, dental, legal, and service businesses.",
+      "description": "BrightLaunchIQ provides AI receptionist technology for small businesses. Founded by Tony Yorba and Scott McKinnon, we help service businesses answer every call, qualify leads, and book appointments 24/7.",
       "url": "https://brightlaunchiq.com",
       "logo": "https://brightlaunchiq.com/logo.png",
       "telephone": "1-877-879-5552",
       "email": "success@BrightLaunchIQ.com",
-      "foundingDate": "2023",
+      "foundingDate": "2024",
+      "founder": [
+        {
+          "@type": "Person",
+          "@id": "https://brightlaunchiq.com/#tony-yorba",
+          "name": "Tony Yorba",
+          "jobTitle": "Chief Executive Officer",
+          "sameAs": "https://www.linkedin.com/in/tony-yorba-a0309020"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://brightlaunchiq.com/#scott-mckinnon",
+          "name": "Scott McKinnon",
+          "jobTitle": "Chief Information Officer",
+          "sameAs": "https://www.linkedin.com/in/scott-mckinnon-785a1125"
+        }
+      ],
       "areaServed": {
         "@type": "Country",
         "name": "United States"
@@ -98,6 +114,12 @@ const Index = () => {
         "Missed Call Prevention"
       ],
       "slogan": "Never Miss Another Customer Call",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "telephone": "1-877-879-5552",
+        "availableLanguage": "English"
+      },
       "sameAs": [
         "https://www.linkedin.com/company/brightlaunchiq"
       ]
@@ -119,7 +141,9 @@ const Index = () => {
         "@type": "AggregateOffer",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "offerCount": "2"
+        "lowPrice": "497",
+        "highPrice": "1997",
+        "offerCount": "3"
       },
       "featureList": [
         "24/7 AI call answering",

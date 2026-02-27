@@ -11,7 +11,7 @@ const WhatIsAIReceptionist = () => {
   useSEO({
     title: "What Is an AI Receptionist? The Definitive Guide (2026) | BrightLaunchIQ",
     description: "An AI receptionist is software that answers phone calls, books appointments, and qualifies leads 24/7 using natural language processing. Learn how it works, what it costs, and who it's for.",
-    canonical: "https://brightlaunchiq.com/learning-center/business-growth/what-is-an-ai-receptionist",
+    canonical: "https://brightlaunchiq.com/learning-center/what-is-ai-receptionist",
     keywords: "what is an AI receptionist, AI receptionist definition, AI phone answering, virtual AI receptionist, AI receptionist cost, AI receptionist vs virtual receptionist",
     speakable: ["h1", ".definition-block"],
   });
@@ -26,7 +26,7 @@ const WhatIsAIReceptionist = () => {
         "@type": "Article",
         "headline": "What Is an AI Receptionist? The Definitive Guide",
         "description": "A comprehensive guide explaining what an AI receptionist is, how it works, what it costs, and which businesses benefit most.",
-        "url": "https://brightlaunchiq.com/learning-center/business-growth/what-is-an-ai-receptionist",
+        "url": "https://brightlaunchiq.com/learning-center/what-is-ai-receptionist",
         "datePublished": "2025-06-01",
         "dateModified": "2026-02-27",
         "author": [
@@ -39,7 +39,7 @@ const WhatIsAIReceptionist = () => {
           "name": "BrightLaunchIQ",
           "url": "https://brightlaunchiq.com"
         },
-        "mainEntityOfPage": "https://brightlaunchiq.com/learning-center/business-growth/what-is-an-ai-receptionist",
+        "mainEntityOfPage": "https://brightlaunchiq.com/learning-center/what-is-ai-receptionist",
       },
       {
         "@context": "https://schema.org",
@@ -71,7 +71,7 @@ const WhatIsAIReceptionist = () => {
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://brightlaunchiq.com/" },
           { "@type": "ListItem", "position": 2, "name": "Learning Center", "item": "https://brightlaunchiq.com/learning-center" },
-          { "@type": "ListItem", "position": 3, "name": "What Is an AI Receptionist?", "item": "https://brightlaunchiq.com/learning-center/business-growth/what-is-an-ai-receptionist" },
+          { "@type": "ListItem", "position": 3, "name": "What Is an AI Receptionist?", "item": "https://brightlaunchiq.com/learning-center/what-is-ai-receptionist" },
         ]
       }
     ]);
