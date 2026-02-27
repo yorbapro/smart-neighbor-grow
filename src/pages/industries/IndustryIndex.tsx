@@ -12,7 +12,7 @@ interface IndustryLink {
   slug: string;
 }
 
-const sectors: { label: string; industries: IndustryLink[] }[] = [
+const sectors: { label: string; industries: IndustryLink[] }[] = const sectors: { label: string; industries: IndustryLink[] }[] = [
   {
     label: "Home Services",
     industries: [
@@ -26,8 +26,14 @@ const sectors: { label: string; industries: IndustryLink[] }[] = [
       { name: "Landscapers", slug: "landscapers" },
       { name: "Junk Removal", slug: "junk-removal" },
       { name: "House Cleaning Services", slug: "house-cleaning" },
+      { name: "Solar Installers", slug: "solar-installers" },
+      { name: "Insulation Contractors", slug: "insulation-contractors" },
+      { name: "Painters", slug: "painters" },
+      { name: "Fence Companies", slug: "fence-companies" },
+      { name: "Pool Service Companies", slug: "pool-service-companies" },
+      { name: "Appliance Repair", slug: "appliance-repair" }
     ],
-  },
+  }},
   {
     label: "Healthcare",
     industries: [
@@ -41,8 +47,14 @@ const sectors: { label: string; industries: IndustryLink[] }[] = [
       { name: "Dermatologists", slug: "dermatologists" },
       { name: "Orthodontists", slug: "orthodontists" },
       { name: "Holistic Health", slug: "holistic-health" },
+      { name: "Urgent Care Clinics", slug: "urgent-care-clinics" },
+      { name: "Pediatricians", slug: "pediatricians" },
+      { name: "Podiatrists", slug: "podiatrists" },
+      { name: "Hearing Aid Specialists", slug: "hearing-aid-specialists" },
+      { name: "Acupuncture Clinics", slug: "acupuncture-clinics" },
+      { name: "Home Health Care Agencies", slug: "home-health-care-agencies" }
     ],
-  },
+  }},
   {
     label: "Professional",
     industries: [
@@ -54,8 +66,14 @@ const sectors: { label: string; industries: IndustryLink[] }[] = [
       { name: "CPAs & Tax Professionals", slug: "cpas-tax-professionals" },
       { name: "Notary Publics", slug: "notary-publics" },
       { name: "Private Investigators", slug: "private-investigators" },
+      { name: "Bankruptcy Attorneys", slug: "bankruptcy-attorneys" },
+      { name: "Workers Compensation Lawyers", slug: "workers-compensation-lawyers" },
+      { name: "Business Consultants", slug: "business-consultants" },
+      { name: "Insurance Agents", slug: "insurance-agents" },
+      { name: "Financial Advisors", slug: "financial-advisors" },
+      { name: "Bookkeepers", slug: "bookkeepers" }
     ],
-  },
+  }},
   {
     label: "Real Estate",
     industries: [
@@ -64,8 +82,12 @@ const sectors: { label: string; industries: IndustryLink[] }[] = [
       { name: "Commercial Real Estate", slug: "commercial-real-estate" },
       { name: "Mortgage Brokers", slug: "mortgage-brokers" },
       { name: "Home Inspectors", slug: "home-inspectors" },
+      { name: "Title Companies", slug: "title-companies" },
+      { name: "Appraisers", slug: "appraisers" },
+      { name: "Moving Companies", slug: "moving-companies" },
+      { name: "Storage Facilities", slug: "storage-facilities" }
     ],
-  },
+  }},
   {
     label: "Auto",
     industries: [
@@ -74,8 +96,13 @@ const sectors: { label: string; industries: IndustryLink[] }[] = [
       { name: "Towing Companies", slug: "towing-companies" },
       { name: "Car Rental Agencies", slug: "car-rental-agencies" },
       { name: "Driving Schools", slug: "driving-schools" },
+      { name: "Tire Shops", slug: "tire-shops" },
+      { name: "Auto Body Shops", slug: "auto-body-shops" },
+      { name: "Oil Change Services", slug: "oil-change-services" },
+      { name: "Motorcycle Dealers", slug: "motorcycle-dealers" },
+      { name: "RV Dealers & Service", slug: "rv-dealers-service" }
     ],
-  },
+  }},
   {
     label: "Personal Services",
     industries: [
@@ -85,8 +112,14 @@ const sectors: { label: string; industries: IndustryLink[] }[] = [
       { name: "Tattoo Studios", slug: "tattoo-studios" },
       { name: "Yoga & Pilates Studios", slug: "yoga-pilates-studios" },
       { name: "Pet Groomers", slug: "pet-groomers" },
+      { name: "Nail Salons", slug: "nail-salons" },
+      { name: "Lash & Brow Studios", slug: "lash-brow-studios" },
+      { name: "Personal Trainers", slug: "personal-trainers" },
+      { name: "Martial Arts Studios", slug: "martial-arts-studios" },
+      { name: "Dance Studios", slug: "dance-studios" },
+      { name: "Photography Studios", slug: "photography-studios" }
     ],
-  },
+  }},
   {
     label: "Hospitality",
     industries: [
@@ -94,16 +127,38 @@ const sectors: { label: string; industries: IndustryLink[] }[] = [
       { name: "Event Venues", slug: "event-venues" },
       { name: "Wedding Planners", slug: "wedding-planners" },
       { name: "Boutique Hotels", slug: "boutique-hotels" },
+      { name: "Restaurants", slug: "restaurants" },
+      { name: "Food Trucks", slug: "food-trucks" },
+      { name: "Bed & Breakfasts", slug: "bed-breakfasts" },
+      { name: "Travel Agencies", slug: "travel-agencies" },
+      { name: "Party Rental Companies", slug: "party-rental-companies" }
     ],
-  },
+  }},
   {
     label: "B2B & Education",
     industries: [
       { name: "IT Support & MSPs", slug: "it-support-msps" },
       { name: "Private Tutors", slug: "private-tutors" },
+      { name: "Staffing Agencies", slug: "staffing-agencies" },
+      { name: "Print Shops", slug: "print-shops" },
+      { name: "Coworking Spaces", slug: "coworking-spaces" },
+      { name: "Music Schools", slug: "music-schools" },
+      { name: "Language Schools", slug: "language-schools" },
+      { name: "Test Prep Centers", slug: "test-prep-centers" }
     ],
-  },
-];
+  }},
+  {
+    label: "Trades & Construction",
+    industries: [
+      { name: "General Contractors", slug: "general-contractors" },
+      { name: "Flooring Companies", slug: "flooring-companies" },
+      { name: "Window & Door Installers", slug: "window-door-installers" },
+      { name: "Concrete Contractors", slug: "concrete-contractors" },
+      { name: "Septic Services", slug: "septic-services" },
+      { name: "Tree Service Companies", slug: "tree-service-companies" }
+    ],
+  }}
+];;
 
 const IndustryIndex = () => {
   useSEO({
