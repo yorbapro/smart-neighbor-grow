@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Photography Studios", slug: "photography-studios", lossAmount: "75,000", lossAmountNum: 75000, useCases: ["Session Booking", "Package Questions", "Pricing Inquiries", "Event Photography", "Portrait Sessions", "Follow-Up Calls"], crm: "HoneyBook", sectorLabel: "Personal Services", similarBusinesses: [{ name: "Wedding Planners", slug: "wedding-planners" }, { name: "Event Venues", slug: "event-venues" }, { name: "Tattoo Studios", slug: "tattoo-studios" }], faqs: [{ question: "Can the AI handle photography booking?", answer: "Yes. It captures session type, date preference, and package selections." }, { question: "How fast can we go live?", answer: "Most photography studios are live within 48 hours." }] };
+const PhotographyStudios = () => <IndustryPageTemplate data={data} />;
+export default PhotographyStudios;

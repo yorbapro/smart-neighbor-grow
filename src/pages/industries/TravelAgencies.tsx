@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Travel Agencies", slug: "travel-agencies", lossAmount: "90,000", lossAmountNum: 90000, useCases: ["Trip Planning Inquiries", "Consultation Scheduling", "Package Questions", "Group Travel", "Cruise Bookings", "Follow-Up Calls"], crm: "TravelJoy", sectorLabel: "Hospitality", similarBusinesses: [{ name: "Boutique Hotels", slug: "boutique-hotels" }, { name: "Event Venues", slug: "event-venues" }, { name: "Car Rental Agencies", slug: "car-rental-agencies" }], faqs: [{ question: "Can the AI handle travel inquiries?", answer: "Yes. It captures destinations, dates, budget, and schedules consultations." }, { question: "How fast can we go live?", answer: "Most travel agencies are live within 48 hours." }] };
+const TravelAgencies = () => <IndustryPageTemplate data={data} />;
+export default TravelAgencies;

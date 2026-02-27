@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Moving Companies", slug: "moving-companies", lossAmount: "90,000", lossAmountNum: 90000, useCases: ["Quote Requests", "Move Date Scheduling", "Packing Service Inquiries", "Storage Questions", "Long-Distance Moves", "Follow-Up Calls"], crm: "SmartMoving", sectorLabel: "Real Estate", similarBusinesses: [{ name: "Storage Facilities", slug: "storage-facilities" }, { name: "Property Management", slug: "property-management" }, { name: "Junk Removal", slug: "junk-removal" }], faqs: [{ question: "Can the AI handle moving quote requests?", answer: "Yes. It captures origin, destination, inventory, and preferred dates." }, { question: "How fast can we go live?", answer: "Most moving companies are live within 48 hours." }] };
+const MovingCompanies = () => <IndustryPageTemplate data={data} />;
+export default MovingCompanies;

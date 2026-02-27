@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Coworking Spaces", slug: "coworking-spaces", lossAmount: "80,000", lossAmountNum: 80000, useCases: ["Tour Scheduling", "Membership Inquiries", "Meeting Room Booking", "Pricing Questions", "Event Space Inquiries", "Day Pass Sales"], crm: "Nexudus", sectorLabel: "B2B & Education", similarBusinesses: [{ name: "Event Venues", slug: "event-venues" }, { name: "IT Support & MSPs", slug: "it-support-msps" }, { name: "Business Consultants", slug: "business-consultants" }], faqs: [{ question: "Can the AI schedule tours?", answer: "Yes. It handles tour bookings, membership inquiries, and meeting room reservations." }, { question: "How fast can we go live?", answer: "Most coworking spaces are live within 48 hours." }] };
+const CoworkingSpaces = () => <IndustryPageTemplate data={data} />;
+export default CoworkingSpaces;

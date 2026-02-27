@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Language Schools", slug: "language-schools", lossAmount: "65,000", lossAmountNum: 65000, useCases: ["Course Registration", "Level Assessment Booking", "Program Questions", "Group Classes", "Private Tutoring", "Corporate Training"], crm: "SchoolMint", sectorLabel: "B2B & Education", similarBusinesses: [{ name: "Private Tutors", slug: "private-tutors" }, { name: "Music Schools", slug: "music-schools" }, { name: "Test Prep Centers", slug: "test-prep-centers" }], faqs: [{ question: "Can the AI handle course registration?", answer: "Yes. It captures language, proficiency level, and schedules assessments." }, { question: "How fast can we go live?", answer: "Most language schools are live within 48 hours." }] };
+const LanguageSchools = () => <IndustryPageTemplate data={data} />;
+export default LanguageSchools;

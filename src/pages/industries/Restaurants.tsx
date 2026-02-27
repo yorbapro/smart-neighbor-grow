@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Restaurants", slug: "restaurants", lossAmount: "80,000", lossAmountNum: 80000, useCases: ["Reservation Booking", "Menu Questions", "Hours & Directions", "Private Event Inquiries", "Catering Requests", "Waitlist Management"], crm: "OpenTable", sectorLabel: "Hospitality", similarBusinesses: [{ name: "Catering Services", slug: "catering-services" }, { name: "Food Trucks", slug: "food-trucks" }, { name: "Event Venues", slug: "event-venues" }], faqs: [{ question: "Can the AI take reservations?", answer: "Yes. It handles party size, date/time, and special requests." }, { question: "How fast can we go live?", answer: "Most restaurants are live within 48 hours." }] };
+const Restaurants = () => <IndustryPageTemplate data={data} />;
+export default Restaurants;

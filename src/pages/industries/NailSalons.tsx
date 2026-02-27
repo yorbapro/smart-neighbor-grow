@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Nail Salons", slug: "nail-salons", lossAmount: "60,000", lossAmountNum: 60000, useCases: ["Appointment Booking", "Service Menu Questions", "Pricing Inquiries", "Walk-In Availability", "Group Bookings", "Gift Card Purchases"], crm: "Vagaro", sectorLabel: "Personal Services", similarBusinesses: [{ name: "Hair Salons", slug: "hair-salons" }, { name: "Day Spas", slug: "day-spas" }, { name: "Lash & Brow Studios", slug: "lash-brow-studios" }], faqs: [{ question: "Can the AI book nail appointments?", answer: "Yes. It handles service selection, technician preference, and scheduling." }, { question: "How fast can we go live?", answer: "Most nail salons are live within 48 hours." }] };
+const NailSalons = () => <IndustryPageTemplate data={data} />;
+export default NailSalons;

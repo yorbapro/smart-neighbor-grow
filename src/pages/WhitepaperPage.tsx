@@ -7,7 +7,7 @@ import { ArrowLeft, Download, Share2, Calendar, Clock, User } from "lucide-react
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import whitepaperMetadata from "./resources/whitepaper_metadata.json";
-import { Helmet } from "react-helmet-async";
+import useSEO from "@/hooks/useSEO";
 
 const WhitepaperPage = () => {
   const { slug } = useParams();
@@ -62,12 +62,13 @@ const WhitepaperPage = () => {
     );
   }
 
+  useSEO({
+    title: `${meta.title} | BrightLaunchIQ Authority Papers`,
+    description: meta.summary,
+  });
+
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>{meta.title} | BrightLaunchIQ Authority Papers</title>
-        <meta name="description" content={meta.summary} />
-      </Helmet>
       <Header />
       
       <main className="pt-24 pb-16">

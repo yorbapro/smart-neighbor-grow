@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Painters", slug: "painters", lossAmount: "65,000", lossAmountNum: 65000, useCases: ["Estimate Requests", "Color Consultation Booking", "Commercial Inquiries", "Follow-Up Scheduling", "Insurance Claims", "Touch-Up Requests"], crm: "Jobber", sectorLabel: "Home Services", similarBusinesses: [{ name: "General Contractors", slug: "general-contractors" }, { name: "Fence Companies", slug: "fence-companies" }, { name: "Flooring Companies", slug: "flooring-companies" }], faqs: [{ question: "Can the AI handle estimate requests?", answer: "Yes. It captures square footage, surfaces, and scheduling preferences." }, { question: "How fast can we go live?", answer: "Most painting companies are live within 48 hours." }] };
+const Painters = () => <IndustryPageTemplate data={data} />;
+export default Painters;

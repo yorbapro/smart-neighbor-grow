@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Food Trucks", slug: "food-trucks", lossAmount: "50,000", lossAmountNum: 50000, useCases: ["Location Schedule", "Catering Inquiries", "Menu Questions", "Event Booking", "Private Party Requests", "Franchise Inquiries"], crm: "Square", sectorLabel: "Hospitality", similarBusinesses: [{ name: "Restaurants", slug: "restaurants" }, { name: "Catering Services", slug: "catering-services" }, { name: "Event Venues", slug: "event-venues" }], faqs: [{ question: "Can the AI share food truck locations?", answer: "Yes. It provides daily location schedules and event appearances." }, { question: "How fast can we go live?", answer: "Most food trucks are live within 48 hours." }] };
+const FoodTrucks = () => <IndustryPageTemplate data={data} />;
+export default FoodTrucks;

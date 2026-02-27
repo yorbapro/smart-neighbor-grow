@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Music Schools", slug: "music-schools", lossAmount: "60,000", lossAmountNum: 60000, useCases: ["Lesson Scheduling", "Instrument Questions", "Trial Lesson Booking", "Recital Information", "Program Inquiries", "Registration"], crm: "My Music Staff", sectorLabel: "B2B & Education", similarBusinesses: [{ name: "Dance Studios", slug: "dance-studios" }, { name: "Private Tutors", slug: "private-tutors" }, { name: "Language Schools", slug: "language-schools" }], faqs: [{ question: "Can the AI handle music lesson bookings?", answer: "Yes. It captures instrument, experience level, and schedules trial lessons." }, { question: "How fast can we go live?", answer: "Most music schools are live within 48 hours." }] };
+const MusicSchools = () => <IndustryPageTemplate data={data} />;
+export default MusicSchools;

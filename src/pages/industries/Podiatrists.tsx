@@ -1,0 +1,4 @@
+import IndustryPageTemplate, { IndustryPageData } from "@/components/industries/IndustryPageTemplate";
+const data: IndustryPageData = { name: "Podiatrists", slug: "podiatrists", lossAmount: "85,000", lossAmountNum: 85000, useCases: ["Appointment Scheduling", "Orthotics Inquiries", "Surgery Consultations", "Insurance Questions", "Follow-Up Reminders", "New Patient Intake"], crm: "DrChrono", sectorLabel: "Healthcare", similarBusinesses: [{ name: "Chiropractors", slug: "chiropractors" }, { name: "Physical Therapy Centers", slug: "physical-therapy" }, { name: "Dermatologists", slug: "dermatologists" }], faqs: [{ question: "Can the AI schedule podiatry appointments?", answer: "Yes. It handles new patient intake, follow-ups, and orthotics consultations." }, { question: "How fast can we go live?", answer: "Most podiatry practices are live within 48 hours." }] };
+const Podiatrists = () => <IndustryPageTemplate data={data} />;
+export default Podiatrists;
