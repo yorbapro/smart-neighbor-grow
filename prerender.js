@@ -94,6 +94,12 @@ const generateNoscriptContent = (appHtml) => {
       .replace(`<div id="noscript-placeholder"></div>`, noscriptHtml);
     fs.writeFileSync(toAbsolute('dist/client/404.html'), html);
     console.log('pre-rendered: dist/client/404.html');
+    
+    // Also write to dist/404.html in case the hosting provider serves from dist
+    const distDir = toAbsolute('dist');
+    if (!fs.existsSync(distDir)) fs.mkdirSync(distDir, { recursive: true });
+    fs.writeFileSync(path.join(distDir, '404.html'), html);
+    console.log('pre-rendered: dist/404.html');
   } catch (e) {
     console.error('Failed to pre-render 404.html:', e);
   }
