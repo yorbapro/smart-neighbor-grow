@@ -3,17 +3,17 @@ import { StaticRouter } from 'react-router-dom';
 import App from './App';
 
 export function render(url: string) {
-  // Create a context object to track status codes
-  const context: { statusCode?: number } = {};
+  // Reset the 404 flag before rendering
+  (globalThis as any).__404__ = false;
 
   const html = ReactDOMServer.renderToString(
-    <StaticRouter location={url} context={context}>
+    <StaticRouter location={url}>
       <App />
     </StaticRouter>
   );
 
   return {
     html,
-    statusCode: context.statusCode || 200,
+    statusCode: (globalThis as any).__404__ ? 404 : 200,
   };
 }
