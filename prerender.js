@@ -83,5 +83,20 @@ const generateNoscriptContent = (appHtml) => {
       console.error(`Failed to pre-render ${routeUrl}:`, e);
     }
   }
+  // Explicitly generate 404.html for static hosting providers
+  try {
+    console.log('Generating 404.html...');
+    const result = render('/404-not-found-page-test');
+    const appHtml = typeof result === 'string' ? result : result.html;
+    const noscriptHtml = generateNoscriptContent(appHtml);
+    const html = template
+      .replace(`<!--app-html-->`, appHtml)
+      .replace(`<div id="noscript-placeholder"></div>`, noscriptHtml);
+    fs.writeFileSync(toAbsolute('dist/client/404.html'), html);
+    console.log('pre-rendered: dist/client/404.html');
+  } catch (e) {
+    console.error('Failed to pre-render 404.html:', e);
+  }
+
   console.log('Pre-rendering complete.');
 })()
