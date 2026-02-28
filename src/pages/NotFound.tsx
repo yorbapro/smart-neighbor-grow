@@ -6,6 +6,12 @@ const NotFound = () => {
 
   useEffect(() => {
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
+    // Set HTTP status code to 404 on the server side
+    if (typeof window === 'undefined') {
+      // We're on the server, try to set the status code
+      // This will be handled by the prerender script
+      (globalThis as any).__404__ = true;
+    }
   }, [location.pathname]);
 
   return (

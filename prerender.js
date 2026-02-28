@@ -56,21 +56,31 @@ const generateNoscriptContent = (appHtml) => {
 }
 
 ;(async () => {
-  for (const url of routesToPrerender) {
+  for (const routeUrl of routesToPrerender) {
     try {
-      const appHtml = render(url);
+      const result = render(routeUrl);
+      // Handle both old format (string) and new format (object with html and statusCode)
+      const appHtml = typeof result === 'string' ? result : result.html;
+      const statusCode = typeof result === 'string' ? 200 : (result.statusCode || 200);
+      
+      // Skip rendering 404 pages to avoid duplicate content
+      if (statusCode === 404) {
+        console.log('skipped (404):', routeUrl);
+        continue;
+      }
+      
       const noscriptHtml = generateNoscriptContent(appHtml);
       const html = template
         .replace(`<!--app-html-->`, appHtml)
         .replace(`<div id="noscript-placeholder"></div>`, noscriptHtml);
-      const fileName = url === '/' ? 'index.html' : `${url.slice(1)}.html`;
+      const fileName = routeUrl === '/' ? 'index.html' : `${routeUrl.slice(1)}.html`;
       const filePath = `dist/client/${fileName}`;
       const dir = path.dirname(toAbsolute(filePath));
       if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
       fs.writeFileSync(toAbsolute(filePath), html)
       console.log('pre-rendered:', filePath)
     } catch (e) {
-      console.error(`Failed to pre-render ${url}:`, e);
+      console.error(`Failed to pre-render ${routeUrl}:`, e);
     }
   }
   console.log('Pre-rendering complete.');
