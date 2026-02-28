@@ -70,7 +70,7 @@ const Header = () => {
             </Link>
 
             <Link
-              to="/resources/how-it-works"
+              to="/how-it-works"
               className={`${mutedColor} hover:${textColor} transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-md`}
             >
               How It Works
@@ -204,7 +204,7 @@ const Header = () => {
               </Link>
 
               <Link
-                to="/resources/how-it-works"
+                to="/how-it-works"
                 className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2 focus:outline-none focus:ring-2 focus:ring-ring rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >

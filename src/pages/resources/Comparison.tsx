@@ -341,7 +341,7 @@ const Comparison = () => {
                   </Link>
                 </Button>
                 <Button variant="heroOutline" size="lg" asChild>
-                  <Link to="/resources/case-studies">View Case Studies</Link>
+                  <Link to="/case-studies">View Case Studies</Link>
                 </Button>
               </div>
             </div>
