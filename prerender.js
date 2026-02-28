@@ -104,5 +104,21 @@ const generateNoscriptContent = (appHtml) => {
     console.error('Failed to pre-render 404.html:', e);
   }
 
+  // Generate _redirects file for Netlify to handle 404s correctly
+  try {
+    console.log('Generating _redirects...');
+    let redirects = '';
+    for (const routeUrl of routesToPrerender) {
+      if (routeUrl === '/') continue;
+      redirects += `${routeUrl}  ${routeUrl}.html  200\n`;
+    }
+    // Add catch-all 404 rule
+    redirects += '/*  /404.html  404\n';
+    fs.writeFileSync(toAbsolute('dist/client/_redirects'), redirects);
+    console.log('pre-rendered: dist/client/_redirects');
+  } catch (e) {
+    console.error('Failed to generate _redirects:', e);
+  }
+
   console.log('Pre-rendering complete.');
 })()
