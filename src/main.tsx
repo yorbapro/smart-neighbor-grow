@@ -1,17 +1,26 @@
+import React from "react";
 import { createRoot, hydrateRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
 import App from "./App.tsx";
 import "./index.css";
+import { BrowserRouter } from "react-router-dom";
 
 const rootElement = document.getElementById("root")!;
-const app = (
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-);
 
 if (import.meta.env.PROD) {
-  hydrateRoot(rootElement, app);
+  hydrateRoot(
+    rootElement,
+    <React.StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  );
 } else {
-  createRoot(rootElement).render(app);
+  createRoot(rootElement).render(
+    <React.StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  );
 }

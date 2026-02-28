@@ -3,8 +3,10 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router-dom";
+import { Routes, Route, Navigate, useParams } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+
+const isBrowser = typeof window !== 'undefined';
 
 // Legacy redirect helper
 const BlogSlugRedirect = () => {
@@ -216,204 +218,206 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-        <ScrollToTop />
-        <Suspense fallback={<PageLoader />}>
-          <Routes>
-            {/* Critical route - eager loaded */}
-            <Route path="/" element={<Index />} />
-            
-            {/* Primary conversion paths */}
-            <Route path="/get-started" element={<GetStarted />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/aeo-audit" element={<AEOAudit />} />
-            <Route path="/free-ai-audit" element={<AEOAudit />} />
-            <Route path="/how-it-works" element={<AIReceptionistHowItWorks />} />
-            <Route path="/onboarding" element={<Onboarding />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/ai-receptionist-readiness-assessment" element={<AIReceptionistAssessment />} />
-            
-            {/* Product pages */}
-            <Route path="/launchpad-360" element={<LaunchPad360 />} />
-            <Route path="/locallift" element={<LocalLift />} />
-            <Route path="/ai-receptionist" element={<AIReceptionist />} />
-            <Route path="/ai-sales-agent" element={<AISalesAgent />} />
-            <Route path="/ai-sales-agent/features" element={<AISalesAgentFeatures />} />
-            <Route path="/ai-receptionist/features" element={<AIReceptionistFeatures />} />
-            <Route path="/ai-receptionist/core/features" element={<AIReceptionistCoreFeatures />} />
-            <Route path="/ai-receptionist/growth/features" element={<AIReceptionistGrowthFeatures />} />
-            <Route path="/ai-receptionist/pro/features" element={<AIReceptionistProFeatures />} />
-            <Route path="/ai-receptionist/core/whats-included" element={<AIReceptionistCoreIncludes />} />
-            <Route path="/ai-receptionist/growth/whats-included" element={<AIReceptionistGrowthIncludes />} />
-            <Route path="/ai-receptionist/pro/whats-included" element={<AIReceptionistProIncludes />} />
-            <Route path="/custom-ai-workflows" element={<Navigate to="/omnilogic" replace />} />
-            <Route path="/omnilogic" element={<CustomAIWorkflows />} />
-            <Route path="/ai-receptionist/features/complete-library" element={<AIReceptionistFeatureLibrary />} />
-            <Route path="/ai-receptionist/how-it-works" element={<AIReceptionistHowItWorks />} />
+      {isBrowser && <ScrollToTop />}
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          {/* Critical route - eager loaded */}
+          <Route path="/" element={<Index />} />
+          
+          {/* Primary conversion paths */}
+          <Route path="/get-started" element={<GetStarted />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/aeo-audit" element={<AEOAudit />} />
+          <Route path="/free-ai-audit" element={<AEOAudit />} />
+          <Route path="/how-it-works" element={<AIReceptionistHowItWorks />} />
+          <Route path="/onboarding" element={<Onboarding />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/ai-receptionist-readiness-assessment" element={<AIReceptionistAssessment />} />
+          
+          {/* Product pages */}
+          <Route path="/launchpad-360" element={<LaunchPad360 />} />
+          <Route path="/locallift" element={<LocalLift />} />
+          <Route path="/ai-receptionist" element={<AIReceptionist />} />
+          <Route path="/ai-sales-agent" element={<AISalesAgent />} />
+          <Route path="/ai-sales-agent/features" element={<AISalesAgentFeatures />} />
+          <Route path="/ai-receptionist/features" element={<AIReceptionistFeatures />} />
+          <Route path="/ai-receptionist/core/features" element={<AIReceptionistCoreFeatures />} />
+          <Route path="/ai-receptionist/growth/features" element={<AIReceptionistGrowthFeatures />} />
+          <Route path="/ai-receptionist/pro/features" element={<AIReceptionistProFeatures />} />
+          <Route path="/ai-receptionist/core/whats-included" element={<AIReceptionistCoreIncludes />} />
+          <Route path="/ai-receptionist/growth/whats-included" element={<AIReceptionistGrowthIncludes />} />
+          <Route path="/ai-receptionist/pro/whats-included" element={<AIReceptionistProIncludes />} />
+          <Route path="/custom-ai-workflows" element={<Navigate to="/omnilogic" replace />} />
+          <Route path="/omnilogic" element={<CustomAIWorkflows />} />
+          <Route path="/ai-receptionist/features/complete-library" element={<AIReceptionistFeatureLibrary />} />
+          <Route path="/ai-receptionist/how-it-works" element={<AIReceptionistHowItWorks />} />
 
-            {/* Content/SEO pages */}
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/faq" element={<FAQPage />} />
-            <Route path="/learning-center" element={<Blog />} />
-            <Route path="/learning-center/for-business" element={<ForBusiness />} />
-            <Route path="/learning-center/for-everyone" element={<ForEveryone />} />
-            <Route path="/learning-center/news" element={<LearningCenterNews />} />
-            <Route path="/learning-center/ai-receptionist-guide" element={<AIReceptionistGuide />} />
-            <Route path="/learning-center/business-growth/ai-receptionist-pricing" element={<AIReceptionistPricing />} />
-            <Route path="/learning-center/business-growth/signs-you-need-ai-receptionist" element={<SignsYouNeedAIReceptionist />} />
-            <Route path="/learning-center/business-growth/calculate-ai-receptionist-roi" element={<CalculateAIReceptionistROI />} />
-            <Route path="/case-studies" element={<CaseStudies />} />
-            <Route path="/case-studies/:slug" element={<WhitepaperPage />} />
-            <Route path="/case-studies/precision-hvac-success-story" element={<PrecisionHVACSuccessStory />} />
-            <Route path="/learning-center/ai-vs-human-receptionist" element={<AIvsHumanReceptionist />} />
-            <Route path="/learning-center/ai-vs-answering-service" element={<AIvsAnsweringService />} />
-            <Route path="/learning-center/ai-vs-virtual-receptionist" element={<AIvsVirtualReceptionist />} />
-            <Route path="/learning-center/ai-receptionist-buyers-guide" element={<AIReceptionistBuyersGuide />} />
-            <Route path="/learning-center/what-is-ai-receptionist" element={<WhatIsAIReceptionist />} />
-            <Route path="/learning-center/how-ai-receptionists-work" element={<HowAIReceptionistsWork />} />
-            <Route path="/learning-center/ai-receptionist-benefits" element={<AIReceptionistBenefits />} />
-            <Route path="/learning-center/ai-voice-quality" element={<AIVoiceQuality />} />
-            <Route path="/learning-center/ai-receptionist-setup-guide" element={<AIReceptionistSetupGuide />} />
-            <Route path="/glossary" element={<Glossary />} />
-            <Route path="/comparison" element={<Comparison />} />
-            <Route path="/how-it-works" element={<HowItWorks />} />
+          {/* Content/SEO pages */}
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/faq" element={<FAQPage />} />
+          <Route path="/learning-center" element={<Blog />} />
+          <Route path="/learning-center/for-business" element={<ForBusiness />} />
+          <Route path="/learning-center/for-everyone" element={<ForEveryone />} />
+          <Route path="/learning-center/news" element={<LearningCenterNews />} />
+          <Route path="/learning-center/ai-receptionist-guide" element={<AIReceptionistGuide />} />
+          <Route path="/learning-center/business-growth/ai-receptionist-pricing" element={<AIReceptionistPricing />} />
+          <Route path="/learning-center/business-growth/signs-you-need-ai-receptionist" element={<SignsYouNeedAIReceptionist />} />
+          <Route path="/learning-center/business-growth/calculate-ai-receptionist-roi" element={<CalculateAIReceptionistROI />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/case-studies/:slug" element={<WhitepaperPage />} />
+          <Route path="/case-studies/precision-hvac-success-story" element={<PrecisionHVACSuccessStory />} />
+          <Route path="/learning-center/ai-vs-human-receptionist" element={<AIvsHumanReceptionist />} />
+          <Route path="/learning-center/ai-vs-answering-service" element={<AIvsAnsweringService />} />
+          <Route path="/learning-center/ai-vs-virtual-receptionist" element={<AIvsVirtualReceptionist />} />
+          <Route path="/learning-center/ai-receptionist-buyers-guide" element={<AIReceptionistBuyersGuide />} />
+          <Route path="/learning-center/what-is-ai-receptionist" element={<WhatIsAIReceptionist />} />
+          <Route path="/learning-center/how-ai-receptionists-work" element={<HowAIReceptionistsWork />} />
+          <Route path="/learning-center/ai-receptionist-benefits" element={<AIReceptionistBenefits />} />
+          <Route path="/learning-center/ai-voice-quality" element={<AIVoiceQuality />} />
+          <Route path="/learning-center/ai-receptionist-setup-guide" element={<AIReceptionistSetupGuide />} />
+          <Route path="/glossary" element={<Glossary />} />
+          <Route path="/comparison" element={<Comparison />} />
+          <Route path="/how-it-works" element={<HowItWorks />} />
 
-            {/* Industry pages */}
-            <Route path="/industries" element={<IndustryIndex />} />
-            <Route path="/industries/hvac-contractors" element={<HVACContractors />} />
-            <Route path="/industries/emergency-plumbers" element={<EmergencyPlumbers />} />
-            <Route path="/industries/roofing-companies" element={<RoofingCompanies />} />
-            <Route path="/industries/electricians" element={<Electricians />} />
-            <Route path="/industries/pest-control" element={<PestControl />} />
-            <Route path="/industries/locksmiths" element={<Locksmiths />} />
-            <Route path="/industries/garage-door-repair" element={<GarageDoorRepair />} />
-            <Route path="/industries/landscapers" element={<Landscapers />} />
-            <Route path="/industries/junk-removal" element={<JunkRemoval />} />
-            <Route path="/industries/house-cleaning" element={<HouseCleaning />} />
-            <Route path="/industries/dental-clinics" element={<DentalClinics />} />
-            <Route path="/industries/chiropractors" element={<Chiropractors />} />
-            <Route path="/industries/veterinary-clinics" element={<VeterinaryClinics />} />
-            <Route path="/industries/physical-therapy" element={<PhysicalTherapy />} />
-            <Route path="/industries/mental-health-counselors" element={<MentalHealthCounselors />} />
-            <Route path="/industries/medical-spas" element={<MedicalSpas />} />
-            <Route path="/industries/optometrists" element={<Optometrists />} />
-            <Route path="/industries/dermatologists" element={<Dermatologists />} />
-            <Route path="/industries/orthodontists" element={<Orthodontists />} />
-            <Route path="/industries/holistic-health" element={<HolisticHealth />} />
-            <Route path="/industries/personal-injury-lawyers" element={<PersonalInjuryLawyers />} />
-            <Route path="/industries/family-law-attorneys" element={<FamilyLawAttorneys />} />
-            <Route path="/industries/criminal-defense-lawyers" element={<CriminalDefenseLawyers />} />
-            <Route path="/industries/estate-planning-attorneys" element={<EstatePlanningAttorneys />} />
-            <Route path="/industries/immigration-consultants" element={<ImmigrationConsultants />} />
-            <Route path="/industries/cpas-tax-professionals" element={<CPAsTaxProfessionals />} />
-            <Route path="/industries/notary-publics" element={<NotaryPublics />} />
-            <Route path="/industries/private-investigators" element={<PrivateInvestigators />} />
-            <Route path="/industries/residential-real-estate" element={<ResidentialRealEstate />} />
-            <Route path="/industries/property-management" element={<PropertyManagement />} />
-            <Route path="/industries/commercial-real-estate" element={<CommercialRealEstate />} />
-            <Route path="/industries/mortgage-brokers" element={<MortgageBrokers />} />
-            <Route path="/industries/home-inspectors" element={<HomeInspectors />} />
-            <Route path="/industries/auto-repair-shops" element={<AutoRepairShops />} />
-            <Route path="/industries/mobile-detailers" element={<MobileDetailers />} />
-            <Route path="/industries/towing-companies" element={<TowingCompanies />} />
-            <Route path="/industries/car-rental-agencies" element={<CarRentalAgencies />} />
-            <Route path="/industries/driving-schools" element={<DrivingSchools />} />
-            <Route path="/industries/hair-salons" element={<HairSalons />} />
-            <Route path="/industries/barbershops" element={<Barbershops />} />
-            <Route path="/industries/day-spas" element={<DaySpas />} />
-            <Route path="/industries/tattoo-studios" element={<TattooStudios />} />
-            <Route path="/industries/yoga-pilates-studios" element={<YogaPilatesStudios />} />
-            <Route path="/industries/catering-services" element={<CateringServices />} />
-            <Route path="/industries/event-venues" element={<EventVenues />} />
-            <Route path="/industries/wedding-planners" element={<WeddingPlanners />} />
-            <Route path="/industries/boutique-hotels" element={<BoutiqueHotels />} />
-            <Route path="/industries/it-support-msps" element={<ITSupportMSPs />} />
-            <Route path="/industries/pet-groomers" element={<PetGroomers />} />
-            <Route path="/industries/private-tutors" element={<PrivateTutors />} />
-            <Route path="/industries/solar-installers" element={<SolarInstallers />} />
-            <Route path="/industries/insulation-contractors" element={<InsulationContractors />} />
-            <Route path="/industries/painters" element={<Painters />} />
-            <Route path="/industries/fence-companies" element={<FenceCompanies />} />
-            <Route path="/industries/pool-service-companies" element={<PoolServiceCompanies />} />
-            <Route path="/industries/appliance-repair" element={<ApplianceRepair />} />
-            <Route path="/industries/general-contractors" element={<GeneralContractors />} />
-            <Route path="/industries/flooring-companies" element={<FlooringCompanies />} />
-            <Route path="/industries/window-door-installers" element={<WindowAndDoorInstallers />} />
-            <Route path="/industries/concrete-contractors" element={<ConcreteContractors />} />
-            <Route path="/industries/septic-services" element={<SepticServices />} />
-            <Route path="/industries/tree-service-companies" element={<TreeServiceCompanies />} />
-            <Route path="/industries/urgent-care-clinics" element={<UrgentCareClinics />} />
-            <Route path="/industries/pediatricians" element={<Pediatricians />} />
-            <Route path="/industries/podiatrists" element={<Podiatrists />} />
-            <Route path="/industries/hearing-aid-specialists" element={<HearingAidSpecialists />} />
-            <Route path="/industries/acupuncture-clinics" element={<AcupunctureClinics />} />
-            <Route path="/industries/home-health-care-agencies" element={<HomeHealthCareAgencies />} />
-            <Route path="/industries/bankruptcy-attorneys" element={<BankruptcyAttorneys />} />
-            <Route path="/industries/workers-compensation-lawyers" element={<WorkersCompensationLawyers />} />
-            <Route path="/industries/business-consultants" element={<BusinessConsultants />} />
-            <Route path="/industries/insurance-agents" element={<InsuranceAgents />} />
-            <Route path="/industries/financial-advisors" element={<FinancialAdvisors />} />
-            <Route path="/industries/bookkeepers" element={<Bookkeepers />} />
-            <Route path="/industries/title-companies" element={<TitleCompanies />} />
-            <Route path="/industries/appraisers" element={<Appraisers />} />
-            <Route path="/industries/moving-companies" element={<MovingCompanies />} />
-            <Route path="/industries/storage-facilities" element={<StorageFacilities />} />
-            <Route path="/industries/tire-shops" element={<TireShops />} />
-            <Route path="/industries/auto-body-shops" element={<AutoBodyShops />} />
-            <Route path="/industries/oil-change-services" element={<OilChangeServices />} />
-            <Route path="/industries/motorcycle-dealers" element={<MotorcycleDealers />} />
-            <Route path="/industries/rv-dealers-service" element={<RvDealersAndService />} />
-            <Route path="/industries/nail-salons" element={<NailSalons />} />
-            <Route path="/industries/lash-brow-studios" element={<LashAndBrowStudios />} />
-            <Route path="/industries/personal-trainers" element={<PersonalTrainers />} />
-            <Route path="/industries/martial-arts-studios" element={<MartialArtsStudios />} />
-            <Route path="/industries/dance-studios" element={<DanceStudios />} />
-            <Route path="/industries/photography-studios" element={<PhotographyStudios />} />
-            <Route path="/industries/restaurants" element={<Restaurants />} />
-            <Route path="/industries/food-trucks" element={<FoodTrucks />} />
-            <Route path="/industries/bed-breakfasts" element={<BedAndBreakfasts />} />
-            <Route path="/industries/travel-agencies" element={<TravelAgencies />} />
-            <Route path="/industries/party-rental-companies" element={<PartyRentalCompanies />} />
-            <Route path="/industries/staffing-agencies" element={<StaffingAgencies />} />
-            <Route path="/industries/print-shops" element={<PrintShops />} />
-            <Route path="/industries/coworking-spaces" element={<CoworkingSpaces />} />
-            <Route path="/industries/music-schools" element={<MusicSchools />} />
-            <Route path="/industries/language-schools" element={<LanguageSchools />} />
-            <Route path="/industries/test-prep-centers" element={<TestPrepCenters />} />
+          {/* Industry pages */}
+          <Route path="/industries" element={<IndustryIndex />} />
+          <Route path="/industries/hvac-contractors" element={<HVACContractors />} />
+          <Route path="/industries/emergency-plumbers" element={<EmergencyPlumbers />} />
+          <Route path="/industries/roofing-companies" element={<RoofingCompanies />} />
+          <Route path="/industries/electricians" element={<Electricians />} />
+          <Route path="/industries/pest-control" element={<PestControl />} />
+          <Route path="/industries/locksmiths" element={<Locksmiths />} />
+          <Route path="/industries/garage-door-repair" element={<GarageDoorRepair />} />
+          <Route path="/industries/landscapers" element={<Landscapers />} />
+          <Route path="/industries/junk-removal" element={<JunkRemoval />} />
+          <Route path="/industries/house-cleaning" element={<HouseCleaning />} />
+          <Route path="/industries/dental-clinics" element={<DentalClinics />} />
+          <Route path="/industries/chiropractors" element={<Chiropractors />} />
+          <Route path="/industries/veterinary-clinics" element={<VeterinaryClinics />} />
+          <Route path="/industries/physical-therapy" element={<PhysicalTherapy />} />
+          <Route path="/industries/mental-health-counselors" element={<MentalHealthCounselors />} />
+          <Route path="/industries/medical-spas" element={<MedicalSpas />} />
+          <Route path="/industries/optometrists" element={<Optometrists />} />
+          <Route path="/industries/dermatologists" element={<Dermatologists />} />
+          <Route path="/industries/orthodontists" element={<Orthodontists />} />
+          <Route path="/industries/holistic-health" element={<HolisticHealth />} />
+          <Route path="/industries/personal-injury-lawyers" element={<PersonalInjuryLawyers />} />
+          <Route path="/industries/family-law-attorneys" element={<FamilyLawAttorneys />} />
+          <Route path="/industries/criminal-defense-lawyers" element={<CriminalDefenseLawyers />} />
+          <Route path="/industries/estate-planning-attorneys" element={<EstatePlanningAttorneys />} />
+          <Route path="/industries/immigration-consultants" element={<ImmigrationConsultants />} />
+          <Route path="/industries/cpas-tax-professionals" element={<CPAsTaxProfessionals />} />
+          <Route path="/industries/notary-publics" element={<NotaryPublics />} />
+          <Route path="/industries/private-investigators" element={<PrivateInvestigators />} />
+          <Route path="/industries/residential-real-estate" element={<ResidentialRealEstate />} />
+          <Route path="/industries/property-management" element={<PropertyManagement />} />
+          <Route path="/industries/commercial-real-estate" element={<CommercialRealEstate />} />
+          <Route path="/industries/mortgage-brokers" element={<MortgageBrokers />} />
+          <Route path="/industries/home-inspectors" element={<HomeInspectors />} />
+          <Route path="/industries/auto-repair-shops" element={<AutoRepairShops />} />
+          <Route path="/industries/mobile-detailers" element={<MobileDetailers />} />
+          <Route path="/industries/towing-companies" element={<TowingCompanies />} />
+          <Route path="/industries/car-rental-agencies" element={<CarRentalAgencies />} />
+          <Route path="/industries/driving-schools" element={<DrivingSchools />} />
+          <Route path="/industries/hair-salons" element={<HairSalons />} />
+          <Route path="/industries/barbershops" element={<Barbershops />} />
+          <Route path="/industries/day-spas" element={<DaySpas />} />
+          <Route path="/industries/tattoo-studios" element={<TattooStudios />} />
+          <Route path="/industries/yoga-pilates-studios" element={<YogaPilatesStudios />} />
+          <Route path="/industries/catering-services" element={<CateringServices />} />
+          <Route path="/industries/event-venues" element={<EventVenues />} />
+          <Route path="/industries/wedding-planners" element={<WeddingPlanners />} />
+          <Route path="/industries/boutique-hotels" element={<BoutiqueHotels />} />
+          <Route path="/industries/it-support-msps" element={<ITSupportMSPs />} />
+          <Route path="/industries/pet-groomers" element={<PetGroomers />} />
+          <Route path="/industries/private-tutors" element={<PrivateTutors />} />
+          <Route path="/industries/solar-installers" element={<SolarInstallers />} />
+          <Route path="/industries/insulation-contractors" element={<InsulationContractors />} />
+          <Route path="/industries/painters" element={<Painters />} />
+          <Route path="/industries/fence-companies" element={<FenceCompanies />} />
+          <Route path="/industries/pool-service-companies" element={<PoolServiceCompanies />} />
+          <Route path="/industries/appliance-repair" element={<ApplianceRepair />} />
+          <Route path="/industries/general-contractors" element={<GeneralContractors />} />
+          <Route path="/industries/flooring-companies" element={<FlooringCompanies />} />
+          <Route path="/industries/window-door-installers" element={<WindowAndDoorInstallers />} />
+          <Route path="/industries/concrete-contractors" element={<ConcreteContractors />} />
+          <Route path="/industries/septic-services" element={<SepticServices />} />
+          <Route path="/industries/tree-service-companies" element={<TreeServiceCompanies />} />
+          <Route path="/industries/urgent-care-clinics" element={<UrgentCareClinics />} />
+          <Route path="/industries/pediatricians" element={<Pediatricians />} />
+          <Route path="/industries/podiatrists" element={<Podiatrists />} />
+          <Route path="/industries/hearing-aid-specialists" element={<HearingAidSpecialists />} />
+          <Route path="/industries/acupuncture-clinics" element={<AcupunctureClinics />} />
+          <Route path="/industries/home-health-care-agencies" element={<HomeHealthCareAgencies />} />
+          <Route path="/industries/bankruptcy-attorneys" element={<BankruptcyAttorneys />} />
+          <Route path="/industries/workers-compensation-lawyers" element={<WorkersCompensationLawyers />} />
+          <Route path="/industries/business-consultants" element={<BusinessConsultants />} />
+          <Route path="/industries/insurance-agents" element={<InsuranceAgents />} />
+          <Route path="/industries/financial-advisors" element={<FinancialAdvisors />} />
+          <Route path="/industries/bookkeepers" element={<Bookkeepers />} />
+          <Route path="/industries/title-companies" element={<TitleCompanies />} />
+          <Route path="/industries/appraisers" element={<Appraisers />} />
+          <Route path="/industries/moving-companies" element={<MovingCompanies />} />
+          <Route path="/industries/storage-facilities" element={<StorageFacilities />} />
+          <Route path="/industries/tire-shops" element={<TireShops />} />
+          <Route path="/industries/auto-body-shops" element={<AutoBodyShops />} />
+          <Route path="/industries/oil-change-services" element={<OilChangeServices />} />
+          <Route path="/industries/motorcycle-dealers" element={<MotorcycleDealers />} />
+          <Route path="/industries/rv-dealers-service" element={<RvDealersAndService />} />
+          <Route path="/industries/nail-salons" element={<NailSalons />} />
+          <Route path="/industries/lash-brow-studios" element={<LashAndBrowStudios />} />
+          <Route path="/industries/personal-trainers" element={<PersonalTrainers />} />
+          <Route path="/industries/martial-arts-studios" element={<MartialArtsStudios />} />
+          <Route path="/industries/dance-studios" element={<DanceStudios />} />
+          <Route path="/industries/photography-studios" element={<PhotographyStudios />} />
+          <Route path="/industries/restaurants" element={<Restaurants />} />
+          <Route path="/industries/food-trucks" element={<FoodTrucks />} />
+          <Route path="/industries/bed-and-breakfasts" element={<BedAndBreakfasts />} />
+          <Route path="/industries/travel-agencies" element={<TravelAgencies />} />
+          <Route path="/industries/party-rental-companies" element={<PartyRentalCompanies />} />
+          <Route path="/industries/staffing-agencies" element={<StaffingAgencies />} />
+          <Route path="/industries/print-shops" element={<PrintShops />} />
+          <Route path="/industries/coworking-spaces" element={<CoworkingSpaces />} />
+          <Route path="/industries/music-schools" element={<MusicSchools />} />
+          <Route path="/industries/language-schools" element={<LanguageSchools />} />
+          <Route path="/industries/test-prep-centers" element={<TestPrepCenters />} />
 
-            {/* Location pages */}
-            <Route path="/locations" element={<LocationsPage />} />
-            <Route path="/locations/sacramento" element={<Sacramento />} />
-            <Route path="/locations/stockton" element={<Stockton />} />
-            <Route path="/locations/fresno" element={<Fresno />} />
-            <Route path="/locations/bakersfield" element={<Bakersfield />} />
-            <Route path="/locations/culver-city" element={<CulverCity />} />
-            <Route path="/locations/henderson" element={<Henderson />} />
-            <Route path="/locations/monterey" element={<Monterey />} />
+          {/* Location pages */}
+          <Route path="/locations" element={<LocationsPage />} />
+          <Route path="/locations/sacramento" element={<Sacramento />} />
+          <Route path="/locations/stockton" element={<Stockton />} />
+          <Route path="/locations/fresno" element={<Fresno />} />
+          <Route path="/locations/bakersfield" element={<Bakersfield />} />
+          <Route path="/locations/culver-city" element={<CulverCity />} />
+          <Route path="/locations/henderson" element={<Henderson />} />
+          <Route path="/locations/monterey" element={<Monterey />} />
 
-            {/* Admin pages (rarely accessed) */}
-            <Route path="/admin/auth" element={<AdminAuth />} />
-            <Route path="/admin/leads" element={<AdminLeads />} />
-            <Route path="/admin/email-templates" element={<AdminEmailTemplates />} />
-            <Route path="/reset-password" element={<ResetPassword />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+          {/* Blog / Learning Center */}
+          <Route path="/blog" element={<Navigate to="/learning-center" replace />} />
+          <Route path="/blog/:slug" element={<BlogSlugRedirect />} />
+          <Route path="/learning-center/blog/:slug" element={<BlogArticle />} />
 
-            {/* Payment success page */}
-            <Route path="/payment-success" element={<PaymentSuccess />} />
+          {/* Admin pages */}
+          <Route path="/admin" element={<AdminAuth />} />
+          <Route path="/admin/leads" element={<AdminLeads />} />
+          <Route path="/admin/email-templates" element={<AdminEmailTemplates />} />
 
-            {/* Legal pages */}
-            <Route path="/terms" element={<Terms />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/accessibility" element={<Accessibility />} />
-            <Route path="/trust-security" element={<TrustSecurity />} />
+          {/* Auth pages */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/payment-success" element={<PaymentSuccess />} />
 
-            {/* Blog slug redirect for legacy links */}
-            <Route path="/blog/:slug" element={<BlogSlugRedirect />} />
+          {/* Legal pages */}
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/accessibility" element={<Accessibility />} />
+          <Route path="/trust-security" element={<TrustSecurity />} />
 
-            {/* 404 Not Found */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
+          {/* 404 Catch-all */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
     </TooltipProvider>
   </QueryClientProvider>
 );
