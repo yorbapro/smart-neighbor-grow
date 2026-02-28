@@ -275,7 +275,7 @@ const App = () => (
             <Route path="/learning-center/ai-receptionist-setup-guide" element={<AIReceptionistSetupGuide />} />
             <Route path="/glossary" element={<Glossary />} />
             <Route path="/comparison" element={<Comparison />} />
-            <Route path="/resources/how-it-works" element={<Navigate to="/how-it-works" replace />} />
+            <Route path="/resources/how-it-works" element={<HowItWorks />} />
 
             {/* Industry pages */}
             <Route path="/industries" element={<IndustryIndex />} />
