@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build:ssg"
+  command = "pnpm install --no-frozen-lockfile && pnpm run build:ssg"
   publish = "dist/client"
 
 # Custom 404 page configuration
