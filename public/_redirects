@@ -1,2 +1,2 @@
-/*  /index.html  200
-/404  /404.html  404
+# Catch-all rule for SPA routing - serve 404.html with 404 status for unknown routes
+/*  /404.html  404
