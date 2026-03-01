@@ -35,7 +35,7 @@ const { render } = await import('./dist/server/entry-server.js')
 const sitemap = fs.readFileSync(toAbsolute('public/sitemap.xml'), 'utf-8')
 const routesToPrerender = [...sitemap.matchAll(/<loc>https:\/\/brightlaunchiq\.com([^<]*)<\/loc>/g)]
   .map(match => match[1] || '/')
-  .filter(route => !route.includes(":") && !route.includes("/industries/test-prep-centers"))
+  .filter(route => !route.includes(":") && !route.startsWith("/industries/"))
 
 console.log('Routes to pre-render:', routesToPrerender)
 
@@ -112,7 +112,8 @@ const generateNoscriptContent = (appHtml) => {
       if (routeUrl === '/') continue;
       redirects += `${routeUrl}  ${routeUrl}.html  200\n`;
     }
-    // Add catch-all 404 rule
+    // Industry pages will be rendered client-side, so no redirects needed for them
+    // Add catch-all 404 rule for non-prerendered routes
     redirects += '/*  /404.html  404\n';
     fs.writeFileSync(toAbsolute('dist/client/_redirects'), redirects);
     console.log('pre-rendered: dist/client/_redirects');
