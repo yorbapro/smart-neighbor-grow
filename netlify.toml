@@ -1,6 +1,10 @@
 [build]
-  command = "pnpm install --no-frozen-lockfile && pnpm run build:ssg"
+  command = "pnpm run build:ssg"
   publish = "dist/client"
+
+[build.environment]
+  NPM_FLAGS = "--no-frozen-lockfile"
+  PNPM_FLAGS = "--no-frozen-lockfile"
 
 # Custom 404 page configuration
 [[redirects]]
