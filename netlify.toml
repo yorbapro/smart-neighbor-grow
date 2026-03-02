@@ -1,7 +1,6 @@
 [build]
   command = "pnpm run build:ssg"
   publish = "dist/client"
-  timeout = 3600
 
 [build.environment]
   NPM_FLAGS = "--no-frozen-lockfile"
