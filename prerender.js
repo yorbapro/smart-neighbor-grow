@@ -32,10 +32,44 @@ Object.defineProperties(global, {
 const template = fs.readFileSync(toAbsolute('dist/client/index.html'), 'utf-8')
 const { render } = await import('./dist/server/entry-server.js')
 
+// Define critical pages to pre-render for SEO/AEO
+const criticalPages = new Set([
+  '/',
+  '/about',
+  '/pricing',
+  '/contact',
+  '/faq',
+  '/get-started',
+  '/aeo-audit',
+  '/terms',
+  '/privacy',
+  '/accessibility',
+  '/resources/blog',
+  '/resources/glossary',
+  '/resources/case-studies',
+  '/resources/comparison',
+  '/resources/how-it-works',
+  '/resources/blog/what-is-aeo',
+  '/resources/blog/ai-lead-generation-guide',
+  '/resources/blog/human-guided-ai-vs-automated',
+  '/resources/blog/speed-to-lead-problem',
+  '/resources/blog/gbp-optimization-ai',
+  '/resources/blog/crm-integration-ai',
+  '/industries',
+  '/locations',
+  '/locations/sacramento',
+  '/locations/bakersfield',
+  '/locations/fresno',
+  '/locations/stockton',
+  '/locations/culver-city',
+  '/locations/monterey',
+  '/locations/henderson'
+]);
+
 const sitemap = fs.readFileSync(toAbsolute('public/sitemap.xml'), 'utf-8')
 const routesToPrerender = [...sitemap.matchAll(/<loc>https:\/\/brightlaunchiq\.com([^<]*)<\/loc>/g)]
   .map(match => match[1] || '/')
-  .filter(route => !route.includes(":") && !route.startsWith("/industries/"))
+  .filter(route => !route.includes(":") && criticalPages.has(route))
 
 console.log('Routes to pre-render:', routesToPrerender)
 
@@ -112,7 +146,7 @@ const generateNoscriptContent = (appHtml) => {
       if (routeUrl === '/') continue;
       redirects += `${routeUrl}  ${routeUrl}.html  200\n`;
     }
-    // Industry pages will be rendered client-side, so no redirects needed for them
+    // Product pages and industry pages will be rendered client-side
     // Add catch-all 404 rule for non-prerendered routes
     redirects += '/*  /404.html  404\n';
     fs.writeFileSync(toAbsolute('dist/client/_redirects'), redirects);
