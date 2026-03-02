@@ -5,333 +5,214 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   
   <!-- Main Pages -->
-  <url>
-    <loc>https://brightlaunchiq.com/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <url>
-    <loc>https://brightlaunchiq.com/about</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://brightlaunchiq.com/pricing</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://brightlaunchiq.com/contact</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://brightlaunchiq.com/faq</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://brightlaunchiq.com/get-started</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://brightlaunchiq.com/aeo-audit</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Learning Center & Resources -->
-  <url>
-    <loc>https://brightlaunchiq.com/resources/blog</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://brightlaunchiq.com/resources/glossary</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://brightlaunchiq.com/resources/case-studies</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://brightlaunchiq.com/resources/comparison</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://brightlaunchiq.com/resources/how-it-works</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Learning Center Articles -->
-  <url>
-    <loc>https://brightlaunchiq.com/resources/blog/what-is-aeo</loc>
-    <lastmod>2026-02-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://brightlaunchiq.com/resources/blog/ai-lead-generation-guide</loc>
-    <lastmod>2026-02-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://brightlaunchiq.com/resources/blog/human-guided-ai-vs-automated</loc>
-    <lastmod>2026-02-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://brightlaunchiq.com/resources/blog/speed-to-lead-problem</loc>
-    <lastmod>2026-02-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://brightlaunchiq.com/resources/blog/gbp-optimization-ai</loc>
-    <lastmod>2026-02-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://brightlaunchiq.com/resources/blog/crm-integration-ai</loc>
-    <lastmod>2026-02-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- AI Receptionist Feature Library -->
-  <url>
-    <loc>https://brightlaunchiq.com/ai-receptionist/features/complete-library</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- AI Receptionist How It Works -->
-  <url>
-    <loc>https://brightlaunchiq.com/ai-receptionist/how-it-works</loc>
-    <lastmod>2026-02-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <url><loc>https://brightlaunchiq.com/</loc><lastmod>2026-03-02</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://brightlaunchiq.com/about</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://brightlaunchiq.com/pricing</loc><lastmod>2026-03-02</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://brightlaunchiq.com/contact</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/faq</loc><lastmod>2026-03-02</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/get-started</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://brightlaunchiq.com/aeo-audit</loc><lastmod>2026-03-02</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/how-it-works</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/trust-security</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/ai-receptionist-readiness-assessment</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Product Pages -->
-  <url>
-    <loc>https://brightlaunchiq.com/launchpad-360</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://brightlaunchiq.com/ai-receptionist</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://brightlaunchiq.com/ai-sales-agent</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://brightlaunchiq.com/locallift</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://brightlaunchiq.com/omnilogic</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <url><loc>https://brightlaunchiq.com/launchpad-360</loc><lastmod>2026-03-02</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://brightlaunchiq.com/ai-receptionist</loc><lastmod>2026-03-02</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://brightlaunchiq.com/ai-sales-agent</loc><lastmod>2026-03-02</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://brightlaunchiq.com/locallift</loc><lastmod>2026-03-02</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://brightlaunchiq.com/omnilogic</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- AI Receptionist Sub-Pages -->
+  <url><loc>https://brightlaunchiq.com/ai-receptionist/features</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/ai-receptionist/features/complete-library</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/ai-receptionist/how-it-works</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/ai-receptionist/core/features</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/ai-receptionist/growth/features</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/ai-receptionist/pro/features</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/ai-receptionist/core/whats-included</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/ai-receptionist/growth/whats-included</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/ai-receptionist/pro/whats-included</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- AI Sales Agent Sub-Pages -->
+  <url><loc>https://brightlaunchiq.com/ai-sales-agent/features</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Learning Center Hub -->
+  <url><loc>https://brightlaunchiq.com/learning-center</loc><lastmod>2026-03-02</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/learning-center/for-business</loc><lastmod>2026-03-02</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/learning-center/for-everyone</loc><lastmod>2026-03-02</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/learning-center/news</loc><lastmod>2026-03-02</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- Learning Center Articles -->
+  <url><loc>https://brightlaunchiq.com/learning-center/ai-receptionist-guide</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/learning-center/business-growth/ai-receptionist-pricing</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/learning-center/business-growth/signs-you-need-ai-receptionist</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/learning-center/business-growth/calculate-ai-receptionist-roi</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/learning-center/ai-vs-human-receptionist</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/learning-center/ai-vs-answering-service</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/learning-center/ai-vs-virtual-receptionist</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/learning-center/ai-receptionist-buyers-guide</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/learning-center/what-is-ai-receptionist</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/learning-center/how-ai-receptionists-work</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/learning-center/ai-receptionist-benefits</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/learning-center/ai-voice-quality</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/learning-center/ai-receptionist-setup-guide</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Resources -->
+  <url><loc>https://brightlaunchiq.com/glossary</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/comparison</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Case Studies Hub -->
+  <url><loc>https://brightlaunchiq.com/case-studies</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/case-studies/precision-hvac-success-story</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Whitepaper Pages (served via /case-studies/:slug) -->
+  <url><loc>https://brightlaunchiq.com/case-studies/ai-receptionist-for-hvac-companies</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/case-studies/ai-receptionist-for-plumbing-businesses</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/case-studies/ai-receptionist-for-electrical-contractors</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/case-studies/ai-receptionist-for-medical-practices</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/case-studies/ai-receptionist-for-law-firms</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/case-studies/ai-voice-agent-for-home-service-lead-follow-up</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/case-studies/reducing-missed-calls-by-80-percent-using-ai-receptionists</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/case-studies/increasing-speed-to-lead-with-ai-voice-agents</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/case-studies/automating-appointment-booking-with-ai</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/case-studies/ai-receptionist-vs-human-receptionist</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/case-studies/the-roi-of-ai-receptionists</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/case-studies/ai-call-automation-and-workforce-optimization</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brightlaunchiq.com/case-studies/compliance-and-security-in-ai-call-handling</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Industry Hub -->
-  <url>
-    <loc>https://brightlaunchiq.com/industries</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <url><loc>https://brightlaunchiq.com/industries</loc><lastmod>2026-03-02</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
   <!-- Industry Pages - Home Services -->
-  <url><loc>https://brightlaunchiq.com/industries/hvac-contractors</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/emergency-plumbers</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/roofing-companies</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/electricians</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/pest-control</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/locksmiths</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/garage-door-repair</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/landscapers</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/junk-removal</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/house-cleaning</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/hvac-contractors</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/emergency-plumbers</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/roofing-companies</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/electricians</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/pest-control</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/locksmiths</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/garage-door-repair</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/landscapers</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/junk-removal</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/house-cleaning</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/solar-installers</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/insulation-contractors</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/painters</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/fence-companies</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/pool-service-companies</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/appliance-repair</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/general-contractors</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/flooring-companies</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/window-door-installers</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/concrete-contractors</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/septic-services</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/tree-service-companies</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/moving-companies</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/storage-facilities</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Industry Pages - Healthcare -->
-  <url><loc>https://brightlaunchiq.com/industries/dental-clinics</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/chiropractors</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/veterinary-clinics</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/physical-therapy</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/mental-health-counselors</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/medical-spas</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/optometrists</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/dermatologists</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/orthodontists</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/holistic-health</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/dental-clinics</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/chiropractors</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/veterinary-clinics</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/physical-therapy</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/mental-health-counselors</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/medical-spas</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/optometrists</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/dermatologists</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/orthodontists</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/holistic-health</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/urgent-care-clinics</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/pediatricians</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/podiatrists</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/hearing-aid-specialists</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/acupuncture-clinics</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/home-health-care-agencies</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Industry Pages - Professional -->
-  <url><loc>https://brightlaunchiq.com/industries/personal-injury-lawyers</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/family-law-attorneys</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/criminal-defense-lawyers</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/estate-planning-attorneys</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/immigration-consultants</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/cpas-tax-professionals</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/notary-publics</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/private-investigators</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/personal-injury-lawyers</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/family-law-attorneys</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/criminal-defense-lawyers</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/estate-planning-attorneys</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/immigration-consultants</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/cpas-tax-professionals</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/notary-publics</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/private-investigators</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/bankruptcy-attorneys</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/workers-compensation-lawyers</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/business-consultants</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/insurance-agents</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/financial-advisors</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/bookkeepers</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/staffing-agencies</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Industry Pages - Real Estate -->
-  <url><loc>https://brightlaunchiq.com/industries/residential-real-estate</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/property-management</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/commercial-real-estate</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/mortgage-brokers</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/home-inspectors</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/residential-real-estate</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/property-management</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/commercial-real-estate</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/mortgage-brokers</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/home-inspectors</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/title-companies</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/appraisers</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Industry Pages - Auto -->
-  <url><loc>https://brightlaunchiq.com/industries/auto-repair-shops</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/mobile-detailers</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/towing-companies</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/car-rental-agencies</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/driving-schools</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/auto-repair-shops</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/mobile-detailers</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/towing-companies</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/car-rental-agencies</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/driving-schools</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/tire-shops</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/auto-body-shops</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/oil-change-services</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/motorcycle-dealers</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/rv-dealers-service</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Industry Pages - Personal Services -->
-  <url><loc>https://brightlaunchiq.com/industries/hair-salons</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/barbershops</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/day-spas</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/tattoo-studios</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/yoga-pilates-studios</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/pet-groomers</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/hair-salons</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/barbershops</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/day-spas</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/tattoo-studios</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/yoga-pilates-studios</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/pet-groomers</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/nail-salons</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/lash-brow-studios</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/personal-trainers</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/martial-arts-studios</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/dance-studios</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/photography-studios</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Industry Pages - Hospitality -->
-  <url><loc>https://brightlaunchiq.com/industries/catering-services</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/event-venues</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/wedding-planners</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/boutique-hotels</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/catering-services</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/event-venues</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/wedding-planners</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/boutique-hotels</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/restaurants</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/food-trucks</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/bed-breakfasts</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/travel-agencies</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/party-rental-companies</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Industry Pages - B2B & Education -->
-  <url><loc>https://brightlaunchiq.com/industries/it-support-msps</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/private-tutors</loc><lastmod>2026-02-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  
-  <!-- Location Hub -->
-  <url>
-    <loc>https://brightlaunchiq.com/locations</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Location Pages -->
-  <url><loc>https://brightlaunchiq.com/locations/sacramento</loc><lastmod>2026-02-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/locations/bakersfield</loc><lastmod>2026-02-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/locations/fresno</loc><lastmod>2026-02-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/locations/stockton</loc><lastmod>2026-02-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/locations/culver-city</loc><lastmod>2026-02-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/locations/monterey</loc><lastmod>2026-02-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/locations/henderson</loc><lastmod>2026-02-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  
+  <url><loc>https://brightlaunchiq.com/industries/it-support-msps</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/private-tutors</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/print-shops</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/coworking-spaces</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/music-schools</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/language-schools</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/industries/test-prep-centers</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Location Hub & Pages -->
+  <url><loc>https://brightlaunchiq.com/locations</loc><lastmod>2026-03-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/locations/sacramento</loc><lastmod>2026-03-02</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/locations/bakersfield</loc><lastmod>2026-03-02</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/locations/fresno</loc><lastmod>2026-03-02</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/locations/stockton</loc><lastmod>2026-03-02</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/locations/culver-city</loc><lastmod>2026-03-02</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/locations/monterey</loc><lastmod>2026-03-02</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brightlaunchiq.com/locations/henderson</loc><lastmod>2026-03-02</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
   <!-- Legal Pages -->
-  <url><loc>https://brightlaunchiq.com/terms</loc><lastmod>2026-02-06</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://brightlaunchiq.com/privacy</loc><lastmod>2026-02-06</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://brightlaunchiq.com/accessibility</loc><lastmod>2026-02-06</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  
+  <url><loc>https://brightlaunchiq.com/terms</loc><lastmod>2026-03-02</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://brightlaunchiq.com/privacy</loc><lastmod>2026-03-02</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://brightlaunchiq.com/accessibility</loc><lastmod>2026-03-02</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 
-
-  <!-- Industry Pages - New Additions -->
-  <url><loc>https://brightlaunchiq.com/industries/solar-installers</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/insulation-contractors</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/painters</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/fence-companies</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/pool-service-companies</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/appliance-repair</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/general-contractors</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/flooring-companies</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/window-door-installers</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/concrete-contractors</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/septic-services</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/tree-service-companies</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/urgent-care-clinics</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/pediatricians</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/podiatrists</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/hearing-aid-specialists</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/acupuncture-clinics</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/home-health-care-agencies</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/bankruptcy-attorneys</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/workers-compensation-lawyers</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/business-consultants</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/insurance-agents</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/financial-advisors</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/bookkeepers</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/title-companies</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/appraisers</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/moving-companies</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/storage-facilities</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/tire-shops</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/auto-body-shops</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/oil-change-services</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/motorcycle-dealers</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/rv-dealers-service</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/nail-salons</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/lash-brow-studios</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/personal-trainers</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/martial-arts-studios</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/dance-studios</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/photography-studios</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/restaurants</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/food-trucks</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/bed-breakfasts</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/travel-agencies</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/party-rental-companies</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/staffing-agencies</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/print-shops</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/coworking-spaces</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/music-schools</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/language-schools</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://brightlaunchiq.com/industries/test-prep-centers</loc><lastmod>2026-02-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
