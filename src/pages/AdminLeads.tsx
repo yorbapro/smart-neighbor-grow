@@ -107,6 +107,7 @@ const AdminLeads = () => {
       return;
     }
 
+    // Client-side check for UX only — actual security is enforced by RLS policies on all tables
     const { data: roles, error: roleError } = await supabase
       .from("user_roles")
       .select("role")

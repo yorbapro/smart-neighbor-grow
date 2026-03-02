@@ -38,7 +38,6 @@ const CheckoutStep = ({ leadData, selectedProduct, onBack }: CheckoutStepProps) 
       if (error) throw error;
 
       if (data?.url) {
-        sessionStorage.setItem("checkoutLeadData", JSON.stringify(leadData));
         window.open(data.url, "_blank");
       } else {
         throw new Error("No checkout URL returned");

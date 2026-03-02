@@ -20,24 +20,21 @@ const PaymentSuccess = () => {
       if (emailSentRef.current) return;
       emailSentRef.current = true;
 
-      // Get stored lead data from sessionStorage
-      const storedData = sessionStorage.getItem("checkoutLeadData");
-      if (!storedData) {
+      // Get lead data from URL search params (passed via Stripe success_url)
+      const email = searchParams.get("email");
+      const businessName = searchParams.get("businessName");
+      const industry = searchParams.get("industry");
+
+      if (!email) {
         console.log("No lead data found for welcome email");
         return;
       }
 
       try {
-        const leadData = JSON.parse(storedData);
         await supabase.functions.invoke("send-welcome-email", {
-          body: {
-            email: leadData.email,
-            businessName: leadData.businessName,
-            industry: leadData.industry,
-          },
+          body: { email, businessName: businessName || "", industry: industry || "" },
         });
         console.log("Welcome email sent successfully");
-        sessionStorage.removeItem("checkoutLeadData");
       } catch (error) {
         console.error("Failed to send welcome email:", error);
       }
