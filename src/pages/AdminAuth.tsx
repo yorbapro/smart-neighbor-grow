@@ -50,7 +50,7 @@ const AdminAuth = () => {
     const checkAuth = async () => {
       const { data: { session } } = await supabase.auth.getSession();
       if (session) {
-        // Check if user is admin
+        // Client-side check for UX only — actual security is enforced by RLS policies on all tables
         const { data: roles } = await supabase
           .from("user_roles")
           .select("role")
@@ -68,7 +68,7 @@ const AdminAuth = () => {
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
       if (session) {
-        // Defer the admin check
+        // Client-side check for UX only — actual security is enforced by RLS policies on all tables
         setTimeout(async () => {
           const { data: roles } = await supabase
             .from("user_roles")

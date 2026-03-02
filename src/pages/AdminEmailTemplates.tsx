@@ -53,6 +53,7 @@ const AdminEmailTemplates = () => {
       return;
     }
 
+    // Client-side check for UX only — actual security is enforced by RLS policies on all tables
     const { data: roles } = await supabase
       .from("user_roles")
       .select("role")

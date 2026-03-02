@@ -88,7 +88,7 @@ serve(async (req) => {
         },
       ],
       mode: "subscription",
-      success_url: `${req.headers.get("origin")}/payment-success`,
+      success_url: `${req.headers.get("origin")}/payment-success?email=${encodeURIComponent(email)}&businessName=${encodeURIComponent(businessName || "")}&industry=${encodeURIComponent(industry || "")}`,
       cancel_url: `${req.headers.get("origin")}/get-started`,
       subscription_data: {
         metadata: {
