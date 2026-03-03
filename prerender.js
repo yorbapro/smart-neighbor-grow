@@ -108,12 +108,27 @@ const generateNoscriptContent = (appHtml) => {
   try {
     console.log('Generating _redirects...');
     let redirects = '';
+    
+    // Read the base _redirects from public if it exists
+    const publicRedirectsFile = toAbsolute('public/_redirects');
+    if (fs.existsSync(publicRedirectsFile)) {
+      redirects = fs.readFileSync(publicRedirectsFile, 'utf-8');
+      if (redirects && !redirects.endsWith('\n')) redirects += '\n';
+    }
+
     for (const routeUrl of routesToPrerender) {
       if (routeUrl === '/') continue;
-      redirects += `${routeUrl}  ${routeUrl}.html  200\n`;
+      // Only add if not already in redirects
+      if (!redirects.includes(`${routeUrl} `)) {
+        redirects += `${routeUrl}  ${routeUrl}.html  200\n`;
+      }
     }
-    // Add catch-all 404 rule
-    redirects += '/*  /404.html  404\n';
+    
+    // Add catch-all 404 rule if not present
+    if (!redirects.includes('/*  /404.html  404')) {
+      redirects += '/*  /404.html  404\n';
+    }
+    
     fs.writeFileSync(toAbsolute('dist/client/_redirects'), redirects);
     console.log('pre-rendered: dist/client/_redirects');
   } catch (e) {
