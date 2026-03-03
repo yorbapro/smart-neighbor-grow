@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
+import rocketLogo from "@/assets/rocket-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,9 +53,7 @@ const Header = () => {
       >
         <div className="container flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-hero flex items-center justify-center shadow-button">
-              <span className="text-white font-display font-bold text-lg">B</span>
-            </div>
+            <img src={rocketLogo} alt="BrightLaunchIQ logo" className="w-10 h-10" />
             <span className={`font-display font-bold text-xl ${logoTextColor}`}>
               BrightLaunch<span className="text-primary">IQ</span>
             </span>
