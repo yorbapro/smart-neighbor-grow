@@ -33,7 +33,9 @@ const template = fs.readFileSync(toAbsolute('dist/client/index.html'), 'utf-8')
 const { render } = await import('./dist/server/entry-server.js')
 
 const sitemap = fs.readFileSync(toAbsolute('public/sitemap.xml'), 'utf-8')
-const routesToPrerender = ['/']
+const routesToPrerender = [...sitemap.matchAll(/<loc>https:\/\/brightlaunchiq\.com([^<]*)<\/loc>/g)]
+  .map(match => match[1] || '/')
+  .filter(route => !route.includes(':'))
 
 console.log('Routes to pre-render:', routesToPrerender)
 
