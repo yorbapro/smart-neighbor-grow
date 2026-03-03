@@ -7,8 +7,48 @@
   PNPM_FLAGS = "--no-frozen-lockfile"
   NETLIFY_BUILD_TIMEOUT = "3600"
 
-# Custom 404 page configuration
+# Explicitly redirect favicon paths to ensure they are served correctly
+[[redirects]]
+  from = "/favicon.ico"
+  to = "/favicon.ico"
+  status = 200
+  force = true
 
+[[redirects]]
+  from = "/favicon-32x32.png"
+  to = "/favicon-32x32.png"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/favicon-16x16.png"
+  to = "/favicon-16x16.png"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/apple-touch-icon.png"
+  to = "/apple-touch-icon.png"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/site.webmanifest"
+  to = "/site.webmanifest"
+  status = 200
+  force = true
+
+# Catch-all rule for SPA routing - serve index.html for all other paths
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Custom 404 page configuration - this will be handled by the SPA if no file or redirect matches
+[[redirects]]
+  from = "/404"
+  to = "/404.html"
+  status = 404
 
 # Cache control headers
 [[headers]]
