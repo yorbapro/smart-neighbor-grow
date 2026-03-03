@@ -5,7 +5,6 @@
 [build.environment]
   NPM_FLAGS = "--no-frozen-lockfile"
   PNPM_FLAGS = "--no-frozen-lockfile"
-  # Increase build timeout to 1 hour (3600 seconds)
   NETLIFY_BUILD_TIMEOUT = "3600"
 
 # Custom 404 page configuration
