@@ -33,9 +33,7 @@ const template = fs.readFileSync(toAbsolute('dist/client/index.html'), 'utf-8')
 const { render } = await import('./dist/server/entry-server.js')
 
 const sitemap = fs.readFileSync(toAbsolute('public/sitemap.xml'), 'utf-8')
-const routesToPrerender = [...sitemap.matchAll(/<loc>https:\/\/brightlaunchiq\.com([^<]*)<\/loc>/g)]
-  .map(match => match[1] || '/')
-  .filter(route => !route.includes(':'))
+const routesToPrerender = ['/']
 
 console.log('Routes to pre-render:', routesToPrerender)
 
@@ -104,46 +102,7 @@ const generateNoscriptContent = (appHtml) => {
     console.error('Failed to pre-render 404.html:', e);
   }
 
-  // Generate _redirects file for Netlify to handle 404s correctly
-  try {
-    console.log('Generating _redirects...');
-    let redirects = '';
-    
-    // Read the base _redirects from public if it exists
-    const publicRedirectsFile = toAbsolute('public/_redirects');
-    if (fs.existsSync(publicRedirectsFile)) {
-      redirects = fs.readFileSync(publicRedirectsFile, 'utf-8');
-      if (redirects && !redirects.endsWith('\n')) redirects += '\n';
-    }
 
-    for (const routeUrl of routesToPrerender) {
-      if (routeUrl === '/') continue;
-      // Only add if not already in redirects
-      if (!redirects.includes(`${routeUrl} `)) {
-        redirects += `${routeUrl}  ${routeUrl}.html  200\n`;
-      }
-    }
-    
-    // Add catch-all 404 rule if not present
-      // Ensure static assets are not caught by the SPA redirect
-      // Netlify's default behavior is to serve files from the publish directory
-      // We only need to add the catch-all for routes not explicitly handled.
-      // If a file exists, Netlify will serve it before applying redirects.
-      // So, we only need to add the SPA redirect if it's not already there.
-      if (!redirects.includes('/*  /404.html  404')) {
-        redirects += '/*  /404.html  404\n';
-      }
-
-      // Add a specific redirect for the root path to index.html to ensure it's served correctly
-      if (!redirects.includes('/ /index.html 200')) {
-        redirects = '/ /index.html 200\n' + redirects;
-      }
-    
-    fs.writeFileSync(toAbsolute('dist/client/_redirects'), redirects);
-    console.log('pre-rendered: dist/client/_redirects');
-  } catch (e) {
-    console.error('Failed to generate _redirects:', e);
-  }
 
   console.log('Pre-rendering complete.');
 })()
