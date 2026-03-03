@@ -125,9 +125,19 @@ const generateNoscriptContent = (appHtml) => {
     }
     
     // Add catch-all 404 rule if not present
-    if (!redirects.includes('/*  /404.html  404')) {
-      redirects += '/*  /404.html  404\n';
-    }
+      // Ensure static assets are not caught by the SPA redirect
+      // Netlify's default behavior is to serve files from the publish directory
+      // We only need to add the catch-all for routes not explicitly handled.
+      // If a file exists, Netlify will serve it before applying redirects.
+      // So, we only need to add the SPA redirect if it's not already there.
+      if (!redirects.includes('/*  /404.html  404')) {
+        redirects += '/*  /404.html  404\n';
+      }
+
+      // Add a specific redirect for the root path to index.html to ensure it's served correctly
+      if (!redirects.includes('/ /index.html 200')) {
+        redirects = '/ /index.html 200\n' + redirects;
+      }
     
     fs.writeFileSync(toAbsolute('dist/client/_redirects'), redirects);
     console.log('pre-rendered: dist/client/_redirects');
