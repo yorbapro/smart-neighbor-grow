@@ -38,7 +38,24 @@ const parsedRoutes = [...sitemap.matchAll(/<loc>https:\/\/brightlaunchiq\.com([^
   .filter((route) => !route.includes(':'))
 
 const uniqueRoutes = [...new Set(parsedRoutes)]
-const baseRoutes = uniqueRoutes.includes('/') ? uniqueRoutes : ['/', ...uniqueRoutes]
+
+// Filter to exclude most industry pages, keeping only the three specified ones
+const industryPagesToKeep = [
+  '/industries/hvac-contractors',
+  '/industries/dental-clinics',
+  '/industries/personal-injury-lawyers'
+]
+
+const filteredRoutes = uniqueRoutes.filter(route => {
+  // Keep non-industry routes
+  if (!route.startsWith('/industries/')) {
+    return true
+  }
+  // Keep only the specified industry pages
+  return industryPagesToKeep.includes(route)
+})
+
+const baseRoutes = filteredRoutes.includes('/') ? filteredRoutes : ['/', ...filteredRoutes]
 const routeLimit = Number(process.env.PRERENDER_ROUTE_LIMIT || 0)
 const routesToPrerender = Number.isFinite(routeLimit) && routeLimit > 0
   ? baseRoutes.slice(0, routeLimit)
