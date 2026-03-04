@@ -39,32 +39,8 @@ const parsedRoutes = [...sitemap.matchAll(/<loc>https:\/\/brightlaunchiq\.com([^
 
 const uniqueRoutes = [...new Set(parsedRoutes)]
 
-// Filter to exclude most industry pages, keeping only the three specified ones
-const industryPagesToKeep = [
-  '/industries/hvac-contractors',
-  '/industries/dental-clinics',
-  '/industries/personal-injury-lawyers'
-]
-
-// Pages to exclude from pre-rendering (usually due to SSR issues)
-const pagesToExclude = [
-  '/ai-receptionist-guide'
-]
-
-const filteredRoutes = uniqueRoutes.filter(route => {
-  // Exclude problematic pages
-  if (pagesToExclude.includes(route)) {
-    return false
-  }
-  // Keep non-industry routes
-  if (!route.startsWith('/industries/')) {
-    return true
-  }
-  // Keep only the specified industry pages
-  return industryPagesToKeep.includes(route)
-})
-
-const baseRoutes = filteredRoutes.includes('/') ? filteredRoutes : ['/', ...filteredRoutes]
+// Pre-render all routes
+const baseRoutes = uniqueRoutes.includes('/') ? uniqueRoutes : ['/', ...uniqueRoutes]
 const routeLimit = Number(process.env.PRERENDER_ROUTE_LIMIT || 0)
 const routesToPrerender = Number.isFinite(routeLimit) && routeLimit > 0
   ? baseRoutes.slice(0, routeLimit)
