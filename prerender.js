@@ -44,36 +44,30 @@ const routesToPrerender = Number.isFinite(routeLimit) && routeLimit > 0
   ? baseRoutes.slice(0, routeLimit)
   : baseRoutes
 
-console.log(`Pre-rendering ${routesToPrerender.length} route(s)...`)
+const progressEvery = Number(process.env.PRERENDER_PROGRESS_EVERY || 25)
+const silentPrerender = process.env.PRERENDER_SILENT !== '0'
+const noscriptHtml = '<noscript><p>Please enable JavaScript to use this site.</p></noscript>'
 
-const generateNoscriptContent = (appHtml) => {
-  const noscriptDom = new JSDOM(appHtml)
-  try {
-    const document = noscriptDom.window.document
-    const main = document.querySelector('main')
+const originalConsoleWarn = console.warn
+const originalConsoleInfo = console.info
 
-    if (main) {
-      return `<noscript>${main.innerHTML}</noscript>`
-    }
+if (silentPrerender) {
+  console.warn = () => {}
+  console.info = () => {}
+}
 
-    let content = ''
-    const h1 = document.querySelector('h1')
-    if (h1) content += `<h1>${h1.textContent}</h1>`
-
-    const ps = Array.from(document.querySelectorAll('p')).slice(0, 10)
-    ps.forEach((p) => {
-      content += `<p>${p.textContent}</p>`
-    })
-
-    return `<noscript>${content}</noscript>`
-  } finally {
-    noscriptDom.window.close()
+const logProgress = (done, total) => {
+  if (done === total || (progressEvery > 0 && done % progressEvery === 0)) {
+    console.log(`Pre-render progress: ${done}/${total}`)
   }
 }
+
+console.log(`Pre-rendering ${routesToPrerender.length} route(s)...`)
 
 ;(async () => {
   let renderedCount = 0
   let skipped404Count = 0
+  let failedCount = 0
 
   try {
     for (const routeUrl of routesToPrerender) {
@@ -84,10 +78,10 @@ const generateNoscriptContent = (appHtml) => {
 
         if (statusCode === 404) {
           skipped404Count += 1
+          logProgress(renderedCount + skipped404Count + failedCount, routesToPrerender.length)
           continue
         }
 
-        const noscriptHtml = generateNoscriptContent(appHtml)
         const html = template
           .replace(`<!--app-html-->`, appHtml)
           .replace(`<div id="noscript-placeholder"></div>`, noscriptHtml)
@@ -100,15 +94,21 @@ const generateNoscriptContent = (appHtml) => {
         fs.writeFileSync(toAbsolute(filePath), html)
         renderedCount += 1
       } catch (e) {
-        console.error(`Failed to pre-render ${routeUrl}:`, e)
+        failedCount += 1
+        if (failedCount <= 20) {
+          console.error(`Failed to pre-render ${routeUrl}:`, e)
+        } else if (failedCount === 21) {
+          console.error('More pre-render errors omitted after 20 failures.')
+        }
       }
+
+      logProgress(renderedCount + skipped404Count + failedCount, routesToPrerender.length)
     }
 
     // Explicitly generate 404.html for static hosting providers
     try {
       const result = render('/404-not-found-page-test')
       const appHtml = typeof result === 'string' ? result : result.html
-      const noscriptHtml = generateNoscriptContent(appHtml)
       const html = template
         .replace(`<!--app-html-->`, appHtml)
         .replace(`<div id="noscript-placeholder"></div>`, noscriptHtml)
@@ -123,8 +123,10 @@ const generateNoscriptContent = (appHtml) => {
       process.exitCode = 1
     }
 
-    console.log(`Pre-render complete. Rendered: ${renderedCount}, skipped 404: ${skipped404Count}`)
+    console.log(`Pre-render complete. Rendered: ${renderedCount}, skipped 404: ${skipped404Count}, failed: ${failedCount}`)
   } finally {
+    console.warn = originalConsoleWarn
+    console.info = originalConsoleInfo
     globalDom.window.close()
   }
 })()
