@@ -18,7 +18,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 120
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -44,6 +44,9 @@ jobs:
 
       - name: Pre-render static routes
         run: pnpm run build:prerender
+        env:
+          PRERENDER_SILENT: '1'
+          PRERENDER_PROGRESS_EVERY: '50'
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
