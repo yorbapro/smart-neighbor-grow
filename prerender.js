@@ -46,7 +46,16 @@ const industryPagesToKeep = [
   '/industries/personal-injury-lawyers'
 ]
 
+// Pages to exclude from pre-rendering (usually due to SSR issues)
+const pagesToExclude = [
+  '/ai-receptionist-guide'
+]
+
 const filteredRoutes = uniqueRoutes.filter(route => {
+  // Exclude problematic pages
+  if (pagesToExclude.includes(route)) {
+    return false
+  }
   // Keep non-industry routes
   if (!route.startsWith('/industries/')) {
     return true
