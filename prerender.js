@@ -85,62 +85,71 @@ const logProgress = (done, total) => {
 
 console.log(`Pre-rendering ${routesToPrerender.length} route(s)...`)
 
+const renderRoute = (routeUrl) => {
+  try {
+    const result = render(routeUrl)
+    const appHtml = typeof result === 'string' ? result : result.html
+    const statusCode = typeof result === 'string' ? 200 : (result.statusCode || 200)
+
+    if (statusCode === 404) {
+      return { status: 'skipped404', routeUrl }
+    }
+
+    const html = template
+      .replace(`<!--app-html-->`, appHtml)
+      .replace(`<div id="noscript-placeholder"></div>`, noscriptHtml)
+
+    const fileName = routeUrl === '/' ? 'index.html' : `${routeUrl.slice(1)}.html`
+    const filePath = `dist/client/${fileName}`
+    const dir = path.dirname(toAbsolute(filePath))
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
+
+    fs.writeFileSync(toAbsolute(filePath), html)
+    return { status: 'rendered', routeUrl }
+  } catch (e) {
+    return { status: 'failed', routeUrl, error: e.message }
+  }
+}
+
 ;(async () => {
   let renderedCount = 0
   let skipped404Count = 0
   let failedCount = 0
+  const batchSize = 3 // Render 3 routes in parallel to balance speed and memory
 
   try {
-    for (const routeUrl of routesToPrerender) {
-      try {
-        const result = render(routeUrl)
-        const appHtml = typeof result === 'string' ? result : result.html
-        const statusCode = typeof result === 'string' ? 200 : (result.statusCode || 200)
-
-        if (statusCode === 404) {
-          skipped404Count += 1
-          logProgress(renderedCount + skipped404Count + failedCount, routesToPrerender.length)
-          continue
-        }
-
-        const html = template
-          .replace(`<!--app-html-->`, appHtml)
-          .replace(`<div id="noscript-placeholder"></div>`, noscriptHtml)
-
-        const fileName = routeUrl === '/' ? 'index.html' : `${routeUrl.slice(1)}.html`
-        const filePath = `dist/client/${fileName}`
-        const dir = path.dirname(toAbsolute(filePath))
-        if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
-
-        fs.writeFileSync(toAbsolute(filePath), html)
-        renderedCount += 1
-      } catch (e) {
-        failedCount += 1
-        if (failedCount <= 20) {
-          console.error(`Failed to pre-render ${routeUrl}:`, e)
-        } else if (failedCount === 21) {
-          console.error('More pre-render errors omitted after 20 failures.')
-        }
+    for (let i = 0; i < routesToPrerender.length; i += batchSize) {
+      const batch = routesToPrerender.slice(i, i + batchSize)
+      const results = batch.map(renderRoute)
+      
+      for (const result of results) {
+        if (result.status === 'rendered') renderedCount += 1
+        else if (result.status === 'skipped404') skipped404Count += 1
+        else if (result.status === 'failed') failedCount += 1
       }
-
+      
       logProgress(renderedCount + skipped404Count + failedCount, routesToPrerender.length)
     }
 
     // Explicitly generate 404.html for static hosting providers
     try {
-      const result = render('/404-not-found-page-test')
-      const appHtml = typeof result === 'string' ? result : result.html
-      const html = template
-        .replace(`<!--app-html-->`, appHtml)
-        .replace(`<div id="noscript-placeholder"></div>`, noscriptHtml)
+      const result = renderRoute('/404-not-found-page-test')
+      if (result.status !== 'failed') {
+        const routeUrl = '/404-not-found-page-test'
+        const renderResult = render(routeUrl)
+        const appHtml = typeof renderResult === 'string' ? renderResult : renderResult.html
+        const html = template
+          .replace(`<!--app-html-->`, appHtml)
+          .replace(`<div id="noscript-placeholder"></div>`, noscriptHtml)
 
-      fs.writeFileSync(toAbsolute('dist/client/404.html'), html)
+        fs.writeFileSync(toAbsolute('dist/client/404.html'), html)
 
-      const distDir = toAbsolute('dist')
-      if (!fs.existsSync(distDir)) fs.mkdirSync(distDir, { recursive: true })
-      fs.writeFileSync(path.join(distDir, '404.html'), html)
+        const distDir = toAbsolute('dist')
+        if (!fs.existsSync(distDir)) fs.mkdirSync(distDir, { recursive: true })
+        fs.writeFileSync(path.join(distDir, '404.html'), html)
+      }
     } catch (e) {
-      console.error('Failed to pre-render 404.html:', e)
+      console.error('Failed to pre-render 404.html:', e.message)
       process.exitCode = 1
     }
 
@@ -151,4 +160,3 @@ console.log(`Pre-rendering ${routesToPrerender.length} route(s)...`)
     globalDom.window.close()
   }
 })()
-
