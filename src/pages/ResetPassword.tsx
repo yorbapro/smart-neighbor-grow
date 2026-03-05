@@ -27,9 +27,11 @@ const ResetPassword = () => {
     });
 
     // Also check the URL hash for recovery type
-    const hash = window.location.hash;
-    if (hash.includes("type=recovery")) {
-      setIsReady(true);
+    if (typeof window !== 'undefined') {
+      const hash = window.location.hash;
+      if (hash.includes("type=recovery")) {
+        setIsReady(true);
+      }
     }
 
     return () => subscription.unsubscribe();
