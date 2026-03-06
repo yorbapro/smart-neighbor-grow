@@ -179,6 +179,7 @@ import CaseStudies from "./pages/resources/CaseStudies";
 import WhitepaperPage from "./pages/WhitepaperPage";
 import Comparison from "./pages/resources/Comparison";
 import HowItWorks from "./pages/resources/HowItWorks";
+import ResourcesHub from "./pages/resources/ResourcesHub";
 import AIReceptionistGuide from "./pages/learning-center/AIReceptionistGuide";
 import AIReceptionistPricing from "./pages/learning-center/AIReceptionistPricing";
 import SignsYouNeedAIReceptionist from "./pages/learning-center/SignsYouNeedAIReceptionist";
