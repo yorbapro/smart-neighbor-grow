@@ -24,7 +24,7 @@ const AIvsVirtualReceptionist = () => {
   useSEO({
     title: "AI Receptionist vs Virtual Receptionist: Key Differences | BrightLaunchIQ",
     description: "AI receptionists provide 24/7 instant coverage at lower cost. Virtual receptionists offer human warmth. See the full feature comparison.",
-    canonical: "https://brightlaunchiq.com/learning-center/business-growth/ai-vs-virtual-receptionist",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/ai-vs-virtual-receptionist",
     keywords: "AI receptionist vs virtual receptionist, virtual receptionist comparison, AI vs remote receptionist",
   });
 
@@ -95,7 +95,7 @@ const AIvsVirtualReceptionist = () => {
               </div>
               <div className="mt-6 text-center">
                 <Button variant="hero" size="lg" asChild>
-                  <Link to="/get-started">See the BrightLaunchIQ Difference — Start Free Trial <ArrowRight className="ml-2 w-5 h-5" /></Link>
+                  <Link to="/ai-receptionist/get-started">See the BrightLaunchIQ Difference — Start Free Trial <ArrowRight className="ml-2 w-5 h-5" /></Link>
                 </Button>
               </div>
             </section>

@@ -131,7 +131,7 @@ const FAQ = () => {
           <h2 className="font-display text-2xl font-bold mb-4">Still Have Questions?</h2>
           <p className="text-secondary-foreground/80 mb-6">Get a free AI Visibility Audit or talk to our team.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" asChild><Link to="/aeo-audit">Free AI Visibility Audit<ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
+            <Button variant="hero" asChild><Link to="/locallift/resources/aeo-audit">Free AI Visibility Audit<ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
             <Button variant="outline" className="border-primary/30" asChild><Link to="/contact">Contact Us</Link></Button>
           </div>
         </div>

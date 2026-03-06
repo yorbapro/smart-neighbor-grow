@@ -30,7 +30,7 @@ const AIReceptionistBuyersGuide = () => {
   useSEO({
     title: "AI Receptionist Buyer's Guide: 7 Must-Have Features | BrightLaunchIQ",
     description: "Use this 7-point checklist to evaluate AI receptionist vendors. Compare features, pricing models, and integration capabilities before you buy.",
-    canonical: "https://brightlaunchiq.com/learning-center/business-growth/ai-receptionist-buyers-guide",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/ai-receptionist-buyers-guide",
     keywords: "AI receptionist buyer's guide, how to choose AI receptionist, AI receptionist checklist, AI phone answering evaluation",
   });
 
@@ -122,7 +122,7 @@ const AIReceptionistBuyersGuide = () => {
 
               <div className="mt-6 text-center">
                 <Button variant="hero" size="lg" asChild>
-                  <Link to="/get-started">See the BrightLaunchIQ Difference — Start Free Trial <ArrowRight className="ml-2 w-5 h-5" /></Link>
+                  <Link to="/ai-receptionist/get-started">See the BrightLaunchIQ Difference — Start Free Trial <ArrowRight className="ml-2 w-5 h-5" /></Link>
                 </Button>
               </div>
             </section>
@@ -143,7 +143,7 @@ const AIReceptionistBuyersGuide = () => {
               <h2 className="font-display text-2xl font-bold text-foreground mb-3">How Much Should You Expect to Pay?</h2>
               <p className="text-muted-foreground mb-4"><strong>Quality AI receptionist services range from $300 to $1,500 per month.</strong> Beware of per-minute pricing that can balloon costs unpredictably. Flat-rate plans with transparent pricing are the safest choice.</p>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/pricing">Compare BrightLaunchIQ Plans <ArrowRight className="ml-2 w-5 h-5" /></Link>
+                <Link to="/ai-receptionist/pricing">Compare BrightLaunchIQ Plans <ArrowRight className="ml-2 w-5 h-5" /></Link>
               </Button>
             </section>
           </div>

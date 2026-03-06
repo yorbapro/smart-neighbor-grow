@@ -90,7 +90,7 @@ const Dashboard = () => {
                 See how our AI receptionist can help your business capture more leads and save time.
               </p>
               <Button variant="hero" size="sm" asChild>
-                <Link to="/get-started">
+                <Link to="/ai-receptionist/get-started">
                   Start Setup <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>

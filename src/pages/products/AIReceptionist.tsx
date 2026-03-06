@@ -220,7 +220,7 @@ const AIReceptionist = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <Button variant="hero" size="xl" asChild className="group">
-                <Link to="/get-started">
+                <Link to="/ai-receptionist/get-started">
                   Start Free Trial
                   <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
                 </Link>
@@ -310,7 +310,7 @@ const AIReceptionist = () => {
 
           <div className="text-center">
             <Button variant="hero" size="lg" asChild className="group">
-              <Link to="/get-started">
+              <Link to="/ai-receptionist/get-started">
                 Activate My AI Receptionist
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </Link>
@@ -464,7 +464,7 @@ const AIReceptionist = () => {
               Replace overhead with automation. Keep the human touch where it matters.
             </p>
             <Button variant="hero" size="lg" asChild className="group">
-              <Link to="/pricing">
+              <Link to="/ai-receptionist/pricing">
                 See Plans & Pricing
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </Link>
@@ -598,7 +598,7 @@ const AIReceptionist = () => {
 
           <div className="text-center">
             <Button variant="outline" size="lg" asChild className="group">
-              <Link to="/industries">
+              <Link to="/ai-receptionist/industries">
                 View All 50+ Industries
                 <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
               </Link>
@@ -656,7 +656,7 @@ const AIReceptionist = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button variant="hero" size="xl" asChild className="group">
-                <Link to="/get-started">
+                <Link to="/ai-receptionist/get-started">
                   Start Free Trial
                   <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
                 </Link>

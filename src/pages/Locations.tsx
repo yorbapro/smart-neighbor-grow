@@ -188,7 +188,7 @@ const LocationsPage = () => {
             AI lead generation solutions for your market.
           </p>
           <Button asChild size="lg" className="bg-gradient-hero hover:opacity-90">
-            <Link to="/get-started">Get Started Anywhere</Link>
+            <Link to="/ai-receptionist/get-started">Get Started Anywhere</Link>
           </Button>
         </div>
       </section>

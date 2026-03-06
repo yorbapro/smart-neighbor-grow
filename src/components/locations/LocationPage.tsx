@@ -507,7 +507,7 @@ const LocationPage = ({
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Button variant="hero" size="lg" asChild>
-                  <Link to="/aeo-audit">
+                  <Link to="/locallift/resources/aeo-audit">
                     Free AI Visibility Audit
                     <ArrowRight className="ml-2" size={20} />
                   </Link>
@@ -748,7 +748,7 @@ const LocationPage = ({
             </div>
 
             <Button size="lg" className="bg-background text-foreground hover:bg-background/90" asChild>
-              <Link to="/aeo-audit">
+              <Link to="/locallift/resources/aeo-audit">
                 Get Your Free AI Visibility Audit
                 <ArrowRight className="ml-2" size={20} />
               </Link>

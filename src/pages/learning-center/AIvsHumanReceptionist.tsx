@@ -25,7 +25,7 @@ const AIvsHumanReceptionist = () => {
   useSEO({
     title: "AI vs Human Receptionist: Full Comparison | BrightLaunchIQ",
     description: "AI receptionists cost 70% less, never miss calls, and book appointments 24/7. See the full side-by-side comparison with human receptionists.",
-    canonical: "https://brightlaunchiq.com/learning-center/business-growth/ai-vs-human-receptionist",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/ai-vs-human-receptionist",
     keywords: "AI vs human receptionist, AI receptionist comparison, virtual receptionist vs human, AI phone answering vs staff",
   });
 
@@ -92,7 +92,7 @@ const AIvsHumanReceptionist = () => {
               </div>
               <div className="mt-6 text-center">
                 <Button variant="hero" size="lg" asChild>
-                  <Link to="/get-started">See the BrightLaunchIQ Difference — Start Free Trial <ArrowRight className="ml-2 w-5 h-5" /></Link>
+                  <Link to="/ai-receptionist/get-started">See the BrightLaunchIQ Difference — Start Free Trial <ArrowRight className="ml-2 w-5 h-5" /></Link>
                 </Button>
               </div>
             </section>

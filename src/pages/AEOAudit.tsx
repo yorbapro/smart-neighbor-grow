@@ -491,7 +491,7 @@ const AEOAudit = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button size="lg" className="bg-background text-foreground hover:bg-background/90" asChild>
-                    <Link to="/get-started">
+                    <Link to="/ai-receptionist/get-started">
                       Get Started with LocalLift™
                       <ArrowRight className="ml-2 w-5 h-5" />
                     </Link>

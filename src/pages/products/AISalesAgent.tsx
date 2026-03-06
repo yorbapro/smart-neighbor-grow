@@ -379,7 +379,7 @@ const AISalesAgent = () => {
                </Link>
              </Button>
             <Button variant="heroOutline" size="lg" asChild>
-              <Link to="/pricing">Compare Plans</Link>
+              <Link to="/ai-receptionist/pricing">Compare Plans</Link>
             </Button>
           </div>
         </div>

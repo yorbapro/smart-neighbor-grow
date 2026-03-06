@@ -517,13 +517,13 @@ const About = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/ai-receptionist-readiness-assessment">
+                <Link to="/ai-receptionist/resources/ai-receptionist-readiness-assessment">
                   Get My Free AI Score
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/get-started">Schedule a Call</Link>
+                <Link to="/ai-receptionist/get-started">Schedule a Call</Link>
               </Button>
             </div>
           </div>

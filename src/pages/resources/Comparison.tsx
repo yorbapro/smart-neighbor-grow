@@ -335,13 +335,13 @@ const Comparison = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="lg" asChild>
-                  <Link to="/aeo-audit">
+                  <Link to="/locallift/resources/aeo-audit">
                     Get Your Free Audit
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
                 </Button>
                 <Button variant="heroOutline" size="lg" asChild>
-                  <Link to="/case-studies">View Case Studies</Link>
+                  <Link to="/ai-receptionist/case-studies">View Case Studies</Link>
                 </Button>
               </div>
             </div>

@@ -19,7 +19,7 @@ const SignsYouNeedAIReceptionist = () => {
   useSEO({
     title: "5 Signs You Need an AI Receptionist | BrightLaunchIQ",
     description: "Missing calls, slow lead response, overwhelmed staff? These 5 signs mean it's time for an AI receptionist. Take the readiness quiz.",
-    canonical: "https://brightlaunchiq.com/learning-center/business-growth/signs-you-need-ai-receptionist",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/signs-you-need-ai-receptionist",
     keywords: "signs you need AI receptionist, missed calls business, AI phone answering, virtual receptionist signs",
   });
 
@@ -32,7 +32,7 @@ const SignsYouNeedAIReceptionist = () => {
       "@type": "TechArticle",
       "headline": "5 Signs You Need an AI Receptionist",
       "description": "Discover the warning signs that your business needs an AI receptionist to stop losing revenue.",
-      "url": "https://brightlaunchiq.com/learning-center/business-growth/signs-you-need-ai-receptionist",
+      "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/signs-you-need-ai-receptionist",
       "publisher": { "@type": "Organization", "name": "BrightLaunchIQ" },
     });
     document.head.appendChild(script);
@@ -72,10 +72,10 @@ const SignsYouNeedAIReceptionist = () => {
               <p className="text-muted-foreground mb-6"><strong>Take a free readiness assessment to find out exactly how much revenue you're losing to missed calls.</strong> It takes 2 minutes and gives you a personalized action plan.</p>
               <div className="flex flex-wrap gap-4">
                 <Button variant="hero" size="lg" asChild>
-                  <Link to="/ai-receptionist-readiness-assessment">Get My Free AI Score <ArrowRight className="ml-2 w-5 h-5" /></Link>
+                  <Link to="/ai-receptionist/resources/ai-receptionist-readiness-assessment">Get My Free AI Score <ArrowRight className="ml-2 w-5 h-5" /></Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <Link to="/aeo-audit">Get a Free AEO Audit</Link>
+                  <Link to="/locallift/resources/aeo-audit">Get a Free AEO Audit</Link>
                 </Button>
               </div>
             </section>

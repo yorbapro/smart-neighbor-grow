@@ -226,7 +226,7 @@ const AIReceptionistHowItWorks = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/get-started">
+                <Link to="/ai-receptionist/get-started">
                   Replace My Front Desk <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
@@ -442,7 +442,7 @@ const AIReceptionistHowItWorks = () => {
               <p className="text-sm font-semibold text-accent mb-1">Compare plans side by side</p>
               <p className="text-sm text-muted-foreground mb-4">Find the right tier — Core, Growth, or Pro.</p>
               <Button variant="outline" size="sm" asChild>
-                <Link to="/pricing">View Pricing →</Link>
+                <Link to="/ai-receptionist/pricing">View Pricing →</Link>
               </Button>
             </div>
           </div>
@@ -461,7 +461,7 @@ const AIReceptionistHowItWorks = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/get-started">
+                <Link to="/ai-receptionist/get-started">
                   Replace My Front Desk <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>

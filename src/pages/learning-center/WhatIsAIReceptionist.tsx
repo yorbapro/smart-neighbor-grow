@@ -11,7 +11,7 @@ const WhatIsAIReceptionist = () => {
   useSEO({
     title: "What Is an AI Receptionist? The Definitive Guide (2026) | BrightLaunchIQ",
     description: "An AI receptionist is software that answers phone calls, books appointments, and qualifies leads 24/7 using natural language processing. Learn how it works, what it costs, and who it's for.",
-    canonical: "https://brightlaunchiq.com/learning-center/what-is-ai-receptionist",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/what-is-ai-receptionist",
     keywords: "what is an AI receptionist, AI receptionist definition, AI phone answering, virtual AI receptionist, AI receptionist cost, AI receptionist vs virtual receptionist",
     speakable: ["h1", ".definition-block"],
   });
@@ -303,7 +303,7 @@ const WhatIsAIReceptionist = () => {
                     </tbody>
                   </table>
                 </div>
-                <p className="text-sm text-muted-foreground mt-4">BrightLaunchIQ AI Receptionist starts at <strong className="text-foreground">$497/month</strong> for the Core plan, which includes 24/7 call answering, lead qualification, call routing, and CRM integration. <Link to="/pricing" className="text-primary hover:underline">See full pricing →</Link></p>
+                <p className="text-sm text-muted-foreground mt-4">BrightLaunchIQ AI Receptionist starts at <strong className="text-foreground">$497/month</strong> for the Core plan, which includes 24/7 call answering, lead qualification, call routing, and CRM integration. <Link to="/ai-receptionist/pricing" className="text-primary hover:underline">See full pricing →</Link></p>
               </section>
 
               {/* Section 8: Industries */}
@@ -327,7 +327,7 @@ const WhatIsAIReceptionist = () => {
                   ))}
                 </div>
                 <p className="text-sm text-muted-foreground mt-4">
-                  <Link to="/industries" className="text-primary hover:underline">Browse all 50+ industries we serve →</Link>
+                  <Link to="/ai-receptionist/industries" className="text-primary hover:underline">Browse all 50+ industries we serve →</Link>
                 </p>
               </section>
 
@@ -353,7 +353,7 @@ const WhatIsAIReceptionist = () => {
                 <p className="text-muted-foreground"><strong>If even one of these is true, an AI receptionist will likely pay for itself within the first month</strong> by capturing calls that would have otherwise been lost.</p>
                 <div className="mt-6">
                   <Button variant="hero" size="lg" asChild>
-                    <Link to="/ai-receptionist-readiness-assessment">
+                    <Link to="/ai-receptionist/resources/ai-receptionist-readiness-assessment">
                       Take the Free AI Receptionist Readiness Assessment <ArrowRight className="ml-2 w-4 h-4" />
                     </Link>
                   </Button>
@@ -391,7 +391,7 @@ const WhatIsAIReceptionist = () => {
                     </a>
                   </Button>
                   <Button variant="outline" size="lg" asChild>
-                    <Link to="/get-started">Schedule a Demo <ArrowRight className="ml-2 w-4 h-4" /></Link>
+                    <Link to="/ai-receptionist/get-started">Schedule a Demo <ArrowRight className="ml-2 w-4 h-4" /></Link>
                   </Button>
                 </div>
               </section>
@@ -408,7 +408,7 @@ const WhatIsAIReceptionist = () => {
                   <h3 className="font-display text-lg font-bold text-foreground mb-2">Ready to stop the busy signal?</h3>
                   <p className="text-sm text-muted-foreground mb-4">See how an AI receptionist works for your industry.</p>
                   <Button variant="hero" size="default" className="w-full" asChild>
-                    <Link to="/get-started">Get Started <ArrowRight className="ml-2 w-4 h-4" /></Link>
+                    <Link to="/ai-receptionist/get-started">Get Started <ArrowRight className="ml-2 w-4 h-4" /></Link>
                   </Button>
                 </div>
 

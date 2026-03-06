@@ -46,7 +46,7 @@ const HomeProblem = () => {
           </p>
 
           <Button variant="hero" size="lg" asChild className="group">
-            <Link to="/ai-receptionist-readiness-assessment" aria-label="Get my free AI score">
+            <Link to="/ai-receptionist/resources/ai-receptionist-readiness-assessment" aria-label="Get my free AI score">
               Get My Free AI Score
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </Link>

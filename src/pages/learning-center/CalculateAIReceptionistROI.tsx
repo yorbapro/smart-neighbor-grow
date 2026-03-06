@@ -12,7 +12,7 @@ const CalculateAIReceptionistROI = () => {
   useSEO({
     title: "Calculate AI Receptionist ROI | Free Calculator | BrightLaunchIQ",
     description: "Use our free AI receptionist ROI calculator to see how much revenue you're losing to missed calls. Most businesses see 300-500% ROI in the first year.",
-    canonical: "https://brightlaunchiq.com/learning-center/business-growth/calculate-ai-receptionist-roi",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/calculate-ai-receptionist-roi",
     keywords: "AI receptionist ROI, calculate AI receptionist return, missed call revenue calculator, AI phone answering ROI",
   });
 
@@ -25,7 +25,7 @@ const CalculateAIReceptionistROI = () => {
       "@type": "TechArticle",
       "headline": "How to Calculate AI Receptionist ROI",
       "description": "Step-by-step guide to calculating the return on investment for an AI receptionist, with a free interactive calculator.",
-      "url": "https://brightlaunchiq.com/learning-center/business-growth/calculate-ai-receptionist-roi",
+      "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/calculate-ai-receptionist-roi",
       "publisher": { "@type": "Organization", "name": "BrightLaunchIQ" },
     });
     document.head.appendChild(script);
@@ -90,7 +90,7 @@ const CalculateAIReceptionistROI = () => {
                   <Download className="mr-2 w-5 h-5" /> Download ROI Spreadsheet Template
                 </Button>
                 <Button variant="hero" size="lg" asChild>
-                  <Link to="/get-started">Get Started <ArrowRight className="ml-2 w-5 h-5" /></Link>
+                  <Link to="/ai-receptionist/get-started">Get Started <ArrowRight className="ml-2 w-5 h-5" /></Link>
                 </Button>
               </div>
             </section>

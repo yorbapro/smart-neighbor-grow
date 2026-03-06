@@ -21,7 +21,7 @@ const AIReceptionistSetupGuide = () => {
   useSEO({
     title: "How to Set Up an AI Receptionist: 7-Step Guide | BrightLaunchIQ",
     description: "Set up an AI receptionist in 7 steps: choose a plan, complete onboarding, train the voice, integrate CRM, test, go live, and optimize. Full setup guide.",
-    canonical: "https://brightlaunchiq.com/learning-center/business-growth/ai-receptionist-setup-guide",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/ai-receptionist-setup-guide",
     keywords: "AI receptionist setup guide, how to set up AI receptionist, AI phone answering setup, virtual receptionist implementation",
   });
 
@@ -94,7 +94,7 @@ const AIReceptionistSetupGuide = () => {
                 <h2 className="font-display text-2xl font-bold text-foreground mb-3">How Much Does It Cost to Get Started?</h2>
                 <p className="text-muted-foreground mb-4"><strong>Plans start at $497/month with a one-time setup fee that covers voice training, CRM integration, and script configuration.</strong> Setup fees are credited toward future tier upgrades.</p>
                 <Button variant="outline" size="lg" asChild>
-                  <Link to="/pricing">View Full Pricing <ArrowRight className="ml-2 w-5 h-5" /></Link>
+                  <Link to="/ai-receptionist/pricing">View Full Pricing <ArrowRight className="ml-2 w-5 h-5" /></Link>
                 </Button>
               </section>
 
@@ -116,7 +116,7 @@ const AIReceptionistSetupGuide = () => {
                 <h3 className="font-display text-lg font-bold text-foreground mb-2">Ready to stop the busy signal?</h3>
                 <p className="text-sm text-muted-foreground mb-4">Get set up in under 48 hours.</p>
                 <Button variant="hero" size="default" className="w-full" asChild>
-                  <Link to="/get-started">Start Free Trial <ArrowRight className="ml-2 w-4 h-4" /></Link>
+                  <Link to="/ai-receptionist/get-started">Start Free Trial <ArrowRight className="ml-2 w-4 h-4" /></Link>
                 </Button>
               </div>
             </aside>

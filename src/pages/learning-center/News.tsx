@@ -22,7 +22,7 @@ const News = () => {
   useSEO({
     title: "AI Voice Intelligence Feed | Latest AI Receptionist News | BrightLaunchIQ",
     description: "Weekly updates on AI receptionist technology, feature releases, industry trends, and voice agent innovations. Stay ahead of the AI revolution in small business.",
-    canonical: "https://brightlaunchiq.com/learning-center/news",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/learning-center/news",
     keywords: "AI receptionist news, AI voice agent updates, small business AI trends, AI phone technology news, BrightLaunchIQ updates",
     speakable: ["h1", ".news-intro"],
   });
@@ -67,7 +67,7 @@ const News = () => {
               <p className="news-intro text-lg text-muted-foreground max-w-2xl mx-auto">
                 Weekly updates on AI receptionist technology, feature releases, industry trends, and voice agent innovations.
               </p>
-              <Link to="/learning-center" className="text-sm text-muted-foreground hover:text-primary transition-colors mt-4 inline-block">← Back to Learning Center</Link>
+              <Link to="/ai-receptionist/learning-center" className="text-sm text-muted-foreground hover:text-primary transition-colors mt-4 inline-block">← Back to Learning Center</Link>
             </div>
           </div>
         </section>
@@ -80,7 +80,7 @@ const News = () => {
                 {weeklyArticles.map((article) => (
                   <Link
                     key={article.slug}
-                    to={`/learning-center/${article.slug}`}
+                    to={`/ai-receptionist/learning-center/${article.slug}`}
                     className="group block bg-card rounded-2xl border border-border p-8 hover:shadow-card-hover hover:border-primary/30 transition-all"
                   >
                     <div className="flex items-center gap-3 mb-4">
@@ -115,7 +115,7 @@ const News = () => {
               <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">Ready to See AI in Action?</h2>
               <p className="text-muted-foreground mb-8">Get a free AEO audit and discover how visible your business is to AI assistants.</p>
               <Button variant="hero" size="lg" asChild>
-                <Link to="/aeo-audit">Get Your Free Audit<ArrowRight className="ml-2 w-5 h-5" /></Link>
+                <Link to="/locallift/resources/aeo-audit">Get Your Free Audit<ArrowRight className="ml-2 w-5 h-5" /></Link>
               </Button>
             </div>
           </div>

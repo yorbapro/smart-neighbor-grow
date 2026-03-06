@@ -12,7 +12,7 @@ const AIReceptionistPricing = () => {
   useSEO({
     title: "AI Receptionist Pricing: What Does It Cost? | BrightLaunchIQ",
     description: "AI receptionist pricing ranges from $200-$1,500/mo. Compare per-call, per-minute, and flat-fee models to find the best value for your business.",
-    canonical: "https://brightlaunchiq.com/learning-center/business-growth/ai-receptionist-pricing",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/ai-receptionist-pricing",
     keywords: "AI receptionist pricing, AI receptionist cost, virtual receptionist pricing, AI phone answering cost",
   });
 
@@ -97,7 +97,7 @@ const AIReceptionistPricing = () => {
               <h2 className="font-display text-2xl font-bold text-foreground mb-3">BrightLaunchIQ AI Receptionist Pricing</h2>
               <p className="text-muted-foreground mb-4"><strong>BrightLaunchIQ offers three transparent tiers: Core ($497/mo), Growth ($997/mo), and Pro ($1,497/mo).</strong> Each tier includes professional voice training, CRM integration, and a dedicated success manager.</p>
               <Button variant="hero" size="lg" asChild>
-                <Link to="/pricing">View Full Pricing <ArrowRight className="ml-2 w-5 h-5" /></Link>
+                <Link to="/ai-receptionist/pricing">View Full Pricing <ArrowRight className="ml-2 w-5 h-5" /></Link>
               </Button>
             </section>
           </div>

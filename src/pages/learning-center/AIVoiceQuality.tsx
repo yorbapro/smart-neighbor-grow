@@ -20,7 +20,7 @@ const AIVoiceQuality = () => {
   useSEO({
     title: "Do AI Receptionists Sound Human? Voice Quality Explained | BrightLaunchIQ",
     description: "Modern AI receptionists sound nearly indistinguishable from humans. Learn how voice synthesis creates natural conversations with custom personas.",
-    canonical: "https://brightlaunchiq.com/learning-center/consumer-guide/ai-voice-quality",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/learning-center/for-everyone/ai-voice-quality",
     keywords: "AI receptionist voice quality, does AI sound human, AI voice synthesis, natural AI phone voice",
   });
 
@@ -113,7 +113,7 @@ const AIVoiceQuality = () => {
                       </div>
                     ))}
                   </div>
-                  <p className="text-xs text-muted-foreground text-center mt-4">Audio samples available during a live demo. <Link to="/get-started" className="text-primary hover:underline">Request one →</Link></p>
+                  <p className="text-xs text-muted-foreground text-center mt-4">Audio samples available during a live demo. <Link to="/ai-receptionist/get-started" className="text-primary hover:underline">Request one →</Link></p>
                 </div>
               </section>
 
@@ -136,7 +136,7 @@ const AIVoiceQuality = () => {
                 <h3 className="font-display text-lg font-bold text-foreground mb-2">Ready to stop the busy signal?</h3>
                 <p className="text-sm text-muted-foreground mb-4">Hear the voice quality for yourself.</p>
                 <Button variant="hero" size="default" className="w-full" asChild>
-                  <Link to="/get-started">Start Free Trial <ArrowRight className="ml-2 w-4 h-4" /></Link>
+                  <Link to="/ai-receptionist/get-started">Start Free Trial <ArrowRight className="ml-2 w-4 h-4" /></Link>
                 </Button>
               </div>
             </aside>

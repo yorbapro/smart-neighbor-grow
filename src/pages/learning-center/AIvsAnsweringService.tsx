@@ -24,7 +24,7 @@ const AIvsAnsweringService = () => {
   useSEO({
     title: "AI Receptionist vs Answering Service: Which Is Better? | BrightLaunchIQ",
     description: "AI receptionists book appointments and integrate with CRMs. Answering services take messages. Compare cost, features, and ROI side by side.",
-    canonical: "https://brightlaunchiq.com/learning-center/business-growth/ai-vs-answering-service",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/ai-vs-answering-service",
     keywords: "AI receptionist vs answering service, answering service comparison, AI phone answering vs call center",
   });
 
@@ -95,7 +95,7 @@ const AIvsAnsweringService = () => {
               </div>
               <div className="mt-6 text-center">
                 <Button variant="hero" size="lg" asChild>
-                  <Link to="/get-started">See the BrightLaunchIQ Difference — Start Free Trial <ArrowRight className="ml-2 w-5 h-5" /></Link>
+                  <Link to="/ai-receptionist/get-started">See the BrightLaunchIQ Difference — Start Free Trial <ArrowRight className="ml-2 w-5 h-5" /></Link>
                 </Button>
               </div>
             </section>

@@ -17,7 +17,7 @@ const HowAIReceptionistsWork = () => {
   useSEO({
     title: "How Do AI Receptionists Work? The Technology Explained | BrightLaunchIQ",
     description: "AI receptionists use speech-to-text, large language models, and voice synthesis to hold natural phone conversations 24/7. Here's exactly how.",
-    canonical: "https://brightlaunchiq.com/learning-center/business-growth/how-ai-receptionists-work",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/how-ai-receptionists-work",
     keywords: "how do AI receptionists work, AI receptionist technology, NLP voice agent, speech-to-text receptionist",
   });
 
@@ -120,7 +120,7 @@ const HowAIReceptionistsWork = () => {
                 <h3 className="font-display text-lg font-bold text-foreground mb-2">Ready to stop the busy signal?</h3>
                 <p className="text-sm text-muted-foreground mb-4">Hear the technology in action with a live demo.</p>
                 <Button variant="hero" size="default" className="w-full" asChild>
-                  <Link to="/get-started">Start Free Trial <ArrowRight className="ml-2 w-4 h-4" /></Link>
+                  <Link to="/ai-receptionist/get-started">Start Free Trial <ArrowRight className="ml-2 w-4 h-4" /></Link>
                 </Button>
               </div>
             </aside>
