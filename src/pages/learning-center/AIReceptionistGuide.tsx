@@ -98,7 +98,7 @@ const AIReceptionistGuide = () => {
   useSEO({
     title: "The Ultimate Guide to AI Receptionists | BrightLaunchIQ",
     description: "Everything you need to know about AI receptionists — how they work, benefits, features, pricing, and how to choose the right one for your business.",
-    canonical: "https://brightlaunchiq.com/learning-center/ai-receptionist-guide",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/ai-receptionist-guide",
     keywords: "AI receptionist guide, AI receptionist benefits, AI receptionist features, AI receptionist pricing, AI phone answering, virtual receptionist",
   });
 
@@ -111,7 +111,7 @@ const AIReceptionistGuide = () => {
       "@type": "Article",
       "headline": "The Ultimate Guide to AI Receptionists",
       "description": "A comprehensive guide covering everything about AI receptionists — technology, benefits, features, pricing, and industry use cases.",
-      "url": "https://brightlaunchiq.com/learning-center/ai-receptionist-guide",
+      "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/ai-receptionist-guide",
       "author": { "@type": "Organization", "name": "BrightLaunchIQ" },
       "publisher": { "@type": "Organization", "name": "BrightLaunchIQ", "url": "https://brightlaunchiq.com" },
       "mainEntityOfPage": "https://brightlaunchiq.com/learning-center/ai-receptionist-guide",
@@ -165,7 +165,7 @@ const AIReceptionistGuide = () => {
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Button variant="hero" size="lg" asChild>
-                  <Link to="/ai-receptionist-readiness-assessment">
+                  <Link to="/ai-receptionist/resources/ai-receptionist-readiness-assessment">
                     Get My Free AI Score <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
                 </Button>
@@ -321,7 +321,7 @@ const AIReceptionistGuide = () => {
                 <h3 className="font-display text-2xl font-bold text-foreground mb-2">The ROI Math</h3>
                 <p className="text-muted-foreground mb-4">The average service business misses 40% of inbound calls. At an average job value of $500, just 5 missed calls per week = <strong className="text-foreground">$130,000 in lost revenue per year</strong>.</p>
                 <Button variant="hero" size="lg" asChild>
-                  <Link to="/ai-receptionist-readiness-assessment">
+                  <Link to="/ai-receptionist/resources/ai-receptionist-readiness-assessment">
                     Get My Free AI Score <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
                 </Button>
@@ -448,7 +448,7 @@ const AIReceptionistGuide = () => {
 
               <div className="mt-8 text-center">
                 <Button variant="outline" size="lg" asChild>
-                  <Link to="/industries">
+                  <Link to="/ai-receptionist/industries">
                     View All 50+ Industries <ChevronRight className="ml-2 w-4 h-4" />
                   </Link>
                 </Button>
@@ -539,7 +539,7 @@ const AIReceptionistGuide = () => {
 
               <div className="text-center">
                 <Button variant="hero" size="lg" asChild>
-                  <Link to="/pricing">
+                  <Link to="/ai-receptionist/pricing">
                     See BrightLaunchIQ Pricing <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
                 </Button>
@@ -590,7 +590,7 @@ const AIReceptionistGuide = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="lg" asChild>
-                  <Link to="/ai-receptionist-readiness-assessment">
+                  <Link to="/ai-receptionist/resources/ai-receptionist-readiness-assessment">
                     Get My Free AI Score <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
                 </Button>

@@ -402,10 +402,10 @@ const Contact = () => {
                 </p>
                 <div className="space-y-3">
                   <Button variant="hero" className="w-full" asChild>
-                    <Link to="/get-started">Schedule Revenue Audit</Link>
+                    <Link to="/ai-receptionist/get-started">Schedule Revenue Audit</Link>
                   </Button>
                   <Button variant="outline" className="w-full border-primary/30 text-secondary-foreground hover:bg-primary/10" asChild>
-                    <Link to="/pricing">View Pricing</Link>
+                    <Link to="/ai-receptionist/pricing">View Pricing</Link>
                   </Button>
                 </div>
               </div>

@@ -106,7 +106,7 @@ const PrecisionHVACSuccessStory = () => {
                   <p className="text-muted-foreground mb-6"><strong>See how an AI receptionist can transform your business. Take the free readiness assessment.</strong></p>
                   <div className="flex flex-wrap justify-center gap-4">
                     <Button variant="hero" size="lg" asChild>
-                      <Link to="/ai-receptionist-readiness-assessment">Get My Free AI Score <ArrowRight className="ml-2 w-5 h-5" /></Link>
+                      <Link to="/ai-receptionist/resources/ai-receptionist-readiness-assessment">Get My Free AI Score <ArrowRight className="ml-2 w-5 h-5" /></Link>
                     </Button>
                     <Button variant="outline" size="lg" asChild>
                       <Link to="/ai-receptionist">Explore AI Receptionist</Link>

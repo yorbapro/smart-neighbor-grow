@@ -205,7 +205,7 @@ const AIReceptionistCoreIncludes = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/get-started">
+                <Link to="/ai-receptionist/get-started">
                   Get Started <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
@@ -284,7 +284,7 @@ const AIReceptionistCoreIncludes = () => {
                 <Link to="/ai-receptionist/growth/whats-included">See Growth Includes</Link>
               </Button>
               <Button variant="outline" size="sm" asChild>
-                <Link to="/pricing">Compare All Plans</Link>
+                <Link to="/ai-receptionist/pricing">Compare All Plans</Link>
               </Button>
             </div>
           </div>
@@ -304,7 +304,7 @@ const AIReceptionistCoreIncludes = () => {
             <p className="text-lg text-white/70 mb-8">Your AI receptionist can be live in as little as a few days.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/get-started">
+                <Link to="/ai-receptionist/get-started">
                   Get Started <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>

@@ -56,7 +56,7 @@ const WhitepaperPage = () => {
         <h1 className="text-2xl font-bold mb-4">Whitepaper Not Found</h1>
         <p className="text-muted-foreground mb-8">The whitepaper you are looking for does not exist or has been moved.</p>
         <Button asChild>
-          <Link to="/case-studies">Back to Case Studies</Link>
+          <Link to="/ai-receptionist/case-studies">Back to Case Studies</Link>
         </Button>
       </div>
     );
@@ -74,7 +74,7 @@ const WhitepaperPage = () => {
       <main className="pt-24 pb-16">
         <div className="container max-w-4xl mx-auto px-4">
           <Link 
-            to="/case-studies" 
+            to="/ai-receptionist/case-studies" 
             className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors mb-8 group"
           >
             <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
@@ -115,10 +115,10 @@ const WhitepaperPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="rounded-full px-8">
-                <Link to="/get-started">Get Started Now</Link>
+                <Link to="/ai-receptionist/get-started">Get Started Now</Link>
               </Button>
               <Button size="lg" variant="outline" asChild className="rounded-full px-8">
-                <Link to="/ai-receptionist-readiness-assessment">Take AI Readiness Quiz</Link>
+                <Link to="/ai-receptionist/resources/ai-receptionist-readiness-assessment">Take AI Readiness Quiz</Link>
               </Button>
             </div>
           </div>

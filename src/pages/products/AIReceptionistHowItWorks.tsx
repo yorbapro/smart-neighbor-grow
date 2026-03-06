@@ -442,7 +442,7 @@ const AIReceptionistHowItWorks = () => {
               <p className="text-sm font-semibold text-accent mb-1">Compare plans side by side</p>
               <p className="text-sm text-muted-foreground mb-4">Find the right tier — Core, Growth, or Pro.</p>
               <Button variant="outline" size="sm" asChild>
-                <Link to="/pricing">View Pricing →</Link>
+                <Link to="/ai-receptionist/pricing">View Pricing →</Link>
               </Button>
             </div>
           </div>

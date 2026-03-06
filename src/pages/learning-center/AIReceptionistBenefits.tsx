@@ -24,7 +24,7 @@ const AIReceptionistBenefits = () => {
   useSEO({
     title: "10 Benefits of an AI Receptionist for Your Business | BrightLaunchIQ",
     description: "AI receptionists cut costs by 70%, eliminate missed calls, and book appointments 24/7. Here are 10 proven benefits with real business impact.",
-    canonical: "https://brightlaunchiq.com/learning-center/business-growth/ai-receptionist-benefits",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/ai-receptionist-benefits",
     keywords: "AI receptionist benefits, advantages of AI receptionist, AI phone answering benefits, virtual receptionist advantages",
   });
 
@@ -109,7 +109,7 @@ const AIReceptionistBenefits = () => {
                 <h3 className="font-display text-lg font-bold text-foreground mb-2">Ready to stop the busy signal?</h3>
                 <p className="text-sm text-muted-foreground mb-4">See these benefits in action for your business.</p>
                 <Button variant="hero" size="default" className="w-full" asChild>
-                  <Link to="/get-started">Start Free Trial <ArrowRight className="ml-2 w-4 h-4" /></Link>
+                  <Link to="/ai-receptionist/get-started">Start Free Trial <ArrowRight className="ml-2 w-4 h-4" /></Link>
                 </Button>
               </div>
             </aside>

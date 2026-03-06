@@ -1395,7 +1395,7 @@ const BlogArticle = () => {
   useSEO({
     title: article ? `${article.title} | BrightLaunchIQ` : "Article Not Found | BrightLaunchIQ",
     description: article?.excerpt || "Article not found",
-    canonical: `https://brightlaunchiq.com/learning-center/${slug}`,
+    canonical: `https://brightlaunchiq.com/ai-receptionist/learning-center/${slug}`,
     keywords: article?.keywords,
     speakable: ["h1", ".article-intro", ".article-content h2"],
   });
@@ -1520,7 +1520,7 @@ const BlogArticle = () => {
           <h1 className="font-display text-4xl font-bold text-foreground mb-4">Article Not Found</h1>
           <p className="text-muted-foreground mb-8">The article you're looking for doesn't exist.</p>
           <Button variant="hero" asChild>
-            <Link to="/learning-center">Back to Learning Center</Link>
+            <Link to="/ai-receptionist/learning-center">Back to Learning Center</Link>
           </Button>
         </main>
         <Footer />
@@ -1690,7 +1690,7 @@ const BlogArticle = () => {
                 Get a free AEO audit and discover how visible your business is to AI assistants.
               </p>
               <Button variant="hero" size="lg" asChild>
-                <Link to="/aeo-audit">
+                <Link to="/locallift/resources/aeo-audit">
                   Get Your Free Audit
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>

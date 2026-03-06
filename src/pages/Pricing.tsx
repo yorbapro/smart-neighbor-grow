@@ -261,7 +261,7 @@ const Pricing = () => {
                       asChild
                       className={`w-full ${!isCore ? "border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground/10" : ""}`}
                     >
-                      <Link to="/get-started">
+                      <Link to="/ai-receptionist/get-started">
                         {tier.cta}
                         <ArrowRight className="ml-2 w-4 h-4" />
                       </Link>
@@ -426,7 +426,7 @@ const Pricing = () => {
               </h2>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button variant="hero" size="xl" asChild className="group">
-                  <Link to="/get-started">
+                  <Link to="/ai-receptionist/get-started">
                     Start Free Trial
                     <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
                   </Link>

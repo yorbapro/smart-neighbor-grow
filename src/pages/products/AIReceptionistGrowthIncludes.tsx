@@ -198,7 +198,7 @@ const AIReceptionistGrowthIncludes = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/get-started">
+                <Link to="/ai-receptionist/get-started">
                   Scale My Calls <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
@@ -286,7 +286,7 @@ const AIReceptionistGrowthIncludes = () => {
                 <Link to="/ai-receptionist/pro/whats-included">See Pro Includes</Link>
               </Button>
               <Button variant="outline" size="sm" asChild>
-                <Link to="/pricing">Compare All Plans</Link>
+                <Link to="/ai-receptionist/pricing">Compare All Plans</Link>
               </Button>
             </div>
           </div>
@@ -306,7 +306,7 @@ const AIReceptionistGrowthIncludes = () => {
             <p className="text-lg text-white/70 mb-8">Calendar booking, CRM sync, and AI answering — all working together.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/get-started">
+                <Link to="/ai-receptionist/get-started">
                   Scale My Calls <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>

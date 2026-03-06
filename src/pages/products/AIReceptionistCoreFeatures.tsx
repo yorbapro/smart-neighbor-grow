@@ -285,12 +285,12 @@ const AIReceptionistCoreFeatures = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/get-started">
+                <Link to="/ai-receptionist/get-started">
                   Get Started <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/pricing">View All Plans</Link>
+                <Link to="/ai-receptionist/pricing">View All Plans</Link>
               </Button>
             </div>
           </div>
@@ -351,12 +351,12 @@ const AIReceptionistCoreFeatures = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/get-started">
+                <Link to="/ai-receptionist/get-started">
                   Get Started <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/pricing">View Pricing</Link>
+                <Link to="/ai-receptionist/pricing">View Pricing</Link>
               </Button>
             </div>
           </div>
