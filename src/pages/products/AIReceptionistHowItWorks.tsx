@@ -226,7 +226,7 @@ const AIReceptionistHowItWorks = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/get-started">
+                <Link to="/ai-receptionist/get-started">
                   Replace My Front Desk <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
@@ -461,7 +461,7 @@ const AIReceptionistHowItWorks = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/get-started">
+                <Link to="/ai-receptionist/get-started">
                   Replace My Front Desk <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>

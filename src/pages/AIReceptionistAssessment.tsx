@@ -426,7 +426,7 @@ const AIReceptionistAssessment = () => {
 
               {/* Primary CTA */}
               <Button variant="hero" size="lg" asChild className="w-full sm:w-auto group text-base">
-                <Link to="/pricing">
+                <Link to="/ai-receptionist/pricing">
                   Start Recovering Your Lost Revenue — Buy Now
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </Link>

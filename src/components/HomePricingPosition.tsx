@@ -63,7 +63,7 @@ const HomePricingPosition = () => {
               BrightLaunchIQ AI Receptionist delivers consistent, always-on call handling at a predictable monthly rate — without overhead, scheduling conflicts, or missed calls.
             </p>
             <Button variant="hero" size="lg" asChild className="group">
-              <Link to="/pricing">
+              <Link to="/ai-receptionist/pricing">
                 View Pricing
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </Link>

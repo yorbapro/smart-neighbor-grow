@@ -303,7 +303,7 @@ const WhatIsAIReceptionist = () => {
                     </tbody>
                   </table>
                 </div>
-                <p className="text-sm text-muted-foreground mt-4">BrightLaunchIQ AI Receptionist starts at <strong className="text-foreground">$497/month</strong> for the Core plan, which includes 24/7 call answering, lead qualification, call routing, and CRM integration. <Link to="/pricing" className="text-primary hover:underline">See full pricing →</Link></p>
+                <p className="text-sm text-muted-foreground mt-4">BrightLaunchIQ AI Receptionist starts at <strong className="text-foreground">$497/month</strong> for the Core plan, which includes 24/7 call answering, lead qualification, call routing, and CRM integration. <Link to="/ai-receptionist/pricing" className="text-primary hover:underline">See full pricing →</Link></p>
               </section>
 
               {/* Section 8: Industries */}

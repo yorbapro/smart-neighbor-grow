@@ -251,7 +251,7 @@ const CaseStudies = () => {
                   </Link>
                 </Button>
                 <Button variant="heroOutline" size="lg" asChild>
-                  <Link to="/get-started">Start Your Launch</Link>
+                  <Link to="/ai-receptionist/get-started">Start Your Launch</Link>
                 </Button>
               </div>
             </div>
