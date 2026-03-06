@@ -114,13 +114,13 @@ const AIReceptionistGuide = () => {
       "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/ai-receptionist-guide",
       "author": { "@type": "Organization", "name": "BrightLaunchIQ" },
       "publisher": { "@type": "Organization", "name": "BrightLaunchIQ", "url": "https://brightlaunchiq.com" },
-      "mainEntityOfPage": "https://brightlaunchiq.com/learning-center/ai-receptionist-guide",
+      "mainEntityOfPage": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/ai-receptionist-guide",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://brightlaunchiq.com" },
-          { "@type": "ListItem", "position": 2, "name": "Learning Center", "item": "https://brightlaunchiq.com/learning-center" },
-          { "@type": "ListItem", "position": 3, "name": "AI Receptionist Guide", "item": "https://brightlaunchiq.com/learning-center/ai-receptionist-guide" },
+          { "@type": "ListItem", "position": 2, "name": "Learning Center", "item": "https://brightlaunchiq.com/ai-receptionist/learning-center" },
+          { "@type": "ListItem", "position": 3, "name": "AI Receptionist Guide", "item": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/ai-receptionist-guide" },
         ],
       },
     });

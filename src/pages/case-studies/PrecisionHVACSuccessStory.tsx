@@ -18,7 +18,7 @@ const PrecisionHVACSuccessStory = () => {
   useSEO({
     title: "Precision HVAC Case Study: 450% ROI with AI Receptionist | BrightLaunchIQ",
     description: "How Precision HVAC eliminated 98% of missed calls and added $18k/month in booked revenue with BrightLaunchIQ's AI receptionist.",
-    canonical: "https://brightlaunchiq.com/case-studies/precision-hvac-success-story",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/case-studies/precision-hvac-success-story",
     keywords: "AI receptionist case study, HVAC AI receptionist, missed calls case study, AI phone answering results",
   });
 
@@ -31,7 +31,7 @@ const PrecisionHVACSuccessStory = () => {
       "@type": "Article",
       "headline": "Precision HVAC: How an AI Receptionist Delivered 450% ROI",
       "description": "Case study: Precision HVAC eliminated 98% of missed calls and added $18k/month in booked revenue.",
-      "url": "https://brightlaunchiq.com/case-studies/precision-hvac-success-story",
+      "url": "https://brightlaunchiq.com/ai-receptionist/case-studies/precision-hvac-success-story",
       "publisher": { "@type": "Organization", "name": "BrightLaunchIQ" },
       "about": {
         "@type": "Product",

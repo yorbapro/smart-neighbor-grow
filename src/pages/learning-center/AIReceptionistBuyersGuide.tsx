@@ -44,7 +44,7 @@ const AIReceptionistBuyersGuide = () => {
         "@type": "Guide",
         "name": "AI Receptionist Buyer's Guide",
         "description": "A comprehensive checklist for evaluating and choosing the right AI receptionist for your business.",
-        "url": "https://brightlaunchiq.com/learning-center/business-growth/ai-receptionist-buyers-guide",
+        "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/ai-receptionist-buyers-guide",
         "publisher": { "@type": "Organization", "name": "BrightLaunchIQ" },
       },
       {

@@ -37,7 +37,7 @@ const AIvsVirtualReceptionist = () => {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "AI Receptionist vs Virtual Receptionist: Key Differences",
-        "url": "https://brightlaunchiq.com/learning-center/business-growth/ai-vs-virtual-receptionist",
+        "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/ai-vs-virtual-receptionist",
         "publisher": { "@type": "Organization", "name": "BrightLaunchIQ" },
       },
       {

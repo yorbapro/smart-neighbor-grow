@@ -25,13 +25,13 @@ const AIReceptionistPricing = () => {
       "@type": "TechArticle",
       "headline": "AI Receptionist Pricing: What Does It Cost in 2026?",
       "description": "A comprehensive guide to AI receptionist pricing models, cost ranges, and ROI expectations.",
-      "url": "https://brightlaunchiq.com/learning-center/business-growth/ai-receptionist-pricing",
+      "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/ai-receptionist-pricing",
       "publisher": { "@type": "Organization", "name": "BrightLaunchIQ" },
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://brightlaunchiq.com" },
-          { "@type": "ListItem", "position": 2, "name": "Learning Center", "item": "https://brightlaunchiq.com/learning-center" },
+          { "@type": "ListItem", "position": 2, "name": "Learning Center", "item": "https://brightlaunchiq.com/ai-receptionist/learning-center" },
           { "@type": "ListItem", "position": 3, "name": "AI Receptionist Pricing" },
         ],
       },

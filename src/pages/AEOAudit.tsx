@@ -102,7 +102,7 @@ const AEOAudit = () => {
       "@type": "WebApplication",
       "name": "BrightLaunchIQ AEO Audit Tool",
       "description": "Free Answer Engine Optimization audit tool that analyzes your business visibility across AI search engines including ChatGPT, Gemini, Perplexity, and voice assistants.",
-      "url": "https://brightlaunchiq.com/aeo-audit",
+      "url": "https://brightlaunchiq.com/locallift/resources/aeo-audit",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web Browser",
       "offers": {

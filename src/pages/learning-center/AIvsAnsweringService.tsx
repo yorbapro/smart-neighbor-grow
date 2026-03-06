@@ -37,7 +37,7 @@ const AIvsAnsweringService = () => {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "AI Receptionist vs Answering Service: Which Is Better?",
-        "url": "https://brightlaunchiq.com/learning-center/business-growth/ai-vs-answering-service",
+        "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/ai-vs-answering-service",
         "publisher": { "@type": "Organization", "name": "BrightLaunchIQ" },
       },
       {

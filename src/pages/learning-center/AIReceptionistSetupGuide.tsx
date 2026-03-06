@@ -34,7 +34,7 @@ const AIReceptionistSetupGuide = () => {
       "@type": "HowTo",
       "name": "How to Set Up an AI Receptionist",
       "description": "A 7-step guide to setting up an AI receptionist for your business.",
-      "url": "https://brightlaunchiq.com/learning-center/business-growth/ai-receptionist-setup-guide",
+      "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/ai-receptionist-setup-guide",
       "totalTime": "P2D",
       "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "497" },
       "step": steps.map((s) => ({

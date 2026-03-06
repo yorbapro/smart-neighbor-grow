@@ -10,7 +10,7 @@ const FAQ = () => {
   useSEO({
     title: "FAQ | AI Receptionist & Lead Generation | BrightLaunchIQ",
     description: "Answers about AI receptionists, lead generation, sales automation, AEO pricing, and how human-guided AI works for small businesses.",
-    canonical: "https://brightlaunchiq.com/faq",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/faq",
     keywords: "AI receptionist FAQ, AI lead generation questions, AEO, human-guided AI, BrightLaunchIQ",
   });
 
