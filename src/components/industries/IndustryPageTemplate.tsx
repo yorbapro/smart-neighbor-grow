@@ -48,7 +48,7 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
   useSEO({
     title: `AI Receptionist for ${name} | BrightLaunchIQ`,
     description: `24/7 AI Receptionist built for ${name}. Answers every call, qualifies leads, and books appointments into ${crm}. See how it works for your business.`,
-    canonical: `https://brightlaunchiq.com/industries/${slug}`,
+    canonical: `https://brightlaunchiq.com/ai-receptionist/industries/${slug}`,
     keywords: `AI receptionist ${name.toLowerCase()}, ${name.toLowerCase()} phone answering, AI voice agent ${name.toLowerCase()}`,
   });
 
@@ -103,8 +103,8 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://brightlaunchiq.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://brightlaunchiq.com/industries" },
-          { "@type": "ListItem", "position": 3, "name": name, "item": `https://brightlaunchiq.com/industries/${slug}` },
+          { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://brightlaunchiq.com/ai-receptionist/industries" },
+          { "@type": "ListItem", "position": 3, "name": name, "item": `https://brightlaunchiq.com/ai-receptionist/industries/${slug}` },
         ]
       }
     ];
@@ -131,7 +131,7 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
             <Breadcrumb
               items={[
                 { label: "Home", href: "/" },
-                { label: "Industries", href: "/industries" },
+                { label: "Industries", href: "/ai-receptionist/industries" },
                 { label: name },
               ]}
               className="mb-8 text-white/60"
@@ -144,7 +144,7 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/get-started">
+                <Link to="/ai-receptionist/get-started">
                   Get Your Free Demo <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
@@ -356,7 +356,7 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
               {similarBusinesses.map((biz) => (
                 <Link
                   key={biz.slug}
-                  to={`/industries/${biz.slug}`}
+                  to={`/ai-receptionist/industries/${biz.slug}`}
                   className="px-5 py-2.5 bg-card border border-border rounded-full text-sm font-medium text-foreground hover:border-primary hover:text-primary transition-colors shadow-card"
                 >
                   {biz.name}
@@ -377,7 +377,7 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/get-started">
+                <Link to="/ai-receptionist/get-started">
                   Get Started Today <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
