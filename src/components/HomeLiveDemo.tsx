@@ -148,13 +148,13 @@ const HomeLiveDemo = () => {
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
-                to="/ai-receptionist-readiness-assessment"
+                to="/ai-receptionist/resources/ai-receptionist-readiness-assessment"
                 className="text-primary text-sm font-semibold hover:underline inline-flex items-center gap-1"
               >
                 Get My Free AI Score <ArrowRight className="w-3 h-3" />
               </Link>
               <Link
-                to="/pricing"
+                to="/ai-receptionist/pricing"
                 className="text-white/50 text-sm font-semibold hover:text-white/80 hover:underline inline-flex items-center gap-1"
               >
                 View AI Receptionist Pricing <ArrowRight className="w-3 h-3" />

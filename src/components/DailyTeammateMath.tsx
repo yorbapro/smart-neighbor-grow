@@ -99,7 +99,7 @@ const DailyTeammateMath = () => {
         {/* CTA */}
         <div className="text-center mt-10">
           <Button variant="hero" size="lg" asChild className="group">
-            <Link to="/get-started">
+            <Link to="/ai-receptionist/get-started">
               Schedule My 15-Minute Revenue Audit
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </Link>

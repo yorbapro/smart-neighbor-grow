@@ -51,7 +51,7 @@ const HomeIdealFor = () => {
         </div>
         <div className="text-center">
           <Button variant="hero" size="lg" asChild className="group">
-            <Link to="/industries" aria-label="See How AI Receptionist Helps Your Industry">
+            <Link to="/ai-receptionist/industries" aria-label="See How AI Receptionist Helps Your Industry">
               See How AI Receptionist Helps Your Industry
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </Link>

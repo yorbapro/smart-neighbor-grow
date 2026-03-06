@@ -24,7 +24,7 @@ const HomeCTA = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <Button variant="hero" size="xl" asChild className="group">
-              <Link to="/ai-receptionist-readiness-assessment" aria-label="Start your AI receptionist assessment">
+              <Link to="/ai-receptionist/resources/ai-receptionist-readiness-assessment" aria-label="Start your AI receptionist assessment">
                 Start Your AI Receptionist Assessment
                 <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
               </Link>
