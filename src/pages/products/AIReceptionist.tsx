@@ -579,7 +579,7 @@ const AIReceptionist = () => {
             ].map((ind) => (
               <Link
                 key={ind.slug}
-                to={`/industries/${ind.slug}`}
+                to={`/ai-receptionist/industries/${ind.slug}`}
                 className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-card-hover transition-all"
               >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">

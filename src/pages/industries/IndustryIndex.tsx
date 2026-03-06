@@ -179,7 +179,7 @@ const IndustryIndex = () => {
       "@type": "CollectionPage",
       "name": "AI Receptionist by Industry",
       "description": "50+ industry-specific AI Receptionist solutions by BrightLaunchIQ.",
-      "url": "https://brightlaunchiq.com/industries",
+      "url": "https://brightlaunchiq.com/ai-receptionist/industries",
       "provider": { "@type": "Organization", "name": "BrightLaunchIQ" },
     });
     document.head.appendChild(script);
@@ -216,7 +216,7 @@ const IndustryIndex = () => {
                   {sector.industries.map((ind) => (
                     <Link
                       key={ind.slug}
-                      to={`/industries/${ind.slug}`}
+                      to={`/ai-receptionist/industries/${ind.slug}`}
                       className="group p-5 bg-card border border-border rounded-xl shadow-card hover:shadow-card-hover hover:border-primary/30 transition-all flex items-center justify-between"
                     >
                       <span className="font-medium text-foreground group-hover:text-primary transition-colors">
