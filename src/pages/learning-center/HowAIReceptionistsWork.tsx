@@ -30,7 +30,7 @@ const HowAIReceptionistsWork = () => {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How Do AI Receptionists Work?",
-        "url": "https://brightlaunchiq.com/learning-center/business-growth/how-ai-receptionists-work",
+        "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/how-ai-receptionists-work",
         "publisher": { "@type": "Organization", "name": "BrightLaunchIQ" },
       },
       {

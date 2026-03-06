@@ -41,7 +41,7 @@ const Pricing = () => {
       canonicalLink.setAttribute("rel", "canonical");
       document.head.appendChild(canonicalLink);
     }
-    canonicalLink.setAttribute("href", "https://brightlaunchiq.com/pricing");
+    canonicalLink.setAttribute("href", "https://brightlaunchiq.com/ai-receptionist/pricing");
 
     window.scrollTo(0, 0);
 
@@ -57,7 +57,7 @@ const Pricing = () => {
       "@type": "WebPage",
       "name": "BrightLaunchIQ AI Receptionist Pricing",
       "description": "Simple pricing for 24/7 AI Receptionist. Less than hiring a part-time employee.",
-      "url": "https://brightlaunchiq.com/pricing"
+      "url": "https://brightlaunchiq.com/ai-receptionist/pricing"
     });
     document.head.appendChild(pricingSchema);
 
@@ -70,7 +70,7 @@ const Pricing = () => {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://brightlaunchiq.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://brightlaunchiq.com/pricing" }
+        { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://brightlaunchiq.com/ai-receptionist/pricing" }
       ]
     });
     document.head.appendChild(breadcrumbSchema);
@@ -97,7 +97,7 @@ const Pricing = () => {
             "unitText": "MONTH"
           },
           "availability": "https://schema.org/InStock",
-          "url": "https://brightlaunchiq.com/pricing"
+          "url": "https://brightlaunchiq.com/ai-receptionist/pricing"
         }
       }))
     );

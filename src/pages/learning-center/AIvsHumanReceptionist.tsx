@@ -38,7 +38,7 @@ const AIvsHumanReceptionist = () => {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "AI Receptionist vs Human Receptionist: The Complete Comparison",
-        "url": "https://brightlaunchiq.com/learning-center/business-growth/ai-vs-human-receptionist",
+        "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/ai-vs-human-receptionist",
         "publisher": { "@type": "Organization", "name": "BrightLaunchIQ" },
       },
       {

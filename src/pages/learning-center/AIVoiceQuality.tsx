@@ -33,7 +33,7 @@ const AIVoiceQuality = () => {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Do AI Receptionists Sound Human?",
-        "url": "https://brightlaunchiq.com/learning-center/consumer-guide/ai-voice-quality",
+        "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-everyone/ai-voice-quality",
         "publisher": { "@type": "Organization", "name": "BrightLaunchIQ" },
       },
       {

@@ -37,7 +37,7 @@ const AIReceptionistBenefits = () => {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "10 Benefits of an AI Receptionist for Your Business",
-        "url": "https://brightlaunchiq.com/learning-center/business-growth/ai-receptionist-benefits",
+        "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business/ai-receptionist-benefits",
         "publisher": { "@type": "Organization", "name": "BrightLaunchIQ" },
       },
       {

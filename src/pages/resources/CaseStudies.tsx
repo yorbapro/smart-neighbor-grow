@@ -12,7 +12,7 @@ const CaseStudies = () => {
   useSEO({
     title: "AI Lead Generation Case Studies & Authority Papers | BrightLaunchIQ",
     description: "Real results from local businesses using AI lead generation and in-depth authority papers on AI receptionists, voice agents, and business automation.",
-    canonical: "https://brightlaunchiq.com/case-studies",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/case-studies",
     keywords: "AI lead generation results, sales automation case studies, AI receptionist whitepapers, AI voice agent research",
     speakable: ["h1", ".case-intro"],
   });

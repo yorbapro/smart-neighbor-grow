@@ -26,7 +26,7 @@ const WhatIsAIReceptionist = () => {
         "@type": "Article",
         "headline": "What Is an AI Receptionist? The Definitive Guide",
         "description": "A comprehensive guide explaining what an AI receptionist is, how it works, what it costs, and which businesses benefit most.",
-        "url": "https://brightlaunchiq.com/learning-center/what-is-ai-receptionist",
+        "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-everyone/what-is-ai-receptionist",
         "datePublished": "2025-06-01",
         "dateModified": "2026-02-27",
         "author": [
@@ -39,7 +39,7 @@ const WhatIsAIReceptionist = () => {
           "name": "BrightLaunchIQ",
           "url": "https://brightlaunchiq.com"
         },
-        "mainEntityOfPage": "https://brightlaunchiq.com/learning-center/what-is-ai-receptionist",
+        "mainEntityOfPage": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-everyone/what-is-ai-receptionist",
       },
       {
         "@context": "https://schema.org",
@@ -70,8 +70,8 @@ const WhatIsAIReceptionist = () => {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://brightlaunchiq.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Learning Center", "item": "https://brightlaunchiq.com/learning-center" },
-          { "@type": "ListItem", "position": 3, "name": "What Is an AI Receptionist?", "item": "https://brightlaunchiq.com/learning-center/what-is-ai-receptionist" },
+          { "@type": "ListItem", "position": 2, "name": "Learning Center", "item": "https://brightlaunchiq.com/ai-receptionist/learning-center" },
+          { "@type": "ListItem", "position": 3, "name": "What Is an AI Receptionist?", "item": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-everyone/what-is-ai-receptionist" },
         ]
       }
     ]);

@@ -34,17 +34,17 @@ const News = () => {
     schemaScript.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      "@id": "https://brightlaunchiq.com/learning-center/news#collection",
+      "@id": "https://brightlaunchiq.com/ai-receptionist/learning-center/news#collection",
       "name": "AI Voice Intelligence Feed — BrightLaunchIQ",
       "description": "Weekly updates on AI receptionist technology, feature releases, and industry trends.",
-      "url": "https://brightlaunchiq.com/learning-center/news",
+      "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/news",
       "isPartOf": { "@type": "WebSite", "@id": "https://brightlaunchiq.com/#website", "name": "BrightLaunchIQ" },
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://brightlaunchiq.com" },
-          { "@type": "ListItem", "position": 2, "name": "Learning Center", "item": "https://brightlaunchiq.com/learning-center" },
-          { "@type": "ListItem", "position": 3, "name": "News", "item": "https://brightlaunchiq.com/learning-center/news" }
+          { "@type": "ListItem", "position": 2, "name": "Learning Center", "item": "https://brightlaunchiq.com/ai-receptionist/learning-center" },
+          { "@type": "ListItem", "position": 3, "name": "News", "item": "https://brightlaunchiq.com/ai-receptionist/learning-center/news" }
         ]
       },
       "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", ".news-intro"] }
