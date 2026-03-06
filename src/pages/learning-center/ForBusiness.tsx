@@ -11,7 +11,7 @@ const ForBusiness = () => {
   useSEO({
     title: "AI Receptionist for Business | ROI, Setup & Growth Guides | BrightLaunchIQ",
     description: "Expert guides on AI receptionist ROI, implementation, CRM integration, and sales automation for small business owners. Learn how to grow revenue with AI voice agents.",
-    canonical: "https://brightlaunchiq.com/learning-center/for-business",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business",
     keywords: "AI receptionist ROI, AI voice agent setup, CRM integration AI, sales automation guides, small business AI growth",
     speakable: ["h1", ".category-intro"],
   });
@@ -23,10 +23,10 @@ const ForBusiness = () => {
     schemaScript.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      "@id": "https://brightlaunchiq.com/learning-center/for-business#collection",
+      "@id": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business#collection",
       "name": "AI Receptionist for Business — Learning Center",
       "description": "Expert guides on AI receptionist ROI, implementation, CRM integration, and sales automation for small business owners.",
-      "url": "https://brightlaunchiq.com/learning-center/for-business",
+      "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business",
       "isPartOf": {
         "@type": "WebSite",
         "@id": "https://brightlaunchiq.com/#website",
@@ -36,8 +36,8 @@ const ForBusiness = () => {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://brightlaunchiq.com" },
-          { "@type": "ListItem", "position": 2, "name": "Learning Center", "item": "https://brightlaunchiq.com/learning-center" },
-          { "@type": "ListItem", "position": 3, "name": "For Business", "item": "https://brightlaunchiq.com/learning-center/for-business" }
+          { "@type": "ListItem", "position": 2, "name": "Learning Center", "item": "https://brightlaunchiq.com/ai-receptionist/learning-center" },
+          { "@type": "ListItem", "position": 3, "name": "For Business", "item": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business" }
         ]
       },
       "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", ".category-intro"] }
@@ -80,19 +80,19 @@ const ForBusiness = () => {
   ];
 
   const standaloneArticles = [
-    { title: "AI Receptionist Pricing: What Does It Really Cost?", slug: "business-growth/ai-receptionist-pricing", category: "Pricing" },
-    { title: "5 Signs You Need an AI Receptionist", slug: "business-growth/signs-you-need-ai-receptionist", category: "Business Growth" },
-    { title: "How to Calculate AI Receptionist ROI", slug: "business-growth/calculate-ai-receptionist-roi", category: "ROI" },
-    { title: "Case Study: Precision HVAC Success Story", slug: "precision-hvac-success-story", category: "Case Study", href: "/case-studies/precision-hvac-success-story" },
-    { title: "AI Receptionist vs Human Receptionist", slug: "business-growth/ai-vs-human-receptionist", category: "Comparison" },
-    { title: "AI Receptionist vs Answering Service", slug: "business-growth/ai-vs-answering-service", category: "Comparison" },
-    { title: "AI Receptionist vs Virtual Receptionist", slug: "business-growth/ai-vs-virtual-receptionist", category: "Comparison" },
-    { title: "AI Receptionist Buyer's Guide: 7 Must-Have Features", slug: "business-growth/ai-receptionist-buyers-guide", category: "Buyer's Guide" },
-    { title: "What Is an AI Receptionist?", slug: "business-growth/what-is-an-ai-receptionist", category: "Foundations" },
-    { title: "How Do AI Receptionists Work?", slug: "business-growth/how-ai-receptionists-work", category: "Foundations" },
-    { title: "10 Benefits of an AI Receptionist", slug: "business-growth/ai-receptionist-benefits", category: "Foundations" },
-    { title: "Do AI Receptionists Sound Human?", slug: "consumer-guide/ai-voice-quality", category: "Consumer Guide" },
-    { title: "AI Receptionist Setup Guide: 7 Steps", slug: "business-growth/ai-receptionist-setup-guide", category: "Setup" },
+    { title: "AI Receptionist Pricing: What Does It Really Cost?", slug: "ai-receptionist-pricing", category: "Pricing" },
+    { title: "5 Signs You Need an AI Receptionist", slug: "signs-you-need-ai-receptionist", category: "Business Growth" },
+    { title: "How to Calculate AI Receptionist ROI", slug: "calculate-ai-receptionist-roi", category: "ROI" },
+    { title: "Case Study: Precision HVAC Success Story", slug: "precision-hvac-success-story", category: "Case Study", href: "/ai-receptionist/case-studies/ai-receptionist-for-hvac-companies" },
+    { title: "AI Receptionist vs Human Receptionist", slug: "ai-vs-human-receptionist", category: "Comparison" },
+    { title: "AI Receptionist vs Answering Service", slug: "ai-vs-answering-service", category: "Comparison" },
+    { title: "AI Receptionist vs Virtual Receptionist", slug: "ai-vs-virtual-receptionist", category: "Comparison" },
+    { title: "AI Receptionist Buyer's Guide: 7 Must-Have Features", slug: "ai-receptionist-buyers-guide", category: "Buyer's Guide" },
+    { title: "What Is an AI Receptionist?", slug: "what-is-ai-receptionist", category: "Foundations" },
+    { title: "How Do AI Receptionists Work?", slug: "how-ai-receptionists-work", category: "Foundations" },
+    { title: "10 Benefits of an AI Receptionist", slug: "ai-receptionist-benefits", category: "Foundations" },
+    { title: "Do AI Receptionists Sound Human?", slug: "ai-voice-quality", category: "Consumer Guide" },
+    { title: "AI Receptionist Setup Guide: 7 Steps", slug: "ai-receptionist-setup-guide", category: "Setup" },
     { title: "How to Set Up an AI Receptionist for Your Small Business", slug: "how-to-set-up-ai-receptionist", category: "AI Receptionist" },
     { title: "AI Lead Generation: How It Works and Why It Matters", slug: "ai-lead-generation-guide", category: "AI Sales" },
     { title: "How AI Lead Generation Works: The Complete 6-Step Process", slug: "how-ai-lead-generation-works", category: "AI Sales" },
@@ -101,13 +101,13 @@ const ForBusiness = () => {
     { title: "How to Optimize Your Google Business Profile for AI Search", slug: "gbp-optimization-ai", category: "AEO" },
     { title: "CRM Integration Best Practices for AI Sales Automation", slug: "crm-integration-ai", category: "Technology" },
     { title: "What is Answer Engine Optimization (AEO)? Complete Guide", slug: "what-is-aeo", category: "AEO" },
-    { title: "AI Lead Generation vs Traditional Marketing", slug: "comparison", category: "Strategy", href: "/resources/comparison" },
+    { title: "AI Lead Generation vs Traditional Marketing", slug: "comparison", category: "Strategy", href: "/ai-receptionist/resources/comparison" },
   ];
 
   const renderSeriesGrid = (series: typeof voiceAgentSeries, colorClass: string, bgClass: string) => (
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
       {series.map((article) => (
-        <Link key={article.slug} to={`/learning-center/${article.slug}`} className="group bg-card rounded-xl border border-border p-5 hover:shadow-card-hover hover:border-primary/30 transition-all">
+        <Link key={article.slug} to={`/ai-receptionist/learning-center/for-business/${article.slug}`} className="group bg-card rounded-xl border border-border p-5 hover:shadow-card-hover hover:border-primary/30 transition-all">
           <div className="flex items-start gap-4">
             <div className={`flex-shrink-0 w-10 h-10 rounded-full ${bgClass} flex items-center justify-center ${colorClass} font-bold text-lg`}>
               {article.part}
@@ -136,8 +136,8 @@ const ForBusiness = () => {
                 ROI calculators, implementation roadmaps, CRM integration guides, and sales automation strategies for service businesses.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mt-6">
-                <Link to="/learning-center" className="text-sm text-muted-foreground hover:text-primary transition-colors">← Back to Learning Center</Link>
-                <Link to="/learning-center/for-everyone" className="text-sm text-muted-foreground hover:text-primary transition-colors">For Everyone →</Link>
+                <Link to="/ai-receptionist/learning-center" className="text-sm text-muted-foreground hover:text-primary transition-colors">← Back to Learning Center</Link>
+                <Link to="/ai-receptionist/learning-center/for-everyone" className="text-sm text-muted-foreground hover:text-primary transition-colors">For Everyone →</Link>
               </div>
             </div>
           </div>
@@ -213,7 +213,7 @@ const ForBusiness = () => {
                   <article key={article.slug} className="bg-background rounded-xl border border-border p-6 hover:shadow-card-hover transition-shadow">
                     <span className="inline-block px-2 py-1 text-xs font-semibold bg-primary/10 text-primary rounded mb-3">{article.category}</span>
                     <h3 className="font-display text-lg font-bold text-foreground mb-2">
-                      <Link to={(article as any).href || `/learning-center/${article.slug}`} className="hover:text-primary transition-colors">{article.title}</Link>
+                      <Link to={(article as any).href || `/ai-receptionist/learning-center/for-business/${article.slug}`} className="hover:text-primary transition-colors">{article.title}</Link>
                     </h3>
                   </article>
                 ))}
@@ -228,7 +228,7 @@ const ForBusiness = () => {
               <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">Ready to See AI in Action?</h2>
               <p className="text-muted-foreground mb-8">Get a free AEO audit and discover how visible your business is to AI assistants.</p>
               <Button variant="hero" size="lg" asChild>
-                <Link to="/aeo-audit">Get Your Free Audit<ArrowRight className="ml-2 w-5 h-5" /></Link>
+                <Link to="/locallift/resources/aeo-audit">Get Your Free Audit<ArrowRight className="ml-2 w-5 h-5" /></Link>
               </Button>
             </div>
           </div>
