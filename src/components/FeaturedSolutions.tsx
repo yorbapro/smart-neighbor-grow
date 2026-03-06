@@ -125,7 +125,7 @@ const FeaturedSolutions = () => {
             size="lg" 
             asChild
           >
-            <Link to="/pricing">
+            <Link to="/ai-receptionist/pricing">
               View All Pricing
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
@@ -137,7 +137,7 @@ const FeaturedSolutions = () => {
             asChild
             className="bg-audit hover:bg-audit/90 text-audit-foreground shadow-button-audit hover:shadow-glow-audit transition-all duration-300"
           >
-            <Link to="/aeo-audit">
+            <Link to="/locallift/resources/aeo-audit">
               <Sparkles className="mr-2 w-5 h-5" />
               Free AI Visibility Audit
             </Link>

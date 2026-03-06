@@ -11,7 +11,7 @@ const Blog = () => {
   useSEO({
     title: "Learning Center | AI Receptionist Guides & Insights | BrightLaunchIQ",
     description: "Expert guides on AI receptionists, Answer Engine Optimization (AEO), privacy, accessibility, and sales automation. For business owners and consumers alike.",
-    canonical: "https://brightlaunchiq.com/learning-center",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/learning-center",
     keywords: "AI receptionist guides, AEO tips, AI sales automation articles, small business AI guides, learning center, AI receptionist privacy",
     speakable: ["h1", ".blog-intro"],
   });
@@ -20,10 +20,10 @@ const Blog = () => {
     const collectionPageSchema = {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      "@id": "https://brightlaunchiq.com/learning-center#collection",
+      "@id": "https://brightlaunchiq.com/ai-receptionist/learning-center#collection",
       "name": "BrightLaunchIQ Learning Center",
       "description": "Expert guides on AI receptionists, Answer Engine Optimization (AEO), privacy, accessibility, and sales automation for local businesses and consumers.",
-      "url": "https://brightlaunchiq.com/learning-center",
+      "url": "https://brightlaunchiq.com/ai-receptionist/learning-center",
       "isPartOf": {
         "@type": "WebSite",
         "@id": "https://brightlaunchiq.com/#website",
@@ -45,9 +45,9 @@ const Blog = () => {
         "name": "Learning Center Categories",
         "numberOfItems": 3,
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "For Business", "url": "https://brightlaunchiq.com/learning-center/for-business" },
-          { "@type": "ListItem", "position": 2, "name": "For Everyone", "url": "https://brightlaunchiq.com/learning-center/for-everyone" },
-          { "@type": "ListItem", "position": 3, "name": "News & Intelligence Feed", "url": "https://brightlaunchiq.com/learning-center/news" }
+          { "@type": "ListItem", "position": 1, "name": "For Business", "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business" },
+          { "@type": "ListItem", "position": 2, "name": "For Everyone", "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-everyone" },
+          { "@type": "ListItem", "position": 3, "name": "News & Intelligence Feed", "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/news" }
         ]
       },
       "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", ".blog-intro"] }
@@ -58,7 +58,7 @@ const Blog = () => {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://brightlaunchiq.com" },
-        { "@type": "ListItem", "position": 2, "name": "Learning Center", "item": "https://brightlaunchiq.com/learning-center" }
+        { "@type": "ListItem", "position": 2, "name": "Learning Center", "item": "https://brightlaunchiq.com/ai-receptionist/learning-center" }
       ]
     };
 
@@ -95,7 +95,7 @@ const Blog = () => {
     {
       title: "For Business",
       description: "ROI calculators, implementation roadmaps, CRM integration guides, and sales automation strategies for service businesses.",
-      href: "/learning-center/for-business",
+      href: "/ai-receptionist/learning-center/for-business",
       icon: Briefcase,
       articleCount: "26 articles",
       series: ["The End of Missed Calls", "AI Receptionist Deep Dive", "The Future of Being Found", "The Deep Training Blueprint"],
@@ -105,7 +105,7 @@ const Blog = () => {
     {
       title: "For Everyone",
       description: "Privacy, etiquette, accessibility, and how AI phone technology is making life better for businesses and consumers.",
-      href: "/learning-center/for-everyone",
+      href: "/ai-receptionist/learning-center/for-everyone",
       icon: Users,
       articleCount: "5 articles",
       series: ["The Consumer's Guide to AI Receptionists"],
@@ -115,7 +115,7 @@ const Blog = () => {
     {
       title: "News & Intelligence Feed",
       description: "Weekly updates on AI voice technology, feature releases, industry trends, and actionable tips.",
-      href: "/learning-center/news",
+      href: "/ai-receptionist/learning-center/news",
       icon: Newspaper,
       articleCount: "1 article",
       series: [],
@@ -201,7 +201,7 @@ const Blog = () => {
               <article className="bg-card rounded-2xl border border-border p-8 hover:shadow-card-hover transition-shadow">
                 <span className="inline-block px-3 py-1 text-xs font-semibold bg-primary/10 text-primary rounded-full mb-4">{featuredArticle.category}</span>
                 <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
-                  <Link to={`/learning-center/${featuredArticle.slug}`} className="hover:text-primary transition-colors">{featuredArticle.title}</Link>
+                  <Link to={`/ai-receptionist/learning-center/for-business/${featuredArticle.slug}`} className="hover:text-primary transition-colors">{featuredArticle.title}</Link>
                 </h2>
                 <p className="text-muted-foreground mb-6">{featuredArticle.excerpt}</p>
                 <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-6">
@@ -210,7 +210,7 @@ const Blog = () => {
                   <span className="flex items-center gap-1"><Clock className="w-4 h-4" />{featuredArticle.readTime}</span>
                 </div>
                 <Button variant="hero" asChild>
-                  <Link to={`/learning-center/${featuredArticle.slug}`}>Read Full Article<ArrowRight className="ml-2 w-4 h-4" /></Link>
+                  <Link to={`/ai-receptionist/learning-center/for-business/${featuredArticle.slug}`}>Read Full Article<ArrowRight className="ml-2 w-4 h-4" /></Link>
                 </Button>
               </article>
             </div>
@@ -228,11 +228,11 @@ const Blog = () => {
                     <BookOpen className="w-5 h-5 text-primary" />
                     <h2 className="font-display text-xl font-bold text-foreground">Latest for Business</h2>
                   </div>
-                  <Link to="/learning-center/for-business" className="text-sm text-primary hover:underline">View all →</Link>
+                  <Link to="/ai-receptionist/learning-center/for-business" className="text-sm text-primary hover:underline">View all →</Link>
                 </div>
                 <div className="space-y-4">
                   {latestBusiness.map((article) => (
-                    <Link key={article.slug} to={`/learning-center/${article.slug}`} className="group block bg-card rounded-xl border border-border p-5 hover:shadow-card-hover hover:border-primary/30 transition-all">
+                    <Link key={article.slug} to={`/ai-receptionist/learning-center/for-business/${article.slug}`} className="group block bg-card rounded-xl border border-border p-5 hover:shadow-card-hover hover:border-primary/30 transition-all">
                       <span className="inline-block px-2 py-0.5 text-[10px] font-semibold bg-primary/10 text-primary rounded mb-2">{article.category}</span>
                       <h3 className="font-display text-base font-semibold text-foreground group-hover:text-primary transition-colors mb-1">{article.title}</h3>
                       <div className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -250,11 +250,11 @@ const Blog = () => {
                     <BookOpen className="w-5 h-5 text-destructive" />
                     <h2 className="font-display text-xl font-bold text-foreground">Latest for Everyone</h2>
                   </div>
-                  <Link to="/learning-center/for-everyone" className="text-sm text-destructive hover:underline">View all →</Link>
+                  <Link to="/ai-receptionist/learning-center/for-everyone" className="text-sm text-destructive hover:underline">View all →</Link>
                 </div>
                 <div className="space-y-4">
                   {latestConsumer.map((article) => (
-                    <Link key={article.slug} to={`/learning-center/${article.slug}`} className="group block bg-card rounded-xl border border-border p-5 hover:shadow-card-hover hover:border-destructive/30 transition-all">
+                    <Link key={article.slug} to={`/ai-receptionist/learning-center/for-everyone/${article.slug}`} className="group block bg-card rounded-xl border border-border p-5 hover:shadow-card-hover hover:border-destructive/30 transition-all">
                       <span className="inline-block px-2 py-0.5 text-[10px] font-semibold bg-destructive/10 text-destructive rounded mb-2">{article.category}</span>
                       <h3 className="font-display text-base font-semibold text-foreground group-hover:text-primary transition-colors mb-1">{article.title}</h3>
                       <div className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -275,7 +275,7 @@ const Blog = () => {
               <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">Ready to See AI in Action?</h2>
               <p className="text-muted-foreground mb-8">Get a free AEO audit and discover how visible your business is to AI assistants.</p>
               <Button variant="hero" size="lg" asChild>
-                <Link to="/aeo-audit">Get Your Free Audit<ArrowRight className="ml-2 w-5 h-5" /></Link>
+                <Link to="/locallift/resources/aeo-audit">Get Your Free Audit<ArrowRight className="ml-2 w-5 h-5" /></Link>
               </Button>
             </div>
           </div>

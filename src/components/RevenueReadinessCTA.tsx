@@ -41,7 +41,7 @@ const RevenueReadinessCTA = () => {
             {/* CTA Button */}
             <div className="flex-shrink-0">
               <Button variant="hero" size="xl" asChild className="group">
-                <Link to="/ai-receptionist-readiness-assessment" aria-label="Get my free AI score">
+                <Link to="/ai-receptionist/resources/ai-receptionist-readiness-assessment" aria-label="Get my free AI score">
                   Get My Free AI Score
                   <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
                 </Link>

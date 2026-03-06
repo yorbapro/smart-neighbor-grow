@@ -22,11 +22,11 @@ const Header = () => {
   }, []);
 
   const resourceLinks = [
-    { label: "Industries", href: "/industries" },
-    { label: "AI Receptionist Guide", href: "/learning-center/ai-receptionist-guide" },
-    { label: "Learning Center", href: "/learning-center" },
-    { label: "Case Studies", href: "/resources/case-studies" },
-    { label: "Glossary", href: "/resources/glossary" },
+    { label: "Industries", href: "/ai-receptionist/industries" },
+    { label: "AI Receptionist Guide", href: "/ai-receptionist/resources/ai-receptionist-guide" },
+    { label: "Learning Center", href: "/ai-receptionist/learning-center" },
+    { label: "Case Studies", href: "/ai-receptionist/case-studies" },
+    { label: "Glossary", href: "/ai-receptionist/resources/glossary" },
   ];
 
   const headerBg = isScrolled 
@@ -69,14 +69,14 @@ const Header = () => {
             </Link>
 
             <Link
-              to="/how-it-works"
+              to="/ai-receptionist/how-it-works"
               className={`${mutedColor} hover:${textColor} transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-md`}
             >
               How It Works
             </Link>
 
             <Link
-              to="/pricing"
+              to="/ai-receptionist/pricing"
               className={`${mutedColor} hover:${textColor} transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-md`}
             >
               Pricing
@@ -170,7 +170,7 @@ const Header = () => {
               <Link to="/login">Sign In</Link>
             </Button>
             <Button variant="hero" size="default" asChild>
-              <Link to="/get-started">Get Started</Link>
+              <Link to="/ai-receptionist/get-started">Get Started</Link>
             </Button>
           </div>
 
@@ -203,7 +203,7 @@ const Header = () => {
               </Link>
 
               <Link
-                to="/how-it-works"
+                to="/ai-receptionist/how-it-works"
                 className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2 focus:outline-none focus:ring-2 focus:ring-ring rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -211,7 +211,7 @@ const Header = () => {
               </Link>
 
               <Link
-                to="/pricing"
+                to="/ai-receptionist/pricing"
                 className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2 focus:outline-none focus:ring-2 focus:ring-ring rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -267,7 +267,7 @@ const Header = () => {
                   <Link to="/login" onClick={() => setIsMenuOpen(false)}>Sign In</Link>
                 </Button>
                 <Button variant="hero" size="default" className="w-full" asChild>
-                  <Link to="/get-started" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
+                  <Link to="/ai-receptionist/get-started" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
                 </Button>
               </div>
             </div>

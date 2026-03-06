@@ -11,7 +11,7 @@ const ForEveryone = () => {
   useSEO({
     title: "AI Receptionist Consumer Guide | Privacy, Accessibility & Future Tech | BrightLaunchIQ",
     description: "Consumer-friendly guides to AI receptionists: privacy protection, voice quality, accessibility, multilingual support, and how AI keeps local businesses alive.",
-    canonical: "https://brightlaunchiq.com/learning-center/for-everyone",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/learning-center/for-everyone",
     keywords: "AI receptionist privacy, is AI listening to my calls, AI voice quality, AI accessibility, multilingual AI phone, consumer guide AI",
     speakable: ["h1", ".category-intro"],
   });
@@ -23,17 +23,17 @@ const ForEveryone = () => {
     schemaScript.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      "@id": "https://brightlaunchiq.com/learning-center/for-everyone#collection",
+      "@id": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-everyone#collection",
       "name": "AI Receptionist Consumer Guide — Learning Center",
       "description": "Consumer-friendly guides about AI receptionist privacy, voice quality, accessibility, and community impact.",
-      "url": "https://brightlaunchiq.com/learning-center/for-everyone",
+      "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-everyone",
       "isPartOf": { "@type": "WebSite", "@id": "https://brightlaunchiq.com/#website", "name": "BrightLaunchIQ" },
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://brightlaunchiq.com" },
-          { "@type": "ListItem", "position": 2, "name": "Learning Center", "item": "https://brightlaunchiq.com/learning-center" },
-          { "@type": "ListItem", "position": 3, "name": "For Everyone", "item": "https://brightlaunchiq.com/learning-center/for-everyone" }
+          { "@type": "ListItem", "position": 2, "name": "Learning Center", "item": "https://brightlaunchiq.com/ai-receptionist/learning-center" },
+          { "@type": "ListItem", "position": 3, "name": "For Everyone", "item": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-everyone" }
         ]
       },
       "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", ".category-intro"] }
@@ -65,8 +65,8 @@ const ForEveryone = () => {
                 Privacy, etiquette, accessibility, and how AI phone technology is making life better for both businesses and the customers they serve.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mt-6">
-                <Link to="/learning-center" className="text-sm text-muted-foreground hover:text-primary transition-colors">← Back to Learning Center</Link>
-                <Link to="/learning-center/for-business" className="text-sm text-muted-foreground hover:text-primary transition-colors">For Business →</Link>
+                <Link to="/ai-receptionist/learning-center" className="text-sm text-muted-foreground hover:text-primary transition-colors">← Back to Learning Center</Link>
+                <Link to="/ai-receptionist/learning-center/for-business" className="text-sm text-muted-foreground hover:text-primary transition-colors">For Business →</Link>
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@ const ForEveryone = () => {
               
               <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-6">
                 {consumerGuideSeries.map((article) => (
-                  <Link key={article.slug} to={`/learning-center/${article.slug}`} className="group bg-card rounded-xl border border-border p-6 hover:shadow-card-hover hover:border-primary/30 transition-all">
+                  <Link key={article.slug} to={`/ai-receptionist/learning-center/for-everyone/${article.slug}`} className="group bg-card rounded-xl border border-border p-6 hover:shadow-card-hover hover:border-primary/30 transition-all">
                     <div className="flex items-start gap-5">
                       <div className="flex-shrink-0 w-12 h-12 rounded-full bg-destructive/10 flex items-center justify-center text-destructive font-bold text-xl">
                         {article.part}
@@ -109,10 +109,10 @@ const ForEveryone = () => {
               <p className="text-secondary-foreground/80 mb-8">See a live demo or try our free AI audit to find out how visible your business is to AI assistants.</p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button variant="hero" size="lg" asChild>
-                  <Link to="/aeo-audit">Get Your Free Audit<ArrowRight className="ml-2 w-5 h-5" /></Link>
+                  <Link to="/locallift/resources/aeo-audit">Get Your Free Audit<ArrowRight className="ml-2 w-5 h-5" /></Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild className="border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground/10">
-                  <Link to="/learning-center/for-business">Explore Business Guides<ArrowRight className="ml-2 w-5 h-5" /></Link>
+                  <Link to="/ai-receptionist/learning-center/for-business">Explore Business Guides<ArrowRight className="ml-2 w-5 h-5" /></Link>
                 </Button>
               </div>
             </div>

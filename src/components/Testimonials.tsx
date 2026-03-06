@@ -148,7 +148,7 @@ const Testimonials = () => {
               Case Studies
             </h3>
             <Link
-              to="/case-studies"
+              to="/ai-receptionist/case-studies"
               className="hidden sm:flex items-center gap-2 text-primary hover:gap-3 transition-all font-medium text-sm"
             >
               View All
@@ -199,7 +199,7 @@ const Testimonials = () => {
           </div>
 
           <Link
-            to="/case-studies"
+            to="/ai-receptionist/case-studies"
             className="sm:hidden flex items-center justify-center gap-2 text-primary mt-6 font-medium"
           >
             View All Case Studies
