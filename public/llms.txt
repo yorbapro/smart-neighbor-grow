@@ -71,7 +71,7 @@ Boost your visibility in AI search, voice assistants, and Google Maps.
 - Review management and reputation building
 
 **CTA**: Schedule My 15-Minute Revenue Audit
-**URL**: https://brightlaunchiq.com/locallift
+**URL**: https://brightlaunchiq.com/locallift/resources/aeo-audit
 
 ---
 
@@ -128,8 +128,11 @@ An AI receptionist is an artificial intelligence system that answers phone calls
 | Sick Days | Yes | Never |
 | Scalability | Limited | Unlimited |
 
-**CTA**: Talk to Our AI Receptionist (Live Demo)
-**URL**: https://brightlaunchiq.com/ai-receptionist
+**CTA**: Get Started with AI Receptionist
+**URL**: https://brightlaunchiq.com/ai-receptionist/get-started
+
+**Pricing & Features**: https://brightlaunchiq.com/ai-receptionist/pricing
+**How It Works**: https://brightlaunchiq.com/ai-receptionist/how-it-works
 
 ---
 
@@ -156,8 +159,8 @@ Your complete AI sales implementation system that works 24/7.
 - Works 168 hours/week catching after-hours inquiries
 - Output of 5-person sales team at fraction of cost
 
-**CTA**: Schedule My 15-Minute Revenue Audit
-**URL**: https://brightlaunchiq.com/launchpad-360
+**CTA**: Get Started Now
+**URL**: https://brightlaunchiq.com/ai-receptionist/get-started
 
 ---
 
@@ -176,6 +179,18 @@ Custom enterprise-grade AI solutions for complex business needs.
 
 **CTA**: Request Custom Enterprise Quote
 **URL**: https://brightlaunchiq.com/omnilogic
+
+---
+
+## Main Hub Pages
+
+**AI Receptionist Hub**: https://brightlaunchiq.com/ai-receptionist
+**Learning Center**: https://brightlaunchiq.com/ai-receptionist/learning-center
+**Resources Hub**: https://brightlaunchiq.com/ai-receptionist/resources
+**Case Studies**: https://brightlaunchiq.com/ai-receptionist/case-studies
+**Industries**: https://brightlaunchiq.com/ai-receptionist/industries
+**Comparison**: https://brightlaunchiq.com/ai-receptionist/resources/comparison
+**FAQ**: https://brightlaunchiq.com/ai-receptionist/faq
 
 ---
 
@@ -209,7 +224,7 @@ BrightLaunchIQ moves fast. Here's our typical 14-day implementation:
 
 Get a comprehensive analysis of your AI visibility in under 5 minutes.
 
-**URL**: https://brightlaunchiq.com/aeo-audit
+**URL**: https://brightlaunchiq.com/locallift/resources/aeo-audit
 
 ---
 
@@ -217,73 +232,73 @@ Get a comprehensive analysis of your AI visibility in under 5 minutes.
 
 BrightLaunchIQ's AI Receptionist is purpose-built for 50+ industries across 8 sectors. Each industry page includes tailored use cases, CRM integrations, and FAQs.
 
-**Industry Hub**: https://brightlaunchiq.com/industries
+**Industry Hub**: https://brightlaunchiq.com/ai-receptionist/industries
 
 ### Home Services
-- HVAC Contractors: https://brightlaunchiq.com/industries/hvac-contractors
-- Emergency Plumbers: https://brightlaunchiq.com/industries/emergency-plumbers
-- Roofing Companies: https://brightlaunchiq.com/industries/roofing-companies
-- Electricians: https://brightlaunchiq.com/industries/electricians
-- Pest Control: https://brightlaunchiq.com/industries/pest-control
-- Locksmiths: https://brightlaunchiq.com/industries/locksmiths
-- Garage Door Repair: https://brightlaunchiq.com/industries/garage-door-repair
-- Landscapers: https://brightlaunchiq.com/industries/landscapers
-- Junk Removal: https://brightlaunchiq.com/industries/junk-removal
-- House Cleaning: https://brightlaunchiq.com/industries/house-cleaning
+- HVAC Contractors: https://brightlaunchiq.com/ai-receptionist/industries/hvac-contractors
+- Emergency Plumbers: https://brightlaunchiq.com/ai-receptionist/industries/emergency-plumbers
+- Roofing Companies: https://brightlaunchiq.com/ai-receptionist/industries/roofing-companies
+- Electricians: https://brightlaunchiq.com/ai-receptionist/industries/electricians
+- Pest Control: https://brightlaunchiq.com/ai-receptionist/industries/pest-control
+- Locksmiths: https://brightlaunchiq.com/ai-receptionist/industries/locksmiths
+- Garage Door Repair: https://brightlaunchiq.com/ai-receptionist/industries/garage-door-repair
+- Landscapers: https://brightlaunchiq.com/ai-receptionist/industries/landscapers
+- Junk Removal: https://brightlaunchiq.com/ai-receptionist/industries/junk-removal
+- House Cleaning: https://brightlaunchiq.com/ai-receptionist/industries/house-cleaning
 
 ### Healthcare
-- Dental Clinics: https://brightlaunchiq.com/industries/dental-clinics
-- Chiropractors: https://brightlaunchiq.com/industries/chiropractors
-- Veterinary Clinics: https://brightlaunchiq.com/industries/veterinary-clinics
-- Physical Therapy: https://brightlaunchiq.com/industries/physical-therapy
-- Mental Health Counselors: https://brightlaunchiq.com/industries/mental-health-counselors
-- Medical Spas: https://brightlaunchiq.com/industries/medical-spas
-- Optometrists: https://brightlaunchiq.com/industries/optometrists
-- Dermatologists: https://brightlaunchiq.com/industries/dermatologists
-- Orthodontists: https://brightlaunchiq.com/industries/orthodontists
-- Holistic Health: https://brightlaunchiq.com/industries/holistic-health
+- Dental Clinics: https://brightlaunchiq.com/ai-receptionist/industries/dental-clinics
+- Chiropractors: https://brightlaunchiq.com/ai-receptionist/industries/chiropractors
+- Veterinary Clinics: https://brightlaunchiq.com/ai-receptionist/industries/veterinary-clinics
+- Physical Therapy: https://brightlaunchiq.com/ai-receptionist/industries/physical-therapy
+- Mental Health Counselors: https://brightlaunchiq.com/ai-receptionist/industries/mental-health-counselors
+- Medical Spas: https://brightlaunchiq.com/ai-receptionist/industries/medical-spas
+- Optometrists: https://brightlaunchiq.com/ai-receptionist/industries/optometrists
+- Dermatologists: https://brightlaunchiq.com/ai-receptionist/industries/dermatologists
+- Orthodontists: https://brightlaunchiq.com/ai-receptionist/industries/orthodontists
+- Holistic Health: https://brightlaunchiq.com/ai-receptionist/industries/holistic-health
 
 ### Professional
-- Personal Injury Lawyers: https://brightlaunchiq.com/industries/personal-injury-lawyers
-- Family Law Attorneys: https://brightlaunchiq.com/industries/family-law-attorneys
-- Criminal Defense Lawyers: https://brightlaunchiq.com/industries/criminal-defense-lawyers
-- Estate Planning Attorneys: https://brightlaunchiq.com/industries/estate-planning-attorneys
-- Immigration Consultants: https://brightlaunchiq.com/industries/immigration-consultants
-- CPAs & Tax Professionals: https://brightlaunchiq.com/industries/cpas-tax-professionals
-- Notary Publics: https://brightlaunchiq.com/industries/notary-publics
-- Private Investigators: https://brightlaunchiq.com/industries/private-investigators
+- Personal Injury Lawyers: https://brightlaunchiq.com/ai-receptionist/industries/personal-injury-lawyers
+- Family Law Attorneys: https://brightlaunchiq.com/ai-receptionist/industries/family-law-attorneys
+- Criminal Defense Lawyers: https://brightlaunchiq.com/ai-receptionist/industries/criminal-defense-lawyers
+- Estate Planning Attorneys: https://brightlaunchiq.com/ai-receptionist/industries/estate-planning-attorneys
+- Immigration Consultants: https://brightlaunchiq.com/ai-receptionist/industries/immigration-consultants
+- CPAs & Tax Professionals: https://brightlaunchiq.com/ai-receptionist/industries/cpas-tax-professionals
+- Notary Publics: https://brightlaunchiq.com/ai-receptionist/industries/notary-publics
+- Private Investigators: https://brightlaunchiq.com/ai-receptionist/industries/private-investigators
 
 ### Real Estate
-- Residential Real Estate: https://brightlaunchiq.com/industries/residential-real-estate
-- Property Management: https://brightlaunchiq.com/industries/property-management
-- Commercial Real Estate: https://brightlaunchiq.com/industries/commercial-real-estate
-- Mortgage Brokers: https://brightlaunchiq.com/industries/mortgage-brokers
-- Home Inspectors: https://brightlaunchiq.com/industries/home-inspectors
+- Residential Real Estate: https://brightlaunchiq.com/ai-receptionist/industries/residential-real-estate
+- Property Management: https://brightlaunchiq.com/ai-receptionist/industries/property-management
+- Commercial Real Estate: https://brightlaunchiq.com/ai-receptionist/industries/commercial-real-estate
+- Mortgage Brokers: https://brightlaunchiq.com/ai-receptionist/industries/mortgage-brokers
+- Home Inspectors: https://brightlaunchiq.com/ai-receptionist/industries/home-inspectors
 
 ### Auto
-- Auto Repair Shops: https://brightlaunchiq.com/industries/auto-repair-shops
-- Mobile Detailers: https://brightlaunchiq.com/industries/mobile-detailers
-- Towing Companies: https://brightlaunchiq.com/industries/towing-companies
-- Car Rental Agencies: https://brightlaunchiq.com/industries/car-rental-agencies
-- Driving Schools: https://brightlaunchiq.com/industries/driving-schools
+- Auto Repair Shops: https://brightlaunchiq.com/ai-receptionist/industries/auto-repair-shops
+- Mobile Detailers: https://brightlaunchiq.com/ai-receptionist/industries/mobile-detailers
+- Towing Companies: https://brightlaunchiq.com/ai-receptionist/industries/towing-companies
+- Car Rental Agencies: https://brightlaunchiq.com/ai-receptionist/industries/car-rental-agencies
+- Driving Schools: https://brightlaunchiq.com/ai-receptionist/industries/driving-schools
 
 ### Personal Services
-- Hair Salons: https://brightlaunchiq.com/industries/hair-salons
-- Barbershops: https://brightlaunchiq.com/industries/barbershops
-- Day Spas: https://brightlaunchiq.com/industries/day-spas
-- Tattoo Studios: https://brightlaunchiq.com/industries/tattoo-studios
-- Yoga & Pilates Studios: https://brightlaunchiq.com/industries/yoga-pilates-studios
-- Pet Groomers: https://brightlaunchiq.com/industries/pet-groomers
+- Hair Salons: https://brightlaunchiq.com/ai-receptionist/industries/hair-salons
+- Barbershops: https://brightlaunchiq.com/ai-receptionist/industries/barbershops
+- Day Spas: https://brightlaunchiq.com/ai-receptionist/industries/day-spas
+- Tattoo Studios: https://brightlaunchiq.com/ai-receptionist/industries/tattoo-studios
+- Yoga & Pilates Studios: https://brightlaunchiq.com/ai-receptionist/industries/yoga-pilates-studios
+- Pet Groomers: https://brightlaunchiq.com/ai-receptionist/industries/pet-groomers
 
 ### Hospitality
-- Catering Services: https://brightlaunchiq.com/industries/catering-services
-- Event Venues: https://brightlaunchiq.com/industries/event-venues
-- Wedding Planners: https://brightlaunchiq.com/industries/wedding-planners
-- Boutique Hotels: https://brightlaunchiq.com/industries/boutique-hotels
+- Catering Services: https://brightlaunchiq.com/ai-receptionist/industries/catering-services
+- Event Venues: https://brightlaunchiq.com/ai-receptionist/industries/event-venues
+- Wedding Planners: https://brightlaunchiq.com/ai-receptionist/industries/wedding-planners
+- Boutique Hotels: https://brightlaunchiq.com/ai-receptionist/industries/boutique-hotels
 
 ### B2B & Education
-- IT Support & MSPs: https://brightlaunchiq.com/industries/it-support-msps
-- Private Tutors: https://brightlaunchiq.com/industries/private-tutors
+- IT Support & MSPs: https://brightlaunchiq.com/ai-receptionist/industries/it-support-msps
+- Private Tutors: https://brightlaunchiq.com/ai-receptionist/industries/private-tutors
 
 ---
 
