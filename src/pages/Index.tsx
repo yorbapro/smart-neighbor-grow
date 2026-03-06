@@ -379,6 +379,7 @@ const Index = () => {
     <div className="min-h-screen" style={{ background: 'hsl(215, 28%, 7%)' }}>
       <Header />
       <main id="main-content" role="main">
+        <h1 className="sr-only">AI Receptionist for Small Business | BrightLaunchIQ</h1>
         <Hero />
         <HomeProblem />
         <HomeSolution />

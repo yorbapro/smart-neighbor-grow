@@ -164,7 +164,7 @@ const IndustryIndex = () => {
   useSEO({
     title: "AI Receptionist by Industry | BrightLaunchIQ",
     description: "Explore how BrightLaunchIQ's AI Receptionist serves 50+ industries — from HVAC and dental to law firms and real estate. 24/7 call answering built for your business.",
-    canonical: "https://brightlaunchiq.com/industries",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/industries",
     keywords: "AI receptionist industries, AI phone answering by industry, virtual receptionist for small business",
   });
 

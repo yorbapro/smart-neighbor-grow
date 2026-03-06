@@ -25,11 +25,11 @@ const Hero = () => {
               <span className="w-12 h-[2px] bg-gradient-hero" />
             </div>
 
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-8 animate-slide-up">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-8 animate-slide-up">
               Never Miss Another
               <br />
               <span className="text-gradient">Customer Call.</span>
-            </h1>
+            </h2>
 
             <p className="text-lg md:text-xl text-white/70 max-w-2xl mb-6 leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
               Our AI voice agents answer 24/7, qualify leads with custom logic, and book appointments directly into your CRM — so you capture opportunities that would otherwise go to voicemail.
