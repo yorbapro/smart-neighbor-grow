@@ -175,7 +175,7 @@ const AISalesAgent = () => {
 
              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                <Button variant="hero" size="lg" asChild>
-                 <Link to="/get-started?product=proactiveScale">
+                 <Link to="/ai-receptionist/get-started?product=proactiveScale">
                    Book a Strategy Call
                    <ArrowRight className="ml-2 w-5 h-5" />
                  </Link>
@@ -373,7 +373,7 @@ const AISalesAgent = () => {
           </p>
            <div className="flex flex-col sm:flex-row gap-4 justify-center">
              <Button variant="hero" size="xl" asChild className="group">
-               <Link to="/get-started?product=proactiveScale">
+               <Link to="/ai-receptionist/get-started?product=proactiveScale">
                  Schedule Strategy Call
                  <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
                </Link>
