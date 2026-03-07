@@ -42,7 +42,7 @@ const Hero = () => {
                   <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
-              <Button variant="heroOutline" size="xl" asChild className="border-white/30 text-white hover:bg-white/10">
+              <Button variant="heroOutline" size="xl" asChild>
                 <a href="tel:1-877-879-5552" aria-label="Talk to an AI Receptionist">Talk to an AI Receptionist</a>
               </Button>
             </div>

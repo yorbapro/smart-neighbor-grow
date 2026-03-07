@@ -29,7 +29,7 @@ const HomeCTA = () => {
                 <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
-            <Button variant="heroOutline" size="xl" asChild className="border-white/30 text-white hover:bg-white/10">
+            <Button variant="heroOutline" size="xl" asChild>
               <a href="tel:1-877-879-5552" aria-label="Call our live AI receptionist demo">Call Our Live AI Receptionist Demo</a>
             </Button>
           </div>

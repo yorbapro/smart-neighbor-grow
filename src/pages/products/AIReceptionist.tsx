@@ -225,7 +225,7 @@ const AIReceptionist = () => {
                   <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
-              <Button variant="heroOutline" size="xl" asChild className="border-white/30 text-white hover:bg-white/10">
+              <Button variant="heroOutline" size="xl" asChild>
                 <Link to="#how-it-works">See How It Works</Link>
               </Button>
             </div>
