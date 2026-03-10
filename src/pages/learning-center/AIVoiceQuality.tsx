@@ -6,6 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import useSEO from "@/hooks/useSEO";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Bot, Play, Pause, Volume2 } from "lucide-react";
+import Related101Articles from "@/components/Related101Articles";
 
 const voicePersonas = [
   { name: "Professional Sarah", desc: "Warm, confident, American English — ideal for law firms and medical offices.", style: "Corporate" },
