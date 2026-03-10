@@ -94,7 +94,6 @@ const routeLabels: Record<string, string> = {
   "pet-groomers": "Pet Groomers",
   "private-tutors": "Private Tutors",
   "ai-receptionists-101": "AI Receptionists 101",
-  "resources": "Resources",
 };
 
 const Breadcrumb = ({ items, className = "" }: BreadcrumbProps) => {
