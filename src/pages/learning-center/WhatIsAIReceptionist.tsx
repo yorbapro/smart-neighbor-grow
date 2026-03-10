@@ -6,6 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import useSEO from "@/hooks/useSEO";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Calendar, BarChart3, Clock, Bot, DollarSign, Shield, Zap, Users, MessageSquare, CheckCircle } from "lucide-react";
+import Related101Articles from "@/components/Related101Articles";
 
 const WhatIsAIReceptionist = () => {
   useSEO({
