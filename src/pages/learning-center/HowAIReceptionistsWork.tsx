@@ -6,6 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import useSEO from "@/hooks/useSEO";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Bot, Mic, Brain, Volume2, ArrowDown } from "lucide-react";
+import Related101Articles from "@/components/Related101Articles";
 
 const processSteps = [
   { icon: Mic, label: "STT", title: "Speech-to-Text", desc: "The caller's voice is converted into text in real time using advanced speech recognition.", color: "bg-primary/10 text-primary" },
