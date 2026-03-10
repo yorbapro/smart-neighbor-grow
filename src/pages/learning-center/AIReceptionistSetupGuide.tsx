@@ -6,6 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import useSEO from "@/hooks/useSEO";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Bot, CheckCircle } from "lucide-react";
+import Related101Articles from "@/components/Related101Articles";
 
 const steps = [
   { step: 1, title: "Choose Your Plan", desc: "Select Core ($497/mo), Growth ($997/mo), or Pro ($1,497/mo) based on your call volume and feature needs.", tip: "Not sure? Start with Core — you can upgrade anytime with setup fee credits applied." },
