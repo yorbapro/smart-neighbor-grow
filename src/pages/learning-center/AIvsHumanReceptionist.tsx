@@ -6,6 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import useSEO from "@/hooks/useSEO";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Related101Articles from "@/components/Related101Articles";
 
 const comparisonRows = [
   { feature: "24/7 Availability", ai: "✅ Always on", human: "❌ Limited to shifts" },
