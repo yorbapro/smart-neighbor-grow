@@ -6,6 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import useSEO from "@/hooks/useSEO";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Bot, CheckCircle } from "lucide-react";
+import Related101Articles from "@/components/Related101Articles";
 
 const steps = [
   { step: 1, title: "Choose Your Plan", desc: "Select Core ($497/mo), Growth ($997/mo), or Pro ($1,497/mo) based on your call volume and feature needs.", tip: "Not sure? Start with Core — you can upgrade anytime with setup fee credits applied." },
@@ -106,6 +107,13 @@ const AIReceptionistSetupGuide = () => {
                   <Link to="/contact">Book a Strategy Call <ArrowRight className="ml-2 w-5 h-5" /></Link>
                 </Button>
               </section>
+
+              <Related101Articles articles={[
+                { title: "How to Set Up an AI Receptionist", slug: "how-to-set-up-ai-receptionist" },
+                { title: "Training Your AI on Business Knowledge", slug: "training-your-ai-receptionist" },
+                { title: "CRM & Calendar Integration Guide", slug: "ai-receptionist-crm-integration" },
+                { title: "Building a Knowledge Base for AI", slug: "building-ai-knowledge-base" },
+              ]} className="mb-10" />
             </article>
 
             <aside className="lg:col-span-1">

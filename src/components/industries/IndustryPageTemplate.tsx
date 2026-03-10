@@ -7,6 +7,7 @@ import useSEO from "@/hooks/useSEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import Related101Articles from "@/components/Related101Articles";
 import { Phone, PhoneCall, Calendar, Shield, ArrowRight, CheckCircle, Clock, Users, Zap } from "lucide-react";
 
 export interface IndustryFAQ {
@@ -339,8 +340,28 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
           </div>
         </section>
 
-        {/* Beyond [Industry] - Cross-linking */}
+        {/* Deep Dive — AI Receptionists 101 */}
         <section className="py-16 md:py-24 bg-background">
+          <div className="container max-w-4xl">
+            <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground text-center mb-4">
+              Deep Dive: AI Receptionists 101
+            </h2>
+            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-8">
+              Want to learn more about how AI receptionists work, what they cost, and how to set one up? Explore our 24-article deep-dive series.
+            </p>
+            <div className="max-w-xl mx-auto">
+              <Related101Articles articles={[
+                { title: "What is an AI Receptionist and How Does It Work?", slug: "what-is-an-ai-receptionist" },
+                { title: "Does an AI Receptionist Really Work 24/7/365?", slug: "24-7-ai-receptionist" },
+                { title: "How Much Does an AI Receptionist Cost?", slug: "ai-receptionist-cost" },
+                { title: "How to Set Up an AI Receptionist", slug: "how-to-set-up-ai-receptionist" },
+              ]} />
+            </div>
+          </div>
+        </section>
+
+        {/* Beyond [Industry] - Cross-linking */}
+        <section className="py-16 md:py-24 bg-muted/30">
           <div className="container max-w-4xl">
             <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground text-center mb-4">
               Beyond {name}
