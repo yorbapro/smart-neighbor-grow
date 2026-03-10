@@ -7,6 +7,7 @@ import useSEO from "@/hooks/useSEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import Related101Articles from "@/components/Related101Articles";
 import { Phone, PhoneCall, Calendar, Shield, ArrowRight, CheckCircle, Clock, Users, Zap } from "lucide-react";
 
 export interface IndustryFAQ {
