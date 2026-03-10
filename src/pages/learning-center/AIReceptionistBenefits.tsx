@@ -6,6 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import useSEO from "@/hooks/useSEO";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Bot } from "lucide-react";
+import Related101Articles from "@/components/Related101Articles";
 
 const benefits = [
   { title: "24/7 Availability", detail: "Never miss a call again — even at 2am on a holiday." },
