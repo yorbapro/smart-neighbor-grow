@@ -253,6 +253,8 @@ const App = () => (
 
             {/* AI Receptionist Resources */}
             <Route path="/ai-receptionist/resources" element={<ResourcesHub />} />
+            <Route path="/ai-receptionist/resources/ai-receptionists-101" element={<AIReceptionists101Hub />} />
+            <Route path="/ai-receptionist/resources/ai-receptionists-101/:slug" element={<AIReceptionists101Article />} />
             <Route path="/ai-receptionist/resources/ai-receptionist-guide" element={<AIReceptionistGuide />} />
             <Route path="/ai-receptionist/resources/glossary" element={<Glossary />} />
             <Route path="/ai-receptionist/resources/comparison" element={<Comparison />} />
