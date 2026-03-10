@@ -127,6 +127,12 @@ const AIVoiceQuality = () => {
                 <h2 className="font-display text-2xl font-bold text-foreground mb-3">Will Callers Know They're Talking to AI?</h2>
                 <p className="text-muted-foreground"><strong>Most callers don't realize it unless told — and many businesses choose to disclose it transparently.</strong> The key isn't whether callers detect AI; it's whether they get their problem solved quickly and professionally. When the AI books their appointment in 30 seconds flat, callers don't care who — or what — answered.</p>
               </section>
+
+              <Related101Articles articles={[
+                { title: "Can AI Sound Like a Real Person?", slug: "can-ai-sound-like-a-person" },
+                { title: "AI Receptionist vs. IVR", slug: "ai-receptionist-vs-ivr" },
+                { title: "What is an AI Receptionist?", slug: "what-is-an-ai-receptionist" },
+              ]} className="mb-10" />
             </article>
 
             <aside className="lg:col-span-1">

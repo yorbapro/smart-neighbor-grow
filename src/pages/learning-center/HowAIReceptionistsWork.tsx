@@ -111,6 +111,12 @@ const HowAIReceptionistsWork = () => {
                 <h2 className="font-display text-2xl font-bold text-foreground mb-3">Is the Technology Proven?</h2>
                 <p className="text-muted-foreground"><strong>Yes — the underlying technologies (STT, LLM, TTS) are used by billions of people daily through Siri, Alexa, Google Assistant, and customer service bots.</strong> AI receptionists apply these same proven technologies in a purpose-built package optimized for business phone calls.</p>
               </section>
+
+              <Related101Articles articles={[
+                { title: "What is an AI Receptionist?", slug: "what-is-an-ai-receptionist" },
+                { title: "Training Your AI on Business Knowledge", slug: "training-your-ai-receptionist" },
+                { title: "AI Fallback Logic: When AI Doesn't Know", slug: "ai-fallback-logic" },
+              ]} className="mb-10" />
             </article>
 
             <aside className="lg:col-span-1">

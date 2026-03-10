@@ -83,6 +83,12 @@ const CalculateAIReceptionistROI = () => {
               </div>
             </section>
 
+            <Related101Articles articles={[
+              { title: "Calculating the ROI of an AI Receptionist", slug: "calculating-roi-of-ai-receptionist" },
+              { title: "How Much Does an AI Receptionist Cost?", slug: "ai-receptionist-cost" },
+              { title: "Reduce Front-Office Payroll by 90%", slug: "reduce-payroll-with-ai" },
+            ]} className="mb-12" />
+
             <section className="bg-card border border-border rounded-xl p-8 text-center">
               <h2 className="font-display text-2xl font-bold text-foreground mb-3">Want a Detailed ROI Breakdown?</h2>
               <p className="text-muted-foreground mb-6"><strong>Download our free ROI spreadsheet template to build a custom model for your business.</strong></p>

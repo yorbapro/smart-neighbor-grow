@@ -107,6 +107,13 @@ const AIReceptionistSetupGuide = () => {
                   <Link to="/contact">Book a Strategy Call <ArrowRight className="ml-2 w-5 h-5" /></Link>
                 </Button>
               </section>
+
+              <Related101Articles articles={[
+                { title: "How to Set Up an AI Receptionist", slug: "how-to-set-up-ai-receptionist" },
+                { title: "Training Your AI on Business Knowledge", slug: "training-your-ai-receptionist" },
+                { title: "CRM & Calendar Integration Guide", slug: "ai-receptionist-crm-integration" },
+                { title: "Building a Knowledge Base for AI", slug: "building-ai-knowledge-base" },
+              ]} className="mb-10" />
             </article>
 
             <aside className="lg:col-span-1">

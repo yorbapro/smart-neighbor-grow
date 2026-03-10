@@ -447,9 +447,9 @@ const WhatIsAIReceptionist = () => {
                     {[
                       { label: "AI Receptionist Features", href: "/ai-receptionist" },
                       { label: "How It Works", href: "/ai-receptionist/how-it-works" },
-                      { label: "Pricing", href: "/pricing" },
-                      { label: "Industries We Serve", href: "/industries" },
-                      { label: "FAQ", href: "/faq" },
+                      { label: "Pricing", href: "/ai-receptionist/pricing" },
+                      { label: "Industries We Serve", href: "/ai-receptionist/industries" },
+                      { label: "FAQ", href: "/ai-receptionist/faq" },
                     ].map((link) => (
                       <Link key={link.href} to={link.href} className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
                         <ArrowRight className="w-3 h-3" /> {link.label}
@@ -457,6 +457,13 @@ const WhatIsAIReceptionist = () => {
                     ))}
                   </div>
                 </div>
+
+                <Related101Articles articles={[
+                  { title: "What is an AI Receptionist?", slug: "what-is-an-ai-receptionist" },
+                  { title: "AI Receptionist vs. IVR", slug: "ai-receptionist-vs-ivr" },
+                  { title: "Can AI Sound Like a Real Person?", slug: "can-ai-sound-like-a-person" },
+                  { title: "How Much Does an AI Receptionist Cost?", slug: "ai-receptionist-cost" },
+                ]} className="mt-6" />
               </div>
             </aside>
           </div>

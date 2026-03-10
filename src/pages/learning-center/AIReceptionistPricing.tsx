@@ -101,6 +101,12 @@ const AIReceptionistPricing = () => {
                 <Link to="/ai-receptionist/pricing">View Full Pricing <ArrowRight className="ml-2 w-5 h-5" /></Link>
               </Button>
             </section>
+
+            <Related101Articles articles={[
+              { title: "How Much Does an AI Receptionist Cost?", slug: "ai-receptionist-cost" },
+              { title: "Per-Minute vs. Flat Rate Pricing", slug: "per-minute-vs-flat-rate-ai" },
+              { title: "Calculating the ROI of an AI Receptionist", slug: "calculating-roi-of-ai-receptionist" },
+            ]} className="mb-12" />
           </div>
         </article>
       </main>
