@@ -22,11 +22,11 @@ const Header = () => {
   }, []);
 
   const resourceLinks = [
-    { label: "Industries", href: "/ai-receptionist/industries" },
     { label: "AI Receptionists 101", href: "/ai-receptionist/resources/ai-receptionists-101" },
     { label: "AI Receptionist Guide", href: "/ai-receptionist/resources/ai-receptionist-guide" },
     { label: "Learning Center", href: "/ai-receptionist/learning-center" },
     { label: "Case Studies", href: "/ai-receptionist/case-studies" },
+    { label: "Industries", href: "/ai-receptionist/industries" },
     { label: "Glossary", href: "/ai-receptionist/resources/glossary" },
   ];
 
