@@ -111,7 +111,7 @@ const AIReceptionists101Article = () => {
 
               {/* TL;DR */}
               <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 mb-8">
-                <p className="text-sm font-semibold text-primary mb-1">TL;DR</p>
+                <p className="text-sm font-semibold text-primary mb-1">The Bottom Line</p>
                 <p className="text-foreground">{article.tldr}</p>
               </div>
 
