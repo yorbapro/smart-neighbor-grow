@@ -180,6 +180,8 @@ import WhitepaperPage from "./pages/WhitepaperPage";
 import Comparison from "./pages/resources/Comparison";
 import HowItWorks from "./pages/resources/HowItWorks";
 import ResourcesHub from "./pages/resources/ResourcesHub";
+import AIReceptionists101Hub from "./pages/resources/AIReceptionists101Hub";
+import AIReceptionists101Article from "./pages/resources/AIReceptionists101Article";
 import AIReceptionistGuide from "./pages/learning-center/AIReceptionistGuide";
 import AIReceptionistPricing from "./pages/learning-center/AIReceptionistPricing";
 import SignsYouNeedAIReceptionist from "./pages/learning-center/SignsYouNeedAIReceptionist";
@@ -251,6 +253,8 @@ const App = () => (
 
             {/* AI Receptionist Resources */}
             <Route path="/ai-receptionist/resources" element={<ResourcesHub />} />
+            <Route path="/ai-receptionist/resources/ai-receptionists-101" element={<AIReceptionists101Hub />} />
+            <Route path="/ai-receptionist/resources/ai-receptionists-101/:slug" element={<AIReceptionists101Article />} />
             <Route path="/ai-receptionist/resources/ai-receptionist-guide" element={<AIReceptionistGuide />} />
             <Route path="/ai-receptionist/resources/glossary" element={<Glossary />} />
             <Route path="/ai-receptionist/resources/comparison" element={<Comparison />} />

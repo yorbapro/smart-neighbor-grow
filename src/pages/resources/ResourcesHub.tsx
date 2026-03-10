@@ -4,9 +4,17 @@ import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import useSEO from "@/hooks/useSEO";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BookOpen, FileText, HelpCircle, ClipboardCheck } from "lucide-react";
+import { ArrowRight, BookOpen, FileText, HelpCircle, ClipboardCheck, GraduationCap } from "lucide-react";
 
 const resources = [
+  {
+    title: "AI Receptionists 101: The Business Owner's Manual",
+    description: "24-article deep-dive series covering fundamentals, implementation, ROI, security, and industry playbooks for AI voice agents.",
+    href: "/ai-receptionist/resources/ai-receptionists-101",
+    icon: GraduationCap,
+    color: "text-primary",
+    bgColor: "bg-primary/10",
+  },
   {
     title: "AI Receptionist Guide",
     description: "The ultimate guide to understanding, evaluating, and implementing an AI receptionist for your business.",
