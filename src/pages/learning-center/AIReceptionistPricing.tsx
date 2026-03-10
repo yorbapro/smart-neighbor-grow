@@ -7,6 +7,7 @@ import useSEO from "@/hooks/useSEO";
 import ROICalculator from "@/components/ROICalculator";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import Related101Articles from "@/components/Related101Articles";
 
 const AIReceptionistPricing = () => {
   useSEO({
