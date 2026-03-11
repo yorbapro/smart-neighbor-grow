@@ -221,7 +221,7 @@ serve(async (req) => {
             "List-Unsubscribe": "<mailto:unsubscribe@account.brightlaunchiq.com?subject=unsubscribe>",
             "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
           },
-          text: `Hi ${lead.business_name},\n\nYour AEO visibility score is ${lead.overall_score}/100 with a potential of ${lead.potential_score}/100.\n\nWant to improve it? Just reply to this email or visit https://brightlaunchiq.com/get-started\n\nAnthony\nBrightLaunchIQ\nSacramento, CA 95814\nReply "unsubscribe" to stop receiving emails.`,
+          text: `Hi ${lead.business_name},\n\nYour AEO visibility score is ${lead.overall_score}/100 with a potential of ${lead.potential_score}/100.\n\nWant to improve it? Just reply to this email or visit https://brightlaunchiq.com/ai-receptionist/get-started\n\nAnthony\nBrightLaunchIQ\nSacramento, CA 95814\nReply "unsubscribe" to stop receiving emails.`,
           html: bodyHtml,
         });
 
