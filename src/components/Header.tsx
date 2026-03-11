@@ -175,16 +175,24 @@ const Header = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className={`md:hidden p-2 ${textColor} focus:outline-none focus:ring-2 focus:ring-ring rounded-md`}
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={isMenuOpen}
-            aria-controls="mobile-nav"
-          >
-            {isMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
-          </button>
+          {/* Mobile Actions */}
+          <div className="flex md:hidden items-center gap-2">
+            <Button variant="ghost" size="sm" asChild className={isScrolled || !isHomepage ? "" : "text-white hover:bg-white/10"}>
+              <Link to="/login">Sign In</Link>
+            </Button>
+            <Button variant="hero" size="sm" asChild>
+              <Link to="/ai-receptionist/get-started">Get Started</Link>
+            </Button>
+            <button
+              className={`p-2 ${textColor} focus:outline-none focus:ring-2 focus:ring-ring rounded-md`}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-nav"
+            >
+              {isMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
