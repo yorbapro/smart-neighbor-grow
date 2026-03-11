@@ -15,6 +15,16 @@ const PaymentSuccess = () => {
     document.title = "Payment Successful | BrightLaunchIQ";
     window.scrollTo(0, 0);
 
+    // Fire Google Ads purchase conversion
+    if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', 'conversion', {
+        send_to: 'AW-924340526/t_bICIej44YcEK6i4bgD',
+        value: 497.0,
+        currency: 'USD',
+        transaction_id: '',
+      });
+    }
+
     // Send welcome email after successful payment
     const sendWelcomeEmail = async () => {
       if (emailSentRef.current) return;
