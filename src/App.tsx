@@ -399,6 +399,7 @@ const App = () => (
             <Route path="/locations/monterey" element={<Monterey />} />
 
             {/* Admin pages (rarely accessed) */}
+            <Route path="/admin" element={<AdminAuth />} />
             <Route path="/admin/auth" element={<AdminAuth />} />
             <Route path="/admin/leads" element={<AdminLeads />} />
             <Route path="/admin/email-templates" element={<AdminEmailTemplates />} />
