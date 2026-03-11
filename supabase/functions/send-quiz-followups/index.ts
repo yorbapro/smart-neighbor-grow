@@ -238,7 +238,7 @@ Imagine what you could do with an extra ${annualLoss} in your business this year
 
 Ready to see how it works for you?
 
-Start your journey and buy now: https://brightlaunchiq.com/get-started
+Start your journey and buy now: https://brightlaunchiq.com/ai-receptionist/get-started
 
 Or simply reply to this email with any questions you have.
 
