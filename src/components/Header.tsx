@@ -191,7 +191,7 @@ const Header = () => {
         {isMenuOpen && (
           <nav 
             id="mobile-nav"
-            className="md:hidden bg-card border-b border-border animate-slide-up" 
+            className="md:hidden bg-card border-b border-border animate-slide-up max-h-[calc(100vh-4rem)] overflow-y-auto" 
             aria-label="Mobile navigation"
           >
             <div className="container py-4 flex flex-col gap-4">
