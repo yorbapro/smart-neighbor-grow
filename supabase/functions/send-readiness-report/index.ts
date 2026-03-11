@@ -70,7 +70,7 @@ Ready to stop losing revenue and start growing your business?
 
 Choose your next step:
 
-1. Start Recovering Your Lost Revenue — Buy Now: https://brightlaunchiq.com/get-started
+1. Start Recovering Your Lost Revenue — Buy Now: https://brightlaunchiq.com/ai-receptionist/get-started
 2. Book a Free 15-Minute Call: https://brightlaunchiq.com/contact
 3. Hear It in Action: Call Our Live AI Receptionist Now at 1-877-879-5552
 

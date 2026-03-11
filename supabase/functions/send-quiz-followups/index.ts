@@ -238,7 +238,7 @@ Imagine what you could do with an extra ${annualLoss} in your business this year
 
 Ready to see how it works for you?
 
-Start your journey and buy now: https://brightlaunchiq.com/get-started
+Start your journey and buy now: https://brightlaunchiq.com/ai-receptionist/get-started
 
 Or simply reply to this email with any questions you have.
 
@@ -272,7 +272,7 @@ Hear it for yourself: Call our live AI Receptionist now at 1-877-879-5552.
 
 If you're ready to stop losing money and start maximizing every opportunity, we're here to help.
 
-Buy Now and Start Recovering Your Lost Revenue: https://brightlaunchiq.com/get-started
+Buy Now and Start Recovering Your Lost Revenue: https://brightlaunchiq.com/ai-receptionist/get-started
 
 This is your last email from this sequence. We're here if you need us.
 
