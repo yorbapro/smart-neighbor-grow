@@ -531,7 +531,18 @@ Generate an AEO audit with the following structure - return ONLY valid JSON, no 
         console.log("Email sent:", emailResponse);
       } catch (emailError) {
         console.error("Failed to send email:", emailError);
-        // Don't fail the request if email fails
+      }
+
+      // Send internal notification to team
+      try {
+        await resend.emails.send({
+          from: "BrightLaunchIQ <onboarding@account.brightlaunchiq.com>",
+          to: ["success@BrightLaunchIQ.com", "brightlaunchiq@gmail.com"],
+          subject: `New AEO Audit Lead: ${businessName}`,
+          text: `New AEO Audit lead submitted:\n\nBusiness: ${businessName}\nIndustry: ${industry}\nLocation: ${city}, ${state}\nEmail: ${email}\nWebsite: ${website || 'N/A'}\nServices: ${services}\n\nOverall Score: ${auditResult.overallScore}/100\nPotential Score: ${auditResult.potentialScore}/100`,
+        });
+      } catch (notifyError) {
+        console.error("Failed to send notification:", notifyError);
       }
     }
 
