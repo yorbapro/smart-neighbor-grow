@@ -309,6 +309,14 @@ const AIReceptionistAssessment = () => {
         console.warn("Report email could not be sent.");
       }
 
+      // Fire Google Ads conversion event
+      if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+        (window as any).gtag('event', 'conversion', {
+          send_to: 'AW-924340526/rWLSCOCSz4YcEK6i4bgD',
+          transaction_id: '',
+        });
+      }
+
       setResult(roiResult);
     } catch (err: any) {
       setSubmitError("Something went wrong. Please try again.");
