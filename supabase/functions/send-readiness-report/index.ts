@@ -97,6 +97,18 @@ The Team at BrightLaunchIQ
       throw error;
     }
 
+    // Send internal notification to team
+    try {
+      await resend.emails.send({
+        from: "BrightLaunchIQ <success@account.brightlaunchiq.com>",
+        to: ["success@BrightLaunchIQ.com", "brightlaunchiq@gmail.com"],
+        subject: `New Readiness Assessment Lead: ${data.businessName}`,
+        text: `New Readiness Assessment lead submitted:\n\nName: ${data.firstName} ${data.lastName}\nBusiness: ${data.businessName}\nEmail: ${data.email}\nScore: ${data.score}\nSegment: ${data.segment}\nEstimated Annual Loss: ${annualLoss}`,
+      });
+    } catch (notifyError) {
+      console.error("Failed to send notification:", notifyError);
+    }
+
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
       headers: { "Content-Type": "application/json", ...corsHeaders },
