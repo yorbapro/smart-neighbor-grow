@@ -133,7 +133,6 @@ const Hero = () => {
             </div>
 
             <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full border border-primary/20" />
-            </div>
           </div>
         </div>
       </div>
