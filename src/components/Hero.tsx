@@ -1,10 +1,24 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, CheckCircle } from "lucide-react";
+import { useState, useEffect } from "react";
 
-const businessOwnerPhoto = "/images/hero-business-owner.jpg";
+const heroImages = [
+  { src: "/images/hero-hvac.png", alt: "HVAC technician using AI receptionist" },
+  { src: "/images/hero-plumbing.png", alt: "Plumbing professional with AI receptionist" },
+  { src: "/images/hero-medical.png", alt: "Medical practice manager with AI receptionist" },
+  { src: "/images/hero-legal.png", alt: "Legal professional with AI receptionist" },
+];
 
 const Hero = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+    }, 5000); // Change image every 5 seconds
+    return () => clearInterval(interval);
+  }, []);
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden" style={{ background: 'linear-gradient(180deg, hsl(215, 28%, 12%) 0%, hsl(215, 28%, 7%) 50%, hsl(220, 30%, 3%) 100%)' }}>
       {/* GitHub-style glow effect */}
@@ -61,21 +75,42 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Visual */}
+          {/* Visual - Dynamic Carousel */}
           <div className="relative hidden lg:block animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <img
-                src={businessOwnerPhoto}
-                alt="Business owner using AI receptionist to capture every customer call"
-                className="w-full h-auto object-cover"
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
-                width={1200}
-                height={800}
-              />
+              {heroImages.map((image, index) => (
+                <img
+                  key={index}
+                  src={image.src}
+                  alt={image.alt}
+                  className={`w-full h-auto object-cover transition-opacity duration-1000 absolute inset-0 ${
+                    index === currentImageIndex ? "opacity-100" : "opacity-0"
+                  }`}
+                  loading={index === 0 ? "eager" : "lazy"}
+                  fetchPriority={index === 0 ? "high" : "low"}
+                  decoding="async"
+                  width={1200}
+                  height={800}
+                />
+              ))}
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent" />
+            </div>
+
+            {/* Carousel Indicators */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+              {heroImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentImageIndex(index)}
+                  className={`h-2 rounded-full transition-all ${
+                    index === currentImageIndex
+                      ? "w-8 bg-primary"
+                      : "w-2 bg-white/40 hover:bg-white/60"
+                  }`}
+                  aria-label={`View image ${index + 1} of ${heroImages.length}`}
+                />
+              ))}
             </div>
 
             <div className="absolute -bottom-6 -left-6 bg-card/95 backdrop-blur-sm rounded-2xl shadow-card-hover p-5 border border-border animate-float">
@@ -98,6 +133,7 @@ const Hero = () => {
             </div>
 
             <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full border border-primary/20" />
+            </div>
           </div>
         </div>
       </div>
