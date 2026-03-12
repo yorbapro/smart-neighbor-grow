@@ -4,10 +4,10 @@ import { ArrowRight, Phone, CheckCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const heroImages = [
-  { src: "/images/hero-hvac.webp", alt: "HVAC technician using AI receptionist" },
-  { src: "/images/hero-plumbing.webp", alt: "Plumbing professional with AI receptionist" },
-  { src: "/images/hero-medical.webp", alt: "Medical practice manager with AI receptionist" },
-  { src: "/images/hero-legal.webp", alt: "Legal professional with AI receptionist" },
+  { src: "/images/ai-receptionist-for-hvac-companies.webp", alt: "AI receptionist for HVAC companies - 24/7 call answering and appointment booking for HVAC contractors", title: "AI Receptionist for HVAC Companies" },
+  { src: "/images/ai-receptionist-for-plumbing-businesses.webp", alt: "AI receptionist for plumbing businesses - automated call handling and lead qualification for plumbers", title: "AI Receptionist for Plumbing Businesses" },
+  { src: "/images/ai-receptionist-for-medical-practices.webp", alt: "AI receptionist for medical practices - HIPAA-compliant call answering and patient scheduling for healthcare", title: "AI Receptionist for Medical Practices" },
+  { src: "/images/ai-receptionist-for-law-firms.webp", alt: "AI receptionist for law firms - secure call handling and client lead management for legal professionals", title: "AI Receptionist for Law Firms" },
 ];
 
 const Hero = () => {
@@ -83,14 +83,15 @@ const Hero = () => {
                   key={index}
                   src={image.src}
                   alt={image.alt}
-                  className={`w-full h-auto object-cover transition-opacity duration-1000 ${
-                    index === 0 ? "relative" : "absolute inset-0"
-                  } ${index === currentImageIndex ? "opacity-100" : "opacity-0"}`}
+                  title={image.title}
+                  className={`w-full h-auto object-cover transition-opacity duration-1000 absolute inset-0 ${
+                    index === currentImageIndex ? "opacity-100" : "opacity-0"
+                  }`}
                   loading={index === 0 ? "eager" : "lazy"}
                   fetchPriority={index === 0 ? "high" : "low"}
                   decoding="async"
-                  width={1200}
-                  height={800}
+                  width={1920}
+                  height={1080}
                 />
               ))}
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
@@ -108,7 +109,7 @@ const Hero = () => {
                       ? "w-8 bg-primary"
                       : "w-2 bg-white/40 hover:bg-white/60"
                   }`}
-                  aria-label={`View image ${index + 1} of ${heroImages.length}`}
+                  aria-label={`View ${heroImages[index].title} - image ${index + 1} of ${heroImages.length}`}
                 />
               ))}
             </div>
