@@ -17,6 +17,11 @@ const WhitepaperPage = () => {
 
   const meta = whitepaperMetadata.find((m) => m.slug === slug);
 
+  useSEO({
+    title: meta ? `${meta.title} | BrightLaunchIQ Authority Papers` : "Authority Paper Not Found | BrightLaunchIQ",
+    description: meta?.summary ?? "The authority paper you are looking for does not exist or has been moved.",
+  });
+
   useEffect(() => {
     if (!meta) {
       setError(true);
@@ -61,11 +66,6 @@ const WhitepaperPage = () => {
       </div>
     );
   }
-
-  useSEO({
-    title: `${meta.title} | BrightLaunchIQ Authority Papers`,
-    description: meta.summary,
-  });
 
   return (
     <div className="min-h-screen bg-background">
