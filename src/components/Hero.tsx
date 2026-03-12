@@ -4,10 +4,10 @@ import { ArrowRight, Phone, CheckCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const heroImages = [
-  { src: "/images/hero-hvac.png", alt: "HVAC technician using AI receptionist" },
-  { src: "/images/hero-plumbing.png", alt: "Plumbing professional with AI receptionist" },
-  { src: "/images/hero-medical.png", alt: "Medical practice manager with AI receptionist" },
-  { src: "/images/hero-legal.png", alt: "Legal professional with AI receptionist" },
+  { src: "/images/hero-hvac.webp", alt: "HVAC technician using AI receptionist" },
+  { src: "/images/hero-plumbing.webp", alt: "Plumbing professional with AI receptionist" },
+  { src: "/images/hero-medical.webp", alt: "Medical practice manager with AI receptionist" },
+  { src: "/images/hero-legal.webp", alt: "Legal professional with AI receptionist" },
 ];
 
 const Hero = () => {
