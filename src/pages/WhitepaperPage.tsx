@@ -102,8 +102,18 @@ const WhitepaperPage = () => {
             </div>
           </div>
 
-          <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-a:text-primary prose-img:rounded-2xl prose-img:shadow-xl">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          <div className="prose prose-slate lg:prose-lg dark:prose-invert max-w-none 
+            prose-headings:font-bold prose-headings:tracking-tight 
+            prose-a:text-primary prose-a:no-underline hover:prose-a:underline
+            prose-img:rounded-2xl prose-img:shadow-xl
+            prose-p:leading-relaxed prose-li:leading-relaxed
+            prose-blockquote:border-l-primary prose-blockquote:bg-primary/5 prose-blockquote:py-1 prose-blockquote:px-4 prose-blockquote:rounded-r-lg">
+            <ReactMarkdown 
+              remarkPlugins={[remarkGfm]}
+              components={{
+                a: ({ node, ...props }) => <a {...props} target="_blank" rel="noopener noreferrer" />,
+              }}
+            >
               {content}
             </ReactMarkdown>
           </div>
