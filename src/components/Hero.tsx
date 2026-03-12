@@ -83,9 +83,9 @@ const Hero = () => {
                   key={index}
                   src={image.src}
                   alt={image.alt}
-                  className={`w-full h-auto object-cover transition-opacity duration-1000 absolute inset-0 ${
-                    index === currentImageIndex ? "opacity-100" : "opacity-0"
-                  }`}
+                  className={`w-full h-auto object-cover transition-opacity duration-1000 ${
+                    index === 0 ? "relative" : "absolute inset-0"
+                  } ${index === currentImageIndex ? "opacity-100" : "opacity-0"}`}
                   loading={index === 0 ? "eager" : "lazy"}
                   fetchPriority={index === 0 ? "high" : "low"}
                   decoding="async"
