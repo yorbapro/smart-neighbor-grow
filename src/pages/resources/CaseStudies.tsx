@@ -149,7 +149,7 @@ const CaseStudies = () => {
               {whitepaperMetadata.map((paper) => (
                 <Link 
                   key={paper.slug} 
-                  to={`/case-studies/${paper.slug}`}
+                  to={`/ai-receptionist/case-studies/${paper.slug}`}
                   className="group bg-card rounded-2xl border border-border p-6 hover:shadow-xl hover:border-primary/20 transition-all flex flex-col"
                 >
                   <div className="mb-4 p-3 bg-primary/5 rounded-xl w-fit group-hover:bg-primary/10 transition-colors">
