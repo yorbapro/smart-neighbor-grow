@@ -1,17 +1,49 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import rocketLogo from "@/assets/rocket-logo.png";
+import { supabase } from "@/integrations/supabase/client";
+import type { User } from "@supabase/supabase-js";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [user, setUser] = useState<User | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const isHomepage = location.pathname === "/";
+
+  // Check auth state on mount and listen for changes
+  useEffect(() => {
+    const checkAuth = async () => {
+      try {
+        const { data: { session } } = await supabase.auth.getSession();
+        setUser(session?.user || null);
+      } catch (error) {
+        console.error("Error checking auth:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    checkAuth();
+
+    // Listen for auth state changes
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      (_event, session) => {
+        setUser(session?.user || null);
+      }
+    );
+
+    return () => {
+      subscription?.unsubscribe();
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +52,17 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleSignOut = async () => {
+    try {
+      await supabase.auth.signOut();
+      setUser(null);
+      setIsMenuOpen(false);
+      navigate("/");
+    } catch (error) {
+      console.error("Error signing out:", error);
+    }
+  };
 
   const resourceLinks = [
     { label: "AI Receptionists 101", href: "/ai-receptionist/resources/ai-receptionists-101" },
@@ -162,14 +205,28 @@ const Header = () => {
             >
               <a href="tel:1-877-879-5552">1-877-879-5552</a>
             </Button>
-            <Button 
-              variant={isScrolled || !isHomepage ? "outline" : "heroOutline"} 
-              size="sm" 
-              asChild
-              className={isScrolled || !isHomepage ? "" : "border-white/20 text-white hover:bg-white/10"}
-            >
-              <Link to="/login">Sign In</Link>
-            </Button>
+            
+            {/* Conditionally render Sign In or Sign Out */}
+            {!isLoading && !user ? (
+              <Button 
+                variant={isScrolled || !isHomepage ? "outline" : "heroOutline"} 
+                size="sm" 
+                asChild
+                className={isScrolled || !isHomepage ? "" : "border-white/20 text-white hover:bg-white/10"}
+              >
+                <Link to="/login">Sign In</Link>
+              </Button>
+            ) : !isLoading && user ? (
+              <Button 
+                variant={isScrolled || !isHomepage ? "outline" : "heroOutline"} 
+                size="sm" 
+                onClick={handleSignOut}
+                className={isScrolled || !isHomepage ? "" : "border-white/20 text-white hover:bg-white/10"}
+              >
+                Sign Out
+              </Button>
+            ) : null}
+            
             <Button variant="hero" size="default" asChild>
               <Link to="/ai-receptionist/get-started">Get Started</Link>
             </Button>
@@ -264,9 +321,26 @@ const Header = () => {
                 <Button variant="outline" size="default" className="w-full" asChild>
                   <a href="tel:1-877-879-5552">1-877-879-5552</a>
                 </Button>
-                <Button variant="outline" size="default" className="w-full" asChild>
-                  <Link to="/login" onClick={() => setIsMenuOpen(false)}>Sign In</Link>
-                </Button>
+                
+                {/* Mobile Sign In / Sign Out */}
+                {!isLoading && !user ? (
+                  <Button variant="outline" size="default" className="w-full" asChild>
+                    <Link to="/login" onClick={() => setIsMenuOpen(false)}>Sign In</Link>
+                  </Button>
+                ) : !isLoading && user ? (
+                  <Button 
+                    variant="outline" 
+                    size="default" 
+                    className="w-full"
+                    onClick={() => {
+                      handleSignOut();
+                      setIsMenuOpen(false);
+                    }}
+                  >
+                    Sign Out
+                  </Button>
+                ) : null}
+                
                 <Button variant="hero" size="default" className="w-full" asChild>
                   <Link to="/ai-receptionist/get-started" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
                 </Button>
