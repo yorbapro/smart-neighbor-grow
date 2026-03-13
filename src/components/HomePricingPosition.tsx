@@ -64,7 +64,7 @@ const HomePricingPosition = () => {
             </p>
             <Button variant="hero" size="lg" asChild className="group">
               <Link to="/ai-receptionist/pricing">
-                View AI Receptionist Pricing & Plans
+                View Pricing
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
