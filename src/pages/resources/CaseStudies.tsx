@@ -241,12 +241,12 @@ const CaseStudies = () => {
                 Ready to Become Our Next Success Story?
               </h2>
               <p className="text-secondary-foreground/80 mb-8">
-                Get a free AEO audit and see how AI can transform your lead generation.
+                Take our free AI Receptionist Readiness Assessment and discover how prepared your business is to automate calls and capture more leads.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="lg" asChild>
-                  <Link to="/locallift/resources/aeo-audit">
-                    Get Your Free Audit
+                  <Link to="/ai-receptionist/resources/ai-receptionist-readiness-assessment">
+                    Get My Free AI Score
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
                 </Button>
