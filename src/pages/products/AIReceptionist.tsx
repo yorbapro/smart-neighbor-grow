@@ -590,7 +590,7 @@ const AIReceptionist = () => {
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">{ind.desc}</p>
                 <span className="text-sm font-semibold text-primary flex items-center gap-1">
-                  Read Case Study <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  Read the Case Study <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </span>
               </Link>
             ))}
