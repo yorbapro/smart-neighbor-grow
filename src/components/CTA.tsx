@@ -47,7 +47,7 @@ const CTA = () => {
 
           <Button variant="hero" size="xl" asChild className="group">
              <Link to="/ai-receptionist/resources/ai-receptionist-readiness-assessment" aria-label="Get my free AI score">
-              Get My Free AI Score
+              Free AI Receptionist Readiness Assessment
               <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>

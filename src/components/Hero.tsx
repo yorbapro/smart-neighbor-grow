@@ -52,7 +52,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row items-start gap-4 mb-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
               <Button variant="hero" size="xl" asChild className="group">
                 <Link to="/ai-receptionist/resources/ai-receptionist-readiness-assessment" aria-label="Take the free AI Receptionist Readiness Assessment">
-                  Get My Free AI Score
+                  Free AI Receptionist Readiness Assessment
                   <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>

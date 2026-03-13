@@ -228,7 +228,7 @@ const Header = () => {
             ) : null}
             
             <Button variant="hero" size="default" asChild>
-              <Link to="/ai-receptionist/get-started">Get Started</Link>
+             <Link to="/ai-receptionist/get-started">Get Started with 24/7 AI Receptionist</Link>
             </Button>
           </div>
 
