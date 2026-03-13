@@ -2,6 +2,7 @@
   "buildCommand": "pnpm run build",
   "outputDirectory": "dist/client",
 
+
   "headers": [
     {
       "source": "/favicon.ico",
@@ -41,7 +42,9 @@
     }
   ],
 
+
   "rewrites": [
+    { "source": "/~oauth/initiate", "destination": "https://smart-neighbor-grow.lovable.app/~oauth/initiate" },
     { "source": "/~oauth/callback", "destination": "https://smart-neighbor-grow.lovable.app/~oauth/callback" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
