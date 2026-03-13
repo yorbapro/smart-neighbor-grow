@@ -48,9 +48,9 @@ const IndustryPageTemplate = ({ data }: { data: IndustryPageData }) => {
 
   useSEO({
     title: `AI Receptionist for ${name} | BrightLaunchIQ`,
-    description: `24/7 AI Receptionist built for ${name}. Answers every call, qualifies leads, and books appointments into ${crm}. See how it works for your business.`,
+    description: `AI Receptionist for ${name}: 24/7 call answering, lead qualification, and appointment booking into ${crm}. Purpose-built for ${name}. No contracts.`,
     canonical: `https://brightlaunchiq.com/ai-receptionist/industries/${slug}`,
-    keywords: `AI receptionist ${name.toLowerCase()}, ${name.toLowerCase()} phone answering, AI voice agent ${name.toLowerCase()}`,
+    keywords: `AI receptionist ${name.toLowerCase()}, ${name.toLowerCase()} phone answering, AI voice agent ${name.toLowerCase()}, ${name.toLowerCase()} appointment booking`,
   });
 
   // Inject Service + SoftwareApplication + FAQPage JSON-LD

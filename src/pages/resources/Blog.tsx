@@ -9,7 +9,7 @@ import { ArrowRight, Calendar, User, Clock, BookOpen, Briefcase, Users, Newspape
 
 const Blog = () => {
   useSEO({
-    title: "Learning Center | AI Receptionist Guides & Insights | BrightLaunchIQ",
+    title: "AI Receptionist Learning Center: Guides & Insights | BrightLaunchIQ",
     description: "Expert guides on AI receptionists, Answer Engine Optimization (AEO), privacy, accessibility, and sales automation. For business owners and consumers alike.",
     canonical: "https://brightlaunchiq.com/ai-receptionist/learning-center",
     keywords: "AI receptionist guides, AEO tips, AI sales automation articles, small business AI guides, learning center, AI receptionist privacy",
@@ -151,7 +151,7 @@ const Blog = () => {
           <div className="container">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
-                Learning Center
+                AI Receptionist Learning Center: Guides & Insights
               </h1>
               <p className="blog-intro text-lg text-muted-foreground max-w-2xl mx-auto">
                 Expert guides on AI receptionists — from ROI and implementation to privacy and accessibility. For business owners and consumers alike.

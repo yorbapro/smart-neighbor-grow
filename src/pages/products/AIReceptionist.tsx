@@ -18,7 +18,7 @@ import {
 
 const AIReceptionist = () => {
   useEffect(() => {
-    document.title = "AI Receptionist — 24/7 AI Phone Answering | BrightLaunchIQ";
+    document.title = "AI Receptionist: Features, Benefits & Capabilities | BrightLaunchIQ";
 
     const setMeta = (name: string, content: string, property = false) => {
       const attr = property ? "property" : "name";
@@ -33,7 +33,7 @@ const AIReceptionist = () => {
 
     setMeta("description", "24/7 AI receptionist that answers every call, books appointments, qualifies leads & routes urgent calls. Best for HVAC, dental, legal. No contracts.");
     setMeta("keywords", "AI receptionist, AI receptionist for small business, best AI receptionist, AI answering service, 24/7 AI receptionist, virtual receptionist AI, AI phone answering, AI call answering service, automated receptionist, AI receptionist cost, AI receptionist for HVAC, AI receptionist for contractors, AI receptionist for dentists, AI receptionist for law firms, AI receptionist for healthcare, AI receptionist for plumbers, AI receptionist vs virtual receptionist, AI receptionist vs answering service, AI front desk, AI appointment booking, after hours AI answering, missed call prevention AI");
-    setMeta("og:title", "AI Receptionist for Small Business | BrightLaunchIQ", true);
+    setMeta("og:title", "AI Receptionist: Features, Benefits & Capabilities | BrightLaunchIQ", true);
     setMeta("og:description", "24/7 AI receptionist that answers every call, qualifies leads, and books appointments. Best for HVAC, dental, legal, and service businesses.", true);
     setMeta("og:type", "product", true);
     setMeta("og:url", "https://brightlaunchiq.com/ai-receptionist", true);
@@ -209,9 +209,9 @@ const AIReceptionist = () => {
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.1]">
-              Never Miss Another
+              AI Receptionist: Features, Benefits
               <br />
-              <span className="text-gradient">Customer Call.</span>
+              <span className="text-gradient">&amp; Capabilities</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-white/70 mb-4 max-w-3xl mx-auto">

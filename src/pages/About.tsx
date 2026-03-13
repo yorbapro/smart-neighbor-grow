@@ -25,12 +25,12 @@ import {
 
 const About = () => {
   useEffect(() => {
-    document.title = "About Us — Tony Yorba & Scott McKinnon | BrightLaunchIQ";
+    document.title = "About BrightLaunchIQ: Our Mission & Team | BrightLaunchIQ";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "BrightLaunchIQ was founded by Tony Yorba and Scott McKinnon — two business owners who built AI receptionist tools because they needed them first. Learn our story."
+        "About BrightLaunchIQ: Founded by Tony Yorba and Scott McKinnon. We build AI receptionist technology for small businesses. Learn our mission, team, and why we started this company."
       );
     }
 
@@ -167,7 +167,7 @@ const About = () => {
               Our Story
             </span>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Two Business Owners Who Got Tired of <span className="text-primary">Missing Calls</span>
+              About BrightLaunchIQ: Our <span className="text-primary">Mission & Team</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               BrightLaunchIQ wasn't born in a Silicon Valley incubator. It was born in a screen-printing shop 

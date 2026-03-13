@@ -27,11 +27,11 @@ const tierPsychology: Record<string, string> = {
 
 const Pricing = () => {
   useEffect(() => {
-    document.title = "AI Receptionist Pricing | BrightLaunchIQ";
+    document.title = "AI Receptionist Pricing & Plans | BrightLaunchIQ";
 
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Simple AI Receptionist pricing. Core, Growth, and Pro plans. Less than one part-time employee. 24/7.");
+      metaDescription.setAttribute("content", "AI Receptionist pricing & plans. Core, Growth, and Pro tiers. Less than one part-time employee. 24/7 availability. No contracts.");
     }
 
     // Set canonical
@@ -137,9 +137,9 @@ const Pricing = () => {
           <div className="container relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.1]">
-                Simple Pricing.
+                AI Receptionist Pricing
                 <br />
-                <span className="text-gradient">Immediate ROI.</span>
+                <span className="text-gradient">&amp; Plans</span>
               </h1>
               <p className="text-xl text-white/70 max-w-2xl mx-auto mb-4">
                 Less than the cost of one part-time employee. Available 24/7. Our AI Receptionist delivers a proven ROI by capturing lost leads and optimizing your operational efficiency.

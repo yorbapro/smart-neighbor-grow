@@ -15,7 +15,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "AI Receptionist for Small Business | BrightLaunchIQ";
+    document.title = "24/7 AI Receptionist for Small Business | BrightLaunchIQ";
 
     const setMeta = (name: string, content: string, property = false) => {
       const attr = property ? "property" : "name";
@@ -28,13 +28,13 @@ const Index = () => {
       meta.setAttribute("content", content);
     };
 
-    setMeta("description", "24/7 AI receptionist for small business. Answers calls, qualifies leads, books appointments. HVAC, dental, legal & more. No contracts.");
+    setMeta("description", "24/7 AI receptionist for small business. Answers every call, qualifies leads, books appointments automatically. HVAC, dental, legal & more. No contracts.");
     setMeta("keywords", "AI receptionist, AI receptionist for small business, AI answering service, 24/7 AI receptionist, virtual receptionist AI, AI phone answering, AI call answering service, automated receptionist, best AI receptionist, AI receptionist cost, AI receptionist for contractors, AI receptionist for HVAC, AI receptionist for dentists, AI receptionist for law firms, AI receptionist for healthcare, AI receptionist for plumbers, AI receptionist vs virtual receptionist, AI receptionist vs answering service, how does AI receptionist work, small business AI phone answering, automated phone answering for small business, AI front desk, never miss a call AI, after hours answering service AI, AI appointment booking, missed call prevention");
     setMeta("author", "BrightLaunchIQ");
     setMeta("robots", "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
 
     // Open Graph
-    setMeta("og:title", "AI Receptionist for Small Business | BrightLaunchIQ", true);
+    setMeta("og:title", "24/7 AI Receptionist for Small Business | BrightLaunchIQ", true);
     setMeta("og:description", "Never miss another customer call. BrightLaunchIQ AI Receptionist answers 24/7, qualifies leads, and books appointments automatically. Best AI receptionist for HVAC, dental, legal, and service businesses.", true);
     setMeta("og:type", "website", true);
     setMeta("og:url", "https://brightlaunchiq.com", true);
@@ -42,7 +42,7 @@ const Index = () => {
 
     // Twitter
     setMeta("twitter:card", "summary_large_image");
-    setMeta("twitter:title", "AI Receptionist for Small Business | BrightLaunchIQ");
+    setMeta("twitter:title", "24/7 AI Receptionist for Small Business | BrightLaunchIQ");
     setMeta("twitter:description", "24/7 AI receptionist that answers every call, qualifies leads, and books appointments. Setup in days. No contracts.");
 
     // Canonical
@@ -379,7 +379,7 @@ const Index = () => {
     <div className="min-h-screen" style={{ background: 'hsl(215, 28%, 7%)' }}>
       <Header />
       <main id="main-content" role="main">
-        <h1 className="sr-only">AI Receptionist for Small Business | BrightLaunchIQ</h1>
+        <h1 className="sr-only">24/7 AI Receptionist for Small Business | BrightLaunchIQ</h1>
         <Hero />
         <HomeProblem />
         <HomeSolution />
