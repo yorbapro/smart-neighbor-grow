@@ -1,15 +1,21 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const OurFramework: React.FC = () => {
+  useEffect(() => {
+    document.title = 'The Governance Gap in AI – BrightLaunchIQ';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Discover BrightLaunchIQ\'s Sovereign Operator System (SOS) and how it closes the governance gap in AI deployments for small businesses.');
+    }
+    const canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (canonicalLink) {
+      canonicalLink.setAttribute('href', 'https://brightlaunchiq.com/our-framework');
+    }
+  }, []);
+
   return (
     <div className="bg-gray-50 py-16 sm:py-24 lg:py-32">
-      <Helmet>
-        <title>The Governance Gap in AI – BrightLaunchIQ</title>
-        <meta name="description" content="Discover BrightLaunchIQ's Sovereign Operator System (SOS) and how it closes the governance gap in AI deployments for small businesses." />
-        <link rel="canonical" href="https://brightlaunchiq.com/our-framework" />
-      </Helmet>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
