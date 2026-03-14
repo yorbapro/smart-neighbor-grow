@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const OurFramework: React.FC = () => {
   useEffect(() => {
@@ -15,7 +17,9 @@ const OurFramework: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-gray-50 py-16 sm:py-24 lg:py-32">
+    <>
+      <Header />
+      <div className="bg-gray-50 py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
@@ -487,6 +491,8 @@ const OurFramework: React.FC = () => {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 
