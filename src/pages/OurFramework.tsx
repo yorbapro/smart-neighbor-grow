@@ -21,11 +21,11 @@ const OurFramework: React.FC = () => {
       <Header />
       <div className="bg-gray-50 py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl whitespace-normal">
             The Governance Gap in AI
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 text-lg leading-8 text-gray-600 whitespace-normal">
             What Every Organization Deploying AI Agents Is Missing — and How to Close It
           </p>
         </div>
