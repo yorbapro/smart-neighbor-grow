@@ -171,6 +171,13 @@ const Header = () => {
               {isCompanyOpen && (
                 <div className="absolute top-full left-0 mt-2 w-48 bg-card rounded-xl border border-border shadow-card-hover py-2 z-50">
                   <Link
+                    to="/our-framework"
+                    className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                    onClick={() => setIsCompanyOpen(false)}
+                  >
+                    Our Framework
+                  </Link>
+                  <Link
                     to="/about"
                     className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
                     onClick={() => setIsCompanyOpen(false)}

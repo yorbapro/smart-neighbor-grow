@@ -196,6 +196,7 @@ import HowAIReceptionistsWork from "./pages/learning-center/HowAIReceptionistsWo
 import AIReceptionistBenefits from "./pages/learning-center/AIReceptionistBenefits";
 import AIVoiceQuality from "./pages/learning-center/AIVoiceQuality";
 import AIReceptionistSetupGuide from "./pages/learning-center/AIReceptionistSetupGuide";
+import OurFramework from "./pages/OurFramework";
 
 // Admin pages (rarely accessed)
 import AdminAuth from "./pages/AdminAuth";
@@ -261,6 +262,7 @@ const App = () => (
             <Route path="/ai-receptionist/faq" element={<FAQPage />} />
 
             {/* Content/SEO pages */}
+            <Route path="/our-framework" element={<OurFramework />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/ai-receptionist/learning-center" element={<Blog />} />
             <Route path="/ai-receptionist/learning-center/for-business" element={<ForBusiness />} />
