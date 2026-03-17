@@ -15,20 +15,18 @@ const mockStorage = {
   key: () => null,
 }
 
-const mockLocation = new URL('https://brightlaunchiq.com')
-const mockDocument = {
-  createElement: () => ({ style: {} }),
-  documentElement: { lang: 'en' },
-}
+// Assign globals to the global object using defineProperty to handle read-only properties
+Object.defineProperty(global, 'window', { value: globalDom.window, writable: true, configurable: true });
+Object.defineProperty(global, 'document', { value: globalDom.window.document, writable: true, configurable: true });
+Object.defineProperty(global, 'navigator', { value: globalDom.window.navigator, writable: true, configurable: true });
+Object.defineProperty(global, 'location', { value: globalDom.window.location, writable: true, configurable: true });
+Object.defineProperty(global, 'localStorage', { value: mockStorage, writable: true, configurable: true });
+Object.defineProperty(global, 'sessionStorage', { value: mockStorage, writable: true, configurable: true });
 
-Object.defineProperties(global, {
-  window: { value: { location: mockLocation, navigator: { userAgent: 'node' }, localStorage: mockStorage, sessionStorage: mockStorage, document: mockDocument }, writable: true },
-  document: { value: mockDocument, writable: true },
-  navigator: { value: { userAgent: 'node' }, writable: true },
-  localStorage: { value: mockStorage, writable: true },
-  sessionStorage: { value: mockStorage, writable: true },
-  location: { value: mockLocation, writable: true },
-})
+// Ensure Node.js environment doesn't trigger browser-only logic in React
+Object.defineProperty(global, 'Node', { value: globalDom.window.Node, writable: true, configurable: true });
+Object.defineProperty(global, 'Element', { value: globalDom.window.Element, writable: true, configurable: true });
+Object.defineProperty(global, 'HTMLElement', { value: globalDom.window.HTMLElement, writable: true, configurable: true });
 
 const template = fs.readFileSync(toAbsolute('dist/client/index.html'), 'utf-8')
 const { render } = await import('./dist/server/entry-server.js')
