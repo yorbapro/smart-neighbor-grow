@@ -31,34 +31,78 @@ const createMockElement = (tagName = 'div') => {
     childNodes: [],
     tagName: tagName.toUpperCase(),
     nodeName: tagName.toUpperCase(),
+    nodeType: 1,
     ownerDocument: null,
+    parentNode: null,
     attributes: {},
+    className: '',
+    textContent: '',
+    innerHTML: '',
+    id: '',
+    dataset: {},
     setAttribute: (name, value) => {
       element.attributes[name] = String(value)
+      if (name === 'id') element.id = String(value)
+      if (name === 'class') element.className = String(value)
     },
     getAttribute: (name) => element.attributes[name] ?? null,
+    hasAttribute: (name) => name in element.attributes,
     removeAttribute: (name) => {
       delete element.attributes[name]
     },
     appendChild: (child) => {
+      if (child && typeof child === 'object') child.parentNode = element
       element.childNodes.push(child)
       return child
     },
-    insertBefore: (child) => {
-      element.childNodes.unshift(child)
+    insertBefore: (child, ref) => {
+      if (child && typeof child === 'object') child.parentNode = element
+      const idx = ref ? element.childNodes.indexOf(ref) : 0
+      element.childNodes.splice(idx >= 0 ? idx : 0, 0, child)
       return child
     },
     removeChild: (child) => {
       element.childNodes = element.childNodes.filter((node) => node !== child)
+      if (child && typeof child === 'object') child.parentNode = null
       return child
     },
+    replaceChild: (newChild, oldChild) => {
+      const idx = element.childNodes.indexOf(oldChild)
+      if (idx >= 0) element.childNodes[idx] = newChild
+      return oldChild
+    },
+    cloneNode: () => createMockElement(tagName),
+    contains: () => false,
+    matches: () => false,
+    closest: () => null,
+    querySelector: () => null,
+    querySelectorAll: () => [],
+    getElementsByTagName: () => [],
+    getElementsByClassName: () => [],
     addEventListener: () => {},
     removeEventListener: () => {},
+    dispatchEvent: () => true,
+    getBoundingClientRect: () => ({ top: 0, left: 0, bottom: 0, right: 0, width: 0, height: 0 }),
+    focus: () => {},
+    blur: () => {},
+    click: () => {},
+    remove: () => {},
+    classList: {
+      add: () => {},
+      remove: () => {},
+      toggle: () => {},
+      contains: () => false,
+    },
   }
 
   Object.defineProperty(element, 'firstChild', {
     get: () => element.childNodes[0] ?? null,
   })
+  Object.defineProperty(element, 'lastChild', {
+    get: () => element.childNodes[element.childNodes.length - 1] ?? null,
+  })
+  Object.defineProperty(element, 'nextSibling', { get: () => null })
+  Object.defineProperty(element, 'previousSibling', { get: () => null })
 
   return element
 }
