@@ -179,8 +179,5 @@ const renderRoute = (routeUrl) => {
   } finally {
     console.warn = originalConsoleWarn
     console.info = originalConsoleInfo
-    if (globalDom && globalDom.window) {
-      globalDom.window.close()
-    }
   }
 })()
