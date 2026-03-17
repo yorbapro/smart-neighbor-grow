@@ -1,11 +1,16 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import url from 'node:url'
+import { JSDOM } from 'jsdom'
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
 const toAbsolute = (p) => path.resolve(__dirname, p)
 
-// Minimal browser-like globals for SSR/prerender
+// Mock browser globals for SSR
+const globalDom = new JSDOM('<!DOCTYPE html><html><body></body></html>', {
+  url: 'https://brightlaunchiq.com',
+})
+
 const mockStorage = {
   getItem: () => null,
   setItem: () => {},
@@ -156,5 +161,8 @@ const renderRoute = (routeUrl) => {
   } finally {
     console.warn = originalConsoleWarn
     console.info = originalConsoleInfo
+    if (globalDom && globalDom.window) {
+      globalDom.window.close()
+    }
   }
 })()
