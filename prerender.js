@@ -196,10 +196,18 @@ const mockWindow = {
 
 Object.defineProperty(globalThis, 'window', { value: mockWindow, writable: true, configurable: true })
 Object.defineProperty(globalThis, 'document', { value: mockDocument, writable: true, configurable: true })
-Object.defineProperty(globalThis, 'navigator', { value: { userAgent: 'node' }, writable: true, configurable: true })
+Object.defineProperty(globalThis, 'navigator', { value: { userAgent: 'node', language: 'en-US', languages: ['en-US'] }, writable: true, configurable: true })
 Object.defineProperty(globalThis, 'location', { value: mockLocation, writable: true, configurable: true })
 Object.defineProperty(globalThis, 'localStorage', { value: mockStorage, writable: true, configurable: true })
 Object.defineProperty(globalThis, 'sessionStorage', { value: mockStorage, writable: true, configurable: true })
+globalThis.ResizeObserver = globalThis.ResizeObserver || mockWindow.ResizeObserver
+globalThis.IntersectionObserver = globalThis.IntersectionObserver || mockWindow.IntersectionObserver
+globalThis.MutationObserver = globalThis.MutationObserver || mockWindow.MutationObserver
+globalThis.HTMLElement = globalThis.HTMLElement || mockWindow.HTMLElement
+globalThis.requestAnimationFrame = globalThis.requestAnimationFrame || mockWindow.requestAnimationFrame
+globalThis.cancelAnimationFrame = globalThis.cancelAnimationFrame || mockWindow.cancelAnimationFrame
+globalThis.getComputedStyle = globalThis.getComputedStyle || mockWindow.getComputedStyle
+globalThis.scrollTo = globalThis.scrollTo || mockWindow.scrollTo
 
 const template = fs.readFileSync(toAbsolute('dist/client/index.html'), 'utf-8')
 const { render } = await import('./dist/server/entry-server.js')
