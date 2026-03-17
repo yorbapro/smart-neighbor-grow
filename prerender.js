@@ -195,7 +195,7 @@ const mockWindow = {
   IntersectionObserver: class { observe() {} unobserve() {} disconnect() {} },
   MutationObserver: class { observe() {} disconnect() {} takeRecords() { return [] } },
   HTMLElement: function HTMLElement() {},
-  CustomEvent: class extends Event { constructor(type, opts) { super(type, opts); this.detail = opts?.detail } },
+  CustomEvent: class CustomEvent { constructor(type, opts) { this.type = type; this.detail = opts?.detail } },
 }
 
 Object.defineProperty(globalThis, 'window', { value: mockWindow, writable: true, configurable: true })
