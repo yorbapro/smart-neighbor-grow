@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import rocketLogo from "@/assets/rocket-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
