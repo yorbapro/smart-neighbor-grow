@@ -418,8 +418,9 @@ const App = () => (
             <Route path="/accessibility" element={<Accessibility />} />
             <Route path="/trust-security" element={<TrustSecurity />} />
 
-            {/* Blog slug redirect for legacy links */}
+            {/* Legacy redirects */}
             <Route path="/blog/:slug" element={<BlogSlugRedirect />} />
+            <Route path="/pricing" element={<Navigate to="/ai-receptionist/pricing" replace />} />
 
             {/* 404 Not Found */}
             <Route path="*" element={<NotFound />} />
