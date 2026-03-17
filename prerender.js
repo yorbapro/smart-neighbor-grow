@@ -23,16 +23,82 @@ const mockLocation = {
   hash: '',
 }
 
+const createMockElement = (tagName = 'div') => {
+  const element = {
+    style: {},
+    styleSheet: null,
+    children: [],
+    childNodes: [],
+    tagName: tagName.toUpperCase(),
+    nodeName: tagName.toUpperCase(),
+    ownerDocument: null,
+    attributes: {},
+    setAttribute: (name, value) => {
+      element.attributes[name] = String(value)
+    },
+    getAttribute: (name) => element.attributes[name] ?? null,
+    removeAttribute: (name) => {
+      delete element.attributes[name]
+    },
+    appendChild: (child) => {
+      element.childNodes.push(child)
+      return child
+    },
+    insertBefore: (child) => {
+      element.childNodes.unshift(child)
+      return child
+    },
+    removeChild: (child) => {
+      element.childNodes = element.childNodes.filter((node) => node !== child)
+      return child
+    },
+    addEventListener: () => {},
+    removeEventListener: () => {},
+  }
+
+  Object.defineProperty(element, 'firstChild', {
+    get: () => element.childNodes[0] ?? null,
+  })
+
+  return element
+}
+
+const mockHead = createMockElement('head')
+const mockBody = {
+  ...createMockElement('body'),
+  classList: { add: () => {}, remove: () => {} },
+}
+
 const mockDocument = {
-  createElement: () => ({ style: {} }),
+  hidden: false,
+  head: mockHead,
+  body: mockBody,
+  documentElement: { lang: 'en' },
+  createElement: (tagName = 'div') => {
+    const element = createMockElement(tagName)
+    element.ownerDocument = mockDocument
+    return element
+  },
+  createElementNS: (_namespace, tagName = 'div') => {
+    const element = createMockElement(tagName)
+    element.ownerDocument = mockDocument
+    return element
+  },
+  createTextNode: (text = '') => ({ nodeType: 3, textContent: String(text) }),
   querySelector: () => null,
   querySelectorAll: () => [],
   getElementById: () => null,
+  getElementsByTagName: (tagName) => {
+    if (tagName === 'head') return [mockHead]
+    if (tagName === 'body') return [mockBody]
+    return []
+  },
   addEventListener: () => {},
   removeEventListener: () => {},
-  body: { classList: { add: () => {}, remove: () => {} } },
-  documentElement: { lang: 'en' },
 }
+
+mockHead.ownerDocument = mockDocument
+mockBody.ownerDocument = mockDocument
 
 const mockWindow = {
   location: mockLocation,
@@ -41,7 +107,14 @@ const mockWindow = {
   sessionStorage: mockStorage,
   addEventListener: () => {},
   removeEventListener: () => {},
-  matchMedia: () => ({ matches: false, addListener: () => {}, removeListener: () => {} }),
+  matchMedia: () => ({
+    matches: false,
+    media: '',
+    addListener: () => {},
+    removeListener: () => {},
+    addEventListener: () => {},
+    removeEventListener: () => {},
+  }),
 }
 
 Object.defineProperty(globalThis, 'window', { value: mockWindow, writable: true, configurable: true })
