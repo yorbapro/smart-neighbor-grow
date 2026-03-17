@@ -180,6 +180,9 @@ const logProgress = (done, total) => {
 
 console.log(`Pre-rendering ${routesToPrerender.length} route(s)...`)
 
+let errorSamplesLogged = 0
+const MAX_ERROR_SAMPLES = 5
+
 const renderRoute = (routeUrl) => {
   try {
     const result = render(routeUrl)
@@ -202,6 +205,11 @@ const renderRoute = (routeUrl) => {
     fs.writeFileSync(toAbsolute(filePath), html)
     return { status: 'rendered', routeUrl }
   } catch (e) {
+    if (errorSamplesLogged < MAX_ERROR_SAMPLES) {
+      errorSamplesLogged++
+      console.error(`[prerender] FAILED ${routeUrl}: ${e.message}`)
+      console.error(e.stack)
+    }
     return { status: 'failed', routeUrl, error: e.message }
   }
 }
