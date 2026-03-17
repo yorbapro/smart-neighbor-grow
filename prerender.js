@@ -1,16 +1,11 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import url from 'node:url'
-import { JSDOM } from 'jsdom'
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
 const toAbsolute = (p) => path.resolve(__dirname, p)
 
-// Mock browser globals for SSR
-const globalDom = new JSDOM('<!DOCTYPE html><html><body></body></html>', {
-  url: 'https://brightlaunchiq.com',
-})
-
+// Minimal browser-like globals for SSR/prerender
 const mockStorage = {
   getItem: () => null,
   setItem: () => {},
@@ -20,18 +15,41 @@ const mockStorage = {
   key: () => null,
 }
 
-// Assign globals to the global object using defineProperty to handle read-only properties
-Object.defineProperty(global, 'window', { value: globalDom.window, writable: true, configurable: true });
-Object.defineProperty(global, 'document', { value: globalDom.window.document, writable: true, configurable: true });
-Object.defineProperty(global, 'navigator', { value: globalDom.window.navigator, writable: true, configurable: true });
-Object.defineProperty(global, 'location', { value: globalDom.window.location, writable: true, configurable: true });
-Object.defineProperty(global, 'localStorage', { value: mockStorage, writable: true, configurable: true });
-Object.defineProperty(global, 'sessionStorage', { value: mockStorage, writable: true, configurable: true });
+const mockLocation = {
+  href: 'https://brightlaunchiq.com/',
+  origin: 'https://brightlaunchiq.com',
+  pathname: '/',
+  search: '',
+  hash: '',
+}
 
-// Ensure Node.js environment doesn't trigger browser-only logic in React
-Object.defineProperty(global, 'Node', { value: globalDom.window.Node, writable: true, configurable: true });
-Object.defineProperty(global, 'Element', { value: globalDom.window.Element, writable: true, configurable: true });
-Object.defineProperty(global, 'HTMLElement', { value: globalDom.window.HTMLElement, writable: true, configurable: true });
+const mockDocument = {
+  createElement: () => ({ style: {} }),
+  querySelector: () => null,
+  querySelectorAll: () => [],
+  getElementById: () => null,
+  addEventListener: () => {},
+  removeEventListener: () => {},
+  body: { classList: { add: () => {}, remove: () => {} } },
+  documentElement: { lang: 'en' },
+}
+
+const mockWindow = {
+  location: mockLocation,
+  document: mockDocument,
+  localStorage: mockStorage,
+  sessionStorage: mockStorage,
+  addEventListener: () => {},
+  removeEventListener: () => {},
+  matchMedia: () => ({ matches: false, addListener: () => {}, removeListener: () => {} }),
+}
+
+Object.defineProperty(globalThis, 'window', { value: mockWindow, writable: true, configurable: true })
+Object.defineProperty(globalThis, 'document', { value: mockDocument, writable: true, configurable: true })
+Object.defineProperty(globalThis, 'navigator', { value: { userAgent: 'node' }, writable: true, configurable: true })
+Object.defineProperty(globalThis, 'location', { value: mockLocation, writable: true, configurable: true })
+Object.defineProperty(globalThis, 'localStorage', { value: mockStorage, writable: true, configurable: true })
+Object.defineProperty(globalThis, 'sessionStorage', { value: mockStorage, writable: true, configurable: true })
 
 const template = fs.readFileSync(toAbsolute('dist/client/index.html'), 'utf-8')
 const { render } = await import('./dist/server/entry-server.js')
@@ -161,8 +179,5 @@ const renderRoute = (routeUrl) => {
   } finally {
     console.warn = originalConsoleWarn
     console.info = originalConsoleInfo
-    if (globalDom && globalDom.window) {
-      globalDom.window.close()
-    }
   }
 })()
