@@ -117,7 +117,13 @@ const mockDocument = {
   hidden: false,
   head: mockHead,
   body: mockBody,
-  documentElement: { lang: 'en' },
+  documentElement: {
+    lang: 'en',
+    setAttribute: () => {},
+    getAttribute: () => null,
+    style: {},
+    classList: { add: () => {}, remove: () => {}, toggle: () => {}, contains: () => false },
+  },
   createElement: (tagName = 'div') => {
     const element = createMockElement(tagName)
     element.ownerDocument = mockDocument
@@ -128,7 +134,9 @@ const mockDocument = {
     element.ownerDocument = mockDocument
     return element
   },
-  createTextNode: (text = '') => ({ nodeType: 3, textContent: String(text) }),
+  createTextNode: (text = '') => ({ nodeType: 3, textContent: String(text), parentNode: null }),
+  createDocumentFragment: () => createMockElement('fragment'),
+  createComment: (text = '') => ({ nodeType: 8, textContent: String(text), parentNode: null }),
   querySelector: () => null,
   querySelectorAll: () => [],
   getElementById: () => null,
@@ -137,8 +145,14 @@ const mockDocument = {
     if (tagName === 'body') return [mockBody]
     return []
   },
+  getElementsByClassName: () => [],
   addEventListener: () => {},
   removeEventListener: () => {},
+  dispatchEvent: () => true,
+  createEvent: () => ({ initEvent: () => {} }),
+  cookie: '',
+  title: '',
+  readyState: 'complete',
 }
 
 mockHead.ownerDocument = mockDocument
