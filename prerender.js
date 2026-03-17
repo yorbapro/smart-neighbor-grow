@@ -1,3 +1,7 @@
+// Ensure production mode so react-dom loads the production CJS build
+// (avoids DOM feature detection in development build that crashes in Node)
+process.env.NODE_ENV = 'production'
+
 import fs from 'node:fs'
 import path from 'node:path'
 import url from 'node:url'
