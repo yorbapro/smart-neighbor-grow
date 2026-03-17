@@ -1,16 +1,11 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import url from 'node:url'
-import { JSDOM } from 'jsdom'
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
 const toAbsolute = (p) => path.resolve(__dirname, p)
 
-// Mock browser globals for SSR
-const globalDom = new JSDOM('<!DOCTYPE html><html><body></body></html>', {
-  url: 'https://brightlaunchiq.com',
-})
-
+// Minimal browser-like globals for SSR/prerender
 const mockStorage = {
   getItem: () => null,
   setItem: () => {},
@@ -20,13 +15,19 @@ const mockStorage = {
   key: () => null,
 }
 
+const mockLocation = new URL('https://brightlaunchiq.com')
+const mockDocument = {
+  createElement: () => ({ style: {} }),
+  documentElement: { lang: 'en' },
+}
+
 Object.defineProperties(global, {
-  window: { value: globalDom.window, writable: true },
-  document: { value: globalDom.window.document, writable: true },
-  navigator: { value: globalDom.window.navigator, writable: true },
+  window: { value: { location: mockLocation, navigator: { userAgent: 'node' }, localStorage: mockStorage, sessionStorage: mockStorage, document: mockDocument }, writable: true },
+  document: { value: mockDocument, writable: true },
+  navigator: { value: { userAgent: 'node' }, writable: true },
   localStorage: { value: mockStorage, writable: true },
   sessionStorage: { value: mockStorage, writable: true },
-  location: { value: globalDom.window.location, writable: true },
+  location: { value: mockLocation, writable: true },
 })
 
 const template = fs.readFileSync(toAbsolute('dist/client/index.html'), 'utf-8')
