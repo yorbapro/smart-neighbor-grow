@@ -165,6 +165,20 @@ const mockWindow = {
   sessionStorage: mockStorage,
   addEventListener: () => {},
   removeEventListener: () => {},
+  dispatchEvent: () => true,
+  scrollTo: () => {},
+  scrollBy: () => {},
+  scroll: () => {},
+  getComputedStyle: () => new Proxy({}, { get: () => '' }),
+  requestAnimationFrame: (cb) => setTimeout(cb, 0),
+  cancelAnimationFrame: () => {},
+  innerWidth: 1280,
+  innerHeight: 800,
+  outerWidth: 1280,
+  outerHeight: 800,
+  devicePixelRatio: 1,
+  history: { pushState: () => {}, replaceState: () => {}, back: () => {}, forward: () => {} },
+  performance: globalThis.performance || { now: () => Date.now(), mark: () => {}, measure: () => {} },
   matchMedia: () => ({
     matches: false,
     media: '',
@@ -173,6 +187,11 @@ const mockWindow = {
     addEventListener: () => {},
     removeEventListener: () => {},
   }),
+  ResizeObserver: class { observe() {} unobserve() {} disconnect() {} },
+  IntersectionObserver: class { observe() {} unobserve() {} disconnect() {} },
+  MutationObserver: class { observe() {} disconnect() {} takeRecords() { return [] } },
+  HTMLElement: function HTMLElement() {},
+  CustomEvent: class extends Event { constructor(type, opts) { super(type, opts); this.detail = opts?.detail } },
 }
 
 Object.defineProperty(globalThis, 'window', { value: mockWindow, writable: true, configurable: true })
