@@ -1,3 +1,7 @@
+// Ensure production mode so react-dom loads the production CJS build
+// (avoids DOM feature detection in development build that crashes in Node)
+process.env.NODE_ENV = 'production'
+
 import fs from 'node:fs'
 import path from 'node:path'
 import url from 'node:url'
@@ -31,34 +35,78 @@ const createMockElement = (tagName = 'div') => {
     childNodes: [],
     tagName: tagName.toUpperCase(),
     nodeName: tagName.toUpperCase(),
+    nodeType: 1,
     ownerDocument: null,
+    parentNode: null,
     attributes: {},
+    className: '',
+    textContent: '',
+    innerHTML: '',
+    id: '',
+    dataset: {},
     setAttribute: (name, value) => {
       element.attributes[name] = String(value)
+      if (name === 'id') element.id = String(value)
+      if (name === 'class') element.className = String(value)
     },
     getAttribute: (name) => element.attributes[name] ?? null,
+    hasAttribute: (name) => name in element.attributes,
     removeAttribute: (name) => {
       delete element.attributes[name]
     },
     appendChild: (child) => {
+      if (child && typeof child === 'object') child.parentNode = element
       element.childNodes.push(child)
       return child
     },
-    insertBefore: (child) => {
-      element.childNodes.unshift(child)
+    insertBefore: (child, ref) => {
+      if (child && typeof child === 'object') child.parentNode = element
+      const idx = ref ? element.childNodes.indexOf(ref) : 0
+      element.childNodes.splice(idx >= 0 ? idx : 0, 0, child)
       return child
     },
     removeChild: (child) => {
       element.childNodes = element.childNodes.filter((node) => node !== child)
+      if (child && typeof child === 'object') child.parentNode = null
       return child
     },
+    replaceChild: (newChild, oldChild) => {
+      const idx = element.childNodes.indexOf(oldChild)
+      if (idx >= 0) element.childNodes[idx] = newChild
+      return oldChild
+    },
+    cloneNode: () => createMockElement(tagName),
+    contains: () => false,
+    matches: () => false,
+    closest: () => null,
+    querySelector: () => null,
+    querySelectorAll: () => [],
+    getElementsByTagName: () => [],
+    getElementsByClassName: () => [],
     addEventListener: () => {},
     removeEventListener: () => {},
+    dispatchEvent: () => true,
+    getBoundingClientRect: () => ({ top: 0, left: 0, bottom: 0, right: 0, width: 0, height: 0 }),
+    focus: () => {},
+    blur: () => {},
+    click: () => {},
+    remove: () => {},
+    classList: {
+      add: () => {},
+      remove: () => {},
+      toggle: () => {},
+      contains: () => false,
+    },
   }
 
   Object.defineProperty(element, 'firstChild', {
     get: () => element.childNodes[0] ?? null,
   })
+  Object.defineProperty(element, 'lastChild', {
+    get: () => element.childNodes[element.childNodes.length - 1] ?? null,
+  })
+  Object.defineProperty(element, 'nextSibling', { get: () => null })
+  Object.defineProperty(element, 'previousSibling', { get: () => null })
 
   return element
 }
@@ -73,7 +121,13 @@ const mockDocument = {
   hidden: false,
   head: mockHead,
   body: mockBody,
-  documentElement: { lang: 'en' },
+  documentElement: {
+    lang: 'en',
+    setAttribute: () => {},
+    getAttribute: () => null,
+    style: {},
+    classList: { add: () => {}, remove: () => {}, toggle: () => {}, contains: () => false },
+  },
   createElement: (tagName = 'div') => {
     const element = createMockElement(tagName)
     element.ownerDocument = mockDocument
@@ -84,7 +138,9 @@ const mockDocument = {
     element.ownerDocument = mockDocument
     return element
   },
-  createTextNode: (text = '') => ({ nodeType: 3, textContent: String(text) }),
+  createTextNode: (text = '') => ({ nodeType: 3, textContent: String(text), parentNode: null }),
+  createDocumentFragment: () => createMockElement('fragment'),
+  createComment: (text = '') => ({ nodeType: 8, textContent: String(text), parentNode: null }),
   querySelector: () => null,
   querySelectorAll: () => [],
   getElementById: () => null,
@@ -93,8 +149,14 @@ const mockDocument = {
     if (tagName === 'body') return [mockBody]
     return []
   },
+  getElementsByClassName: () => [],
   addEventListener: () => {},
   removeEventListener: () => {},
+  dispatchEvent: () => true,
+  createEvent: () => ({ initEvent: () => {} }),
+  cookie: '',
+  title: '',
+  readyState: 'complete',
 }
 
 mockHead.ownerDocument = mockDocument
@@ -107,6 +169,20 @@ const mockWindow = {
   sessionStorage: mockStorage,
   addEventListener: () => {},
   removeEventListener: () => {},
+  dispatchEvent: () => true,
+  scrollTo: () => {},
+  scrollBy: () => {},
+  scroll: () => {},
+  getComputedStyle: () => new Proxy({}, { get: () => '' }),
+  requestAnimationFrame: (cb) => setTimeout(cb, 0),
+  cancelAnimationFrame: () => {},
+  innerWidth: 1280,
+  innerHeight: 800,
+  outerWidth: 1280,
+  outerHeight: 800,
+  devicePixelRatio: 1,
+  history: { pushState: () => {}, replaceState: () => {}, back: () => {}, forward: () => {} },
+  performance: globalThis.performance || { now: () => Date.now(), mark: () => {}, measure: () => {} },
   matchMedia: () => ({
     matches: false,
     media: '',
@@ -115,14 +191,27 @@ const mockWindow = {
     addEventListener: () => {},
     removeEventListener: () => {},
   }),
+  ResizeObserver: class { observe() {} unobserve() {} disconnect() {} },
+  IntersectionObserver: class { observe() {} unobserve() {} disconnect() {} },
+  MutationObserver: class { observe() {} disconnect() {} takeRecords() { return [] } },
+  HTMLElement: function HTMLElement() {},
+  CustomEvent: class CustomEvent { constructor(type, opts) { this.type = type; this.detail = opts?.detail } },
 }
 
 Object.defineProperty(globalThis, 'window', { value: mockWindow, writable: true, configurable: true })
 Object.defineProperty(globalThis, 'document', { value: mockDocument, writable: true, configurable: true })
-Object.defineProperty(globalThis, 'navigator', { value: { userAgent: 'node' }, writable: true, configurable: true })
+Object.defineProperty(globalThis, 'navigator', { value: { userAgent: 'node', language: 'en-US', languages: ['en-US'] }, writable: true, configurable: true })
 Object.defineProperty(globalThis, 'location', { value: mockLocation, writable: true, configurable: true })
 Object.defineProperty(globalThis, 'localStorage', { value: mockStorage, writable: true, configurable: true })
 Object.defineProperty(globalThis, 'sessionStorage', { value: mockStorage, writable: true, configurable: true })
+globalThis.ResizeObserver = globalThis.ResizeObserver || mockWindow.ResizeObserver
+globalThis.IntersectionObserver = globalThis.IntersectionObserver || mockWindow.IntersectionObserver
+globalThis.MutationObserver = globalThis.MutationObserver || mockWindow.MutationObserver
+globalThis.HTMLElement = globalThis.HTMLElement || mockWindow.HTMLElement
+globalThis.requestAnimationFrame = globalThis.requestAnimationFrame || mockWindow.requestAnimationFrame
+globalThis.cancelAnimationFrame = globalThis.cancelAnimationFrame || mockWindow.cancelAnimationFrame
+globalThis.getComputedStyle = globalThis.getComputedStyle || mockWindow.getComputedStyle
+globalThis.scrollTo = globalThis.scrollTo || mockWindow.scrollTo
 
 const template = fs.readFileSync(toAbsolute('dist/client/index.html'), 'utf-8')
 const { render } = await import('./dist/server/entry-server.js')
@@ -180,6 +269,9 @@ const logProgress = (done, total) => {
 
 console.log(`Pre-rendering ${routesToPrerender.length} route(s)...`)
 
+let errorSamplesLogged = 0
+const MAX_ERROR_SAMPLES = 5
+
 const renderRoute = (routeUrl) => {
   try {
     const result = render(routeUrl)
@@ -202,6 +294,11 @@ const renderRoute = (routeUrl) => {
     fs.writeFileSync(toAbsolute(filePath), html)
     return { status: 'rendered', routeUrl }
   } catch (e) {
+    if (errorSamplesLogged < MAX_ERROR_SAMPLES) {
+      errorSamplesLogged++
+      console.error(`[prerender] FAILED ${routeUrl}: ${e.message}`)
+      console.error(e.stack)
+    }
     return { status: 'failed', routeUrl, error: e.message }
   }
 }
