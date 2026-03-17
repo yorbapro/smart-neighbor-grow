@@ -47,9 +47,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-gradient-hero flex items-center justify-center">
-                <span className="text-white font-display font-bold text-lg">B</span>
-              </div>
+              <img src={rocketLogo} alt="BrightLaunchIQ logo" className="w-10 h-10" />
               <span className="font-display font-bold text-xl">
                 BrightLaunch<span className="text-primary">IQ</span>
               </span>
