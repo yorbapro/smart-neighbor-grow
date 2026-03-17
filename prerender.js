@@ -23,8 +23,23 @@ const mockLocation = {
   hash: '',
 }
 
+const createMockElement = (tagName = 'div') => ({
+  style: {},
+  children: [],
+  tagName: tagName.toUpperCase(),
+  nodeName: tagName.toUpperCase(),
+  ownerDocument: null,
+  setAttribute: () => {},
+  removeAttribute: () => {},
+  appendChild: () => {},
+  removeChild: () => {},
+  addEventListener: () => {},
+  removeEventListener: () => {},
+})
+
 const mockDocument = {
-  createElement: () => ({ style: {} }),
+  createElement: (tagName = 'div') => createMockElement(tagName),
+  createElementNS: (_namespace, tagName = 'div') => createMockElement(tagName),
   querySelector: () => null,
   querySelectorAll: () => [],
   getElementById: () => null,
@@ -41,7 +56,13 @@ const mockWindow = {
   sessionStorage: mockStorage,
   addEventListener: () => {},
   removeEventListener: () => {},
-  matchMedia: () => ({ matches: false, addListener: () => {}, removeListener: () => {} }),
+  matchMedia: () => ({
+    matches: false,
+    addListener: () => {},
+    removeListener: () => {},
+    addEventListener: () => {},
+    removeEventListener: () => {},
+  }),
 }
 
 Object.defineProperty(globalThis, 'window', { value: mockWindow, writable: true, configurable: true })
