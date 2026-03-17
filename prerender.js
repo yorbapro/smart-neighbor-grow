@@ -158,6 +158,5 @@ const renderRoute = (routeUrl) => {
   } finally {
     console.warn = originalConsoleWarn
     console.info = originalConsoleInfo
-    globalDom.window.close()
   }
 })()
