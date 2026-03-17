@@ -307,19 +307,20 @@ const renderRoute = (routeUrl) => {
   let renderedCount = 0
   let skipped404Count = 0
   let failedCount = 0
+  let exitCode = 0
   const batchSize = 3 // Render 3 routes in parallel to balance speed and memory
 
   try {
     for (let i = 0; i < routesToPrerender.length; i += batchSize) {
       const batch = routesToPrerender.slice(i, i + batchSize)
       const results = batch.map(renderRoute)
-      
+
       for (const result of results) {
         if (result.status === 'rendered') renderedCount += 1
         else if (result.status === 'skipped404') skipped404Count += 1
         else if (result.status === 'failed') failedCount += 1
       }
-      
+
       logProgress(renderedCount + skipped404Count + failedCount, routesToPrerender.length)
     }
 
@@ -342,12 +343,17 @@ const renderRoute = (routeUrl) => {
       }
     } catch (e) {
       console.error('Failed to pre-render 404.html:', e.message)
-      process.exitCode = 1
+      exitCode = 1
+    }
+
+    if (failedCount > 0) {
+      exitCode = 1
     }
 
     console.log(`Pre-render complete. Rendered: ${renderedCount}, skipped 404: ${skipped404Count}, failed: ${failedCount}`)
   } finally {
     console.warn = originalConsoleWarn
     console.info = originalConsoleInfo
+    process.exit(exitCode)
   }
 })()
