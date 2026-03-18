@@ -3,7 +3,6 @@
   "outputDirectory": "dist/client",
   "cleanUrls": true,
 
-
   "headers": [
     {
       "source": "/favicon.ico",
@@ -43,19 +42,9 @@
     }
   ],
 
-
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/api/prerender",
-      "has": [{
-        "type": "header",
-        "key": "User-Agent",
-        "value": "(?i).*bot|crawler|spider|prerender.*"
-      }]
-    },
     { "source": "/~oauth/initiate", "destination": "https://smart-neighbor-grow.lovable.app/~oauth/initiate" },
     { "source": "/~oauth/callback", "destination": "https://smart-neighbor-grow.lovable.app/~oauth/callback" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/api/prerender" }
   ]
 }

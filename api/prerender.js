@@ -1,5 +1,8 @@
+const fs = require('fs');
+const path = require('path');
+
 module.exports = async (req, res) => {
-  const userAgent = req.headers["user-agent"];
+  const userAgent = req.headers['user-agent'];
   const isCrawler = userAgent && /bot|crawler|spider|prerender/i.test(userAgent);
 
   if (isCrawler) {
@@ -7,22 +10,25 @@ module.exports = async (req, res) => {
     try {
       const prerenderResponse = await fetch(prerenderUrl, {
         headers: {
-          "X-Prerender-Token": "TXpWnFkc9Aac7rs0xVIA",
+          'X-Prerender-Token': 'TXpWnFkc9Aac7rs0xVIA',
         },
       });
 
       const body = await prerenderResponse.text();
       res.status(prerenderResponse.status).send(body);
-      return; // Important: Stop execution for crawlers
+      return;
     } catch (error) {
-      console.error("Prerender.io fetch error:", error);
+      console.error('Prerender.io fetch error:', error);
       // Fallback to serving the SPA if Prerender.io fails
-      res.status(500).send("<!-- Prerender.io fallback due to error -->");
+      const indexPath = path.join(__dirname, '..', 'dist', 'client', 'index.html');
+      const indexHtml = fs.readFileSync(indexPath, 'utf-8');
+      res.status(200).send(indexHtml);
       return;
     }
   }
 
-  // For regular users, allow the request to fall through to the SPA (handled by vercel.json rewrite)
-  // No explicit action needed here, as vercel.json will handle the rewrite to /index.html
-  res.status(200).send("<!-- Regular user request, serving SPA -->"); // This will be replaced by the SPA
+  // For regular users, serve the SPA's index.html
+  const indexPath = path.join(__dirname, '..', 'dist', 'client', 'index.html');
+  const indexHtml = fs.readFileSync(indexPath, 'utf-8');
+  res.status(200).send(indexHtml);
 };
