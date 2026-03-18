@@ -45,6 +45,6 @@
   "rewrites": [
     { "source": "/~oauth/initiate", "destination": "https://smart-neighbor-grow.lovable.app/~oauth/initiate" },
     { "source": "/~oauth/callback", "destination": "https://smart-neighbor-grow.lovable.app/~oauth/callback" },
-    { "source": "/(.*)", "destination": "/api/prerender" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
