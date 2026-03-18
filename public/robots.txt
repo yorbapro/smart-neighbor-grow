@@ -70,4 +70,4 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: https://brightlaunchiq.com/sitemap.xml
-LLMsTxt: https://brightlaunchiq.com/llms.txt
+llms-txt: https://brightlaunchiq.com/llms.txt
