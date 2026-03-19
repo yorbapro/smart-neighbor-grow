@@ -517,8 +517,8 @@ Generate an AEO audit with the following structure - return ONLY valid JSON, no 
 
       try {
         const emailResponse = await resend.emails.send({
-          from: "BrightLaunchIQ <onboarding@account.brightlaunchiq.com>",
-          reply_to: "success@BrightLaunchIQ.com",
+          from: "BrightLaunchIQ <results@brightlaunchiq.com>",
+          reply_to: "results@brightlaunchiq.com",
           to: [email],
           subject: `Your AEO Score: ${auditResult.overallScore}/100 - ${htmlBusinessName}`,
           headers: {
