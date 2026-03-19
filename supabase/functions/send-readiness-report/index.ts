@@ -52,39 +52,25 @@ const handler = async (req: Request): Promise<Response> => {
 
     const plainText = `Hi ${data.firstName},
 
-Thank you for completing our Missed Call Revenue Calculator. The results are in, and they show a significant opportunity for growth.
+Here are the results from your Missed Call Revenue Calculator.
 
-Based on the numbers you provided for ${data.businessName}, you are losing an estimated ${annualLoss} in potential revenue each year from missed calls.
+Based on the numbers you entered, ${data.businessName} may be losing an estimated ${annualLoss} per year from missed calls.
 
-Here's a quick breakdown based on your answers:
+Here's what drove that number:
 
-- You miss an average of ${missedCalls} calls per day.
-- With an average customer value of ${customerValue}, and with ${competitorPercent} of missed callers immediately contacting a competitor, the losses add up quickly.
-- Your biggest challenge is missing calls ${timingText}, which is a common and costly problem for successful businesses.
+- You miss an average of ${missedCalls} calls per day
+- Your average customer value is ${customerValue}
+- 50% of missed callers typically contact a competitor immediately
 
-But here's the good news: this is completely recoverable.
+When you're ready to review your options, feel free to call our Live AI Receptionist at 1-877-879-5552, or you can book a 15-minute call here: https://brightlaunchiq.com/contact
 
-The BrightLaunchIQ AI Receptionist is designed to capture 100% of your calls, 24/7, turning those potential losses into loyal customers. For less than the cost of one lost customer per month, you can secure all of them.
-
-Ready to stop losing revenue and start growing your business?
-
-Choose your next step:
-
-1. Start Recovering Your Lost Revenue — Buy Now: https://brightlaunchiq.com/ai-receptionist/get-started
-2. Book a Free 15-Minute Call: https://brightlaunchiq.com/contact
-3. Hear It in Action: Call Our Live AI Receptionist Now at 1-877-879-5552
-
-Best,
-
-The Team at BrightLaunchIQ
-1-877-879-5552 | success@BrightLaunchIQ.com`;
-
-    // Plain-text only — no HTML — to land in Gmail Primary inbox
+— The BrightLaunchIQ Team
+success@BrightLaunchIQ.com`;
 
     const { error } = await resend.emails.send({
       from: "BrightLaunchIQ <success@account.brightlaunchiq.com>",
       to: [data.email],
-      subject: `Your Personalized Report: You're Losing an Estimated ${annualLoss} a Year`,
+      subject: `Your Missed Call Results for ${data.businessName}`,
       reply_to: "success@BrightLaunchIQ.com",
       text: plainText,
       headers: {
