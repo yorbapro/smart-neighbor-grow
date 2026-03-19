@@ -144,7 +144,7 @@ serve(async (req) => {
           subject,
           text,
           headers: {
-            "List-Unsubscribe": "<mailto:success@BrightLaunchIQ.com?subject=unsubscribe>",
+            "List-Unsubscribe": "<mailto:results@brightlaunchiq.com?subject=unsubscribe>",
             "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
           },
         });
