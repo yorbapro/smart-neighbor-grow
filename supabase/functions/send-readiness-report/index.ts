@@ -62,10 +62,9 @@ Here's what drove that number:
 - Your average customer value is ${customerValue}
 - 50% of missed callers typically contact a competitor immediately
 
-When you're ready to review your options, feel free to call our Live AI Receptionist at 1-877-879-5552, or you can book a 15-minute call here: https://brightlaunchiq.com/contact
+When you're ready to review your options, feel free to call our Live AI Receptionist at 1-877-879-5552, or you can schedule a 15-minute call with a human here: https://brightlaunchiq.com/contact
 
-— The BrightLaunchIQ Team
-results@brightlaunchiq.com`;
+— The BrightLaunchIQ Team`;
 
     const { error } = await resend.emails.send({
       from: "BrightLaunchIQ <results@brightlaunchiq.com>",
