@@ -65,7 +65,7 @@ Here's what drove that number:
 When you're ready to review your options, feel free to call our Live AI Receptionist at 1-877-879-5552, or you can book a 15-minute call here: https://brightlaunchiq.com/contact
 
 — The BrightLaunchIQ Team
-success@BrightLaunchIQ.com`;
+results@brightlaunchiq.com`;
 
     const { error } = await resend.emails.send({
       from: "BrightLaunchIQ <results@brightlaunchiq.com>",
