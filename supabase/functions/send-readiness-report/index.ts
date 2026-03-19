@@ -68,10 +68,10 @@ When you're ready to review your options, feel free to call our Live AI Receptio
 success@BrightLaunchIQ.com`;
 
     const { error } = await resend.emails.send({
-      from: "BrightLaunchIQ <success@account.brightlaunchiq.com>",
+      from: "BrightLaunchIQ <results@brightlaunchiq.com>",
       to: [data.email],
       subject: `Your Missed Call Results for ${data.businessName}`,
-      reply_to: "success@BrightLaunchIQ.com",
+      reply_to: "results@brightlaunchiq.com",
       text: plainText,
       headers: {
         "List-Unsubscribe": "<mailto:success@BrightLaunchIQ.com?subject=unsubscribe>",
