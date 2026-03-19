@@ -138,13 +138,13 @@ serve(async (req) => {
       try {
         // Plain-text only for Gmail Primary inbox deliverability
         await resend.emails.send({
-          from: "BrightLaunchIQ <success@account.brightlaunchiq.com>",
-          reply_to: "success@BrightLaunchIQ.com",
+          from: "BrightLaunchIQ <results@brightlaunchiq.com>",
+          reply_to: "results@brightlaunchiq.com",
           to: [lead.email],
           subject,
           text,
           headers: {
-            "List-Unsubscribe": "<mailto:success@BrightLaunchIQ.com?subject=unsubscribe>",
+            "List-Unsubscribe": "<mailto:results@brightlaunchiq.com?subject=unsubscribe>",
             "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
           },
         });
@@ -208,7 +208,7 @@ Book a quick 15-minute call with one of our experts: https://brightlaunchiq.com/
 Best,
 
 The Team at BrightLaunchIQ
-1-877-879-5552 | success@BrightLaunchIQ.com`;
+1-877-879-5552 | results@brightlaunchiq.com`;
 
   return { subject, text };
 }
@@ -245,7 +245,7 @@ Or simply reply to this email with any questions you have.
 Best,
 
 The Team at BrightLaunchIQ
-1-877-879-5552 | success@BrightLaunchIQ.com`;
+1-877-879-5552 | results@brightlaunchiq.com`;
 
   return { subject, text };
 }
@@ -279,7 +279,7 @@ This is your last email from this sequence. We're here if you need us.
 Best,
 
 The Team at BrightLaunchIQ
-1-877-879-5552 | success@BrightLaunchIQ.com`;
+1-877-879-5552 | results@brightlaunchiq.com`;
 
   return { subject, text };
 }

@@ -65,16 +65,16 @@ Here's what drove that number:
 When you're ready to review your options, feel free to call our Live AI Receptionist at 1-877-879-5552, or you can book a 15-minute call here: https://brightlaunchiq.com/contact
 
 — The BrightLaunchIQ Team
-success@BrightLaunchIQ.com`;
+results@brightlaunchiq.com`;
 
     const { error } = await resend.emails.send({
-      from: "BrightLaunchIQ <success@account.brightlaunchiq.com>",
+      from: "BrightLaunchIQ <results@brightlaunchiq.com>",
       to: [data.email],
       subject: `Your Missed Call Results for ${data.businessName}`,
-      reply_to: "success@BrightLaunchIQ.com",
+      reply_to: "results@brightlaunchiq.com",
       text: plainText,
       headers: {
-        "List-Unsubscribe": "<mailto:success@BrightLaunchIQ.com?subject=unsubscribe>",
+        "List-Unsubscribe": "<mailto:results@brightlaunchiq.com?subject=unsubscribe>",
       },
     });
 
@@ -86,7 +86,7 @@ success@BrightLaunchIQ.com`;
     // Send internal notification to team
     try {
       await resend.emails.send({
-        from: "BrightLaunchIQ <success@account.brightlaunchiq.com>",
+        from: "BrightLaunchIQ <results@brightlaunchiq.com>",
         to: ["success@BrightLaunchIQ.com", "brightlaunchiq@gmail.com"],
         subject: `New Readiness Assessment Lead: ${data.businessName}`,
         text: `New Readiness Assessment lead submitted:\n\nName: ${data.firstName} ${data.lastName}\nBusiness: ${data.businessName}\nEmail: ${data.email}\nScore: ${data.score}\nSegment: ${data.segment}\nEstimated Annual Loss: ${annualLoss}`,
