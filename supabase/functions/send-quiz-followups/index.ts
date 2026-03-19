@@ -208,7 +208,7 @@ Book a quick 15-minute call with one of our experts: https://brightlaunchiq.com/
 Best,
 
 The Team at BrightLaunchIQ
-1-877-879-5552 | success@BrightLaunchIQ.com`;
+1-877-879-5552 | results@brightlaunchiq.com`;
 
   return { subject, text };
 }
