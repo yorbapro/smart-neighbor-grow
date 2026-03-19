@@ -138,8 +138,8 @@ serve(async (req) => {
       try {
         // Plain-text only for Gmail Primary inbox deliverability
         await resend.emails.send({
-          from: "BrightLaunchIQ <success@account.brightlaunchiq.com>",
-          reply_to: "success@BrightLaunchIQ.com",
+          from: "BrightLaunchIQ <results@brightlaunchiq.com>",
+          reply_to: "results@brightlaunchiq.com",
           to: [lead.email],
           subject,
           text,

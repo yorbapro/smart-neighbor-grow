@@ -86,7 +86,7 @@ success@BrightLaunchIQ.com`;
     // Send internal notification to team
     try {
       await resend.emails.send({
-        from: "BrightLaunchIQ <success@account.brightlaunchiq.com>",
+        from: "BrightLaunchIQ <results@brightlaunchiq.com>",
         to: ["success@BrightLaunchIQ.com", "brightlaunchiq@gmail.com"],
         subject: `New Readiness Assessment Lead: ${data.businessName}`,
         text: `New Readiness Assessment lead submitted:\n\nName: ${data.firstName} ${data.lastName}\nBusiness: ${data.businessName}\nEmail: ${data.email}\nScore: ${data.score}\nSegment: ${data.segment}\nEstimated Annual Loss: ${annualLoss}`,
