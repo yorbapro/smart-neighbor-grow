@@ -245,7 +245,7 @@ Or simply reply to this email with any questions you have.
 Best,
 
 The Team at BrightLaunchIQ
-1-877-879-5552 | success@BrightLaunchIQ.com`;
+1-877-879-5552 | results@brightlaunchiq.com`;
 
   return { subject, text };
 }
