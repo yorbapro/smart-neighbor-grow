@@ -279,7 +279,7 @@ This is your last email from this sequence. We're here if you need us.
 Best,
 
 The Team at BrightLaunchIQ
-1-877-879-5552 | success@BrightLaunchIQ.com`;
+1-877-879-5552 | results@brightlaunchiq.com`;
 
   return { subject, text };
 }

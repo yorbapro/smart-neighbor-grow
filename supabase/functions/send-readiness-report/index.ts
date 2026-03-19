@@ -74,7 +74,7 @@ results@brightlaunchiq.com`;
       reply_to: "results@brightlaunchiq.com",
       text: plainText,
       headers: {
-        "List-Unsubscribe": "<mailto:success@BrightLaunchIQ.com?subject=unsubscribe>",
+        "List-Unsubscribe": "<mailto:results@brightlaunchiq.com?subject=unsubscribe>",
       },
     });
 
