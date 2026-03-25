@@ -97,7 +97,7 @@ const includedSections = [
   },
   {
     icon: TrendingUp,
-    title: "Enterprise-Grade Optimization",
+    title: "Advanced Optimization",
     description: "Continuous improvement with cross-location analysis, revenue modeling, and strategic quarterly reviews.",
     items: [
       "All Growth optimization services",
