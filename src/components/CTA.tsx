@@ -41,7 +41,7 @@ const CTA = () => {
             </div>
             <div className="flex items-center gap-2 text-white/80">
               <CheckCircle className="w-5 h-5 text-primary" />
-              <span className="text-sm">Enterprise-grade security</span>
+              <span className="text-sm">Built on trusted, secure infrastructure</span>
             </div>
           </div>
 

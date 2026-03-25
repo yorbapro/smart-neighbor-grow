@@ -24,7 +24,7 @@ const SecurityPillar = () => {
               Security & Compliance
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              🔐 Enterprise-Grade Security.
+              🔐 Built on Trusted, Secure Infrastructure.
               <span className="text-gradient block mt-2">Built for Real Businesses.</span>
             </h2>
             <p className="text-lg text-secondary-foreground/70 max-w-2xl mx-auto leading-relaxed">
