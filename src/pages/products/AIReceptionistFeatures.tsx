@@ -98,7 +98,7 @@ const coreFeatures = [
       "Secure API connections",
       "Role-based access controls",
       "SOC 2–aligned infrastructure (if applicable)",
-      "HIPAA-compliant option (add-on tier)",
+      "HIPAA-ready configurations (available upon request)",
       "Call recording compliance messaging",
       "Secure cloud hosting",
       "Audit logs",
