@@ -336,7 +336,7 @@ const AIReceptionistProFeatures = () => {
         {
           "@type": "Question",
           "name": "What is the best AI receptionist for large businesses?",
-          "acceptedAnswer": { "@type": "Answer", "text": "BrightLaunchIQ's Pro plan at $1,497/month is designed for multi-location businesses needing enterprise-grade AI phone infrastructure — including custom voice cloning, advanced analytics with revenue attribution, multi-location routing, and priority support with a dedicated account contact." }
+          "acceptedAnswer": { "@type": "Answer", "text": "BrightLaunchIQ's Pro plan at $1,497/month is designed for multi-location businesses needing full-scale AI phone infrastructure — including custom voice cloning, advanced analytics with revenue attribution, multi-location routing, and priority support with a dedicated account contact." }
         },
         {
           "@type": "Question",
