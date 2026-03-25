@@ -22,7 +22,7 @@ const tierColors: Record<string, { badge: string; border: string; accent: string
 const tierPsychology: Record<string, string> = {
   Core: "Serious but accessible — everything you need to stop missing calls today.",
   Growth: "Operationally deeper — calendar, CRM, and automation working together.",
-  Pro: "Enterprise-grade infrastructure — multi-location, custom voice, priority optimization.",
+  Pro: "Full-scale infrastructure — multi-location, custom voice, priority optimization.",
 };
 
 const Pricing = () => {
