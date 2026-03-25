@@ -194,7 +194,7 @@ const AIReceptionistProIncludes = () => {
               <span className="text-red-400">AI Receptionist Pro</span>
             </h1>
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
-              Enterprise-grade AI phone infrastructure — multi-location routing, custom voice, advanced analytics, and priority support.
+              Full-scale AI phone infrastructure — multi-location routing, custom voice, advanced analytics, and priority support.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
