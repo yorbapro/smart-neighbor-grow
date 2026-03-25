@@ -336,7 +336,7 @@ const AIReceptionistProFeatures = () => {
         {
           "@type": "Question",
           "name": "What is the best AI receptionist for large businesses?",
-          "acceptedAnswer": { "@type": "Answer", "text": "BrightLaunchIQ's Pro plan at $1,497/month is designed for multi-location businesses needing enterprise-grade AI phone infrastructure — including custom voice cloning, advanced analytics with revenue attribution, multi-location routing, and priority support with a dedicated account contact." }
+          "acceptedAnswer": { "@type": "Answer", "text": "BrightLaunchIQ's Pro plan at $1,497/month is designed for multi-location businesses needing full-scale AI phone infrastructure — including custom voice cloning, advanced analytics with revenue attribution, multi-location routing, and priority support with a dedicated account contact." }
         },
         {
           "@type": "Question",
@@ -403,7 +403,7 @@ const AIReceptionistProFeatures = () => {
                 Pro Exclusive
               </span>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Enterprise-Grade Capabilities
+                Pro-Tier Capabilities
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Advanced features exclusive to the Pro tier — multi-location, custom voice, and priority support.
@@ -492,7 +492,7 @@ const AIReceptionistProFeatures = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Ready for Enterprise-Grade AI Phone Infrastructure?
+              Ready for Full-Scale AI Phone Infrastructure?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
               Get multi-location routing, custom voice, and priority support — live in as little as a few days.

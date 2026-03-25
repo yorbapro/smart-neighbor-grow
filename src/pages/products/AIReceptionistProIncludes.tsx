@@ -56,7 +56,7 @@ const includedSections = [
   {
     icon: BarChart3,
     title: "Advanced Analytics & Executive Reporting",
-    description: "Enterprise-grade dashboards with revenue attribution, trend analysis, and executive-ready performance reports.",
+    description: "Comprehensive dashboards with revenue attribution, trend analysis, and executive-ready performance reports.",
     items: [
       "Revenue attribution modeling",
       "Multi-location performance comparison",
@@ -97,7 +97,7 @@ const includedSections = [
   },
   {
     icon: TrendingUp,
-    title: "Enterprise-Grade Optimization",
+    title: "Advanced Optimization",
     description: "Continuous improvement with cross-location analysis, revenue modeling, and strategic quarterly reviews.",
     items: [
       "All Growth optimization services",
@@ -194,7 +194,7 @@ const AIReceptionistProIncludes = () => {
               <span className="text-red-400">AI Receptionist Pro</span>
             </h1>
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
-              Enterprise-grade AI phone infrastructure — multi-location routing, custom voice, advanced analytics, and priority support.
+              Full-scale AI phone infrastructure — multi-location routing, custom voice, advanced analytics, and priority support.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
@@ -296,7 +296,7 @@ const AIReceptionistProIncludes = () => {
         <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready for Enterprise-Grade AI Reception?
+              Ready for Full-Scale AI Reception?
             </h2>
             <p className="text-lg text-white/70 mb-8">Multi-location, custom voice, and priority support — built for scale.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

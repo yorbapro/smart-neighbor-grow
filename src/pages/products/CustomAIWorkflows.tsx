@@ -27,7 +27,7 @@ const CustomAIWorkflows = () => {
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "OmniLogic™ delivers fully customized AI automation solutions tailored to your unique business processes. Enterprise-grade workflows with dedicated support and custom integrations."
+        "OmniLogic™ delivers fully customized AI automation solutions tailored to your unique business processes. Professional-grade workflows with dedicated support and custom integrations."
       );
     }
 

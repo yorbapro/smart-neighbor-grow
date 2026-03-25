@@ -66,9 +66,9 @@ const faqs = [
     detail: "Each location gets its own settings, call routing, business hours, and greetings. Whether you have two locations or twenty, BrightLaunchIQ handles them all from a single system with unified reporting and analytics.",
   },
   {
-    question: "Is it HIPAA compliant for medical and dental offices?",
-    directAnswer: "BrightLaunchIQ offers HIPAA-ready configurations for healthcare providers.",
-    detail: "This includes encrypted call handling, secure data storage, role-based access controls, and compliant patient information handling. Medical offices, dental practices, chiropractors, and therapists can use BrightLaunchIQ with confidence. Contact our team to discuss specific compliance requirements.",
+    question: "Is it secure enough for medical and dental offices?",
+    directAnswer: "BrightLaunchIQ offers HIPAA-ready configurations for healthcare providers, with BAA availability upon request.",
+    detail: "This includes encrypted call handling, secure data storage, role-based access controls, and compliant patient information handling. For practices requiring a Business Associate Agreement (BAA), we work with you to ensure the appropriate configurations are in place. Contact our team to discuss your specific compliance requirements.",
   },
 ];
 

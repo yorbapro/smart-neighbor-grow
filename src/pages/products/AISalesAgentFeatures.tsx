@@ -171,8 +171,8 @@ const premiumFeatures = [
   {
     id: "enterprise",
     icon: Settings,
-    title: "Enterprise-Grade Options",
-    subtitle: "Enterprise-Grade Options",
+    title: "Advanced Options",
+    subtitle: "Advanced Options",
     features: [
       "Multi-location campaigns",
       "Territory routing",
@@ -225,7 +225,7 @@ const AISalesAgentFeatures = () => {
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Explore every feature of BrightLaunchIQ AI Sales Agent — automated outbound campaigns, AI sales intelligence, revenue tracking, CRM integration, and enterprise-grade options. Supercharge your outbound sales."
+        "Explore every feature of BrightLaunchIQ AI Sales Agent — automated outbound campaigns, AI sales intelligence, revenue tracking, CRM integration, and advanced scaling options. Supercharge your outbound sales."
       );
     }
 
@@ -307,7 +307,7 @@ const AISalesAgentFeatures = () => {
                 Premium Features
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Unlock revenue tracking, CRM automation, advanced sales AI, and enterprise-grade options when you upgrade.
+                Unlock revenue tracking, CRM automation, advanced sales AI, and scaling options when you upgrade.
               </p>
             </div>
 

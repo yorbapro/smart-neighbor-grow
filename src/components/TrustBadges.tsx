@@ -14,7 +14,7 @@ const TrustBadges = () => {
       <div className="container">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide mb-4">
-            Enterprise-Grade Security
+            Built on Trusted, Secure Infrastructure
           </p>
           <div className="flex flex-wrap justify-center gap-3 mb-4">
             {badges.map((badge) => (

@@ -68,7 +68,7 @@ const features = [
   { icon: Phone, title: "Call Routing & Transfers", desc: "Intelligently routes callers to the right person or department based on intent." },
   { icon: Zap, title: "CRM & Calendar Integration", desc: "Syncs with your CRM, Google Calendar, Outlook, and practice management tools." },
   { icon: Users, title: "Customizable Scripts & Voice", desc: "Tailor the AI's personality, tone, and conversation flow to match your brand." },
-  { icon: Shield, title: "HIPAA Compliance", desc: "Enterprise-grade security and HIPAA-compliant handling for medical and legal practices." },
+  { icon: Shield, title: "Security & Compliance", desc: "Built on trusted, secure infrastructure with HIPAA-ready configurations available for medical and legal practices." },
   { icon: Clock, title: "24/7 Availability", desc: "Answers every call — nights, weekends, and holidays — without overtime costs." },
 ];
 
@@ -83,7 +83,7 @@ const faqs = [
   { q: "Can an AI receptionist really sound natural?", a: "**Yes.** Modern AI receptionists use advanced voice synthesis and natural language processing to hold fluid, natural-sounding conversations. Most callers cannot distinguish the AI from a human receptionist, especially when the system is properly trained with your brand's tone and terminology." },
   { q: "Will an AI receptionist replace my staff?", a: "**No.** An AI receptionist is designed to augment your team, not replace them. It handles routine calls, after-hours inquiries, and overflow volume so your staff can focus on high-value tasks that require a human touch." },
   { q: "How long does it take to set up an AI receptionist?", a: "**Most businesses are live within 24–48 hours.** Setup involves configuring your call flows, integrating with your calendar and CRM, and customizing the AI's script. BrightLaunchIQ handles the entire setup process for you." },
-  { q: "Is my data safe with an AI receptionist?", a: "**Yes.** Reputable AI receptionist providers use enterprise-grade encryption, SOC 2 compliance, and HIPAA-compliant protocols. All call data is encrypted in transit and at rest, and access is strictly controlled." },
+  { q: "Is my data safe with an AI receptionist?", a: "**Yes.** Reputable AI receptionist providers use strong encryption, SOC 2–aligned infrastructure, and secure protocols. All call data is encrypted in transit and at rest, and access is strictly controlled." },
   { q: "Can an AI receptionist handle multiple calls at once?", a: "**Yes.** Unlike a human receptionist who can only handle one call at a time, an AI receptionist can manage unlimited simultaneous calls. This means zero hold times and zero missed calls, even during peak hours." },
   { q: "What happens if the AI can't answer a question?", a: "**It transfers the call.** Well-designed AI receptionists recognize when a question is outside their scope and seamlessly transfer the caller to a live team member. The handoff includes context so the caller doesn't have to repeat themselves." },
   { q: "Do AI receptionists work with my existing phone number?", a: "**Yes.** AI receptionists integrate with your current phone system through call forwarding. You keep your existing business number — no changes needed for your customers." },

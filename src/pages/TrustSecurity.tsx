@@ -6,10 +6,10 @@ import { Shield, Database, Lock, Eye, Server, Users, ShieldCheck, Phone, Ban, Tr
 
 const TrustSecurity = () => {
   useEffect(() => {
-    document.title = "Trust & Security | BrightLaunchIQ — Enterprise-Grade Data Protection";
+    document.title = "Trust & Security | BrightLaunchIQ — Built on Trusted, Secure Infrastructure";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Learn how BrightLaunchIQ protects your data with AES-256 encryption, GDPR/CCPA compliance, zero-training AI policies, and human-in-the-loop oversight. Enterprise-grade security built for local businesses.");
+      metaDescription.setAttribute("content", "Learn how BrightLaunchIQ protects your data with AES-256 encryption, GDPR/CCPA compliance, zero-training AI policies, and human-in-the-loop oversight. Built on trusted infrastructure from leading cloud and AI providers.");
     }
     window.scrollTo(0, 0);
   }, []);
@@ -131,7 +131,7 @@ const TrustSecurity = () => {
             <div className="space-y-4">
               {[
                 { title: "GDPR & CCPA aligned", desc: "Our data handling practices align with GDPR and CCPA requirements, including data minimization, right to deletion, and transparent processing notices." },
-                { title: "HIPAA-ready workflows", desc: "For healthcare and regulated industries, we offer HIPAA-ready configurations with enhanced access controls, audit logging, and BAA availability." },
+                { title: "HIPAA-ready configurations", desc: "For healthcare providers, we offer HIPAA-ready configurations with enhanced access controls and audit logging. Business Associate Agreements (BAAs) are available upon request." },
                 { title: "Custom compliance review", desc: "Need to meet specific regulatory requirements? Our team works with your compliance officers to configure deployments that satisfy your industry's standards." },
               ].map((item) => (
                 <div key={item.title} className="p-5 rounded-xl bg-card border border-border">
