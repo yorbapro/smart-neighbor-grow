@@ -56,7 +56,7 @@ const includedSections = [
   {
     icon: BarChart3,
     title: "Advanced Analytics & Executive Reporting",
-    description: "Enterprise-grade dashboards with revenue attribution, trend analysis, and executive-ready performance reports.",
+    description: "Comprehensive dashboards with revenue attribution, trend analysis, and executive-ready performance reports.",
     items: [
       "Revenue attribution modeling",
       "Multi-location performance comparison",
