@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 const heroImages = [
   { src: "/images/ai-receptionist-for-hvac-companies.webp", alt: "AI receptionist for HVAC companies - 24/7 call answering and appointment booking for HVAC contractors", title: "AI Receptionist for HVAC Companies" },
   { src: "/images/ai-receptionist-for-plumbing-businesses.webp", alt: "AI receptionist for plumbing businesses - automated call handling and lead qualification for plumbers", title: "AI Receptionist for Plumbing Businesses" },
-  { src: "/images/ai-receptionist-for-medical-practices.webp", alt: "AI receptionist for medical practices - HIPAA-compliant call answering and patient scheduling for healthcare", title: "AI Receptionist for Medical Practices" },
+  { src: "/images/ai-receptionist-for-medical-practices.webp", alt: "AI receptionist for medical practices - secure call answering and patient scheduling for healthcare", title: "AI Receptionist for Medical Practices" },
   { src: "/images/ai-receptionist-for-law-firms.webp", alt: "AI receptionist for law firms - secure call handling and client lead management for legal professionals", title: "AI Receptionist for Law Firms" },
 ];
 

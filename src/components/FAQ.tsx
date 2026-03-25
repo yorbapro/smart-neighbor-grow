@@ -90,9 +90,9 @@ const FAQ = () => {
     },
     {
       question: "What if I operate in a regulated industry?",
-      directAnswer: "We offer HIPAA-ready workflows and compliance-conscious deployments for regulated industries.",
+      directAnswer: "We offer compliance-conscious deployments built on trusted, secure infrastructure for regulated industries.",
       detail:
-        "For healthcare, legal, financial, and other regulated industries, we offer HIPAA-ready configurations, enhanced access controls, audit logging, and custom compliance reviews. Our team works with your compliance officers to ensure your deployment meets industry-specific requirements.",
+        "For healthcare, legal, financial, and other regulated industries, we offer enhanced access controls, audit logging, and custom compliance reviews. For healthcare providers requiring HIPAA compliance, BAAs are available upon request. Our team works with your compliance officers to ensure your deployment meets industry-specific requirements.",
     },
   ];
 

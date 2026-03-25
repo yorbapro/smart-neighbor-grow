@@ -482,8 +482,8 @@ const AIReceptionist = () => {
               Security & Compliance
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-foreground mb-4">
-              Enterprise-Grade Security
-              <span className="text-gradient block mt-2">for SMBs</span>
+               Built on Trusted, Secure
+               <span className="text-gradient block mt-2">Infrastructure</span>
             </h2>
           </div>
 
