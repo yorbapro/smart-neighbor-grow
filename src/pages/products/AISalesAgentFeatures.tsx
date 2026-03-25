@@ -225,7 +225,7 @@ const AISalesAgentFeatures = () => {
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Explore every feature of BrightLaunchIQ AI Sales Agent — automated outbound campaigns, AI sales intelligence, revenue tracking, CRM integration, and enterprise-grade options. Supercharge your outbound sales."
+        "Explore every feature of BrightLaunchIQ AI Sales Agent — automated outbound campaigns, AI sales intelligence, revenue tracking, CRM integration, and advanced scaling options. Supercharge your outbound sales."
       );
     }
 
