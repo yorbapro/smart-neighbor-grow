@@ -68,7 +68,7 @@ const features = [
   { icon: Phone, title: "Call Routing & Transfers", desc: "Intelligently routes callers to the right person or department based on intent." },
   { icon: Zap, title: "CRM & Calendar Integration", desc: "Syncs with your CRM, Google Calendar, Outlook, and practice management tools." },
   { icon: Users, title: "Customizable Scripts & Voice", desc: "Tailor the AI's personality, tone, and conversation flow to match your brand." },
-  { icon: Shield, title: "HIPAA Compliance", desc: "Enterprise-grade security and HIPAA-compliant handling for medical and legal practices." },
+  { icon: Shield, title: "Security & Compliance", desc: "Built on trusted, secure infrastructure with HIPAA-ready configurations available for medical and legal practices." },
   { icon: Clock, title: "24/7 Availability", desc: "Answers every call — nights, weekends, and holidays — without overtime costs." },
 ];
 
