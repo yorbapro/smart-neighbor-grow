@@ -171,8 +171,8 @@ const premiumFeatures = [
   {
     id: "enterprise",
     icon: Settings,
-    title: "Enterprise-Grade Options",
-    subtitle: "Enterprise-Grade Options",
+    title: "Advanced Options",
+    subtitle: "Advanced Options",
     features: [
       "Multi-location campaigns",
       "Territory routing",
