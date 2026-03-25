@@ -492,7 +492,7 @@ const AIReceptionistProFeatures = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Ready for Enterprise-Grade AI Phone Infrastructure?
+              Ready for Full-Scale AI Phone Infrastructure?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
               Get multi-location routing, custom voice, and priority support — live in as little as a few days.

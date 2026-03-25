@@ -307,7 +307,7 @@ const AISalesAgentFeatures = () => {
                 Premium Features
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Unlock revenue tracking, CRM automation, advanced sales AI, and enterprise-grade options when you upgrade.
+                Unlock revenue tracking, CRM automation, advanced sales AI, and scaling options when you upgrade.
               </p>
             </div>
 

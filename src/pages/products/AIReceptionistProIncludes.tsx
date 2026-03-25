@@ -296,7 +296,7 @@ const AIReceptionistProIncludes = () => {
         <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready for Enterprise-Grade AI Reception?
+              Ready for Full-Scale AI Reception?
             </h2>
             <p className="text-lg text-white/70 mb-8">Multi-location, custom voice, and priority support — built for scale.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
