@@ -66,7 +66,7 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-wrap gap-6 animate-slide-up" style={{ animationDelay: "0.3s" }}>
-              {["Founded by business owners", "Live in days, not months", "Enterprise-grade security"].map((item) => (
+              {["Founded by business owners", "Live in days, not months", "Built on trusted, secure infrastructure"].map((item) => (
                 <div key={item} className="flex items-center gap-2 text-white/60">
                   <CheckCircle className="w-4 h-4 text-primary" />
                   <span className="text-sm">{item}</span>
