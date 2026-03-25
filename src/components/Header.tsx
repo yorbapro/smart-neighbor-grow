@@ -309,11 +309,11 @@ const Header = () => {
                   About Us
                 </Link>
                 <Link
-                  to="/contact"
+                  to="/our-framework"
                   className="block text-muted-foreground hover:text-foreground transition-colors font-medium py-2 pl-4 focus:outline-none focus:ring-2 focus:ring-ring rounded-md"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Contact
+                  Our Framework
                 </Link>
                 <Link
                   to="/trust-security"
@@ -321,6 +321,13 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Trust & Security
+                </Link>
+                <Link
+                  to="/contact"
+                  className="block text-muted-foreground hover:text-foreground transition-colors font-medium py-2 pl-4 focus:outline-none focus:ring-2 focus:ring-ring rounded-md"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Contact
                 </Link>
               </div>
 
