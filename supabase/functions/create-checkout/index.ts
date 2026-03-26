@@ -92,7 +92,7 @@ serve(async (req) => {
         metadata: {
           businessName: businessName || "",
           industry: industry || "",
-          product: productTier,
+          product,
         },
       },
       metadata: {
