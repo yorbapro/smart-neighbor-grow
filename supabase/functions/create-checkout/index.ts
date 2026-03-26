@@ -64,8 +64,8 @@ serve(async (req) => {
     }
 
     // Get the correct price IDs for the selected product
-    const productTier = product as ProductTier;
-    if (!PRICE_IDS[productTier]) {
+    if (!PRICE_IDS[product]) {
+
       throw new Error(`Invalid product tier: ${product}`);
     }
     
