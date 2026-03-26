@@ -151,14 +151,33 @@ const AdminEmailTemplates = () => {
     editedBody !== selectedTemplate.body_html
   );
 
-  // Sample data for preview
-  const sampleData = {
+  // Variable sets by template category
+  const auditVariables: Record<string, string> = {
     business_name: "Smith Plumbing Co.",
     overall_score: "35",
     potential_score: "82",
     score_improvement: "47",
     email: "john@smithplumbing.com",
   };
+
+  const quizVariables: Record<string, string> = {
+    first_name: "John",
+    business_name: "Smith Plumbing Co.",
+    annual_loss: "$62,400",
+    missed_calls: "4",
+    customer_value: "$600",
+    goal_text: "capture every lead and maximize revenue",
+    timing_text: "during peak hours",
+  };
+
+  const isQuizTemplate = (key: string) => key.startsWith("quiz_");
+  const sampleData = selectedTemplate && isQuizTemplate(selectedTemplate.template_key)
+    ? quizVariables
+    : auditVariables;
+
+  // Group templates
+  const auditTemplates = templates.filter(t => !isQuizTemplate(t.template_key));
+  const quizTemplates = templates.filter(t => isQuizTemplate(t.template_key));
 
   const getPreviewHtml = useMemo(() => {
     let html = editedBody;
