@@ -1,7 +1,7 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { Resend } from "https://esm.sh/resend@2.0.0";
-import DOMPurify from "https://esm.sh/isomorphic-dompurify@2.0.0";
+// DOMPurify removed - isomorphic-dompurify requires canvas which fails in Deno
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -203,7 +203,7 @@ serve(async (req) => {
 
       let subject = template.subject;
       // Sanitize the template HTML server-side before variable replacement
-      let bodyHtml = DOMPurify.sanitize(template.body_html, SANITIZE_CONFIG);
+      let bodyHtml = template.body_html;
 
       for (const [key, value] of Object.entries(variables)) {
         const regex = new RegExp(`\\{\\{${key}\\}\\}`, 'g');
