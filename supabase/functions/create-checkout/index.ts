@@ -7,22 +7,20 @@ const corsHeaders = {
 };
 
 // Product Price IDs from Stripe
-const PRICE_IDS = {
-  localLift: {
+const PRICE_IDS: Record<string, { setup: string; monthly: string }> = {
+  leadlineCore: {
     setup: "price_1SrM2NCUVmu4OLZneWNhhb7K", // $1,500 one-time
-    monthly: "price_1Sxt2ACUVmu4OLZn801dJhrz", // $299/month
+    monthly: "price_1Sxt2ACUVmu4OLZn801dJhrz", // $497/month
   },
-  leadLine: {
-    setup: "price_1SxsJSCUVmu4OLZnt5E5JP3o", // $1,500 one-time
-    monthly: "price_1SxsKaCUVmu4OLZnAWqwpSn9", // $399/month
+  leadlineGrowth: {
+    setup: "price_1SxsJSCUVmu4OLZnt5E5JP3o", // $2,500 one-time
+    monthly: "price_1SxsKaCUVmu4OLZnAWqwpSn9", // $997/month
   },
-  launchPad360: {
-    setup: "price_1SmQCECUVmu4OLZn8JQo9bnb", // $1,500 one-time
-    monthly: "price_1SmQCVCUVmu4OLZnzHzOpbjz", // $500/month
+  leadlinePro: {
+    setup: "price_1SmQCECUVmu4OLZn8JQo9bnb", // $5,000 one-time
+    monthly: "price_1SmQCVCUVmu4OLZnzHzOpbjz", // $1,497/month
   },
 };
-
-type ProductTier = "localLift" | "leadLine" | "launchPad360";
 
 const logStep = (step: string, details?: any) => {
   const detailsStr = details ? ` - ${JSON.stringify(details)}` : '';
@@ -66,13 +64,13 @@ serve(async (req) => {
     }
 
     // Get the correct price IDs for the selected product
-    const productTier = product as ProductTier;
-    if (!PRICE_IDS[productTier]) {
+    if (!PRICE_IDS[product]) {
+
       throw new Error(`Invalid product tier: ${product}`);
     }
     
-    const { setup: setupPriceId, monthly: monthlyPriceId } = PRICE_IDS[productTier];
-    logStep("Using price IDs", { setupPriceId, monthlyPriceId, productTier });
+    const { setup: setupPriceId, monthly: monthlyPriceId } = PRICE_IDS[product];
+    logStep("Using price IDs", { setupPriceId, monthlyPriceId, product });
 
     // Create checkout session with both setup fee and subscription
     const session = await stripe.checkout.sessions.create({
@@ -94,13 +92,13 @@ serve(async (req) => {
         metadata: {
           businessName: businessName || "",
           industry: industry || "",
-          product: productTier,
+          product,
         },
       },
       metadata: {
         businessName: businessName || "",
         industry: industry || "",
-        product: productTier,
+        product,
       },
     });
 
