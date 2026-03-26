@@ -203,7 +203,7 @@ serve(async (req) => {
 
       let subject = template.subject;
       // Sanitize the template HTML server-side before variable replacement
-      let bodyHtml = DOMPurify.sanitize(template.body_html, SANITIZE_CONFIG);
+      let bodyHtml = template.body_html;
 
       for (const [key, value] of Object.entries(variables)) {
         const regex = new RegExp(`\\{\\{${key}\\}\\}`, 'g');
