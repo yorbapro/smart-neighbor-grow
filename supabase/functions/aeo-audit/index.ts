@@ -353,6 +353,46 @@ Generate an AEO audit with the following structure - return ONLY valid JSON, no 
     const htmlIndustry = escapeHtml(industry);
     const htmlServices = escapeHtml(services);
 
+    // Try to load audit_initial template from database
+    let dbEmailSubject: string | null = null;
+    let dbEmailBody: string | null = null;
+
+    if (supabaseUrl && supabaseServiceKey) {
+      try {
+        const dbClient = createClient(supabaseUrl, supabaseServiceKey);
+        const { data: template } = await dbClient
+          .from("email_templates")
+          .select("subject, body_html")
+          .eq("template_key", "audit_initial")
+          .single();
+
+        if (template) {
+          const templateVars: Record<string, string> = {
+            business_name: businessName,
+            overall_score: String(auditResult.overallScore),
+            potential_score: String(auditResult.potentialScore),
+            score_improvement: String(auditResult.potentialScore - auditResult.overallScore),
+            city: city,
+            state: state,
+            industry: industry,
+            services: services,
+          };
+          const replaceVars = (tpl: string, vars: Record<string, string>): string => {
+            let result = tpl;
+            for (const [key, value] of Object.entries(vars)) {
+              result = result.replace(new RegExp(`\\{\\{${key}\\}\\}`, 'g'), value);
+            }
+            return result;
+          };
+          dbEmailSubject = replaceVars(template.subject, templateVars);
+          dbEmailBody = replaceVars(template.body_html, templateVars);
+          console.log("Loaded audit_initial template from database");
+        }
+      } catch (dbErr) {
+        console.warn("Failed to load audit template from DB, using fallback:", dbErr);
+      }
+    }
+
     // Send email with results
     const resendApiKey = Deno.env.get("RESEND_API_KEY");
     if (resendApiKey) {
