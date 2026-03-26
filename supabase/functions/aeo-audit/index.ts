@@ -556,17 +556,25 @@ Generate an AEO audit with the following structure - return ONLY valid JSON, no 
 </html>`;
 
       try {
+        // Use DB template subject if available, otherwise fallback to hardcoded
+        const finalSubject = dbEmailSubject || `Your AEO Score: ${auditResult.overallScore}/100 - ${htmlBusinessName}`;
+        // Use DB template body if available (as HTML), otherwise use the rich hardcoded email
+        const finalHtml = dbEmailBody || emailHtml;
+        const finalText = dbEmailBody
+          ? dbEmailBody.replace(/<br\s*\/?>/gi, '\n').replace(/<\/p>/gi, '\n\n').replace(/<\/li>/gi, '\n').replace(/<li[^>]*>/gi, '- ').replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/\n{3,}/g, '\n\n').trim()
+          : `Your AEO Audit Results for ${businessName}\n\nOverall Score: ${auditResult.overallScore}/100\nPotential Score: ${auditResult.potentialScore}/100\n\nReady to improve? Visit https://brightlaunchiq.com/get-started\n\nBrightLaunchIQ | Sacramento, CA 95814\nUnsubscribe: mailto:unsubscribe@account.brightlaunchiq.com?subject=unsubscribe`;
+
         const emailResponse = await resend.emails.send({
           from: "BrightLaunchIQ <results@brightlaunchiq.com>",
           reply_to: "results@brightlaunchiq.com",
           to: [email],
-          subject: `Your AEO Score: ${auditResult.overallScore}/100 - ${htmlBusinessName}`,
+          subject: finalSubject,
           headers: {
             "List-Unsubscribe": "<mailto:unsubscribe@account.brightlaunchiq.com?subject=unsubscribe>",
             "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
           },
-          text: `Your AEO Audit Results for ${businessName}\n\nOverall Score: ${auditResult.overallScore}/100\nPotential Score: ${auditResult.potentialScore}/100\n\nReady to improve? Visit https://brightlaunchiq.com/get-started\n\nBrightLaunchIQ | Sacramento, CA 95814\nUnsubscribe: mailto:unsubscribe@account.brightlaunchiq.com?subject=unsubscribe`,
-          html: emailHtml,
+          text: finalText,
+          html: finalHtml,
         });
         console.log("Email sent:", emailResponse);
       } catch (emailError) {
