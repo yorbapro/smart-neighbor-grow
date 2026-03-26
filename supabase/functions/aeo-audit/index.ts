@@ -1,7 +1,7 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { Resend } from "https://esm.sh/resend@2.0.0";
-import DOMPurify from "https://esm.sh/isomorphic-dompurify@2.0.0";
+// DOMPurify removed - not used, and isomorphic-dompurify requires canvas which fails in Deno
 import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 
 const corsHeaders = {
@@ -353,6 +353,46 @@ Generate an AEO audit with the following structure - return ONLY valid JSON, no 
     const htmlIndustry = escapeHtml(industry);
     const htmlServices = escapeHtml(services);
 
+    // Try to load audit_initial template from database
+    let dbEmailSubject: string | null = null;
+    let dbEmailBody: string | null = null;
+
+    if (supabaseUrl && supabaseServiceKey) {
+      try {
+        const dbClient = createClient(supabaseUrl, supabaseServiceKey);
+        const { data: template } = await dbClient
+          .from("email_templates")
+          .select("subject, body_html")
+          .eq("template_key", "audit_initial")
+          .single();
+
+        if (template) {
+          const templateVars: Record<string, string> = {
+            business_name: businessName,
+            overall_score: String(auditResult.overallScore),
+            potential_score: String(auditResult.potentialScore),
+            score_improvement: String(auditResult.potentialScore - auditResult.overallScore),
+            city: city,
+            state: state,
+            industry: industry,
+            services: services,
+          };
+          const replaceVars = (tpl: string, vars: Record<string, string>): string => {
+            let result = tpl;
+            for (const [key, value] of Object.entries(vars)) {
+              result = result.replace(new RegExp(`\\{\\{${key}\\}\\}`, 'g'), value);
+            }
+            return result;
+          };
+          dbEmailSubject = replaceVars(template.subject, templateVars);
+          dbEmailBody = replaceVars(template.body_html, templateVars);
+          console.log("Loaded audit_initial template from database");
+        }
+      } catch (dbErr) {
+        console.warn("Failed to load audit template from DB, using fallback:", dbErr);
+      }
+    }
+
     // Send email with results
     const resendApiKey = Deno.env.get("RESEND_API_KEY");
     if (resendApiKey) {
@@ -516,17 +556,25 @@ Generate an AEO audit with the following structure - return ONLY valid JSON, no 
 </html>`;
 
       try {
+        // Use DB template subject if available, otherwise fallback to hardcoded
+        const finalSubject = dbEmailSubject || `Your AEO Score: ${auditResult.overallScore}/100 - ${htmlBusinessName}`;
+        // Use DB template body if available (as HTML), otherwise use the rich hardcoded email
+        const finalHtml = dbEmailBody || emailHtml;
+        const finalText = dbEmailBody
+          ? dbEmailBody.replace(/<br\s*\/?>/gi, '\n').replace(/<\/p>/gi, '\n\n').replace(/<\/li>/gi, '\n').replace(/<li[^>]*>/gi, '- ').replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/\n{3,}/g, '\n\n').trim()
+          : `Your AEO Audit Results for ${businessName}\n\nOverall Score: ${auditResult.overallScore}/100\nPotential Score: ${auditResult.potentialScore}/100\n\nReady to improve? Visit https://brightlaunchiq.com/get-started\n\nBrightLaunchIQ | Sacramento, CA 95814\nUnsubscribe: mailto:unsubscribe@account.brightlaunchiq.com?subject=unsubscribe`;
+
         const emailResponse = await resend.emails.send({
           from: "BrightLaunchIQ <results@brightlaunchiq.com>",
           reply_to: "results@brightlaunchiq.com",
           to: [email],
-          subject: `Your AEO Score: ${auditResult.overallScore}/100 - ${htmlBusinessName}`,
+          subject: finalSubject,
           headers: {
             "List-Unsubscribe": "<mailto:unsubscribe@account.brightlaunchiq.com?subject=unsubscribe>",
             "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
           },
-          text: `Your AEO Audit Results for ${businessName}\n\nOverall Score: ${auditResult.overallScore}/100\nPotential Score: ${auditResult.potentialScore}/100\n\nReady to improve? Visit https://brightlaunchiq.com/get-started\n\nBrightLaunchIQ | Sacramento, CA 95814\nUnsubscribe: mailto:unsubscribe@account.brightlaunchiq.com?subject=unsubscribe`,
-          html: emailHtml,
+          text: finalText,
+          html: finalHtml,
         });
         console.log("Email sent:", emailResponse);
       } catch (emailError) {
