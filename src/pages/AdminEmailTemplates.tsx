@@ -226,29 +226,51 @@ const AdminEmailTemplates = () => {
           ) : (
             <div className="grid lg:grid-cols-4 gap-6">
               {/* Template List */}
-              <div className="lg:col-span-1">
+              <div className="lg:col-span-1 space-y-4">
+                {/* AEO Audit Templates */}
                 <div className="bg-card border border-border rounded-xl p-4">
-                  <h3 className="font-semibold text-foreground mb-4">Templates</h3>
-                  <div className="space-y-2">
-                    {templates.map((template) => (
+                  <h3 className="font-semibold text-foreground mb-3 text-sm text-primary">AEO Audit</h3>
+                  <div className="space-y-1.5">
+                    {auditTemplates.map((template) => (
                       <button
                         key={template.id}
                         onClick={() => selectTemplate(template)}
-                        className={`w-full text-left p-3 rounded-lg transition-colors ${
+                        className={`w-full text-left p-2.5 rounded-lg transition-colors ${
                           selectedTemplate?.id === template.id
                             ? 'bg-primary/10 border border-primary/20'
                             : 'hover:bg-secondary/50 border border-transparent'
                         }`}
                       >
                         <div className="font-medium text-foreground text-sm">{template.name}</div>
-                        <div className="text-xs text-muted-foreground mt-1">{template.description}</div>
+                        <div className="text-xs text-muted-foreground mt-0.5 line-clamp-2">{template.description}</div>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Assessment Templates */}
+                <div className="bg-card border border-border rounded-xl p-4">
+                  <h3 className="font-semibold text-foreground mb-3 text-sm text-primary">AI Receptionist Assessment</h3>
+                  <div className="space-y-1.5">
+                    {quizTemplates.map((template) => (
+                      <button
+                        key={template.id}
+                        onClick={() => selectTemplate(template)}
+                        className={`w-full text-left p-2.5 rounded-lg transition-colors ${
+                          selectedTemplate?.id === template.id
+                            ? 'bg-primary/10 border border-primary/20'
+                            : 'hover:bg-secondary/50 border border-transparent'
+                        }`}
+                      >
+                        <div className="font-medium text-foreground text-sm">{template.name}</div>
+                        <div className="text-xs text-muted-foreground mt-0.5 line-clamp-2">{template.description}</div>
                       </button>
                     ))}
                   </div>
                 </div>
 
                 {/* Variable Reference */}
-                <div className="bg-card border border-border rounded-xl p-4 mt-4">
+                <div className="bg-card border border-border rounded-xl p-4">
                   <h3 className="font-semibold text-foreground mb-3 text-sm">Available Variables</h3>
                   <div className="space-y-1 text-xs">
                     {Object.keys(sampleData).map((key) => (
