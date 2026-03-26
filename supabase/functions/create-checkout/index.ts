@@ -69,8 +69,8 @@ serve(async (req) => {
       throw new Error(`Invalid product tier: ${product}`);
     }
     
-    const { setup: setupPriceId, monthly: monthlyPriceId } = PRICE_IDS[productTier];
-    logStep("Using price IDs", { setupPriceId, monthlyPriceId, productTier });
+    const { setup: setupPriceId, monthly: monthlyPriceId } = PRICE_IDS[product];
+    logStep("Using price IDs", { setupPriceId, monthlyPriceId, product });
 
     // Create checkout session with both setup fee and subscription
     const session = await stripe.checkout.sessions.create({
