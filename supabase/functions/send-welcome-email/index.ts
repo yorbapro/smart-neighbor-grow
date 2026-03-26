@@ -121,7 +121,7 @@ Reply "unsubscribe" to stop receiving emails.
 </body></html>`;
 
     const emailResponse = await resend.emails.send({
-      from: "Anthony from BrightLaunchIQ <onboarding@account.brightlaunchiq.com>",
+      from: "Anthony from BrightLaunchIQ <success@brightlaunchiq.com>",
       reply_to: "success@BrightLaunchIQ.com",
       to: [email],
       subject: `Welcome — here's your first step`,
