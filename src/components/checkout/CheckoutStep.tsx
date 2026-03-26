@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { ArrowLeft, Check, Shield, CreditCard, Loader2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
@@ -19,18 +21,36 @@ interface CheckoutStepProps {
 
 const CheckoutStep = ({ leadData, selectedProduct, onBack }: CheckoutStepProps) => {
   const [isLoading, setIsLoading] = useState(false);
+  const [email, setEmail] = useState(leadData.email || "");
+  const [businessName, setBusinessName] = useState(leadData.businessName || "");
+  const [industry, setIndustry] = useState(leadData.industry || "");
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const product = getProductConfig(selectedProduct);
 
   if (!product) return null;
 
+  const validate = (): boolean => {
+    const newErrors: Record<string, string> = {};
+    if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      newErrors.email = "Valid email is required";
+    }
+    if (!businessName.trim()) {
+      newErrors.businessName = "Business name is required";
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleCheckout = async () => {
+    if (!validate()) return;
+
     setIsLoading(true);
     try {
       const { data, error } = await supabase.functions.invoke("create-checkout", {
         body: { 
-          email: leadData.email,
-          businessName: leadData.businessName,
-          industry: leadData.industry,
+          email: email.trim(),
+          businessName: businessName.trim(),
+          industry: industry.trim(),
           product: selectedProduct,
         },
       });
@@ -110,13 +130,39 @@ const CheckoutStep = ({ leadData, selectedProduct, onBack }: CheckoutStepProps) 
             Secure checkout powered by Stripe
           </p>
 
-          <div className="bg-secondary/30 rounded-xl p-4 mb-6">
-            <p className="text-sm text-foreground">
-              <strong>Billing to:</strong> {leadData.email}
-            </p>
-            <p className="text-sm text-muted-foreground">
-              {leadData.businessName} • {leadData.industry}
-            </p>
+          <div className="space-y-4 mb-6">
+            <div className="space-y-2">
+              <Label htmlFor="checkout-email">Email Address *</Label>
+              <Input
+                id="checkout-email"
+                type="email"
+                placeholder="you@company.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className={errors.email ? "border-destructive" : ""}
+              />
+              {errors.email && <p className="text-sm text-destructive">{errors.email}</p>}
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="checkout-business">Business Name *</Label>
+              <Input
+                id="checkout-business"
+                placeholder="Your Company Name"
+                value={businessName}
+                onChange={(e) => setBusinessName(e.target.value)}
+                className={errors.businessName ? "border-destructive" : ""}
+              />
+              {errors.businessName && <p className="text-sm text-destructive">{errors.businessName}</p>}
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="checkout-industry">Industry (optional)</Label>
+              <Input
+                id="checkout-industry"
+                placeholder="e.g. HVAC, Legal, Medical"
+                value={industry}
+                onChange={(e) => setIndustry(e.target.value)}
+              />
+            </div>
           </div>
 
           <Button
