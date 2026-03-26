@@ -130,13 +130,39 @@ const CheckoutStep = ({ leadData, selectedProduct, onBack }: CheckoutStepProps) 
             Secure checkout powered by Stripe
           </p>
 
-          <div className="bg-secondary/30 rounded-xl p-4 mb-6">
-            <p className="text-sm text-foreground">
-              <strong>Billing to:</strong> {leadData.email}
-            </p>
-            <p className="text-sm text-muted-foreground">
-              {leadData.businessName} • {leadData.industry}
-            </p>
+          <div className="space-y-4 mb-6">
+            <div className="space-y-2">
+              <Label htmlFor="checkout-email">Email Address *</Label>
+              <Input
+                id="checkout-email"
+                type="email"
+                placeholder="you@company.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className={errors.email ? "border-destructive" : ""}
+              />
+              {errors.email && <p className="text-sm text-destructive">{errors.email}</p>}
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="checkout-business">Business Name *</Label>
+              <Input
+                id="checkout-business"
+                placeholder="Your Company Name"
+                value={businessName}
+                onChange={(e) => setBusinessName(e.target.value)}
+                className={errors.businessName ? "border-destructive" : ""}
+              />
+              {errors.businessName && <p className="text-sm text-destructive">{errors.businessName}</p>}
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="checkout-industry">Industry (optional)</Label>
+              <Input
+                id="checkout-industry"
+                placeholder="e.g. HVAC, Legal, Medical"
+                value={industry}
+                onChange={(e) => setIndustry(e.target.value)}
+              />
+            </div>
           </div>
 
           <Button
