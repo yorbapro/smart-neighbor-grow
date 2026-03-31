@@ -21,7 +21,7 @@ const data: IndustryPageData = {
     },
     {
       title: "Orthodontists are Focused on \"Smiles,\" Not the Phone",
-      description: "Your orthodontists and clinical staff are dedicated to providing direct patient care, adjusting braces, and overseeing treatment progress. They cannot\u2014and should not\u2014be interrupted by every ringing phone. If your front desk is understaffed or busy with in-person patient care, new inquiries go unanswered, leading to lost consultations and a diminished reputation for responsiveness.""
+      description: "Your orthodontists and clinical staff are dedicated to providing direct patient care, adjusting braces, and overseeing treatment progress. They cannot\u2014and should not\u2014be interrupted by every ringing phone. If your front desk is understaffed or busy with in-person patient care, new inquiries go unanswered, leading to lost consultations and a diminished reputation for responsiveness."
     },
     {
       title: "Complex Scheduling and Treatment-Related Inquiries",

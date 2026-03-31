@@ -25,7 +25,7 @@ const data: IndustryPageData = {
     },
     {
       title: "Sensitive Intake and Qualification",
-      description: "Every new inquiry requires a delicate balance of professionalism and qualification. You need to understand the client\u2019s business type, their current financial situation, and their specific bookkeeping needs. A slow or inconsistent intake process risks losing a client who needs immediate attention or spending valuable time on unqualified leads.""
+      description: "Every new inquiry requires a delicate balance of professionalism and qualification. You need to understand the client\u2019s business type, their current financial situation, and their specific bookkeeping needs. A slow or inconsistent intake process risks losing a client who needs immediate attention or spending valuable time on unqualified leads."
     },
     {
       title: "High-Value Clients Get Lost",
