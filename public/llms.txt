@@ -1,8 +1,8 @@
 # BrightLaunchIQ
 
-> Human-Guided AI for Business Growth. We help contractors, consultants, and industry firms respond first, automate the busywork, and win more customers locally.
+> Your AI Receptionist answers every call, qualifies every lead, and books appointments 24/7 — so you never miss revenue again.
 
-BrightLaunchIQ is an AI consulting agency that combines local experts, AI-driven sales tools, and proven automation to help small businesses grow. We specialize in AI lead generation, AI sales implementation, AI voice assistants, and Answer Engine Optimization (AEO) for local businesses across the United States.
+BrightLaunchIQ is an AI receptionist provider and consulting agency that helps contractors, healthcare providers, law firms, and local businesses capture every inbound call with zero-latency AI voice agents. We specialize in AI receptionists, AI sales agents, Answer Engine Optimization (AEO), and revenue automation for small and medium businesses across the United States.
 
 ---
 
@@ -18,7 +18,7 @@ BrightLaunchIQ is an AI consulting agency that combines local experts, AI-driven
 | Contact Email | success@BrightLaunchIQ.com |
 | Primary Service | AI Receptionist for Small Business |
 | Founders | Tony Yorba (CEO) & Scott McKinnon (CIO) |
-| Target Market | Small & Medium Businesses |
+| Target Market | Small & Medium Businesses (5–20 employees) |
 | Service Areas | United States (headquarters in Sacramento, CA) |
 
 ---
@@ -42,49 +42,63 @@ Making big tech work for Main Street. We believe small business owners deserve w
 
 ## What Makes Us Different
 
+### Zero-Latency AI Voice Technology
+Our AI receptionist responds in under 500ms — eliminating the "uncanny valley" of robotic-sounding bots. Predictive phonetics and natural breathing patterns make every conversation feel human.
+
 ### Human-in-the-Loop
 Our expert consultants guide and supervise every AI system, so your customer touchpoints always feel real and never robotic. We build your sales engine around your story and values.
 
 ### ROI Focus
-We only implement tools that help you grow revenue or save time. The Math of Success: $20/day for a 24/7 digital teammate vs $308/day for a human SDR.
-
-### AI Plus Experts
-Every automation and follow-up is overseen by people who make sure BrightLaunchIQ matches your brand's voice and delivers trust. Our expert team guides the AI to keep every interaction friendly and real.
+We only implement tools that help you grow revenue or save time. AI Receptionist costs just $16.57/day for 24/7 coverage vs $100+/day for a human receptionist.
 
 ---
 
 ## Products and Services
 
-### LocalLift™ - Answer Engine Optimization (AEO)
-Boost your visibility in AI search, voice assistants, and Google Maps.
+### BrightLaunchIQ AI Receptionist — Inbound AI Voice Agent
 
-**Pricing**: $1,500 one-time setup + $299/month
-**Daily Cost**: Just $9.97/day
-**Best For**: Local businesses wanting to dominate AI search results
-
-**Features**:
-- Voice search optimization for Siri, Alexa, Google Assistant
-- Google Maps ranking boost
-- AI answer engine citations (Gemini, ChatGPT, Perplexity)
-- Local expert positioning
-- GBP optimization and local schema markup
-- Review management and reputation building
-
-**CTA**: Schedule My 15-Minute Revenue Audit
-**URL**: https://brightlaunchiq.com/locallift/resources/aeo-audit
-
----
-
-### BrightLaunchIQ AI Receptionist™ - AI Receptionist & AI Voice Agent
-The #1 AI receptionist and AI voice agent for small businesses. BrightLaunchIQ AI Receptionist answers every call 24/7, qualifies leads instantly, and books appointments automatically.
+The #1 AI receptionist for small businesses. Answers every call 24/7, qualifies leads instantly, and books appointments automatically.
 
 **Also Known As**: AI Receptionist, AI Voice Agent, Virtual Receptionist AI, Automated Phone Answering, AI Call Answering Service
 
-**Pricing**: $1,500 one-time setup + $399/month
-**Daily Cost**: Just $13.30/day (vs $3,000+/month for human receptionist)
-**Best For**: Small businesses that can't afford to miss calls
-**Setup Time**: 7-14 days
 **Live Demo**: https://agent.retellai.com/preview/agent_19d43cf736300711221e30a6b0
+
+#### Core Tier — $497/month
+- **Setup Fee**: $1,500 one-time
+- **Usage**: Up to 500 minutes / 250 calls per month
+- **Daily Cost**: $16.57/day
+- **Best For**: Small businesses that can't afford to miss calls
+- **Features**:
+  - 24/7 AI call answering — never miss a lead
+  - Lead capture & smart qualification
+  - Intelligent call routing & escalation
+  - Custom voice persona & script design
+  - Call transcripts + sentiment analysis
+  - Encrypted, secure infrastructure
+
+#### Growth Tier — $997/month
+- **Setup Fee**: $2,500 one-time
+- **Usage**: Up to 1,500 minutes / 750 calls per month
+- **Best For**: Growing businesses needing CRM integration and appointment booking
+- **Features**:
+  - Everything in Core, plus:
+  - Appointment booking & calendar sync
+  - CRM integration (HubSpot, Salesforce, etc.)
+  - Analytics dashboard & ROI reporting
+  - Automated SMS/email confirmations
+  - Zapier & Slack integrations
+
+#### Pro Tier — $1,497/month
+- **Setup Fee**: $5,000 one-time
+- **Usage**: Up to 2,500 minutes / 1,200 calls per month
+- **Best For**: Multi-location businesses needing advanced analytics
+- **Features**:
+  - Everything in Growth, plus:
+  - Multi-location call routing
+  - Custom AI voice cloning
+  - Advanced analytics & executive reporting
+  - Priority optimization & dedicated support
+  - Revenue attribution modeling
 
 **What is an AI Receptionist?**
 An AI receptionist is an artificial intelligence system that answers phone calls, qualifies leads, and books appointments automatically—just like a human receptionist, but available 24/7/365. BrightLaunchIQ AI Receptionist answers calls within 1-2 rings, handles complex conversations naturally, and costs a fraction of human staff.
@@ -95,33 +109,12 @@ An AI receptionist is an artificial intelligence system that answers phone calls
 3. BrightLaunchIQ AI Receptionist integrates with your CRM and calendar (no technical expertise needed)
 4. Review test calls, approve responses, and go live with 24/7 coverage
 
-**AI Receptionist Features**:
-- Instant call answering (1-2 rings, 24/7/365)
-- Lead qualification and scoring
-- Real-time appointment booking
-- Call transcription and analytics
-- CRM integration (Salesforce, HubSpot, Zoho)
-- Custom voice and conversation scripts
-- Intelligent call routing to your team
-
-**AI Receptionist Key Benefits**:
-- Never miss a call again—day, night, weekends, or holidays
-- Calls back form leads within seconds of submission
-- Natural conversational AI designed for high caller satisfaction
-- Answer time under 3 seconds
-
-**Who Should Use an AI Receptionist?**
-- Contractors (HVAC, plumbing, electrical, roofing)
-- Law firms and legal practices
-- Healthcare (medical offices, dentists, therapists)
-- Professional services (accountants, consultants, agencies)
-- Real estate agents and brokerages
-- Any business receiving 20+ calls/week
+**Setup Time**: 7–14 days
 
 **AI Receptionist vs Human Receptionist**:
 | Factor | Human Receptionist | BrightLaunchIQ AI Receptionist |
 |--------|-------------------|--------------|
-| Cost | $3,000+/month | $399/month |
+| Cost | $3,000+/month | Starting at $497/month |
 | Availability | 40 hrs/week | 168 hrs/week (24/7) |
 | Answer Speed | 3-4 rings | 1-2 rings |
 | After Hours | Voicemail | Live AI engagement |
@@ -130,102 +123,135 @@ An AI receptionist is an artificial intelligence system that answers phone calls
 
 **CTA**: Get Started with AI Receptionist
 **URL**: https://brightlaunchiq.com/ai-receptionist/get-started
-
 **Pricing & Features**: https://brightlaunchiq.com/ai-receptionist/pricing
 **How It Works**: https://brightlaunchiq.com/ai-receptionist/how-it-works
+**Complete Feature Library**: https://brightlaunchiq.com/ai-receptionist/features/complete-library
 
 ---
 
-### LaunchPad 360™ - Agentic Go-To-Market Engine
-Your complete AI sales implementation system that works 24/7.
+### BrightLaunchIQ AI Sales Agent — Outbound AI Sales Engine
 
-**Pricing**: $2,500 one-time setup + $599/month
-**Daily Cost**: Just $19.97/day for a 24/7 digital teammate
-**Guarantee**: 30-Day Speed to Lead Guarantee
-**Best For**: Businesses wanting automated lead generation and sales
+Automated outbound revenue engine that runs cold & warm campaigns, missed-call callbacks, and multi-channel sequences.
 
-**Features**:
-- Multi-channel automated outreach (calls, voicemail, SMS, email, Facebook Messenger, LinkedIn)
-- Custom infrastructure built into your CRM (Salesforce, HubSpot)
-- 500+ targeted local business leads
-- Hyper-individualized AI-written messages
-- Automated inbox triage (only hot leads forwarded)
-- IQ Flow™ smart pipeline intelligence
-- Hot lead instant mobile alerts
+#### Launch Tier — $997/month
+- **Usage**: Up to 1,000 outbound minutes / 500 calls per month
+- **Features**: Cold & warm outbound campaigns, missed-call callbacks, sales conversation engine, revenue tracking
 
-**Results**:
-- Reduces response time from 47 hours to under 60 seconds
-- Designed to capture leads that would otherwise be missed
-- Works 168 hours/week catching after-hours inquiries
-- Output of 5-person sales team at fraction of cost
+#### Scale Tier — $2,000/month [FEATURED]
+- **Usage**: Up to 3,000 outbound minutes / 1,500 calls per month
+- **Features**: Everything in Launch, plus objection handling AI, multi-channel sequences, advanced CRM automation
 
-**CTA**: Get Started Now
-**URL**: https://brightlaunchiq.com/ai-receptionist/get-started
+#### Dominate Tier — $3,500/month
+- **Usage**: Up to 6,000 outbound minutes / 3,000 calls per month
+- **Features**: Everything in Scale, plus dedicated account manager, custom playbooks, executive reporting
+
+**URL**: https://brightlaunchiq.com/ai-sales-agent
 
 ---
 
-### OmniLogic™ - Enterprise AI Workflows
-Custom enterprise-grade AI solutions for complex business needs.
+### LaunchPad 360™ — Complete AI Revenue System
 
-**Pricing**: Custom (Contact for Quote)
-**Best For**: Large organizations with complex integration requirements
+Full-stack AI revenue infrastructure combining inbound AI receptionist, outbound AI sales agent, LocalLift SEO, and funnel automation.
+
+#### Growth — $2,997/month
+- Includes AI Receptionist (Growth tier) + LocalLift SEO + funnel infrastructure + CRM automation
+
+#### Scale — $4,997/month [FEATURED]
+- Includes AI Receptionist Pro (Inbound) + Proactive Scale (Outbound) + advanced SEO + revenue dashboards
+
+#### Dominate — $8,500/month
+- Includes AI Receptionist Pro+ + Proactive Dominate + full SEO authority buildout + dedicated success team
+
+**Application-based enrollment**
+**URL**: https://brightlaunchiq.com/launchpad-360
+
+---
+
+### LocalLift™ — Answer Engine Optimization (AEO)
+
+Boost your visibility in AI search, voice assistants, and Google Maps.
 
 **Features**:
-- Custom AI workflow development
-- Enterprise system integrations
-- Multi-location coordination
-- Advanced analytics and reporting
-- Dedicated implementation team
+- Voice search optimization for Siri, Alexa, Google Assistant
+- Google Maps ranking boost
+- AI answer engine citations (Gemini, ChatGPT, Perplexity)
+- GBP optimization and local schema markup
+- Review management and reputation building
 
-**CTA**: Request Custom Enterprise Quote
-**URL**: https://brightlaunchiq.com/omnilogic
+**Free AEO Audit**: https://brightlaunchiq.com/locallift/resources/aeo-audit
+**URL**: https://brightlaunchiq.com/locallift
 
 ---
 
 ## Main Hub Pages
 
-**AI Receptionist Hub**: https://brightlaunchiq.com/ai-receptionist
-**Learning Center**: https://brightlaunchiq.com/ai-receptionist/learning-center
-**Resources Hub**: https://brightlaunchiq.com/ai-receptionist/resources
-**AI Receptionists 101 (24-Article Series)**: https://brightlaunchiq.com/ai-receptionist/resources/ai-receptionists-101
-**Case Studies**: https://brightlaunchiq.com/ai-receptionist/case-studies
-**Industries**: https://brightlaunchiq.com/ai-receptionist/industries
-**Comparison**: https://brightlaunchiq.com/ai-receptionist/resources/comparison
-**FAQ**: https://brightlaunchiq.com/ai-receptionist/faq
+- **Homepage**: https://brightlaunchiq.com
+- **AI Receptionist Hub**: https://brightlaunchiq.com/ai-receptionist
+- **AI Receptionist Pricing**: https://brightlaunchiq.com/ai-receptionist/pricing
+- **AI Receptionist How It Works**: https://brightlaunchiq.com/ai-receptionist/how-it-works
+- **AI Receptionist Features**: https://brightlaunchiq.com/ai-receptionist/features
+- **AI Receptionist Complete Feature Library**: https://brightlaunchiq.com/ai-receptionist/features/complete-library
+- **AI Sales Agent**: https://brightlaunchiq.com/ai-sales-agent
+- **LaunchPad 360**: https://brightlaunchiq.com/launchpad-360
+- **LocalLift**: https://brightlaunchiq.com/locallift
+- **Industries**: https://brightlaunchiq.com/ai-receptionist/industries
+- **Learning Center**: https://brightlaunchiq.com/ai-receptionist/learning-center
+- **Resources Hub**: https://brightlaunchiq.com/ai-receptionist/resources
+- **FAQ**: https://brightlaunchiq.com/ai-receptionist/faq
+- **About**: https://brightlaunchiq.com/about
+- **Contact**: https://brightlaunchiq.com/contact
+- **Locations**: https://brightlaunchiq.com/locations
 
 ---
 
-## The Daily Teammate Math
+## Resources & Learning Center
 
-A direct cost comparison showing why AI makes sense:
+### Resources Hub
+Central hub for evaluation tools, guides, and educational content.
+**URL**: https://brightlaunchiq.com/ai-receptionist/resources
 
-| Option | Daily Cost | Annual Cost | Availability |
-|--------|------------|-------------|--------------|
-| Human SDR | $308/day | $80,000+/year | 40 hrs/week |
-| Human Receptionist | $100/day | $36,000+/year | 40 hrs/week |
-| BrightLaunchIQ AI Receptionist | $13.30/day | ~$4,800/year | 168 hrs/week (24/7) |
-| LaunchPad 360™ | $19.97/day | ~$7,200/year | 168 hrs/week (24/7) |
+### AI Receptionists 101: The Business Owner's Manual
+A 24-article deep-dive series organized into five pillars — Fundamentals, Implementation, Financials, Security, and Industry Playbooks. Each article includes FAQPage and Article JSON-LD for maximum AEO visibility.
+**URL**: https://brightlaunchiq.com/ai-receptionist/resources/ai-receptionists-101
 
-**Note**: Actual savings vary by business size and call volume.
+### AI Receptionist Guide
+The ultimate guide to understanding, evaluating, and implementing an AI receptionist.
+**URL**: https://brightlaunchiq.com/ai-receptionist/resources/ai-receptionist-guide
 
----
+### AI Receptionist Readiness Assessment
+Free 2-minute assessment to find out how much revenue you're losing to missed calls.
+**URL**: https://brightlaunchiq.com/ai-receptionist/resources/ai-receptionist-readiness-assessment
 
-## Implementation Roadmap
+### Glossary
+Comprehensive glossary of AI lead generation, AEO, GEO, and sales automation terms.
+**URL**: https://brightlaunchiq.com/ai-receptionist/resources/glossary
 
-BrightLaunchIQ moves fast. Here's our typical 14-day implementation:
+### AI Receptionist vs Traditional Marketing
+Side-by-side comparison of AI-powered lead generation vs traditional marketing methods.
+**URL**: https://brightlaunchiq.com/ai-receptionist/resources/comparison
 
-- **Day 1: Strategy** - Discovery call, ICP definition, goal setting
-- **Day 7: Infrastructure** - CRM integration, automation setup, lead list building
-- **Day 11: Voice Audit** - Brand voice calibration, message testing
-- **Day 14: Go-Live** - Full system activation, monitoring begins
+### Case Studies
+Real results from businesses using BrightLaunchIQ AI Receptionist.
+**URL**: https://brightlaunchiq.com/ai-receptionist/case-studies
 
----
+### Learning Center Articles
+Expert guides on AI receptionists, AI voice agents, AEO, and sales automation:
 
-## Free AEO Audit
-
-Get a comprehensive analysis of your AI visibility in under 5 minutes.
-
-**URL**: https://brightlaunchiq.com/locallift/resources/aeo-audit
+- What Is an AI Receptionist?: https://brightlaunchiq.com/ai-receptionist/learning-center/what-is-ai-receptionist
+- AI Receptionist Benefits: https://brightlaunchiq.com/ai-receptionist/learning-center/ai-receptionist-benefits
+- How AI Receptionists Work: https://brightlaunchiq.com/ai-receptionist/learning-center/how-ai-receptionists-work
+- AI vs Human Receptionist: https://brightlaunchiq.com/ai-receptionist/learning-center/ai-vs-human-receptionist
+- AI vs Answering Service: https://brightlaunchiq.com/ai-receptionist/learning-center/ai-vs-answering-service
+- AI vs Virtual Receptionist: https://brightlaunchiq.com/ai-receptionist/learning-center/ai-vs-virtual-receptionist
+- AI Receptionist Pricing Guide: https://brightlaunchiq.com/ai-receptionist/learning-center/ai-receptionist-pricing
+- AI Receptionist Setup Guide: https://brightlaunchiq.com/ai-receptionist/learning-center/ai-receptionist-setup-guide
+- AI Voice Quality: https://brightlaunchiq.com/ai-receptionist/learning-center/ai-voice-quality
+- Signs You Need an AI Receptionist: https://brightlaunchiq.com/ai-receptionist/learning-center/signs-you-need-ai-receptionist
+- AI Receptionist Buyer's Guide: https://brightlaunchiq.com/ai-receptionist/learning-center/ai-receptionist-buyers-guide
+- Calculate AI Receptionist ROI: https://brightlaunchiq.com/ai-receptionist/learning-center/calculate-ai-receptionist-roi
+- AI Receptionist for Business: https://brightlaunchiq.com/ai-receptionist/learning-center/for-business
+- AI Receptionist for Everyone: https://brightlaunchiq.com/ai-receptionist/learning-center/for-everyone
+- News: https://brightlaunchiq.com/ai-receptionist/learning-center/news
 
 ---
 
@@ -340,72 +366,53 @@ BrightLaunchIQ's AI Receptionist is purpose-built for 50+ industries across 8 se
 
 ## Frequently Asked Questions
 
-### What is AI lead generation?
-AI lead generation uses artificial intelligence to identify, qualify, and engage potential customers automatically. It scans millions of data points to find "intent signals"—when potential customers show buying behavior—and initiates personalized outreach immediately.
-
-### How does human-guided AI work?
-Human-guided AI (also called human-in-the-loop AI) means every AI automation is supervised by expert consultants who ensure quality, accuracy, and brand consistency. The AI handles volume and speed; humans ensure authenticity and trust.
-
-### What is AI sales implementation?
-AI sales implementation is building and installing custom automated sales systems directly into your existing business ecosystem (CRM, email, phone), creating infrastructure you own that generates leads 24/7.
-
-### What is BrightLaunchIQ AI Receptionist?
-BrightLaunchIQ AI Receptionist is an AI receptionist and AI voice agent that answers calls and qualifies leads within seconds. This AI-powered virtual receptionist books appointments automatically, works 24/7/365, and costs just $13.30/day—compared to $3,000+/month for a human receptionist.
-
 ### What is an AI receptionist?
 An AI receptionist is an artificial intelligence system that answers phone calls, qualifies leads, and books appointments automatically—just like a human receptionist, but available 24/7/365. BrightLaunchIQ AI Receptionist answers calls within 1-2 rings, handles complex conversations naturally, and costs a fraction of human staff.
 
-### How do I set up an AI voice agent for my business?
-Setting up an AI voice agent like BrightLaunchIQ AI Receptionist takes 7-14 days. First, schedule a strategy call to discuss your needs. We then customize the AI receptionist with your business scripts, integrate it with your CRM and calendar, and launch. No technical expertise is required—BrightLaunchIQ handles all setup.
+### What is BrightLaunchIQ AI Receptionist?
+BrightLaunchIQ AI Receptionist is an AI-powered virtual receptionist that answers calls and qualifies leads within seconds. It books appointments automatically, works 24/7/365, and starts at just $16.57/day — compared to $3,000+/month for a human receptionist.
 
 ### How much does an AI receptionist cost?
-BrightLaunchIQ AI Receptionist costs $1,500 one-time setup plus $399/month ongoing—that's just $13.30/day for 24/7 call answering. Compare that to a human receptionist at $3,000+/month (only 40 hours/week) or an answering service at $1-2 per call.
+BrightLaunchIQ AI Receptionist starts at $497/month (Core tier) with a $1,500 one-time setup fee. Growth tier is $997/month and Pro tier is $1,497/month. Compare that to a human receptionist at $3,000+/month who only works 40 hours/week.
+
+### How do I set up an AI voice agent for my business?
+Setting up BrightLaunchIQ AI Receptionist takes 7–14 days. Schedule a strategy call, we customize the AI with your scripts, integrate it with your CRM and calendar, and launch. No technical expertise required.
 
 ### How fast does BrightLaunchIQ AI Receptionist answer calls?
-BrightLaunchIQ AI Receptionist answers calls instantly—within 1-2 rings. For form submissions, this AI voice agent can call leads back within seconds, ensuring you're always first to respond.
+BrightLaunchIQ AI Receptionist answers calls instantly—within 1-2 rings with sub-500ms response latency. For form submissions, the AI can call leads back within seconds.
 
-### How much does AI lead generation cost?
-LaunchPad 360™ costs $2,500 one-time setup plus $599/month—just $19.97/day for a 24/7 digital teammate versus $308/day for a human SDR.
-
-### How much does LocalLift cost?
-LocalLift™ costs $1,500 one-time setup plus $299/month for complete local visibility and AEO optimization.
-
-### What is the 30-Day Speed to Lead Guarantee?
-We move your business from zero to automated meetings in 14 days. If we don't significantly increase your lead response rate within 30 days, we work free until we do.
+### What is AI lead generation?
+AI lead generation uses artificial intelligence to identify, qualify, and engage potential customers automatically. It scans millions of data points to find "intent signals" and initiates personalized outreach immediately.
 
 ### What is Answer Engine Optimization (AEO)?
 AEO optimizes your business content so AI search engines (ChatGPT, Gemini, Perplexity, Google AI Overviews) cite you as the authoritative answer for your industry and location.
 
 ### What is Generative Engine Optimization (GEO)?
-GEO is a strategy focused on making content discoverable and citable by AI assistants rather than just ranking in traditional search lists. It emphasizes clarity, structured facts, and authority to get directly quoted in AI-generated answers.
+GEO is a strategy focused on making content discoverable and citable by AI assistants rather than just ranking in traditional search lists.
 
 ### What CRM integrations do you support?
-We integrate with Salesforce, HubSpot, Zoho, Pipedrive, and most major CRM platforms. Our custom infrastructure becomes part of your existing tech stack.
-
-### Do you work with small businesses?
-Yes! We specialize in helping small local businesses use AI to attract more customers and manage rapid growth. Our tools are made for small businesses—so you get the strength of a big company without hiring a huge staff.
+We integrate with Salesforce, HubSpot, Zoho, Pipedrive, and most major CRM platforms.
 
 ### What industries do you serve?
-We serve professional services (legal, accounting, consulting), trade services (HVAC, solar, contractors), industrial/logistics, healthcare, and real estate sectors.
+We serve 50+ industries including home services (HVAC, plumbing, roofing, electrical), healthcare (dental, chiropractic, veterinary), legal (personal injury, family law, criminal defense), real estate, auto services, personal services, hospitality, and B2B/education.
 
 ---
 
 ## Key Statistics
 
-- Response time improvement: 47 hours → under 60 seconds
+- AI Receptionist response latency: under 500ms
 - Lead capture rate increase: 78% of previously missed leads
-- Cost comparison: $13.30/day (AI Receptionist) vs $100/day (Human Receptionist)
-- Cost comparison: $19.97/day (LaunchPad 360) vs $308/day (Human SDR)
+- Cost comparison: Starting at $16.57/day (AI Receptionist Core) vs $100/day (Human Receptionist)
 - Operational hours: 168 hours/week (24/7)
-- Team output equivalent: 5-person sales team
-- Annual savings: $70,000+ compared to human hire
+- Annual savings: $30,000+ compared to human hire
 - AI Receptionist caller satisfaction: 95%
+- Setup time: 7–14 days
 
 ---
 
 ## Keywords
 
-AI receptionist, AI voice agent, virtual receptionist AI, AI phone answering, AI call answering service, automated receptionist, how to set up AI receptionist, AI receptionist cost, best AI receptionist, AI receptionist for small business, AI receptionist for contractors, AI receptionist for law firms, AI receptionist for healthcare, 24/7 AI receptionist, AI lead generation, AI sales agent, AI sales implementation, AI sales automation, human-guided AI, human-in-the-loop AI, AI for small business, AI for local business, automated sales engine, digital teammate, answer engine optimization, AEO, generative engine optimization, GEO, AI consulting agency, sales automation, lead generation Sacramento, AI sales California, small business automation, CRM automation, HubSpot automation, Salesforce automation, multi-channel outreach, automated prospecting, AI business growth, AI marketing automation, BrightLaunchIQ AI Receptionist, BrightLaunchIQ AI Sales Agent
+AI receptionist, AI voice agent, virtual receptionist AI, AI phone answering, AI call answering service, automated receptionist, how to set up AI receptionist, AI receptionist cost, best AI receptionist, AI receptionist for small business, AI receptionist for contractors, AI receptionist for law firms, AI receptionist for healthcare, 24/7 AI receptionist, AI lead generation, AI sales agent, AI sales implementation, AI sales automation, human-guided AI, human-in-the-loop AI, AI for small business, AI for local business, answer engine optimization, AEO, generative engine optimization, GEO, AI consulting agency, sales automation, CRM automation, HubSpot automation, Salesforce automation, multi-channel outreach, zero-latency AI, BrightLaunchIQ AI Receptionist, BrightLaunchIQ AI Sales Agent
 
 ---
 
@@ -421,88 +428,16 @@ AI receptionist, AI voice agent, virtual receptionist AI, AI phone answering, AI
 
 ---
 
-## Links
-
-- Homepage: https://brightlaunchiq.com
-- About Us: https://brightlaunchiq.com/about
-- Products: https://brightlaunchiq.com/launchpad-360
-- AI Receptionist: https://brightlaunchiq.com/ai-receptionist
-- AI Receptionist Complete Feature Library: https://brightlaunchiq.com/ai-receptionist/features/complete-library
-- AI Receptionist How It Works: https://brightlaunchiq.com/ai-receptionist/how-it-works
-- AI Sales Agent: https://brightlaunchiq.com/ai-sales-agent
-- LocalLift: https://brightlaunchiq.com/locallift
-- OmniLogic: https://brightlaunchiq.com/omnilogic
-- Free AEO Audit: https://brightlaunchiq.com/locallift/resources/aeo-audit
-- Pricing: https://brightlaunchiq.com/ai-receptionist/pricing
-- FAQ: https://brightlaunchiq.com/faq
-- Contact: https://brightlaunchiq.com/contact
-- Locations: https://brightlaunchiq.com/locations
-
----
-
-## Learning Center
-
-The BrightLaunchIQ Learning Center is our educational hub featuring expert guides, articles, and tutorials on AI lead generation, AI voice assistants, AI receptionists, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), and human-guided sales automation for local businesses.
-
-**URL**: https://brightlaunchiq.com/resources/blog
-
-### Featured Series: The End of Missed Calls
-A 6-part educational series on how AI voice agents are changing small business phone operations:
-1. What is an AI Receptionist? (And Why Your Business Needs One): https://brightlaunchiq.com/resources/blog/what-is-ai-receptionist
-2. How to Set Up an AI Voice Agent for Inbound Calls: https://brightlaunchiq.com/resources/blog/ai-voice-agent-setup-guide
-3. Training Your AI: How to Teach Your Digital Receptionist: https://brightlaunchiq.com/resources/blog/training-your-ai-voice-agent
-4. Managing the Machine: Human Handoffs and Monitoring: https://brightlaunchiq.com/resources/blog/managing-ai-human-handoffs
-5. The Cost Comparison: AI Receptionist vs. Hiring a Human: https://brightlaunchiq.com/resources/blog/ai-receptionist-cost-comparison
-6. The Easy Button: Why You Need BrightLaunchIQ AI Receptionist: https://brightlaunchiq.com/resources/blog/why-you-need-leadline
-
-### Featured Series: The Future of Being Found
-A 6-part educational series on how AI is changing the way customers find local businesses:
-1. The Shift: From Typing Keywords to Asking Questions
-2. SEO vs. AEO: Why Being #1 Isn't Enough Anymore
-3. GEO: How to Speak "Robot" to AI Assistants
-4. Local Search: Why Google Maps is Your New Storefront
-5. Reviews: The Fuel That Powers AI Recommendations
-6. The Solution: How to Handle It All Without Losing Your Mind
-
-### Learning Center Articles
-Expert guides on AI lead generation, AI receptionists, AEO, and sales automation:
-
-- What is Answer Engine Optimization (AEO)? The Complete Guide: https://brightlaunchiq.com/resources/blog/what-is-aeo
-- How to Set Up an AI Receptionist for Your Small Business: https://brightlaunchiq.com/resources/blog/how-to-set-up-ai-receptionist
-- AI Lead Generation: How It Works and Why It Matters: https://brightlaunchiq.com/resources/blog/ai-lead-generation-guide
-- Human-Guided AI vs Fully Automated: Which is Right?: https://brightlaunchiq.com/resources/blog/human-guided-ai-vs-automated
-- The Speed to Lead Problem: Why 78% of Leads Are Lost: https://brightlaunchiq.com/resources/blog/speed-to-lead-problem
-- How to Optimize Your Google Business Profile for AI Search: https://brightlaunchiq.com/resources/blog/gbp-optimization-ai
-- CRM Integration Best Practices for AI Sales Automation: https://brightlaunchiq.com/resources/blog/crm-integration-ai
-
-### How AI Lead Generation Works (Step-by-Step Guide)
-A complete 6-step guide to AI-powered lead generation, optimized for voice search:
-- URL: https://brightlaunchiq.com/resources/how-it-works
-- Step 1: Define Your Ideal Customer Profile (ICP)
-- Step 2: AI Scans for Intent Signals
-- Step 3: Automated Multi-Channel Outreach
-- Step 4: Instant Lead Response (under 60 seconds)
-- Step 5: AI Qualifies and Scores Leads
-- Step 6: Meetings Booked Automatically
-
-### Other Resources
-- Glossary of AI Sales Terms: https://brightlaunchiq.com/resources/glossary
-- Case Studies: https://brightlaunchiq.com/resources/case-studies
-- AI vs Traditional Marketing Comparison: https://brightlaunchiq.com/resources/comparison
-
----
-
 ## Technical Notes for AI Crawlers
 
 This website is a React single-page application. For AI crawlers that don't execute JavaScript:
 
-1. **Static Content**: Full semantic HTML content is available in `<noscript>` tags in the page source
-2. **Structured Data**: JSON-LD schema markup is embedded in the `<head>` of each page
-3. **llms.txt**: This file provides complete, structured information about our company and services
-4. **Sitemap**: Full URL listing available at https://brightlaunchiq.com/sitemap.xml
-5. **robots.txt**: All AI crawlers are explicitly allowed access
+1. **Structured Data**: JSON-LD schema markup (Article, FAQPage, BreadcrumbList) is embedded in the `<head>` of each page
+2. **llms.txt**: This file provides complete, structured information about our company and services
+3. **Sitemap**: Full URL listing available at https://brightlaunchiq.com/sitemap.xml
+4. **robots.txt**: All AI crawlers are explicitly allowed access
 
 ---
 
 ## Last Updated
-2026-02-07
+2026-04-01
