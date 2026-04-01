@@ -108,12 +108,12 @@ const AIvsHumanReceptionist = () => {
               <p className="text-muted-foreground mb-4"><strong>Service-based industries with high call volumes and appointment-driven revenue see the greatest ROI.</strong> Top performers include:</p>
               <div className="grid md:grid-cols-2 gap-3">
                 {[
-                  { name: "HVAC Contractors", href: "/industries/hvac-contractors" },
-                  { name: "Dental Clinics", href: "/industries/dental-clinics" },
-                  { name: "Personal Injury Lawyers", href: "/industries/personal-injury-lawyers" },
-                  { name: "Residential Real Estate", href: "/industries/residential-real-estate" },
-                  { name: "Emergency Plumbers", href: "/industries/emergency-plumbers" },
-                  { name: "Medical Spas", href: "/industries/medical-spas" },
+                  { name: "HVAC Contractors", href: "/ai-receptionist/industries/hvac-contractors" },
+                  { name: "Dental Clinics", href: "/ai-receptionist/industries/dental-clinics" },
+                  { name: "Personal Injury Lawyers", href: "/ai-receptionist/industries/personal-injury-lawyers" },
+                  { name: "Residential Real Estate", href: "/ai-receptionist/industries/residential-real-estate" },
+                  { name: "Emergency Plumbers", href: "/ai-receptionist/industries/emergency-plumbers" },
+                  { name: "Medical Spas", href: "/ai-receptionist/industries/medical-spas" },
                 ].map((ind) => (
                   <Link key={ind.name} to={ind.href} className="flex items-center gap-2 p-3 bg-card border border-border rounded-lg hover:border-primary/30 transition-colors text-muted-foreground hover:text-primary">
                     <ArrowRight className="w-4 h-4" /> {ind.name}

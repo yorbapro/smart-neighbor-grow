@@ -97,7 +97,7 @@ const Glossary = () => {
   useSEO({
     title: "AI Sales & Marketing Glossary | BrightLaunchIQ",
     description: "Comprehensive glossary of AI lead generation, AEO, GEO, and sales automation terms. Learn what AI SDR, human-in-the-loop, intent signals, and other key terms mean.",
-    canonical: "https://brightlaunchiq.com/resources/glossary",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/resources/glossary",
     keywords: "AI glossary, AEO definition, GEO meaning, AI SDR explained, sales automation terms",
     speakable: ["h1", ".glossary-intro"],
   });
@@ -124,7 +124,7 @@ const Glossary = () => {
       "@type": "DefinedTermSet",
       "name": "AI Sales & Marketing Glossary",
       "description": "Comprehensive glossary of AI lead generation, AEO (Answer Engine Optimization), GEO (Generative Engine Optimization), and sales automation terminology. Authoritative definitions for AI-powered business growth.",
-      "url": "https://brightlaunchiq.com/resources/glossary",
+      "url": "https://brightlaunchiq.com/ai-receptionist/resources/glossary",
       "inLanguage": "en-US",
       "publisher": {
         "@type": "Organization",
@@ -135,8 +135,8 @@ const Glossary = () => {
         "@type": "DefinedTerm",
         "name": item.term,
         "description": item.definition,
-        "url": `https://brightlaunchiq.com/resources/glossary#${item.term.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
-        "inDefinedTermSet": "https://brightlaunchiq.com/resources/glossary",
+        "url": `https://brightlaunchiq.com/ai-receptionist/resources/glossary#${item.term.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
+        "inDefinedTermSet": "https://brightlaunchiq.com/ai-receptionist/resources/glossary",
         "termCode": `BLIQ-${String(index + 1).padStart(3, '0')}`
       })),
     });

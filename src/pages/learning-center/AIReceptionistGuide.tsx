@@ -73,10 +73,10 @@ const features = [
 ];
 
 const industries = [
-  { icon: Home, title: "Home Services", slug: "/industries/hvac-contractors", examples: ["HVAC contractors", "plumbers", "electricians", "roofers"], pain: "Emergency calls come at all hours. An AI receptionist captures every lead, qualifies urgency, and dispatches your team — even at 2 AM." },
-  { icon: Stethoscope, title: "Medical & Dental", slug: "/industries/dental-clinics", examples: ["Dental clinics", "chiropractors", "medical spas", "therapists"], pain: "Patient scheduling, insurance questions, and after-hours calls overwhelm front desks. AI handles appointment booking and triage 24/7." },
-  { icon: Scale, title: "Legal", slug: "/industries/personal-injury-lawyers", examples: ["Personal injury", "family law", "estate planning", "criminal defense"], pain: "Potential clients call once — if no one answers, they call the next firm. An AI receptionist ensures you never lose a case to a missed call." },
-  { icon: Building2, title: "Real Estate", slug: "/industries/residential-real-estate", examples: ["Residential agents", "property managers", "mortgage brokers"], pain: "Buyers and sellers call during showings, open houses, and off-hours. AI qualifies leads and books appointments while you're in the field." },
+  { icon: Home, title: "Home Services", slug: "/ai-receptionist/industries/hvac-contractors", examples: ["HVAC contractors", "plumbers", "electricians", "roofers"], pain: "Emergency calls come at all hours. An AI receptionist captures every lead, qualifies urgency, and dispatches your team — even at 2 AM." },
+  { icon: Stethoscope, title: "Medical & Dental", slug: "/ai-receptionist/industries/dental-clinics", examples: ["Dental clinics", "chiropractors", "medical spas", "therapists"], pain: "Patient scheduling, insurance questions, and after-hours calls overwhelm front desks. AI handles appointment booking and triage 24/7." },
+  { icon: Scale, title: "Legal", slug: "/ai-receptionist/industries/personal-injury-lawyers", examples: ["Personal injury", "family law", "estate planning", "criminal defense"], pain: "Potential clients call once — if no one answers, they call the next firm. An AI receptionist ensures you never lose a case to a missed call." },
+  { icon: Building2, title: "Real Estate", slug: "/ai-receptionist/industries/residential-real-estate", examples: ["Residential agents", "property managers", "mortgage brokers"], pain: "Buyers and sellers call during showings, open houses, and off-hours. AI qualifies leads and books appointments while you're in the field." },
 ];
 
 const faqs = [
