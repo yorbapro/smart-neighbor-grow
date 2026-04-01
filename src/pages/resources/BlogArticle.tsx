@@ -1492,7 +1492,7 @@ const BlogArticle = () => {
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": `https://brightlaunchiq.com/learning-center/${slug}`
+        "@id": `https://brightlaunchiq.com/ai-receptionist/learning-center/${slug}`
       },
       "articleSection": article.category,
       "keywords": article.keywords,

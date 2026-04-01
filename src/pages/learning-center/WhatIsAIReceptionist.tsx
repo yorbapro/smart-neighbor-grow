@@ -50,7 +50,7 @@ const WhatIsAIReceptionist = () => {
         "inDefinedTermSet": {
           "@type": "DefinedTermSet",
           "name": "AI Business Automation Glossary",
-          "url": "https://brightlaunchiq.com/resources/glossary"
+          "url": "https://brightlaunchiq.com/ai-receptionist/resources/glossary"
         }
       },
       {
