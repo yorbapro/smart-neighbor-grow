@@ -97,7 +97,7 @@ const Glossary = () => {
   useSEO({
     title: "AI Sales & Marketing Glossary | BrightLaunchIQ",
     description: "Comprehensive glossary of AI lead generation, AEO, GEO, and sales automation terms. Learn what AI SDR, human-in-the-loop, intent signals, and other key terms mean.",
-    canonical: "https://brightlaunchiq.com/resources/glossary",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/resources/glossary",
     keywords: "AI glossary, AEO definition, GEO meaning, AI SDR explained, sales automation terms",
     speakable: ["h1", ".glossary-intro"],
   });
