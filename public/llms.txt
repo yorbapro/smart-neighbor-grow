@@ -432,8 +432,8 @@ AI receptionist, AI voice agent, virtual receptionist AI, AI phone answering, AI
 - AI Sales Agent: https://brightlaunchiq.com/ai-sales-agent
 - LocalLift: https://brightlaunchiq.com/locallift
 - OmniLogic: https://brightlaunchiq.com/omnilogic
-- Free AEO Audit: https://brightlaunchiq.com/ai-receptionist/aeo-audit
-- Pricing: https://brightlaunchiq.com/pricing
+- Free AEO Audit: https://brightlaunchiq.com/locallift/resources/aeo-audit
+- Pricing: https://brightlaunchiq.com/ai-receptionist/pricing
 - FAQ: https://brightlaunchiq.com/faq
 - Contact: https://brightlaunchiq.com/contact
 - Locations: https://brightlaunchiq.com/locations

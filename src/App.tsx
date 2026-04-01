@@ -229,7 +229,7 @@ const App = () => (
             {/* Primary conversion paths */}
             <Route path="/ai-receptionist/get-started" element={<GetStarted />} />
             <Route path="/ai-receptionist/pricing" element={<Pricing />} />
-            <Route path="/pricing" element={<Pricing />} />
+            
             <Route path="/locallift/resources/aeo-audit" element={<AEOAudit />} />
             <Route path="/ai-receptionist/how-it-works" element={<AIReceptionistHowItWorks />} />
             <Route path="/onboarding" element={<Onboarding />} />
