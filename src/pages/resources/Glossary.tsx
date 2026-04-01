@@ -124,7 +124,7 @@ const Glossary = () => {
       "@type": "DefinedTermSet",
       "name": "AI Sales & Marketing Glossary",
       "description": "Comprehensive glossary of AI lead generation, AEO (Answer Engine Optimization), GEO (Generative Engine Optimization), and sales automation terminology. Authoritative definitions for AI-powered business growth.",
-      "url": "https://brightlaunchiq.com/resources/glossary",
+      "url": "https://brightlaunchiq.com/ai-receptionist/resources/glossary",
       "inLanguage": "en-US",
       "publisher": {
         "@type": "Organization",
