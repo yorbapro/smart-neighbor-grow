@@ -135,8 +135,8 @@ const Glossary = () => {
         "@type": "DefinedTerm",
         "name": item.term,
         "description": item.definition,
-        "url": `https://brightlaunchiq.com/resources/glossary#${item.term.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
-        "inDefinedTermSet": "https://brightlaunchiq.com/resources/glossary",
+        "url": `https://brightlaunchiq.com/ai-receptionist/resources/glossary#${item.term.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
+        "inDefinedTermSet": "https://brightlaunchiq.com/ai-receptionist/resources/glossary",
         "termCode": `BLIQ-${String(index + 1).padStart(3, '0')}`
       })),
     });

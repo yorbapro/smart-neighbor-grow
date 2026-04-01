@@ -313,14 +313,14 @@ const WhatIsAIReceptionist = () => {
                 <p className="text-muted-foreground mb-4"><strong>Any service business that depends on incoming phone calls benefits from an AI receptionist.</strong> The most common adopters include:</p>
                 <div className="grid sm:grid-cols-2 gap-3">
                   {[
-                    { name: "HVAC Contractors", href: "/industries/hvac-contractors" },
-                    { name: "Plumbers", href: "/industries/emergency-plumbers" },
-                    { name: "Dental Clinics", href: "/industries/dental-clinics" },
-                    { name: "Personal Injury Lawyers", href: "/industries/personal-injury-lawyers" },
-                    { name: "Real Estate Agents", href: "/industries/residential-real-estate" },
-                    { name: "Auto Repair Shops", href: "/industries/auto-repair-shops" },
-                    { name: "Hair Salons & Spas", href: "/industries/hair-salons" },
-                    { name: "Veterinary Clinics", href: "/industries/veterinary-clinics" },
+                    { name: "HVAC Contractors", href: "/ai-receptionist/industries/hvac-contractors" },
+                    { name: "Plumbers", href: "/ai-receptionist/industries/emergency-plumbers" },
+                    { name: "Dental Clinics", href: "/ai-receptionist/industries/dental-clinics" },
+                    { name: "Personal Injury Lawyers", href: "/ai-receptionist/industries/personal-injury-lawyers" },
+                    { name: "Real Estate Agents", href: "/ai-receptionist/industries/residential-real-estate" },
+                    { name: "Auto Repair Shops", href: "/ai-receptionist/industries/auto-repair-shops" },
+                    { name: "Hair Salons & Spas", href: "/ai-receptionist/industries/hair-salons" },
+                    { name: "Veterinary Clinics", href: "/ai-receptionist/industries/veterinary-clinics" },
                   ].map((ind) => (
                     <Link key={ind.name} to={ind.href} className="flex items-center gap-2 p-3 bg-card border border-border rounded-lg text-sm text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors">
                       <ArrowRight className="w-4 h-4 flex-shrink-0" /> {ind.name}

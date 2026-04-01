@@ -224,9 +224,9 @@ const parsedRoutes = [...sitemap.matchAll(/<loc>https:\/\/brightlaunchiq\.com([^
 const uniqueRoutes = [...new Set(parsedRoutes)]
 
 const industryPagesToKeep = [
-  '/industries/hvac-contractors',
-  '/industries/dental-clinics',
-  '/industries/personal-injury-lawyers'
+  '/ai-receptionist/industries/hvac-contractors',
+  '/ai-receptionist/industries/dental-clinics',
+  '/ai-receptionist/industries/personal-injury-lawyers'
 ]
 
 const pagesToExclude = [
@@ -237,7 +237,7 @@ const filteredRoutes = uniqueRoutes.filter(route => {
   if (pagesToExclude.includes(route)) {
     return false
   }
-  if (!route.startsWith('/industries/')) {
+  if (!route.startsWith('/ai-receptionist/industries/')) {
     return true
   }
   return industryPagesToKeep.includes(route)

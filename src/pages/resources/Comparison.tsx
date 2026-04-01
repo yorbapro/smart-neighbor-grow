@@ -11,7 +11,7 @@ const Comparison = () => {
   useSEO({
     title: "AI Lead Generation vs Traditional Marketing | BrightLaunchIQ",
     description: "Compare AI lead generation to traditional marketing methods. See the cost, speed, and ROI differences between AI sales automation and manual prospecting.",
-    canonical: "https://brightlaunchiq.com/resources/comparison",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/resources/comparison",
     keywords: "AI vs traditional marketing, AI lead generation comparison, sales automation ROI, AI SDR vs human SDR",
     speakable: ["h1", ".comparison-intro"],
   });
