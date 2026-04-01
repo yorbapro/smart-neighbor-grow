@@ -71,7 +71,7 @@ const articles: Record<string, ArticleData> = {
       "- **Conversation Intelligence**: AI analyzes interactions to optimize messaging and identify the best times to reach out.",
       "## The Speed-to-Lead Advantage",
       "Research consistently shows that the first business to respond to an inquiry wins 35-50% of the time. Yet the average business takes 47 hours to respond to a new lead. AI lead generation closes this gap by responding in under 60 seconds.",
-      "This speed advantage is particularly crucial for local service businesses where customers often contact multiple providers simultaneously. The [HVAC company](/industries/hvac-contractors) that responds in 30 seconds while competitors take hours has a massive competitive advantage.",
+      "This speed advantage is particularly crucial for local service businesses where customers often contact multiple providers simultaneously. The [HVAC company](/ai-receptionist/industries/hvac-contractors) that responds in 30 seconds while competitors take hours has a massive competitive advantage.",
       "## Why Small Businesses Need AI Lead Generation",
       "Small businesses face a fundamental challenge: they need sales coverage but can't afford large sales teams. A single SDR (Sales Development Representative) costs $60,000-80,000 annually in salary alone, plus benefits, training, and management overhead.",
       "AI lead generation solves this by providing:",
