@@ -223,11 +223,7 @@ const parsedRoutes = [...sitemap.matchAll(/<loc>https:\/\/brightlaunchiq\.com([^
 
 const uniqueRoutes = [...new Set(parsedRoutes)]
 
-const industryPagesToKeep = [
-  '/ai-receptionist/industries/hvac-contractors',
-  '/ai-receptionist/industries/dental-clinics',
-  '/ai-receptionist/industries/personal-injury-lawyers'
-]
+const industryPagesToKeep = []
 
 const pagesToExclude = [
   '/ai-receptionist-guide'
@@ -237,10 +233,8 @@ const filteredRoutes = uniqueRoutes.filter(route => {
   if (pagesToExclude.includes(route)) {
     return false
   }
-  if (!route.startsWith('/ai-receptionist/industries/')) {
-    return true
-  }
-  return industryPagesToKeep.includes(route)
+  // Prerender all industry pages found in the sitemap
+  return true
 })
 
 const baseRoutes = filteredRoutes.includes('/') ? filteredRoutes : ['/', ...filteredRoutes]
