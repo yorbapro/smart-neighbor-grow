@@ -176,6 +176,8 @@ import ForBusiness from "./pages/learning-center/ForBusiness";
 import ForEveryone from "./pages/learning-center/ForEveryone";
 import LearningCenterNews from "./pages/learning-center/News";
 import Glossary from "./pages/resources/Glossary";
+import LocalLiftGlossary from "./pages/locallift/resources/LocalLiftGlossary";
+import TerminologyGuide from "./pages/resources/TerminologyGuide";
 import CaseStudies from "./pages/resources/CaseStudies";
 import WhitepaperPage from "./pages/WhitepaperPage";
 import Comparison from "./pages/resources/Comparison";
@@ -260,8 +262,10 @@ const App = () => (
             <Route path="/ai-receptionist/resources/ai-receptionists-101" element={<AIReceptionists101Hub />} />
             <Route path="/ai-receptionist/resources/ai-receptionists-101/:slug" element={<AIReceptionists101Article />} />
             <Route path="/ai-receptionist/resources/ai-receptionist-guide" element={<AIReceptionistGuide />} />
-            <Route path="/ai-receptionist/resources/glossary" element={<Glossary />} />
-            <Route path="/ai-receptionist/resources/comparison" element={<Comparison />} />
+<Route path="/ai-receptionist/resources/glossary" element={<Glossary />} />
+	            <Route path="/ai-receptionist/resources/terminology-guide" element={<TerminologyGuide />} />
+	            <Route path="/locallift/resources/glossary" element={<LocalLiftGlossary />} />
+	            <Route path="/ai-receptionist/resources/comparison" element={<Comparison />} />
             <Route path="/ai-receptionist/faq" element={<FAQPage />} />
 
             {/* Content/SEO pages */}

@@ -15,78 +15,183 @@ interface GlossaryTerm {
 const glossaryTerms: GlossaryTerm[] = [
   {
     term: "AEO (Answer Engine Optimization)",
-    definition: "Answer Engine Optimization is the practice of optimizing content to be discovered and cited by AI assistants like ChatGPT, Gemini, Perplexity, and Google AI Overviews. Unlike traditional SEO which focuses on ranking in search results, AEO focuses on being the authoritative answer AI systems quote.",
-    category: "Marketing",
-  },
-  {
-    term: "AI Lead Generation",
-    definition: "AI lead generation uses artificial intelligence to identify, qualify, and engage potential customers automatically. It scans data sources for intent signals and initiates personalized outreach when prospects show buying behavior, operating 24/7 without human intervention.",
-    category: "Sales",
-  },
-  {
-    term: "AI SDR (AI Sales Development Representative)",
-    definition: "An AI SDR is an automated sales development system that handles prospecting, outreach, and lead qualification using artificial intelligence. It performs tasks traditionally done by human SDRs: finding leads, sending personalized messages, and qualifying prospects for sales conversations.",
-    category: "Sales",
+    definition: "The process of making your business information easy for AI assistants (like ChatGPT, Siri, and Alexa) to find and share. It ensures that when someone asks an AI a question about your business, the AI gives the right answer.",
+    category: "A",
   },
   {
     term: "Agentic AI",
-    definition: "Agentic AI refers to AI systems that can take autonomous actions toward goals with minimal human intervention. In sales, this means AI agents that can independently research prospects, craft messages, and manage follow-up sequences within defined guardrails.",
-    category: "Technology",
+    definition: "AI that can act on its own to complete a task. For example, an AI receptionist that doesn't just talk but also books an appointment on your calendar without needing a human to step in.",
+    category: "A",
+  },
+  {
+    term: "AI Answering Service",
+    definition: "A modern version of a traditional answering service that uses artificial intelligence instead of human operators to handle incoming calls 24/7.",
+    category: "A",
+  },
+  {
+    term: "AI Receptionist",
+    definition: "A digital assistant that uses voice technology and artificial intelligence to answer phone calls, answer questions, and perform tasks like a human receptionist.",
+    category: "A",
+  },
+  {
+    term: "API (Application Programming Interface)",
+    definition: "A technical 'bridge' that allows two different software programs to talk to each other—for example, allowing your AI receptionist to send lead data directly into your CRM.",
+    category: "A",
+  },
+  {
+    term: "Artificial Intelligence (AI)",
+    definition: "Computer systems designed to perform tasks that normally require human intelligence, such as understanding speech, making decisions, and solving problems.",
+    category: "A",
+  },
+  {
+    term: "Barge-in",
+    definition: "A feature that allows a human caller to interrupt the AI while it is speaking. The AI will stop talking and listen, making the conversation feel more natural and less like a recording.",
+    category: "B",
   },
   {
     term: "Bounded Autonomy",
-    definition: "Bounded autonomy is a human-AI collaboration framework where AI systems operate independently within predefined limits or 'guardrails' set by humans. This allows automation of routine tasks while maintaining human oversight for important decisions.",
-    category: "Technology",
+    definition: "A way of setting 'guardrails' for an AI so it can work independently but only within the rules and limits you define for your business.",
+    category: "B",
+  },
+  {
+    term: "Business Logic",
+    definition: "The specific rules and information that govern how your business operates—such as your hours, pricing, and how you want different types of calls handled.",
+    category: "B",
+  },
+  {
+    term: "Call Routing",
+    definition: "The process of directing a phone call to the right person or department based on what the caller needs.",
+    category: "C",
+  },
+  {
+    term: "Cloud-Based",
+    definition: "Software that runs on the internet rather than on a specific computer in your office, allowing it to be accessed from anywhere and scale as your business grows.",
+    category: "C",
+  },
+  {
+    term: "Cold Transfer",
+    definition: "When a call is transferred directly to another person without the person who is transferring the call speaking to the recipient first.",
+    category: "C",
+  },
+  {
+    term: "Conversational AI",
+    definition: "A type of AI specifically designed to have back-and-forth conversations with humans using natural language.",
+    category: "C",
+  },
+  {
+    term: "CRM (Customer Relationship Management)",
+    definition: "Software used by businesses to keep track of all their interactions with customers and potential leads (e.g., HubSpot, Salesforce).",
+    category: "C",
+  },
+  {
+    term: "Data Privacy",
+    definition: "The practice of protecting sensitive information collected during calls to ensure it is handled securely and in compliance with laws like HIPAA or GDPR.",
+    category: "D",
+  },
+  {
+    term: "Digital Teammate",
+    definition: "A term used to describe an AI agent that works alongside your human staff to handle repetitive tasks, allowing your team to focus on higher-value work.",
+    category: "D",
   },
   {
     term: "GEO (Generative Engine Optimization)",
-    definition: "Generative Engine Optimization is a strategy focused on making content discoverable and citable by AI-powered search engines and assistants. It emphasizes structured facts, entity recognition, and authority signals that AI systems use to generate answers.",
-    category: "Marketing",
+    definition: "A strategy to ensure your business is accurately represented in the 'answers' generated by AI search engines like Google's AI Overviews or Perplexity.",
+    category: "G",
+  },
+  {
+    term: "HIPAA Compliance",
+    definition: "A set of US federal standards designed to protect sensitive patient health information from being disclosed without the patient's consent or knowledge.",
+    category: "H",
   },
   {
     term: "Human-in-the-Loop (HITL)",
-    definition: "Human-in-the-loop is an AI approach where human experts supervise, guide, and quality-check AI outputs. This ensures AI systems maintain brand voice, handle edge cases appropriately, and deliver authentic customer experiences.",
-    category: "Technology",
+    definition: "A system where humans oversee and check the work of an AI to ensure it is accurate, helpful, and staying on-brand.",
+    category: "H",
   },
   {
-    term: "ICP (Ideal Customer Profile)",
-    definition: "An Ideal Customer Profile is a detailed description of the type of company or customer most likely to benefit from your product or service. In AI lead generation, ICP signals are used to identify and prioritize high-value prospects automatically.",
-    category: "Sales",
+    term: "Inbound Call",
+    definition: "A phone call that is initiated by a customer or prospect and received by your business.",
+    category: "I",
   },
   {
-    term: "Intent Signals",
-    definition: "Intent signals are behaviors or data points that indicate a prospect is actively researching or considering a purchase. Examples include visiting pricing pages, downloading whitepapers, or searching for competitor comparisons. AI systems detect these to prioritize hot leads.",
-    category: "Sales",
+    term: "Intent Recognition",
+    definition: "The AI's ability to understand what a caller actually wants (e.g., 'I have a leak' means they need an emergency plumber) even if they don't use specific keywords.",
+    category: "I",
   },
   {
-    term: "Lead Scoring",
-    definition: "Lead scoring is the process of ranking leads based on their likelihood to convert. AI-powered lead scoring analyzes dozens of signals—engagement, demographics, behavior—to automatically prioritize which leads deserve immediate attention.",
-    category: "Sales",
+    term: "Latency",
+    definition: "The slight delay between when a person speaks and when the AI responds. Lower latency makes the conversation feel more natural and 'real-time.'",
+    category: "L",
   },
   {
-    term: "Multi-Channel Outreach",
-    definition: "Multi-channel outreach is a sales strategy that engages prospects across multiple communication channels—email, phone, SMS, LinkedIn, social media—in a coordinated sequence. AI automation enables personalized multi-channel campaigns at scale.",
-    category: "Sales",
+    term: "Lead Qualification",
+    definition: "The process of asking a caller questions to see if they are a good fit for your services before booking an appointment or passing them to a sales team.",
+    category: "L",
   },
   {
-    term: "Pipeline Intelligence",
-    definition: "Pipeline intelligence uses AI and data analytics to provide real-time visibility into sales pipeline health, forecast accuracy, and deal risks. It identifies at-risk opportunities and suggests next best actions for sales teams.",
-    category: "Sales",
+    term: "LLM (Large Language Model)",
+    definition: "The underlying technology (like GPT-4) that gives an AI its ability to understand and generate human-like text and speech.",
+    category: "L",
   },
   {
-    term: "Schema Markup",
-    definition: "Schema markup is structured data added to websites that helps search engines and AI systems understand content meaning. For local businesses, schemas like LocalBusiness, FAQ, and Product help AI assistants accurately describe and recommend businesses.",
-    category: "Marketing",
+    term: "Natural Language Processing (NLP)",
+    definition: "The field of AI that focuses on helping computers understand, interpret, and respond to human language in a way that is both meaningful and natural.",
+    category: "N",
+  },
+  {
+    term: "Outbound Call",
+    definition: "A phone call initiated by your business (or your AI agent) to a customer or prospect for follow-up or sales outreach.",
+    category: "O",
+  },
+  {
+    term: "Persona",
+    definition: "The 'personality' given to an AI, including its tone of voice, level of formality, and conversational style.",
+    category: "P",
+  },
+  {
+    term: "Prompt",
+    definition: "The specific instructions given to an AI to tell it how to behave and what information to use during a conversation.",
+    category: "P",
+  },
+  {
+    term: "Sentiment Analysis",
+    definition: "The ability of an AI to detect the emotional tone of a caller—such as whether they are happy, frustrated, or in a hurry.",
+    category: "S",
   },
   {
     term: "Speed to Lead",
-    definition: "Speed to lead measures how quickly a business responds to new inquiries. Research shows 50% of sales go to the first responder, yet average response time is 47 hours. AI automation can reduce this to under 60 seconds.",
-    category: "Sales",
+    definition: "The amount of time it takes for a business to respond to a new inquiry. AI can reduce this to seconds by answering every call immediately.",
+    category: "S",
   },
   {
-    term: "Voice Search Optimization",
-    definition: "Voice search optimization adapts content for voice-activated assistants like Siri, Alexa, and Google Assistant. It focuses on natural language, question-based queries, and featured snippet positions that voice assistants read aloud.",
-    category: "Marketing",
+    term: "Transcription",
+    definition: "The process of converting the spoken words of a phone call into written text for record-keeping and analysis.",
+    category: "T",
+  },
+  {
+    term: "Virtual Receptionist",
+    definition: "A broad term that can refer to either a remote human answering service or an AI-powered system that handles front-desk tasks.",
+    category: "V",
+  },
+  {
+    term: "Voice Cloning",
+    definition: "A technology that creates a digital version of a specific person's voice so the AI can sound exactly like a particular individual.",
+    category: "V",
+  },
+  {
+    term: "Voice-to-Text",
+    definition: "The technology that translates spoken words into digital text in real-time.",
+    category: "V",
+  },
+  {
+    term: "Warm Transfer",
+    definition: "When a call is transferred to another person, but the person transferring the call speaks to the recipient first to introduce the caller and provide context.",
+    category: "W",
+  },
+  {
+    term: "Webhook",
+    definition: "A way for one app to send real-time information to another app as soon as something happens (like an AI booking an appointment and immediately notifying your calendar).",
+    category: "W",
   },
 ];
 
@@ -95,10 +200,10 @@ const Glossary = () => {
   const [filteredTerms, setFilteredTerms] = useState(glossaryTerms);
 
   useSEO({
-    title: "AI Sales & Marketing Glossary | BrightLaunchIQ",
-    description: "Comprehensive glossary of AI lead generation, AEO, GEO, and sales automation terms. Learn what AI SDR, human-in-the-loop, intent signals, and other key terms mean.",
+    title: "AI Receptionist Glossary | BrightLaunchIQ",
+    description: "A comprehensive guide to the terms and technology behind the next generation of business communication. Learn about AEO, Agentic AI, NLP, and more.",
     canonical: "https://brightlaunchiq.com/ai-receptionist/resources/glossary",
-    keywords: "AI glossary, AEO definition, GEO meaning, AI SDR explained, sales automation terms",
+    keywords: "AI glossary, AI receptionist terms, AEO definition, voice AI technology, business automation glossary",
     speakable: ["h1", ".glossary-intro"],
   });
 
@@ -111,7 +216,7 @@ const Glossary = () => {
     setFilteredTerms(filtered);
   }, [searchQuery]);
 
-  // Add DefinedTermSet schema with enhanced GEO signals
+  // Add DefinedTermSet schema
   useEffect(() => {
     const existingSchema = document.getElementById("glossary-schema");
     if (existingSchema) existingSchema.remove();
@@ -122,8 +227,8 @@ const Glossary = () => {
     schemaScript.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "DefinedTermSet",
-      "name": "AI Sales & Marketing Glossary",
-      "description": "Comprehensive glossary of AI lead generation, AEO (Answer Engine Optimization), GEO (Generative Engine Optimization), and sales automation terminology. Authoritative definitions for AI-powered business growth.",
+      "name": "AI Receptionist Glossary",
+      "description": "A comprehensive guide to the terms and technology behind the next generation of business communication.",
       "url": "https://brightlaunchiq.com/ai-receptionist/resources/glossary",
       "inLanguage": "en-US",
       "publisher": {
@@ -137,7 +242,7 @@ const Glossary = () => {
         "description": item.definition,
         "url": `https://brightlaunchiq.com/ai-receptionist/resources/glossary#${item.term.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
         "inDefinedTermSet": "https://brightlaunchiq.com/ai-receptionist/resources/glossary",
-        "termCode": `BLIQ-${String(index + 1).padStart(3, '0')}`
+        "termCode": `BLIQ-GL-${String(index + 1).padStart(3, '0')}`
       })),
     });
     document.head.appendChild(schemaScript);
@@ -148,7 +253,7 @@ const Glossary = () => {
     };
   }, []);
 
-  const categories = [...new Set(glossaryTerms.map((t) => t.category))];
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
   return (
     <div className="min-h-screen bg-background">
@@ -164,10 +269,10 @@ const Glossary = () => {
           <div className="container">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
-                AI Sales & Marketing Glossary
+                AI Receptionist Glossary
               </h1>
               <p className="glossary-intro text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-                Clear definitions for AI lead generation, Answer Engine Optimization, and sales automation terminology.
+                A comprehensive guide to the terms and technology behind the next generation of business communication.
               </p>
               <div className="max-w-md mx-auto relative">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
@@ -187,48 +292,57 @@ const Glossary = () => {
         <section className="py-12 md:py-16">
           <div className="container">
             <div className="max-w-4xl mx-auto">
-              {/* Category filters */}
-              <div className="flex flex-wrap gap-2 mb-8">
-                <button
-                  onClick={() => setSearchQuery("")}
-                  className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
-                    !searchQuery ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground hover:bg-muted/80"
-                  }`}
-                >
-                  All
-                </button>
-                {categories.map((cat) => (
-                  <button
-                    key={cat}
-                    onClick={() => setSearchQuery(cat)}
-                    className="px-3 py-1 rounded-full text-sm font-medium bg-muted text-muted-foreground hover:bg-muted/80 transition-colors"
-                  >
-                    {cat}
-                  </button>
-                ))}
+              {/* Alphabet Quick Links */}
+              <div className="flex flex-wrap justify-center gap-2 mb-12">
+                {alphabet.map((letter) => {
+                  const hasTerms = glossaryTerms.some(t => t.category === letter);
+                  return (
+                    <a
+                      key={letter}
+                      href={hasTerms ? `#section-${letter}` : undefined}
+                      className={`w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold transition-all ${
+                        hasTerms 
+                          ? "bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground" 
+                          : "text-muted-foreground/30 cursor-not-allowed"
+                      }`}
+                    >
+                      {letter}
+                    </a>
+                  );
+                })}
               </div>
 
               {/* Terms list */}
-              <div className="space-y-6">
-                {filteredTerms.map((item) => (
-                  <article
-                    key={item.term}
-                    id={item.term.toLowerCase().replace(/[^a-z0-9]+/g, "-")}
-                    className="bg-card rounded-xl border border-border p-6"
-                  >
-                    <div className="flex items-start justify-between gap-4 mb-3">
-                      <h2 className="font-display text-xl font-bold text-foreground">
-                        {item.term}
-                      </h2>
-                      <span className="px-2 py-1 text-xs font-semibold bg-primary/10 text-primary rounded flex-shrink-0">
-                        {item.category}
-                      </span>
+              <div className="space-y-16">
+                {alphabet.map((letter) => {
+                  const sectionTerms = filteredTerms.filter(t => t.category === letter);
+                  if (sectionTerms.length === 0) return null;
+
+                  return (
+                    <div key={letter} id={`section-${letter}`} className="scroll-mt-24">
+                      <div className="flex items-center gap-4 mb-8">
+                        <h2 className="text-4xl font-bold text-primary/20 font-display">{letter}</h2>
+                        <div className="h-px flex-1 bg-border"></div>
+                      </div>
+                      <div className="grid gap-6">
+                        {sectionTerms.map((item) => (
+                          <article
+                            key={item.term}
+                            id={item.term.toLowerCase().replace(/[^a-z0-9]+/g, "-")}
+                            className="bg-card rounded-2xl border border-border p-6 md:p-8 hover:shadow-card-hover transition-all"
+                          >
+                            <h3 className="font-display text-xl font-bold text-foreground mb-3">
+                              {item.term}
+                            </h3>
+                            <p className="text-muted-foreground leading-relaxed">
+                              {item.definition}
+                            </p>
+                          </article>
+                        ))}
+                      </div>
                     </div>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {item.definition}
-                    </p>
-                  </article>
-                ))}
+                  );
+                })}
               </div>
 
               {filteredTerms.length === 0 && (
