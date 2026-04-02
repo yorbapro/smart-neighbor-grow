@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import TrustBadges from "@/components/TrustBadges";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { 
@@ -60,6 +61,7 @@ interface AuditResult {
 const AEOAudit = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<AuditResult | null>(null);
+  const [emailConsent, setEmailConsent] = useState(true);
   const [formData, setFormData] = useState({
     email: "",
     businessName: "",
@@ -319,6 +321,17 @@ const AEOAudit = () => {
                     required
                     disabled={isLoading}
                   />
+                </div>
+
+                <div className="flex items-start space-x-3">
+                  <Checkbox
+                    id="emailConsent"
+                    checked={emailConsent}
+                    onCheckedChange={(checked) => setEmailConsent(checked === true)}
+                  />
+                  <Label htmlFor="emailConsent" className="text-sm text-muted-foreground leading-snug cursor-pointer">
+                    Send my AEO Audit results and growth insights from BrightLaunchIQ.
+                  </Label>
                 </div>
 
                 <Button 
