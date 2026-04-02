@@ -55,6 +55,7 @@ import AIReceptionistProIncludes from "./pages/products/AIReceptionistProInclude
 import CustomAIWorkflows from "./pages/products/CustomAIWorkflows";
 import AIReceptionistFeatureLibrary from "./pages/products/AIReceptionistFeatureLibrary";
 import AIReceptionistHowItWorks from "./pages/products/AIReceptionistHowItWorks";
+import AIReceptionistDemo from "./pages/AIReceptionistDemo";
 
 // Industry pages
 import IndustryIndex from "./pages/industries/IndustryIndex";
@@ -232,6 +233,7 @@ const App = () => (
             
             <Route path="/locallift/resources/aeo-audit" element={<AEOAudit />} />
             <Route path="/ai-receptionist/how-it-works" element={<AIReceptionistHowItWorks />} />
+	            <Route path="/ai-receptionist/demo" element={<AIReceptionistDemo />} />
             <Route path="/onboarding" element={<Onboarding />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/ai-receptionist/resources/ai-receptionist-readiness-assessment" element={<AIReceptionistAssessment />} />
