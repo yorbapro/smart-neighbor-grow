@@ -61,6 +61,7 @@ interface AuditResult {
 const AEOAudit = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<AuditResult | null>(null);
+  const [emailConsent, setEmailConsent] = useState(true);
   const [formData, setFormData] = useState({
     email: "",
     businessName: "",
