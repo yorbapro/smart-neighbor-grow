@@ -323,6 +323,17 @@ const AEOAudit = () => {
                   />
                 </div>
 
+                <div className="flex items-start space-x-3">
+                  <Checkbox
+                    id="emailConsent"
+                    checked={emailConsent}
+                    onCheckedChange={(checked) => setEmailConsent(checked === true)}
+                  />
+                  <Label htmlFor="emailConsent" className="text-sm text-muted-foreground leading-snug cursor-pointer">
+                    Send my AEO Audit results and growth insights from BrightLaunchIQ.
+                  </Label>
+                </div>
+
                 <Button 
                   type="submit" 
                   variant="hero" 
