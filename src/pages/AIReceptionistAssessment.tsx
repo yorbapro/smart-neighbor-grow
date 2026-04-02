@@ -584,7 +584,7 @@ const AIReceptionistAssessment = () => {
                       className="border-white/30 data-[state=checked]:bg-primary data-[state=checked]:border-primary mt-0.5"
                     />
                     <label htmlFor="consent" className="text-sm text-white/60 leading-relaxed cursor-pointer">
-                      Yes, send me my personalized Revenue Recovery Report and helpful tips via email. I agree to receive marketing communications from BrightLaunchIQ.
+                      Send my Revenue Recovery Report and growth insights from BrightLaunchIQ.
                     </label>
                   </div>
 
