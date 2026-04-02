@@ -222,9 +222,17 @@ The ultimate guide to understanding, evaluating, and implementing an AI receptio
 Free 2-minute assessment to find out how much revenue you're losing to missed calls.
 **URL**: https://brightlaunchiq.com/ai-receptionist/resources/ai-receptionist-readiness-assessment
 
-### Glossary
+### AI Receptionist Glossary
+A comprehensive, alphabetical guide to the terms and technology behind the next generation of business communication.
+- **AI Receptionist Glossary**: https://brightlaunchiq.com/ai-receptionist/resources/glossary
+- **Terminology Guide**: https://brightlaunchiq.com/ai-receptionist/resources/terminology-guide
+- **LocalLift Glossary**: https://brightlaunchiq.com/locallift/resources/glossaryerminology Guide
+A structured guide designed to help prospects and customers navigate the BrightLaunchIQ onboarding and implementation process.
+**URL**: https://brightlaunchiq.com/ai-receptionist/resources/terminology-guide
+
+### LocalLift™ AI Sales & Marketing Glossary
 Comprehensive glossary of AI lead generation, AEO, GEO, and sales automation terms.
-**URL**: https://brightlaunchiq.com/ai-receptionist/resources/glossary
+**URL**: https://brightlaunchiq.com/locallift/resources/glossary
 
 ### AI Receptionist vs Traditional Marketing
 Side-by-side comparison of AI-powered lead generation vs traditional marketing methods.
