@@ -1810,21 +1810,31 @@ const BlogArticle = () => {
                   <ul className="space-y-2">
                     {article.references.map((ref, idx) => {
                       // Handle cases where the reference might be just a URL or "Name: URL"
-                      const separatorIndex = ref.indexOf(": ");
+                      // We look for the first occurrence of "http" to find the URL
+                      const httpIndex = ref.indexOf("http");
                       let name = "";
-                      let url = ref;
+                      let url = "";
                       
-                      if (separatorIndex !== -1) {
-                        name = ref.substring(0, separatorIndex);
-                        url = ref.substring(separatorIndex + 2).trim();
+                      if (httpIndex !== -1) {
+                        name = ref.substring(0, httpIndex).replace(/:\s*$/, "").trim();
+                        url = ref.substring(httpIndex).trim();
+                      } else {
+                        // Fallback if no http is found
+                        const separatorIndex = ref.indexOf(": ");
+                        if (separatorIndex !== -1) {
+                          name = ref.substring(0, separatorIndex).trim();
+                          url = ref.substring(separatorIndex + 2).trim();
+                        } else {
+                          url = ref.trim();
+                        }
                       }
 
-                      // Ensure URL has a protocol
+                      // Ensure URL has a protocol for the href
                       const href = url.startsWith('http') ? url : `https://${url}`;
 
                       return (
                         <li key={idx} className="text-sm text-muted-foreground">
-                          {name ? `${name}: ` : ""}
+                          {name ? <span className="font-medium text-foreground">{name}: </span> : ""}
                           <a 
                             href={href} 
                             target="_blank" 
