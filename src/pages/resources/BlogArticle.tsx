@@ -476,7 +476,7 @@ const articles: Record<string, ArticleData> = {
     date: "January 9, 2026",
     readTime: "4 min read",
     category: "AEO Series",
-    keywords: "LocalLift", AEO solution, local business optimization, AI visibility, digital presence management",
+    keywords: "LocalLift, AEO solution, local business optimization, AI visibility, digital presence management",
     references: [],
   },
   "how-to-set-up-ai-receptionist": {
@@ -663,7 +663,7 @@ const articles: Record<string, ArticleData> = {
     date: "February 5, 2026",
     readTime: "4 min read",
     category: "AI Voice Agent Series",
-    keywords: "how to set up ai voice agent", configuring ai receptionist, AI phone system setup, AI voice agent configuration",
+    keywords: "how to set up ai voice agent, configuring ai receptionist, AI phone system setup, AI voice agent configuration",
     references: [],
   },
   "training-your-ai-voice-agent": {
@@ -699,7 +699,7 @@ const articles: Record<string, ArticleData> = {
     date: "February 4, 2026",
     readTime: "4 min read",
     category: "AI Voice Agent Series",
-    keywords: "training ai voice agent", ai receptionist script, customizing ai phone support, AI knowledge base, AI training",
+    keywords: "training ai voice agent, ai receptionist script, customizing ai phone support, AI knowledge base, AI training",
     references: [],
   },
   "managing-ai-human-handoffs": {
@@ -759,7 +759,7 @@ const articles: Record<string, ArticleData> = {
     date: "February 2, 2026",
     readTime: "4 min read",
     category: "AI Voice Agent Series",
-    keywords: "cost of ai receptionist", ai vs human receptionist, roi of ai voice agent, AI receptionist pricing, AI phone cost",
+    keywords: "cost of ai receptionist, ai vs human receptionist, roi of ai voice agent, AI receptionist pricing, AI phone cost",
     references: [],
   },
   "why-you-need-leadline": {
@@ -814,7 +814,8 @@ const articles: Record<string, ArticleData> = {
     authorBio: "PhD in Machine Learning from Stanford. Previously led AI initiatives at a Fortune 500 company. Passionate about responsible AI that augments human decision-making.",
     date: "February 14, 2026",
     readTime: "4 min read",
-    category: "AI Receptionist Deep Dive"    keywords: "definition of AI receptionist, how automated answering works, AI vs IVR, what is AI receptionist, NLP phone answering",
+    category: "AI Receptionist Deep Dive",
+    keywords: "definition of AI receptionist, how automated answering works, AI vs IVR, what is AI receptionist, NLP phone answering",
     references: [],
   },
   "how-ai-voice-agents-think": {
@@ -1014,7 +1015,8 @@ const articles: Record<string, ArticleData> = {
     authorBio: "PhD in Machine Learning from Stanford. Previously led AI initiatives at a Fortune 500 company. Passionate about responsible AI that augments human decision-making.",
     date: "February 19, 2026",
     readTime: "5 min read",
-    category: "Consumer's Guide"    keywords: "how to tell if a receptionist is AI, conversational AI voice, talking to robots, AI voice quality, uncanny valley AI",
+    category: "Consumer's Guide",
+    keywords: "how to tell if a receptionist is AI, conversational AI voice, talking to robots, AI voice quality, uncanny valley AI",
     references: [],
   },
   "ai-receptionist-privacy-security": {
@@ -1079,7 +1081,8 @@ const articles: Record<string, ArticleData> = {
     authorBio: "10+ years in digital marketing, specializing in Answer Engine Optimization. Helps local businesses become the go-to answer for AI assistants.",
     date: "February 17, 2026",
     readTime: "5 min read",
-    category: "Consumer's Guide"    keywords: "AI voice recognition accents, accessibility in phone systems, multi-lingual AI, inclusive AI phone, AI language support",
+    category: "Consumer's Guide",
+    keywords: "AI voice recognition accents, accessibility in phone systems, multi-lingual AI, inclusive AI phone, AI language support",
     references: [],
   },
   "ai-keeps-local-shops-alive": {
@@ -1154,7 +1157,8 @@ const articles: Record<string, ArticleData> = {
     authorBio: "PhD in Machine Learning from Stanford. Previously led AI initiatives at a Fortune 500 company. Passionate about responsible AI that augments human decision-making.",
     date: "February 18, 2026",
     readTime: "5 min read",
-    category: "Deep Training"    keywords: "AI brand voice, training AI personality, custom AI receptionist persona, AI brand archetype, brand consistency AI",
+    category: "Deep Training",
+    keywords: "AI brand voice, training AI personality, custom AI receptionist persona, AI brand archetype, brand consistency AI",
     references: [],
   },
   "ai-voice-cadence-prosody": {
@@ -1201,7 +1205,8 @@ const articles: Record<string, ArticleData> = {
     authorBio: "PhD in Machine Learning from Stanford. Previously led AI initiatives at a Fortune 500 company. Passionate about responsible AI that augments human decision-making.",
     date: "February 19, 2026",
     readTime: "6 min read",
-    category: "Deep Training"    keywords: "AI voice cadence training, emotional intelligence in AI, natural sounding AI voice, prosody AI, AI voice latency",
+    category: "Deep Training",
+    keywords: "AI voice cadence training, emotional intelligence in AI, natural sounding AI voice, prosody AI, AI voice latency",
     references: [],
   },
   "ai-receptionist-compliance-guardrails": {
@@ -1253,7 +1258,8 @@ const articles: Record<string, ArticleData> = {
     authorBio: "20+ years helping small businesses grow. Believes technology should feel invisible—powerful results without complexity. Leads the human oversight team at BrightLaunchIQ.",
     date: "February 19, 2026",
     readTime: "6 min read",
-    category: "Deep Training"    keywords: "AI receptionist compliance, HIPAA compliant AI voice, secure AI lead intake, AI hallucination prevention, bounded knowledge AI",
+    category: "Deep Training",
+    keywords: "AI receptionist compliance, HIPAA compliant AI voice, secure AI lead intake, AI hallucination prevention, bounded knowledge AI",
     references: [],
   },
   "professional-ai-training-vs-diy": {
@@ -1308,7 +1314,8 @@ const articles: Record<string, ArticleData> = {
     authorBio: "Former enterprise sales leader who saw local businesses getting left behind in the AI revolution. Founded BrightLaunchIQ to democratize access to world-class sales automation.",
     date: "February 20, 2026",
     readTime: "6 min read",
-    category: "Deep Training"    keywords: "professional AI training vs DIY, how to train AI voice agent, BrightLaunchIQ vs custom GPT, AI training ROI, managed AI receptionist",
+    category: "Deep Training",
+    keywords: "professional AI training vs DIY, how to train AI voice agent, BrightLaunchIQ vs custom GPT, AI training ROI, managed AI receptionist",
     references: [],
   },
   "how-ai-lead-generation-works": {
@@ -1375,7 +1382,8 @@ const articles: Record<string, ArticleData> = {
     authorBio: "10+ years in B2B sales and AI-powered pipeline development. Helping small businesses compete with enterprise-level lead generation.",
     date: "January 15, 2026",
     readTime: "10 min read",
-    category: "AI Sales"    keywords: "how AI lead generation works, AI lead generation process, AI sales automation, AI prospecting, automated lead generation steps",
+    category: "AI Sales",
+    keywords: "how AI lead generation works, AI lead generation process, AI sales automation, AI prospecting, automated lead generation steps",
     references: [],
   },
   "zero-pause-revolution": {
