@@ -9,6 +9,14 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 
 const weeklyArticles = [
   {
+    title: "Google Launches Duplex 3.0: AI Receptionist Gets Smarter with Multilingual Skills",
+    slug: "google-launches-duplex-3-0-ai-receptionist-gets-smarter-with-multilingual-skills",
+    date: "April 03, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    excerpt: "Google has released Duplex 3.0, a powerful upgrade to its AI voice agent that can handle real-time multilingual conversations and complex customer interactions, helping businesses worldwide improve their customer service.",
+  },
+  {
     title: "Google Introduces Duetto: AI Receptionist That Speaks Your Language and Feels Your Mood",
     slug: "google-introduces-duetto-ai-receptionist-that-speaks-your-language-and-feels-your-mood",
     date: "April 03, 2026",
