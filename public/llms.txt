@@ -259,7 +259,9 @@ Expert guides on AI receptionists, AI voice agents, AEO, and sales automation:
 - Calculate AI Receptionist ROI: https://brightlaunchiq.com/ai-receptionist/learning-center/calculate-ai-receptionist-roi
 - AI Receptionist for Business: https://brightlaunchiq.com/ai-receptionist/learning-center/for-business
 - AI Receptionist for Everyone: https://brightlaunchiq.com/ai-receptionist/learning-center/for-everyone
-- News: https://brightlaunchiq.com/ai-receptionist/learning-center/news
+- News: https://brightlaunchiq.com/ai-receptionist/news
+- Mistral Voxtral Launches VoxtralX: https://brightlaunchiq.com/ai-receptionist/news/mistral-voxtral-launches-voxtralx-ai-voice-agent-that-truly-understands-you
+- The Zero-Pause Revolution: https://brightlaunchiq.com/ai-receptionist/news/zero-pause-revolution
 
 ---
 
@@ -448,4 +450,4 @@ This website is a React single-page application. For AI crawlers that don't exec
 ---
 
 ## Last Updated
-2026-04-01
+2026-04-03
