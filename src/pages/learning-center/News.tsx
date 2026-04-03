@@ -9,6 +9,14 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 
 const weeklyArticles = [
   {
+    title: "Mistral Voxtral Launches AI Voice Agent That Redefines Receptionist Automation",
+    slug: "mistral-voxtral-launches-ai-voice-agent-that-redefines-receptionist-automation",
+    date: "April 03, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    excerpt: "Mistral’s new AI voice agent, Voxtral, brings human-like understanding and empathy to receptionist automation, boosting call handling and customer satisfaction for small businesses.",
+  },
+  {
     title: "Google Introduces Duetto: AI Receptionist That Speaks Your Language and Feels Your Mood",
     slug: "google-introduces-duetto-ai-receptionist-that-speaks-your-language-and-feels-your-mood",
     date: "April 03, 2026",
