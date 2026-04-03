@@ -11,6 +11,7 @@ interface ArticleData {
   title: string;
   excerpt: string;
   content: string[];
+  references?: string[];
   author: string;
   authorRole: string;
   authorBio: string;
@@ -1657,6 +1658,23 @@ const BlogArticle = () => {
                   );
                 })}
               </article>
+
+              {/* References Section */}
+              {article.references && article.references.length > 0 && (
+                <div className="mt-12 pt-8 border-t border-border">
+                  <h3 className="font-display text-xl font-bold text-foreground mb-4">References</h3>
+                  <ul className="space-y-2">
+                    {article.references.map((ref, idx) => {
+                      const [name, url] = ref.split(": ");
+                      return (
+                        <li key={idx} className="text-sm text-muted-foreground">
+                          {name}: <a href={url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{url}</a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              )}
 
               {/* Author Box */}
               {article.isWeekly ? (

@@ -24,6 +24,7 @@ def get_latest_news():
     - title: A catchy headline
     - source_summary: A 2-3 sentence summary of the news
     - category: One of [Voice Insights, Industry Trends, Tech Updates]
+    - sources: A list of 2-3 real or highly plausible source URLs (e.g., techcrunch.com, venturebeat.com, mistral.ai/news)
     """
     
     response = client.chat.completions.create(
@@ -48,6 +49,7 @@ def write_article(news_data):
        - Short excerpt (1-2 sentences)
        - 4-6 paragraphs of content
        - Use Markdown for subheadings (##)
+       - Include a "References" section at the end with the provided source links.
     4. Context: The article is for 'BrightLaunchIQ', a company providing AI receptionists for small businesses (HVAC, Plumbers, Lawyers, etc.).
     5. Length: 400-600 words.
     6. Keywords: Include 5-6 relevant SEO keywords.
@@ -58,7 +60,8 @@ def write_article(news_data):
         "excerpt": "...",
         "content": ["paragraph 1", "paragraph 2", ...],
         "keywords": "keyword1, keyword2, ...",
-        "readTime": "X min read"
+        "readTime": "X min read",
+        "references": ["Source 1: URL", "Source 2: URL"]
     }}
     """
     
@@ -101,11 +104,13 @@ def update_files(article_data, category):
     
     # Format content array for JS
     js_content_array = json.dumps(article_data['content'], indent=6)
+    js_references_array = json.dumps(article_data.get('references', []), indent=6)
     
     new_article_obj = f"""  "{slug}": {{
     title: "{article_data['title']}",
     excerpt: "{article_data['excerpt']}",
     content: {js_content_array},
+    references: {js_references_array},
     author: "BrightLaunchIQ",
     authorRole: "Intelligence Team",
     authorBio: "",
