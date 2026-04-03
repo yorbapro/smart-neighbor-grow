@@ -9,6 +9,14 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 
 const weeklyArticles = [
   {
+    title: "Mistral Voxtral Launches Revolutionary Multilingual AI Voice Agent Transforming Global Customer Service",
+    slug: "mistral-voxtral-launches-revolutionary-multilingual-ai-voice-agent-transforming-global-customer-service",
+    date: "April 03, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    excerpt: "Mistral has introduced Voxtral, a powerful AI voice agent that understands and switches between 12 languages in real-time, promising to reshape how businesses connect with customers worldwide.",
+  },
+  {
     title: "Mistral Voxtral Launches VoxtralX: AI Voice Agent That Truly Understands You",
     slug: "mistral-voxtral-launches-voxtralx-ai-voice-agent-that-truly-understands-you",
     date: "April 03, 2026",
