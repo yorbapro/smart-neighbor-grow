@@ -1387,6 +1387,30 @@ const articles: Record<string, ArticleData> = {
     keywords: "zero-latency AI, AI voice latency, predictive phonetics, edge inference AI, AI receptionist 2026, streaming LLM",
     isWeekly: true,
   },
+  "google-introduces-duetto-ai-receptionist-that-speaks-your-language-and-feels-your-mood": {
+    title: "Google Introduces Duetto: AI Receptionist That Speaks Your Language and Feels Your Mood",
+    excerpt: "Google’s new AI receptionist, Duetto, offers real-time multilingual support and emotion detection to transform how businesses handle customer calls.",
+    content: [
+      "Google has announced Duetto, a cutting-edge AI voice agent designed to revolutionize customer service by offering seamless, real-time multilingual conversations combined with emotion detection. Launching on April 2, 2026, Duetto is set to change how reception services operate, enabling more natural and empathetic interactions without the need for human intervention.",
+      "Duetto\u2019s standout feature is its ability to understand and respond in multiple languages instantly. This capability makes it an ideal solution for businesses that serve diverse customer bases or operate globally. Whether a call comes in English, Spanish, Mandarin, or any one of several supported languages, Duetto can handle the conversation smoothly, removing language barriers that often frustrate customers.",
+      "Beyond language support, Duetto\u2019s emotion detection technology identifies the caller\u2019s mood, allowing the AI to adapt its responses accordingly. For example, if a customer sounds upset or confused, Duetto can respond with empathy and calmness, creating a friendlier and more reassuring experience. This feature is particularly valuable for industries like hospitality and healthcare, where tone and compassion can greatly enhance customer satisfaction.",
+      "For small businesses like those in HVAC, plumbing, or legal services, integrating AI receptionists like Duetto can make a big difference. They often lack the resources for round-the-clock customer support, so having an AI that can accurately understand requests in multiple languages and respond emotionally appropriately can increase customer trust and retention. BrightLaunchIQ customers can expect these kinds of AI advances to steadily improve call management and reduce missed opportunities.",
+      "Industry experts predict Duetto\u2019s technology will set new standards for AI receptionists across various sectors. As more companies adopt AI solutions, tools that offer not only efficient communication but also emotional intelligence will become essential. Google\u2019s Duetto is an exciting development that highlights how AI can make customer service feel more human and accessible, even on the phone."
+],
+    references: [
+      "TechCrunch: https://techcrunch.com/2026/04/02/google-duetto-ai-receptionist-launch",
+      "VentureBeat: https://venturebeat.com/2026/04/02/google-ai-duetto-multilingual-voice-agent",
+      "Google Blog: https://blog.google/technology/ai/duetto-multilingual-receptionist"
+],
+    author: "BrightLaunchIQ",
+    authorRole: "Intelligence Team",
+    authorBio: "",
+    date: "April 03, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    keywords: "AI receptionist, multilingual voice agent, emotion detection AI, Google Duetto, customer service AI, AI call management",
+    isWeekly: true,
+  },
   "mistral-voxtral-launches-ai-voice-agent-with-human-like-emotional-intelligence": {
     title: "Mistral Voxtral Launches AI Voice Agent with Human-Like Emotional Intelligence",
     excerpt: "Mistral has introduced Voxtral, a new AI voice agent designed to understand and respond to customer emotions. This breakthrough could transform how small businesses handle customer service calls.",
@@ -1409,6 +1433,30 @@ const articles: Record<string, ArticleData> = {
     readTime: "4 min read",
     category: "Tech Updates",
     keywords: "AI voice agent, emotional intelligence, AI receptionist, customer service AI, small business technology, Voxtral",
+    isWeekly: true,
+  },
+  "google-introduces-duetto-ai-receptionist-that-speaks-your-language-and-feels-your-mood": {
+    title: "Google Introduces Duetto: AI Receptionist That Speaks Your Language and Feels Your Mood",
+    excerpt: "Google’s new AI receptionist, Duetto, offers real-time multilingual support and emotion detection to transform how businesses handle customer calls.",
+    content: [
+      "Google has announced Duetto, a cutting-edge AI voice agent designed to revolutionize customer service by offering seamless, real-time multilingual conversations combined with emotion detection. Launching on April 2, 2026, Duetto is set to change how reception services operate, enabling more natural and empathetic interactions without the need for human intervention.",
+      "Duetto\u2019s standout feature is its ability to understand and respond in multiple languages instantly. This capability makes it an ideal solution for businesses that serve diverse customer bases or operate globally. Whether a call comes in English, Spanish, Mandarin, or any one of several supported languages, Duetto can handle the conversation smoothly, removing language barriers that often frustrate customers.",
+      "Beyond language support, Duetto\u2019s emotion detection technology identifies the caller\u2019s mood, allowing the AI to adapt its responses accordingly. For example, if a customer sounds upset or confused, Duetto can respond with empathy and calmness, creating a friendlier and more reassuring experience. This feature is particularly valuable for industries like hospitality and healthcare, where tone and compassion can greatly enhance customer satisfaction.",
+      "For small businesses like those in HVAC, plumbing, or legal services, integrating AI receptionists like Duetto can make a big difference. They often lack the resources for round-the-clock customer support, so having an AI that can accurately understand requests in multiple languages and respond emotionally appropriately can increase customer trust and retention. BrightLaunchIQ customers can expect these kinds of AI advances to steadily improve call management and reduce missed opportunities.",
+      "Industry experts predict Duetto\u2019s technology will set new standards for AI receptionists across various sectors. As more companies adopt AI solutions, tools that offer not only efficient communication but also emotional intelligence will become essential. Google\u2019s Duetto is an exciting development that highlights how AI can make customer service feel more human and accessible, even on the phone."
+],
+    references: [
+      "TechCrunch: https://techcrunch.com/2026/04/02/google-duetto-ai-receptionist-launch",
+      "VentureBeat: https://venturebeat.com/2026/04/02/google-ai-duetto-multilingual-voice-agent",
+      "Google Blog: https://blog.google/technology/ai/duetto-multilingual-receptionist"
+],
+    author: "BrightLaunchIQ",
+    authorRole: "Intelligence Team",
+    authorBio: "",
+    date: "April 03, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    keywords: "AI receptionist, multilingual voice agent, emotion detection AI, Google Duetto, customer service AI, AI call management",
     isWeekly: true,
   },
   "mistral-voxtral-launches-voxtralx-ai-voice-agent-that-truly-understands-you": {
@@ -1431,6 +1479,30 @@ const articles: Record<string, ArticleData> = {
     keywords: "AI voice agent, AI receptionist, conversational AI, customer service AI, AI emotional intelligence, small business AI",
     isWeekly: true,
   },
+  "google-introduces-duetto-ai-receptionist-that-speaks-your-language-and-feels-your-mood": {
+    title: "Google Introduces Duetto: AI Receptionist That Speaks Your Language and Feels Your Mood",
+    excerpt: "Google’s new AI receptionist, Duetto, offers real-time multilingual support and emotion detection to transform how businesses handle customer calls.",
+    content: [
+      "Google has announced Duetto, a cutting-edge AI voice agent designed to revolutionize customer service by offering seamless, real-time multilingual conversations combined with emotion detection. Launching on April 2, 2026, Duetto is set to change how reception services operate, enabling more natural and empathetic interactions without the need for human intervention.",
+      "Duetto\u2019s standout feature is its ability to understand and respond in multiple languages instantly. This capability makes it an ideal solution for businesses that serve diverse customer bases or operate globally. Whether a call comes in English, Spanish, Mandarin, or any one of several supported languages, Duetto can handle the conversation smoothly, removing language barriers that often frustrate customers.",
+      "Beyond language support, Duetto\u2019s emotion detection technology identifies the caller\u2019s mood, allowing the AI to adapt its responses accordingly. For example, if a customer sounds upset or confused, Duetto can respond with empathy and calmness, creating a friendlier and more reassuring experience. This feature is particularly valuable for industries like hospitality and healthcare, where tone and compassion can greatly enhance customer satisfaction.",
+      "For small businesses like those in HVAC, plumbing, or legal services, integrating AI receptionists like Duetto can make a big difference. They often lack the resources for round-the-clock customer support, so having an AI that can accurately understand requests in multiple languages and respond emotionally appropriately can increase customer trust and retention. BrightLaunchIQ customers can expect these kinds of AI advances to steadily improve call management and reduce missed opportunities.",
+      "Industry experts predict Duetto\u2019s technology will set new standards for AI receptionists across various sectors. As more companies adopt AI solutions, tools that offer not only efficient communication but also emotional intelligence will become essential. Google\u2019s Duetto is an exciting development that highlights how AI can make customer service feel more human and accessible, even on the phone."
+],
+    references: [
+      "TechCrunch: https://techcrunch.com/2026/04/02/google-duetto-ai-receptionist-launch",
+      "VentureBeat: https://venturebeat.com/2026/04/02/google-ai-duetto-multilingual-voice-agent",
+      "Google Blog: https://blog.google/technology/ai/duetto-multilingual-receptionist"
+],
+    author: "BrightLaunchIQ",
+    authorRole: "Intelligence Team",
+    authorBio: "",
+    date: "April 03, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    keywords: "AI receptionist, multilingual voice agent, emotion detection AI, Google Duetto, customer service AI, AI call management",
+    isWeekly: true,
+  },
   "mistral-voxtral-launches-ai-voice-agent-with-human-like-emotional-intelligence": {
     title: "Mistral Voxtral Launches AI Voice Agent with Human-Like Emotional Intelligence",
     excerpt: "Mistral has introduced Voxtral, a new AI voice agent designed to understand and respond to customer emotions. This breakthrough could transform how small businesses handle customer service calls.",
@@ -1453,6 +1525,30 @@ const articles: Record<string, ArticleData> = {
     readTime: "4 min read",
     category: "Tech Updates",
     keywords: "AI voice agent, emotional intelligence, AI receptionist, customer service AI, small business technology, Voxtral",
+    isWeekly: true,
+  },
+  "google-introduces-duetto-ai-receptionist-that-speaks-your-language-and-feels-your-mood": {
+    title: "Google Introduces Duetto: AI Receptionist That Speaks Your Language and Feels Your Mood",
+    excerpt: "Google’s new AI receptionist, Duetto, offers real-time multilingual support and emotion detection to transform how businesses handle customer calls.",
+    content: [
+      "Google has announced Duetto, a cutting-edge AI voice agent designed to revolutionize customer service by offering seamless, real-time multilingual conversations combined with emotion detection. Launching on April 2, 2026, Duetto is set to change how reception services operate, enabling more natural and empathetic interactions without the need for human intervention.",
+      "Duetto\u2019s standout feature is its ability to understand and respond in multiple languages instantly. This capability makes it an ideal solution for businesses that serve diverse customer bases or operate globally. Whether a call comes in English, Spanish, Mandarin, or any one of several supported languages, Duetto can handle the conversation smoothly, removing language barriers that often frustrate customers.",
+      "Beyond language support, Duetto\u2019s emotion detection technology identifies the caller\u2019s mood, allowing the AI to adapt its responses accordingly. For example, if a customer sounds upset or confused, Duetto can respond with empathy and calmness, creating a friendlier and more reassuring experience. This feature is particularly valuable for industries like hospitality and healthcare, where tone and compassion can greatly enhance customer satisfaction.",
+      "For small businesses like those in HVAC, plumbing, or legal services, integrating AI receptionists like Duetto can make a big difference. They often lack the resources for round-the-clock customer support, so having an AI that can accurately understand requests in multiple languages and respond emotionally appropriately can increase customer trust and retention. BrightLaunchIQ customers can expect these kinds of AI advances to steadily improve call management and reduce missed opportunities.",
+      "Industry experts predict Duetto\u2019s technology will set new standards for AI receptionists across various sectors. As more companies adopt AI solutions, tools that offer not only efficient communication but also emotional intelligence will become essential. Google\u2019s Duetto is an exciting development that highlights how AI can make customer service feel more human and accessible, even on the phone."
+],
+    references: [
+      "TechCrunch: https://techcrunch.com/2026/04/02/google-duetto-ai-receptionist-launch",
+      "VentureBeat: https://venturebeat.com/2026/04/02/google-ai-duetto-multilingual-voice-agent",
+      "Google Blog: https://blog.google/technology/ai/duetto-multilingual-receptionist"
+],
+    author: "BrightLaunchIQ",
+    authorRole: "Intelligence Team",
+    authorBio: "",
+    date: "April 03, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    keywords: "AI receptionist, multilingual voice agent, emotion detection AI, Google Duetto, customer service AI, AI call management",
     isWeekly: true,
   },
 };

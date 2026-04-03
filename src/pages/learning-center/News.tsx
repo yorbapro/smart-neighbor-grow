@@ -9,6 +9,14 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 
 const weeklyArticles = [
   {
+    title: "Google Introduces Duetto: AI Receptionist That Speaks Your Language and Feels Your Mood",
+    slug: "google-introduces-duetto-ai-receptionist-that-speaks-your-language-and-feels-your-mood",
+    date: "April 03, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    excerpt: "Google’s new AI receptionist, Duetto, offers real-time multilingual support and emotion detection to transform how businesses handle customer calls.",
+  },
+  {
     title: "Mistral Voxtral Launches AI Voice Agent with Human-Like Emotional Intelligence",
     slug: "mistral-voxtral-launches-ai-voice-agent-with-human-like-emotional-intelligence",
     date: "April 03, 2026",
