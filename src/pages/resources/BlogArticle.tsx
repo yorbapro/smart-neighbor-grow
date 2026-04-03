@@ -1713,10 +1713,30 @@ const BlogArticle = () => {
                   <h3 className="font-display text-xl font-bold text-foreground mb-4">References</h3>
                   <ul className="space-y-2">
                     {article.references.map((ref, idx) => {
-                      const [name, url] = ref.split(": ");
+                      // Handle cases where the reference might be just a URL or "Name: URL"
+                      const separatorIndex = ref.indexOf(": ");
+                      let name = "";
+                      let url = ref;
+                      
+                      if (separatorIndex !== -1) {
+                        name = ref.substring(0, separatorIndex);
+                        url = ref.substring(separatorIndex + 2).trim();
+                      }
+
+                      // Ensure URL has a protocol
+                      const href = url.startsWith('http') ? url : `https://${url}`;
+
                       return (
                         <li key={idx} className="text-sm text-muted-foreground">
-                          {name}: <a href={url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{url}</a>
+                          {name ? `${name}: ` : ""}
+                          <a 
+                            href={href} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="text-primary hover:underline break-all"
+                          >
+                            {url}
+                          </a>
                         </li>
                       );
                     })}

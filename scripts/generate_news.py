@@ -61,7 +61,7 @@ def write_article(news_data):
         "content": ["paragraph 1", "paragraph 2", ...],
         "keywords": "keyword1, keyword2, ...",
         "readTime": "X min read",
-        "references": ["Source 1: URL", "Source 2: URL"]
+        "references": ["Source Name: https://example.com", "Source Name: https://example.com"]
     }}
     """
     
