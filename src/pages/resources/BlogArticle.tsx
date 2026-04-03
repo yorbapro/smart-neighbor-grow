@@ -57,6 +57,7 @@ const articles: Record<string, ArticleData> = {
     readTime: "8 min read",
     category: "AEO",
     keywords: "answer engine optimization, AEO, AI search optimization, voice search SEO, ChatGPT optimization",
+    references: [],
   },
   "ai-lead-generation-guide": {
     title: "AI Lead Generation: How It Works and Why It Matters for Small Business",
@@ -101,6 +102,7 @@ const articles: Record<string, ArticleData> = {
     readTime: "6 min read",
     category: "AI Sales",
     keywords: "AI lead generation, automated lead generation, AI sales, small business AI, lead generation automation",
+    references: [],
   },
   "human-guided-ai-vs-automated": {
     title: "Human-Guided AI vs Fully Automated: Which is Right for Your Business?",
@@ -146,6 +148,7 @@ const articles: Record<string, ArticleData> = {
     readTime: "5 min read",
     category: "Strategy",
     keywords: "human-guided AI, human-in-the-loop, AI automation, AI oversight, responsible AI",
+    references: [],
   },
   "speed-to-lead-problem": {
     title: "The Speed to Lead Problem: Why 78% of Leads Are Lost",
@@ -200,6 +203,7 @@ const articles: Record<string, ArticleData> = {
     readTime: "4 min read",
     category: "Sales",
     keywords: "speed to lead, lead response time, sales response, lead conversion, fast lead response",
+    references: [],
   },
   "gbp-optimization-ai": {
     title: "How to Optimize Your Google Business Profile for AI Search",
@@ -254,6 +258,7 @@ const articles: Record<string, ArticleData> = {
     readTime: "7 min read",
     category: "AEO",
     keywords: "Google Business Profile optimization, GBP SEO, local SEO AI, Google My Business AI, local business optimization",
+    references: [],
   },
   "crm-integration-ai": {
     title: "CRM Integration Best Practices for AI Sales Automation",
@@ -314,6 +319,7 @@ const articles: Record<string, ArticleData> = {
     readTime: "6 min read",
     category: "Technology",
     keywords: "CRM integration, Salesforce AI integration, HubSpot automation, AI CRM, sales automation integration",
+    references: [],
   },
   // The Future of Being Found Series
   "the-shift-from-typing-to-asking": {
@@ -338,6 +344,7 @@ const articles: Record<string, ArticleData> = {
     readTime: "3 min read",
     category: "AEO Series",
     keywords: "AI search, voice search, conversational search, how customers find businesses, search revolution",
+    references: [],
   },
   "seo-vs-aeo-why-being-number-one-isnt-enough": {
     title: "SEO vs. AEO: Why Being #1 Isn't Enough Anymore",
@@ -362,6 +369,7 @@ const articles: Record<string, ArticleData> = {
     readTime: "3 min read",
     category: "AEO Series",
     keywords: "SEO vs AEO, answer engine optimization, search engine optimization, voice search optimization, AI answers",
+    references: [],
   },
   "geo-how-to-speak-robot-to-ai-assistants": {
     title: "GEO: How to Speak \"Robot\" to AI Assistants",
@@ -386,6 +394,7 @@ const articles: Record<string, ArticleData> = {
     readTime: "3 min read",
     category: "AEO Series",
     keywords: "GEO, generative engine optimization, ChatGPT optimization, AI assistants, Gemini optimization, Claude optimization",
+    references: [],
   },
   "local-search-google-maps-is-your-new-storefront": {
     title: "Local Search: Why Google Maps is Your New Storefront",
@@ -410,6 +419,7 @@ const articles: Record<string, ArticleData> = {
     readTime: "3 min read",
     category: "AEO Series",
     keywords: "Google Maps optimization, Google Business Profile, local search, NAP consistency, local SEO, map pack",
+    references: [],
   },
   "reviews-the-fuel-that-powers-ai-recommendations": {
     title: "Reviews: The Fuel That Powers AI Recommendations",
@@ -434,6 +444,7 @@ const articles: Record<string, ArticleData> = {
     readTime: "3 min read",
     category: "AEO Series",
     keywords: "customer reviews, AI recommendations, review management, social proof, online reputation, review signals",
+    references: [],
   },
   "the-solution-how-to-handle-it-all": {
     title: "The Solution: How to Handle It All Without Losing Your Mind",
@@ -465,7 +476,8 @@ const articles: Record<string, ArticleData> = {
     date: "January 9, 2026",
     readTime: "4 min read",
     category: "AEO Series",
-    keywords: "LocalLift, AEO solution, local business optimization, AI visibility, digital presence management",
+    keywords: "LocalLift", AEO solution, local business optimization, AI visibility, digital presence management",
+    references: [],
   },
   "how-to-set-up-ai-receptionist": {
     title: "How to Set Up an AI Receptionist for Your Small Business: Complete 2026 Guide",
@@ -589,6 +601,7 @@ const articles: Record<string, ArticleData> = {
     readTime: "8 min read",
     category: "AI Receptionist",
     keywords: "how to set up AI receptionist, AI receptionist setup, AI voice agent for business, AI receptionist guide, AI receptionist small business, set up AI phone answering",
+    references: [],
   },
   // AI Voice Agent Series: The End of Missed Calls
   "what-is-ai-receptionist": {
@@ -618,8 +631,8 @@ const articles: Record<string, ArticleData> = {
     authorBio: "20+ years helping small businesses grow. Believes technology should feel invisible—powerful results without complexity. Leads the human oversight team at BrightLaunchIQ.",
     date: "February 6, 2026",
     readTime: "3 min read",
-    category: "AI Voice Agent Series",
-    keywords: "AI receptionist, AI voice agent, automated phone answering, AI for small business, what is AI receptionist",
+    category: "AI Voice Agent Series",    keywords: "AI receptionist, AI voice agent, automated phone answering, AI for small business, what is AI receptionist",
+    references: [],
   },
   "ai-voice-agent-setup-guide": {
     title: "How to Set Up an AI Voice Agent for Inbound Calls",
@@ -650,7 +663,8 @@ const articles: Record<string, ArticleData> = {
     date: "February 5, 2026",
     readTime: "4 min read",
     category: "AI Voice Agent Series",
-    keywords: "how to set up ai voice agent, configuring ai receptionist, AI phone system setup, AI voice agent configuration",
+    keywords: "how to set up ai voice agent", configuring ai receptionist, AI phone system setup, AI voice agent configuration",
+    references: [],
   },
   "training-your-ai-voice-agent": {
     title: "Training Your AI: How to Teach Your Digital Receptionist",
@@ -685,7 +699,8 @@ const articles: Record<string, ArticleData> = {
     date: "February 4, 2026",
     readTime: "4 min read",
     category: "AI Voice Agent Series",
-    keywords: "training ai voice agent, ai receptionist script, customizing ai phone support, AI knowledge base, AI training",
+    keywords: "training ai voice agent", ai receptionist script, customizing ai phone support, AI knowledge base, AI training",
+    references: [],
   },
   "managing-ai-human-handoffs": {
     title: "Managing the Machine: Human Handoffs and Monitoring",
@@ -713,6 +728,7 @@ const articles: Record<string, ArticleData> = {
     readTime: "3 min read",
     category: "AI Voice Agent Series",
     keywords: "managing ai customer service, ai to human handoff, monitoring ai calls, AI call monitoring, human handoff AI",
+    references: [],
   },
   "ai-receptionist-cost-comparison": {
     title: "The Cost Comparison: AI Receptionist vs. Hiring a Human",
@@ -743,7 +759,8 @@ const articles: Record<string, ArticleData> = {
     date: "February 2, 2026",
     readTime: "4 min read",
     category: "AI Voice Agent Series",
-    keywords: "cost of ai receptionist, ai vs human receptionist, roi of ai voice agent, AI receptionist pricing, AI phone cost",
+    keywords: "cost of ai receptionist", ai vs human receptionist, roi of ai voice agent, AI receptionist pricing, AI phone cost",
+    references: [],
   },
   "why-you-need-leadline": {
     title: "The Easy Button: Why You Need BrightLaunchIQ AI Receptionist",
@@ -771,6 +788,7 @@ const articles: Record<string, ArticleData> = {
     readTime: "3 min read",
     category: "AI Voice Agent Series",
     keywords: "BrightLaunchIQ AI Receptionist, best ai voice agent for small business, AI receptionist setup, BrightLaunchIQ AI receptionist",
+    references: [],
   },
   // AI Receptionist Deep Dive Series
   "ai-receptionist-digital-evolution": {
@@ -796,8 +814,8 @@ const articles: Record<string, ArticleData> = {
     authorBio: "PhD in Machine Learning from Stanford. Previously led AI initiatives at a Fortune 500 company. Passionate about responsible AI that augments human decision-making.",
     date: "February 14, 2026",
     readTime: "4 min read",
-    category: "AI Receptionist Deep Dive",
-    keywords: "definition of AI receptionist, how automated answering works, AI vs IVR, what is AI receptionist, NLP phone answering",
+    category: "AI Receptionist Deep Dive"    keywords: "definition of AI receptionist, how automated answering works, AI vs IVR, what is AI receptionist, NLP phone answering",
+    references: [],
   },
   "how-ai-voice-agents-think": {
     title: "Behind the Mic: How AI Voice Agents \"Think\" in Real-Time",
@@ -825,8 +843,8 @@ const articles: Record<string, ArticleData> = {
     authorBio: "PhD in Machine Learning from Stanford. Previously led AI initiatives at a Fortune 500 company. Passionate about responsible AI that augments human decision-making.",
     date: "February 13, 2026",
     readTime: "4 min read",
-    category: "AI Receptionist Deep Dive",
-    keywords: "how AI voice technology works, latency in AI phone systems, LLM for business calls, speech to text, text to speech AI",
+    category: "AI Receptionist Deep Dive",    keywords: "how AI voice technology works, latency in AI phone systems, LLM for business calls, speech to text, text to speech AI",
+    references: [],
   },
   "missed-calls-biggest-expense": {
     title: "Calculating the Leak: Why Missed Calls are Your Biggest Expense",
@@ -860,8 +878,8 @@ const articles: Record<string, ArticleData> = {
     authorBio: "Former enterprise sales leader who saw local businesses getting left behind in the AI revolution. Founded BrightLaunchIQ to democratize access to world-class sales automation.",
     date: "February 12, 2026",
     readTime: "5 min read",
-    category: "AI Receptionist Deep Dive",
-    keywords: "ROI of AI receptionist, cost of missed leads, business revenue loss calculator, missed call cost, phone answering ROI",
+    category: "AI Receptionist Deep Dive",    keywords: "ROI of AI receptionist, cost of missed leads, business revenue loss calculator, missed call cost, phone answering ROI",
+    references: [],
   },
   "hybrid-receptionist-wins": {
     title: "Man vs. Machine? Why the \"Hybrid\" Receptionist Wins",
@@ -898,6 +916,7 @@ const articles: Record<string, ArticleData> = {
     readTime: "5 min read",
     category: "AI Receptionist Deep Dive",
     keywords: "AI vs human assistant, outsourcing phone calls, virtual receptionist pros and cons, hybrid receptionist, AI and human receptionist",
+    references: [],
   },
   "ten-minute-implementation": {
     title: "From Sign-up to Dial-tone: The 10-Minute Implementation",
@@ -933,8 +952,8 @@ const articles: Record<string, ArticleData> = {
     authorBio: "20+ years helping small businesses grow. Believes technology should feel invisible—powerful results without complexity. Leads the human oversight team at BrightLaunchIQ.",
     date: "February 10, 2026",
     readTime: "4 min read",
-    category: "AI Receptionist Deep Dive",
-    keywords: "implementing AI voice agent, AI phone system setup guide, BrightLaunchIQ onboarding, AI receptionist setup, quick AI setup",
+    category: "AI Receptionist Deep Dive",    keywords: "implementing AI voice agent, AI phone system setup guide, BrightLaunchIQ onboarding, AI receptionist setup, quick AI setup",
+    references: [],
   },
   // The Consumer's Guide to AI Receptionists Series
   "death-of-busy-signal": {
@@ -965,6 +984,7 @@ const articles: Record<string, ArticleData> = {
     readTime: "4 min read",
     category: "Consumer's Guide",
     keywords: "why do businesses use AI receptionists, benefits of talking to AI, end of hold music, AI customer experience, no more hold times",
+    references: [],
   },
   "human-or-bot-conversational-ai": {
     title: "Is it a Human or a Bot? Navigating the Era of Conversational AI",
@@ -994,8 +1014,8 @@ const articles: Record<string, ArticleData> = {
     authorBio: "PhD in Machine Learning from Stanford. Previously led AI initiatives at a Fortune 500 company. Passionate about responsible AI that augments human decision-making.",
     date: "February 19, 2026",
     readTime: "5 min read",
-    category: "Consumer's Guide",
-    keywords: "how to tell if a receptionist is AI, conversational AI voice, talking to robots, AI voice quality, uncanny valley AI",
+    category: "Consumer's Guide"    keywords: "how to tell if a receptionist is AI, conversational AI voice, talking to robots, AI voice quality, uncanny valley AI",
+    references: [],
   },
   "ai-receptionist-privacy-security": {
     title: "Your Data, Your Voice: Privacy and Security in the Age of AI Answering",
@@ -1028,6 +1048,7 @@ const articles: Record<string, ArticleData> = {
     readTime: "5 min read",
     category: "Consumer's Guide",
     keywords: "is AI listening to my calls, AI receptionist privacy, data security for voice agents, AI call recording, voice data protection",
+    references: [],
   },
   "ai-accents-accessibility-inclusivity": {
     title: "Accents, Dialects, and Accessibility: Why AI is More Inclusive than Humans",
@@ -1058,8 +1079,8 @@ const articles: Record<string, ArticleData> = {
     authorBio: "10+ years in digital marketing, specializing in Answer Engine Optimization. Helps local businesses become the go-to answer for AI assistants.",
     date: "February 17, 2026",
     readTime: "5 min read",
-    category: "Consumer's Guide",
-    keywords: "AI voice recognition accents, accessibility in phone systems, multi-lingual AI, inclusive AI phone, AI language support",
+    category: "Consumer's Guide"    keywords: "AI voice recognition accents, accessibility in phone systems, multi-lingual AI, inclusive AI phone, AI language support",
+    references: [],
   },
   "ai-keeps-local-shops-alive": {
     title: "The Future of Your Neighborhood: How AI Keeps Local Shops Alive",
@@ -1092,6 +1113,7 @@ const articles: Record<string, ArticleData> = {
     readTime: "5 min read",
     category: "Consumer's Guide",
     keywords: "supporting local business with tech, future of small business, automated local services, AI community impact, small business AI",
+    references: [],
   },
   "ai-brand-persona-training": {
     title: "The Brand Persona: Giving Your AI a Soul, Not Just a Script",
@@ -1132,8 +1154,8 @@ const articles: Record<string, ArticleData> = {
     authorBio: "PhD in Machine Learning from Stanford. Previously led AI initiatives at a Fortune 500 company. Passionate about responsible AI that augments human decision-making.",
     date: "February 18, 2026",
     readTime: "5 min read",
-    category: "Deep Training",
-    keywords: "AI brand voice, training AI personality, custom AI receptionist persona, AI brand archetype, brand consistency AI",
+    category: "Deep Training"    keywords: "AI brand voice, training AI personality, custom AI receptionist persona, AI brand archetype, brand consistency AI",
+    references: [],
   },
   "ai-voice-cadence-prosody": {
     title: "The Physics of Phrasing: Masterclass in Cadence, Tone, and Prosody",
@@ -1179,8 +1201,8 @@ const articles: Record<string, ArticleData> = {
     authorBio: "PhD in Machine Learning from Stanford. Previously led AI initiatives at a Fortune 500 company. Passionate about responsible AI that augments human decision-making.",
     date: "February 19, 2026",
     readTime: "6 min read",
-    category: "Deep Training",
-    keywords: "AI voice cadence training, emotional intelligence in AI, natural sounding AI voice, prosody AI, AI voice latency",
+    category: "Deep Training"    keywords: "AI voice cadence training, emotional intelligence in AI, natural sounding AI voice, prosody AI, AI voice latency",
+    references: [],
   },
   "ai-receptionist-compliance-guardrails": {
     title: "The Guardrails of Excellence: Compliance, Messaging, and Strategic Control",
@@ -1231,8 +1253,8 @@ const articles: Record<string, ArticleData> = {
     authorBio: "20+ years helping small businesses grow. Believes technology should feel invisible—powerful results without complexity. Leads the human oversight team at BrightLaunchIQ.",
     date: "February 19, 2026",
     readTime: "6 min read",
-    category: "Deep Training",
-    keywords: "AI receptionist compliance, HIPAA compliant AI voice, secure AI lead intake, AI hallucination prevention, bounded knowledge AI",
+    category: "Deep Training"    keywords: "AI receptionist compliance, HIPAA compliant AI voice, secure AI lead intake, AI hallucination prevention, bounded knowledge AI",
+    references: [],
   },
   "professional-ai-training-vs-diy": {
     title: "The Professional Edge: Why \"DIY\" AI is a Risky Business Move",
@@ -1286,8 +1308,8 @@ const articles: Record<string, ArticleData> = {
     authorBio: "Former enterprise sales leader who saw local businesses getting left behind in the AI revolution. Founded BrightLaunchIQ to democratize access to world-class sales automation.",
     date: "February 20, 2026",
     readTime: "6 min read",
-    category: "Deep Training",
-    keywords: "professional AI training vs DIY, how to train AI voice agent, BrightLaunchIQ vs custom GPT, AI training ROI, managed AI receptionist",
+    category: "Deep Training"    keywords: "professional AI training vs DIY, how to train AI voice agent, BrightLaunchIQ vs custom GPT, AI training ROI, managed AI receptionist",
+    references: [],
   },
   "how-ai-lead-generation-works": {
     title: "How AI Lead Generation Works: The Complete 6-Step Process",
@@ -1353,8 +1375,8 @@ const articles: Record<string, ArticleData> = {
     authorBio: "10+ years in B2B sales and AI-powered pipeline development. Helping small businesses compete with enterprise-level lead generation.",
     date: "January 15, 2026",
     readTime: "10 min read",
-    category: "AI Sales",
-    keywords: "how AI lead generation works, AI lead generation process, AI sales automation, AI prospecting, automated lead generation steps",
+    category: "AI Sales"    keywords: "how AI lead generation works, AI lead generation process, AI sales automation, AI prospecting, automated lead generation steps",
+    references: [],
   },
   "zero-pause-revolution": {
     title: "The Zero-Pause Revolution: Why 2026 is the Year the \"Robot Voice\" Finally Died",
@@ -1386,6 +1408,7 @@ const articles: Record<string, ArticleData> = {
     category: "Voice Insights",
     keywords: "zero-latency AI, AI voice latency, predictive phonetics, edge inference AI, AI receptionist 2026, streaming LLM",
     isWeekly: true,
+    references: [],
   },
   "google-introduces-duetto-ai-receptionist-that-speaks-your-language-and-feels-your-mood": {
     title: "Google Introduces Duetto: AI Receptionist That Speaks Your Language and Feels Your Mood",
@@ -1410,6 +1433,7 @@ const articles: Record<string, ArticleData> = {
     category: "Tech Updates",
     keywords: "AI receptionist, multilingual voice agent, emotion detection AI, Google Duetto, customer service AI, AI call management",
     isWeekly: true,
+    references: [],
   },
   "mistral-voxtral-launches-ai-voice-agent-with-human-like-emotional-intelligence": {
     title: "Mistral Voxtral Launches AI Voice Agent with Human-Like Emotional Intelligence",
@@ -1434,6 +1458,7 @@ const articles: Record<string, ArticleData> = {
     category: "Tech Updates",
     keywords: "AI voice agent, emotional intelligence, AI receptionist, customer service AI, small business technology, Voxtral",
     isWeekly: true,
+    references: [],
   },
   "google-introduces-duetto-ai-receptionist-that-speaks-your-language-and-feels-your-mood": {
     title: "Google Introduces Duetto: AI Receptionist That Speaks Your Language and Feels Your Mood",
@@ -1458,6 +1483,7 @@ const articles: Record<string, ArticleData> = {
     category: "Tech Updates",
     keywords: "AI receptionist, multilingual voice agent, emotion detection AI, Google Duetto, customer service AI, AI call management",
     isWeekly: true,
+    references: [],
   },
   "mistral-voxtral-launches-voxtralx-ai-voice-agent-that-truly-understands-you": {
     title: "Mistral Voxtral Launches VoxtralX: AI Voice Agent That Truly Understands You",
@@ -1478,6 +1504,7 @@ const articles: Record<string, ArticleData> = {
     category: "Tech Updates",
     keywords: "AI voice agent, AI receptionist, conversational AI, customer service AI, AI emotional intelligence, small business AI",
     isWeekly: true,
+    references: [],
   },
   "google-introduces-duetto-ai-receptionist-that-speaks-your-language-and-feels-your-mood": {
     title: "Google Introduces Duetto: AI Receptionist That Speaks Your Language and Feels Your Mood",
@@ -1502,6 +1529,7 @@ const articles: Record<string, ArticleData> = {
     category: "Tech Updates",
     keywords: "AI receptionist, multilingual voice agent, emotion detection AI, Google Duetto, customer service AI, AI call management",
     isWeekly: true,
+    references: [],
   },
   "mistral-voxtral-launches-ai-voice-agent-with-human-like-emotional-intelligence": {
     title: "Mistral Voxtral Launches AI Voice Agent with Human-Like Emotional Intelligence",
@@ -1526,6 +1554,7 @@ const articles: Record<string, ArticleData> = {
     category: "Tech Updates",
     keywords: "AI voice agent, emotional intelligence, AI receptionist, customer service AI, small business technology, Voxtral",
     isWeekly: true,
+    references: [],
   },
   "google-introduces-duetto-ai-receptionist-that-speaks-your-language-and-feels-your-mood": {
     title: "Google Introduces Duetto: AI Receptionist That Speaks Your Language and Feels Your Mood",
@@ -1550,6 +1579,7 @@ const articles: Record<string, ArticleData> = {
     category: "Tech Updates",
     keywords: "AI receptionist, multilingual voice agent, emotion detection AI, Google Duetto, customer service AI, AI call management",
     isWeekly: true,
+    references: [],
   },
 };
 
