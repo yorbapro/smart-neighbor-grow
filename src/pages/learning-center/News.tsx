@@ -9,6 +9,14 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 
 const weeklyArticles = [
   {
+    title: "Mistral Voxtral Launches VoxtralX: AI Voice Agent That Truly Understands You",
+    slug: "mistral-voxtral-launches-voxtralx-ai-voice-agent-that-truly-understands-you",
+    date: "April 03, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    excerpt: "Mistral Voxtral has introduced VoxtralX, a groundbreaking AI voice agent that offers human-like conversation skills, making customer interactions smoother and more empathetic than ever.",
+  },
+  {
     title: "The Zero-Pause Revolution: Why 2026 is the Year the \"Robot Voice\" Finally Died",
     slug: "zero-pause-revolution",
     date: "February 20, 2026",
