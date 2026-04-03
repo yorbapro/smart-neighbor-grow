@@ -9,6 +9,14 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 
 const weeklyArticles = [
   {
+    title: "Mistral Voxtral Launches AI Voice Agent That Reads Emotions in Real Time",
+    slug: "mistral-voxtral-launches-ai-voice-agent-that-reads-emotions-in-real-time",
+    date: "April 03, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    excerpt: "Mistral Voxtral has introduced a groundbreaking AI voice agent that detects emotions during conversations, paving the way for more understanding and efficient customer service.",
+  },
+  {
     title: "Google Introduces Duetto: AI Receptionist That Speaks Your Language and Feels Your Mood",
     slug: "google-introduces-duetto-ai-receptionist-that-speaks-your-language-and-feels-your-mood",
     date: "April 03, 2026",
