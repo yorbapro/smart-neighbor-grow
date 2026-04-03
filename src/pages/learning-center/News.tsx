@@ -9,6 +9,14 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 
 const weeklyArticles = [
   {
+    title: "Google Launches Duplex 3.0: The AI Receptionist with Real Emotional Intelligence",
+    slug: "google-launches-duplex-3-0-the-ai-receptionist-with-real-emotional-intelligence",
+    date: "April 03, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    excerpt: "Google’s new Duplex 3.0 brings advanced emotional understanding to AI receptionists, transforming how businesses manage customer calls and appointments.",
+  },
+  {
     title: "Google Introduces Duetto: AI Receptionist That Speaks Your Language and Feels Your Mood",
     slug: "google-introduces-duetto-ai-receptionist-that-speaks-your-language-and-feels-your-mood",
     date: "April 03, 2026",

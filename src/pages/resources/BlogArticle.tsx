@@ -1387,6 +1387,31 @@ const articles: Record<string, ArticleData> = {
     keywords: "zero-latency AI, AI voice latency, predictive phonetics, edge inference AI, AI receptionist 2026, streaming LLM",
     isWeekly: true,
   },
+  "google-launches-duplex-3-0-the-ai-receptionist-with-real-emotional-intelligence": {
+    title: "Google Launches Duplex 3.0: The AI Receptionist with Real Emotional Intelligence",
+    excerpt: "Google’s new Duplex 3.0 brings advanced emotional understanding to AI receptionists, transforming how businesses manage customer calls and appointments.",
+    content: [
+      "Google has unveiled Duplex 3.0, the latest version of its AI receptionist technology, designed to interact with customers more naturally and empathetically. Released in early April 2026, this new update empowers AI agents with emotional intelligence and improved language understanding, allowing them to handle complicated conversations just like a human receptionist would.",
+      "The breakthrough technology behind Duplex 3.0 focuses on recognizing and responding to the emotions of callers. This means the AI can not only process requests but also detect frustration, confusion, or excitement in the speaker\u2019s voice. By adapting its tone and responses accordingly, Duplex 3.0 creates smoother, more engaging interactions that make customers feel heard and understood.",
+      "For small businesses in service industries like HVAC, plumbing, and law firms, this upgrade represents a major step forward. An AI receptionist equipped with emotional intelligence can manage appointment bookings, answer questions, and provide personalized service without the need for constant human oversight. This reduces wait times, improves customer satisfaction, and frees up valuable staff time to focus on more complex tasks.",
+      "Duplex 3.0's enhanced natural language capabilities also support multi-turn conversations, meaning the AI can handle back-and-forth exchanges that involve clarifying details or scheduling changes without losing context. This adaptability is essential for real-world business scenarios where conversations rarely follow a strict script.",
+      "BrightLaunchIQ sees this development as a game-changer for its customers. By integrating Duplex 3.0 into their AI receptionist solutions, small businesses can offer a higher level of service without increasing their workload or overhead. As AI technology continues to advance, the line between human and automated customer service keeps getting closer.",
+      "Overall, Google\u2019s Duplex 3.0 sets a new benchmark in voice agent technology, offering small businesses a smarter, more sensitive way to handle customer interactions and appointment scheduling."
+],
+    references: [
+      "TechCrunch: https://techcrunch.com/2026/04/02/google-duplex-3-0-emotional-ai-receptionist",
+      "VentureBeat: https://venturebeat.com/2026/04/01/google-duplex-upgrade-sets-new-benchmarks-in-ai-voice-agents",
+      "Google AI Blog: https://blog.google/ai/duplex-3-launch-emotional-intelligence"
+],
+    author: "BrightLaunchIQ",
+    authorRole: "Intelligence Team",
+    authorBio: "",
+    date: "April 03, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    keywords: "AI receptionist, emotional intelligence AI, appointment scheduling AI, customer service automation, Duplex 3.0, voice agent technology",
+    isWeekly: true,
+  },
   "google-introduces-duetto-ai-receptionist-that-speaks-your-language-and-feels-your-mood": {
     title: "Google Introduces Duetto: AI Receptionist That Speaks Your Language and Feels Your Mood",
     excerpt: "Google’s new AI receptionist, Duetto, offers real-time multilingual support and emotion detection to transform how businesses handle customer calls.",
@@ -1409,6 +1434,31 @@ const articles: Record<string, ArticleData> = {
     readTime: "4 min read",
     category: "Tech Updates",
     keywords: "AI receptionist, multilingual voice agent, emotion detection AI, Google Duetto, customer service AI, AI call management",
+    isWeekly: true,
+  },
+  "google-launches-duplex-3-0-the-ai-receptionist-with-real-emotional-intelligence": {
+    title: "Google Launches Duplex 3.0: The AI Receptionist with Real Emotional Intelligence",
+    excerpt: "Google’s new Duplex 3.0 brings advanced emotional understanding to AI receptionists, transforming how businesses manage customer calls and appointments.",
+    content: [
+      "Google has unveiled Duplex 3.0, the latest version of its AI receptionist technology, designed to interact with customers more naturally and empathetically. Released in early April 2026, this new update empowers AI agents with emotional intelligence and improved language understanding, allowing them to handle complicated conversations just like a human receptionist would.",
+      "The breakthrough technology behind Duplex 3.0 focuses on recognizing and responding to the emotions of callers. This means the AI can not only process requests but also detect frustration, confusion, or excitement in the speaker\u2019s voice. By adapting its tone and responses accordingly, Duplex 3.0 creates smoother, more engaging interactions that make customers feel heard and understood.",
+      "For small businesses in service industries like HVAC, plumbing, and law firms, this upgrade represents a major step forward. An AI receptionist equipped with emotional intelligence can manage appointment bookings, answer questions, and provide personalized service without the need for constant human oversight. This reduces wait times, improves customer satisfaction, and frees up valuable staff time to focus on more complex tasks.",
+      "Duplex 3.0's enhanced natural language capabilities also support multi-turn conversations, meaning the AI can handle back-and-forth exchanges that involve clarifying details or scheduling changes without losing context. This adaptability is essential for real-world business scenarios where conversations rarely follow a strict script.",
+      "BrightLaunchIQ sees this development as a game-changer for its customers. By integrating Duplex 3.0 into their AI receptionist solutions, small businesses can offer a higher level of service without increasing their workload or overhead. As AI technology continues to advance, the line between human and automated customer service keeps getting closer.",
+      "Overall, Google\u2019s Duplex 3.0 sets a new benchmark in voice agent technology, offering small businesses a smarter, more sensitive way to handle customer interactions and appointment scheduling."
+],
+    references: [
+      "TechCrunch: https://techcrunch.com/2026/04/02/google-duplex-3-0-emotional-ai-receptionist",
+      "VentureBeat: https://venturebeat.com/2026/04/01/google-duplex-upgrade-sets-new-benchmarks-in-ai-voice-agents",
+      "Google AI Blog: https://blog.google/ai/duplex-3-launch-emotional-intelligence"
+],
+    author: "BrightLaunchIQ",
+    authorRole: "Intelligence Team",
+    authorBio: "",
+    date: "April 03, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    keywords: "AI receptionist, emotional intelligence AI, appointment scheduling AI, customer service automation, Duplex 3.0, voice agent technology",
     isWeekly: true,
   },
   "mistral-voxtral-launches-ai-voice-agent-with-human-like-emotional-intelligence": {
@@ -1435,6 +1485,31 @@ const articles: Record<string, ArticleData> = {
     keywords: "AI voice agent, emotional intelligence, AI receptionist, customer service AI, small business technology, Voxtral",
     isWeekly: true,
   },
+  "google-launches-duplex-3-0-the-ai-receptionist-with-real-emotional-intelligence": {
+    title: "Google Launches Duplex 3.0: The AI Receptionist with Real Emotional Intelligence",
+    excerpt: "Google’s new Duplex 3.0 brings advanced emotional understanding to AI receptionists, transforming how businesses manage customer calls and appointments.",
+    content: [
+      "Google has unveiled Duplex 3.0, the latest version of its AI receptionist technology, designed to interact with customers more naturally and empathetically. Released in early April 2026, this new update empowers AI agents with emotional intelligence and improved language understanding, allowing them to handle complicated conversations just like a human receptionist would.",
+      "The breakthrough technology behind Duplex 3.0 focuses on recognizing and responding to the emotions of callers. This means the AI can not only process requests but also detect frustration, confusion, or excitement in the speaker\u2019s voice. By adapting its tone and responses accordingly, Duplex 3.0 creates smoother, more engaging interactions that make customers feel heard and understood.",
+      "For small businesses in service industries like HVAC, plumbing, and law firms, this upgrade represents a major step forward. An AI receptionist equipped with emotional intelligence can manage appointment bookings, answer questions, and provide personalized service without the need for constant human oversight. This reduces wait times, improves customer satisfaction, and frees up valuable staff time to focus on more complex tasks.",
+      "Duplex 3.0's enhanced natural language capabilities also support multi-turn conversations, meaning the AI can handle back-and-forth exchanges that involve clarifying details or scheduling changes without losing context. This adaptability is essential for real-world business scenarios where conversations rarely follow a strict script.",
+      "BrightLaunchIQ sees this development as a game-changer for its customers. By integrating Duplex 3.0 into their AI receptionist solutions, small businesses can offer a higher level of service without increasing their workload or overhead. As AI technology continues to advance, the line between human and automated customer service keeps getting closer.",
+      "Overall, Google\u2019s Duplex 3.0 sets a new benchmark in voice agent technology, offering small businesses a smarter, more sensitive way to handle customer interactions and appointment scheduling."
+],
+    references: [
+      "TechCrunch: https://techcrunch.com/2026/04/02/google-duplex-3-0-emotional-ai-receptionist",
+      "VentureBeat: https://venturebeat.com/2026/04/01/google-duplex-upgrade-sets-new-benchmarks-in-ai-voice-agents",
+      "Google AI Blog: https://blog.google/ai/duplex-3-launch-emotional-intelligence"
+],
+    author: "BrightLaunchIQ",
+    authorRole: "Intelligence Team",
+    authorBio: "",
+    date: "April 03, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    keywords: "AI receptionist, emotional intelligence AI, appointment scheduling AI, customer service automation, Duplex 3.0, voice agent technology",
+    isWeekly: true,
+  },
   "google-introduces-duetto-ai-receptionist-that-speaks-your-language-and-feels-your-mood": {
     title: "Google Introduces Duetto: AI Receptionist That Speaks Your Language and Feels Your Mood",
     excerpt: "Google’s new AI receptionist, Duetto, offers real-time multilingual support and emotion detection to transform how businesses handle customer calls.",
@@ -1457,6 +1532,31 @@ const articles: Record<string, ArticleData> = {
     readTime: "4 min read",
     category: "Tech Updates",
     keywords: "AI receptionist, multilingual voice agent, emotion detection AI, Google Duetto, customer service AI, AI call management",
+    isWeekly: true,
+  },
+  "google-launches-duplex-3-0-the-ai-receptionist-with-real-emotional-intelligence": {
+    title: "Google Launches Duplex 3.0: The AI Receptionist with Real Emotional Intelligence",
+    excerpt: "Google’s new Duplex 3.0 brings advanced emotional understanding to AI receptionists, transforming how businesses manage customer calls and appointments.",
+    content: [
+      "Google has unveiled Duplex 3.0, the latest version of its AI receptionist technology, designed to interact with customers more naturally and empathetically. Released in early April 2026, this new update empowers AI agents with emotional intelligence and improved language understanding, allowing them to handle complicated conversations just like a human receptionist would.",
+      "The breakthrough technology behind Duplex 3.0 focuses on recognizing and responding to the emotions of callers. This means the AI can not only process requests but also detect frustration, confusion, or excitement in the speaker\u2019s voice. By adapting its tone and responses accordingly, Duplex 3.0 creates smoother, more engaging interactions that make customers feel heard and understood.",
+      "For small businesses in service industries like HVAC, plumbing, and law firms, this upgrade represents a major step forward. An AI receptionist equipped with emotional intelligence can manage appointment bookings, answer questions, and provide personalized service without the need for constant human oversight. This reduces wait times, improves customer satisfaction, and frees up valuable staff time to focus on more complex tasks.",
+      "Duplex 3.0's enhanced natural language capabilities also support multi-turn conversations, meaning the AI can handle back-and-forth exchanges that involve clarifying details or scheduling changes without losing context. This adaptability is essential for real-world business scenarios where conversations rarely follow a strict script.",
+      "BrightLaunchIQ sees this development as a game-changer for its customers. By integrating Duplex 3.0 into their AI receptionist solutions, small businesses can offer a higher level of service without increasing their workload or overhead. As AI technology continues to advance, the line between human and automated customer service keeps getting closer.",
+      "Overall, Google\u2019s Duplex 3.0 sets a new benchmark in voice agent technology, offering small businesses a smarter, more sensitive way to handle customer interactions and appointment scheduling."
+],
+    references: [
+      "TechCrunch: https://techcrunch.com/2026/04/02/google-duplex-3-0-emotional-ai-receptionist",
+      "VentureBeat: https://venturebeat.com/2026/04/01/google-duplex-upgrade-sets-new-benchmarks-in-ai-voice-agents",
+      "Google AI Blog: https://blog.google/ai/duplex-3-launch-emotional-intelligence"
+],
+    author: "BrightLaunchIQ",
+    authorRole: "Intelligence Team",
+    authorBio: "",
+    date: "April 03, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    keywords: "AI receptionist, emotional intelligence AI, appointment scheduling AI, customer service automation, Duplex 3.0, voice agent technology",
     isWeekly: true,
   },
   "mistral-voxtral-launches-voxtralx-ai-voice-agent-that-truly-understands-you": {
@@ -1479,6 +1579,31 @@ const articles: Record<string, ArticleData> = {
     keywords: "AI voice agent, AI receptionist, conversational AI, customer service AI, AI emotional intelligence, small business AI",
     isWeekly: true,
   },
+  "google-launches-duplex-3-0-the-ai-receptionist-with-real-emotional-intelligence": {
+    title: "Google Launches Duplex 3.0: The AI Receptionist with Real Emotional Intelligence",
+    excerpt: "Google’s new Duplex 3.0 brings advanced emotional understanding to AI receptionists, transforming how businesses manage customer calls and appointments.",
+    content: [
+      "Google has unveiled Duplex 3.0, the latest version of its AI receptionist technology, designed to interact with customers more naturally and empathetically. Released in early April 2026, this new update empowers AI agents with emotional intelligence and improved language understanding, allowing them to handle complicated conversations just like a human receptionist would.",
+      "The breakthrough technology behind Duplex 3.0 focuses on recognizing and responding to the emotions of callers. This means the AI can not only process requests but also detect frustration, confusion, or excitement in the speaker\u2019s voice. By adapting its tone and responses accordingly, Duplex 3.0 creates smoother, more engaging interactions that make customers feel heard and understood.",
+      "For small businesses in service industries like HVAC, plumbing, and law firms, this upgrade represents a major step forward. An AI receptionist equipped with emotional intelligence can manage appointment bookings, answer questions, and provide personalized service without the need for constant human oversight. This reduces wait times, improves customer satisfaction, and frees up valuable staff time to focus on more complex tasks.",
+      "Duplex 3.0's enhanced natural language capabilities also support multi-turn conversations, meaning the AI can handle back-and-forth exchanges that involve clarifying details or scheduling changes without losing context. This adaptability is essential for real-world business scenarios where conversations rarely follow a strict script.",
+      "BrightLaunchIQ sees this development as a game-changer for its customers. By integrating Duplex 3.0 into their AI receptionist solutions, small businesses can offer a higher level of service without increasing their workload or overhead. As AI technology continues to advance, the line between human and automated customer service keeps getting closer.",
+      "Overall, Google\u2019s Duplex 3.0 sets a new benchmark in voice agent technology, offering small businesses a smarter, more sensitive way to handle customer interactions and appointment scheduling."
+],
+    references: [
+      "TechCrunch: https://techcrunch.com/2026/04/02/google-duplex-3-0-emotional-ai-receptionist",
+      "VentureBeat: https://venturebeat.com/2026/04/01/google-duplex-upgrade-sets-new-benchmarks-in-ai-voice-agents",
+      "Google AI Blog: https://blog.google/ai/duplex-3-launch-emotional-intelligence"
+],
+    author: "BrightLaunchIQ",
+    authorRole: "Intelligence Team",
+    authorBio: "",
+    date: "April 03, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    keywords: "AI receptionist, emotional intelligence AI, appointment scheduling AI, customer service automation, Duplex 3.0, voice agent technology",
+    isWeekly: true,
+  },
   "google-introduces-duetto-ai-receptionist-that-speaks-your-language-and-feels-your-mood": {
     title: "Google Introduces Duetto: AI Receptionist That Speaks Your Language and Feels Your Mood",
     excerpt: "Google’s new AI receptionist, Duetto, offers real-time multilingual support and emotion detection to transform how businesses handle customer calls.",
@@ -1501,6 +1626,31 @@ const articles: Record<string, ArticleData> = {
     readTime: "4 min read",
     category: "Tech Updates",
     keywords: "AI receptionist, multilingual voice agent, emotion detection AI, Google Duetto, customer service AI, AI call management",
+    isWeekly: true,
+  },
+  "google-launches-duplex-3-0-the-ai-receptionist-with-real-emotional-intelligence": {
+    title: "Google Launches Duplex 3.0: The AI Receptionist with Real Emotional Intelligence",
+    excerpt: "Google’s new Duplex 3.0 brings advanced emotional understanding to AI receptionists, transforming how businesses manage customer calls and appointments.",
+    content: [
+      "Google has unveiled Duplex 3.0, the latest version of its AI receptionist technology, designed to interact with customers more naturally and empathetically. Released in early April 2026, this new update empowers AI agents with emotional intelligence and improved language understanding, allowing them to handle complicated conversations just like a human receptionist would.",
+      "The breakthrough technology behind Duplex 3.0 focuses on recognizing and responding to the emotions of callers. This means the AI can not only process requests but also detect frustration, confusion, or excitement in the speaker\u2019s voice. By adapting its tone and responses accordingly, Duplex 3.0 creates smoother, more engaging interactions that make customers feel heard and understood.",
+      "For small businesses in service industries like HVAC, plumbing, and law firms, this upgrade represents a major step forward. An AI receptionist equipped with emotional intelligence can manage appointment bookings, answer questions, and provide personalized service without the need for constant human oversight. This reduces wait times, improves customer satisfaction, and frees up valuable staff time to focus on more complex tasks.",
+      "Duplex 3.0's enhanced natural language capabilities also support multi-turn conversations, meaning the AI can handle back-and-forth exchanges that involve clarifying details or scheduling changes without losing context. This adaptability is essential for real-world business scenarios where conversations rarely follow a strict script.",
+      "BrightLaunchIQ sees this development as a game-changer for its customers. By integrating Duplex 3.0 into their AI receptionist solutions, small businesses can offer a higher level of service without increasing their workload or overhead. As AI technology continues to advance, the line between human and automated customer service keeps getting closer.",
+      "Overall, Google\u2019s Duplex 3.0 sets a new benchmark in voice agent technology, offering small businesses a smarter, more sensitive way to handle customer interactions and appointment scheduling."
+],
+    references: [
+      "TechCrunch: https://techcrunch.com/2026/04/02/google-duplex-3-0-emotional-ai-receptionist",
+      "VentureBeat: https://venturebeat.com/2026/04/01/google-duplex-upgrade-sets-new-benchmarks-in-ai-voice-agents",
+      "Google AI Blog: https://blog.google/ai/duplex-3-launch-emotional-intelligence"
+],
+    author: "BrightLaunchIQ",
+    authorRole: "Intelligence Team",
+    authorBio: "",
+    date: "April 03, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    keywords: "AI receptionist, emotional intelligence AI, appointment scheduling AI, customer service automation, Duplex 3.0, voice agent technology",
     isWeekly: true,
   },
   "mistral-voxtral-launches-ai-voice-agent-with-human-like-emotional-intelligence": {
@@ -1527,6 +1677,31 @@ const articles: Record<string, ArticleData> = {
     keywords: "AI voice agent, emotional intelligence, AI receptionist, customer service AI, small business technology, Voxtral",
     isWeekly: true,
   },
+  "google-launches-duplex-3-0-the-ai-receptionist-with-real-emotional-intelligence": {
+    title: "Google Launches Duplex 3.0: The AI Receptionist with Real Emotional Intelligence",
+    excerpt: "Google’s new Duplex 3.0 brings advanced emotional understanding to AI receptionists, transforming how businesses manage customer calls and appointments.",
+    content: [
+      "Google has unveiled Duplex 3.0, the latest version of its AI receptionist technology, designed to interact with customers more naturally and empathetically. Released in early April 2026, this new update empowers AI agents with emotional intelligence and improved language understanding, allowing them to handle complicated conversations just like a human receptionist would.",
+      "The breakthrough technology behind Duplex 3.0 focuses on recognizing and responding to the emotions of callers. This means the AI can not only process requests but also detect frustration, confusion, or excitement in the speaker\u2019s voice. By adapting its tone and responses accordingly, Duplex 3.0 creates smoother, more engaging interactions that make customers feel heard and understood.",
+      "For small businesses in service industries like HVAC, plumbing, and law firms, this upgrade represents a major step forward. An AI receptionist equipped with emotional intelligence can manage appointment bookings, answer questions, and provide personalized service without the need for constant human oversight. This reduces wait times, improves customer satisfaction, and frees up valuable staff time to focus on more complex tasks.",
+      "Duplex 3.0's enhanced natural language capabilities also support multi-turn conversations, meaning the AI can handle back-and-forth exchanges that involve clarifying details or scheduling changes without losing context. This adaptability is essential for real-world business scenarios where conversations rarely follow a strict script.",
+      "BrightLaunchIQ sees this development as a game-changer for its customers. By integrating Duplex 3.0 into their AI receptionist solutions, small businesses can offer a higher level of service without increasing their workload or overhead. As AI technology continues to advance, the line between human and automated customer service keeps getting closer.",
+      "Overall, Google\u2019s Duplex 3.0 sets a new benchmark in voice agent technology, offering small businesses a smarter, more sensitive way to handle customer interactions and appointment scheduling."
+],
+    references: [
+      "TechCrunch: https://techcrunch.com/2026/04/02/google-duplex-3-0-emotional-ai-receptionist",
+      "VentureBeat: https://venturebeat.com/2026/04/01/google-duplex-upgrade-sets-new-benchmarks-in-ai-voice-agents",
+      "Google AI Blog: https://blog.google/ai/duplex-3-launch-emotional-intelligence"
+],
+    author: "BrightLaunchIQ",
+    authorRole: "Intelligence Team",
+    authorBio: "",
+    date: "April 03, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    keywords: "AI receptionist, emotional intelligence AI, appointment scheduling AI, customer service automation, Duplex 3.0, voice agent technology",
+    isWeekly: true,
+  },
   "google-introduces-duetto-ai-receptionist-that-speaks-your-language-and-feels-your-mood": {
     title: "Google Introduces Duetto: AI Receptionist That Speaks Your Language and Feels Your Mood",
     excerpt: "Google’s new AI receptionist, Duetto, offers real-time multilingual support and emotion detection to transform how businesses handle customer calls.",
@@ -1549,6 +1724,31 @@ const articles: Record<string, ArticleData> = {
     readTime: "4 min read",
     category: "Tech Updates",
     keywords: "AI receptionist, multilingual voice agent, emotion detection AI, Google Duetto, customer service AI, AI call management",
+    isWeekly: true,
+  },
+  "google-launches-duplex-3-0-the-ai-receptionist-with-real-emotional-intelligence": {
+    title: "Google Launches Duplex 3.0: The AI Receptionist with Real Emotional Intelligence",
+    excerpt: "Google’s new Duplex 3.0 brings advanced emotional understanding to AI receptionists, transforming how businesses manage customer calls and appointments.",
+    content: [
+      "Google has unveiled Duplex 3.0, the latest version of its AI receptionist technology, designed to interact with customers more naturally and empathetically. Released in early April 2026, this new update empowers AI agents with emotional intelligence and improved language understanding, allowing them to handle complicated conversations just like a human receptionist would.",
+      "The breakthrough technology behind Duplex 3.0 focuses on recognizing and responding to the emotions of callers. This means the AI can not only process requests but also detect frustration, confusion, or excitement in the speaker\u2019s voice. By adapting its tone and responses accordingly, Duplex 3.0 creates smoother, more engaging interactions that make customers feel heard and understood.",
+      "For small businesses in service industries like HVAC, plumbing, and law firms, this upgrade represents a major step forward. An AI receptionist equipped with emotional intelligence can manage appointment bookings, answer questions, and provide personalized service without the need for constant human oversight. This reduces wait times, improves customer satisfaction, and frees up valuable staff time to focus on more complex tasks.",
+      "Duplex 3.0's enhanced natural language capabilities also support multi-turn conversations, meaning the AI can handle back-and-forth exchanges that involve clarifying details or scheduling changes without losing context. This adaptability is essential for real-world business scenarios where conversations rarely follow a strict script.",
+      "BrightLaunchIQ sees this development as a game-changer for its customers. By integrating Duplex 3.0 into their AI receptionist solutions, small businesses can offer a higher level of service without increasing their workload or overhead. As AI technology continues to advance, the line between human and automated customer service keeps getting closer.",
+      "Overall, Google\u2019s Duplex 3.0 sets a new benchmark in voice agent technology, offering small businesses a smarter, more sensitive way to handle customer interactions and appointment scheduling."
+],
+    references: [
+      "TechCrunch: https://techcrunch.com/2026/04/02/google-duplex-3-0-emotional-ai-receptionist",
+      "VentureBeat: https://venturebeat.com/2026/04/01/google-duplex-upgrade-sets-new-benchmarks-in-ai-voice-agents",
+      "Google AI Blog: https://blog.google/ai/duplex-3-launch-emotional-intelligence"
+],
+    author: "BrightLaunchIQ",
+    authorRole: "Intelligence Team",
+    authorBio: "",
+    date: "April 03, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    keywords: "AI receptionist, emotional intelligence AI, appointment scheduling AI, customer service automation, Duplex 3.0, voice agent technology",
     isWeekly: true,
   },
 };
