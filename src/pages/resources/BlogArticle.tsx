@@ -1415,7 +1415,7 @@ const BlogArticle = () => {
   useSEO({
     title: article ? `${article.title} | BrightLaunchIQ` : "Article Not Found | BrightLaunchIQ",
     description: article?.excerpt || "Article not found",
-    canonical: `https://brightlaunchiq.com/ai-receptionist/learning-center/${slug}`,
+    canonical: `https://brightlaunchiq.com/ai-receptionist/news/${slug}`,
     keywords: article?.keywords,
     speakable: ["h1", ".article-intro", ".article-content h2"],
   });

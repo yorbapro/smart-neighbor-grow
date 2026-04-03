@@ -30,7 +30,7 @@ const News = () => {
   useSEO({
     title: "AI Voice Intelligence Feed | Latest AI Receptionist News | BrightLaunchIQ",
     description: "Weekly updates on AI receptionist technology, feature releases, industry trends, and voice agent innovations. Stay ahead of the AI revolution in small business.",
-    canonical: "https://brightlaunchiq.com/ai-receptionist/learning-center/news",
+    canonical: "https://brightlaunchiq.com/ai-receptionist/news",
     keywords: "AI receptionist news, AI voice agent updates, small business AI trends, AI phone technology news, BrightLaunchIQ updates",
     speakable: ["h1", ".news-intro"],
   });
@@ -42,17 +42,17 @@ const News = () => {
     schemaScript.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      "@id": "https://brightlaunchiq.com/ai-receptionist/learning-center/news#collection",
+      "@id": "https://brightlaunchiq.com/ai-receptionist/news#collection",
       "name": "AI Voice Intelligence Feed — BrightLaunchIQ",
       "description": "Weekly updates on AI receptionist technology, feature releases, and industry trends.",
-      "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/news",
+      "url": "https://brightlaunchiq.com/ai-receptionist/news",
       "isPartOf": { "@type": "WebSite", "@id": "https://brightlaunchiq.com/#website", "name": "BrightLaunchIQ" },
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://brightlaunchiq.com" },
           { "@type": "ListItem", "position": 2, "name": "Learning Center", "item": "https://brightlaunchiq.com/ai-receptionist/learning-center" },
-          { "@type": "ListItem", "position": 3, "name": "News", "item": "https://brightlaunchiq.com/ai-receptionist/learning-center/news" }
+          { "@type": "ListItem", "position": 3, "name": "News", "item": "https://brightlaunchiq.com/ai-receptionist/news" }
         ]
       },
       "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", ".news-intro"] }
@@ -88,7 +88,7 @@ const News = () => {
                 {weeklyArticles.map((article) => (
                   <Link
                     key={article.slug}
-                    to={`/ai-receptionist/learning-center/${article.slug}`}
+                    to={`/ai-receptionist/news/${article.slug}`}
                     className="group block bg-card rounded-2xl border border-border p-8 hover:shadow-card-hover hover:border-primary/30 transition-all"
                   >
                     <div className="flex items-center gap-3 mb-4">
