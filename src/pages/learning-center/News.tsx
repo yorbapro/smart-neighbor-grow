@@ -9,6 +9,14 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 
 const weeklyArticles = [
   {
+    title: "Mistral Voxtral Launches AI Voice Agent with Human-Like Emotional Intelligence",
+    slug: "mistral-voxtral-launches-ai-voice-agent-with-human-like-emotional-intelligence",
+    date: "April 03, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    excerpt: "Mistral has introduced Voxtral, a new AI voice agent designed to understand and respond to customer emotions. This breakthrough could transform how small businesses handle customer service calls.",
+  },
+  {
     title: "Mistral Voxtral Launches VoxtralX: AI Voice Agent That Truly Understands You",
     slug: "mistral-voxtral-launches-voxtralx-ai-voice-agent-that-truly-understands-you",
     date: "April 03, 2026",
