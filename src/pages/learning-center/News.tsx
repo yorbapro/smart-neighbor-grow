@@ -9,6 +9,14 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 
 const weeklyArticles = [
   {
+    title: "Google Launches Duplex Pro: The AI Receptionist that Speaks Your Language and Understands Your Mood",
+    slug: "google-launches-duplex-pro-the-ai-receptionist-that-speaks-your-language-and-understands-your-mood",
+    date: "April 04, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    excerpt: "Google's new Duplex Pro AI receptionist brings multi-lingual support and emotional intelligence to customer calls, promising smarter, more personalized interactions for businesses.",
+  },
+  {
     title: "Google Launches Duplex 3.0 with Real-Time Emotional Intelligence for Smarter AI Receptionists",
     slug: "google-launches-duplex-3-0-with-real-time-emotional-intelligence-for-smarter-ai-receptionists",
     date: "April 03, 2026",
