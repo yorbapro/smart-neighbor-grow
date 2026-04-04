@@ -123,7 +123,7 @@ def update_files(article_data, category):
     
     # Insert before the closing '};' of the articles object
     # We look for the last entry "isWeekly: true," and insert after it
-    updated_blog = content.replace('isWeekly: true,\n  },', f'isWeekly: true,\n  }},\n{new_article_obj}')
+    updated_blog = content.replace('isWeekly: true,\n  },', f'isWeekly: true,\n  }},\n{new_article_obj}', 1)
     
     with open(BLOG_ARTICLE_PATH, 'w') as f:
         f.write(updated_blog)

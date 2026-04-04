@@ -274,7 +274,7 @@ const App = () => (
             <Route path="/ai-receptionist/learning-center" element={<Blog />} />
             <Route path="/ai-receptionist/learning-center/for-business" element={<ForBusiness />} />
             <Route path="/ai-receptionist/learning-center/for-everyone" element={<ForEveryone />} />
-            <Route path="/ai-receptionist/news" element={<LearningCenterNews />} />
+	            <Route path="/ai-receptionist/news" element={<LearningCenterNews />} />
 	            <Route path="/ai-receptionist/news/:slug" element={<BlogArticle />} />
             <Route path="/ai-receptionist/learning-center/for-business/ai-receptionist-pricing" element={<AIReceptionistPricing />} />
             <Route path="/ai-receptionist/learning-center/for-business/signs-you-need-ai-receptionist" element={<SignsYouNeedAIReceptionist />} />
