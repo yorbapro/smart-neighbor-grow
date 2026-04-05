@@ -20,11 +20,16 @@ def get_latest_news():
     prompt = """
     Research and provide a summary of a major news event in the AI Voice Agent or AI Receptionist space that would have happened around April 1-3, 2026. 
     Focus on something timely like a new model release (e.g., Mistral Voxtral), a major industry report (e.g., 65% of local searches are now voice), or a new feature from a major player (Google, RingCentral, Zoom).
+    
+    CRITICAL: You MUST only provide REAL, VERIFIABLE URLs that actually exist. 
+    DO NOT hallucinate or 'predict' what a URL might look like (e.g., do not guess a date-based path like techcrunch.com/2026/04/02/...).
+    If you cannot find a direct link to a specific article, link to the main newsroom or relevant category page of the source (e.g., 'https://techcrunch.com/category/artificial-intelligence/').
+    
     Return the result as a JSON object with:
     - title: A catchy headline
     - source_summary: A 2-3 sentence summary of the news
     - category: One of [Voice Insights, Industry Trends, Tech Updates]
-    - sources: A list of 2-3 real or highly plausible source URLs (e.g., techcrunch.com, venturebeat.com, mistral.ai/news)
+    - sources: A list of 2-3 REAL source URLs.
     """
     
     response = client.chat.completions.create(
