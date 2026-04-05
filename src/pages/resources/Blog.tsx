@@ -47,7 +47,7 @@ const Blog = () => {
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "For Business", "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-business" },
           { "@type": "ListItem", "position": 2, "name": "For Everyone", "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/for-everyone" },
-          { "@type": "ListItem", "position": 3, "name": "News & Intelligence Feed", "url": "https://brightlaunchiq.com/ai-receptionist/learning-center/news" }
+          { "@type": "ListItem", "position": 3, "name": "News & Intelligence Feed", "url": "https://brightlaunchiq.com/ai-receptionist/news" }
         ]
       },
       "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", ".blog-intro"] }
@@ -115,7 +115,7 @@ const Blog = () => {
     {
       title: "News & Intelligence Feed",
       description: "Weekly updates on AI voice technology, feature releases, industry trends, and actionable tips.",
-      href: "/ai-receptionist/learning-center/news",
+      href: "/ai-receptionist/news",
       icon: Newspaper,
       articleCount: "1 article",
       series: [],
