@@ -207,7 +207,7 @@ const FAQ = () => {
         <div className="container max-w-4xl text-center">
           <h2 className="font-display text-2xl font-bold mb-6">Final Thought: Is this replacing my team?</h2>
           <p className="text-lg text-muted-foreground mb-8">
-            No—it enhances your team by handling repetitive calls, capturing missed opportunities, and freeing staff for higher-value work. 
+            No, it actually enhances your team by handling repetitive calls, capturing missed opportunities, and freeing staff for higher-value work. 
             BrightLaunchIQ focuses on real business outcomes, high-quality voice AI, and practical automation that actually converts.
           </p>
           <Button variant="hero" asChild>
