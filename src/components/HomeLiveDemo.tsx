@@ -60,7 +60,7 @@ const HomeLiveDemo = () => {
             </h2>
             <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
               Have a real conversation with our AI receptionist. Ask questions,
-              test appointment booking, and hear how natural it sounds. No
+              explore its capabilities, and hear how natural it sounds. No
               signup required.
             </p>
           </div>
@@ -143,7 +143,7 @@ const HomeLiveDemo = () => {
             <p className="text-white/60 leading-relaxed text-sm md:text-base mb-4">
               Our AI receptionist uses advanced natural language processing to
               understand and respond to callers just like a human receptionist
-              would — but it never takes a break, never calls in sick, and
+              would, but it never takes a break, never calls in sick, and
               handles unlimited calls simultaneously.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
