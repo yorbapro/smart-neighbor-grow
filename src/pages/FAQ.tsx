@@ -8,16 +8,16 @@ import useSEO from "@/hooks/useSEO";
 
 const FAQ = () => {
   useSEO({
-    title: "FAQ | AI Receptionist & Lead Generation | BrightLaunchIQ",
-    description: "Answers about AI receptionists, lead generation, sales automation, AEO pricing, and how human-guided AI works for small businesses.",
+    title: "AI Receptionist FAQ | Complete Guide | BrightLaunchIQ",
+    description: "Everything you need to know about the BrightLaunchIQ AI Receptionist—capabilities, setup, integrations, security, and ROI for small businesses.",
     canonical: "https://brightlaunchiq.com/ai-receptionist/faq",
-    keywords: "AI receptionist FAQ, AI lead generation questions, AEO, human-guided AI, BrightLaunchIQ",
+    keywords: "AI receptionist FAQ, AI voice agent questions, AI call answering, automated receptionist, BrightLaunchIQ guide",
   });
 
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    // Comprehensive FAQ Schema for GEO
+    // Comprehensive FAQ Schema for SEO/AEO
     const faqScript = document.createElement("script");
     faqScript.type = "application/ld+json";
     faqScript.id = "faq-schema";
@@ -25,13 +25,11 @@ const FAQ = () => {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "What is an AI receptionist?", "acceptedAnswer": { "@type": "Answer", "text": "An AI receptionist is an artificial intelligence system that answers phone calls, qualifies leads, and books appointments automatically—just like a human receptionist, but available 24/7/365. BrightLaunchIQ AI Receptionist answers calls within 1-2 rings, handles complex conversations naturally, and costs a fraction of human staff." }},
-        { "@type": "Question", "name": "How do I set up an AI voice agent?", "acceptedAnswer": { "@type": "Answer", "text": "Setting up the BrightLaunchIQ AI Receptionist takes just days. Schedule a strategy call, we customize the AI receptionist with your scripts, integrate with your CRM and calendar, then launch. No technical expertise required—BrightLaunchIQ handles all setup." }},
-        { "@type": "Question", "name": "How much does an AI receptionist cost?", "acceptedAnswer": { "@type": "Answer", "text": "BrightLaunchIQ AI Receptionist is available at a fraction of the cost of hiring staff—with 24/7 call answering. Compare that to a human receptionist at $3,000+/month (only 40 hours/week) or an answering service at $1-2 per call." }},
-        { "@type": "Question", "name": "What is AI lead generation?", "acceptedAnswer": { "@type": "Answer", "text": "AI lead generation uses artificial intelligence to identify, qualify, and engage potential customers automatically. For small businesses, this means having a 24/7 digital teammate that finds prospects showing buying intent, responds in under 60 seconds, and nurtures leads through personalized outreach—all supervised by human experts." }},
-        { "@type": "Question", "name": "What is human-guided AI?", "acceptedAnswer": { "@type": "Answer", "text": "Human-guided AI means real experts supervise every AI system. Our consultants set the rules, monitor results, and ensure customer touchpoints feel authentic—never robotic. This gives you AI power with human judgment." }},
-        { "@type": "Question", "name": "What is BrightLaunchIQ AI Receptionist?", "acceptedAnswer": { "@type": "Answer", "text": "BrightLaunchIQ AI Receptionist is a 24/7 AI-powered phone answering system that answers calls and qualifies leads within seconds. It books appointments automatically and costs a fraction of hiring a human receptionist." }},
-        { "@type": "Question", "name": "What is Answer Engine Optimization (AEO)?", "acceptedAnswer": { "@type": "Answer", "text": "AEO optimizes your business to be cited as the direct answer when people ask AI tools like ChatGPT, Gemini, Perplexity, or voice assistants. Unlike traditional SEO, AEO positions you as the authoritative answer across AI platforms." }}
+        { "@type": "Question", "name": "What is the BrightLaunchIQ AI Receptionist?", "acceptedAnswer": { "@type": "Answer", "text": "The BrightLaunchIQ AI Receptionist is a conversational voice AI system that answers inbound calls, engages customers in natural conversation, captures leads, books appointments, and routes calls—just like a trained human receptionist, but available 24/7." }},
+        { "@type": "Question", "name": "How is this different from an answering service or IVR?", "acceptedAnswer": { "@type": "Answer", "text": "Unlike traditional answering services that rely on human agents reading scripts or rigid IVR systems, the BrightLaunchIQ AI Receptionist speaks naturally in real-time, understands context and intent, handles multi-step conversations, and integrates directly with your business systems." }},
+        { "@type": "Question", "name": "Can the AI Receptionist book appointments?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The AI can check real-time availability, book, reschedule, or cancel appointments, and sync directly with your calendar (Google, Outlook, etc.)." }},
+        { "@type": "Question", "name": "Which systems do you integrate with?", "acceptedAnswer": { "@type": "Answer", "text": "We integrate with major calendars (Google, Outlook), CRMs (HubSpot, Salesforce, ServiceTitan, Jobber, Housecall Pro, Zoho), and offer custom API/webhook integrations." }},
+        { "@type": "Question", "name": "Is it HIPAA compliant?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, HIPAA-ready configurations are available in our Growth tier, including secure data handling, BAA availability, and PHI protection protocols." }}
       ]
     });
     document.head.appendChild(faqScript);
@@ -44,47 +42,106 @@ const FAQ = () => {
 
   const faqCategories = [
     {
-      title: "AI Lead Generation",
+      title: "1. Overview & Capabilities",
       faqs: [
-        { q: "What is AI lead generation?", a: "AI lead generation uses artificial intelligence to identify, qualify, and engage potential customers automatically. For small businesses, this means having a 24/7 digital teammate that finds prospects showing buying intent, responds in under 60 seconds, and nurtures leads through personalized outreach—all supervised by human experts." },
-        { q: "How does AI find leads for my business?", a: "Our AI scans millions of data points to find 'intent signals'—hiring spikes, new reviews, growth events, or industry triggers. When a potential customer shows buying behavior, the AI identifies them and starts a helpful, automated conversation immediately." },
-        { q: "What is an AI SDR?", a: "An AI SDR (Sales Development Representative) is an automated system that handles prospecting, outreach, and lead qualification. LaunchPad 360™ is a human-guided AI SDR combining automation with expert oversight—so outreach feels personal, not robotic." },
+        { q: "What is the BrightLaunchIQ AI Receptionist?", a: "The BrightLaunchIQ AI Receptionist is a conversational voice AI system that answers inbound calls, engages customers in natural conversation, captures leads, books appointments, and routes calls—just like a trained human receptionist, but available 24/7." },
+        { q: "How is this different from an answering service or IVR?", a: "Unlike traditional solutions like answering services (which rely on human agents reading scripts) or IVR systems (which are rigid and frustrating), the BrightLaunchIQ AI Receptionist speaks naturally in real-time, understands context and intent, handles multi-step conversations, and integrates with your systems." },
+        { q: "How natural does it sound?", a: "The system uses advanced low-latency voice AI to ensure conversations feel fluid and human-like. There are no awkward pauses or robotic delays. Many callers cannot distinguish it from a live receptionist." },
+        { q: "Will callers know it's AI?", a: "The experience is designed to feel human. When appropriate or required, the system can transparently identify itself as an AI assistant." },
+        { q: "Can it handle multiple calls at once?", a: "Yes. The AI can handle unlimited simultaneous calls, meaning no hold times, no busy signals, and no missed opportunities." },
+        { q: "What types of businesses is this best for?", a: "It's ideal for home services (HVAC, plumbing, roofing), medical and dental practices, law firms, real estate teams, agencies, and any call-driven business." },
       ]
     },
     {
-      title: "BrightLaunchIQ AI Receptionist & Voice Agent",
+      title: "2. Features & Functionality",
       faqs: [
-        { q: "What is an AI receptionist?", a: "An AI receptionist is an artificial intelligence system that answers phone calls, qualifies leads, and books appointments automatically—just like a human receptionist, but available 24/7/365. BrightLaunchIQ AI Receptionist answers calls within 1-2 rings and handles complex conversations naturally." },
-        { q: "How do I set up an AI voice agent for my business?", a: "Setting up BrightLaunchIQ AI Receptionist takes just days. Schedule a strategy call, we customize the AI receptionist with your scripts, integrate with your CRM and calendar, then launch. No technical expertise required—we handle all setup." },
-        { q: "What is BrightLaunchIQ AI Receptionist?", a: "BrightLaunchIQ AI Receptionist is an AI-powered phone answering system that answers calls and qualifies leads within seconds. It works 24/7/365 and books appointments automatically—at a fraction of the cost of a human receptionist." },
-        { q: "How fast does BrightLaunchIQ AI Receptionist answer calls?", a: "BrightLaunchIQ AI Receptionist answers calls instantly—within 1-2 rings. For form submissions, the AI voice agent can call leads back within seconds of submission, ensuring you're always first to respond. Research shows 50% of sales go to the first business that responds." },
-        { q: "Can the AI receptionist book appointments on my calendar?", a: "Yes! BrightLaunchIQ AI Receptionist integrates with your calendar to check availability and book appointments in real-time during the call. It sends confirmations and reminders automatically—no more back-and-forth scheduling." },
-        { q: "Does the AI voice agent sound like a robot?", a: "BrightLaunchIQ AI Receptionist uses advanced conversational AI with natural-sounding voices. Most callers can't tell they're talking to AI. The system handles complex conversations, follows up on questions, and maintains context throughout the call." },
-        { q: "How much does an AI receptionist cost?", a: "BrightLaunchIQ AI Receptionist is available at a predictable monthly rate—a fraction of the $3,000+/month cost for a human receptionist who only works business hours. 24/7 AI-powered call answering included." },
+        { q: "What can the AI Receptionist do?", a: "Core capabilities include answering calls instantly 24/7, providing business info, capturing lead details, and filtering spam. Advanced capabilities (Premium & Growth) include real-time appointment booking, calendar sync, CRM integration, call summaries, and intelligent routing." },
+        { q: "Can it book appointments?", a: "Yes. The AI can check real-time availability, book, reschedule, or cancel appointments, and sync directly with your calendar." },
+        { q: "Can it qualify leads?", a: "Yes. The AI asks customized intake questions to filter out low-quality inquiries, prioritize high-value prospects, and capture structured lead data." },
+        { q: "Can it transfer calls to my team?", a: "Absolutely. You can configure live transfers, department routing (sales, support, etc.), and emergency escalation." },
+        { q: "How are emergency calls handled?", a: "You define what qualifies as an emergency. The AI can detect urgency based on keywords or intent and immediately transfer to an on-call staff member." },
+        { q: "Can it handle complex conversations?", a: "Yes. It can ask follow-up questions, maintain context, handle multi-step interactions, and adapt responses dynamically." },
       ]
     },
     {
-      title: "Human-Guided AI",
+      title: "3. Plans & Pricing",
       faqs: [
-        { q: "What is human-guided AI?", a: "Human-guided AI means real experts supervise every AI system. Our consultants set the rules, monitor results, and ensure customer touchpoints feel authentic—never robotic. This 'bounded autonomy' gives you AI power with human judgment." },
-        { q: "Will AI replace my sales team?", a: "AI doesn't replace your team—it amplifies them. Our AI handles repetitive work (prospecting, initial outreach, qualification) while your team focuses on relationships and closing. Think of it as making a 3-person team perform like 50." },
-        { q: "How do you ensure AI doesn't sound robotic?", a: "Every automation is overseen by human experts who ensure messaging matches your brand voice. We conduct calibration sessions to define guardrails and review templates before launch." },
+        { q: "What's included in the Core Tier?", a: "Best for businesses needing reliable call coverage: 24/7 AI answering, custom greetings, lead capture & qualification, FAQ handling, message taking, and spam filtering." },
+        { q: "What's included in the Premium Tier?", a: "Adds automation efficiency: Everything in Core plus appointment booking, calendar/CRM integrations, enhanced routing, call summaries/transcripts, and custom workflows." },
+        { q: "What's included in the Growth Tier?", a: "Designed for scaling businesses: Everything in Premium plus advanced analytics, multi-location support, priority optimization, high-volume tuning, and HIPAA-ready configurations." },
+        { q: "Can I upgrade later?", a: "Yes. You can move between tiers as your business evolves." },
+        { q: "Is there a contract?", a: "No long-term contracts. Plans are typically month-to-month." },
       ]
     },
     {
-      title: "Pricing & ROI",
+      title: "4. Integrations & Technical Setup",
       faqs: [
-        { q: "How much does AI sales automation cost?", a: "BrightLaunchIQ offers tiered pricing across its product suite: LocalLift™ for AI visibility, AI Receptionist for inbound call handling, and LaunchPad 360™ for full outbound lead generation. Each includes setup and is available at a fraction of the cost of hiring staff." },
-        { q: "What's included in LaunchPad 360™?", a: "LaunchPad 360™ includes: 500+ targeted leads, multi-channel outreach (calls, SMS, email, LinkedIn), real-time lead scoring, pipeline dashboard, conversation intelligence, CRM integration, and ongoing human expert oversight." },
-        { q: "Do you offer a guarantee?", a: "Yes! Our 14-Day Speed to Lead Guarantee: we move your business from 'Zero' to 'Automated Meetings' in 14 days. If we don't significantly increase your pipeline velocity within 30 days, we work for free until we do." },
+        { q: "Which systems do you integrate with?", a: "We integrate with Google Calendar, Microsoft Outlook, HubSpot, Salesforce, ServiceTitan, Jobber, Housecall Pro, Zoho, and offer custom API/webhook integrations." },
+        { q: "Do I need to change my phone number?", a: "No. You can keep your existing number. Calls can be forwarded to the AI, routed after a set number of rings, or used only after hours." },
+        { q: "Does it work with my current phone system?", a: "Yes. It works with most VoIP and traditional systems via forwarding or integration." },
       ]
     },
     {
-      title: "Answer Engine Optimization (AEO)",
+      title: "5. Setup & Onboarding",
       faqs: [
-        { q: "What is Answer Engine Optimization (AEO)?", a: "AEO optimizes your business to be cited as the direct answer when people ask AI tools like ChatGPT, Gemini, Perplexity, or voice assistants. Unlike traditional SEO focused on rankings, AEO positions you as the authoritative answer across all AI platforms." },
-        { q: "How is AEO different from SEO?", a: "Traditional SEO focuses on ranking in Google search results. AEO focuses on being cited as the direct answer by AI assistants. SEO drives clicks to your website; AEO establishes authority so AI tools recommend your business by name." },
-        { q: "Which AI platforms do you optimize for?", a: "LocalLift™ optimizes for ChatGPT, Google Gemini, Perplexity, Siri, Alexa, Google Assistant, and emerging AI search tools. We use structured data and Entity Graph building to ensure AI systems recognize you as the local authority." },
+        { q: "How long does setup take?", a: "Most businesses go live within 3–5 business days." },
+        { q: "What does onboarding include?", a: "Business discovery (services, FAQs, policies), AI training (scripts, tone, workflows), calendar/CRM integration, and testing/optimization." },
+        { q: "What do you need from me?", a: "Business details, call handling preferences, optional scripts or examples, and access to systems if integrating." },
+        { q: "Do you train the AI on my business?", a: "Yes. The AI is customized to your services, pricing, brand voice, and processes." },
+      ]
+    },
+    {
+      title: "6. Quality, Accuracy & Reliability",
+      faqs: [
+        { q: "How accurate is the AI?", a: "Highly accurate when properly configured. Performance improves through initial training, real-world testing, and ongoing optimization." },
+        { q: "What happens if the AI doesn't understand something?", a: "Fallback options include asking clarifying questions, taking a message, or transferring to a human." },
+        { q: "Can I review calls?", a: "Yes. You get access to call recordings, transcripts, summaries, and performance data." },
+      ]
+    },
+    {
+      title: "7. Security & Compliance",
+      faqs: [
+        { q: "Is customer data secure?", a: "Yes. We follow a privacy-first approach with encrypted data handling, controlled access, and no selling of data." },
+        { q: "Are calls recorded?", a: "Yes, if enabled. The system can notify callers for compliance." },
+        { q: "Is it HIPAA compliant?", a: "HIPAA-ready configurations are available (Growth tier), including secure data handling, BAA availability, and PHI protection protocols." },
+      ]
+    },
+    {
+      title: "8. Customization & Control",
+      faqs: [
+        { q: "Can I control what the AI says?", a: "Yes. You can customize greetings, tone, personality, call flows, and responses." },
+        { q: "Can it match my brand voice?", a: "Absolutely. It can be professional, friendly, direct, or consultative." },
+        { q: "Can I update it later?", a: "Yes. Changes can be made quickly as your business evolves." },
+      ]
+    },
+    {
+      title: "9. Performance, ROI & Business Impact",
+      faqs: [
+        { q: "Will this increase leads?", a: "Yes, primarily by eliminating missed calls, responding instantly, and capturing/qualifying more prospects." },
+        { q: "How does it compare to hiring staff?", a: "No salaries or benefits, no missed calls, works 24/7, and costs a fraction of a full-time receptionist." },
+        { q: "What metrics can I track?", a: "Call volume, lead capture rate, booking rate, call outcomes, and conversion trends." },
+      ]
+    },
+    {
+      title: "10. Edge Cases & Real-World Use",
+      faqs: [
+        { q: "What if a caller is upset?", a: "The AI is trained to respond calmly, de-escalate, and transfer when needed." },
+        { q: "What if my business changes?", a: "We can quickly update services, messaging, pricing, and call flows." },
+        { q: "Can it handle high call volume?", a: "Yes. It scales instantly with demand—no additional staffing required." },
+      ]
+    },
+    {
+      title: "11. Support & Optimization",
+      faqs: [
+        { q: "Do you provide ongoing support?", a: "Yes. We assist with updates, optimization, and performance improvements." },
+        { q: "Does the system improve over time?", a: "Yes. We continuously refine conversations, accuracy, and conversion performance." },
+      ]
+    },
+    {
+      title: "12. Getting Started",
+      faqs: [
+        { q: "How do I get started?", a: "Schedule a demo, review your use case, and begin onboarding." },
+        { q: "Do you offer demos?", a: "Yes. We can demonstrate live AI calls, custom scenarios, and real business use cases." },
       ]
     },
   ];
@@ -96,10 +153,13 @@ const FAQ = () => {
       <section className="pt-32 pb-16 bg-gradient-subtle">
         <div className="container text-center">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Frequently Asked Questions
+            AI Receptionist FAQ
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Simple answers about AI lead generation, human-guided AI, pricing, and Answer Engine Optimization for local businesses.
+          <h2 className="text-xl md:text-2xl font-semibold text-primary mb-4">
+            BrightLaunchIQ AI Receptionist — Complete Guide (Core, Premium & Growth)
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Welcome to the definitive resource for the BrightLaunchIQ AI Receptionist. This page answers everything business owners, operators, and decision-makers need to know—from capabilities and setup to integrations, security, and ROI.
           </p>
         </div>
       </section>
@@ -113,10 +173,10 @@ const FAQ = () => {
                   {category.title}
                 </h2>
                 <div className="space-y-6">
-                  {category.faqs.map((faq) => (
-                    <div key={faq.q} className="bg-card border border-border rounded-xl p-6">
+                  {faqCategories.find(c => c.title === category.title)?.faqs.map((faq) => (
+                    <div key={faq.q} className="bg-card border border-border rounded-xl p-6 hover:shadow-md transition-shadow">
                       <h3 className="font-display text-lg font-bold text-foreground mb-3">{faq.q}</h3>
-                      <p className="text-muted-foreground">{faq.a}</p>
+                      <p className="text-muted-foreground leading-relaxed">{faq.a}</p>
                     </div>
                   ))}
                 </div>
@@ -128,12 +188,31 @@ const FAQ = () => {
 
       <section className="py-16 bg-secondary text-secondary-foreground text-center">
         <div className="container">
-          <h2 className="font-display text-2xl font-bold mb-4">Still Have Questions?</h2>
-          <p className="text-secondary-foreground/80 mb-6">Get a free AI Visibility Audit or talk to our team.</p>
+          <h2 className="font-display text-3xl font-bold mb-4">Still Have Questions?</h2>
+          <p className="text-secondary-foreground/80 mb-8 text-lg">Get a free AI Visibility Audit or talk to our team about your specific needs.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" asChild><Link to="/locallift/resources/aeo-audit">Free AI Visibility Audit<ArrowRight className="ml-2 w-4 h-4" /></Link></Button>
-            <Button variant="outline" className="border-primary/30" asChild><Link to="/contact">Contact Us</Link></Button>
+            <Button variant="hero" size="lg" asChild>
+              <Link to="/locallift/resources/aeo-audit">
+                Free AI Visibility Audit<ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+            </Button>
+            <Button variant="outline" size="lg" className="bg-transparent border-primary/30 hover:bg-primary/10" asChild>
+              <Link to="/ai-receptionist/demo">Schedule a Demo</Link>
+            </Button>
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-background border-t border-border">
+        <div className="container max-w-4xl text-center">
+          <h2 className="font-display text-2xl font-bold mb-6">Final Thought: Is this replacing my team?</h2>
+          <p className="text-lg text-muted-foreground mb-8">
+            No—it enhances your team by handling repetitive calls, capturing missed opportunities, and freeing staff for higher-value work. 
+            BrightLaunchIQ focuses on real business outcomes, high-quality voice AI, and practical automation that actually converts.
+          </p>
+          <Button variant="hero" asChild>
+            <Link to="/contact">Contact Our Team</Link>
+          </Button>
         </div>
       </section>
 
