@@ -9,6 +9,14 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 
 const weeklyArticles = [
   {
+    title: "Nuance Launches Nina X: The Future of AI Receptionists Is Here",
+    slug: "nuance-launches-nina-x-the-future-of-ai-receptionists-is-here",
+    date: "April 05, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    excerpt: "Nuance Communications has introduced Nina X, a cutting-edge AI voice agent set to transform customer service with advanced language skills and emotional intelligence.",
+  },
+  {
     title: "Google Unveils Duplex 3.0, Setting New Standards for AI Receptionists",
     slug: "google-unveils-duplex-3-0-setting-new-standards-for-ai-receptionists",
     date: "April 05, 2026",
