@@ -1,6 +1,7 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { Resend } from "https://esm.sh/resend@2.0.0";
+import { emailFooterText } from "../_shared/email-footer.ts";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
@@ -126,7 +127,7 @@ Here's what drove that number:
 
 When you're ready to review your options, feel free to call our Live AI Receptionist at 1-877-879-5552, or you can schedule a 15-minute call with a human here: https://brightlaunchiq.com/contact
 
-— The BrightLaunchIQ Team`;
+— The BrightLaunchIQ Team` + emailFooterText();
     }
 
     const { error } = await resend.emails.send({

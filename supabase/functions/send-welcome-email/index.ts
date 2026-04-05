@@ -1,6 +1,7 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "https://esm.sh/resend@2.0.0";
 import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
+import { emailFooterHtml, emailFooterText } from "../_shared/email-footer.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -87,8 +88,7 @@ If we don't have you receiving meetings within 14 days, we work for free until w
 Need help? Just reply to this email or call 1-877-879-5552.
 
 Anthony
-BrightLaunchIQ
-success@BrightLaunchIQ.com | 1-877-879-5552`;
+BrightLaunchIQ` + emailFooterText();
 
     const html = `<!DOCTYPE html><html><head><meta charset="utf-8"></head>
 <body style="margin:0;padding:0;background-color:#ffffff;">
@@ -109,13 +109,9 @@ success@BrightLaunchIQ.com | 1-877-879-5552`;
 
 <p>Need help? Just reply to this email or call <a href="tel:1-877-879-5552" style="color:#333333;">1-877-879-5552</a>.</p>
 
-<p>Anthony<br>BrightLaunchIQ<br>
-<span style="color:#888888;font-size:13px;">success@BrightLaunchIQ.com | 1-877-879-5552</span></p>
+<p>Anthony<br>BrightLaunchIQ</p>
 
-<p style="color:#aaaaaa;font-size:11px;margin-top:32px;border-top:1px solid #eeeeee;padding-top:16px;">
-BrightLaunchIQ · Sacramento, CA 95814<br>
-Reply "unsubscribe" to stop receiving emails.
-</p>
+${emailFooterHtml()}
 
 </div>
 </body></html>`;

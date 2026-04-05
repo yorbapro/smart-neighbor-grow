@@ -1,6 +1,7 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { Resend } from "https://esm.sh/resend@2.0.0";
+import { emailFooterText } from "../_shared/email-footer.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -272,8 +273,7 @@ Book a quick 15-minute call with one of our experts: https://brightlaunchiq.com/
 
 Best,
 
-The Team at BrightLaunchIQ
-1-877-879-5552 | results@brightlaunchiq.com`,
+The Team at BrightLaunchIQ` + emailFooterText(),
   };
 }
 
@@ -304,8 +304,7 @@ Or simply reply to this email with any questions you have.
 
 Best,
 
-The Team at BrightLaunchIQ
-1-877-879-5552 | results@brightlaunchiq.com`,
+The Team at BrightLaunchIQ` + emailFooterText(),
   };
 }
 
@@ -335,7 +334,6 @@ This is your last email from this sequence. We're here if you need us.
 
 Best,
 
-The Team at BrightLaunchIQ
-1-877-879-5552 | results@brightlaunchiq.com`,
+The Team at BrightLaunchIQ` + emailFooterText(),
   };
 }
