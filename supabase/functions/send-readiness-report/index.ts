@@ -102,7 +102,7 @@ const handler = async (req: Request): Promise<Response> => {
 
         if (template) {
           subject = replaceVars(template.subject, templateVars);
-          plainText = htmlToPlainText(replaceVars(template.body_html, templateVars));
+          plainText = htmlToPlainText(replaceVars(template.body_html, templateVars)) + emailFooterText();
           templateLoaded = true;
           console.log("Loaded quiz_initial template from database");
         }
