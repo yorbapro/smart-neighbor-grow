@@ -46,7 +46,7 @@ const Hero = () => {
             </h2>
 
             <p className="text-lg md:text-xl text-white/70 max-w-2xl mb-6 leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
-              Our AI voice agents answer 24/7, qualify leads with custom logic, and book appointments directly into your CRM — so you capture opportunities that would otherwise go to voicemail.
+              Our AI voice agents answer 24/7, qualify leads with custom logic, and can book appointments directly into your CRM — so you capture opportunities that would otherwise go to voicemail.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-4 mb-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
@@ -66,7 +66,7 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-wrap gap-6 animate-slide-up" style={{ animationDelay: "0.3s" }}>
-              {["Founded by business owners", "Live in days, not months", "Built on trusted, secure infrastructure"].map((item) => (
+              {["Founded by business owners", "Goes live in days, not months", "Built on trusted, secure infrastructure"].map((item) => (
                 <div key={item} className="flex items-center gap-2 text-white/60">
                   <CheckCircle className="w-4 h-4 text-primary" />
                   <span className="text-sm">{item}</span>
