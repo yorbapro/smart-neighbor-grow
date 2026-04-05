@@ -35,7 +35,7 @@ const Footer = () => {
       { label: "Trust & Security", href: "/trust-security" },
       { label: "Locations", href: "/locations" },
       { label: "Contact", href: "/contact" },
-      { label: "FAQ", href: "/#faq" },
+      { label: "FAQ", href: "/ai-receptionist/faq" },
     ],
   };
 

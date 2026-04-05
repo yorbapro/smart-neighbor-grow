@@ -71,6 +71,7 @@ const Header = () => {
     { label: "Case Studies", href: "/ai-receptionist/case-studies" },
     { label: "Industries", href: "/ai-receptionist/industries" },
     { label: "Glossary", href: "/ai-receptionist/resources/glossary" },
+    { label: "FAQ", href: "/ai-receptionist/faq" },
   ];
 
   const headerBg = isScrolled 
