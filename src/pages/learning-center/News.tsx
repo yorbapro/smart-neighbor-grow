@@ -9,6 +9,14 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 
 const weeklyArticles = [
   {
+    title: "Google Unveils Duplex 3.0, Setting New Standards for AI Receptionists",
+    slug: "google-unveils-duplex-3-0-setting-new-standards-for-ai-receptionists",
+    date: "April 05, 2026",
+    readTime: "4 min read",
+    category: "Tech Updates",
+    excerpt: "Google’s latest AI voice assistant, Duplex 3.0, promises smoother, more natural conversations, transforming how businesses manage customer calls.",
+  },
+  {
     title: "Mistral Voxtral Introduces AI Voice Agent with Real-Time Multilingual and Emotional Intelligence",
     slug: "mistral-voxtral-introduces-ai-voice-agent-with-real-time-multilingual-and-emotional-intelligence",
     date: "April 04, 2026",
