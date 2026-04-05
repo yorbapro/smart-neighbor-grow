@@ -14,8 +14,8 @@ const demoFeatures = [
   },
   {
     icon: ArrowRightLeft,
-    title: "Request a Live Transfer",
-    description: "Ask to speak with a person — see smart call routing in action.",
+    title: "Test Conversation Flow",
+    description: "Evaluate the human-like pacing and context-aware responses in real time.",
   },
 ];
 
