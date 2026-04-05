@@ -1,6 +1,7 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "https://esm.sh/resend@2.0.0";
 import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
+import { emailFooterHtml, emailFooterText } from "../_shared/email-footer.ts";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
@@ -101,8 +102,7 @@ Thanks for reaching out. We got your message and will get back to you within 24 
 Need faster help? Call 1-877-879-5552.
 
 Anthony
-BrightLaunchIQ
-success@BrightLaunchIQ.com`;
+BrightLaunchIQ` + emailFooterText();
 
     const userHtml = `<!DOCTYPE html><html><head><meta charset="utf-8"></head>
 <body style="margin:0;padding:0;background-color:#ffffff;">
@@ -114,13 +114,9 @@ success@BrightLaunchIQ.com`;
 
 <p>Need faster help? Call <a href="tel:1-877-879-5552" style="color:#333333;">1-877-879-5552</a>.</p>
 
-<p>Anthony<br>BrightLaunchIQ<br>
-<span style="color:#888888;font-size:13px;">success@BrightLaunchIQ.com</span></p>
+<p>Anthony<br>BrightLaunchIQ</p>
 
-<p style="color:#aaaaaa;font-size:11px;margin-top:32px;border-top:1px solid #eeeeee;padding-top:16px;">
-BrightLaunchIQ · Sacramento, CA 95814<br>
-Reply "unsubscribe" to stop receiving emails.
-</p>
+${emailFooterHtml()}
 
 </div>
 </body></html>`;

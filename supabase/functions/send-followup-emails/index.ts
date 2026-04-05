@@ -1,6 +1,7 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { Resend } from "https://esm.sh/resend@2.0.0";
+import { emailFooterText } from "../_shared/email-footer.ts";
 // DOMPurify removed - isomorphic-dompurify requires canvas which fails in Deno
 
 const corsHeaders = {
@@ -221,7 +222,7 @@ serve(async (req) => {
             "List-Unsubscribe": "<mailto:unsubscribe@account.brightlaunchiq.com?subject=unsubscribe>",
             "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
           },
-          text: `Hi ${lead.business_name},\n\nYour AEO visibility score is ${lead.overall_score}/100 with a potential of ${lead.potential_score}/100.\n\nWant to improve it? Just reply to this email or visit https://brightlaunchiq.com/ai-receptionist/get-started\n\nAnthony\nBrightLaunchIQ\nSacramento, CA 95814\nReply "unsubscribe" to stop receiving emails.`,
+          text: `Hi ${lead.business_name},\n\nYour AEO visibility score is ${lead.overall_score}/100 with a potential of ${lead.potential_score}/100.\n\nWant to improve it? Just reply to this email or visit https://brightlaunchiq.com/ai-receptionist/get-started\n\nAnthony\nBrightLaunchIQ` + emailFooterText(),
           html: bodyHtml,
         });
 
