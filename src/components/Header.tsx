@@ -104,7 +104,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
+          <nav className="hidden lg:flex items-center gap-6" aria-label="Main navigation">
             <Link
               to="/ai-receptionist"
               className={`${mutedColor} hover:${textColor} transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-md`}
@@ -203,7 +203,7 @@ const Header = () => {
             </div>
           </nav>
 
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-3">
             <Button 
               variant={isScrolled || !isHomepage ? "ghost" : "heroOutline"} 
               size="sm" 
@@ -241,7 +241,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className={`md:hidden p-2 ${textColor} focus:outline-none focus:ring-2 focus:ring-ring rounded-md`}
+            className={`lg:hidden p-2 ${textColor} focus:outline-none focus:ring-2 focus:ring-ring rounded-md`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMenuOpen}
@@ -255,7 +255,7 @@ const Header = () => {
         {isMenuOpen && (
           <nav 
             id="mobile-nav"
-            className="md:hidden bg-card border-b border-border animate-slide-up max-h-[calc(100vh-4rem)] overflow-y-auto" 
+            className="lg:hidden bg-card border-b border-border animate-slide-up max-h-[calc(100vh-4rem)] overflow-y-auto" 
             aria-label="Mobile navigation"
           >
             <div className="container py-4 flex flex-col gap-4">
