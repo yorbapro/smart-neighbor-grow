@@ -19,7 +19,7 @@ const steps = [
     number: "03",
     icon: FileText,
     title: "You Get Organized Leads",
-    description: "Transcripts, summaries, routing, and booking — automatically.",
+    description: "Transcripts, summaries, routing, and booking, automatically.",
   },
 ];
 
