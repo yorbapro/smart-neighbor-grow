@@ -9,6 +9,14 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 
 const weeklyArticles = [
   {
+    title: "No New Updates on AI Voice Agents or Receptionists in Early April 2026",
+    slug: "no-new-updates-on-ai-voice-agents-or-receptionists-in-early-april-2026",
+    date: "April 06, 2026",
+    readTime: "3 min read",
+    category: "Industry Trends",
+    excerpt: "From April 1 to 5, 2026, there have been no verified announcements or news releases about new AI voice agents or AI receptionists. Stay informed through trusted tech sources for future developments.",
+  },
+  {
     title: "Nuance Launches Nina X: The Future of AI Receptionists Is Here",
     slug: "nuance-launches-nina-x-the-future-of-ai-receptionists-is-here",
     date: "April 05, 2026",
