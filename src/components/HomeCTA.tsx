@@ -19,7 +19,7 @@ const HomeCTA = () => {
           </h2>
 
           <p className="text-lg md:text-xl text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Your AI Receptionist can be live in days — not months.
+            Your AI Receptionist can be live in days, not months.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">

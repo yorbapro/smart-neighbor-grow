@@ -46,7 +46,7 @@ const Hero = () => {
             </h2>
 
             <p className="text-lg md:text-xl text-white/70 max-w-2xl mb-6 leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
-              Our AI voice agents answer 24/7, qualify leads with custom logic, and can book appointments directly into your CRM — so you capture opportunities that would otherwise go to voicemail.
+              Our AI voice agents answer 24/7, qualify leads with custom logic, and can book appointments directly into your CRM, so you capture opportunities that would otherwise go to voicemail.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-4 mb-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>

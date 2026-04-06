@@ -22,7 +22,7 @@ const HomePricingPosition = () => {
               Smart Economics
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-              A Full-Time Receptionist —
+              A Full-Time Receptionist
               <br />
               <span className="text-primary">Without the Full-Time Cost.</span>
             </h2>
@@ -60,7 +60,7 @@ const HomePricingPosition = () => {
 
           <div className="relative p-8 rounded-2xl bg-white/5 border border-white/10 text-center">
             <p className="text-lg text-white/70 mb-4">
-              BrightLaunchIQ AI Receptionist delivers consistent, always-on call handling at a predictable monthly rate — without overhead, scheduling conflicts, or missed calls.
+              BrightLaunchIQ AI Receptionist delivers consistent, always-on call handling at a predictable monthly rate, without overhead, scheduling conflicts, or missed calls.
             </p>
             <Button variant="hero" size="lg" asChild className="group">
               <Link to="/ai-receptionist/pricing">
